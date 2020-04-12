@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace HuajiTech.CoolQ
+{
+    internal class StringMarshaler : ICustomMarshaler
+    {
+        private static readonly Encoding Encoding = Encoding.GetEncoding("GB18030");
+        private static readonly StringMarshaler Instance = new StringMarshaler();
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Usage", "CA1801:检查未使用的参数", Justification = "<挂起>")]
+        public static ICustomMarshaler GetInstance(string cookie)
+        {
+            return Instance;
+        }
+
+        public void CleanUpManagedData(object ManagedObj)
+        {
+        }
+
+        public void CleanUpNativeData(IntPtr pNativeData)
+        {
+            Marshal.FreeHGlobal(pNativeData);
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Design", "CA1024:在适用处使用属性", Justification = "<挂起>")]
+        public int GetNativeDataSize()
+        {
+            return -1;
+        }
+
+        public IntPtr MarshalManagedToNative(object ManagedObj)
+        {
+            if (ManagedObj is null)
+            {
+                return IntPtr.Zero;
+            }
+
+            if (!(ManagedObj is string))
+            {
+                throw new MarshalDirectiveException();
+            }
+
+            var bytes = Encoding.GetBytes((string)ManagedObj);
+            IntPtr pNativeData = Marshal.AllocHGlobal(bytes.Length + 1);
+
+            Marshal.Copy(bytes, 0, pNativeData, bytes.Length);
+            Marshal.WriteByte(pNativeData, bytes.Length, 0);
+
+            return pNativeData;
+        }
+
+        public object MarshalNativeToManaged(IntPtr pNativeData)
+        {
+            if (pNativeData == IntPtr.Zero)
+            {
+                return null;
+            }
+
+            IEnumerable<byte> GetBytes()
+            {
+                for (var i = 0; ; i++)
+                {
+                    var currentByte = Marshal.ReadByte(pNativeData, i);
+
+                    if (currentByte == 0)
+                    {
+                        yield break;
+                    }
+
+                    yield return currentByte;
+                }
+            }
+
+            return Encoding.GetString(GetBytes().ToArray());
+        }
+    }
+}

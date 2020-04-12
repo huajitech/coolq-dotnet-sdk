@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuajiTech.CoolQ", "HuajiTech.CoolQ\HuajiTech.CoolQ.csproj", "{CF95691A-4ADE-4968-BA32-45310792B71F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF95691A-4ADE-4968-BA32-45310792B71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF95691A-4ADE-4968-BA32-45310792B71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF95691A-4ADE-4968-BA32-45310792B71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF95691A-4ADE-4968-BA32-45310792B71F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1DB6D39-45C8-4D3F-8D95-502DC631A493}
+	EndGlobalSection
+EndGlobal
