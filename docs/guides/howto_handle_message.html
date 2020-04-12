@@ -96,7 +96,7 @@ var emojis = message.OfType&lt;Emoji&gt;();
 {
     var image = new Image { FileName = &quot;SmallYellowPicture.png&quot; };
     e.Source.Send(e.Sender.At() + &quot; &quot; + image);
-  e.Source.Send(new Emoticon { Id = 178 });
+    e.Source.Send(new Emoticon { Id = 178 });
 }
 </code></pre></li>
 <li><p>解析并请求录音文件。</p>
