@@ -20,7 +20,7 @@ public class Repeater
 {
     public Repeater()
     {
-        CurrentUser.MessageReceived += (sender, e) => e.Source.Send(e.Message);
+        CurrentUser.MessageReceived += (sender, e) => e.Source.Send(e.Message.Content);
     }
 }
 ```
