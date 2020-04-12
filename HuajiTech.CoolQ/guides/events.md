@@ -8,7 +8,7 @@
 | 101 | 群管理变动事件处理 | @"HuajiTech.CoolQ.Group.AdministratorAdded"、@"HuajiTech.CoolQ.Group.AdministratorRemoved" |
 | 102 | 群成员减少事件处理 | @"HuajiTech.CoolQ.Group.MemberLeft" |
 | 103 | 群成员增加事件处理 | @"HuajiTech.CoolQ.Group.MemberJoined" |
-| 104 | 群禁言事件处理 | @"HuajiTech.CoolQ.Member.Muted"、@"HuajiTech.CoolQ.Member.Unmuted"、"HuajiTech.CoolQ.Group.Muted"、@"HuajiTech.CoolQ.Group.Unmuted" |
+| 104 | 群禁言事件处理 | @"HuajiTech.CoolQ.Member.Muted"、@"HuajiTech.CoolQ.Member.Unmuted"、@"HuajiTech.CoolQ.Group.Muted"、@"HuajiTech.CoolQ.Group.Unmuted" |
 | 201 | 好友已添加事件处理 | @"HuajiTech.CoolQ.CurrentUser.ContactAdded" |
 | 301 | 好友添加请求处理 | @"HuajiTech.CoolQ.CurrentUser.ContactRequested" |
 | 302 | 群添加请求处理 | @"HuajiTech.CoolQ.CurrentUser.EntranceInvited"、@"HuajiTech.CoolQ.Group.EntranceRequested" |
