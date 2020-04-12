@@ -15,7 +15,7 @@
 ```csharp
 using HuajiTech.CoolQ;
 
-[App("com.example.myfirstapp")]
+[App("com.example.repeater")]
 public class Repeater
 {
     public Repeater()
