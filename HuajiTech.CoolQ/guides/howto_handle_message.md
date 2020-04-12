@@ -48,7 +48,7 @@ var message = e.Message.Parse();
   {
       var image = new Image { FileName = "SmallYellowPicture.png" };
       e.Source.Send(e.Sender.At() + " " + image);
-  	e.Source.Send(new Emoticon { Id = 178 });
+  	  e.Source.Send(new Emoticon { Id = 178 });
   }
 
 - 解析并请求录音文件。
