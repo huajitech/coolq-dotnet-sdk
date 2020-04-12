@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#22914;&#20309;&#65306;&#20351;&#29992;&#33756;&#21333;&#21644;&#24748;&#28014;&#31383;&#29366;&#24577; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#22914;&#20309;&#65306;&#20351;&#29992;&#33756;&#21333;&#21644;&#24748;&#28014;&#31383;&#29366;&#24577; ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="如何使用菜单和悬浮窗状态">如何：使用菜单和悬浮窗状态</h1>
+
+<h2 id="编写事件处理程序">编写事件处理程序</h2>
+<p>事件处理程序必须为静态方法。</p>
+<h3 id="菜单项被点击">菜单项被点击</h3>
+<p>菜单项被点击事件没有任何形参，也没有返回值。</p>
+<pre><code class="lang-csharp">static void OnMenuItemClicked();
+</code></pre><h3 id="悬浮窗状态更新">悬浮窗状态更新</h3>
+<p>悬浮窗状态更新事件没有任何形参，返回一个字符串。返回的字符串是以 Base64 编码的状态数据。</p>
+<pre><code class="lang-csharp">static string OnStatusUpdating();
+</code></pre><p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html">Status</a> 类和 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Encode">Encode()</a> 方法可以方便地创建状态数据并进行编码。</p>
+<pre><code class="lang-csharp">static string OnStatusUpdating()
+{
+    return new HuajiTech.CoolQ.Status
+    {
+        Value = &quot;值&quot;,
+        Unit = &quot;单位&quot;,
+        Color = HuajiTech.CoolQ.StatusColor.Green
+    }.Encode();
+}
+</code></pre><h2 id="将托管方法导出为非托管方法">将托管方法导出为非托管方法</h2>
+<p>上面创建的事件处理程序是托管方法，但酷Q只能调用以 StdCall 导出的非托管方法。
+通过 <code>HuajiTech.UnmanagedExports.DllExportAttribute</code> 可以标记要导出的方法。</p>
+<pre><code class="lang-csharp">[HuajiTech.UnmanagedExports.DllExport]
+static string OnStatusUpdating();
+</code></pre><p>通过设置 <code>HuajiTech.UnmanagedExports.DllExportAttribute.EntryPoint</code> 属性，可以自定义导出后的方法的入口点名称。
+如果 <code>EntryPoint</code> 属性为 <code>null</code>，将会使用方法名称作为入口点名称。
+不能定义重复的入口点名称。</p>
+<pre><code class="lang-csharp">[HuajiTech.UnmanagedExports.DllExport(EntryPoint = &quot;OnMenuItemClicked&quot;)]
+static void OpenConfiguration();
+</code></pre><h2 id="配置-appjson">配置 <code>app.json</code></h2>
+<p>在 <code>app.json</code> 中的 <code>status</code> 或 <code>menu</code> 下增加相应格式的元素，并将 <code>function</code> 的值设为导出的入口点名称。</p>
+<pre><code class="lang-json">&quot;menu&quot;: [
+  {
+    &quot;name&quot;: &quot;菜单项&quot;,
+    &quot;function&quot;: &quot;OnMenuItemClicked&quot;
+  }
+],
+&quot;status&quot;: [
+  {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;悬浮窗&quot;,
+    &quot;title&quot;: &quot;FLOAT&quot;,
+    &quot;function&quot;: &quot;OnStatusUpdating&quot;,
+    &quot;period&quot;: &quot;1000&quot;
+  }
+]
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
