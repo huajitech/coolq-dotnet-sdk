@@ -7,7 +7,7 @@
 ## 特性
 
 - 通过 StdCall 导出。
-- 以 NuGet 包发布。
+- 以 [NuGet 包](https://www.nuget.org/packages/HuajiTech.CoolQ/)发布。
 - **不使用易语言的开发模式。**
 
 ## 复读机示例
