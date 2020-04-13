@@ -651,12 +651,57 @@
   
   <a id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_Remove_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Remove*"></a>
   <h4 id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_Remove_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Remove(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)">Remove(MessageElement)</h4>
-  <div class="markdown level1 summary"><p>移除指定消息元素。</p>
+  <div class="markdown level1 summary"><p>移除指定消息元素的第一个匹配项。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ComplexMessage Remove(MessageElement item)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html">MessageElement</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>消息元素。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><p>当前复合消息。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveAll_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll*"></a>
+  <h4 id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveAll_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)">RemoveAll(MessageElement)</h4>
+  <div class="markdown level1 summary"><p>移除指定消息元素的所有匹配项。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComplexMessage RemoveAll(MessageElement item)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -717,6 +762,57 @@
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
         <td><p>索引。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><p>当前复合消息。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveRange_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange*"></a>
+  <h4 id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveRange_System_Int32_System_Int32_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange(System.Int32,System.Int32)">RemoveRange(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>移除一定范围的消息元素。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComplexMessage RemoveRange(int index, int count)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>索引。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>数量。</p>
 </td>
       </tr>
     </tbody>

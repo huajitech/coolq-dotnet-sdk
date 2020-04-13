@@ -610,6 +610,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Remove
   nameWithType: ComplexMessage.Remove
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
+  name: RemoveAll(MessageElement)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveAll_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
+  nameWithType: ComplexMessage.RemoveAll(MessageElement)
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll*
+  name: RemoveAll
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveAll_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAll
+  nameWithType: ComplexMessage.RemoveAll
 - uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAt(System.Int32)
   name: RemoveAt(Int32)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveAt_System_Int32_
@@ -623,6 +636,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveAt
   nameWithType: ComplexMessage.RemoveAt
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange(System.Int32,System.Int32)
+  name: RemoveRange(Int32, Int32)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveRange_System_Int32_System_Int32_
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange(System.Int32,System.Int32)
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange(System.Int32, System.Int32)
+  nameWithType: ComplexMessage.RemoveRange(Int32, Int32)
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange*
+  name: RemoveRange
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_RemoveRange_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange
+  nameWithType: ComplexMessage.RemoveRange
 - uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.System#Collections#Generic#ICollection{HuajiTech#CoolQ#AdvancedMessaging#MessageElement}#Add(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
   name: ICollection<MessageElement>.Add(MessageElement)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_AdvancedMessaging_MessageElement__Add_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_
@@ -3681,12 +3707,12 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Extensions.AsMemberOf
   nameWithType: Extensions.AsMemberOf
-- uid: HuajiTech.CoolQ.Extensions.AsUser(HuajiTech.CoolQ.Member)
-  name: AsUser(Member)
-  href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_AsUser_HuajiTech_CoolQ_Member_
-  commentId: M:HuajiTech.CoolQ.Extensions.AsUser(HuajiTech.CoolQ.Member)
-  fullName: HuajiTech.CoolQ.Extensions.AsUser(HuajiTech.CoolQ.Member)
-  nameWithType: Extensions.AsUser(Member)
+- uid: HuajiTech.CoolQ.Extensions.AsUser(HuajiTech.CoolQ.User)
+  name: AsUser(User)
+  href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_AsUser_HuajiTech_CoolQ_User_
+  commentId: M:HuajiTech.CoolQ.Extensions.AsUser(HuajiTech.CoolQ.User)
+  fullName: HuajiTech.CoolQ.Extensions.AsUser(HuajiTech.CoolQ.User)
+  nameWithType: Extensions.AsUser(User)
 - uid: HuajiTech.CoolQ.Extensions.AsUser*
   name: AsUser
   href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_AsUser_
