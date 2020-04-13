@@ -153,13 +153,24 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         }
 
         /// <summary>
-        /// 移除指定消息元素。
+        /// 移除指定消息元素的第一个匹配项。
         /// </summary>
         /// <param name="item">消息元素。</param>
         /// <returns>当前复合消息。</returns>
         public ComplexMessage Remove(MessageElement item)
         {
             _elements.Remove(item);
+            return this;
+        }
+
+        /// <summary>
+        /// 移除指定消息元素的所有匹配项。
+        /// </summary>
+        /// <param name="item">消息元素。</param>
+        /// <returns>当前复合消息。</returns>
+        public ComplexMessage RemoveAll(MessageElement item)
+        {
+            _elements.RemoveAll(element => element == item);
             return this;
         }
 
@@ -171,6 +182,18 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         public ComplexMessage RemoveAt(int index)
         {
             _elements.RemoveAt(index);
+            return this;
+        }
+
+        /// <summary>
+        /// 移除一定范围的消息元素。
+        /// </summary>
+        /// <param name="index">索引。</param>
+        /// <param name="count">数量。</param>
+        /// <returns>当前复合消息。</returns>
+        public ComplexMessage RemoveRange(int index, int count)
+        {
+            _elements.RemoveRange(index, count);
             return this;
         }
 

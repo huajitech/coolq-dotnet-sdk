@@ -27,18 +27,18 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 将成员作为用户。
+        /// 将用户作为 <see cref="User"/> 对象。
         /// </summary>
-        /// <param name="member">成员。</param>
-        /// <returns>成员表示的用户。</returns>
-        public static User AsUser(this Member member)
+        /// <param name="user">用户。</param>
+        /// <returns><see cref="User"/> 对象。</returns>
+        public static User AsUser(this User user)
         {
-            if (member is null)
+            if (user is null)
             {
                 return null;
             }
 
-            return new User(member.Number);
+            return new User(user.Number);
         }
 
         /// <summary>
