@@ -3892,18 +3892,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Group.Group
   nameWithType: Group.Group
-- uid: HuajiTech.CoolQ.Group.AdministratorAdded
-  name: AdministratorAdded
-  href: api/HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_AdministratorAdded
-  commentId: E:HuajiTech.CoolQ.Group.AdministratorAdded
-  fullName: HuajiTech.CoolQ.Group.AdministratorAdded
-  nameWithType: Group.AdministratorAdded
-- uid: HuajiTech.CoolQ.Group.AdministratorRemoved
-  name: AdministratorRemoved
-  href: api/HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_AdministratorRemoved
-  commentId: E:HuajiTech.CoolQ.Group.AdministratorRemoved
-  fullName: HuajiTech.CoolQ.Group.AdministratorRemoved
-  nameWithType: Group.AdministratorRemoved
 - uid: HuajiTech.CoolQ.Group.DisableAnonymous
   name: DisableAnonymous()
   href: api/HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_DisableAnonymous
@@ -4313,6 +4301,18 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Member.Member
   nameWithType: Member.Member
+- uid: HuajiTech.CoolQ.Member.AdministratorSet
+  name: AdministratorSet
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_AdministratorSet
+  commentId: E:HuajiTech.CoolQ.Member.AdministratorSet
+  fullName: HuajiTech.CoolQ.Member.AdministratorSet
+  nameWithType: Member.AdministratorSet
+- uid: HuajiTech.CoolQ.Member.AdministratorUnset
+  name: AdministratorUnset
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_AdministratorUnset
+  commentId: E:HuajiTech.CoolQ.Member.AdministratorUnset
+  fullName: HuajiTech.CoolQ.Member.AdministratorUnset
+  nameWithType: Member.AdministratorUnset
 - uid: HuajiTech.CoolQ.Member.Age
   name: Age
   href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Age
@@ -5113,6 +5113,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Message.Id
   nameWithType: Message.Id
+- uid: HuajiTech.CoolQ.Message.op_Implicit(HuajiTech.CoolQ.Message)~System.String
+  name: Implicit(Message to String)
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_op_Implicit_HuajiTech_CoolQ_Message__System_String
+  commentId: M:HuajiTech.CoolQ.Message.op_Implicit(HuajiTech.CoolQ.Message)~System.String
+  name.vb: Widening(Message to String)
+  fullName: HuajiTech.CoolQ.Message.Implicit(HuajiTech.CoolQ.Message to System.String)
+  fullName.vb: HuajiTech.CoolQ.Message.Widening(HuajiTech.CoolQ.Message to System.String)
+  nameWithType: Message.Implicit(Message to String)
+  nameWithType.vb: Message.Widening(Message to String)
+- uid: HuajiTech.CoolQ.Message.op_Implicit*
+  name: Implicit
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_op_Implicit_
+  commentId: Overload:HuajiTech.CoolQ.Message.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: HuajiTech.CoolQ.Message.Implicit
+  fullName.vb: HuajiTech.CoolQ.Message.Widening
+  nameWithType: Message.Implicit
+  nameWithType.vb: Message.Widening
 - uid: HuajiTech.CoolQ.Message.Recall
   name: Recall()
   href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Recall

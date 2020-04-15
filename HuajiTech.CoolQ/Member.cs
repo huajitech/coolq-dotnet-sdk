@@ -114,6 +114,16 @@ namespace HuajiTech.CoolQ
         public static event EventHandler<MemberUnmutedEventArgs> Unmuted;
 
         /// <summary>
+        /// 在被设为管理员时引发。
+        /// </summary>
+        public static event EventHandler<AdministratorEventArgs> AdministratorSet;
+
+        /// <summary>
+        /// 在被取消管理员资格时引发。
+        /// </summary>
+        public static event EventHandler<AdministratorEventArgs> AdministratorUnset;
+
+        /// <summary>
         /// 踢出。
         /// </summary>
         /// <param name="disallowRejoin">是否禁止再次加群。</param>

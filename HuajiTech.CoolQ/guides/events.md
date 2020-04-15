@@ -5,7 +5,7 @@
 | 1 | 私聊消息处理 | @"HuajiTech.CoolQ.CurrentUser.MessageReceived" |
 | 2 | 群消息处理 | @"HuajiTech.CoolQ.CurrentUser.MessageReceived" |
 | 11 | 群文件上传事件处理 | @"HuajiTech.CoolQ.Group.FileUploaded" |
-| 101 | 群管理变动事件处理 | @"HuajiTech.CoolQ.Group.AdministratorAdded"、@"HuajiTech.CoolQ.Group.AdministratorRemoved" |
+| 101 | 群管理变动事件处理 | @"HuajiTech.CoolQ.Member.AdministratorSet"、@"HuajiTech.CoolQ.Member.AdministratorUnset" |
 | 102 | 群成员减少事件处理 | @"HuajiTech.CoolQ.Group.MemberLeft" |
 | 103 | 群成员增加事件处理 | @"HuajiTech.CoolQ.Group.MemberJoined" |
 | 104 | 群禁言事件处理 | @"HuajiTech.CoolQ.Member.Muted"、@"HuajiTech.CoolQ.Member.Unmuted"、@"HuajiTech.CoolQ.Group.Muted"、@"HuajiTech.CoolQ.Group.Unmuted" |

@@ -61,16 +61,6 @@ namespace HuajiTech.CoolQ
         public string Name => _name ?? GetInfo().Name;
 
         /// <summary>
-        /// 在添加管理员时引发。
-        /// </summary>
-        public static event EventHandler<AdministratorEventArgs> AdministratorAdded;
-
-        /// <summary>
-        /// 在移除管理员时引发。
-        /// </summary>
-        public static event EventHandler<AdministratorEventArgs> AdministratorRemoved;
-
-        /// <summary>
         /// 在收到入群请求时引发。
         /// </summary>
         public static event EventHandler<EntranceRequestedEventArgs> EntranceRequested;
