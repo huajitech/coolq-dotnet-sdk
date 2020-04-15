@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
             if (string.IsNullOrEmpty(type))
             {
-                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(type));
+                throw new ArgumentException(Resources.FieldCannotBeEmpty, nameof(type));
             }
 
             if (arguments is null)
