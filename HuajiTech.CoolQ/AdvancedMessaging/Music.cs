@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Music(IDictionary<string, string> arguments)
-            : base(arguments)
+        public Music(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -22,8 +22,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public int Id
         {
-            get => GetArgumentAsInt32("id");
-            set => SetArgument("id", value);
+            get => GetParameterAsInt32("id");
+            set => SetParameter("id", value);
         }
 
         /// <summary>

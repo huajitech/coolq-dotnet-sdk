@@ -11,8 +11,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public At(IDictionary<string, string> arguments)
-            : base(arguments)
+        public At(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -21,8 +21,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public User Target
         {
-            get => new User(GetArgumentAsInt64("qq"));
-            set => SetArgument("qq", value?.Number ?? default);
+            get => new User(GetParameterAsInt64("qq"));
+            set => SetParameter("qq", value?.Number ?? default);
         }
 
         public override string Type => "at";

@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public ClockingIn(IDictionary<string, string> arguments)
-            : base(arguments)
+        public ClockingIn(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -22,8 +22,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public Uri ImageUrl
         {
-            get => GetArgumentAsUri("image");
-            set => SetArgument("image", value);
+            get => GetParameterAsUri("image");
+            set => SetParameter("image", value);
         }
 
         /// <summary>

@@ -14,8 +14,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Record(IDictionary<string, string> arguments)
-            : base(arguments)
+        public Record(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -33,8 +33,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public bool IsVoiceChanged
         {
-            get => GetArgumentAsBoolean("magic");
-            set => SetArgument("magic", value);
+            get => GetParameterAsBoolean("magic");
+            set => SetParameter("magic", value);
         }
 
         public override string Type => "record";

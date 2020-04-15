@@ -11,8 +11,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Dice(IDictionary<string, string> arguments)
-            : base(arguments)
+        public Dice(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -21,8 +21,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public int Point
         {
-            get => GetArgumentAsInt32("type");
-            set => SetArgument("type", value);
+            get => GetParameterAsInt32("type");
+            set => SetParameter("type", value);
         }
 
         public override string Type => "dice";

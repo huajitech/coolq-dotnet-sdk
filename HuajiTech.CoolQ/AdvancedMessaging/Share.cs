@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Share(IDictionary<string, string> arguments)
-            : base(arguments)
+        public Share(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -31,8 +31,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public Uri ImageUrl
         {
-            get => GetArgumentAsUri("image");
-            set => SetArgument("image", value);
+            get => GetParameterAsUri("image");
+            set => SetParameter("image", value);
         }
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public Uri Url
         {
-            get => GetArgumentAsUri("url");
-            set => SetArgument("url", value);
+            get => GetParameterAsUri("url");
+            set => SetParameter("url", value);
         }
 
         public override string Type => "share";

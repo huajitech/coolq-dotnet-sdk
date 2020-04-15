@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Location(IDictionary<string, string> arguments)
-            : base(arguments)
+        public Location(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -31,8 +31,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public float Latitude
         {
-            get => GetArgumentAsSingle("lat");
-            set => SetArgument("lat", value);
+            get => GetParameterAsSingle("lat");
+            set => SetParameter("lat", value);
         }
 
         /// <summary>
@@ -40,8 +40,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public float Longitude
         {
-            get => GetArgumentAsSingle("lon");
-            set => SetArgument("lon", value);
+            get => GetParameterAsSingle("lon");
+            set => SetParameter("lon", value);
         }
 
         /// <summary>

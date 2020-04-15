@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
             this["qq"] = "all";
         }
 
-        public AtAll(IDictionary<string, string> arguments)
-            : base(arguments)
+        public AtAll(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 

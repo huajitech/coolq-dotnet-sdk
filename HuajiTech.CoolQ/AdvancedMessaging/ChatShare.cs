@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public ChatShare(IDictionary<string, string> arguments)
-            : base(arguments)
+        public ChatShare(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -24,8 +24,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
             get => this["type"] switch
             {
-                "qq" => new User(GetArgumentAsInt64("id")),
-                "group" => new Group(GetArgumentAsInt64("id")),
+                "qq" => new User(GetParameterAsInt64("id")),
+                "group" => new Group(GetParameterAsInt64("id")),
                 _ => null
             };
 
@@ -43,7 +43,7 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
                     _ => throw new ArgumentOutOfRangeException(nameof(value)),
                 };
 
-                SetArgument("id", value.Number);
+                SetParameter("id", value.Number);
             }
         }
 

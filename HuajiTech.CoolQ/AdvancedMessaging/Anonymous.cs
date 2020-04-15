@@ -11,8 +11,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Anonymous(IDictionary<string, string> arguments)
-            : base(arguments)
+        public Anonymous(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -21,8 +21,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// </summary>
         public bool DoesFallback
         {
-            get => GetArgumentAsBoolean("ignore");
-            set => SetArgument("ignore", value);
+            get => GetParameterAsBoolean("ignore");
+            set => SetParameter("ignore", value);
         }
 
         public override string Type => "anonymous";

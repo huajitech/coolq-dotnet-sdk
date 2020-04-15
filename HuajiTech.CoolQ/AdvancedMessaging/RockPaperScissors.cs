@@ -11,8 +11,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public RockPaperScissors(IDictionary<string, string> arguments)
-            : base(arguments)
+        public RockPaperScissors(IDictionary<string, string> parameters)
+            : base(parameters)
         {
         }
 
@@ -20,7 +20,7 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         /// 获取猜拳的结果。
         /// </summary>
         public RockPaperScissorsResult Result =>
-            (RockPaperScissorsResult)GetArgumentAsInt32("type");
+            (RockPaperScissorsResult)GetParameterAsInt32("type");
 
         public override string Type => "rps";
     }
