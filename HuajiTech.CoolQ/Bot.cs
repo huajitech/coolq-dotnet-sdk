@@ -21,6 +21,7 @@ namespace HuajiTech.CoolQ
 
         private static bool? _canSendImage;
         private static bool? _canSendRecord;
+        private static DirectoryInfo _dataDirectory;
 
         static Bot()
         {
@@ -70,18 +71,8 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取应用的数据目录。
         /// </summary>
-        public static DirectoryInfo GetDataDirectory()
-        {
-            return new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode));
-        }
-
-        /// <summary>
-        /// 以异步操作获取应用的数据目录。
-        /// </summary>
-        public static Task<DirectoryInfo> GetDataDirectoryAsync()
-        {
-            return Task.Run(GetDataDirectory);
-        }
+        public static DirectoryInfo DataDirectory =>
+            _dataDirectory ??= new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode));
 
         /// <summary>
         /// 记录一条日志。
@@ -130,7 +121,8 @@ namespace HuajiTech.CoolQ
         /// <returns>图片的文件信息。</returns>
         public static FileInfo RequestImage(string fileName)
         {
-            return new FileInfo(NativeMethods.RequestImage(AuthCode, fileName));
+            return new FileInfo(NativeMethods.RequestImage(AuthCode, fileName) ??
+                throw new CoolQException(Resources.NullReturnValue));
         }
 
         /// <summary>
@@ -151,7 +143,8 @@ namespace HuajiTech.CoolQ
         /// <returns>录音的文件信息。</returns>
         public static FileInfo RequestRecord(string fileName, string fileFormat)
         {
-            return new FileInfo(NativeMethods.RequestRecord(AuthCode, fileName, fileFormat));
+            return new FileInfo(NativeMethods.RequestRecord(AuthCode, fileName, fileFormat) ??
+                throw new CoolQException(Resources.NullReturnValue));
         }
 
         /// <summary>
