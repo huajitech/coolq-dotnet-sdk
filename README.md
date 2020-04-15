@@ -27,9 +27,9 @@ public class Repeater
 
 ## 文档
 
-[Github Pages](https://huajitech.github.io/coolq-dotnet-sdk/)
+[Github Pages](https://huajitech.github.io/coolq-dotnet-sdk/)（与代码库同步）
 
-[HuajiTech](https://www.huajitech.net/docs/coolq-dotnet-sdk/)
+[HuajiTech](https://www.huajitech.net/docs/coolq-dotnet-sdk/)（与最新的 NuGet 包同步）
 
 ## 讨论
 
