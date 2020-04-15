@@ -10,7 +10,7 @@ namespace HuajiTech.CoolQ
         public MemberLeftEventArgs(
             bool isKicked, DateTime time, Group source, Member @operator, User affectee)
         {
-            IsKicked = isKicked;
+            IsPassive = isKicked;
             Time = time;
             Source = source;
             Operator = @operator;
@@ -18,9 +18,9 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取一个值，指示成员是否被踢出。
+        /// 获取一个值，指示成员是否被动退群。
         /// </summary>
-        public bool IsKicked { get; }
+        public bool IsPassive { get; }
 
         /// <summary>
         /// 获取时间。

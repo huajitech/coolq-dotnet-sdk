@@ -10,7 +10,7 @@ namespace HuajiTech.CoolQ
         public MemberJoinedEventArgs(
             bool isInvited, DateTime time, Group source, Member @operator, Member affectee)
         {
-            IsInvited = isInvited;
+            IsPassive = isInvited;
             Time = time;
             Source = source;
             Operator = @operator;
@@ -18,9 +18,9 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取一个值，指示成员是否被邀请入群。
+        /// 获取一个值，指示成员是否被动入群。
         /// </summary>
-        public bool IsInvited { get; }
+        public bool IsPassive { get; }
 
         /// <summary>
         /// 获取时间。
