@@ -136,7 +136,7 @@
     <value>酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。</value>
   </data>
   <data name="TestingNotificationContent" xml:space="preserve">
-    <value>此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ (0.1.2-alpha.2004.1) 开发，不建议在生产环境使用。此提示不是由任何错误导致的，也不会对使用造成任何影响。测试版本迭代较快，请及时更新。如果遇到BUG，欢迎进行反馈。感谢您的配合。</value>
+    <value>此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ 开发，不建议在生产环境使用。此提示不是由任何错误导致的，也不会对使用造成任何影响。测试版本迭代较快，请及时更新。如果遇到BUG，欢迎进行反馈。感谢您的配合。</value>
   </data>
   <data name="TestingNotificationTitle" xml:space="preserve">
     <value>HuajiTech.CoolQ 测试提示</value>
