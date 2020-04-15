@@ -109,12 +109,12 @@
     <Compile Include="DataExchange\AnonymousMemberInfoReader.cs" />
     <Compile Include="DataExchange\StatusWriter.cs" />
     <Compile Include="DataExchange\Writer{T}.cs" />
-    <Compile Include="Enums\AdministratorsChangingType.cs" />
+    <Compile Include="Enums\AdministratorsChangeType.cs" />
     <Compile Include="Enums\RequestResponse.cs" />
     <Compile Include="Enums\EntranceType.cs" />
-    <Compile Include="Enums\MembersChangingType.cs" />
+    <Compile Include="Enums\MembersChangeType.cs" />
     <Compile Include="Enums\MemberRole.cs" />
-    <Compile Include="Enums\MuteStateChangingType.cs" />
+    <Compile Include="Enums\MuteStateChangeType.cs" />
     <Compile Include="Enums\StatusColor.cs" />
     <Compile Include="EventArgses\ContactAddedEventArgs.cs" />
     <Compile Include="EventArgses\ContactRequestedEventArgs.cs" />

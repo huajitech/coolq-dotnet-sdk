@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ
 {
-    internal enum MembersChangingType
+    internal enum MembersChangeType
     {
         None,
         Active,

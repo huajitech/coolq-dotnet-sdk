@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ
 {
-    internal enum AdministratorsChangingType
+    internal enum AdministratorsChangeType
     {
         None,
         Add,

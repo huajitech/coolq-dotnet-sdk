@@ -13,7 +13,7 @@ namespace HuajiTech.CoolQ
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnAdministratorsChanged(
-            AdministratorsChangingType type,
+            AdministratorsChangeType type,
             int timestampChanged,
             long sourceNumber,
             long affecteeNumber)
@@ -24,8 +24,8 @@ namespace HuajiTech.CoolQ
 
             var ev = type switch
             {
-                AdministratorsChangingType.Add => AdministratorAdded,
-                AdministratorsChangingType.Remove => AdministratorRemoved,
+                AdministratorsChangeType.Add => AdministratorAdded,
+                AdministratorsChangeType.Remove => AdministratorRemoved,
                 _ => throw new ArgumentOutOfRangeException(nameof(type))
             };
 
@@ -84,17 +84,17 @@ namespace HuajiTech.CoolQ
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberJoined(
-            MembersChangingType type,
+            MembersChangeType type,
             int timestampJoined,
             long sourceNumber,
             long operatorNumber,
             long affecteeNumber)
         {
             var source = new Group(sourceNumber);
-            var isPassive = type == MembersChangingType.Passive;
+            var isPassive = type == MembersChangeType.Passive;
 
             var e = new MemberJoinedEventArgs(
-                type == MembersChangingType.Passive,
+                type == MembersChangeType.Passive,
                 Timestamp.ToDateTime(timestampJoined),
                 source,
                 isPassive ? null : new Member(operatorNumber, source),
@@ -108,14 +108,14 @@ namespace HuajiTech.CoolQ
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberLeft(
-            MembersChangingType type,
+            MembersChangeType type,
             int timestampLeft,
             long sourceNumber,
             long operatorNumber,
             long affecteeNumber)
         {
             var source = new Group(sourceNumber);
-            var isPassive = type == MembersChangingType.Passive;
+            var isPassive = type == MembersChangeType.Passive;
 
             var e = new MemberLeftEventArgs(
                 isPassive,

@@ -116,7 +116,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 踢出。
         /// </summary>
-        /// <param name="disallowRejoin">如果禁止再次加群，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <param name="disallowRejoin">是否禁止再次加群。</param>
         public void Kick(bool disallowRejoin = false)
         {
             NativeMethods.KickMember(

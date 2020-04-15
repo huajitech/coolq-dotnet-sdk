@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ
 {
-    internal enum MuteStateChangingType
+    internal enum MuteStateChangeType
     {
         None,
         Unmute,
