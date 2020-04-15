@@ -753,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MemberJoinedEventArgs.html",
-          "hash": "LQwBe3+Q3CndicJORLAa4Q=="
+          "hash": "m4AWGKxzfGsUG091r3W7Hw=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MemberLeftEventArgs.html",
-          "hash": "e/3tX5ZEHHucK/qIqShpVg=="
+          "hash": "Y7RAUAYmSgoimT1U3BZiLw=="
         }
       },
       "is_incremental": false,

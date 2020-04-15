@@ -4760,19 +4760,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.MemberJoinedEventArgs.Affectee
   nameWithType: MemberJoinedEventArgs.Affectee
-- uid: HuajiTech.CoolQ.MemberJoinedEventArgs.IsInvited
-  name: IsInvited
-  href: api/HuajiTech.CoolQ.MemberJoinedEventArgs.html#HuajiTech_CoolQ_MemberJoinedEventArgs_IsInvited
-  commentId: P:HuajiTech.CoolQ.MemberJoinedEventArgs.IsInvited
-  fullName: HuajiTech.CoolQ.MemberJoinedEventArgs.IsInvited
-  nameWithType: MemberJoinedEventArgs.IsInvited
-- uid: HuajiTech.CoolQ.MemberJoinedEventArgs.IsInvited*
-  name: IsInvited
-  href: api/HuajiTech.CoolQ.MemberJoinedEventArgs.html#HuajiTech_CoolQ_MemberJoinedEventArgs_IsInvited_
-  commentId: Overload:HuajiTech.CoolQ.MemberJoinedEventArgs.IsInvited
+- uid: HuajiTech.CoolQ.MemberJoinedEventArgs.IsPassive
+  name: IsPassive
+  href: api/HuajiTech.CoolQ.MemberJoinedEventArgs.html#HuajiTech_CoolQ_MemberJoinedEventArgs_IsPassive
+  commentId: P:HuajiTech.CoolQ.MemberJoinedEventArgs.IsPassive
+  fullName: HuajiTech.CoolQ.MemberJoinedEventArgs.IsPassive
+  nameWithType: MemberJoinedEventArgs.IsPassive
+- uid: HuajiTech.CoolQ.MemberJoinedEventArgs.IsPassive*
+  name: IsPassive
+  href: api/HuajiTech.CoolQ.MemberJoinedEventArgs.html#HuajiTech_CoolQ_MemberJoinedEventArgs_IsPassive_
+  commentId: Overload:HuajiTech.CoolQ.MemberJoinedEventArgs.IsPassive
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.MemberJoinedEventArgs.IsInvited
-  nameWithType: MemberJoinedEventArgs.IsInvited
+  fullName: HuajiTech.CoolQ.MemberJoinedEventArgs.IsPassive
+  nameWithType: MemberJoinedEventArgs.IsPassive
 - uid: HuajiTech.CoolQ.MemberJoinedEventArgs.Operator
   name: Operator
   href: api/HuajiTech.CoolQ.MemberJoinedEventArgs.html#HuajiTech_CoolQ_MemberJoinedEventArgs_Operator
@@ -4844,19 +4844,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.MemberLeftEventArgs.Affectee
   nameWithType: MemberLeftEventArgs.Affectee
-- uid: HuajiTech.CoolQ.MemberLeftEventArgs.IsKicked
-  name: IsKicked
-  href: api/HuajiTech.CoolQ.MemberLeftEventArgs.html#HuajiTech_CoolQ_MemberLeftEventArgs_IsKicked
-  commentId: P:HuajiTech.CoolQ.MemberLeftEventArgs.IsKicked
-  fullName: HuajiTech.CoolQ.MemberLeftEventArgs.IsKicked
-  nameWithType: MemberLeftEventArgs.IsKicked
-- uid: HuajiTech.CoolQ.MemberLeftEventArgs.IsKicked*
-  name: IsKicked
-  href: api/HuajiTech.CoolQ.MemberLeftEventArgs.html#HuajiTech_CoolQ_MemberLeftEventArgs_IsKicked_
-  commentId: Overload:HuajiTech.CoolQ.MemberLeftEventArgs.IsKicked
+- uid: HuajiTech.CoolQ.MemberLeftEventArgs.IsPassive
+  name: IsPassive
+  href: api/HuajiTech.CoolQ.MemberLeftEventArgs.html#HuajiTech_CoolQ_MemberLeftEventArgs_IsPassive
+  commentId: P:HuajiTech.CoolQ.MemberLeftEventArgs.IsPassive
+  fullName: HuajiTech.CoolQ.MemberLeftEventArgs.IsPassive
+  nameWithType: MemberLeftEventArgs.IsPassive
+- uid: HuajiTech.CoolQ.MemberLeftEventArgs.IsPassive*
+  name: IsPassive
+  href: api/HuajiTech.CoolQ.MemberLeftEventArgs.html#HuajiTech_CoolQ_MemberLeftEventArgs_IsPassive_
+  commentId: Overload:HuajiTech.CoolQ.MemberLeftEventArgs.IsPassive
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.MemberLeftEventArgs.IsKicked
-  nameWithType: MemberLeftEventArgs.IsKicked
+  fullName: HuajiTech.CoolQ.MemberLeftEventArgs.IsPassive
+  nameWithType: MemberLeftEventArgs.IsPassive
 - uid: HuajiTech.CoolQ.MemberLeftEventArgs.Operator
   name: Operator
   href: api/HuajiTech.CoolQ.MemberLeftEventArgs.html#HuajiTech_CoolQ_MemberLeftEventArgs_Operator
