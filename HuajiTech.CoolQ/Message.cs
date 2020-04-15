@@ -43,5 +43,10 @@ namespace HuajiTech.CoolQ
         {
             return Content;
         }
+
+        public static implicit operator string(Message message)
+        {
+            return message?.Content;
+        }
     }
 }
