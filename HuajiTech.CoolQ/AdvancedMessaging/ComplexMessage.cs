@@ -110,6 +110,11 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
             return new ComplexMessage(GetMessageElements());
         }
 
+        public static ComplexMessage FromMessageElement(MessageElement element)
+        {
+            return new ComplexMessage(element);
+        }
+
         /// <summary>
         /// 获取当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拼接成的字符串。
         /// </summary>
@@ -242,6 +247,11 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
             }
 
             return left.Add(right);
+        }
+
+        public static explicit operator ComplexMessage(MessageElement element)
+        {
+            return FromMessageElement(element);
         }
     }
 

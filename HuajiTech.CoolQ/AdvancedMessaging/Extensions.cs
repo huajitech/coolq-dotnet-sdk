@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace HuajiTech.CoolQ.AdvancedMessaging
 {
@@ -52,6 +53,17 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         }
 
         /// <summary>
+        /// 以异步操作发送复合消息。
+        /// </summary>
+        /// <param name="chat">目标聊天。</param>
+        /// <param name="message">要发送的消息。</param>
+        /// <returns>发送的消息。</returns>
+        public static Task<Message> SendAsync(this Chat chat, ComplexMessage message)
+        {
+            return Task.Run(() => Send(chat, message));
+        }
+
+        /// <summary>
         /// 发送消息元素。
         /// </summary>
         /// <param name="chat">目标聊天。</param>
@@ -70,6 +82,17 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
             }
 
             return chat.Send(element.ToString());
+        }
+
+        /// <summary>
+        /// 以异步操作发送消息元素。
+        /// </summary>
+        /// <param name="chat">目标聊天。</param>
+        /// <param name="element">要发送的消息。</param>
+        /// <returns>发送的消息。</returns>
+        public static Task<Message> SendAsync(this Chat chat, MessageElement element)
+        {
+            return Task.Run(() => Send(chat, element));
         }
     }
 }
