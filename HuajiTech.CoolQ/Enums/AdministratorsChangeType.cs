@@ -3,7 +3,7 @@ namespace HuajiTech.CoolQ
     internal enum AdministratorsChangeType
     {
         None,
-        Add,
-        Remove
+        Remove,
+        Add
     }
 }
