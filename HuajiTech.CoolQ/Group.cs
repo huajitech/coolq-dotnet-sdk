@@ -158,7 +158,7 @@ namespace HuajiTech.CoolQ
         /// <param name="disband">是否解散。</param>
         public void Leave(bool disband = false)
         {
-            if (disband && CurrentUser.AsMemberOf(this).Type != MemberType.Owner)
+            if (disband && CurrentUser.AsMemberOf(this).Role != MemberRole.Owner)
             {
                 throw new InvalidOperationException(Resources.GroupCanOnlyBeDisbandedByOwnerWhenLeaving);
             }

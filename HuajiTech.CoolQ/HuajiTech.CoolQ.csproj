@@ -113,7 +113,7 @@
     <Compile Include="Enums\RequestResponse.cs" />
     <Compile Include="Enums\EntranceType.cs" />
     <Compile Include="Enums\MembersChangingType.cs" />
-    <Compile Include="Enums\MemberType.cs" />
+    <Compile Include="Enums\MemberRole.cs" />
     <Compile Include="Enums\MuteStateChangingType.cs" />
     <Compile Include="Enums\StatusColor.cs" />
     <Compile Include="EventArgses\ContactAddedEventArgs.cs" />

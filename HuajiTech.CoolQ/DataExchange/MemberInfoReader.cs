@@ -23,7 +23,7 @@ namespace HuajiTech.CoolQ.DataExchange
                 EntranceTime = ReadDateTime(),
                 LastSpeakTime = ReadDateTime(),
                 Level = ReadString(),
-                Type = (MemberType)ReadInt32(),
+                Role = (MemberRole)ReadInt32(),
                 HasBadRecord = ReadBoolean(),
                 CustomTitle = new CustomTitle(
                     text: ReadString(),

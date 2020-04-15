@@ -30,6 +30,6 @@ namespace HuajiTech.CoolQ.DataExchange
 
         public long Number { get; set; }
 
-        public MemberType Type { get; set; }
+        public MemberRole Role { get; set; }
     }
 }

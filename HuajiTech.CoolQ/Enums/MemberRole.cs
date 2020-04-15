@@ -1,9 +1,9 @@
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 指定成员类型。
+    /// 指定成员角色。
     /// </summary>
-    public enum MemberType
+    public enum MemberRole
     {
         None,
 

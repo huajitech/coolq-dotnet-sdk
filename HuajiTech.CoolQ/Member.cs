@@ -81,7 +81,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取一个值，指示是否为管理员或群主。
         /// </summary>
-        public bool IsAdministrator => Type == MemberType.Administrator || Type == MemberType.Owner;
+        public bool IsAdministrator => Role == MemberRole.Administrator || Role == MemberRole.Owner;
 
         /// <summary>
         /// 获取最后发言时间。
@@ -99,9 +99,9 @@ namespace HuajiTech.CoolQ
         public string Location => GetInfo().Location;
 
         /// <summary>
-        /// 获取类别。
+        /// 获取角色。
         /// </summary>
-        public MemberType Type => GetInfo().Type;
+        public MemberRole Role => GetInfo().Role;
 
         /// <summary>
         /// 在被禁言时引发。
@@ -283,7 +283,7 @@ namespace HuajiTech.CoolQ
 
         private void SetIsAdministrator(bool isAdministrator)
         {
-            if (Type == MemberType.Owner)
+            if (Role == MemberRole.Owner)
             {
                 throw new InvalidOperationException(Resources.MemberIsOwner);
             }
@@ -291,7 +291,7 @@ namespace HuajiTech.CoolQ
             NativeMethods.SetMemberIsAdministrator(
                     Bot.AuthCode, Group.Number, Number, isAdministrator).CheckError();
 
-            _info.Type = MemberType.Administrator;
+            _info.Role = MemberRole.Administrator;
         }
     }
 }
