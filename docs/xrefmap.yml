@@ -779,6 +779,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.ToString
   nameWithType: ComplexMessage.ToString
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.TryRemove(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
+  name: TryRemove(MessageElement)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_TryRemove_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.TryRemove(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.TryRemove(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
+  nameWithType: ComplexMessage.TryRemove(MessageElement)
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.TryRemove*
+  name: TryRemove
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_TryRemove_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.TryRemove
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.TryRemove
+  nameWithType: ComplexMessage.TryRemove
 - uid: HuajiTech.CoolQ.AdvancedMessaging.CQCode
   name: CQCode
   href: api/HuajiTech.CoolQ.AdvancedMessaging.CQCode.html

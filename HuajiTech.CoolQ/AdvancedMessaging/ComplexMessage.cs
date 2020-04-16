@@ -169,6 +169,16 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         }
 
         /// <summary>
+        /// 尝试移除指定消息元素的第一个匹配项。
+        /// </summary>
+        /// <param name="item">消息元素。</param>
+        /// <returns>是否成功移除 <paramref name="item"/>。</returns>
+        public bool TryRemove(MessageElement item)
+        {
+            return _elements.Remove(item);
+        }
+
+        /// <summary>
         /// 移除指定消息元素的所有匹配项。
         /// </summary>
         /// <param name="item">消息元素。</param>
