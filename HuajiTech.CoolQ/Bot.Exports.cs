@@ -2,11 +2,14 @@ using HuajiTech.UnmanagedExports;
 using System;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 
 namespace HuajiTech.CoolQ
 {
     public static partial class Bot
     {
+        private static Exception _constructorException;
+
         [DllExport(EntryPoint = "AppInfo")]
         private static string GetAppInfo()
         {
@@ -33,7 +36,14 @@ namespace HuajiTech.CoolQ
                 }
             };
 
-            App = AppConstructor?.Invoke(null);
+            try
+            {
+                App = AppConstructor.Invoke(null);
+            }
+            catch (TargetInvocationException ex)
+            {
+                _constructorException = ex.InnerException;
+            }
 
             return 0;
         }
@@ -52,6 +62,11 @@ namespace HuajiTech.CoolQ
                 LogLevel.Info,
                 Resources.TestingNotificationTitle,
                 string.Format(CultureInfo.InvariantCulture, Resources.TestingNotificationContent, AppId));
+
+            if (!(_constructorException is null))
+            {
+                LogFatal(Resources.UnhandledExceptionInConstructor + "\n" + _constructorException.ToString());
+            }
 
             AppEnabled?.Invoke(null, EventArgs.Empty);
             return 0;
