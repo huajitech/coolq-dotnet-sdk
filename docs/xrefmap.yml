@@ -2837,6 +2837,19 @@ references:
   commentId: E:HuajiTech.CoolQ.Bot.Stopping
   fullName: HuajiTech.CoolQ.Bot.Stopping
   nameWithType: Bot.Stopping
+- uid: HuajiTech.CoolQ.Bot.UnhandledExceptionLogLevel
+  name: UnhandledExceptionLogLevel
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_UnhandledExceptionLogLevel
+  commentId: P:HuajiTech.CoolQ.Bot.UnhandledExceptionLogLevel
+  fullName: HuajiTech.CoolQ.Bot.UnhandledExceptionLogLevel
+  nameWithType: Bot.UnhandledExceptionLogLevel
+- uid: HuajiTech.CoolQ.Bot.UnhandledExceptionLogLevel*
+  name: UnhandledExceptionLogLevel
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_UnhandledExceptionLogLevel_
+  commentId: Overload:HuajiTech.CoolQ.Bot.UnhandledExceptionLogLevel
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Bot.UnhandledExceptionLogLevel
+  nameWithType: Bot.UnhandledExceptionLogLevel
 - uid: HuajiTech.CoolQ.Chat
   name: Chat
   href: api/HuajiTech.CoolQ.Chat.html
