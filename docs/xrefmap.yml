@@ -491,12 +491,12 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetEnumerator
   nameWithType: ComplexMessage.GetEnumerator
-- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetPlainText
-  name: GetPlainText()
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_GetPlainText
-  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetPlainText
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetPlainText()
-  nameWithType: ComplexMessage.GetPlainText()
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetPlainText(System.String)
+  name: GetPlainText(String)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_GetPlainText_System_String_
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetPlainText(System.String)
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetPlainText(System.String)
+  nameWithType: ComplexMessage.GetPlainText(String)
 - uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetPlainText*
   name: GetPlainText
   href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_GetPlainText_

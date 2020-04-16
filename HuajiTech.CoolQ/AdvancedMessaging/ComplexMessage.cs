@@ -116,11 +116,12 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         }
 
         /// <summary>
-        /// 获取当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拼接成的字符串。
+        /// 获取当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象使用指定分隔符拼接而成的字符串。
         /// </summary>
-        public string GetPlainText()
+        /// <param name="separator">分隔符。</param>
+        public string GetPlainText(string separator = "")
         {
-            return string.Join(string.Empty, this.OfType<PlainText>());
+            return string.Join(separator, this.OfType<PlainText>());
         }
 
         /// <summary>
