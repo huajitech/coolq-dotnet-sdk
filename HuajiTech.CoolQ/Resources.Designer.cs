@@ -140,14 +140,5 @@ namespace HuajiTech.CoolQ {
                 return ResourceManager.GetString("UnexpectedReturnValue", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   查找类似 未经处理的异常 的本地化字符串。
-        /// </summary>
-        internal static string UnhandledException {
-            get {
-                return ResourceManager.GetString("UnhandledException", resourceCulture);
-            }
-        }
     }
 }
