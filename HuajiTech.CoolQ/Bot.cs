@@ -162,9 +162,9 @@ namespace HuajiTech.CoolQ
         {
             var apps = from asm in AppDomain.CurrentDomain.GetAssemblies()
                        from type in asm.GetTypes()
+                       where !type.IsAbstract
                        let attr = type.GetCustomAttribute<AppAttribute>()
                        where !(attr is null)
-                       where !type.IsAbstract
                        from ctor in type.GetConstructors()
                        where ctor.IsPublic && !ctor.GetParameters().Any()
                        select new
