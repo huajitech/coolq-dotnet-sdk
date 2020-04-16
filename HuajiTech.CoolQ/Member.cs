@@ -138,6 +138,11 @@ namespace HuajiTech.CoolQ
         /// <param name="duration">禁言时长。</param>
         public void Mute(TimeSpan duration)
         {
+            if (duration <= TimeSpan.Zero)
+            {
+                throw new ArgumentOutOfRangeException(nameof(duration));
+            }
+
             NativeMethods.MuteMember(
                 Bot.AuthCode, Group.Number, Number, (long)duration.TotalSeconds).CheckError();
         }
