@@ -144,7 +144,7 @@
   <data name="UnexpectedReturnValue" xml:space="preserve">
     <value>酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。</value>
   </data>
-  <data name="UnhandledExceptionInConstructor" xml:space="preserve">
-    <value>应用入口类构造函数中引发了未经处理的异常。</value>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>未经处理的异常</value>
   </data>
 </root>

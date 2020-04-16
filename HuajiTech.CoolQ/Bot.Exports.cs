@@ -28,7 +28,7 @@ namespace HuajiTech.CoolQ
 
                     if (frames.Any())
                     {
-                        LogFatal(ex.ToString());
+                        Log(UnhandledExceptionLogLevel, Resources.UnhandledException, ex.ToString());
                     }
                 }
             };

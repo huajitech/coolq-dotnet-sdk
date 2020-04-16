@@ -142,11 +142,11 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 应用入口类构造函数中引发了未经处理的异常。 的本地化字符串。
+        ///   查找类似 未经处理的异常 的本地化字符串。
         /// </summary>
-        internal static string UnhandledExceptionInConstructor {
+        internal static string UnhandledException {
             get {
-                return ResourceManager.GetString("UnhandledExceptionInConstructor", resourceCulture);
+                return ResourceManager.GetString("UnhandledException", resourceCulture);
             }
         }
     }
