@@ -8,6 +8,10 @@ namespace HuajiTech.CoolQ
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public sealed class AppAttribute : Attribute
     {
+        /// <summary>
+        /// 以指定的 ID 初始化一个 <see cref="AppAttribute"/> 类的新实例。
+        /// </summary>
+        /// <param name="id">ID。</param>
         public AppAttribute(string id)
         {
             Id = id;

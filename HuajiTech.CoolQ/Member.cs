@@ -14,8 +14,8 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 以指定的号码和群初始化一个 <see cref="Member"/> 类的新实例。
         /// </summary>
-        /// <param name="number">指定号码。</param>
-        /// <param name="group">指定群。</param>
+        /// <param name="number">号码。</param>
+        /// <param name="group">群。</param>
         public Member(long number, Group group)
             : base(number)
         {
