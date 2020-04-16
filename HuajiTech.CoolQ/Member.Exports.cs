@@ -9,30 +9,6 @@ namespace HuajiTech.CoolQ
     {
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnAdministratorsChanged(
-            AdministratorsChangeType type,
-            int timestampChanged,
-            long sourceNumber,
-            long affecteeNumber)
-        {
-            var source = new Group(sourceNumber);
-            var e = new AdministratorEventArgs(
-                Timestamp.ToDateTime(timestampChanged), source, new Member(affecteeNumber, source));
-
-            var ev = type switch
-            {
-                AdministratorsChangeType.Add => AdministratorSet,
-                AdministratorsChangeType.Remove => AdministratorUnset,
-                _ => throw new ArgumentOutOfRangeException(nameof(type))
-            };
-
-            ev?.Invoke(null, e);
-
-            return e.Handled;
-        }
-
-        [DllExport]
-        [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberMuteStateChanged(
             MuteStateChangeType type,
             int timestampChanged,
