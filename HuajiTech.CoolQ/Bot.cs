@@ -33,11 +33,6 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取或设置未经处理的异常的日志等级。
-        /// </summary>
-        public static LogLevel UnhandledExceptionLogLevel { get; set; } = LogLevel.Error;
-
-        /// <summary>
         /// 获取一个值，指示是否可以发送图片。
         /// </summary>
         public static bool CanSendImage =>
