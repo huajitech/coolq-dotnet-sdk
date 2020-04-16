@@ -13,13 +13,8 @@ namespace HuajiTech.CoolQ.DataExchange
 
         protected Reader(string base64String)
         {
-            if (base64String is null)
-            {
-                throw new CoolQException(Resources.NullReturnValue);
-            }
-
             BinaryReader = new BinaryReader(
-                new MemoryStream(Convert.FromBase64String(base64String)));
+                new MemoryStream(Convert.FromBase64String(base64String.CheckError())));
         }
 
         protected BinaryReader BinaryReader { get; }

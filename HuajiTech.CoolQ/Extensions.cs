@@ -69,5 +69,15 @@ namespace HuajiTech.CoolQ
 
             return returnValue;
         }
+
+        internal static T CheckError<T>(this T returnValue)
+        {
+            if (returnValue is null)
+            {
+                throw new CoolQException(Resources.NullReturnValue);
+            }
+
+            return returnValue;
+        }
     }
 }

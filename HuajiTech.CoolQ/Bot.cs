@@ -121,8 +121,7 @@ namespace HuajiTech.CoolQ
         /// <returns>图片的文件信息。</returns>
         public static FileInfo RequestImage(string fileName)
         {
-            return new FileInfo(NativeMethods.RequestImage(AuthCode, fileName) ??
-                throw new CoolQException(Resources.NullReturnValue));
+            return new FileInfo(NativeMethods.RequestImage(AuthCode, fileName).CheckError());
         }
 
         /// <summary>
@@ -143,8 +142,7 @@ namespace HuajiTech.CoolQ
         /// <returns>录音的文件信息。</returns>
         public static FileInfo RequestRecord(string fileName, string fileFormat)
         {
-            return new FileInfo(NativeMethods.RequestRecord(AuthCode, fileName, fileFormat) ??
-                throw new CoolQException(Resources.NullReturnValue));
+            return new FileInfo(NativeMethods.RequestRecord(AuthCode, fileName, fileFormat).CheckError());
         }
 
         /// <summary>

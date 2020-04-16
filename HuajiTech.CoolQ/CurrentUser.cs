@@ -91,14 +91,7 @@ namespace HuajiTech.CoolQ
         /// <param name="domain">指定的域名。</param>
         public static string GetCookies(string domain)
         {
-            var cookies = NativeMethods.GetCookies(Bot.AuthCode, domain);
-
-            if (cookies is null)
-            {
-                throw new CoolQException(Resources.NullReturnValue);
-            }
-
-            return cookies;
+            return NativeMethods.GetCookies(Bot.AuthCode, domain).CheckError();
         }
 
         /// <summary>
