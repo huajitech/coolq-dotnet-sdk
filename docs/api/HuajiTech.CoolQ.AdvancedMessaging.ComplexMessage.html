@@ -85,6 +85,8 @@
     <h5>&#23454;&#29616;</h5>
     <div><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html">MessageElement</a>&gt;</div>
     <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html">MessageElement</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html">MessageElement</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html">MessageElement</a>&gt;</div>
     <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html">MessageElement</a>&gt;</div>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
@@ -113,7 +115,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
   <h5 id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ComplexMessage : IList&lt;MessageElement&gt;, ICollection&lt;MessageElement&gt;, IEnumerable&lt;MessageElement&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ComplexMessage : IList&lt;MessageElement&gt;, ICollection&lt;MessageElement&gt;, IReadOnlyList&lt;MessageElement&gt;, IReadOnlyCollection&lt;MessageElement&gt;, IEnumerable&lt;MessageElement&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -895,6 +897,51 @@
   </table>
   
   
+  <a id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_SplitPlainText_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText*"></a>
+  <h4 id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_SplitPlainText_System_String___" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText(System.String[])">SplitPlainText(String[])</h4>
+  <div class="markdown level1 summary"><p>使用指定分隔符将当前 <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html">ComplexMessage</a> 对象中的所有 <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.PlainText.html">PlainText</a> 对象分割为多个 <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.PlainText.html">PlainText</a> 对象。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComplexMessage SplitPlainText(params string[] separator)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">separator</span></td>
+        <td><p>分隔符。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><p>分割后的副本。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_ToString_" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.ToString*"></a>
   <h4 id="HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_ToString" data-uid="HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
@@ -1358,6 +1405,12 @@
   </div>
   <div>
       <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</span>
   </div>
   <div>
       <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>

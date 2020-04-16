@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -122,6 +123,34 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         public string GetPlainText(string separator = "")
         {
             return string.Join(separator, this.OfType<PlainText>());
+        }
+
+        /// <summary>
+        /// 使用指定分隔符将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象分割为多个 <see cref="PlainText"/> 对象。
+        /// </summary>
+        /// <param name="separator">分隔符。</param>
+        /// <returns>分割后的副本。</returns>
+        public ComplexMessage SplitPlainText(params string[] separator)
+        {
+            IEnumerable<MessageElement> GetMessageElements()
+            {
+                foreach (var element in this)
+                {
+                    if (element is PlainText text)
+                    {
+                        foreach (var str in text.Content.Split(separator, StringSplitOptions.RemoveEmptyEntries))
+                        {
+                            yield return str;
+                        }
+                    }
+                    else
+                    {
+                        yield return element;
+                    }
+                }
+            }
+
+            return new ComplexMessage(GetMessageElements());
         }
 
         /// <summary>
@@ -267,9 +296,9 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
     }
 
     /// <summary>
-    /// <see cref="IList{MessageElement}"/> 的实现。
+    /// <see cref="IList{MessageElement}"/> 和 <see cref="IReadOnlyList{MessageElement}"/> 的实现。
     /// </summary>
-    public partial class ComplexMessage : IList<MessageElement>
+    public partial class ComplexMessage : IList<MessageElement>, IReadOnlyList<MessageElement>
     {
         public int Count => _elements.Count;
 

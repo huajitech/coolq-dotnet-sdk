@@ -681,6 +681,22 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.RemoveRange
   nameWithType: ComplexMessage.RemoveRange
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText(System.String[])
+  name: SplitPlainText(String[])
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_SplitPlainText_System_String___
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText(System.String[])
+  name.vb: SplitPlainText(String())
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText(System.String[])
+  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText(System.String())
+  nameWithType: ComplexMessage.SplitPlainText(String[])
+  nameWithType.vb: ComplexMessage.SplitPlainText(String())
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText*
+  name: SplitPlainText
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_SplitPlainText_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.SplitPlainText
+  nameWithType: ComplexMessage.SplitPlainText
 - uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.System#Collections#Generic#ICollection{HuajiTech#CoolQ#AdvancedMessaging#MessageElement}#Add(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
   name: ICollection<MessageElement>.Add(MessageElement)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_AdvancedMessaging_MessageElement__Add_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_
