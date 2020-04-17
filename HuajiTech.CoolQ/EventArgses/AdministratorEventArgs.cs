@@ -3,7 +3,7 @@ using System;
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 为 <see cref="Member.AdministratorSet"/> 和 <see cref="Member.AdministratorUnset"/> 事件提供数据。
+    /// 为 <see cref="Group.AdministratorAdded"/> 和 <see cref="Group.AdministratorRemoved"/> 事件提供数据。
     /// </summary>
     public class AdministratorEventArgs : RoutedEventArgs
     {
