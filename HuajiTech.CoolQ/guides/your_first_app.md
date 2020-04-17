@@ -15,7 +15,7 @@
          CurrentUser.MessageReceived += (sender, e) =>
          {
              // 向消息来源聊天发送消息的内容，即复读。
-             e.Source.Send(e.Message.Content);
+             e.Source.Send(e.Message);
          }
      }
   }
