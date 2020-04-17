@@ -67,7 +67,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取当前用户的所有联系人。
         /// </summary>
-        public static IReadOnlyList<Contact> GetContacts()
+        public static IReadOnlyCollection<Contact> GetContacts()
         {
             using var reader = new ContactInfoReader(
                 NativeMethods.GetContactsBase64(Bot.AuthCode, false));
@@ -80,7 +80,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 以异步操作获取当前用户的所有联系人。
         /// </summary>
-        public static Task<IReadOnlyList<Contact>> GetContactsAsync()
+        public static Task<IReadOnlyCollection<Contact>> GetContactsAsync()
         {
             return Task.Run(GetContacts);
         }
@@ -122,7 +122,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取当前用户的所有群。
         /// </summary>
-        public static IReadOnlyList<Group> GetGroups()
+        public static IReadOnlyCollection<Group> GetGroups()
         {
             using var reader = new BasicGroupInfoReader(
                 NativeMethods.GetGroupsBase64(Bot.AuthCode));
@@ -135,7 +135,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 以异步操作获取当前用户的所有群。
         /// </summary>
-        public static Task<IReadOnlyList<Group>> GetGroupsAsync()
+        public static Task<IReadOnlyCollection<Group>> GetGroupsAsync()
         {
             return Task.Run(GetGroups);
         }

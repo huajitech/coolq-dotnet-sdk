@@ -135,7 +135,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取所有成员。
         /// </summary>
-        public IReadOnlyList<Member> GetMembers()
+        public IReadOnlyCollection<Member> GetMembers()
         {
             using var reader = new MemberInfoReader(
                 NativeMethods.GetGroupMembersBase64(Bot.AuthCode, Number));
@@ -147,7 +147,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 以异步操作获取所有成员。
         /// </summary>
-        public Task<IReadOnlyList<Member>> GetMembersAsync()
+        public Task<IReadOnlyCollection<Member>> GetMembersAsync()
         {
             return Task.Run(GetMembers);
         }
