@@ -14,8 +14,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Image(IDictionary<string, string> parameters)
-            : base(parameters)
+        public Image(IDictionary<string, string> arguments)
+            : base(arguments)
         {
         }
 

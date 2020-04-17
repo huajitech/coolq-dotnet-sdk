@@ -11,8 +11,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Shake(IDictionary<string, string> parameters)
-            : base(parameters)
+        public Shake(IDictionary<string, string> arguments)
+            : base(arguments)
         {
         }
 

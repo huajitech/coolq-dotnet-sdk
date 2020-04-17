@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public ChatShare(IDictionary<string, string> parameters)
-            : base(parameters)
+        public ChatShare(IDictionary<string, string> arguments)
+            : base(arguments)
         {
         }
 

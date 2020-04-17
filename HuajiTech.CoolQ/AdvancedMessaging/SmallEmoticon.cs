@@ -11,8 +11,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public SmallEmoticon(IDictionary<string, string> parameters)
-            : base(parameters)
+        public SmallEmoticon(IDictionary<string, string> arguments)
+            : base(arguments)
         {
         }
 

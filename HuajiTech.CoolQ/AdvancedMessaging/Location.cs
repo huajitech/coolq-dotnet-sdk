@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Location(IDictionary<string, string> parameters)
-            : base(parameters)
+        public Location(IDictionary<string, string> arguments)
+            : base(arguments)
         {
         }
 

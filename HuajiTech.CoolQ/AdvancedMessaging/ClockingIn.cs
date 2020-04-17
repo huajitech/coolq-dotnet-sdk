@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public ClockingIn(IDictionary<string, string> parameters)
-            : base(parameters)
+        public ClockingIn(IDictionary<string, string> arguments)
+            : base(arguments)
         {
         }
 

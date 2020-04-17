@@ -83,7 +83,7 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
                     var groups = match.Groups;
                     var type = groups["Type"].Value;
 
-                    IEnumerable<KeyValuePair<string, string>> GetParameters()
+                    IEnumerable<KeyValuePair<string, string>> GetArguments()
                     {
                         var keyCaptures = groups["Key"].Captures;
                         var valueCaptures = groups["Value"].Captures;
@@ -97,7 +97,7 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
                     }
 
                     yield return CQCodeFactory.Create(
-                        type, GetParameters().Distinct().ToDictionary(
+                        type, GetArguments().Distinct().ToDictionary(
                             item => item.Key,
                             item => CQCode.Unescape(item.Value)));
                 }

@@ -851,6 +851,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.CQCode.CQCode
   nameWithType: CQCode.CQCode
+- uid: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Arguments
+  name: Arguments
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.CQCode.html#HuajiTech_CoolQ_AdvancedMessaging_CQCode_Arguments
+  commentId: P:HuajiTech.CoolQ.AdvancedMessaging.CQCode.Arguments
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Arguments
+  nameWithType: CQCode.Arguments
+- uid: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Arguments*
+  name: Arguments
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.CQCode.html#HuajiTech_CoolQ_AdvancedMessaging_CQCode_Arguments_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.CQCode.Arguments
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Arguments
+  nameWithType: CQCode.Arguments
 - uid: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Equals(HuajiTech.CoolQ.AdvancedMessaging.CQCode)
   name: Equals(CQCode)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.CQCode.html#HuajiTech_CoolQ_AdvancedMessaging_CQCode_Equals_HuajiTech_CoolQ_AdvancedMessaging_CQCode_
@@ -1003,19 +1016,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Inequality
   nameWithType: CQCode.Inequality
-- uid: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Parameters
-  name: Parameters
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.CQCode.html#HuajiTech_CoolQ_AdvancedMessaging_CQCode_Parameters
-  commentId: P:HuajiTech.CoolQ.AdvancedMessaging.CQCode.Parameters
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Parameters
-  nameWithType: CQCode.Parameters
-- uid: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Parameters*
-  name: Parameters
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.CQCode.html#HuajiTech_CoolQ_AdvancedMessaging_CQCode_Parameters_
-  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.CQCode.Parameters
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.CQCode.Parameters
-  nameWithType: CQCode.Parameters
 - uid: HuajiTech.CoolQ.AdvancedMessaging.CQCode.SetParameter(System.String,System.Boolean)
   name: SetParameter(String, Boolean)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.CQCode.html#HuajiTech_CoolQ_AdvancedMessaging_CQCode_SetParameter_System_String_System_Boolean_
@@ -1730,15 +1730,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.Addition
   nameWithType: MessageElement.Addition
-- uid: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.op_Implicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
-  name: Implicit(MessageElement to ComplexMessage)
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html#HuajiTech_CoolQ_AdvancedMessaging_MessageElement_op_Implicit_HuajiTech_CoolQ_AdvancedMessaging_MessageElement__HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage
-  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.MessageElement.op_Implicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
-  name.vb: Widening(MessageElement to ComplexMessage)
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.Implicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
-  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.Widening(HuajiTech.CoolQ.AdvancedMessaging.MessageElement to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
-  nameWithType: MessageElement.Implicit(MessageElement to ComplexMessage)
-  nameWithType.vb: MessageElement.Widening(MessageElement to ComplexMessage)
 - uid: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.op_Implicit(System.String)~HuajiTech.CoolQ.AdvancedMessaging.MessageElement
   name: Implicit(String to MessageElement)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html#HuajiTech_CoolQ_AdvancedMessaging_MessageElement_op_Implicit_System_String__HuajiTech_CoolQ_AdvancedMessaging_MessageElement
@@ -1758,19 +1749,6 @@ references:
   fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.Widening
   nameWithType: MessageElement.Implicit
   nameWithType.vb: MessageElement.Widening
-- uid: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.ToComplexMessage
-  name: ToComplexMessage()
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html#HuajiTech_CoolQ_AdvancedMessaging_MessageElement_ToComplexMessage
-  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.MessageElement.ToComplexMessage
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.ToComplexMessage()
-  nameWithType: MessageElement.ToComplexMessage()
-- uid: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.ToComplexMessage*
-  name: ToComplexMessage
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.MessageElement.html#HuajiTech_CoolQ_AdvancedMessaging_MessageElement_ToComplexMessage_
-  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.MessageElement.ToComplexMessage
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.MessageElement.ToComplexMessage
-  nameWithType: MessageElement.ToComplexMessage
 - uid: HuajiTech.CoolQ.AdvancedMessaging.Music
   name: Music
   href: api/HuajiTech.CoolQ.AdvancedMessaging.Music.html

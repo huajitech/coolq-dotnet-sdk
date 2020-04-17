@@ -11,8 +11,8 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         {
         }
 
-        public Anonymous(IDictionary<string, string> parameters)
-            : base(parameters)
+        public Anonymous(IDictionary<string, string> arguments)
+            : base(arguments)
         {
         }
 
