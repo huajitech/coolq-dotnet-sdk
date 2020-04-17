@@ -13,22 +13,12 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
 
         public ComplexMessage Add(MessageElement element)
         {
-            return new ComplexMessage(this).Add(element);
+            return ComplexMessage.FromMessageElement(this).Add(element);
         }
 
         public static ComplexMessage operator +(MessageElement left, MessageElement right)
         {
-            if (left is null)
-            {
-                return null;
-            }
-
-            if (right is null)
-            {
-                return new ComplexMessage(left);
-            }
-
-            return left.Add(right);
+            return left?.Add(right);
         }
 
         public static implicit operator MessageElement(string str)
