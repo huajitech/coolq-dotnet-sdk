@@ -69,10 +69,7 @@ namespace HuajiTech.CoolQ
         /// </summary>
         public static IReadOnlyCollection<Contact> GetContacts()
         {
-            using var reader = new ContactInfoReader(
-                NativeMethods.GetContactsBase64(Bot.AuthCode, false));
-
-            return reader.ReadAll()
+            return GetContactInfos()
                 .Select(info => new Contact(info))
                 .ToList();
         }
@@ -138,6 +135,14 @@ namespace HuajiTech.CoolQ
         public static Task<IReadOnlyCollection<Group>> GetGroupsAsync()
         {
             return Task.Run(GetGroups);
+        }
+
+        internal static IReadOnlyCollection<ContactInfo> GetContactInfos()
+        {
+            using var reader = new ContactInfoReader(
+                NativeMethods.GetContactsBase64(Bot.AuthCode, false));
+
+            return reader.ReadAll().ToList();
         }
     }
 }

@@ -99,6 +99,11 @@ namespace HuajiTech.CoolQ
         public string Location => GetInfo().Location;
 
         /// <summary>
+        /// 获取昵称。
+        /// </summary>
+        public override string Nickname => GetInfo().Nickname;
+
+        /// <summary>
         /// 获取角色。
         /// </summary>
         public MemberRole Role => GetInfo().Role;

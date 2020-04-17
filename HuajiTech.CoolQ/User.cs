@@ -21,12 +21,6 @@ namespace HuajiTech.CoolQ
         {
         }
 
-        internal User(long number, string nickname)
-            : this(number)
-        {
-            _nickname = nickname;
-        }
-
         internal User(UserInfo info)
             : this(info.Number)
         {
@@ -46,7 +40,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取昵称。
         /// </summary>
-        public string Nickname => _nickname ?? GetInfo().Nickname;
+        public virtual string Nickname => GetInfo().Nickname;
 
         /// <summary>
         /// 点赞。
