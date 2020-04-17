@@ -41,18 +41,18 @@ namespace HuajiTech.CoolQ
                 return IntPtr.Zero;
             }
 
-            if (!(ManagedObj is string))
+            if (ManagedObj is string str)
             {
-                throw new MarshalDirectiveException();
+                var bytes = Encoding.GetBytes(str);
+                IntPtr pNativeData = Marshal.AllocHGlobal(bytes.Length + 1);
+
+                Marshal.Copy(bytes, 0, pNativeData, bytes.Length);
+                Marshal.WriteByte(pNativeData, bytes.Length, 0);
+
+                return pNativeData;
             }
 
-            var bytes = Encoding.GetBytes((string)ManagedObj);
-            IntPtr pNativeData = Marshal.AllocHGlobal(bytes.Length + 1);
-
-            Marshal.Copy(bytes, 0, pNativeData, bytes.Length);
-            Marshal.WriteByte(pNativeData, bytes.Length, 0);
-
-            return pNativeData;
+            throw new MarshalDirectiveException();
         }
 
         public object MarshalNativeToManaged(IntPtr pNativeData)
