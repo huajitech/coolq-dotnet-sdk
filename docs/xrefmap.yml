@@ -3321,6 +3321,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.CurrentUser.AsUser
   nameWithType: CurrentUser.AsUser
+- uid: HuajiTech.CoolQ.CurrentUser.At
+  name: At()
+  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_At
+  commentId: M:HuajiTech.CoolQ.CurrentUser.At
+  fullName: HuajiTech.CoolQ.CurrentUser.At()
+  nameWithType: CurrentUser.At()
+- uid: HuajiTech.CoolQ.CurrentUser.At*
+  name: At
+  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_At_
+  commentId: Overload:HuajiTech.CoolQ.CurrentUser.At
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.CurrentUser.At
+  nameWithType: CurrentUser.At
 - uid: HuajiTech.CoolQ.CurrentUser.ContactAdded
   name: ContactAdded
   href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_ContactAdded
