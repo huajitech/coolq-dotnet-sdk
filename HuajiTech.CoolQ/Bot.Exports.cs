@@ -24,7 +24,7 @@ namespace HuajiTech.CoolQ
                 {
                     var frames = new System.Diagnostics.StackTrace(ex)
                         .GetFrames()
-                        .Where(frame => frame.GetMethod().Module.Assembly == App.GetType().Assembly);
+                        .Where(frame => frame.GetMethod().Module.Assembly == typeof(Bot).Assembly);
 
                     if (frames.Any())
                     {

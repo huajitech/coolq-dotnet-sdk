@@ -158,8 +158,7 @@ namespace HuajiTech.CoolQ
 
         private static string GetApp(out ConstructorInfo constructorInfo)
         {
-            var apps = from asm in AppDomain.CurrentDomain.GetAssemblies()
-                       from type in asm.GetTypes()
+            var apps = from type in typeof(Bot).Assembly.GetTypes()
                        where !type.IsAbstract
                        let attr = type.GetCustomAttribute<AppAttribute>()
                        where !(attr is null)
