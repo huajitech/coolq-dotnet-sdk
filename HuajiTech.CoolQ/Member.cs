@@ -163,7 +163,7 @@ namespace HuajiTech.CoolQ
         public override void RequestInfo(bool refresh = false)
         {
             _info = null;
-            GetInfo(refresh);
+            GetInfo(false, refresh);
         }
 
         /// <summary>
@@ -274,13 +274,20 @@ namespace HuajiTech.CoolQ
             return $"Member({Number},{Group})";
         }
 
-        private MemberInfo GetInfo(bool refresh = false)
+        private MemberInfo GetInfo(bool handleException = true, bool refresh = false)
         {
             if (refresh || _info is null)
             {
-                using var reader = new MemberInfoReader(
-                    NativeMethods.GetMemberInfoBase64(Bot.AuthCode, Group.Number, Number, refresh));
-                _info = reader.Read();
+                try
+                {
+                    using var reader = new MemberInfoReader(
+                        NativeMethods.GetMemberInfoBase64(Bot.AuthCode, Group.Number, Number, refresh));
+                    _info = reader.Read();
+                }
+                catch (CoolQException) when (handleException)
+                {
+                    return new MemberInfo();
+                }
             }
 
             return _info;

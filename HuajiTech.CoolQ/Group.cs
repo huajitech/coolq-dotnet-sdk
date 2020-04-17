@@ -198,7 +198,7 @@ namespace HuajiTech.CoolQ
         public virtual void RequestInfo(bool refresh = false)
         {
             _info = null;
-            GetInfo(refresh);
+            GetInfo(false, refresh);
         }
 
         /// <summary>
@@ -243,13 +243,20 @@ namespace HuajiTech.CoolQ
             return Task.Run(Unmute);
         }
 
-        private GroupInfo GetInfo(bool refresh = false)
+        private GroupInfo GetInfo(bool handleException = true, bool refresh = false)
         {
             if (refresh || _info is null)
             {
-                using var reader = new GroupInfoReader(
-                    NativeMethods.GetGroupInfoBase64(Bot.AuthCode, Number, refresh));
-                _info = reader.Read();
+                try
+                {
+                    using var reader = new GroupInfoReader(
+                        NativeMethods.GetGroupInfoBase64(Bot.AuthCode, Number, refresh));
+                    _info = reader.Read();
+                }
+                catch (CoolQException) when (handleException)
+                {
+                    return new GroupInfo();
+                }
             }
 
             return _info;

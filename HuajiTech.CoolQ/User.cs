@@ -73,7 +73,7 @@ namespace HuajiTech.CoolQ
         public virtual void RequestInfo(bool refresh = false)
         {
             _info = null;
-            GetInfo(refresh);
+            GetInfo(false, refresh);
         }
 
         /// <summary>
@@ -102,13 +102,20 @@ namespace HuajiTech.CoolQ
             return new Message(id, message);
         }
 
-        private UserInfo GetInfo(bool refresh = false)
+        private UserInfo GetInfo(bool handleException = true, bool refresh = false)
         {
             if (refresh || _info is null)
             {
-                using var reader = new UserInfoReader(
-                    NativeMethods.GetUserInfoBase64(Bot.AuthCode, Number, refresh));
-                _info = reader.Read();
+                try
+                {
+                    using var reader = new UserInfoReader(
+                        NativeMethods.GetUserInfoBase64(Bot.AuthCode, Number, refresh));
+                    _info = reader.Read();
+                }
+                catch (CoolQException) when (handleException)
+                {
+                    return new UserInfo();
+                }
             }
 
             return _info;

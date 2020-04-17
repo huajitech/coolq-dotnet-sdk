@@ -8,7 +8,7 @@ namespace HuajiTech.CoolQ
     public class Contact : User
     {
         internal Contact(long number)
-               : base(number)
+            : base(number)
         {
         }
 

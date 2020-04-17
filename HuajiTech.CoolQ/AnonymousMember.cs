@@ -91,8 +91,15 @@ namespace HuajiTech.CoolQ
         {
             if (_info is null)
             {
-                using var reader = new AnonymousMemberInfoReader(_rawInfo);
-                _info = reader.Read();
+                try
+                {
+                    using var reader = new AnonymousMemberInfoReader(_rawInfo);
+                    _info = reader.Read();
+                }
+                catch (CoolQException)
+                {
+                    return new AnonymousMemberInfo();
+                }
             }
 
             return _info;
