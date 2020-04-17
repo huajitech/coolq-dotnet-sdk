@@ -1,3 +1,4 @@
+using HuajiTech.CoolQ.AdvancedMessaging;
 using HuajiTech.CoolQ.DataExchange;
 using System;
 using System.Collections.Generic;
@@ -62,6 +63,14 @@ namespace HuajiTech.CoolQ
         {
             _currentUser ??= new User(NativeMethods.GetCurrentUserNumber(Bot.AuthCode));
             return _currentUser;
+        }
+
+        /// <summary>
+        /// 获取目标为当前用户的 <see cref="AdvancedMessaging.At"/> 对象。
+        /// </summary>
+        public static At At()
+        {
+            return AsUser().At();
         }
 
         /// <summary>
