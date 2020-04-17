@@ -478,6 +478,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.FromMessageElement
   nameWithType: ComplexMessage.FromMessageElement
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.FromString(System.String)
+  name: FromString(String)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_FromString_System_String_
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.FromString(System.String)
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.FromString(System.String)
+  nameWithType: ComplexMessage.FromString(String)
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.FromString*
+  name: FromString
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_FromString_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.FromString
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.FromString
+  nameWithType: ComplexMessage.FromString
 - uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.GetEnumerator
   name: GetEnumerator()
   href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_GetEnumerator
@@ -584,25 +597,34 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Addition
   nameWithType: ComplexMessage.Addition
-- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Explicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
-  name: Explicit(MessageElement to ComplexMessage)
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_op_Explicit_HuajiTech_CoolQ_AdvancedMessaging_MessageElement__HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage
-  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Explicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
-  name.vb: Narrowing(MessageElement to ComplexMessage)
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Explicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
-  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Narrowing(HuajiTech.CoolQ.AdvancedMessaging.MessageElement to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
-  nameWithType: ComplexMessage.Explicit(MessageElement to ComplexMessage)
-  nameWithType.vb: ComplexMessage.Narrowing(MessageElement to ComplexMessage)
-- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Explicit*
-  name: Explicit
-  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_op_Explicit_
-  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Explicit
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Implicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
+  name: Implicit(MessageElement to ComplexMessage)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_op_Implicit_HuajiTech_CoolQ_AdvancedMessaging_MessageElement__HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Implicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
+  name.vb: Widening(MessageElement to ComplexMessage)
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Implicit(HuajiTech.CoolQ.AdvancedMessaging.MessageElement to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
+  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Widening(HuajiTech.CoolQ.AdvancedMessaging.MessageElement to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
+  nameWithType: ComplexMessage.Implicit(MessageElement to ComplexMessage)
+  nameWithType.vb: ComplexMessage.Widening(MessageElement to ComplexMessage)
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Implicit(System.String)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
+  name: Implicit(String to ComplexMessage)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_op_Implicit_System_String__HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Implicit(System.String)~HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage
+  name.vb: Widening(String to ComplexMessage)
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Implicit(System.String to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
+  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Widening(System.String to HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
+  nameWithType: ComplexMessage.Implicit(String to ComplexMessage)
+  nameWithType.vb: ComplexMessage.Widening(String to ComplexMessage)
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Implicit*
+  name: Implicit
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_op_Implicit_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Implicit
   isSpec: "True"
-  name.vb: Narrowing
-  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Explicit
-  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Narrowing
-  nameWithType: ComplexMessage.Explicit
-  nameWithType.vb: ComplexMessage.Narrowing
+  name.vb: Widening
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Implicit
+  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Widening
+  nameWithType: ComplexMessage.Implicit
+  nameWithType.vb: ComplexMessage.Widening
 - uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Subtraction(HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage,HuajiTech.CoolQ.AdvancedMessaging.MessageElement)
   name: Subtraction(ComplexMessage, MessageElement)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_op_Subtraction_HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_
