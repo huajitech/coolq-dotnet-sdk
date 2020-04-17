@@ -572,6 +572,22 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Item
   nameWithType: ComplexMessage.Item
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Join(HuajiTech.CoolQ.AdvancedMessaging.MessageElement,System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage})
+  name: Join(MessageElement, IEnumerable<ComplexMessage>)
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_Join_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage__
+  commentId: M:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Join(HuajiTech.CoolQ.AdvancedMessaging.MessageElement,System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage})
+  name.vb: Join(MessageElement, IEnumerable(Of ComplexMessage))
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Join(HuajiTech.CoolQ.AdvancedMessaging.MessageElement, System.Collections.Generic.IEnumerable<HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage>)
+  fullName.vb: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Join(HuajiTech.CoolQ.AdvancedMessaging.MessageElement, System.Collections.Generic.IEnumerable(Of HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage))
+  nameWithType: ComplexMessage.Join(MessageElement, IEnumerable<ComplexMessage>)
+  nameWithType.vb: ComplexMessage.Join(MessageElement, IEnumerable(Of ComplexMessage))
+- uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Join*
+  name: Join
+  href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_Join_
+  commentId: Overload:HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Join
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.Join
+  nameWithType: ComplexMessage.Join
 - uid: HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.op_Addition(HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage,HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage)
   name: Addition(ComplexMessage, ComplexMessage)
   href: api/HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage.html#HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_op_Addition_HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_

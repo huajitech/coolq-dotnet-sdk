@@ -122,6 +122,45 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
         }
 
         /// <summary>
+        /// 使用指定的分隔符串联复合消息集合中的所有消息元素。
+        /// </summary>
+        /// <param name="separator">分隔符。</param>
+        /// <param name="messages">复合消息集合。</param>
+        /// <returns>串联后的副本。</returns>
+        public static ComplexMessage Join(MessageElement separator, IEnumerable<ComplexMessage> messages)
+        {
+            if (!messages.Any())
+            {
+                return new ComplexMessage();
+            }
+
+            if (messages.Count() == 1)
+            {
+                return messages.First();
+            }
+
+            IEnumerable<MessageElement> GetMessageElements()
+            {
+                foreach (var element in messages.First())
+                {
+                    yield return element;
+                }
+
+                foreach (var message in messages.Skip(1))
+                {
+                    yield return separator;
+
+                    foreach (var element in message)
+                    {
+                        yield return element;
+                    }
+                }
+            }
+
+            return new ComplexMessage(GetMessageElements());
+        }
+
+        /// <summary>
         /// 获取当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象使用指定分隔符拼接而成的字符串。
         /// </summary>
         /// <param name="separator">分隔符。</param>
