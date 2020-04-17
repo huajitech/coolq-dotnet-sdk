@@ -1,5 +1,5 @@
 // 用于使用 HuajiTech.CoolQ 开发的酷Q应用配置文件。
-// 版本 0.1.2-alpha.20.1
+// 版本 0.1.2-alpha.20.2
 // *这是一个测试版本，不建议用于生产环境。
 //
 // 酷Q的 Json 文件支持以 // 开头的注释。
@@ -8,6 +8,7 @@
 // 并在应用类上应用 [App("com.example.demo")]。
 // [重要] appid 规则见 https://cqp.im/v9/appid
 {
+  "$schema": "https://raw.githubusercontent.com/cqmoe/awesome-coolq/master/schema/app/v9/app-schema.json",
   "ret": 1, // 返回码，固定为1
   "apiver": 9, // Api版本，本SDK为9
   "name": "HuajiTech.CoolQ 应用", // 应用名称
