@@ -38,6 +38,9 @@ namespace HuajiTech.CoolQ
         /// </summary>
         public override string Nickname => GetInfo().Nickname ?? base.Nickname;
 
+        /// <summary>
+        /// 请求信息。
+        /// </summary>
         public void RequestInfo()
         {
             _info = null;

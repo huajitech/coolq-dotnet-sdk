@@ -2992,6 +2992,45 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Contact.Alias
   nameWithType: Contact.Alias
+- uid: HuajiTech.CoolQ.Contact.HasInfo
+  name: HasInfo
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact_HasInfo
+  commentId: P:HuajiTech.CoolQ.Contact.HasInfo
+  fullName: HuajiTech.CoolQ.Contact.HasInfo
+  nameWithType: Contact.HasInfo
+- uid: HuajiTech.CoolQ.Contact.HasInfo*
+  name: HasInfo
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact_HasInfo_
+  commentId: Overload:HuajiTech.CoolQ.Contact.HasInfo
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Contact.HasInfo
+  nameWithType: Contact.HasInfo
+- uid: HuajiTech.CoolQ.Contact.Nickname
+  name: Nickname
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact_Nickname
+  commentId: P:HuajiTech.CoolQ.Contact.Nickname
+  fullName: HuajiTech.CoolQ.Contact.Nickname
+  nameWithType: Contact.Nickname
+- uid: HuajiTech.CoolQ.Contact.Nickname*
+  name: Nickname
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact_Nickname_
+  commentId: Overload:HuajiTech.CoolQ.Contact.Nickname
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Contact.Nickname
+  nameWithType: Contact.Nickname
+- uid: HuajiTech.CoolQ.Contact.RequestInfo
+  name: RequestInfo()
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact_RequestInfo
+  commentId: M:HuajiTech.CoolQ.Contact.RequestInfo
+  fullName: HuajiTech.CoolQ.Contact.RequestInfo()
+  nameWithType: Contact.RequestInfo()
+- uid: HuajiTech.CoolQ.Contact.RequestInfo*
+  name: RequestInfo
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact_RequestInfo_
+  commentId: Overload:HuajiTech.CoolQ.Contact.RequestInfo
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Contact.RequestInfo
+  nameWithType: Contact.RequestInfo
 - uid: HuajiTech.CoolQ.ContactAddedEventArgs
   name: ContactAddedEventArgs
   href: api/HuajiTech.CoolQ.ContactAddedEventArgs.html
@@ -4611,6 +4650,19 @@ references:
   commentId: E:HuajiTech.CoolQ.Member.Muted
   fullName: HuajiTech.CoolQ.Member.Muted
   nameWithType: Member.Muted
+- uid: HuajiTech.CoolQ.Member.Nickname
+  name: Nickname
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Nickname
+  commentId: P:HuajiTech.CoolQ.Member.Nickname
+  fullName: HuajiTech.CoolQ.Member.Nickname
+  nameWithType: Member.Nickname
+- uid: HuajiTech.CoolQ.Member.Nickname*
+  name: Nickname
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Nickname_
+  commentId: Overload:HuajiTech.CoolQ.Member.Nickname
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Member.Nickname
+  nameWithType: Member.Nickname
 - uid: HuajiTech.CoolQ.Member.RequestInfo(System.Boolean)
   name: RequestInfo(Boolean)
   href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_RequestInfo_System_Boolean_
