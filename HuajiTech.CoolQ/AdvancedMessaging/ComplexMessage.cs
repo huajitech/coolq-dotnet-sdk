@@ -251,42 +251,27 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
             "Usage", "CA2225:运算符重载具有命名的备用项", Justification = "<挂起>")]
         public static ComplexMessage operator -(ComplexMessage left, MessageElement right)
         {
-            if (left is null || right is null)
-            {
-                return null;
-            }
-
-            return left.Remove(right);
+            return left?.Remove(right);
         }
 
         public static ComplexMessage operator +(ComplexMessage left, MessageElement right)
         {
-            if (left is null || right is null)
-            {
-                return null;
-            }
-
-            return left.Add(right);
+            return left?.Add(right);
         }
 
         public static ComplexMessage operator +(MessageElement left, ComplexMessage right)
         {
-            if (left is null || right is null)
+            if (left is null)
             {
                 return null;
             }
 
-            return right.Insert(0, left);
+            return FromMessageElement(left).Add(right);
         }
 
         public static ComplexMessage operator +(ComplexMessage left, ComplexMessage right)
         {
-            if (left is null || right is null)
-            {
-                return null;
-            }
-
-            return left.Add(right);
+            return left?.Add(right);
         }
 
         public static explicit operator ComplexMessage(MessageElement element)

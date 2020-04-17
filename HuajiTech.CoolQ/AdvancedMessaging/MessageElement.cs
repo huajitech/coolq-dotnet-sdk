@@ -16,11 +16,6 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
             return new ComplexMessage(this).Add(element);
         }
 
-        public ComplexMessage ToComplexMessage()
-        {
-            return new ComplexMessage(this);
-        }
-
         public static ComplexMessage operator +(MessageElement left, MessageElement right)
         {
             if (left is null)
@@ -34,11 +29,6 @@ namespace HuajiTech.CoolQ.AdvancedMessaging
             }
 
             return left.Add(right);
-        }
-
-        public static implicit operator ComplexMessage(MessageElement element)
-        {
-            return element?.ToComplexMessage();
         }
 
         public static implicit operator MessageElement(string str)
