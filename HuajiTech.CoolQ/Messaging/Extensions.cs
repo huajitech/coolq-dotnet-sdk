@@ -94,5 +94,37 @@ namespace HuajiTech.CoolQ.Messaging
         {
             return Task.Run(() => Send(chat, element));
         }
+
+        /// <summary>
+        /// 发送纯文本。
+        /// </summary>
+        /// <param name="chat">目标聊天。</param>
+        /// <param name="text">要发送的消息。</param>
+        /// <returns>发送的消息。</returns>
+        public static Message Send(this Chat chat, PlainText text)
+        {
+            if (chat is null)
+            {
+                throw new ArgumentNullException(nameof(chat));
+            }
+
+            if (text is null)
+            {
+                throw new ArgumentNullException(nameof(text));
+            }
+
+            return chat.Send(text.ToString());
+        }
+
+        /// <summary>
+        /// 以异步操作发送纯文本。
+        /// </summary>
+        /// <param name="chat">目标聊天。</param>
+        /// <param name="text">要发送的消息。</param>
+        /// <returns>发送的消息。</returns>
+        public static Task<Message> SendAsync(this Chat chat, PlainText text)
+        {
+            return Task.Run(() => Send(chat, text));
+        }
     }
 }
