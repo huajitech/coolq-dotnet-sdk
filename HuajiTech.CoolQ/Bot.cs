@@ -76,46 +76,6 @@ namespace HuajiTech.CoolQ
             new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode));
 
         /// <summary>
-        /// 记录一条日志。
-        /// </summary>
-        /// <param name="level">日志的等级。</param>
-        /// <param name="type">日志的类型。</param>
-        /// <param name="message">日志的消息。</param>
-        public static void Log(LogLevel level, string type, string message)
-        {
-            NativeMethods.Log(AuthCode, level, type, message).CheckError();
-        }
-
-        /// <summary>
-        /// 以异步操作记录一条日志。
-        /// </summary>
-        /// <param name="level">日志的等级。</param>
-        /// <param name="type">日志的类型。</param>
-        /// <param name="message">日志的消息。</param>
-        public static Task LogAsync(LogLevel level, string type, string message)
-        {
-            return Task.Run(() => Log(level, type, message));
-        }
-
-        /// <summary>
-        /// 记录一个致命错误。
-        /// </summary>
-        /// <param name="message">致命错误的消息。</param>
-        public static void LogFatal(string message)
-        {
-            NativeMethods.LogFatal(AuthCode, message).CheckError();
-        }
-
-        /// <summary>
-        /// 以异步操作记录一个致命错误。
-        /// </summary>
-        /// <param name="message">致命错误的消息。</param>
-        public static Task LogFatalAsync(string message)
-        {
-            return Task.Run(() => LogFatal(message));
-        }
-
-        /// <summary>
         /// 请求图片。
         /// </summary>
         /// <param name="fileName">图片的文件名。</param>
