@@ -170,11 +170,12 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 使用指定分隔符将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象分割为多个 <see cref="PlainText"/> 对象。
+        /// 使用指定的分隔符和选项将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象分割为多个 <see cref="PlainText"/> 对象。
         /// </summary>
+        /// <param name="options">选项。</param>
         /// <param name="separator">分隔符。</param>
         /// <returns>分割后的副本。</returns>
-        public ComplexMessage SplitPlainText(params string[] separator)
+        public ComplexMessage SplitPlainText(StringSplitOptions options, params string[] separator)
         {
             IEnumerable<MessageElement> GetMessageElements()
             {
@@ -182,7 +183,7 @@ namespace HuajiTech.CoolQ.Messaging
                 {
                     if (element is PlainText text)
                     {
-                        foreach (var str in text.Content.Split(separator, StringSplitOptions.RemoveEmptyEntries))
+                        foreach (var str in text.Content.Split(separator, options))
                         {
                             yield return str;
                         }
@@ -195,6 +196,16 @@ namespace HuajiTech.CoolQ.Messaging
             }
 
             return new ComplexMessage(GetMessageElements());
+        }
+
+        /// <summary>
+        /// 使用指定分隔符将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象分割为多个 <see cref="PlainText"/> 对象。
+        /// </summary>
+        /// <param name="separator">分隔符。</param>
+        /// <returns>分割后的副本。</returns>
+        public ComplexMessage SplitPlainText(params string[] separator)
+        {
+            return SplitPlainText(StringSplitOptions.RemoveEmptyEntries, separator);
         }
 
         /// <summary>
