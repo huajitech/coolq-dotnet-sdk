@@ -2162,6 +2162,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Member.EntranceTime
   nameWithType: Member.EntranceTime
+- uid: HuajiTech.CoolQ.Member.Equals(HuajiTech.CoolQ.Chat)
+  name: Equals(Chat)
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Equals_HuajiTech_CoolQ_Chat_
+  commentId: M:HuajiTech.CoolQ.Member.Equals(HuajiTech.CoolQ.Chat)
+  fullName: HuajiTech.CoolQ.Member.Equals(HuajiTech.CoolQ.Chat)
+  nameWithType: Member.Equals(Chat)
+- uid: HuajiTech.CoolQ.Member.Equals*
+  name: Equals
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Equals_
+  commentId: Overload:HuajiTech.CoolQ.Member.Equals
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Member.Equals
+  nameWithType: Member.Equals
 - uid: HuajiTech.CoolQ.Member.Gender
   name: Gender
   href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Gender
@@ -3426,6 +3439,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Count
   nameWithType: ComplexMessage.Count
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Equals(ComplexMessage)
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_HuajiTech_CoolQ_Messaging_ComplexMessage_
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  nameWithType: ComplexMessage.Equals(ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(System.Object)
+  name: Equals(Object)
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_System_Object_
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(System.Object)
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(System.Object)
+  nameWithType: ComplexMessage.Equals(Object)
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.Equals*
+  name: Equals
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.ComplexMessage.Equals
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Equals
+  nameWithType: ComplexMessage.Equals
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage.FromMessageElement(HuajiTech.CoolQ.Messaging.MessageElement)
   name: FromMessageElement(MessageElement)
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_FromMessageElement_HuajiTech_CoolQ_Messaging_MessageElement_
@@ -3465,6 +3497,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.GetEnumerator
   nameWithType: ComplexMessage.GetEnumerator
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode
+  name: GetHashCode()
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_GetHashCode
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode()
+  nameWithType: ComplexMessage.GetHashCode()
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode*
+  name: GetHashCode
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_GetHashCode_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode
+  nameWithType: ComplexMessage.GetHashCode
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage.GetPlainText(System.String)
   name: GetPlainText(String)
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_GetPlainText_System_String_
@@ -3574,6 +3619,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Addition
   nameWithType: ComplexMessage.Addition
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Equality(ComplexMessage, ComplexMessage)
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_op_Equality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Equality(HuajiTech.CoolQ.Messaging.ComplexMessage, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  nameWithType: ComplexMessage.Equality(ComplexMessage, ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality*
+  name: Equality
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_op_Equality_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Equality
+  nameWithType: ComplexMessage.Equality
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage.op_Implicit(HuajiTech.CoolQ.Messaging.MessageElement)~HuajiTech.CoolQ.Messaging.ComplexMessage
   name: Implicit(MessageElement to ComplexMessage)
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_op_Implicit_HuajiTech_CoolQ_Messaging_MessageElement__HuajiTech_CoolQ_Messaging_ComplexMessage
@@ -3602,6 +3660,19 @@ references:
   fullName.vb: HuajiTech.CoolQ.Messaging.ComplexMessage.Widening
   nameWithType: ComplexMessage.Implicit
   nameWithType.vb: ComplexMessage.Widening
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Inequality(ComplexMessage, ComplexMessage)
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_op_Inequality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Inequality(HuajiTech.CoolQ.Messaging.ComplexMessage, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  nameWithType: ComplexMessage.Inequality(ComplexMessage, ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality*
+  name: Inequality
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_op_Inequality_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Inequality
+  nameWithType: ComplexMessage.Inequality
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage.op_Subtraction(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement)
   name: Subtraction(ComplexMessage, MessageElement)
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_op_Subtraction_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_MessageElement_
@@ -3863,25 +3934,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CQCode.Arguments
   nameWithType: CQCode.Arguments
-- uid: HuajiTech.CoolQ.Messaging.CQCode.Equals(HuajiTech.CoolQ.Messaging.CQCode)
-  name: Equals(CQCode)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Equals_HuajiTech_CoolQ_Messaging_CQCode_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.Equals(HuajiTech.CoolQ.Messaging.CQCode)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Equals(HuajiTech.CoolQ.Messaging.CQCode)
-  nameWithType: CQCode.Equals(CQCode)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.Equals(System.Object)
-  name: Equals(Object)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Equals_System_Object_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.Equals(System.Object)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Equals(System.Object)
-  nameWithType: CQCode.Equals(Object)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.Equals*
-  name: Equals
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Equals_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Equals
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Equals
-  nameWithType: CQCode.Equals
 - uid: HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)
   name: Escape(String)
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Escape_System_String_
@@ -3895,19 +3947,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CQCode.Escape
   nameWithType: CQCode.Escape
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetHashCode
-  name: GetHashCode()
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetHashCode
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetHashCode
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetHashCode()
-  nameWithType: CQCode.GetHashCode()
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetHashCode*
-  name: GetHashCode
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetHashCode_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetHashCode
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetHashCode
-  nameWithType: CQCode.GetHashCode
 - uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
   name: GetParameterAsBoolean(String)
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsBoolean_System_String_
@@ -3989,32 +4028,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CQCode.Item
   nameWithType: CQCode.Item
-- uid: HuajiTech.CoolQ.Messaging.CQCode.op_Equality(HuajiTech.CoolQ.Messaging.CQCode,HuajiTech.CoolQ.Messaging.CQCode)
-  name: Equality(CQCode, CQCode)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_op_Equality_HuajiTech_CoolQ_Messaging_CQCode_HuajiTech_CoolQ_Messaging_CQCode_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.op_Equality(HuajiTech.CoolQ.Messaging.CQCode,HuajiTech.CoolQ.Messaging.CQCode)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Equality(HuajiTech.CoolQ.Messaging.CQCode, HuajiTech.CoolQ.Messaging.CQCode)
-  nameWithType: CQCode.Equality(CQCode, CQCode)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.op_Equality*
-  name: Equality
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_op_Equality_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.op_Equality
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Equality
-  nameWithType: CQCode.Equality
-- uid: HuajiTech.CoolQ.Messaging.CQCode.op_Inequality(HuajiTech.CoolQ.Messaging.CQCode,HuajiTech.CoolQ.Messaging.CQCode)
-  name: Inequality(CQCode, CQCode)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_op_Inequality_HuajiTech_CoolQ_Messaging_CQCode_HuajiTech_CoolQ_Messaging_CQCode_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.op_Inequality(HuajiTech.CoolQ.Messaging.CQCode,HuajiTech.CoolQ.Messaging.CQCode)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Inequality(HuajiTech.CoolQ.Messaging.CQCode, HuajiTech.CoolQ.Messaging.CQCode)
-  nameWithType: CQCode.Inequality(CQCode, CQCode)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.op_Inequality*
-  name: Inequality
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_op_Inequality_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.op_Inequality
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Inequality
-  nameWithType: CQCode.Inequality
 - uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Boolean)
   name: SetParameter(String, Boolean)
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Boolean_
@@ -4703,6 +4716,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.MessageElement.Add
   nameWithType: MessageElement.Add
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Equals(MessageElement)
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_Equals_HuajiTech_CoolQ_Messaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+  nameWithType: MessageElement.Equals(MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+  name: Equals(Object)
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_Equals_System_Object_
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+  nameWithType: MessageElement.Equals(Object)
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals*
+  name: Equals
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_Equals_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.MessageElement.Equals
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals
+  nameWithType: MessageElement.Equals
 - uid: HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
   name: FromString(String)
   href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_FromString_System_String_
@@ -4716,6 +4748,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.MessageElement.FromString
   nameWithType: MessageElement.FromString
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  name: GetHashCode()
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_GetHashCode
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode()
+  nameWithType: MessageElement.GetHashCode()
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode*
+  name: GetHashCode
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_GetHashCode_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  nameWithType: MessageElement.GetHashCode
 - uid: HuajiTech.CoolQ.Messaging.MessageElement.op_Addition(HuajiTech.CoolQ.Messaging.MessageElement,HuajiTech.CoolQ.Messaging.MessageElement)
   name: Addition(MessageElement, MessageElement)
   href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_op_Addition_HuajiTech_CoolQ_Messaging_MessageElement_HuajiTech_CoolQ_Messaging_MessageElement_
@@ -4729,6 +4774,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.MessageElement.Addition
   nameWithType: MessageElement.Addition
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.op_Equality(HuajiTech.CoolQ.Messaging.MessageElement,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Equality(MessageElement, MessageElement)
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_op_Equality_HuajiTech_CoolQ_Messaging_MessageElement_HuajiTech_CoolQ_Messaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.op_Equality(HuajiTech.CoolQ.Messaging.MessageElement,HuajiTech.CoolQ.Messaging.MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equality(HuajiTech.CoolQ.Messaging.MessageElement, HuajiTech.CoolQ.Messaging.MessageElement)
+  nameWithType: MessageElement.Equality(MessageElement, MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.op_Equality*
+  name: Equality
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_op_Equality_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.MessageElement.op_Equality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equality
+  nameWithType: MessageElement.Equality
 - uid: HuajiTech.CoolQ.Messaging.MessageElement.op_Implicit(System.String)~HuajiTech.CoolQ.Messaging.MessageElement
   name: Implicit(String to MessageElement)
   href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_op_Implicit_System_String__HuajiTech_CoolQ_Messaging_MessageElement
@@ -4748,6 +4806,32 @@ references:
   fullName.vb: HuajiTech.CoolQ.Messaging.MessageElement.Widening
   nameWithType: MessageElement.Implicit
   nameWithType.vb: MessageElement.Widening
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.op_Inequality(HuajiTech.CoolQ.Messaging.MessageElement,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Inequality(MessageElement, MessageElement)
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_op_Inequality_HuajiTech_CoolQ_Messaging_MessageElement_HuajiTech_CoolQ_Messaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.op_Inequality(HuajiTech.CoolQ.Messaging.MessageElement,HuajiTech.CoolQ.Messaging.MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Inequality(HuajiTech.CoolQ.Messaging.MessageElement, HuajiTech.CoolQ.Messaging.MessageElement)
+  nameWithType: MessageElement.Inequality(MessageElement, MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.op_Inequality*
+  name: Inequality
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_op_Inequality_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.MessageElement.op_Inequality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Inequality
+  nameWithType: MessageElement.Inequality
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  name: ToString()
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_ToString
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToString()
+  nameWithType: MessageElement.ToString()
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.ToString*
+  name: ToString
+  href: api/HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_ToString_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  nameWithType: MessageElement.ToString
 - uid: HuajiTech.CoolQ.Messaging.Music
   name: Music
   href: api/HuajiTech.CoolQ.Messaging.Music.html

@@ -83,6 +83,7 @@
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>&gt;</div>
     <div><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</div>
     <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</div>
     <div><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</div>
@@ -93,16 +94,10 @@
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -115,7 +110,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
   <h5 id="HuajiTech_CoolQ_Messaging_ComplexMessage_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ComplexMessage : IList&lt;MessageElement&gt;, ICollection&lt;MessageElement&gt;, IReadOnlyList&lt;MessageElement&gt;, IReadOnlyCollection&lt;MessageElement&gt;, IEnumerable&lt;MessageElement&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ComplexMessage : IEquatable&lt;ComplexMessage&gt;, IList&lt;MessageElement&gt;, ICollection&lt;MessageElement&gt;, IReadOnlyList&lt;MessageElement&gt;, IReadOnlyCollection&lt;MessageElement&gt;, IEnumerable&lt;MessageElement&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -462,6 +457,92 @@
   </table>
   
   
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(HuajiTech.CoolQ.Messaging.ComplexMessage)">Equals(ComplexMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ComplexMessage other)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_System_Object_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">&#37325;&#20889;</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_FromMessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.FromMessageElement*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_FromMessageElement_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.FromMessageElement(HuajiTech.CoolQ.Messaging.MessageElement)">FromMessageElement(MessageElement)</h4>
   <div class="markdown level1 summary"></div>
@@ -569,6 +650,33 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetHashCode_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetHashCode" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">&#37325;&#20889;</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
   
   
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetPlainText_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetPlainText*"></a>
@@ -1250,6 +1358,53 @@
   </table>
   
   
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Equality_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Equality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)">Equality(ComplexMessage, ComplexMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ComplexMessage left, ComplexMessage right)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Implicit_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Implicit*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Implicit_HuajiTech_CoolQ_Messaging_MessageElement__HuajiTech_CoolQ_Messaging_ComplexMessage" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Implicit(HuajiTech.CoolQ.Messaging.MessageElement)~HuajiTech.CoolQ.Messaging.ComplexMessage">Implicit(MessageElement to ComplexMessage)</h4>
   <div class="markdown level1 summary"></div>
@@ -1328,6 +1483,53 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Inequality_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Inequality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)">Inequality(ComplexMessage, ComplexMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ComplexMessage left, ComplexMessage right)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1535,6 +1737,9 @@
     </tbody>
   </table>
   <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
   <div>
       <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>
   </div>

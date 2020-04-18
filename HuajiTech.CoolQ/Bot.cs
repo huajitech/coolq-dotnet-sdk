@@ -26,7 +26,7 @@ namespace HuajiTech.CoolQ
             new Lazy<bool>(() => NativeMethods.GetCanSendRecord(AuthCode));
 
         private static readonly Lazy<CurrentUser> _currentUser =
-            new Lazy<CurrentUser>();
+            new Lazy<CurrentUser>(() => new CurrentUser());
 
         private static readonly Lazy<DirectoryInfo> _dataDirectory =
             new Lazy<DirectoryInfo>(() => new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode)));
