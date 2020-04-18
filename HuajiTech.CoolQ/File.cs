@@ -5,7 +5,7 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public class File
     {
-        internal File(string id, string name, long length, long busId)
+        public File(string id, string name, long length, long busId)
         {
             Id = id;
             Name = name;

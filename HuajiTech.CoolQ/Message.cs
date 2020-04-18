@@ -7,7 +7,7 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public class Message
     {
-        internal Message(long id, string content)
+        public Message(long id, string content)
         {
             Id = id;
             Content = content;
