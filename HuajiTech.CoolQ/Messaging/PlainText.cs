@@ -3,7 +3,7 @@ namespace HuajiTech.CoolQ.Messaging
     /// <summary>
     /// 表示纯文本。
     /// </summary>
-    public class PlainText : MessageElement
+    public sealed class PlainText : MessageElement
     {
         /// <summary>
         /// 以指定内容初始化一个 <see cref="PlainText"/> 类的新实例。
