@@ -15,7 +15,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取内容。
+        /// 获取未经转义的原始内容。
         /// </summary>
         public string Content { get; }
 
@@ -43,6 +43,10 @@ namespace HuajiTech.CoolQ.Messaging
                        .Replace("&amp;", "&");
         }
 
+        /// <summary>
+        /// 获取转义后的内容。
+        /// </summary>
+        /// <returns>转义后的内容。</returns>
         public override string ToString()
         {
             return Escape(Content);
