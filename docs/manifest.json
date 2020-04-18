@@ -24,7 +24,7 @@
           "hash": "GSZl7GXAVxIAaw+gqMDFbQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -168,7 +168,7 @@
           "hash": "fjeTSsfuq6QgUjHTTYPpNg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -900,7 +900,7 @@
           "hash": "eUa+AlHRJFt/R8hQTlbJzQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -941,13 +941,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 8,
-          "skipped_file_count": 7
+          "skipped_file_count": 8
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 66,
-          "skipped_file_count": 66
+          "skipped_file_count": 65
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
