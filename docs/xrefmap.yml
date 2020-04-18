@@ -4955,25 +4955,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.PlainText.Content
   nameWithType: PlainText.Content
-- uid: HuajiTech.CoolQ.Messaging.PlainText.Equals(HuajiTech.CoolQ.Messaging.PlainText)
-  name: Equals(PlainText)
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Equals_HuajiTech_CoolQ_Messaging_PlainText_
-  commentId: M:HuajiTech.CoolQ.Messaging.PlainText.Equals(HuajiTech.CoolQ.Messaging.PlainText)
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Equals(HuajiTech.CoolQ.Messaging.PlainText)
-  nameWithType: PlainText.Equals(PlainText)
-- uid: HuajiTech.CoolQ.Messaging.PlainText.Equals(System.Object)
-  name: Equals(Object)
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Equals_System_Object_
-  commentId: M:HuajiTech.CoolQ.Messaging.PlainText.Equals(System.Object)
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Equals(System.Object)
-  nameWithType: PlainText.Equals(Object)
-- uid: HuajiTech.CoolQ.Messaging.PlainText.Equals*
-  name: Equals
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Equals_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.PlainText.Equals
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Equals
-  nameWithType: PlainText.Equals
 - uid: HuajiTech.CoolQ.Messaging.PlainText.Escape(System.String)
   name: Escape(String)
   href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Escape_System_String_
@@ -4987,64 +4968,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.PlainText.Escape
   nameWithType: PlainText.Escape
-- uid: HuajiTech.CoolQ.Messaging.PlainText.GetHashCode
-  name: GetHashCode()
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_GetHashCode
-  commentId: M:HuajiTech.CoolQ.Messaging.PlainText.GetHashCode
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.GetHashCode()
-  nameWithType: PlainText.GetHashCode()
-- uid: HuajiTech.CoolQ.Messaging.PlainText.GetHashCode*
-  name: GetHashCode
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_GetHashCode_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.PlainText.GetHashCode
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.GetHashCode
-  nameWithType: PlainText.GetHashCode
-- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Equality(HuajiTech.CoolQ.Messaging.PlainText,HuajiTech.CoolQ.Messaging.PlainText)
-  name: Equality(PlainText, PlainText)
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Equality_HuajiTech_CoolQ_Messaging_PlainText_HuajiTech_CoolQ_Messaging_PlainText_
-  commentId: M:HuajiTech.CoolQ.Messaging.PlainText.op_Equality(HuajiTech.CoolQ.Messaging.PlainText,HuajiTech.CoolQ.Messaging.PlainText)
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Equality(HuajiTech.CoolQ.Messaging.PlainText, HuajiTech.CoolQ.Messaging.PlainText)
-  nameWithType: PlainText.Equality(PlainText, PlainText)
-- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Equality*
-  name: Equality
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Equality_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.PlainText.op_Equality
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Equality
-  nameWithType: PlainText.Equality
-- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Implicit(HuajiTech.CoolQ.Messaging.PlainText)~System.String
-  name: Implicit(PlainText to String)
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_HuajiTech_CoolQ_Messaging_PlainText__System_String
-  commentId: M:HuajiTech.CoolQ.Messaging.PlainText.op_Implicit(HuajiTech.CoolQ.Messaging.PlainText)~System.String
-  name.vb: Widening(PlainText to String)
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Implicit(HuajiTech.CoolQ.Messaging.PlainText to System.String)
-  fullName.vb: HuajiTech.CoolQ.Messaging.PlainText.Widening(HuajiTech.CoolQ.Messaging.PlainText to System.String)
-  nameWithType: PlainText.Implicit(PlainText to String)
-  nameWithType.vb: PlainText.Widening(PlainText to String)
-- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Implicit*
-  name: Implicit
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.PlainText.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Implicit
-  fullName.vb: HuajiTech.CoolQ.Messaging.PlainText.Widening
-  nameWithType: PlainText.Implicit
-  nameWithType.vb: PlainText.Widening
-- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Inequality(HuajiTech.CoolQ.Messaging.PlainText,HuajiTech.CoolQ.Messaging.PlainText)
-  name: Inequality(PlainText, PlainText)
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Inequality_HuajiTech_CoolQ_Messaging_PlainText_HuajiTech_CoolQ_Messaging_PlainText_
-  commentId: M:HuajiTech.CoolQ.Messaging.PlainText.op_Inequality(HuajiTech.CoolQ.Messaging.PlainText,HuajiTech.CoolQ.Messaging.PlainText)
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Inequality(HuajiTech.CoolQ.Messaging.PlainText, HuajiTech.CoolQ.Messaging.PlainText)
-  nameWithType: PlainText.Inequality(PlainText, PlainText)
-- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Inequality*
-  name: Inequality
-  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Inequality_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.PlainText.op_Inequality
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.PlainText.Inequality
-  nameWithType: PlainText.Inequality
 - uid: HuajiTech.CoolQ.Messaging.PlainText.ToString
   name: ToString()
   href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_ToString

@@ -31,11 +31,6 @@ namespace HuajiTech.CoolQ.Messaging
                        .Replace("]", "&#93;");
         }
 
-        public static implicit operator string(PlainText text)
-        {
-            return text?.Content;
-        }
-
         /// <summary>
         /// 对字符串进行反转义。
         /// </summary>
