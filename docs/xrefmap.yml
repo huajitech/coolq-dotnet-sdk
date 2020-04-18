@@ -3086,19 +3086,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Anonymous.DoesFallback
   nameWithType: Anonymous.DoesFallback
-- uid: HuajiTech.CoolQ.Messaging.Anonymous.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Anonymous.html#HuajiTech_CoolQ_Messaging_Anonymous_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Anonymous.Type
-  fullName: HuajiTech.CoolQ.Messaging.Anonymous.Type
-  nameWithType: Anonymous.Type
-- uid: HuajiTech.CoolQ.Messaging.Anonymous.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Anonymous.html#HuajiTech_CoolQ_Messaging_Anonymous_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Anonymous.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Anonymous.Type
-  nameWithType: Anonymous.Type
 - uid: HuajiTech.CoolQ.Messaging.At
   name: At
   href: api/HuajiTech.CoolQ.Messaging.At.html
@@ -3140,19 +3127,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.At.Target
   nameWithType: At.Target
-- uid: HuajiTech.CoolQ.Messaging.At.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.At.html#HuajiTech_CoolQ_Messaging_At_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.At.Type
-  fullName: HuajiTech.CoolQ.Messaging.At.Type
-  nameWithType: At.Type
-- uid: HuajiTech.CoolQ.Messaging.At.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.At.html#HuajiTech_CoolQ_Messaging_At_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.At.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.At.Type
-  nameWithType: At.Type
 - uid: HuajiTech.CoolQ.Messaging.AtAll
   name: AtAll
   href: api/HuajiTech.CoolQ.Messaging.AtAll.html
@@ -3181,19 +3155,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.AtAll.AtAll
   nameWithType: AtAll.AtAll
-- uid: HuajiTech.CoolQ.Messaging.AtAll.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.AtAll.html#HuajiTech_CoolQ_Messaging_AtAll_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.AtAll.Type
-  fullName: HuajiTech.CoolQ.Messaging.AtAll.Type
-  nameWithType: AtAll.Type
-- uid: HuajiTech.CoolQ.Messaging.AtAll.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.AtAll.html#HuajiTech_CoolQ_Messaging_AtAll_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.AtAll.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.AtAll.Type
-  nameWithType: AtAll.Type
 - uid: HuajiTech.CoolQ.Messaging.ChatShare
   name: ChatShare
   href: api/HuajiTech.CoolQ.Messaging.ChatShare.html
@@ -3235,19 +3196,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.ChatShare.Content
   nameWithType: ChatShare.Content
-- uid: HuajiTech.CoolQ.Messaging.ChatShare.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.ChatShare.html#HuajiTech_CoolQ_Messaging_ChatShare_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.ChatShare.Type
-  fullName: HuajiTech.CoolQ.Messaging.ChatShare.Type
-  nameWithType: ChatShare.Type
-- uid: HuajiTech.CoolQ.Messaging.ChatShare.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.ChatShare.html#HuajiTech_CoolQ_Messaging_ChatShare_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.ChatShare.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.ChatShare.Type
-  nameWithType: ChatShare.Type
 - uid: HuajiTech.CoolQ.Messaging.ClockingIn
   name: ClockingIn
   href: api/HuajiTech.CoolQ.Messaging.ClockingIn.html
@@ -3315,19 +3263,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.ClockingIn.Title
   nameWithType: ClockingIn.Title
-- uid: HuajiTech.CoolQ.Messaging.ClockingIn.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.ClockingIn.html#HuajiTech_CoolQ_Messaging_ClockingIn_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.ClockingIn.Type
-  fullName: HuajiTech.CoolQ.Messaging.ClockingIn.Type
-  nameWithType: ClockingIn.Type
-- uid: HuajiTech.CoolQ.Messaging.ClockingIn.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.ClockingIn.html#HuajiTech_CoolQ_Messaging_ClockingIn_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.ClockingIn.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.ClockingIn.Type
-  nameWithType: ClockingIn.Type
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
   name: ComplexMessage
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html
@@ -3893,21 +3828,6 @@ references:
   commentId: T:HuajiTech.CoolQ.Messaging.CQCode
   fullName: HuajiTech.CoolQ.Messaging.CQCode
   nameWithType: CQCode
-- uid: HuajiTech.CoolQ.Messaging.CQCode.#ctor
-  name: CQCode()
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode__ctor
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.#ctor
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.CQCode()
-  nameWithType: CQCode.CQCode()
-- uid: HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
-  name: CQCode(IDictionary<String, String>)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode__ctor_System_Collections_Generic_IDictionary_System_String_System_String__
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
-  name.vb: CQCode(IDictionary(Of String, String))
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.CQCode(System.Collections.Generic.IDictionary<System.String, System.String>)
-  fullName.vb: HuajiTech.CoolQ.Messaging.CQCode.CQCode(System.Collections.Generic.IDictionary(Of System.String, System.String))
-  nameWithType: CQCode.CQCode(IDictionary<String, String>)
-  nameWithType.vb: CQCode.CQCode(IDictionary(Of String, String))
 - uid: HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String)
   name: CQCode(String)
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode__ctor_System_String_
@@ -4182,19 +4102,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CustomEmoticon.Id
   nameWithType: CustomEmoticon.Id
-- uid: HuajiTech.CoolQ.Messaging.CustomEmoticon.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.CustomEmoticon.html#HuajiTech_CoolQ_Messaging_CustomEmoticon_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.CustomEmoticon.Type
-  fullName: HuajiTech.CoolQ.Messaging.CustomEmoticon.Type
-  nameWithType: CustomEmoticon.Type
-- uid: HuajiTech.CoolQ.Messaging.CustomEmoticon.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.CustomEmoticon.html#HuajiTech_CoolQ_Messaging_CustomEmoticon_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CustomEmoticon.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CustomEmoticon.Type
-  nameWithType: CustomEmoticon.Type
 - uid: HuajiTech.CoolQ.Messaging.CustomMusic
   name: CustomMusic
   href: api/HuajiTech.CoolQ.Messaging.CustomMusic.html
@@ -4288,19 +4195,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CustomMusic.Title
   nameWithType: CustomMusic.Title
-- uid: HuajiTech.CoolQ.Messaging.CustomMusic.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.CustomMusic.html#HuajiTech_CoolQ_Messaging_CustomMusic_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.CustomMusic.Type
-  fullName: HuajiTech.CoolQ.Messaging.CustomMusic.Type
-  nameWithType: CustomMusic.Type
-- uid: HuajiTech.CoolQ.Messaging.CustomMusic.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.CustomMusic.html#HuajiTech_CoolQ_Messaging_CustomMusic_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CustomMusic.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CustomMusic.Type
-  nameWithType: CustomMusic.Type
 - uid: HuajiTech.CoolQ.Messaging.Dice
   name: Dice
   href: api/HuajiTech.CoolQ.Messaging.Dice.html
@@ -4342,19 +4236,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Dice.Point
   nameWithType: Dice.Point
-- uid: HuajiTech.CoolQ.Messaging.Dice.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Dice.html#HuajiTech_CoolQ_Messaging_Dice_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Dice.Type
-  fullName: HuajiTech.CoolQ.Messaging.Dice.Type
-  nameWithType: Dice.Type
-- uid: HuajiTech.CoolQ.Messaging.Dice.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Dice.html#HuajiTech_CoolQ_Messaging_Dice_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Dice.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Dice.Type
-  nameWithType: Dice.Type
 - uid: HuajiTech.CoolQ.Messaging.Emoji
   name: Emoji
   href: api/HuajiTech.CoolQ.Messaging.Emoji.html
@@ -4396,19 +4277,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Emoji.Id
   nameWithType: Emoji.Id
-- uid: HuajiTech.CoolQ.Messaging.Emoji.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Emoji.html#HuajiTech_CoolQ_Messaging_Emoji_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Emoji.Type
-  fullName: HuajiTech.CoolQ.Messaging.Emoji.Type
-  nameWithType: Emoji.Type
-- uid: HuajiTech.CoolQ.Messaging.Emoji.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Emoji.html#HuajiTech_CoolQ_Messaging_Emoji_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Emoji.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Emoji.Type
-  nameWithType: Emoji.Type
 - uid: HuajiTech.CoolQ.Messaging.Emoticon
   name: Emoticon
   href: api/HuajiTech.CoolQ.Messaging.Emoticon.html
@@ -4450,19 +4318,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Emoticon.Id
   nameWithType: Emoticon.Id
-- uid: HuajiTech.CoolQ.Messaging.Emoticon.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Emoticon.html#HuajiTech_CoolQ_Messaging_Emoticon_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Emoticon.Type
-  fullName: HuajiTech.CoolQ.Messaging.Emoticon.Type
-  nameWithType: Emoticon.Type
-- uid: HuajiTech.CoolQ.Messaging.Emoticon.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Emoticon.html#HuajiTech_CoolQ_Messaging_Emoticon_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Emoticon.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Emoticon.Type
-  nameWithType: Emoticon.Type
 - uid: HuajiTech.CoolQ.Messaging.Extensions
   name: Extensions
   href: api/HuajiTech.CoolQ.Messaging.Extensions.html
@@ -4600,19 +4455,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Image.RequestFileAsync
   nameWithType: Image.RequestFileAsync
-- uid: HuajiTech.CoolQ.Messaging.Image.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Image.html#HuajiTech_CoolQ_Messaging_Image_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Image.Type
-  fullName: HuajiTech.CoolQ.Messaging.Image.Type
-  nameWithType: Image.Type
-- uid: HuajiTech.CoolQ.Messaging.Image.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Image.html#HuajiTech_CoolQ_Messaging_Image_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Image.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Image.Type
-  nameWithType: Image.Type
 - uid: HuajiTech.CoolQ.Messaging.Location
   name: Location
   href: api/HuajiTech.CoolQ.Messaging.Location.html
@@ -4693,19 +4535,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Location.Name
   nameWithType: Location.Name
-- uid: HuajiTech.CoolQ.Messaging.Location.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Location.html#HuajiTech_CoolQ_Messaging_Location_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Location.Type
-  fullName: HuajiTech.CoolQ.Messaging.Location.Type
-  nameWithType: Location.Type
-- uid: HuajiTech.CoolQ.Messaging.Location.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Location.html#HuajiTech_CoolQ_Messaging_Location_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Location.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Location.Type
-  nameWithType: Location.Type
 - uid: HuajiTech.CoolQ.Messaging.MessageElement
   name: MessageElement
   href: api/HuajiTech.CoolQ.Messaging.MessageElement.html
@@ -4895,19 +4724,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Music.MusicType
   nameWithType: Music.MusicType
-- uid: HuajiTech.CoolQ.Messaging.Music.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Music.html#HuajiTech_CoolQ_Messaging_Music_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Music.Type
-  fullName: HuajiTech.CoolQ.Messaging.Music.Type
-  nameWithType: Music.Type
-- uid: HuajiTech.CoolQ.Messaging.Music.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Music.html#HuajiTech_CoolQ_Messaging_Music_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Music.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Music.Type
-  nameWithType: Music.Type
 - uid: HuajiTech.CoolQ.Messaging.MusicType
   name: MusicType
   href: api/HuajiTech.CoolQ.Messaging.MusicType.html
@@ -5102,19 +4918,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Record.RequestFileAsync
   nameWithType: Record.RequestFileAsync
-- uid: HuajiTech.CoolQ.Messaging.Record.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Record.html#HuajiTech_CoolQ_Messaging_Record_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Record.Type
-  fullName: HuajiTech.CoolQ.Messaging.Record.Type
-  nameWithType: Record.Type
-- uid: HuajiTech.CoolQ.Messaging.Record.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Record.html#HuajiTech_CoolQ_Messaging_Record_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Record.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Record.Type
-  nameWithType: Record.Type
 - uid: HuajiTech.CoolQ.Messaging.RichText
   name: RichText
   href: api/HuajiTech.CoolQ.Messaging.RichText.html
@@ -5169,19 +4972,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.RichText.Title
   nameWithType: RichText.Title
-- uid: HuajiTech.CoolQ.Messaging.RichText.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.RichText.html#HuajiTech_CoolQ_Messaging_RichText_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.RichText.Type
-  fullName: HuajiTech.CoolQ.Messaging.RichText.Type
-  nameWithType: RichText.Type
-- uid: HuajiTech.CoolQ.Messaging.RichText.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.RichText.html#HuajiTech_CoolQ_Messaging_RichText_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.RichText.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.RichText.Type
-  nameWithType: RichText.Type
 - uid: HuajiTech.CoolQ.Messaging.RockPaperScissors
   name: RockPaperScissors
   href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html
@@ -5210,62 +5000,49 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.RockPaperScissors.RockPaperScissors
   nameWithType: RockPaperScissors.RockPaperScissors
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissors.Result
-  name: Result
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html#HuajiTech_CoolQ_Messaging_RockPaperScissors_Result
-  commentId: P:HuajiTech.CoolQ.Messaging.RockPaperScissors.Result
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissors.Result
-  nameWithType: RockPaperScissors.Result
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissors.Result*
-  name: Result
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html#HuajiTech_CoolQ_Messaging_RockPaperScissors_Result_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.RockPaperScissors.Result
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissors.Kind
+  name: Kind
+  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html#HuajiTech_CoolQ_Messaging_RockPaperScissors_Kind
+  commentId: P:HuajiTech.CoolQ.Messaging.RockPaperScissors.Kind
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissors.Kind
+  nameWithType: RockPaperScissors.Kind
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissors.Kind*
+  name: Kind
+  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html#HuajiTech_CoolQ_Messaging_RockPaperScissors_Kind_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.RockPaperScissors.Kind
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissors.Result
-  nameWithType: RockPaperScissors.Result
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissors.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html#HuajiTech_CoolQ_Messaging_RockPaperScissors_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.RockPaperScissors.Type
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissors.Type
-  nameWithType: RockPaperScissors.Type
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissors.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html#HuajiTech_CoolQ_Messaging_RockPaperScissors_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.RockPaperScissors.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissors.Type
-  nameWithType: RockPaperScissors.Type
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult
-  name: RockPaperScissorsResult
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.html
-  commentId: T:HuajiTech.CoolQ.Messaging.RockPaperScissorsResult
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult
-  nameWithType: RockPaperScissorsResult
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.None
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissors.Kind
+  nameWithType: RockPaperScissors.Kind
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  name: RockPaperScissorsKind
+  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.html
+  commentId: T:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  nameWithType: RockPaperScissorsKind
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.None
   name: None
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsResult_None
-  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.None
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.None
-  nameWithType: RockPaperScissorsResult.None
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Paper
+  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsKind_None
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.None
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.None
+  nameWithType: RockPaperScissorsKind.None
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper
   name: Paper
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsResult_Paper
-  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Paper
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Paper
-  nameWithType: RockPaperScissorsResult.Paper
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Rock
+  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsKind_Paper
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper
+  nameWithType: RockPaperScissorsKind.Paper
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock
   name: Rock
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsResult_Rock
-  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Rock
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Rock
-  nameWithType: RockPaperScissorsResult.Rock
-- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Scissors
+  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsKind_Rock
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock
+  nameWithType: RockPaperScissorsKind.Rock
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors
   name: Scissors
-  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsResult_Scissors
-  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Scissors
-  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.Scissors
-  nameWithType: RockPaperScissorsResult.Scissors
+  href: api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.html#HuajiTech_CoolQ_Messaging_RockPaperScissorsKind_Scissors
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors
+  nameWithType: RockPaperScissorsKind.Scissors
 - uid: HuajiTech.CoolQ.Messaging.Shake
   name: Shake
   href: api/HuajiTech.CoolQ.Messaging.Shake.html
@@ -5307,19 +5084,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Shake.Id
   nameWithType: Shake.Id
-- uid: HuajiTech.CoolQ.Messaging.Shake.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Shake.html#HuajiTech_CoolQ_Messaging_Shake_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Shake.Type
-  fullName: HuajiTech.CoolQ.Messaging.Shake.Type
-  nameWithType: Shake.Type
-- uid: HuajiTech.CoolQ.Messaging.Shake.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Shake.html#HuajiTech_CoolQ_Messaging_Shake_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Shake.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Shake.Type
-  nameWithType: Shake.Type
 - uid: HuajiTech.CoolQ.Messaging.Share
   name: Share
   href: api/HuajiTech.CoolQ.Messaging.Share.html
@@ -5387,19 +5151,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Share.Title
   nameWithType: Share.Title
-- uid: HuajiTech.CoolQ.Messaging.Share.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Share.html#HuajiTech_CoolQ_Messaging_Share_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.Share.Type
-  fullName: HuajiTech.CoolQ.Messaging.Share.Type
-  nameWithType: Share.Type
-- uid: HuajiTech.CoolQ.Messaging.Share.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.Share.html#HuajiTech_CoolQ_Messaging_Share_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Share.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Share.Type
-  nameWithType: Share.Type
 - uid: HuajiTech.CoolQ.Messaging.Share.Url
   name: Url
   href: api/HuajiTech.CoolQ.Messaging.Share.html#HuajiTech_CoolQ_Messaging_Share_Url
@@ -5454,19 +5205,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.SmallEmoticon.Id
   nameWithType: SmallEmoticon.Id
-- uid: HuajiTech.CoolQ.Messaging.SmallEmoticon.Type
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.SmallEmoticon.html#HuajiTech_CoolQ_Messaging_SmallEmoticon_Type
-  commentId: P:HuajiTech.CoolQ.Messaging.SmallEmoticon.Type
-  fullName: HuajiTech.CoolQ.Messaging.SmallEmoticon.Type
-  nameWithType: SmallEmoticon.Type
-- uid: HuajiTech.CoolQ.Messaging.SmallEmoticon.Type*
-  name: Type
-  href: api/HuajiTech.CoolQ.Messaging.SmallEmoticon.html#HuajiTech_CoolQ_Messaging_SmallEmoticon_Type_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.SmallEmoticon.Type
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.SmallEmoticon.Type
-  nameWithType: SmallEmoticon.Type
 - uid: HuajiTech.CoolQ.RoutedEventArgs
   name: RoutedEventArgs
   href: api/HuajiTech.CoolQ.RoutedEventArgs.html

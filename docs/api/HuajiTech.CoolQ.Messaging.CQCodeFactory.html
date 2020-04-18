@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="CQCodeFactory 类
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -117,7 +117,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_CQCodeFactory_Create_" data-uid="HuajiTech.CoolQ.Messaging.CQCodeFactory.Create*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_CQCodeFactory_Create_System_String_" data-uid="HuajiTech.CoolQ.Messaging.CQCodeFactory.Create(System.String)">Create(String)</h4>
-  <div class="markdown level1 summary"><p>以指定类型创建一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
+  <div class="markdown level1 summary"><p>以指定的类型创建一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -137,7 +137,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>类型。</p>
+        <td><p>要创建的 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 对象的类型。</p>
 </td>
       </tr>
     </tbody>
@@ -153,7 +153,23 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a></td>
-        <td><p><a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">type</code> 为 <code>null</code>、<span class="xref">System.String.Empty</span> 或仅由空白字符组成。</p>
 </td>
       </tr>
     </tbody>
@@ -182,13 +198,13 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>类型。</p>
+        <td><p>要创建的 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 对象的类型。</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">arguments</span></td>
-        <td><p>参数。</p>
+        <td><p>要创建的 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 对象的参数。</p>
 </td>
       </tr>
     </tbody>
@@ -204,7 +220,28 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a></td>
-        <td><p><a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">type</code> 为 <code>null</code>、<span class="xref">System.String.Empty</span> 或仅由空白字符组成。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">arguments</code> 为 <code>null</code>。</p>
 </td>
       </tr>
     </tbody>

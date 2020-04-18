@@ -1,24 +1,24 @@
-using System;
 using System.Collections.Generic;
 
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 表示地点。
+    /// 表示位置的 <see cref="CQCode"/>。
     /// </summary>
     public class Location : CQCode
     {
         public Location()
+            : base("location")
         {
         }
 
         public Location(IDictionary<string, string> arguments)
-            : base(arguments)
+            : base("location", arguments)
         {
         }
 
         /// <summary>
-        /// 获取或设置地址。
+        /// 获取或设置当前 <see cref="Location"/> 对象的地址。
         /// </summary>
         public string Address
         {
@@ -27,7 +27,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置纬度。
+        /// 获取或设置当前 <see cref="Location"/> 对象的纬度。
         /// </summary>
         public float Latitude
         {
@@ -36,7 +36,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置经度。
+        /// 获取或设置当前 <see cref="Location"/> 对象的经度。
         /// </summary>
         public float Longitude
         {
@@ -45,14 +45,12 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置名称。
+        /// 获取或设置当前 <see cref="Location"/> 对象的名称。
         /// </summary>
         public string Name
         {
             get => this["title"];
             set => this["title"] = value;
         }
-
-        public override string Type => "location";
     }
 }

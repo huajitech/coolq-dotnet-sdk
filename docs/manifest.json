@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "+hTay35vEoEp2NpPaefYwA=="
+          "hash": "kP8QTPlSU+sj6u7wyL2vwQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/events.html",
-          "hash": "GSZl7GXAVxIAaw+gqMDFbQ=="
+          "hash": "rYWV7uY6mipjyJeRwIf4hg=="
         }
       },
       "is_incremental": true,
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "guides/getting_started.html",
-          "hash": "xP1BrqSq+JLaatvxse4yZQ=="
+          "hash": "qZTukvM3kd37vuTv0yKhFg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/howto_handle_message.html",
-          "hash": "Afs44PPywfHIrTwjtnmpBA=="
+          "hash": "lh0M0slBUnTMgapLrobQIQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/howto_use_menus_and_statuses.html",
-          "hash": "vHyYp9PQ3ZKh1eCvcT87KQ=="
+          "hash": "pUyKPmb7ebwL1EInCbiuuQ=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/intro.html",
-          "hash": "YNHmM+1l2mdhHOIJhzbucA=="
+          "hash": "m7eutXAuppJutoxtXU+dYw=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/your_first_app.html",
-          "hash": "H2OLrppTte4XfAKYhx2eWw=="
+          "hash": "6MwR1FvQVUWEZUhBgxeCRA=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "L2hPK/dPs7nwVN5idCxtGg=="
+          "hash": "Ib5TOF24KIp2AqWR+L/5bQ=="
         }
       },
       "is_incremental": true,
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.AdministratorEventArgs.html",
-          "hash": "zxbYkEN1SN7ovHyN620CuA=="
+          "hash": "eghsgEB/YMt8SldX3kdCCg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.AnonymousMember.html",
-          "hash": "QViptekWOY3L6gDpZsTGhw=="
+          "hash": "tGhqy7mhfezPpeTpfjLM5A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.AnonymousMessageReceivedEventArgs.html",
-          "hash": "v/qFwu5Oymin416BLidm9Q=="
+          "hash": "FdOJ6oWvj6Yno+zOFw8Q1g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.AppAttribute.html",
-          "hash": "cJzk8p7j0Vj9VgK2C7EUwQ=="
+          "hash": "LEQ2zNvc+jXCjkN2AS9OSg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Bot.html",
-          "hash": "fjeTSsfuq6QgUjHTTYPpNg=="
+          "hash": "IOPg7SqkTXTI2wOCeCyimQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Chat.html",
-          "hash": "sGOux7myhhk5XCOFU+DXfA=="
+          "hash": "nDtZ4/uIWSyNBVLxyf0eoQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Contact.html",
-          "hash": "gBfjEJJ5ngiwzlM3OLuZgg=="
+          "hash": "beEd3lW6tsm4bAnpna0S3g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.ContactAddedEventArgs.html",
-          "hash": "0QhGb9OyRW4qkCQ3gLpLDA=="
+          "hash": "QlT33Vo86vHusoeEyCmocA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.ContactRequest.html",
-          "hash": "uVvm8s3fEDxcIzTJP6RGvw=="
+          "hash": "5XGE/xEr+Tuf2y8EJWSl7g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.ContactRequestedEventArgs.html",
-          "hash": "CK/B/hO4YHUSQJrB8gJ8Nw=="
+          "hash": "hUa/h6Eh4l/5nDTpSs25WA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.CoolQException.html",
-          "hash": "ivD/lyDjxxa8Ryf8ao2mJA=="
+          "hash": "gPmc+WH/MjEno9GElaA2Rg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.CurrentUser.html",
-          "hash": "k24pAgzLEWFQBwqms5al6g=="
+          "hash": "Z7gGPCcU44HRiGJHypr8rw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.CustomTitle.html",
-          "hash": "WNPWx4uqw7PbWbwoHCBazA=="
+          "hash": "Q1VNc8q8J5Tnk9S10JhYJA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.EntranceInvitation.html",
-          "hash": "gBBxjQjaDbppDlyEeYT+ew=="
+          "hash": "zaq299HuumxdyZAEDOXM8w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.EntranceInvitedEventArgs.html",
-          "hash": "dbHk8vjpbBykUlL+dAS2YQ=="
+          "hash": "H1VlApJLb7zQGPXR4FMPjw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.EntranceRequest.html",
-          "hash": "psmNvOtFIrEqeXr435VLcQ=="
+          "hash": "yjduKNnxLRBtVR80wnJKYw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.EntranceRequestedEventArgs.html",
-          "hash": "WUp8JWT1VBkuStWjiBlQ3A=="
+          "hash": "CI6r4bkx9eXVRkTecna2Rg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Extensions.html",
-          "hash": "gBgVEq/EtW2QjaIiBBd/BQ=="
+          "hash": "YVWYbx/iG1VI4fLyG3FsAA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -333,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.File.html",
-          "hash": "Jdq9bbH+06tvtR0VZT09jA=="
+          "hash": "V3+UZSeQ3G52LsuwHMSgNw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.FileUploadedEventArgs.html",
-          "hash": "OMeqKa87djbJ/6FzoaqaVw=="
+          "hash": "XlaqbvTWomRH+AHSTZJnCQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Gender.html",
-          "hash": "Hs23xGcri3jkRBTnOTrvZQ=="
+          "hash": "RP/727Ekqb3DzNfg2e4r+Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Group.html",
-          "hash": "VdlPuSb4N2STRftYp0K2mA=="
+          "hash": "cyiZnu626LLOXxk0462maw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +381,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.GroupMuteEventArgs.html",
-          "hash": "hZVS1xv3rxOSA/HYcXBvfg=="
+          "hash": "X1TP0jU/GJ1fTU2EIW/QYA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -393,10 +393,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.LogLevel.html",
-          "hash": "cpN+RxrYboYNBkFhBad9GA=="
+          "hash": "4DTvaBAaGchfCnbbQCrupA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -405,10 +405,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Logger.html",
-          "hash": "HiIsF52PwihVYDauWH7v7g=="
+          "hash": "v8gl2uKiCDQXYocKk3dn3g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -417,10 +417,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Member.html",
-          "hash": "vmZ5R3lbRE1dnoUT9ZgoGg=="
+          "hash": "WXzOha90zZrG2FmhxNQVGA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -429,10 +429,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MemberJoinedEventArgs.html",
-          "hash": "m4AWGKxzfGsUG091r3W7Hw=="
+          "hash": "aKWfKB8PzmEvuhCK73iPrw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -441,10 +441,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MemberLeftEventArgs.html",
-          "hash": "Y7RAUAYmSgoimT1U3BZiLw=="
+          "hash": "gD6CuqJELC4LapfMw8TwCQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -453,10 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MemberMutedEventArgs.html",
-          "hash": "cHEGS99wKxpXtKrbd78nqA=="
+          "hash": "vLF5UqRyysP+F0X8Z5OOWQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -465,10 +465,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MemberRole.html",
-          "hash": "+WmVnafLpdiGAHCW5r2hFw=="
+          "hash": "bjog/DCyinNveQrB9wN/Jw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -477,10 +477,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MemberUnmutedEventArgs.html",
-          "hash": "kQODbaSq7H9XtNnF8iZpHg=="
+          "hash": "A5iZoYGJ//5aXUt4baXM2Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -489,10 +489,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Message.html",
-          "hash": "+OH7fjriiJb5cvH1nEXRzA=="
+          "hash": "FrdzTPq6Kz0dRpxO2w6C7A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -501,10 +501,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.MessageReceivedEventArgs.html",
-          "hash": "1PQpZTBRd24YtK+bE8K2/A=="
+          "hash": "VrZZjIGTCWuupTGGuOS4hg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -513,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Anonymous.html",
-          "hash": "J4aVTGdKeTqhOOc393AkLA=="
+          "hash": "yBcRbk83wFnepxDrqe9LuQ=="
         }
       },
       "is_incremental": false,
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.At.html",
-          "hash": "QRRmfFJxfYydLLtuBgglUA=="
+          "hash": "wnuXHHYeppewx/AJsPrytQ=="
         }
       },
       "is_incremental": false,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.AtAll.html",
-          "hash": "XoAeY6+1o+qxIbn6IR8JHQ=="
+          "hash": "PQPjF6SfgrcMCW8UokWEdQ=="
         }
       },
       "is_incremental": false,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CQCode.html",
-          "hash": "9iUFA73I0g5Wr++i+AZskA=="
+          "hash": "b3TP6MC8NraSuks7Mwxa5g=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CQCodeFactory.html",
-          "hash": "IZCuTGWyrxb8dVuTvUydrQ=="
+          "hash": "aLyYG7Zclc/zfF4Vo/XlJw=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ChatShare.html",
-          "hash": "8+dhfjchDzTm51Pu1wzQZg=="
+          "hash": "7cySGFZJzltjQMNpzkJrog=="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ClockingIn.html",
-          "hash": "MeKlU9fVPFlX716tvZGyuA=="
+          "hash": "hi5MqKhwSZe5tqx2QoLveQ=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ComplexMessage.html",
-          "hash": "fkq/gALc6Gy8ME65/ZReow=="
+          "hash": "K6S0KrktWNjMVAZ8703aHg=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CustomEmoticon.html",
-          "hash": "0gOGjZHt023WN8nZI7qo/Q=="
+          "hash": "pnyBa/0dONZ7Hg4WaFTDlg=="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CustomMusic.html",
-          "hash": "FxABNCXKW06CKtjynm1Zow=="
+          "hash": "3tfdwudbfcs0GlkROAcEVg=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Dice.html",
-          "hash": "zqUDDJGDGywyuvxNcg5uIg=="
+          "hash": "q+qtxupWEzYd9dwlJsGeZw=="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Emoji.html",
-          "hash": "tBROikAWI/siiPhSa16b8g=="
+          "hash": "riOJMUKmwSiHEiUnK72odg=="
         }
       },
       "is_incremental": false,
@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Emoticon.html",
-          "hash": "eWRjXV540o594JHdt/sjFQ=="
+          "hash": "BdyF5iGo5Hqm3LPL+89Gnw=="
         }
       },
       "is_incremental": false,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Extensions.html",
-          "hash": "Ag4DMLB386PPzJH2bzh9rw=="
+          "hash": "ZGzocu2edTV5JAJzN5QNxw=="
         }
       },
       "is_incremental": false,
@@ -681,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Image.html",
-          "hash": "dUYiC2LxAwoK9Q7u5zuC8g=="
+          "hash": "iDOK7VWAth1vR/+/RWODGQ=="
         }
       },
       "is_incremental": false,
@@ -693,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Location.html",
-          "hash": "Fnrazif7XFn9/bdjjjAuQA=="
+          "hash": "YQEqdnnvpsy2zKooR5HnJA=="
         }
       },
       "is_incremental": false,
@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.MessageElement.html",
-          "hash": "JESUpwdSzxSGcTYpLt88jA=="
+          "hash": "nd3p354yyJfQiM4jMLHGvw=="
         }
       },
       "is_incremental": false,
@@ -717,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Music.html",
-          "hash": "ehDNlpt5hlhfK2i/HchP0g=="
+          "hash": "nC/xm9zXHrwQGcSmuM+hYA=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.MusicType.html",
-          "hash": "7fB54foMZA9EvjQRZoQLzQ=="
+          "hash": "zhyAO/K2j5A8pmIsL3NtYw=="
         }
       },
       "is_incremental": false,
@@ -741,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.PlainText.html",
-          "hash": "9q153kgaH9tInXLQDfEvHQ=="
+          "hash": "c1HEVtGZXUY0rQmGESDc0g=="
         }
       },
       "is_incremental": false,
@@ -753,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Record.html",
-          "hash": "NxzD7uWUJFzWAlMTTnAPvw=="
+          "hash": "TdpH1SNIiKCxEX0sVOxJ6A=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.RichText.html",
-          "hash": "YbqPXCxCVT8Z4aA6QCSABw=="
+          "hash": "4mQl9ZGx/rah6B7cfHSE9A=="
         }
       },
       "is_incremental": false,
@@ -777,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html",
-          "hash": "sAmRVkQhlVOXlwqJPdh1Ow=="
+          "hash": "hW92pe+Kv2s1hxv4k5P70g=="
         }
       },
       "is_incremental": false,
@@ -785,11 +785,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.yml",
+      "source_relative_path": "obj/api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.yml",
       "output": {
         ".html": {
-          "relative_path": "api/HuajiTech.CoolQ.Messaging.RockPaperScissorsResult.html",
-          "hash": "zlEMN/LRYKK7ioSpNl0EUg=="
+          "relative_path": "api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.html",
+          "hash": "G6GG2L9JY0eZjsMXuvazrw=="
         }
       },
       "is_incremental": false,
@@ -801,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Shake.html",
-          "hash": "pE8AhVmqVs4nqc+5UwKcGw=="
+          "hash": "1jaxOHw7gJrpEw8n83SKEg=="
         }
       },
       "is_incremental": false,
@@ -813,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Share.html",
-          "hash": "qY2S9PgPE3OzPzmHFxVpCA=="
+          "hash": "mIFEqahtt/Qr4xoUdQGCEQ=="
         }
       },
       "is_incremental": false,
@@ -825,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.SmallEmoticon.html",
-          "hash": "EsuPFGO1kmDoVcceo7Hkcg=="
+          "hash": "wECrNeE/pPG9nMliuuei9A=="
         }
       },
       "is_incremental": false,
@@ -837,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.html",
-          "hash": "EJOfFtVo5fCIHcGbvIGqbg=="
+          "hash": "Jo8Z/zhQ0JgLRTeR6BCEyQ=="
         }
       },
       "is_incremental": false,
@@ -849,10 +849,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.RoutedEventArgs.html",
-          "hash": "lpQbRYBpwpJgrVqW9bN/2Q=="
+          "hash": "DL6+nkiz8OSCi/RFEYEEeg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -861,10 +861,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Status.html",
-          "hash": "ud9LYXtJGabYeKJL/31muA=="
+          "hash": "tPqaSFf7XCN708OuWF0AzQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -873,10 +873,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.StatusColor.html",
-          "hash": "MXYftUNgR93jUJywq/7guQ=="
+          "hash": "oyK25dYFCTMRFLdUMbFhPg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -885,10 +885,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.User.html",
-          "hash": "MweV2CR7fEFCTvBTR4SuLQ=="
+          "hash": "WnqjjLbF+RlCvUPjNkCPDA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -897,10 +897,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.html",
-          "hash": "eUa+AlHRJFt/R8hQTlbJzQ=="
+          "hash": "ufMpgyT2Szj5rdHab6P8jA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -909,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "PW5ZMyZUyQJ+wtgQtQDRew=="
+          "hash": "LVLrsJ/VvS1rkMK8/6uL1g=="
         }
       },
       "is_incremental": false,
@@ -947,7 +947,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 66,
-          "skipped_file_count": 63
+          "skipped_file_count": 41
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

@@ -75,7 +75,7 @@
     <Compile Include="Messaging\Dice.cs" />
     <Compile Include="Messaging\RichText.cs" />
     <Compile Include="Messaging\RockPaperScissors.cs" />
-    <Compile Include="Messaging\RockPaperScissorsResult.cs" />
+    <Compile Include="Messaging\RockPaperScissorsKind.cs" />
     <Compile Include="Messaging\Share.cs" />
     <Compile Include="Messaging\CustomMusic.cs" />
     <Compile Include="Messaging\Emoji.cs" />

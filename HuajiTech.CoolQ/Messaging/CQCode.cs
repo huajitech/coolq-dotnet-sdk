@@ -11,20 +11,28 @@ namespace HuajiTech.CoolQ.Messaging
     public class CQCode : MessageElement
     {
         /// <summary>
-        /// 以指定类型初始化一个 <see cref="CQCode"/> 类的新实例。
+        /// 以指定的类型初始化一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
-        /// <param name="type">类型。</param>
+        /// <param name="type">CQ码的类型。</param>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         public CQCode(string type)
-            : this()
         {
+            if (string.IsNullOrWhiteSpace(type))
+            {
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(type));
+            }
+
             Type = type;
+            Arguments = new Dictionary<string, string>();
         }
 
         /// <summary>
         /// 以指定的类型和参数初始化一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
-        /// <param name="type">类型。</param>
-        /// <param name="arguments">参数。</param>
+        /// <param name="type">CQ码的类型。</param>
+        /// <param name="arguments">一个字典，包含 <see cref="CQCode"/> 的所有参数。</param>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="arguments"/> 为 <c>null</c>。</exception>
         public CQCode(string type, IDictionary<string, string> arguments)
         {
             if (string.IsNullOrWhiteSpace(type))
@@ -37,26 +45,13 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 初始化一个 <see cref="CQCode"/> 类的新实例。
+        /// 获取或设置指定键处的参数的值。
         /// </summary>
-        protected CQCode()
-            : this(new Dictionary<string, string>())
-        {
-        }
-
-        /// <summary>
-        /// 以指定参数初始化一个 <see cref="CQCode"/> 类的新实例。
-        /// </summary>
-        /// <param name="arguments">参数。</param>
-        protected CQCode(IDictionary<string, string> arguments)
-        {
-            Arguments = arguments;
-        }
-
-        /// <summary>
-        /// 获取或设置指定键的参数。
-        /// </summary>
-        /// <param name="key">键。</param>
+        /// <param name="key">要获取或设置的参数的键。</param>
+        /// <value>
+        /// 指定 <paramref name="key"/> 处的参数的值。
+        /// 如果指定键不存在，则为 <c>null</c>。
+        /// </value>
         public string this[string key]
         {
             get
@@ -80,28 +75,32 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取当前 <see cref="CQCode"/> 对象的类型。
         /// </summary>
-        public virtual string Type { get; }
+        public string Type { get; }
 
         /// <summary>
-        /// 对字符串进行转义。
+        /// 将指定的字符串转换为可以让酷Q按原义解释字符的语法。
         /// </summary>
-        /// <param name="str">要转义的字符串。</param>
-        /// <returns>转义后的字符串。</returns>
+        /// <param name="str">要转换的字符串。</param>
+        /// <returns>指定字符串的已转换值。</returns>
         public static string Escape(string str)
         {
             return PlainText.Escape(str).Replace(",", "&#44");
         }
 
         /// <summary>
-        /// 对字符串进行反转义。
+        /// 将字符串中的转义字符转换为具有特殊意义的酷Q字符。
         /// </summary>
-        /// <param name="str">要反转义的字符串。</param>
-        /// <returns>反转义后的字符串。</returns>
+        /// <param name="str">要转换的字符串。</param>
+        /// <returns>指定字符串的已转换值。</returns>
         public static string Unescape(string str)
         {
             return PlainText.Unescape(str).Replace("&#44", ",");
         }
 
+        /// <summary>
+        /// 将当前 <see cref="CQCode"/> 对象的值转换为它的等效字符串表示形式。
+        /// </summary>
+        /// <returns>当前 <see cref="CQCode"/> 对象的值的字符串表示形式。</returns>
         public override string ToString()
         {
             return Arguments.Any() ?

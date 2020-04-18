@@ -4,21 +4,22 @@ using System.Collections.Generic;
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 表示分享。
+    /// 表示分享的 <see cref="CQCode"/>。
     /// </summary>
     public class Share : CQCode
     {
         public Share()
+            : base("share")
         {
         }
 
         public Share(IDictionary<string, string> arguments)
-            : base(arguments)
+            : base("share", arguments)
         {
         }
 
         /// <summary>
-        /// 获取或设置描述。
+        /// 获取或设置当前 <see cref="Share"/> 对象的描述。
         /// </summary>
         public string Description
         {
@@ -27,7 +28,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置图片 URL。
+        /// 获取或设置当前 <see cref="Share"/> 对象的图片 URL。
         /// </summary>
         public Uri ImageUrl
         {
@@ -36,7 +37,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置标题。
+        /// 获取或设置当前 <see cref="Share"/> 对象的标题。
         /// </summary>
         public string Title
         {
@@ -45,14 +46,12 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置 URL。
+        /// 获取或设置当前 <see cref="Share"/> 对象的 URL。
         /// </summary>
         public Uri Url
         {
             get => GetParameterAsUri("url");
             set => SetParameter("url", value);
         }
-
-        public override string Type => "share";
     }
 }

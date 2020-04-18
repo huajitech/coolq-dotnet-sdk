@@ -3,28 +3,27 @@ using System.Collections.Generic;
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 表示表情。
+    /// 表示表情的 <see cref="CQCode"/>。
     /// </summary>
     public class Emoticon : CQCode
     {
         public Emoticon()
+            : base("image")
         {
         }
 
         public Emoticon(IDictionary<string, string> arguments)
-            : base(arguments)
+            : base("image", arguments)
         {
         }
 
         /// <summary>
-        /// 获取或设置 Id。
+        /// 获取或设置当前 <see cref="Emoticon"/> 对象的 ID。
         /// </summary>
         public int Id
         {
             get => GetParameterAsInt32("id");
             set => SetParameter("id", value);
         }
-
-        public override string Type => "face";
     }
 }

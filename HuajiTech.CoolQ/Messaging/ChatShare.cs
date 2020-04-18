@@ -4,16 +4,17 @@ using System.Collections.Generic;
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 表示名片分享。
+    /// 表示名片分享的 <see cref="CQCode"/>。
     /// </summary>
     public class ChatShare : CQCode
     {
         public ChatShare()
+            : base("contact")
         {
         }
 
         public ChatShare(IDictionary<string, string> arguments)
-            : base(arguments)
+            : base("contact", arguments)
         {
         }
 
@@ -46,7 +47,5 @@ namespace HuajiTech.CoolQ.Messaging
                 SetParameter("id", value.Number);
             }
         }
-
-        public override string Type => "contact";
     }
 }

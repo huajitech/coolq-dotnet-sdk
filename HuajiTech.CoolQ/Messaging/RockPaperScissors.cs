@@ -3,25 +3,27 @@ using System.Collections.Generic;
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 表示猜拳。
+    /// 表示猜拳的 <see cref="CQCode"/>。
     /// </summary>
     public class RockPaperScissors : CQCode
     {
         public RockPaperScissors()
+            : base("rps")
         {
         }
 
         public RockPaperScissors(IDictionary<string, string> arguments)
-            : base(arguments)
+            : base("rps", arguments)
         {
         }
 
         /// <summary>
-        /// 获取猜拳的结果。
+        /// 获取或设置当前 <see cref="RockPaperScissors"/> 对象的类别。
         /// </summary>
-        public RockPaperScissorsResult Result =>
-            (RockPaperScissorsResult)GetParameterAsInt32("type");
-
-        public override string Type => "rps";
+        public RockPaperScissorsKind Kind
+        {
+            get => (RockPaperScissorsKind)GetParameterAsInt32("type");
+            set => SetParameter("type", (int)value);
+        }
     }
 }

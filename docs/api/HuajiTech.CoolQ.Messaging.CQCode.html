@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="CQCode 类
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -146,48 +146,8 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_CQCode__ctor_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.#ctor*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_CQCode__ctor" data-uid="HuajiTech.CoolQ.Messaging.CQCode.#ctor">CQCode()</h4>
-  <div class="markdown level1 summary"><p>初始化一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected CQCode()</code></pre>
-  </div>
-  
-  
-  <a id="HuajiTech_CoolQ_Messaging_CQCode__ctor_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.#ctor*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_CQCode__ctor_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">CQCode(IDictionary&lt;String, String&gt;)</h4>
-  <div class="markdown level1 summary"><p>以指定参数初始化一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected CQCode(IDictionary&lt;string, string&gt; arguments)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">arguments</span></td>
-        <td><p>参数。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_Messaging_CQCode__ctor_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_CQCode__ctor_System_String_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String)">CQCode(String)</h4>
-  <div class="markdown level1 summary"><p>以指定类型初始化一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
+  <div class="markdown level1 summary"><p>以指定的类型初始化一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -207,7 +167,23 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>类型。</p>
+        <td><p>CQ码的类型。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">type</code> 为 <code>null</code>、<span class="xref">System.String.Empty</span> 或仅由空白字符组成。</p>
 </td>
       </tr>
     </tbody>
@@ -236,13 +212,34 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>类型。</p>
+        <td><p>CQ码的类型。</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">arguments</span></td>
-        <td><p>参数。</p>
+        <td><p>一个字典，包含 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 的所有参数。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">type</code> 为 <code>null</code>、<span class="xref">System.String.Empty</span> 或仅由空白字符组成。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">arguments</code> 为 <code>null</code>。</p>
 </td>
       </tr>
     </tbody>
@@ -279,7 +276,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_CQCode_Item_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.Item*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_CQCode_Item_System_String_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)">Item[String]</h4>
-  <div class="markdown level1 summary"><p>获取或设置指定键的参数。</p>
+  <div class="markdown level1 summary"><p>获取或设置指定键处的参数的值。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -299,7 +296,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">key</span></td>
-        <td><p>键。</p>
+        <td><p>要获取或设置的参数的键。</p>
 </td>
       </tr>
     </tbody>
@@ -315,7 +312,9 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>指定 <code data-dev-comment-type="paramref" class="paramref">key</code> 处的参数的值。
+如果指定键不存在，则为 <code>null</code>。</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -328,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,7 +350,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_CQCode_Escape_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.Escape*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_CQCode_Escape_System_String_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)">Escape(String)</h4>
-  <div class="markdown level1 summary"><p>对字符串进行转义。</p>
+  <div class="markdown level1 summary"><p>将指定的字符串转换为可以让酷Q按原义解释字符的语法。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -371,7 +370,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">str</span></td>
-        <td><p>要转义的字符串。</p>
+        <td><p>要转换的字符串。</p>
 </td>
       </tr>
     </tbody>
@@ -387,7 +386,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>转义后的字符串。</p>
+        <td><p>指定字符串的已转换值。</p>
 </td>
       </tr>
     </tbody>
@@ -766,7 +765,8 @@
   
   <a id="HuajiTech_CoolQ_Messaging_CQCode_ToString_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.ToString*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_CQCode_ToString" data-uid="HuajiTech.CoolQ.Messaging.CQCode.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 对象的值转换为它的等效字符串表示形式。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -783,7 +783,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>当前 <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html">CQCode</a> 对象的值的字符串表示形式。</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -793,7 +794,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_CQCode_Unescape_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.Unescape*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_CQCode_Unescape_System_String_" data-uid="HuajiTech.CoolQ.Messaging.CQCode.Unescape(System.String)">Unescape(String)</h4>
-  <div class="markdown level1 summary"><p>对字符串进行反转义。</p>
+  <div class="markdown level1 summary"><p>将字符串中的转义字符转换为具有特殊意义的酷Q字符。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -813,7 +814,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">str</span></td>
-        <td><p>要反转义的字符串。</p>
+        <td><p>要转换的字符串。</p>
 </td>
       </tr>
     </tbody>
@@ -829,7 +830,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>反转义后的字符串。</p>
+        <td><p>指定字符串的已转换值。</p>
 </td>
       </tr>
     </tbody>

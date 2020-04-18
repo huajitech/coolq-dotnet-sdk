@@ -3,16 +3,17 @@ using System.Collections.Generic;
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 表示自定义表情。
+    /// 表示自定义表情的 <see cref="CQCode"/>。
     /// </summary>
     public class CustomEmoticon : CQCode
     {
         public CustomEmoticon()
+            : base("bface")
         {
         }
 
         public CustomEmoticon(IDictionary<string, string> arguments)
-            : base(arguments)
+            : base("bface", arguments)
         {
         }
 
@@ -24,7 +25,5 @@ namespace HuajiTech.CoolQ.Messaging
             get => GetParameterAsInt32("id");
             set => SetParameter("id", value);
         }
-
-        public override string Type => "bface";
     }
 }

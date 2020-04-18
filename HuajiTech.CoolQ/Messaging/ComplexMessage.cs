@@ -20,7 +20,7 @@ namespace HuajiTech.CoolQ.Messaging
         private readonly List<MessageElement> _elements;
 
         /// <summary>
-        /// 初始化一个 <see cref="ComplexMessage"/> 类的新实例。
+        /// 初始化一个空的 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         public ComplexMessage()
         {
@@ -28,7 +28,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 以指定消息元素初始化一个 <see cref="ComplexMessage"/> 类的新实例。
+        /// 以指定的 <see cref="MessageElement"/> 对象初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         /// <param name="element">消息元素。</param>
         public ComplexMessage(MessageElement element)
@@ -38,9 +38,9 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 以指定消息元素集合初始化一个 <see cref="ComplexMessage"/> 类的新实例。
+        /// 以指定的 <see cref="MessageElement"/> 集合初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
-        /// <param name="elements">消息元素集合。</param>
+        /// <param name="elements"><see cref="MessageElement"/> 集合。</param>
         public ComplexMessage(IEnumerable<MessageElement> elements)
             : this()
         {
@@ -48,9 +48,9 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置指定索引处的消息元素。
+        /// 获取或设置指定索引处的 <see cref="MessageElement"/> 对象。
         /// </summary>
-        /// <param name="index">索引。</param>
+        /// <param name="index">要获取或设置的<see cref="MessageElement"/> 对象从 0 开始的索引。</param>
         public MessageElement this[int index]
         {
             get => _elements[index];
@@ -60,8 +60,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 将字符串解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
-        /// <param name="str">要解析的字符串。</param>
-        /// <returns>解析后的复合消息。</returns>
+        /// <param name="str">要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
+        /// <returns>与字符串等效的 <see cref="ComplexMessage"/> 对象。</returns>
         public static ComplexMessage Parse(string str)
         {
             IEnumerable<MessageElement> GetMessageElements()
@@ -122,11 +122,14 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 使用指定的分隔符串联复合消息集合中的所有消息元素。
+        /// 使用指定的分隔符串联 <see cref="ComplexMessage"/> 集合中的所有成员。
         /// </summary>
-        /// <param name="separator">分隔符。</param>
-        /// <param name="messages">复合消息集合。</param>
-        /// <returns>串联后的副本。</returns>
+        /// <param name="separator">要用作分隔符的 <see cref="MessageElement"/> 对象。</param>
+        /// <param name="messages">一个包含要串联的 <see cref="ComplexMessage"/> 对象的集合。</param>
+        /// <returns>
+        /// 一个包含 <paramref name="messages"/> 中所有成员的 <see cref="ComplexMessage"/> 对象，这些成员以 <paramref name="separator"/> 分隔。
+        /// 如果 <paramref name="messages"/> 没有成员，则该方法返回一个空的 <see cref="ComplexMessage"/> 对象。
+        /// </returns>
         public static ComplexMessage Join(MessageElement separator, IEnumerable<ComplexMessage> messages)
         {
             if (!messages.Any())
@@ -161,20 +164,25 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象使用指定分隔符拼接而成的字符串。
+        /// 使用指定的分隔符将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拼接为字符串。
         /// </summary>
-        /// <param name="separator">分隔符。</param>
+        /// <param name="separator">要用作分隔符的字符串。</param>
         public string GetPlainText(string separator = "")
         {
             return string.Join(separator, this.OfType<PlainText>());
         }
 
         /// <summary>
-        /// 使用指定的分隔符和选项将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象分割为多个 <see cref="PlainText"/> 对象。
+        /// 基于数组中的字符串将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拆分为多个 <see cref="PlainText"/> 对象。
+        /// 可以指定子字符串是否包含空数组元素。
         /// </summary>
-        /// <param name="options">选项。</param>
-        /// <param name="separator">分隔符。</param>
-        /// <returns>分割后的副本。</returns>
+        /// <param name="options">
+        /// 要省略返回的数组中的空数组元素，则为 <see cref="StringSplitOptions.RemoveEmptyEntries"/>；
+        /// 要包含返回的数组中的空数组元素，则为 <see cref="StringSplitOptions.None"/>。
+        /// </param>
+        /// <param name="separator">分隔此 <see cref="ComplexMessage"/> 对象中 <see cref="PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
+        /// <returns>一个 <see cref="ComplexMessage"/> 对象，其元素包含此 <see cref="ComplexMessage"/> 对象中的子 <see cref="PlainText"/> 对象，这些子子 <see cref="PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
+        /// <exception cref="ArgumentException"><paramref name="options"/> 不是 <see cref="StringSplitOptions"/> 值之一。</exception>
         public ComplexMessage SplitPlainText(StringSplitOptions options, params string[] separator)
         {
             IEnumerable<MessageElement> GetMessageElements()
@@ -199,20 +207,20 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 使用指定分隔符将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象分割为多个 <see cref="PlainText"/> 对象。
+        /// 基于数组中的字符串将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拆分为多个 <see cref="PlainText"/> 对象。
         /// </summary>
-        /// <param name="separator">分隔符。</param>
-        /// <returns>分割后的副本。</returns>
+        /// <param name="separator">分隔此 <see cref="ComplexMessage"/> 对象中 <see cref="PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
+        /// <returns>一个 <see cref="ComplexMessage"/> 对象，其元素包含此 <see cref="ComplexMessage"/> 对象中的子 <see cref="PlainText"/> 对象，这些子子 <see cref="PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
         public ComplexMessage SplitPlainText(params string[] separator)
         {
             return SplitPlainText(StringSplitOptions.RemoveEmptyEntries, separator);
         }
 
         /// <summary>
-        /// 将指定消息元素添加到末尾。
+        /// 将 <see cref="MessageElement"/> 对象添加到 <see cref="ComplexMessage"/> 的结尾处。
         /// </summary>
-        /// <param name="item">消息元素。</param>
-        /// <returns>当前复合消息。</returns>
+        /// <param name="item">要添加到 <see cref="ComplexMessage"/> 末尾的对象。</param>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象。</returns>
         public ComplexMessage Add(MessageElement item)
         {
             _elements.Add(item);
@@ -220,10 +228,14 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 将指定消息元素集合添加到末尾。
+        /// 将指定 <see cref="MessageElement"/> 集合添加到 <see cref="ComplexMessage"/> 的末尾。
         /// </summary>
-        /// <param name="collection">消息元素集合。</param>
-        /// <returns>当前复合消息。</returns>
+        /// <param name="collection">
+        /// 应将其元素添加到 <see cref="ComplexMessage"/> 的末尾的集合。
+        /// 集合自身不能为 <c>null</c>。
+        /// </param>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象。</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="collection"/> 为 <c>null</c>。</exception>
         public ComplexMessage Add(IEnumerable<MessageElement> collection)
         {
             _elements.AddRange(collection);
@@ -231,11 +243,15 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 将指定消息元素插入到指定索引处。
+        /// 将 <see cref="MessageElement"/> 插入到 <see cref="ComplexMessage"/> 的指定索引处。
         /// </summary>
-        /// <param name="index">索引。</param>
-        /// <param name="item">消息元素。</param>
-        /// <returns>当前复合消息。</returns>
+        /// <param name="index">应插入 <paramref name="item"/> 的从零开始的索引。</param>
+        /// <param name="item">要插入的 <see cref="MessageElement"/> 对象。</param>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象。</returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// <paramref name="index"/> 小于 0。
+        /// 或 <paramref name="index"/> 大于 <see cref="Count"/>。
+        /// </exception>
         public ComplexMessage Insert(int index, MessageElement item)
         {
             _elements.Insert(index, item);
@@ -243,10 +259,10 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 移除指定消息元素的第一个匹配项。
+        /// 从 <see cref="ComplexMessage"/> 中移除特定 <see cref="MessageElement"/> 的第一个匹配项。
         /// </summary>
-        /// <param name="item">消息元素。</param>
-        /// <returns>当前复合消息。</returns>
+        /// <param name="item">要从 <see cref="ComplexMessage"/> 中删除的对象。</param>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象。</returns>
         public ComplexMessage Remove(MessageElement item)
         {
             _elements.Remove(item);
@@ -254,20 +270,23 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 尝试移除指定消息元素的第一个匹配项。
+        /// 尝试从 <see cref="ComplexMessage"/> 中移除特定 <see cref="MessageElement"/> 的第一个匹配项。
         /// </summary>
-        /// <param name="item">消息元素。</param>
-        /// <returns>是否成功移除 <paramref name="item"/>。</returns>
+        /// <param name="item">要从 <see cref="ComplexMessage"/> 中删除的对象。</param>
+        /// <returns>
+        /// 如果成功移除了 <paramref name="item"/>，则为 <c>true</c>；否则为 <c>false</c>。
+        /// 如果在 <see cref="ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <c>false</c>。
+        /// </returns>
         public bool TryRemove(MessageElement item)
         {
             return _elements.Remove(item);
         }
 
         /// <summary>
-        /// 移除指定消息元素的所有匹配项。
+        /// 从 <see cref="ComplexMessage"/> 中移除特定 <see cref="MessageElement"/> 的所有匹配项。
         /// </summary>
-        /// <param name="item">消息元素。</param>
-        /// <returns>当前复合消息。</returns>
+        /// <param name="item">要从 <see cref="ComplexMessage"/> 中删除的对象。</param>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象。</returns>
         public ComplexMessage RemoveAll(MessageElement item)
         {
             _elements.RemoveAll(element => element == item);
@@ -275,10 +294,10 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 移除指定索引处的消息元素。
+        /// 移除 <see cref="ComplexMessage"/> 的指定索引处的 <see cref="MessageElement"/>。
         /// </summary>
-        /// <param name="index">索引。</param>
-        /// <returns>当前复合消息。</returns>
+        /// <param name="index">要移除的元素的从零开始的索引。</param>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象。</returns>
         public ComplexMessage RemoveAt(int index)
         {
             _elements.RemoveAt(index);
@@ -286,17 +305,21 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 移除一定范围的消息元素。
+        /// 从 <see cref="ComplexMessage"/> 中移除一定范围的 <see cref="MessageElement"/>。
         /// </summary>
-        /// <param name="index">索引。</param>
-        /// <param name="count">数量。</param>
-        /// <returns>当前复合消息。</returns>
+        /// <param name="index">要移除的元素范围的从零开始的起始索引。</param>
+        /// <param name="count">要移除的元素数。</param>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象。</returns>
         public ComplexMessage RemoveRange(int index, int count)
         {
             _elements.RemoveRange(index, count);
             return this;
         }
 
+        /// <summary>
+        /// 将当前 <see cref="ComplexMessage"/> 对象的值转换为它的等效字符串表示形式。
+        /// </summary>
+        /// <returns>当前 <see cref="ComplexMessage"/> 对象的值的字符串表示形式。</returns>
         public override string ToString()
         {
             return string.Join(string.Empty, _elements);

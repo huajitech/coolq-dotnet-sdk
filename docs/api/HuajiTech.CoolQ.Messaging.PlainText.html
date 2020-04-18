@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PlainText 类
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,8 @@
   
   <h1 id="HuajiTech_CoolQ_Messaging_PlainText" data-uid="HuajiTech.CoolQ.Messaging.PlainText" class="text-break">PlainText 类
   </h1>
-  <div class="markdown level0 summary"><p>表示纯文本。</p>
+  <div class="markdown level0 summary"><p>表示纯文本。
+此类不能被继承。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -148,7 +149,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">content</span></td>
-        <td><p>内容。</p>
+        <td><p>要被 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a> 包装的字符串。</p>
 </td>
       </tr>
     </tbody>
@@ -187,7 +188,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_PlainText_Escape_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Escape*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_PlainText_Escape_System_String_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Escape(System.String)">Escape(String)</h4>
-  <div class="markdown level1 summary"><p>对字符串进行转义。</p>
+  <div class="markdown level1 summary"><p>将指定的字符串转换为可以让酷Q按原义解释字符的语法。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -207,7 +208,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">str</span></td>
-        <td><p>要转义的字符串。</p>
+        <td><p>要转换的字符串。</p>
 </td>
       </tr>
     </tbody>
@@ -223,7 +224,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>转义后的字符串。</p>
+        <td><p>指定字符串的已转换值。</p>
 </td>
       </tr>
     </tbody>
@@ -232,7 +233,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_PlainText_ToString_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.ToString*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_PlainText_ToString" data-uid="HuajiTech.CoolQ.Messaging.PlainText.ToString">ToString()</h4>
-  <div class="markdown level1 summary"><p>获取转义后的内容。</p>
+  <div class="markdown level1 summary"><p>返回经过 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Escape_System_String_">Escape(String)</a> 后的 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Content">Content</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -250,7 +251,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>转义后的内容。</p>
+        <td><p>经过 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Escape_System_String_">Escape(String)</a> 后的 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_Content">Content</a>。</p>
 </td>
       </tr>
     </tbody>
@@ -261,7 +262,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_PlainText_Unescape_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Unescape*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_PlainText_Unescape_System_String_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Unescape(System.String)">Unescape(String)</h4>
-  <div class="markdown level1 summary"><p>对字符串进行反转义。</p>
+  <div class="markdown level1 summary"><p>将字符串中的转义字符转换为具有特殊意义的酷Q字符。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -281,7 +282,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">str</span></td>
-        <td><p>要反转义的字符串。</p>
+        <td><p>要转换的字符串。</p>
 </td>
       </tr>
     </tbody>
@@ -297,7 +298,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>反转义后的字符串。</p>
+        <td><p>指定字符串的已转换值。</p>
 </td>
       </tr>
     </tbody>
@@ -308,8 +309,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Implicit*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_HuajiTech_CoolQ_Messaging_PlainText__System_String" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Implicit(HuajiTech.CoolQ.Messaging.PlainText)~System.String">Implicit(PlainText to String)</h4>
-  <div class="markdown level1 summary"><p>将纯文本的原始内容隐式转换为字符串。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -328,8 +328,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a></td>
         <td><span class="parametername">text</span></td>
-        <td><p>要转换的纯文本。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>

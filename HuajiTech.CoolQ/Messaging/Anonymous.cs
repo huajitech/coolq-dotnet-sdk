@@ -3,16 +3,17 @@ using System.Collections.Generic;
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 表示匿名消息标识。
+    /// 表示匿名消息的 <see cref="CQCode"/>。
     /// </summary>
     public class Anonymous : CQCode
     {
         public Anonymous()
+            : base("anonymous")
         {
         }
 
         public Anonymous(IDictionary<string, string> arguments)
-            : base(arguments)
+            : base("anonymous", arguments)
         {
         }
 
@@ -24,7 +25,5 @@ namespace HuajiTech.CoolQ.Messaging
             get => GetParameterAsBoolean("ignore");
             set => SetParameter("ignore", value);
         }
-
-        public override string Type => "anonymous";
     }
 }

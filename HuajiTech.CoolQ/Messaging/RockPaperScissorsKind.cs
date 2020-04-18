@@ -1,9 +1,9 @@
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 指定猜拳的结果。
+    /// 指定猜拳的类别。
     /// </summary>
-    public enum RockPaperScissorsResult
+    public enum RockPaperScissorsKind
     {
         None,
 

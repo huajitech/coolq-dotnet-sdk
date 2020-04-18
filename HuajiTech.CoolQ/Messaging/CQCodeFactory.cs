@@ -11,14 +11,16 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 以指定的类型和参数创建一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
-        /// <param name="type">类型。</param>
-        /// <param name="arguments">参数。</param>
-        /// <returns><see cref="CQCode"/> 类的新实例。</returns>
+        /// <param name="type">要创建的 <see cref="CQCode"/> 对象的类型。</param>
+        /// <param name="arguments">要创建的 <see cref="CQCode"/> 对象的参数。</param>
+        /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="arguments"/> 为 <c>null</c>。</exception>
         public static CQCode Create(string type, IDictionary<string, string> arguments)
         {
-            if (string.IsNullOrEmpty(type))
+            if (string.IsNullOrWhiteSpace(type))
             {
-                throw new ArgumentException(Resources.FieldCannotBeEmpty, nameof(type));
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(type));
             }
 
             if (arguments is null)
@@ -52,10 +54,11 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 以指定类型创建一个 <see cref="CQCode"/> 类的新实例。
+        /// 以指定的类型创建一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
-        /// <param name="type">类型。</param>
-        /// <returns><see cref="CQCode"/> 类的新实例。</returns>
+        /// <param name="type">要创建的 <see cref="CQCode"/> 对象的类型。</param>
+        /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         public static CQCode Create(string type)
         {
             return Create(type, new Dictionary<string, string>());
