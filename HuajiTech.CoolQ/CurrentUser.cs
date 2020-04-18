@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 提供与当前用户交互的方法、事件和属性的静态类。
+    /// 表示当前用户，并提供与当前用户交互的静态方法、事件和属性。
     /// </summary>
-    public static partial class CurrentUser
+    public partial class CurrentUser : User
     {
-        private static User _currentUser;
+        internal CurrentUser()
+            : base(NativeMethods.GetCurrentUserNumber(Bot.AuthCode))
+        {
+        }
 
         /// <summary>
         /// 获取当前用户的昵称。
         /// </summary>
-        public static string Nickname =>
+        public override string Nickname =>
             NativeMethods.GetCurrentUserNickname(Bot.AuthCode);
 
         /// <summary>
@@ -44,34 +47,6 @@ namespace HuajiTech.CoolQ
         /// 在收到消息时引发。
         /// </summary>
         public static event EventHandler<MessageReceivedEventArgs> MessageReceived;
-
-        /// <summary>
-        /// 将当前用户作为指定群的成员。
-        /// </summary>
-        /// <param name="group">指定的群。</param>
-        /// <returns>指定群中表示当前用户的成员。</returns>
-        public static Member AsMemberOf(Group group)
-        {
-            return AsUser().AsMemberOf(group);
-        }
-
-        /// <summary>
-        /// 将当前用户作为 <see cref="User"/> 类的实例。
-        /// </summary>
-        /// <returns>一个 <see cref="User"/> 类的实例，表示当前用户。</returns>
-        public static User AsUser()
-        {
-            _currentUser ??= new User(NativeMethods.GetCurrentUserNumber(Bot.AuthCode));
-            return _currentUser;
-        }
-
-        /// <summary>
-        /// 获取目标为当前用户的 <see cref="AdvancedMessaging.At"/> 对象。
-        /// </summary>
-        public static At At()
-        {
-            return AsUser().At();
-        }
 
         /// <summary>
         /// 获取当前用户的所有联系人。

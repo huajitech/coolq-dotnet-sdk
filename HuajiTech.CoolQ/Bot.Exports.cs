@@ -1,7 +1,9 @@
 using HuajiTech.UnmanagedExports;
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 
 namespace HuajiTech.CoolQ
 {
@@ -22,9 +24,9 @@ namespace HuajiTech.CoolQ
             {
                 if (e.ExceptionObject is Exception ex)
                 {
-                    var frames = new System.Diagnostics.StackTrace(ex)
+                    var frames = new StackTrace(ex)
                         .GetFrames()
-                        .Where(frame => frame.GetMethod().Module.Assembly == typeof(Bot).Assembly);
+                        .Where(frame => frame.GetMethod().Module.Assembly == Assembly.GetExecutingAssembly());
 
                     if (frames.Any())
                     {

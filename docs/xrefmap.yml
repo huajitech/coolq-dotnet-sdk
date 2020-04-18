@@ -2753,6 +2753,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Bot.CanSendRecord
   nameWithType: Bot.CanSendRecord
+- uid: HuajiTech.CoolQ.Bot.CurrentUser
+  name: CurrentUser
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser
+  commentId: P:HuajiTech.CoolQ.Bot.CurrentUser
+  fullName: HuajiTech.CoolQ.Bot.CurrentUser
+  nameWithType: Bot.CurrentUser
+- uid: HuajiTech.CoolQ.Bot.CurrentUser*
+  name: CurrentUser
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser_
+  commentId: Overload:HuajiTech.CoolQ.Bot.CurrentUser
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Bot.CurrentUser
+  nameWithType: Bot.CurrentUser
 - uid: HuajiTech.CoolQ.Bot.DataDirectory
   name: DataDirectory
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_DataDirectory
@@ -3311,45 +3324,6 @@ references:
   commentId: E:HuajiTech.CoolQ.CurrentUser.AnonymousMessageReceived
   fullName: HuajiTech.CoolQ.CurrentUser.AnonymousMessageReceived
   nameWithType: CurrentUser.AnonymousMessageReceived
-- uid: HuajiTech.CoolQ.CurrentUser.AsMemberOf(HuajiTech.CoolQ.Group)
-  name: AsMemberOf(Group)
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_AsMemberOf_HuajiTech_CoolQ_Group_
-  commentId: M:HuajiTech.CoolQ.CurrentUser.AsMemberOf(HuajiTech.CoolQ.Group)
-  fullName: HuajiTech.CoolQ.CurrentUser.AsMemberOf(HuajiTech.CoolQ.Group)
-  nameWithType: CurrentUser.AsMemberOf(Group)
-- uid: HuajiTech.CoolQ.CurrentUser.AsMemberOf*
-  name: AsMemberOf
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_AsMemberOf_
-  commentId: Overload:HuajiTech.CoolQ.CurrentUser.AsMemberOf
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.CurrentUser.AsMemberOf
-  nameWithType: CurrentUser.AsMemberOf
-- uid: HuajiTech.CoolQ.CurrentUser.AsUser
-  name: AsUser()
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_AsUser
-  commentId: M:HuajiTech.CoolQ.CurrentUser.AsUser
-  fullName: HuajiTech.CoolQ.CurrentUser.AsUser()
-  nameWithType: CurrentUser.AsUser()
-- uid: HuajiTech.CoolQ.CurrentUser.AsUser*
-  name: AsUser
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_AsUser_
-  commentId: Overload:HuajiTech.CoolQ.CurrentUser.AsUser
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.CurrentUser.AsUser
-  nameWithType: CurrentUser.AsUser
-- uid: HuajiTech.CoolQ.CurrentUser.At
-  name: At()
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_At
-  commentId: M:HuajiTech.CoolQ.CurrentUser.At
-  fullName: HuajiTech.CoolQ.CurrentUser.At()
-  nameWithType: CurrentUser.At()
-- uid: HuajiTech.CoolQ.CurrentUser.At*
-  name: At
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_At_
-  commentId: Overload:HuajiTech.CoolQ.CurrentUser.At
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.CurrentUser.At
-  nameWithType: CurrentUser.At
 - uid: HuajiTech.CoolQ.CurrentUser.ContactAdded
   name: ContactAdded
   href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_ContactAdded

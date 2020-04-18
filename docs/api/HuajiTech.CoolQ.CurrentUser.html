@@ -73,30 +73,66 @@
   
   <h1 id="HuajiTech_CoolQ_CurrentUser" data-uid="HuajiTech.CoolQ.CurrentUser" class="text-break">CurrentUser 类
   </h1>
-  <div class="markdown level0 summary"><p>提供与当前用户交互的方法、事件和属性的静态类。</p>
+  <div class="markdown level0 summary"><p>表示当前用户，并提供与当前用户交互的静态方法、事件和属性。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CurrentUser</span></div>
+    <div class="level1"><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></div>
+    <div class="level2"><a class="xref" href="HuajiTech.CoolQ.User.html">User</a></div>
+    <div class="level3"><span class="xref">CurrentUser</span></div>
+  </div>
+  <div classs="implements">
+    <h5>&#23454;&#29616;</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_HasInfo">User.HasInfo</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_DisplayName">User.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_GiveThumbsUp_System_Int32_">User.GiveThumbsUp(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_GiveThumbsUpAsync_System_Int32_">User.GiveThumbsUpAsync(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_RequestInfo_System_Boolean_">User.RequestInfo(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_RequestInfoAsync_System_Boolean_">User.RequestInfoAsync(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_Send_System_String_">User.Send(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_Number">Chat.Number</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_Equals_System_Object_">Chat.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_Equals_HuajiTech_CoolQ_Chat_">Chat.Equals(Chat)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_GetHashCode">Chat.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_SendAsync_System_String_">Chat.SendAsync(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_ToString">Chat.ToString()</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -109,7 +145,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
   <h5 id="HuajiTech_CoolQ_CurrentUser_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class CurrentUser</code></pre>
+    <pre><code class="lang-csharp hljs">public class CurrentUser : User, IEquatable&lt;Chat&gt;</code></pre>
   </div>
   <h3 id="properties">&#23646;&#24615;
   </h3>
@@ -122,7 +158,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Nickname { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override string Nickname { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,106 +175,10 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">&#37325;&#20889;</h5>
+  <div><a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_Nickname">User.Nickname</a></div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
-  
-  
-  <a id="HuajiTech_CoolQ_CurrentUser_AsMemberOf_" data-uid="HuajiTech.CoolQ.CurrentUser.AsMemberOf*"></a>
-  <h4 id="HuajiTech_CoolQ_CurrentUser_AsMemberOf_HuajiTech_CoolQ_Group_" data-uid="HuajiTech.CoolQ.CurrentUser.AsMemberOf(HuajiTech.CoolQ.Group)">AsMemberOf(Group)</h4>
-  <div class="markdown level1 summary"><p>将当前用户作为指定群的成员。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Member AsMemberOf(Group group)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Group.html">Group</a></td>
-        <td><span class="parametername">group</span></td>
-        <td><p>指定的群。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a></td>
-        <td><p>指定群中表示当前用户的成员。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_CurrentUser_AsUser_" data-uid="HuajiTech.CoolQ.CurrentUser.AsUser*"></a>
-  <h4 id="HuajiTech_CoolQ_CurrentUser_AsUser" data-uid="HuajiTech.CoolQ.CurrentUser.AsUser">AsUser()</h4>
-  <div class="markdown level1 summary"><p>将当前用户作为 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 类的实例。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User AsUser()</code></pre>
-  </div>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.User.html">User</a></td>
-        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 类的实例，表示当前用户。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_CurrentUser_At_" data-uid="HuajiTech.CoolQ.CurrentUser.At*"></a>
-  <h4 id="HuajiTech_CoolQ_CurrentUser_At" data-uid="HuajiTech.CoolQ.CurrentUser.At">At()</h4>
-  <div class="markdown level1 summary"><p>获取目标为当前用户的 <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.At.html">At</a> 对象。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static At At()</code></pre>
-  </div>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.At.html">At</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="HuajiTech_CoolQ_CurrentUser_GetContacts_" data-uid="HuajiTech.CoolQ.CurrentUser.GetContacts*"></a>
@@ -610,6 +550,32 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_AsMemberOf_HuajiTech_CoolQ_User_HuajiTech_CoolQ_Group_">Extensions.AsMemberOf(User, Group)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_AsUser_HuajiTech_CoolQ_User_">Extensions.AsUser(User)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.Extensions.html#HuajiTech_CoolQ_AdvancedMessaging_Extensions_At_HuajiTech_CoolQ_User_">Extensions.At(User)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.Extensions.html#HuajiTech_CoolQ_AdvancedMessaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_">Extensions.Send(Chat, ComplexMessage)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.Extensions.html#HuajiTech_CoolQ_AdvancedMessaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_AdvancedMessaging_ComplexMessage_">Extensions.SendAsync(Chat, ComplexMessage)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.Extensions.html#HuajiTech_CoolQ_AdvancedMessaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_">Extensions.Send(Chat, MessageElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.AdvancedMessaging.Extensions.html#HuajiTech_CoolQ_AdvancedMessaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_AdvancedMessaging_MessageElement_">Extensions.SendAsync(Chat, MessageElement)</a>
+  </div>
 </article>
           </div>
           

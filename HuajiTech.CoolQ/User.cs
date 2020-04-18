@@ -9,7 +9,6 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public class User : Chat
     {
-        private readonly string _nickname;
         private UserInfo _info;
 
         /// <summary>

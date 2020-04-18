@@ -19,10 +19,6 @@ namespace HuajiTech.CoolQ
         internal const string ApiVersion = "9";
         private static readonly ConstructorInfo AppConstructor;
 
-        private static bool? _canSendImage;
-        private static bool? _canSendRecord;
-        private static DirectoryInfo _dataDirectory;
-
         static Bot()
         {
             AppDomain.CurrentDomain.AssemblyResolve +=
@@ -35,14 +31,19 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取一个值，指示是否可以发送图片。
         /// </summary>
-        public static bool CanSendImage =>
-            _canSendImage ??= NativeMethods.GetCanSendImage(AuthCode);
+        public static bool CanSendImage { get; } =
+            NativeMethods.GetCanSendImage(AuthCode);
 
         /// <summary>
         /// 获取一个值，指示是否可以发送录音。
         /// </summary>
-        public static bool CanSendRecord =>
-            _canSendRecord ??= NativeMethods.GetCanSendRecord(AuthCode);
+        public static bool CanSendRecord { get; } =
+            NativeMethods.GetCanSendRecord(AuthCode);
+
+        /// <summary>
+        /// 获取当前用户。
+        /// </summary>
+        public static CurrentUser CurrentUser { get; } = new CurrentUser();
 
         internal static object App { get; private set; }
 
@@ -71,8 +72,8 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取应用的数据目录。
         /// </summary>
-        public static DirectoryInfo DataDirectory =>
-            _dataDirectory ??= new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode));
+        public static DirectoryInfo DataDirectory { get; } =
+            new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode));
 
         /// <summary>
         /// 记录一条日志。
