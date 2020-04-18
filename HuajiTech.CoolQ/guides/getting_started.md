@@ -60,5 +60,5 @@
 
 ### CQ码
 
-- @"HuajiTech.CoolQ.AdvancedMessaging.Record"
-- @"HuajiTech.CoolQ.AdvancedMessaging.Image"
+- @"HuajiTech.CoolQ.Messaging.Record"
+- @"HuajiTech.CoolQ.Messaging.Image"

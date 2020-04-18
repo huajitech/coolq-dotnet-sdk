@@ -11,15 +11,15 @@ if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 null）
 if (e.Source is Contact) { } // 好友消息（Contact.Alias 为 null）。
 ```
 
-## 使用 @"HuajiTech.CoolQ.AdvancedMessaging.ComplexMessage"（复合消息）
+## 使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage"（复合消息）
 
 使用复合消息需要对 LINQ 有一定了解。
 
 ```csharp
-using HuajiTech.CoolQ.AdvancedMessaging;
+using HuajiTech.CoolQ.Messaging;
 using System.Linq;
 ```
-通过 @"HuajiTech.CoolQ.AdvancedMessaging.Extensions.Parse(HuajiTech.CoolQ.Message)" 扩展方法解析消息。
+通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)" 扩展方法解析消息。
 
 ```csharp
 var message = e.Message.Parse();

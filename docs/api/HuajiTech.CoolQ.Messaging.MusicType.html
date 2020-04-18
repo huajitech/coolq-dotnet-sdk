@@ -5,9 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#22914;&#20309;&#65306;&#22788;&#29702;&#28040;&#24687; </title>
+    <title>MusicType 枚举
+   </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#22914;&#20309;&#65306;&#22788;&#29702;&#28040;&#24687; ">
+    <meta name="title" content="MusicType 枚举
+   ">
     <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,56 +68,46 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="如何处理消息">如何：处理消息</h1>
-
-<p><code>e</code> 为 <a class="xref" href="../api/HuajiTech.CoolQ.MessageReceivedEventArgs.html">MessageReceivedEventArgs</a> 类的实例。</p>
-<h2 id="判断消息来源类型">判断消息来源类型</h2>
-<pre><code class="lang-csharp">if (e.Source is Group) { }   // 群消息。
-if (e.Source is User) { }    // 私聊消息（包括临时会话和好友消息）。
-if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 null）。
-if (e.Source is Contact) { } // 好友消息（Contact.Alias 为 null）。
-</code></pre><h2 id="使用-huajitechcoolqmessagingcomplexmessage复合消息">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>（复合消息）</h2>
-<p>使用复合消息需要对 LINQ 有一定了解。</p>
-<pre><code class="lang-csharp">using HuajiTech.CoolQ.Messaging;
-using System.Linq;
-</code></pre><p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_CoolQ_Message_">Parse(Message)</a> 扩展方法解析消息。</p>
-<pre><code class="lang-csharp">var message = e.Message.Parse();
-</code></pre><h3 id="示例">示例</h3>
-<ul>
-<li><p>获取消息中的所有纯文本拼接成的字符串。</p>
-<pre><code class="lang-csharp">message.GetPlainText();
-</code></pre></li>
-<li><p>获取消息中指定类型的元素。</p>
-<pre><code class="lang-csharp">var cqCodes = message.OfType&lt;CQCode&gt;();
-var images = message.OfType&lt;Image&gt;();
-var emojis = message.OfType&lt;Emoji&gt;();
-</code></pre></li>
-<li><p>如果消息包含对机器人的 At，发送一张图片和一个表情。</p>
-<pre><code class="lang-csharp">if (message.Contains(CurrentUser.AsUser().At()))
-{
-    var image = new Image { FileName = &quot;SmallYellowPicture.png&quot; };
-    e.Source.Send(e.Sender.At() + &quot; &quot; + image);
-    e.Source.Send(new Emoticon { Id = 178 });
-}
-</code></pre></li>
-<li><p>解析并请求录音文件。</p>
-<pre><code class="lang-csharp">if (message[0] is Record record)
-{
-    var recordFile = record.RequestFile();
-    // TODO: 对录音文件进行操作。
-}
-</code></pre></li>
-</ul>
-<h2 id="使用正则消息">使用正则消息</h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_Message_">RegexDecode(Message)</a> 扩展方法解码正则消息。</p>
-<pre><code class="lang-csharp">var args = e.Message.RegexDecode();
-</code></pre><h3 id="示例-1">示例</h3>
-<ul>
-<li><p>获取 <code>Name</code> 键的值并发送问候。</p>
-<pre><code class="lang-csharp">e.Source.Send(&quot;你好，&quot; + args[&quot;Name&quot;]);
-</code></pre></li>
-</ul>
+            <article class="content wrap" id="_content" data-uid="HuajiTech.CoolQ.Messaging.MusicType">
+  
+  
+  <h1 id="HuajiTech_CoolQ_Messaging_MusicType" data-uid="HuajiTech.CoolQ.Messaging.MusicType" class="text-break">MusicType 枚举
+  </h1>
+  <div class="markdown level0 summary"><p>指定音乐类型。</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.Messaging.html">HuajiTech.CoolQ.Messaging</a></h6>
+  <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
+  <h5 id="HuajiTech_CoolQ_Messaging_MusicType_syntax">&#35821;&#27861;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum MusicType</code></pre>
+  </div>
+  <h3 id="fields">&#23383;&#27573;
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="HuajiTech_CoolQ_Messaging_MusicType_Netease">Netease</td>
+        <td><p>网易云音乐。</p>
+</td>
+      </tr>
+      <tr>
+        <td id="HuajiTech_CoolQ_Messaging_MusicType_None">None</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="HuajiTech_CoolQ_Messaging_MusicType_QQ">QQ</td>
+        <td><p>QQ音乐。</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
 </article>
           </div>
           

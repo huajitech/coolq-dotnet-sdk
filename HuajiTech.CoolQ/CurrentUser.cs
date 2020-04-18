@@ -1,4 +1,3 @@
-using HuajiTech.CoolQ.AdvancedMessaging;
 using HuajiTech.CoolQ.DataExchange;
 using System;
 using System.Collections.Generic;

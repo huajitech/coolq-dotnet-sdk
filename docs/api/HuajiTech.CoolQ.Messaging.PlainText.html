@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Chat 类
+    <title>PlainText 类
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Chat 类
+    <meta name="title" content="PlainText 类
    ">
     <meta name="generator" content="docfx 2.51.0.0">
     
@@ -68,28 +68,28 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="HuajiTech.CoolQ.Chat">
+            <article class="content wrap" id="_content" data-uid="HuajiTech.CoolQ.Messaging.PlainText">
   
   
-  <h1 id="HuajiTech_CoolQ_Chat" data-uid="HuajiTech.CoolQ.Chat" class="text-break">Chat 类
+  <h1 id="HuajiTech_CoolQ_Messaging_PlainText" data-uid="HuajiTech.CoolQ.Messaging.PlainText" class="text-break">PlainText 类
   </h1>
-  <div class="markdown level0 summary"><p>表示聊天。
-此类为抽象类。</p>
+  <div class="markdown level0 summary"><p>表示纯文本。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Chat</span></div>
-      <div class="level2"><a class="xref" href="HuajiTech.CoolQ.Group.html">Group</a></div>
-      <div class="level2"><a class="xref" href="HuajiTech.CoolQ.User.html">User</a></div>
-  </div>
-  <div classs="implements">
-    <h5>&#23454;&#29616;</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a>&gt;</div>
+    <div class="level1"><a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a></div>
+    <div class="level2"><span class="xref">PlainText</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_FromString_System_String_">MessageElement.FromString(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_Add_HuajiTech_CoolQ_Messaging_MessageElement_">MessageElement.Add(MessageElement)</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
@@ -103,24 +103,55 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.html">HuajiTech.CoolQ</a></h6>
+  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.Messaging.html">HuajiTech.CoolQ.Messaging</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
-  <h5 id="HuajiTech_CoolQ_Chat_syntax">&#35821;&#27861;</h5>
+  <h5 id="HuajiTech_CoolQ_Messaging_PlainText_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Chat : IEquatable&lt;Chat&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class PlainText : MessageElement</code></pre>
   </div>
-  <h3 id="properties">&#23646;&#24615;
+  <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
   
   
-  <a id="HuajiTech_CoolQ_Chat_DisplayName_" data-uid="HuajiTech.CoolQ.Chat.DisplayName*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_DisplayName" data-uid="HuajiTech.CoolQ.Chat.DisplayName">DisplayName</h4>
-  <div class="markdown level1 summary"><p>获取显示名称。</p>
+  <a id="HuajiTech_CoolQ_Messaging_PlainText__ctor_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.#ctor*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText__ctor_System_String_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.#ctor(System.String)">PlainText(String)</h4>
+  <div class="markdown level1 summary"><p>以指定内容初始化一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string DisplayName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public PlainText(string content)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">content</span></td>
+        <td><p>内容。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">&#23646;&#24615;
+  </h3>
+  
+  
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_Content_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Content*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_Content" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Content">Content</h4>
+  <div class="markdown level1 summary"><p>获取内容。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Content { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,43 +168,17 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="HuajiTech_CoolQ_Chat_Number_" data-uid="HuajiTech.CoolQ.Chat.Number*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_Number" data-uid="HuajiTech.CoolQ.Chat.Number">Number</h4>
-  <div class="markdown level1 summary"><p>获取号码。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long Number { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">&#26041;&#27861;
   </h3>
   
   
-  <a id="HuajiTech_CoolQ_Chat_Equals_" data-uid="HuajiTech.CoolQ.Chat.Equals*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_Equals_HuajiTech_CoolQ_Chat_" data-uid="HuajiTech.CoolQ.Chat.Equals(HuajiTech.CoolQ.Chat)">Equals(Chat)</h4>
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_Equals_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_Equals_HuajiTech_CoolQ_Messaging_PlainText_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Equals(HuajiTech.CoolQ.Messaging.PlainText)">Equals(PlainText)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(Chat other)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(PlainText text)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,8 +191,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
-        <td><span class="parametername">other</span></td>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a></td>
+        <td><span class="parametername">text</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -209,8 +214,8 @@
   </table>
   
   
-  <a id="HuajiTech_CoolQ_Chat_Equals_" data-uid="HuajiTech.CoolQ.Chat.Equals*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_Equals_System_Object_" data-uid="HuajiTech.CoolQ.Chat.Equals(System.Object)">Equals(Object)</h4>
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_Equals_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_Equals_System_Object_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Equals(System.Object)">Equals(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -253,8 +258,53 @@
   <div><span class="xref">System.Object.Equals(System.Object)</span></div>
   
   
-  <a id="HuajiTech_CoolQ_Chat_GetHashCode_" data-uid="HuajiTech.CoolQ.Chat.GetHashCode*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_GetHashCode" data-uid="HuajiTech.CoolQ.Chat.GetHashCode">GetHashCode()</h4>
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_Escape_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Escape*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_Escape_System_String_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Escape(System.String)">Escape(String)</h4>
+  <div class="markdown level1 summary"><p>对字符串进行转义。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Escape(string str)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>要转义的字符串。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>转义后的字符串。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_GetHashCode_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.GetHashCode*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_GetHashCode" data-uid="HuajiTech.CoolQ.Messaging.PlainText.GetHashCode">GetHashCode()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -280,98 +330,8 @@
   <div><span class="xref">System.Object.GetHashCode()</span></div>
   
   
-  <a id="HuajiTech_CoolQ_Chat_Send_" data-uid="HuajiTech.CoolQ.Chat.Send*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_Send_System_String_" data-uid="HuajiTech.CoolQ.Chat.Send(System.String)">Send(String)</h4>
-  <div class="markdown level1 summary"><p>向当前聊天发送消息。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Message Send(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>要发送的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
-        <td><p>发送的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_Chat_SendAsync_" data-uid="HuajiTech.CoolQ.Chat.SendAsync*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_SendAsync_System_String_" data-uid="HuajiTech.CoolQ.Chat.SendAsync(System.String)">SendAsync(String)</h4>
-  <div class="markdown level1 summary"><p>以异步操作向当前聊天发送消息。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;Message&gt; SendAsync(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>要发送的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>&gt;</td>
-        <td><p>发送的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_Chat_ToString_" data-uid="HuajiTech.CoolQ.Chat.ToString*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_ToString" data-uid="HuajiTech.CoolQ.Chat.ToString">ToString()</h4>
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_ToString_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.ToString*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_ToString" data-uid="HuajiTech.CoolQ.Messaging.PlainText.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -395,17 +355,62 @@
   </table>
   <h5 class="overrides">&#37325;&#20889;</h5>
   <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_Unescape_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Unescape*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_Unescape_System_String_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.Unescape(System.String)">Unescape(String)</h4>
+  <div class="markdown level1 summary"><p>对字符串进行反转义。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Unescape(string str)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>要反转义的字符串。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>反转义后的字符串。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="operators">&#36816;&#31639;&#31526;
   </h3>
   
   
-  <a id="HuajiTech_CoolQ_Chat_op_Equality_" data-uid="HuajiTech.CoolQ.Chat.op_Equality*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_op_Equality_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Chat_" data-uid="HuajiTech.CoolQ.Chat.op_Equality(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Chat)">Equality(Chat, Chat)</h4>
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_op_Equality_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Equality*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_op_Equality_HuajiTech_CoolQ_Messaging_PlainText_HuajiTech_CoolQ_Messaging_PlainText_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Equality(HuajiTech.CoolQ.Messaging.PlainText,HuajiTech.CoolQ.Messaging.PlainText)">Equality(PlainText, PlainText)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(Chat left, Chat right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool operator ==(PlainText left, PlainText right)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -418,12 +423,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a></td>
         <td><span class="parametername">left</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a></td>
         <td><span class="parametername">right</span></td>
         <td></td>
       </tr>
@@ -446,13 +451,13 @@
   </table>
   
   
-  <a id="HuajiTech_CoolQ_Chat_op_Inequality_" data-uid="HuajiTech.CoolQ.Chat.op_Inequality*"></a>
-  <h4 id="HuajiTech_CoolQ_Chat_op_Inequality_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Chat_" data-uid="HuajiTech.CoolQ.Chat.op_Inequality(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Chat)">Inequality(Chat, Chat)</h4>
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Implicit*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_HuajiTech_CoolQ_Messaging_PlainText__System_String" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Implicit(HuajiTech.CoolQ.Messaging.PlainText)~System.String">Implicit(PlainText to String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(Chat left, Chat right)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator string (PlainText text)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -465,12 +470,54 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Messaging_PlainText_op_Inequality_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Inequality*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_PlainText_op_Inequality_HuajiTech_CoolQ_Messaging_PlainText_HuajiTech_CoolQ_Messaging_PlainText_" data-uid="HuajiTech.CoolQ.Messaging.PlainText.op_Inequality(HuajiTech.CoolQ.Messaging.PlainText,HuajiTech.CoolQ.Messaging.PlainText)">Inequality(PlainText, PlainText)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(PlainText left, PlainText right)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a></td>
         <td><span class="parametername">left</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a></td>
         <td><span class="parametername">right</span></td>
         <td></td>
       </tr>
@@ -491,23 +538,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">&#23454;&#29616;</h3>
-  <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
-  </div>
-  <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
-  <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_">Extensions.Send(Chat, ComplexMessage)</a>
-  </div>
-  <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_">Extensions.SendAsync(Chat, ComplexMessage)</a>
-  </div>
-  <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_">Extensions.Send(Chat, MessageElement)</a>
-  </div>
-  <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_">Extensions.SendAsync(Chat, MessageElement)</a>
-  </div>
 </article>
           </div>
           
