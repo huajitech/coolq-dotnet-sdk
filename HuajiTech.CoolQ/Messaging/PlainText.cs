@@ -51,5 +51,14 @@ namespace HuajiTech.CoolQ.Messaging
         {
             return Escape(Content);
         }
+
+        /// <summary>
+        /// 将纯文本的原始内容隐式转换为字符串。
+        /// </summary>
+        /// <param name="text">要转换的纯文本。</param>
+        public static implicit operator string(PlainText text)
+        {
+            return text?.Content;
+        }
     }
 }
