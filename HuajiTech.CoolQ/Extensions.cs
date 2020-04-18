@@ -62,7 +62,7 @@ namespace HuajiTech.CoolQ
             if (returnValue < 0)
             {
                 throw new CoolQException(string.Format(
-                    System.Globalization.CultureInfo.InvariantCulture,
+                    System.Globalization.CultureInfo.CurrentCulture,
                     Resources.UnexpectedReturnValue,
                     returnValue));
             }
