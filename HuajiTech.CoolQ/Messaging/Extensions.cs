@@ -22,21 +22,25 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 将消息解析为复合消息。
+        /// 将 <see cref="Message"/> 解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
-        /// <param name="message">要解析的消息。</param>
-        /// <returns>解析后的复合消息。</returns>
+        /// <param name="message">要解析为 <see cref="ComplexMessage"/> 对象的 <see cref="Message"/> 对象。</param>
+        /// <returns>与<see cref="Message"/> 对象等效的 <see cref="ComplexMessage"/> 对象。</returns>
         public static ComplexMessage Parse(this Message message)
         {
             return ComplexMessage.Parse(message?.Content);
         }
 
         /// <summary>
-        /// 发送复合消息。
+        /// 向指定聊天发送 <see cref="ComplexMessage"/>。
         /// </summary>
         /// <param name="chat">目标聊天。</param>
-        /// <param name="message">要发送的消息。</param>
-        /// <returns>发送的消息。</returns>
+        /// <param name="message">要发送的 <see cref="ComplexMessage"/> 对象。</param>
+        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
         public static Message Send(this Chat chat, ComplexMessage message)
         {
             if (chat is null)
@@ -53,22 +57,30 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 以异步操作发送复合消息。
+        /// 以异步操作向指定聊天发送 <see cref="ComplexMessage"/>。
         /// </summary>
         /// <param name="chat">目标聊天。</param>
-        /// <param name="message">要发送的消息。</param>
-        /// <returns>发送的消息。</returns>
+        /// <param name="message">要发送的 <see cref="ComplexMessage"/> 对象。</param>
+        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
         public static Task<Message> SendAsync(this Chat chat, ComplexMessage message)
         {
             return Task.Run(() => Send(chat, message));
         }
 
         /// <summary>
-        /// 发送消息元素。
+        /// 向指定聊天发送 <see cref="MessageElement"/>。
         /// </summary>
         /// <param name="chat">目标聊天。</param>
-        /// <param name="element">要发送的消息。</param>
-        /// <returns>发送的消息。</returns>
+        /// <param name="element">要发送的 <see cref="MessageElement"/> 对象。</param>
+        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
         public static Message Send(this Chat chat, MessageElement element)
         {
             if (chat is null)
@@ -85,11 +97,15 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 以异步操作发送消息元素。
+        /// 以异步操作向指定聊天发送 <see cref="MessageElement"/>。
         /// </summary>
         /// <param name="chat">目标聊天。</param>
-        /// <param name="element">要发送的消息。</param>
-        /// <returns>发送的消息。</returns>
+        /// <param name="element">要发送的 <see cref="MessageElement"/> 对象。</param>
+        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
         public static Task<Message> SendAsync(this Chat chat, MessageElement element)
         {
             return Task.Run(() => Send(chat, element));
