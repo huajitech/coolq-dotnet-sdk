@@ -3760,6 +3760,15 @@ references:
   fullName.vb: HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String())
   nameWithType: ComplexMessage.SplitPlainText(String[])
   nameWithType.vb: ComplexMessage.SplitPlainText(String())
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.StringSplitOptions,System.String[])
+  name: SplitPlainText(StringSplitOptions, String[])
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_System_StringSplitOptions_System_String___
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.StringSplitOptions,System.String[])
+  name.vb: SplitPlainText(StringSplitOptions, String())
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.StringSplitOptions, System.String[])
+  fullName.vb: HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.StringSplitOptions, System.String())
+  nameWithType: ComplexMessage.SplitPlainText(StringSplitOptions, String[])
+  nameWithType.vb: ComplexMessage.SplitPlainText(StringSplitOptions, String())
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText*
   name: SplitPlainText
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_
@@ -4968,6 +4977,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.PlainText.Escape
   nameWithType: PlainText.Escape
+- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Implicit(HuajiTech.CoolQ.Messaging.PlainText)~System.String
+  name: Implicit(PlainText to String)
+  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_HuajiTech_CoolQ_Messaging_PlainText__System_String
+  commentId: M:HuajiTech.CoolQ.Messaging.PlainText.op_Implicit(HuajiTech.CoolQ.Messaging.PlainText)~System.String
+  name.vb: Widening(PlainText to String)
+  fullName: HuajiTech.CoolQ.Messaging.PlainText.Implicit(HuajiTech.CoolQ.Messaging.PlainText to System.String)
+  fullName.vb: HuajiTech.CoolQ.Messaging.PlainText.Widening(HuajiTech.CoolQ.Messaging.PlainText to System.String)
+  nameWithType: PlainText.Implicit(PlainText to String)
+  nameWithType.vb: PlainText.Widening(PlainText to String)
+- uid: HuajiTech.CoolQ.Messaging.PlainText.op_Implicit*
+  name: Implicit
+  href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_op_Implicit_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.PlainText.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: HuajiTech.CoolQ.Messaging.PlainText.Implicit
+  fullName.vb: HuajiTech.CoolQ.Messaging.PlainText.Widening
+  nameWithType: PlainText.Implicit
+  nameWithType.vb: PlainText.Widening
 - uid: HuajiTech.CoolQ.Messaging.PlainText.ToString
   name: ToString()
   href: api/HuajiTech.CoolQ.Messaging.PlainText.html#HuajiTech_CoolQ_Messaging_PlainText_ToString
@@ -5477,6 +5505,19 @@ references:
   commentId: T:HuajiTech.CoolQ.Status
   fullName: HuajiTech.CoolQ.Status
   nameWithType: Status
+- uid: HuajiTech.CoolQ.Status.#ctor(System.String,System.String,HuajiTech.CoolQ.StatusColor)
+  name: Status(String, String, StatusColor)
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status__ctor_System_String_System_String_HuajiTech_CoolQ_StatusColor_
+  commentId: M:HuajiTech.CoolQ.Status.#ctor(System.String,System.String,HuajiTech.CoolQ.StatusColor)
+  fullName: HuajiTech.CoolQ.Status.Status(System.String, System.String, HuajiTech.CoolQ.StatusColor)
+  nameWithType: Status.Status(String, String, StatusColor)
+- uid: HuajiTech.CoolQ.Status.#ctor*
+  name: Status
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status__ctor_
+  commentId: Overload:HuajiTech.CoolQ.Status.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Status.Status
+  nameWithType: Status.Status
 - uid: HuajiTech.CoolQ.Status.Color
   name: Color
   href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Color

@@ -80,12 +80,11 @@
 </code></pre><p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html">Status</a> 类和 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Encode">Encode()</a> 方法可以方便地创建状态数据并进行编码。</p>
 <pre><code class="lang-csharp">static string OnStatusUpdating()
 {
-    return new HuajiTech.CoolQ.Status
-    {
-        Value = &quot;值&quot;,
-        Unit = &quot;单位&quot;,
-        Color = HuajiTech.CoolQ.StatusColor.Green
-    }.Encode();
+    return new HuajiTech.CoolQ.Status(
+        value: &quot;值&quot;,
+        unit: &quot;单位&quot;,
+        color: HuajiTech.CoolQ.StatusColor.Green
+    ).Encode();
 }
 </code></pre><h2 id="将托管方法导出为非托管方法">将托管方法导出为非托管方法</h2>
 <p>上面创建的事件处理程序是托管方法，但酷Q只能调用以 StdCall 导出的非托管方法。
