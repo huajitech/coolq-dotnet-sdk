@@ -48,34 +48,9 @@ namespace HuajiTech.CoolQ.Messaging
                        .Replace("&amp;", "&");
         }
 
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj) || obj as PlainText == this;
-        }
-
-        public bool Equals(PlainText text)
-        {
-            return text == this;
-        }
-
-        public override int GetHashCode()
-        {
-            return Content.GetHashCode();
-        }
-
         public override string ToString()
         {
             return Escape(Content);
-        }
-
-        public static bool operator ==(PlainText left, PlainText right)
-        {
-            return left?.Content == right?.Content;
-        }
-
-        public static bool operator !=(PlainText left, PlainText right)
-        {
-            return !(left == right);
         }
     }
 }
