@@ -84,7 +84,7 @@ namespace HuajiTech.CoolQ
 
         public override string ToString()
         {
-            return $"AnonymousMember({Id},{Group})";
+            return GetType().Name + $"({Id},{Group})";
         }
 
         private AnonymousMemberInfo GetInfo()

@@ -276,7 +276,7 @@ namespace HuajiTech.CoolQ
 
         public override string ToString()
         {
-            return $"Member({Number},{Group})";
+            return GetType().Name + $"({Number},{Group})";
         }
 
         private MemberInfo GetInfo(bool handleException = true, bool refresh = false)
