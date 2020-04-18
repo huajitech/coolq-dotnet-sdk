@@ -274,6 +274,11 @@ namespace HuajiTech.CoolQ
             return Task.Run(UnsetAsAdministrator);
         }
 
+        public override bool Equals(Chat other)
+        {
+            return base.Equals(other) && other is Member member && member.Group == Group;
+        }
+
         public override string ToString()
         {
             return GetType().Name + $"({Number},{Group})";

@@ -8,7 +8,7 @@ namespace HuajiTech.CoolQ.Messaging
     /// <summary>
     /// 表示CQ码。
     /// </summary>
-    public class CQCode : MessageElement, IEquatable<CQCode>
+    public class CQCode : MessageElement
     {
         /// <summary>
         /// 以指定类型初始化一个 <see cref="CQCode"/> 类的新实例。
@@ -109,21 +109,6 @@ namespace HuajiTech.CoolQ.Messaging
                 $"[CQ:{Type}]";
         }
 
-        public override int GetHashCode()
-        {
-            return ToString().GetHashCode();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj) || obj as CQCode == this;
-        }
-
-        public bool Equals(CQCode other)
-        {
-            return other == this;
-        }
-
         protected bool GetParameterAsBoolean(string key)
         {
             return this[key] == "true";
@@ -194,16 +179,6 @@ namespace HuajiTech.CoolQ.Messaging
         protected void SetParameter(string key, Uri value)
         {
             this[key] = value?.ToString();
-        }
-
-        public static bool operator !=(CQCode left, CQCode right)
-        {
-            return !(left == right);
-        }
-
-        public static bool operator ==(CQCode left, CQCode right)
-        {
-            return left?.ToString() == right?.ToString();
         }
     }
 }

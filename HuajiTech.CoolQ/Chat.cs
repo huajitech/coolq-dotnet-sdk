@@ -31,17 +31,17 @@ namespace HuajiTech.CoolQ
 
         public static bool operator ==(Chat left, Chat right)
         {
-            return left?.GetType() == right?.GetType() && left?.Number == right?.Number;
+            return left?.Equals(right) ?? right is null;
         }
 
         public override bool Equals(object obj)
         {
-            return obj?.GetType() == GetType() && ((Chat)obj).Number == Number;
+            return Equals(obj as Chat);
         }
 
-        public bool Equals(Chat other)
+        public virtual bool Equals(Chat other)
         {
-            return other?.GetType() == GetType() && other.Number == Number;
+            return base.Equals(other) || other?.Number == Number;
         }
 
         public override int GetHashCode()

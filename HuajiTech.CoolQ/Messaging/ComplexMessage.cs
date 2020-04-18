@@ -11,7 +11,7 @@ namespace HuajiTech.CoolQ.Messaging
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Naming", "CA1710:标识符应具有正确的后缀", Justification = "<挂起>")]
-    public partial class ComplexMessage
+    public partial class ComplexMessage : IEquatable<ComplexMessage>
     {
         private static readonly Regex CQCodeRegex = new Regex(
             @"\[CQ:(?<Type>[a-zA-Z\-_\.]+)(,(?<Key>[a-zA-Z\-_\.]+)=(?<Value>[^,\]]+))*\]",
@@ -289,6 +289,31 @@ namespace HuajiTech.CoolQ.Messaging
         public override string ToString()
         {
             return string.Join(string.Empty, _elements);
+        }
+
+        public bool Equals(ComplexMessage other)
+        {
+            return base.Equals(other) || other?.ToString() == ToString();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as ComplexMessage);
+        }
+
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode();
+        }
+
+        public static bool operator ==(ComplexMessage left, ComplexMessage right)
+        {
+            return left?.Equals(right) ?? right is null;
+        }
+
+        public static bool operator !=(ComplexMessage left, ComplexMessage right)
+        {
+            return !(left == right);
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage(

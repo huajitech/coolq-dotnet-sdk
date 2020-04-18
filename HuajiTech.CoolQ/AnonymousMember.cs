@@ -40,17 +40,17 @@ namespace HuajiTech.CoolQ
 
         public static bool operator ==(AnonymousMember left, AnonymousMember right)
         {
-            return left?.Id == right?.Id && left?.Group == right?.Group;
+            return left?.Equals(right) ?? right is null;
         }
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj) || Equals(obj as AnonymousMember);
+            return Equals(obj as AnonymousMember);
         }
 
         public bool Equals(AnonymousMember other)
         {
-            return this == other;
+            return base.Equals(other) || (other?.Id == Id && other?.Group == Group);
         }
 
         public override int GetHashCode()
