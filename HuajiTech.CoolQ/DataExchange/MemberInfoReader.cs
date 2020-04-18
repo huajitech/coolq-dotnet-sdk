@@ -31,9 +31,13 @@ namespace HuajiTech.CoolQ.DataExchange
                 CanEditAlias = ReadBoolean()
             };
 
-            if (info.CustomTitle.ExpirationTime <= Timestamp.Base)
+            if (info.CustomTitle.Text is null)
             {
                 info.CustomTitle = null;
+            }
+            else if (info.CustomTitle.ExpirationTime <= Timestamp.Base)
+            {
+                info.CustomTitle = new CustomTitle(info.CustomTitle.Text);
             }
 
             return info;
