@@ -104,7 +104,7 @@ namespace HuajiTech.CoolQ.Messaging
 
                 if (lastMatchEndIndex != str.Length)
                 {
-                    yield return new PlainText(PlainText.Escape(str.Substring(lastMatchEndIndex)));
+                    yield return new PlainText(PlainText.Unescape(str.Substring(lastMatchEndIndex)));
                 }
             }
 
