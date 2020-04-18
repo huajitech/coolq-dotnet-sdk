@@ -43,6 +43,7 @@
 
 - @"HuajiTech.CoolQ.Bot"
 - @"HuajiTech.CoolQ.CurrentUser"
+- @"HuajiTech.CoolQ.Logger"
 
 ### 聊天
 
