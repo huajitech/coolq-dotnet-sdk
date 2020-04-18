@@ -373,58 +373,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Bot.DataDirectory
   nameWithType: Bot.DataDirectory
-- uid: HuajiTech.CoolQ.Bot.Log(HuajiTech.CoolQ.LogLevel,System.String,System.String)
-  name: Log(LogLevel, String, String)
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Log_HuajiTech_CoolQ_LogLevel_System_String_System_String_
-  commentId: M:HuajiTech.CoolQ.Bot.Log(HuajiTech.CoolQ.LogLevel,System.String,System.String)
-  fullName: HuajiTech.CoolQ.Bot.Log(HuajiTech.CoolQ.LogLevel, System.String, System.String)
-  nameWithType: Bot.Log(LogLevel, String, String)
-- uid: HuajiTech.CoolQ.Bot.Log*
-  name: Log
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Log_
-  commentId: Overload:HuajiTech.CoolQ.Bot.Log
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Bot.Log
-  nameWithType: Bot.Log
-- uid: HuajiTech.CoolQ.Bot.LogAsync(HuajiTech.CoolQ.LogLevel,System.String,System.String)
-  name: LogAsync(LogLevel, String, String)
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_LogAsync_HuajiTech_CoolQ_LogLevel_System_String_System_String_
-  commentId: M:HuajiTech.CoolQ.Bot.LogAsync(HuajiTech.CoolQ.LogLevel,System.String,System.String)
-  fullName: HuajiTech.CoolQ.Bot.LogAsync(HuajiTech.CoolQ.LogLevel, System.String, System.String)
-  nameWithType: Bot.LogAsync(LogLevel, String, String)
-- uid: HuajiTech.CoolQ.Bot.LogAsync*
-  name: LogAsync
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_LogAsync_
-  commentId: Overload:HuajiTech.CoolQ.Bot.LogAsync
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Bot.LogAsync
-  nameWithType: Bot.LogAsync
-- uid: HuajiTech.CoolQ.Bot.LogFatal(System.String)
-  name: LogFatal(String)
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_LogFatal_System_String_
-  commentId: M:HuajiTech.CoolQ.Bot.LogFatal(System.String)
-  fullName: HuajiTech.CoolQ.Bot.LogFatal(System.String)
-  nameWithType: Bot.LogFatal(String)
-- uid: HuajiTech.CoolQ.Bot.LogFatal*
-  name: LogFatal
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_LogFatal_
-  commentId: Overload:HuajiTech.CoolQ.Bot.LogFatal
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Bot.LogFatal
-  nameWithType: Bot.LogFatal
-- uid: HuajiTech.CoolQ.Bot.LogFatalAsync(System.String)
-  name: LogFatalAsync(String)
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_LogFatalAsync_System_String_
-  commentId: M:HuajiTech.CoolQ.Bot.LogFatalAsync(System.String)
-  fullName: HuajiTech.CoolQ.Bot.LogFatalAsync(System.String)
-  nameWithType: Bot.LogFatalAsync(String)
-- uid: HuajiTech.CoolQ.Bot.LogFatalAsync*
-  name: LogFatalAsync
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_LogFatalAsync_
-  commentId: Overload:HuajiTech.CoolQ.Bot.LogFatalAsync
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Bot.LogFatalAsync
-  nameWithType: Bot.LogFatalAsync
 - uid: HuajiTech.CoolQ.Bot.RequestImage(System.String)
   name: RequestImage(String)
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_RequestImage_System_String_
@@ -930,6 +878,19 @@ references:
   commentId: E:HuajiTech.CoolQ.CurrentUser.ContactRequested
   fullName: HuajiTech.CoolQ.CurrentUser.ContactRequested
   nameWithType: CurrentUser.ContactRequested
+- uid: HuajiTech.CoolQ.CurrentUser.CsrfToken
+  name: CsrfToken
+  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_CsrfToken
+  commentId: P:HuajiTech.CoolQ.CurrentUser.CsrfToken
+  fullName: HuajiTech.CoolQ.CurrentUser.CsrfToken
+  nameWithType: CurrentUser.CsrfToken
+- uid: HuajiTech.CoolQ.CurrentUser.CsrfToken*
+  name: CsrfToken
+  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_CsrfToken_
+  commentId: Overload:HuajiTech.CoolQ.CurrentUser.CsrfToken
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.CurrentUser.CsrfToken
+  nameWithType: CurrentUser.CsrfToken
 - uid: HuajiTech.CoolQ.CurrentUser.EntranceInvited
   name: EntranceInvited
   href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_EntranceInvited
@@ -975,45 +936,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.CurrentUser.GetCookies
   nameWithType: CurrentUser.GetCookies
-- uid: HuajiTech.CoolQ.CurrentUser.GetCookiesAsync(System.String)
-  name: GetCookiesAsync(String)
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCookiesAsync_System_String_
-  commentId: M:HuajiTech.CoolQ.CurrentUser.GetCookiesAsync(System.String)
-  fullName: HuajiTech.CoolQ.CurrentUser.GetCookiesAsync(System.String)
-  nameWithType: CurrentUser.GetCookiesAsync(String)
-- uid: HuajiTech.CoolQ.CurrentUser.GetCookiesAsync*
-  name: GetCookiesAsync
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCookiesAsync_
-  commentId: Overload:HuajiTech.CoolQ.CurrentUser.GetCookiesAsync
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.CurrentUser.GetCookiesAsync
-  nameWithType: CurrentUser.GetCookiesAsync
-- uid: HuajiTech.CoolQ.CurrentUser.GetCsrfToken
-  name: GetCsrfToken()
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCsrfToken
-  commentId: M:HuajiTech.CoolQ.CurrentUser.GetCsrfToken
-  fullName: HuajiTech.CoolQ.CurrentUser.GetCsrfToken()
-  nameWithType: CurrentUser.GetCsrfToken()
-- uid: HuajiTech.CoolQ.CurrentUser.GetCsrfToken*
-  name: GetCsrfToken
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCsrfToken_
-  commentId: Overload:HuajiTech.CoolQ.CurrentUser.GetCsrfToken
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.CurrentUser.GetCsrfToken
-  nameWithType: CurrentUser.GetCsrfToken
-- uid: HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync
-  name: GetCsrfTokenAsync()
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCsrfTokenAsync
-  commentId: M:HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync
-  fullName: HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync()
-  nameWithType: CurrentUser.GetCsrfTokenAsync()
-- uid: HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync*
-  name: GetCsrfTokenAsync
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCsrfTokenAsync_
-  commentId: Overload:HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync
-  nameWithType: CurrentUser.GetCsrfTokenAsync
 - uid: HuajiTech.CoolQ.CurrentUser.GetGroups
   name: GetGroups()
   href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetGroups
@@ -1442,6 +1364,19 @@ references:
   commentId: T:HuajiTech.CoolQ.File
   fullName: HuajiTech.CoolQ.File
   nameWithType: File
+- uid: HuajiTech.CoolQ.File.#ctor(System.String,System.String,System.Int64,System.Int64)
+  name: File(String, String, Int64, Int64)
+  href: api/HuajiTech.CoolQ.File.html#HuajiTech_CoolQ_File__ctor_System_String_System_String_System_Int64_System_Int64_
+  commentId: M:HuajiTech.CoolQ.File.#ctor(System.String,System.String,System.Int64,System.Int64)
+  fullName: HuajiTech.CoolQ.File.File(System.String, System.String, System.Int64, System.Int64)
+  nameWithType: File.File(String, String, Int64, Int64)
+- uid: HuajiTech.CoolQ.File.#ctor*
+  name: File
+  href: api/HuajiTech.CoolQ.File.html#HuajiTech_CoolQ_File__ctor_
+  commentId: Overload:HuajiTech.CoolQ.File.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.File.File
+  nameWithType: File.File
 - uid: HuajiTech.CoolQ.File.BusId
   name: BusId
   href: api/HuajiTech.CoolQ.File.html#HuajiTech_CoolQ_File_BusId
@@ -1974,6 +1909,126 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.GroupMuteEventArgs.Time
   nameWithType: GroupMuteEventArgs.Time
+- uid: HuajiTech.CoolQ.Logger
+  name: Logger
+  href: api/HuajiTech.CoolQ.Logger.html
+  commentId: T:HuajiTech.CoolQ.Logger
+  fullName: HuajiTech.CoolQ.Logger
+  nameWithType: Logger
+- uid: HuajiTech.CoolQ.Logger.Log(HuajiTech.CoolQ.LogLevel,System.String,System.String)
+  name: Log(LogLevel, String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_Log_HuajiTech_CoolQ_LogLevel_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.Log(HuajiTech.CoolQ.LogLevel,System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.Log(HuajiTech.CoolQ.LogLevel, System.String, System.String)
+  nameWithType: Logger.Log(LogLevel, String, String)
+- uid: HuajiTech.CoolQ.Logger.Log*
+  name: Log
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_Log_
+  commentId: Overload:HuajiTech.CoolQ.Logger.Log
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.Log
+  nameWithType: Logger.Log
+- uid: HuajiTech.CoolQ.Logger.LogDebug(System.String)
+  name: LogDebug(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogDebug_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogDebug(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogDebug(System.String)
+  nameWithType: Logger.LogDebug(String)
+- uid: HuajiTech.CoolQ.Logger.LogDebug(System.String,System.String)
+  name: LogDebug(String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogDebug_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogDebug(System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogDebug(System.String, System.String)
+  nameWithType: Logger.LogDebug(String, String)
+- uid: HuajiTech.CoolQ.Logger.LogDebug*
+  name: LogDebug
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogDebug_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogDebug
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogDebug
+  nameWithType: Logger.LogDebug
+- uid: HuajiTech.CoolQ.Logger.LogError(System.Exception)
+  name: LogError(Exception)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogError_System_Exception_
+  commentId: M:HuajiTech.CoolQ.Logger.LogError(System.Exception)
+  fullName: HuajiTech.CoolQ.Logger.LogError(System.Exception)
+  nameWithType: Logger.LogError(Exception)
+- uid: HuajiTech.CoolQ.Logger.LogError(System.String)
+  name: LogError(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogError_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogError(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogError(System.String)
+  nameWithType: Logger.LogError(String)
+- uid: HuajiTech.CoolQ.Logger.LogError(System.String,System.String)
+  name: LogError(String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogError_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogError(System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogError(System.String, System.String)
+  nameWithType: Logger.LogError(String, String)
+- uid: HuajiTech.CoolQ.Logger.LogError*
+  name: LogError
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogError_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogError
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogError
+  nameWithType: Logger.LogError
+- uid: HuajiTech.CoolQ.Logger.LogFatal(System.String)
+  name: LogFatal(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogFatal_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogFatal(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogFatal(System.String)
+  nameWithType: Logger.LogFatal(String)
+- uid: HuajiTech.CoolQ.Logger.LogFatal*
+  name: LogFatal
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogFatal_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogFatal
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogFatal
+  nameWithType: Logger.LogFatal
+- uid: HuajiTech.CoolQ.Logger.LogInfo(System.String)
+  name: LogInfo(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogInfo_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogInfo(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogInfo(System.String)
+  nameWithType: Logger.LogInfo(String)
+- uid: HuajiTech.CoolQ.Logger.LogInfo(System.String,System.String)
+  name: LogInfo(String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogInfo_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogInfo(System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogInfo(System.String, System.String)
+  nameWithType: Logger.LogInfo(String, String)
+- uid: HuajiTech.CoolQ.Logger.LogInfo*
+  name: LogInfo
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogInfo_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogInfo
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogInfo
+  nameWithType: Logger.LogInfo
+- uid: HuajiTech.CoolQ.Logger.LogWarning(System.Exception)
+  name: LogWarning(Exception)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogWarning_System_Exception_
+  commentId: M:HuajiTech.CoolQ.Logger.LogWarning(System.Exception)
+  fullName: HuajiTech.CoolQ.Logger.LogWarning(System.Exception)
+  nameWithType: Logger.LogWarning(Exception)
+- uid: HuajiTech.CoolQ.Logger.LogWarning(System.String)
+  name: LogWarning(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogWarning_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogWarning(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogWarning(System.String)
+  nameWithType: Logger.LogWarning(String)
+- uid: HuajiTech.CoolQ.Logger.LogWarning(System.String,System.String)
+  name: LogWarning(String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogWarning_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogWarning(System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogWarning(System.String, System.String)
+  nameWithType: Logger.LogWarning(String, String)
+- uid: HuajiTech.CoolQ.Logger.LogWarning*
+  name: LogWarning
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogWarning_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogWarning
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogWarning
+  nameWithType: Logger.LogWarning
 - uid: HuajiTech.CoolQ.LogLevel
   name: LogLevel
   href: api/HuajiTech.CoolQ.LogLevel.html
@@ -2816,6 +2871,19 @@ references:
   commentId: T:HuajiTech.CoolQ.Message
   fullName: HuajiTech.CoolQ.Message
   nameWithType: Message
+- uid: HuajiTech.CoolQ.Message.#ctor(System.Int64,System.String)
+  name: Message(Int64, String)
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message__ctor_System_Int64_System_String_
+  commentId: M:HuajiTech.CoolQ.Message.#ctor(System.Int64,System.String)
+  fullName: HuajiTech.CoolQ.Message.Message(System.Int64, System.String)
+  nameWithType: Message.Message(Int64, String)
+- uid: HuajiTech.CoolQ.Message.#ctor*
+  name: Message
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message__ctor_
+  commentId: Overload:HuajiTech.CoolQ.Message.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Message.Message
+  nameWithType: Message.Message
 - uid: HuajiTech.CoolQ.Message.Content
   name: Content
   href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Content

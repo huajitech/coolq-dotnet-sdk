@@ -151,6 +151,32 @@
   </h3>
   
   
+  <a id="HuajiTech_CoolQ_CurrentUser_CsrfToken_" data-uid="HuajiTech.CoolQ.CurrentUser.CsrfToken*"></a>
+  <h4 id="HuajiTech_CoolQ_CurrentUser_CsrfToken" data-uid="HuajiTech.CoolQ.CurrentUser.CsrfToken">CsrfToken</h4>
+  <div class="markdown level1 summary"><p>获取当前用户的 CSRF 令牌。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CsrfToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="HuajiTech_CoolQ_CurrentUser_Nickname_" data-uid="HuajiTech.CoolQ.CurrentUser.Nickname*"></a>
   <h4 id="HuajiTech_CoolQ_CurrentUser_Nickname" data-uid="HuajiTech.CoolQ.CurrentUser.Nickname">Nickname</h4>
   <div class="markdown level1 summary"><p>获取当前用户的昵称。</p>
@@ -271,102 +297,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_CurrentUser_GetCookiesAsync_" data-uid="HuajiTech.CoolQ.CurrentUser.GetCookiesAsync*"></a>
-  <h4 id="HuajiTech_CoolQ_CurrentUser_GetCookiesAsync_System_String_" data-uid="HuajiTech.CoolQ.CurrentUser.GetCookiesAsync(System.String)">GetCookiesAsync(String)</h4>
-  <div class="markdown level1 summary"><p>以异步操作获取当前用户在指定域下的 Cookies。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;string&gt; GetCookiesAsync(string domain)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">domain</span></td>
-        <td><p>指定的域名。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_CurrentUser_GetCsrfToken_" data-uid="HuajiTech.CoolQ.CurrentUser.GetCsrfToken*"></a>
-  <h4 id="HuajiTech_CoolQ_CurrentUser_GetCsrfToken" data-uid="HuajiTech.CoolQ.CurrentUser.GetCsrfToken">GetCsrfToken()</h4>
-  <div class="markdown level1 summary"><p>获取当前用户的 CSRF 令牌。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int GetCsrfToken()</code></pre>
-  </div>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_CurrentUser_GetCsrfTokenAsync_" data-uid="HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync*"></a>
-  <h4 id="HuajiTech_CoolQ_CurrentUser_GetCsrfTokenAsync" data-uid="HuajiTech.CoolQ.CurrentUser.GetCsrfTokenAsync">GetCsrfTokenAsync()</h4>
-  <div class="markdown level1 summary"><p>以异步操作获取当前用户的 CSRF 令牌。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; GetCsrfTokenAsync()</code></pre>
-  </div>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

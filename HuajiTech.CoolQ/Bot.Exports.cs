@@ -30,7 +30,7 @@ namespace HuajiTech.CoolQ
 
                     if (frames.Any())
                     {
-                        LogFatal(ex.ToString());
+                        Logger.LogFatal(ex.ToString());
                     }
                 }
             };
@@ -50,8 +50,7 @@ namespace HuajiTech.CoolQ
         [DllExport]
         private static int OnAppEnabled()
         {
-            Log(
-                LogLevel.Info,
+            Logger.LogInfo(
                 Resources.TestingNotificationTitle,
                 string.Format(CultureInfo.InvariantCulture, Resources.TestingNotificationContent, AppId));
 

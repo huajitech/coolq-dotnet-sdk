@@ -17,6 +17,12 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
+        /// 获取当前用户的 CSRF 令牌。
+        /// </summary>
+        public static int CsrfToken =>
+            NativeMethods.GetCsrfToken(Bot.AuthCode).CheckError();
+
+        /// <summary>
         /// 获取当前用户的昵称。
         /// </summary>
         public override string Nickname =>
@@ -72,31 +78,6 @@ namespace HuajiTech.CoolQ
         public static string GetCookies(string domain)
         {
             return NativeMethods.GetCookies(Bot.AuthCode, domain).CheckError();
-        }
-
-        /// <summary>
-        /// 以异步操作获取当前用户在指定域下的 Cookies。
-        /// </summary>
-        /// <param name="domain">指定的域名。</param>
-        public static Task<string> GetCookiesAsync(string domain)
-        {
-            return Task.Run(() => GetCookies(domain));
-        }
-
-        /// <summary>
-        /// 获取当前用户的 CSRF 令牌。
-        /// </summary>
-        public static int GetCsrfToken()
-        {
-            return NativeMethods.GetCsrfToken(Bot.AuthCode).CheckError();
-        }
-
-        /// <summary>
-        /// 以异步操作获取当前用户的 CSRF 令牌。
-        /// </summary>
-        public static Task<int> GetCsrfTokenAsync()
-        {
-            return Task.Run(GetCsrfToken);
         }
 
         /// <summary>
