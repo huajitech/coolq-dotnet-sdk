@@ -19,10 +19,17 @@ namespace HuajiTech.CoolQ
         internal const string ApiVersion = "9";
         private static readonly ConstructorInfo AppConstructor;
 
-        private static bool? _canSendImage;
-        private static bool? _canSendRecord;
-        private static CurrentUser _currentUser;
-        private static DirectoryInfo _dataDirectory;
+        private static readonly Lazy<bool> _canSendImage =
+            new Lazy<bool>(() => NativeMethods.GetCanSendImage(AuthCode));
+
+        private static readonly Lazy<bool> _canSendRecord =
+            new Lazy<bool>(() => NativeMethods.GetCanSendRecord(AuthCode));
+
+        private static readonly Lazy<CurrentUser> _currentUser =
+            new Lazy<CurrentUser>();
+
+        private static readonly Lazy<DirectoryInfo> _dataDirectory =
+            new Lazy<DirectoryInfo>(() => new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode)));
 
         static Bot()
         {
@@ -36,20 +43,17 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取一个值，指示是否可以发送图片。
         /// </summary>
-        public static bool CanSendImage =>
-            _canSendImage ??= NativeMethods.GetCanSendImage(AuthCode);
+        public static bool CanSendImage => _canSendImage.Value;
 
         /// <summary>
         /// 获取一个值，指示是否可以发送录音。
         /// </summary>
-        public static bool CanSendRecord =>
-            _canSendRecord ??= NativeMethods.GetCanSendRecord(AuthCode);
+        public static bool CanSendRecord => _canSendRecord.Value;
 
         /// <summary>
         /// 获取当前用户。
         /// </summary>
-        public static CurrentUser CurrentUser =>
-            _currentUser ??= new CurrentUser();
+        public static CurrentUser CurrentUser => _currentUser.Value;
 
         internal static object App { get; private set; }
 
@@ -78,8 +82,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取应用的数据目录。
         /// </summary>
-        public static DirectoryInfo DataDirectory =>
-            _dataDirectory ??= new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode));
+        public static DirectoryInfo DataDirectory => _dataDirectory.Value;
 
         /// <summary>
         /// 请求图片。
