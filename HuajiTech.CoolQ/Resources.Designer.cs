@@ -97,6 +97,15 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 解码正则消息失败。 的本地化字符串。
+        /// </summary>
+        internal static string FailedToDecodeRegexMessage {
+            get {
+                return ResourceManager.GetString("FailedToDecodeRegexMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 该字段不能为空。 的本地化字符串。
         /// </summary>
         internal static string FieldCannotBeEmpty {

@@ -129,6 +129,9 @@
   <data name="Exception" xml:space="preserve">
     <value>异常</value>
   </data>
+  <data name="FailedToDecodeRegexMessage" xml:space="preserve">
+    <value>解码正则消息失败。</value>
+  </data>
   <data name="FieldCannotBeEmpty" xml:space="preserve">
     <value>该字段不能为空。</value>
   </data>

@@ -4,6 +4,7 @@ namespace HuajiTech.CoolQ
 {
     /// <summary>
     /// 表示联系人请求。
+    /// 此类不能在外部被实例化。
     /// </summary>
     public class ContactRequest
     {
@@ -16,7 +17,7 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取消息。
+        /// 获取当前 <see cref="ContactRequest"/> 对象的附加消息。
         /// </summary>
         public string Message { get; }
 
@@ -24,6 +25,7 @@ namespace HuajiTech.CoolQ
         /// 同意请求。
         /// </summary>
         /// <param name="alias">联系人的备注名。</param>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Accept(string alias = null)
         {
             Respond(RequestResponse.Accept, alias);
@@ -33,6 +35,7 @@ namespace HuajiTech.CoolQ
         /// 以异步操作同意请求。
         /// </summary>
         /// <param name="alias">联系人的备注名。</param>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task AcceptAsync(string alias = null)
         {
             return Task.Run(() => Accept(alias));
@@ -41,6 +44,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 拒绝请求。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Reject()
         {
             Respond(RequestResponse.Reject, null);
@@ -49,6 +53,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 以异步操作拒绝请求。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task RejectAsync()
         {
             return Task.Run(Reject);

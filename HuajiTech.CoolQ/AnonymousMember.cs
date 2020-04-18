@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 表示一个匿名成员。
+    /// 表示匿名成员。
+    /// 此类不能在外部被实例化。
     /// </summary>
     public class AnonymousMember : IEquatable<AnonymousMember>
     {
@@ -19,17 +20,17 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取所在群。
+        /// 获取当前 <see cref="AnonymousMember"/> 的所属 <see cref="CoolQ.Group"/>。
         /// </summary>
         public Group Group { get; }
 
         /// <summary>
-        /// 获取 ID。
+        /// 获取当前 <see cref="AnonymousMember"/> 对象的 ID。
         /// </summary>
         public long Id => GetInfo().Id;
 
         /// <summary>
-        /// 获取名称。
+        /// 获取当前 <see cref="AnonymousMember"/> 对象的名称。
         /// </summary>
         public string Name => GetInfo().Name;
 
@@ -59,9 +60,11 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 禁言。
+        /// 禁言当前 <see cref="AnonymousMember"/>。
         /// </summary>
         /// <param name="duration">禁言时长。</param>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="duration"/> 小于 <see cref="TimeSpan.Zero"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Mute(TimeSpan duration)
         {
             if (duration <= TimeSpan.Zero)
@@ -74,9 +77,11 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 以异步操作禁言。
+        /// 以异步操作禁言当前 <see cref="AnonymousMember"/>。
         /// </summary>
         /// <param name="duration">禁言时长。</param>
+        /// /// <exception cref="ArgumentOutOfRangeException"><paramref name="duration"/> 小于 <see cref="TimeSpan.Zero"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task MuteAsync(TimeSpan duration)
         {
             return Task.Run(() => Mute(duration));

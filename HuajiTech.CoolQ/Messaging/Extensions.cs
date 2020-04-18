@@ -25,7 +25,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="Message"/> 解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
         /// <param name="message">要解析为 <see cref="ComplexMessage"/> 对象的 <see cref="Message"/> 对象。</param>
-        /// <returns>与<see cref="Message"/> 对象等效的 <see cref="ComplexMessage"/> 对象。</returns>
+        /// <returns>与 <see cref="Message"/> 对象等效的 <see cref="ComplexMessage"/> 对象。</returns>
         public static ComplexMessage Parse(this Message message)
         {
             return ComplexMessage.Parse(message?.Content);
@@ -40,7 +40,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
-        /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static Message Send(this Chat chat, ComplexMessage message)
         {
             if (chat is null)

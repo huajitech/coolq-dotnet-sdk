@@ -12,7 +12,7 @@ namespace HuajiTech.CoolQ
     public static partial class Bot
     {
         /// <summary>
-        /// 获取 AppID。
+        /// 获取当前应用的 AppID。
         /// </summary>
         public static readonly string AppId = GetApp(out AppConstructor);
 
@@ -51,7 +51,7 @@ namespace HuajiTech.CoolQ
         public static bool CanSendRecord => _canSendRecord.Value;
 
         /// <summary>
-        /// 获取当前用户。
+        /// 获取机器人的当前用户。
         /// </summary>
         public static CurrentUser CurrentUser => _currentUser.Value;
 
@@ -89,6 +89,7 @@ namespace HuajiTech.CoolQ
         /// </summary>
         /// <param name="fileName">图片的文件名。</param>
         /// <returns>图片的文件信息。</returns>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static FileInfo RequestImage(string fileName)
         {
             return new FileInfo(NativeMethods.RequestImage(AuthCode, fileName).CheckError());
@@ -99,6 +100,7 @@ namespace HuajiTech.CoolQ
         /// </summary>
         /// <param name="fileName">图片的文件名。</param>
         /// <returns>图片的文件信息。</returns>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static Task<FileInfo> RequestImageAsync(string fileName)
         {
             return Task.Run(() => RequestImage(fileName));
@@ -110,6 +112,7 @@ namespace HuajiTech.CoolQ
         /// <param name="fileName">录音的文件名。</param>
         /// <param name="fileFormat">录音的格式。</param>
         /// <returns>录音的文件信息。</returns>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static FileInfo RequestRecord(string fileName, string fileFormat)
         {
             return new FileInfo(NativeMethods.RequestRecord(AuthCode, fileName, fileFormat).CheckError());
@@ -121,6 +124,7 @@ namespace HuajiTech.CoolQ
         /// <param name="fileName">录音的文件名。</param>
         /// <param name="fileFormat">录音的格式。</param>
         /// <returns>录音的文件信息。</returns>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static Task<FileInfo> RequestRecordAsync(string fileName, string fileFormat)
         {
             return Task.Run(() => RequestRecord(fileName, fileFormat));

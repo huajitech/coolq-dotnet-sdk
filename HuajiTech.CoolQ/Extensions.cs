@@ -11,11 +11,11 @@ namespace HuajiTech.CoolQ
     public static class Extensions
     {
         /// <summary>
-        /// 将用户作为指定群的成员。
+        /// 获取在指定 <see cref="Group"/> 中表示 <see cref="User"/> 对象的 <see cref="Member"/> 对象。
         /// </summary>
-        /// <param name="user">用户。</param>
-        /// <param name="group">指定群。</param>
-        /// <returns>在指定群中表示用户的成员。</returns>
+        /// <param name="user">要表示为成员的 <see cref="User"/> 对象。</param>
+        /// <param name="group">成员所属的 <see cref="Group"/> 对象。</param>
+        /// <returns>在指定 <paramref name="group"/> 中表示 <paramref name="user"/> 的 <see cref="Member"/> 对象。</returns>
         public static Member AsMemberOf(this User user, Group group)
         {
             if (user is null)
@@ -27,10 +27,10 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 将用户作为 <see cref="User"/> 对象。
+        /// 将 <see cref="User"/> (包括其派生类) 对象转换为 <see cref="User"/> 类的实例。
         /// </summary>
-        /// <param name="user">用户。</param>
-        /// <returns><see cref="User"/> 对象。</returns>
+        /// <param name="user">要转换的 <see cref="User"/> 对象。</param>
+        /// <returns><see cref="User"/> 类的实例。</returns>
         public static User AsUser(this User user)
         {
             if (user is null)
@@ -42,10 +42,11 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 解码正则消息。
+        /// 将 <see cref="Message.Content"/> 为编码后的正则消息匹配结果的 <see cref="Message"/> 对象解码为只读字典。
         /// </summary>
-        /// <param name="message">要解码的消息。</param>
-        /// <returns>解码后的字典。</returns>
+        /// <param name="message">要解析为只读字典的 <see cref="Message"/> 对象。</param>
+        /// <returns>与 <see cref="Message.Content"/> 等效的只读字典。</returns>
+        /// <exception cref="InvalidOperationException"><paramref name="message"/> 的值不合法。</exception>
         public static IReadOnlyDictionary<string, string> RegexDecode(this Message message)
         {
             if (message is null)
@@ -54,7 +55,14 @@ namespace HuajiTech.CoolQ
             }
 
             using var reader = new StringKeyValuePairReader(message.Content);
-            return reader.ReadAll().ToDictionary(pair => pair.Key, pair => pair.Value);
+            try
+            {
+                return reader.ReadAll().ToDictionary(pair => pair.Key, pair => pair.Value);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(Resources.FailedToDecodeRegexMessage, ex);
+            }
         }
 
         internal static int CheckError(this int returnValue)

@@ -9,18 +9,18 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public abstract class Chat : IEquatable<Chat>
     {
-        internal Chat(long number)
+        protected Chat(long number)
         {
             Number = number;
         }
 
         /// <summary>
-        /// 获取显示名称。
+        /// 获取当前 <see cref="Chat"/> 对象的显示名称。
         /// </summary>
         public abstract string DisplayName { get; }
 
         /// <summary>
-        /// 获取号码。
+        /// 获取当前 <see cref="Chat"/> 对象的号码。
         /// </summary>
         public long Number { get; }
 
@@ -50,17 +50,17 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 向当前聊天发送消息。
+        /// 向当前 <see cref="Chat"/> 发送消息。
         /// </summary>
         /// <param name="message">要发送的消息。</param>
-        /// <returns>发送的消息。</returns>
+        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
         public abstract Message Send(string message);
 
         /// <summary>
-        /// 以异步操作向当前聊天发送消息。
+        /// 以异步操作向当前 <see cref="Chat"/> 发送消息。
         /// </summary>
         /// <param name="message">要发送的消息。</param>
-        /// <returns>发送的消息。</returns>
+        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
         public virtual Task<Message> SendAsync(string message)
         {
             return Task.Run(() => Send(message));

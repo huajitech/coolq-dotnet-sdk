@@ -12,7 +12,7 @@ namespace HuajiTech.CoolQ
     {
         private ContactInfo _info;
 
-        internal Contact(long number)
+        public Contact(long number)
             : base(number)
         {
         }
@@ -24,23 +24,24 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取一个值，指示是否已请求信息。
+        /// 获取一个值，指示当前 <see cref="Contact"/> 对象是否含有信息。
         /// </summary>
         public override bool HasInfo => !(_info is null);
 
         /// <summary>
-        /// 获取备注名。
+        /// 获取当前 <see cref="Contact"/> 对象的备注名。
         /// </summary>
         public string Alias => _info.Alias;
 
         /// <summary>
-        /// 获取昵称。
+        /// 获取当前 <see cref="Contact"/> 对象的昵称。
         /// </summary>
         public override string Nickname => GetInfo().Nickname ?? base.Nickname;
 
         /// <summary>
         /// 请求信息。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void RequestInfo()
         {
             _info = null;
@@ -54,7 +55,7 @@ namespace HuajiTech.CoolQ
                 return _info ??= CurrentUser.GetContactInfos()
                     .First(info => info.Number == Number);
             }
-            catch (InvalidOperationException) when (handleException)
+            catch (CoolQException) when (handleException)
             {
                 return new ContactInfo();
             }
