@@ -25,12 +25,11 @@ static string OnStatusUpdating();
 ```csharp
 static string OnStatusUpdating()
 {
-	return new HuajiTech.CoolQ.Status
-	{
-		Value = "值",
-		Unit = "单位",
-		Color = HuajiTech.CoolQ.StatusColor.Green
-	}.Encode();
+	return new HuajiTech.CoolQ.Status(
+		value: "值",
+		unit: "单位",
+		color: HuajiTech.CoolQ.StatusColor.Green
+    ).Encode();
 }
 ```
 
