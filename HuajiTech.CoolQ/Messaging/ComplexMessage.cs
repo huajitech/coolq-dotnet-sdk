@@ -51,6 +51,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 获取或设置指定索引处的 <see cref="MessageElement"/> 对象。
         /// </summary>
         /// <param name="index">要获取或设置的<see cref="MessageElement"/> 对象从 0 开始的索引。</param>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="index"/> 小于 0。 或 <paramref name="index"/> 等于或大于 <see cref="Count"/>。</exception>
         public MessageElement this[int index]
         {
             get => _elements[index];
@@ -167,7 +168,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 使用指定的分隔符将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拼接为字符串。
         /// </summary>
         /// <param name="separator">要用作分隔符的字符串。</param>
-        public string GetPlainText(string separator = "")
+        public string JoinPlainText(string separator = "")
         {
             return string.Join(separator, this.OfType<PlainText>());
         }

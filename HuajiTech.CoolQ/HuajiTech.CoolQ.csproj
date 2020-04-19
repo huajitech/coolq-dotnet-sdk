@@ -70,6 +70,7 @@
     <Compile Include="Messaging\ChatShare.cs" />
     <Compile Include="Messaging\ClockingIn.cs" />
     <Compile Include="Messaging\ComplexMessage.cs" />
+    <Compile Include="Messaging\ComplexMessageExtensions.cs" />
     <Compile Include="Messaging\CQCodeFactory.cs" />
     <Compile Include="Messaging\CustomEmoticon.cs" />
     <Compile Include="Messaging\Dice.cs" />
