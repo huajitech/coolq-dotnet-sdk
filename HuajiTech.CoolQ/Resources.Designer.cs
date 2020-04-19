@@ -61,6 +61,15 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 该操作只能由群主或管理员执行。 的本地化字符串。
+        /// </summary>
+        internal static string AdministratorOnlyOperation {
+            get {
+                return ResourceManager.GetString("AdministratorOnlyOperation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 未找到或找到多个应用类。 的本地化字符串。
         /// </summary>
         internal static string AppNotFound {
@@ -124,15 +133,6 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 只有群主可以在退群时将群解散。 的本地化字符串。
-        /// </summary>
-        internal static string GroupCanOnlyBeDisbandedByOwnerWhenLeaving {
-            get {
-                return ResourceManager.GetString("GroupCanOnlyBeDisbandedByOwnerWhenLeaving", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 信息 的本地化字符串。
         /// </summary>
         internal static string Info {
@@ -156,6 +156,15 @@ namespace HuajiTech.CoolQ {
         internal static string NullReturnValue {
             get {
                 return ResourceManager.GetString("NullReturnValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 该操作只能由群主执行。 的本地化字符串。
+        /// </summary>
+        internal static string OwnerOnlyOperation {
+            get {
+                return ResourceManager.GetString("OwnerOnlyOperation", resourceCulture);
             }
         }
         

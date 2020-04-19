@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdministratorOnlyOperation" xml:space="preserve">
+    <value>该操作只能由群主或管理员执行。</value>
+  </data>
   <data name="AppNotFound" xml:space="preserve">
     <value>未找到或找到多个应用类。</value>
   </data>
@@ -138,9 +141,6 @@
   <data name="FieldCannotBeEmptyOrWhiteSpace" xml:space="preserve">
     <value>该字段不能为空或空白字符。</value>
   </data>
-  <data name="GroupCanOnlyBeDisbandedByOwnerWhenLeaving" xml:space="preserve">
-    <value>只有群主可以在退群时将群解散。</value>
-  </data>
   <data name="Info" xml:space="preserve">
     <value>信息</value>
   </data>
@@ -149,6 +149,9 @@
   </data>
   <data name="NullReturnValue" xml:space="preserve">
     <value>酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。</value>
+  </data>
+  <data name="OwnerOnlyOperation" xml:space="preserve">
+    <value>该操作只能由群主执行。</value>
   </data>
   <data name="TestingNotificationContent" xml:space="preserve">
     <value>此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ 开发，不建议在生产环境使用。此提示不是由任何错误导致的，也不会对使用造成任何影响。测试版本迭代较快，请及时更新。如果遇到BUG，欢迎进行反馈。感谢您的配合。</value>

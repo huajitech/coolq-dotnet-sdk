@@ -12,8 +12,14 @@ namespace HuajiTech.CoolQ
         /// </summary>
         /// <param name="text">文本。</param>
         /// <param name="expirationTime">过期时间。</param>
+        /// <exception cref="ArgumentException"><paramref name="text"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         public CustomTitle(string text, DateTime? expirationTime = null)
         {
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(text));
+            }
+
             Text = text;
             ExpirationTime = expirationTime;
         }

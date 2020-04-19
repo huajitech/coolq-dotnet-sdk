@@ -36,27 +36,28 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取一个值，指示是否已请求信息。
+        /// 获取一个值，指示当前 <see cref="Group"/> 对象是否含有信息。
         /// </summary>
         public virtual bool HasInfo => !(_info is null);
 
         /// <summary>
         /// 获取显示名称。
+        /// 对于 <see cref="Group"/> 对象，为 <see cref="Name"/>。
         /// </summary>
         public override string DisplayName => Name;
 
         /// <summary>
-        /// 获取成员容量。
+        /// 获取当前 <see cref="Group"/> 对象的成员容量。
         /// </summary>
         public int MemberCapacity => GetInfo().MemberCapacity;
 
         /// <summary>
-        /// 获取成员数。
+        /// 获取当前 <see cref="Group"/> 对象的成员数量。
         /// </summary>
         public int MemberCount => GetInfo().MemberCount;
 
         /// <summary>
-        /// 获取名称。
+        /// 获取当前 <see cref="Group"/> 对象的名称。
         /// </summary>
         public string Name => _name ?? GetInfo().Name;
 
@@ -101,40 +102,45 @@ namespace HuajiTech.CoolQ
         public static event EventHandler<GroupMuteEventArgs> Unmuted;
 
         /// <summary>
-        /// 禁用匿名。
+        /// 禁用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void DisableAnonymous()
         {
             NativeMethods.SetGroupIsAnonymousEnabled(Bot.AuthCode, Number, false).CheckError();
         }
 
         /// <summary>
-        /// 以异步操作禁用匿名。
+        /// 以异步操作禁用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task DisableAnonymousAsync()
         {
             return Task.Run(DisableAnonymous);
         }
 
         /// <summary>
-        /// 启用匿名。
+        /// 启用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void EnableAnonymous()
         {
             NativeMethods.SetGroupIsAnonymousEnabled(Bot.AuthCode, Number, true).CheckError();
         }
 
         /// <summary>
-        /// 以异步操作启用匿名。
+        /// 启用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task EnableAnonymousAsync()
         {
             return Task.Run(EnableAnonymous);
         }
 
         /// <summary>
-        /// 获取所有成员。
+        /// 获取当前 <see cref="Group"/> 对象的中的所有成员。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public IReadOnlyCollection<Member> GetMembers()
         {
             using var reader = new MemberInfoReader(
@@ -145,56 +151,71 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 以异步操作获取所有成员。
+        /// 以异步操作当前 <see cref="Group"/> 对象的中的所有成员。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task<IReadOnlyCollection<Member>> GetMembersAsync()
         {
             return Task.Run(GetMembers);
         }
 
         /// <summary>
-        /// 离开。
+        /// 离开当前 <see cref="Group"/> 对象。
         /// </summary>
-        /// <param name="disband">是否解散。</param>
+        /// <param name="disband">如果要在离开后解散当前 <see cref="Group"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 的群主。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Leave(bool disband = false)
         {
             if (disband && Bot.CurrentUser.AsMemberOf(this).Role != MemberRole.Owner)
             {
-                throw new InvalidOperationException(Resources.GroupCanOnlyBeDisbandedByOwnerWhenLeaving);
+                throw new InvalidOperationException(Resources.OwnerOnlyOperation);
             }
 
             NativeMethods.LeaveGroup(Bot.AuthCode, Number, disband).CheckError();
         }
 
         /// <summary>
-        /// 以异步操作离开。
+        /// 以异步操作离开当前 <see cref="Group"/> 对象。
         /// </summary>
-        /// <param name="disband">是否解散。</param>
+        /// <param name="disband">如果要在离开后解散当前 <see cref="Group"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的群主。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task LeaveAsync(bool disband = false)
         {
             return Task.Run(() => Leave(disband));
         }
 
         /// <summary>
-        /// 禁言。
+        /// 禁言当前 <see cref="Group"/> 对象。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Mute()
         {
+            if (!Bot.CurrentUser.AsMemberOf(this).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
+            }
+
             NativeMethods.SetGroupIsMuted(Bot.AuthCode, Number, true).CheckError();
         }
 
         /// <summary>
-        /// 以异步操作禁言。
+        /// 以异步操作禁言当前 <see cref="Group"/> 对象。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task MuteAsync()
         {
             return Task.Run(Mute);
         }
 
         /// <summary>
-        /// 请求信息。
+        /// 请求当前 <see cref="Group"/> 对象的信息。
         /// </summary>
-        /// <param name="refresh">是否刷新缓存。</param>
+        /// <param name="refresh">如果要求酷Q不使用缓存的信息，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public virtual void RequestInfo(bool refresh = false)
         {
             _info = null;
@@ -202,19 +223,22 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 以异步操作请求信息。
+        /// 以异步操作请求当前 <see cref="Group"/> 对象的信息。
         /// </summary>
-        /// <param name="refresh">是否刷新缓存。</param>
+        /// <param name="refresh">如果要求酷Q不使用缓存的信息，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public virtual Task RequestInfoAsync(bool refresh = false)
         {
             return Task.Run(() => RequestInfo(refresh));
         }
 
         /// <summary>
-        /// 发送消息。
+        /// 向当前 <see cref="Group"/> 对象发送消息。
         /// </summary>
         /// <param name="message">要发送的消息。</param>
-        /// <returns>发送的消息。</returns>
+        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
+        /// <exception cref="ArgumentException"><paramref name="message"/> 为 <c>null</c> 或 <see cref="string.Empty"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public override Message Send(string message)
         {
             if (string.IsNullOrEmpty(message))
@@ -228,16 +252,25 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 解除禁言。
+        /// 将当前 <see cref="Group"/> 对象解除禁言。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Unmute()
         {
+            if (!Bot.CurrentUser.AsMemberOf(this).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
+            }
+
             NativeMethods.SetGroupIsMuted(Bot.AuthCode, Number, false).CheckError();
         }
 
         /// <summary>
-        /// 以异步方式解除禁言。
+        /// 以异步操作将当前 <see cref="Group"/> 对象解除禁言。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task UnmuteAsync()
         {
             return Task.Run(Unmute);

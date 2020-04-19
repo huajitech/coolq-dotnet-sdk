@@ -20,7 +20,7 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取当前 <see cref="AnonymousMember"/> 的所属 <see cref="CoolQ.Group"/>。
+        /// 获取当前 <see cref="AnonymousMember"/> 的所属 <see cref="CoolQ.Group"/> 对象。
         /// </summary>
         public Group Group { get; }
 

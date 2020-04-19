@@ -2,6 +2,10 @@ using System;
 
 namespace HuajiTech.CoolQ
 {
+    /// <summary>
+    /// 提供用于记录日志的方法的静态类。
+    /// 即使记录失败，此类的方法也不会抛出任何异常。
+    /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Performance", "CA1806:不要忽略方法结果", Justification = "<挂起>")]
     public static class Logger

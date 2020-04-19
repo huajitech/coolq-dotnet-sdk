@@ -15,10 +15,21 @@ namespace HuajiTech.CoolQ
         /// 以指定的号码和群初始化一个 <see cref="Member"/> 类的新实例。
         /// </summary>
         /// <param name="number">号码。</param>
-        /// <param name="group">群。</param>
+        /// <param name="group">所在群聊。</param>
+        /// <exception cref="ArgumentNullException"><paramref name="group"/> 为 <c>null</c>。</exception>
         public Member(long number, Group group)
+            : this(number, group, false)
+        {
+        }
+
+        internal Member(long number, Group group, bool groupCanBeNull)
             : base(number)
         {
+            if (!groupCanBeNull && group is null)
+            {
+                throw new ArgumentNullException(nameof(group));
+            }
+
             Group = group;
         }
 
@@ -29,82 +40,84 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取一个值，指示是否已请求信息。
+        /// 获取一个值，指示当前 <see cref="Member"/> 对象是否含有信息。
         /// </summary>
         public override bool HasInfo => !(_info is null);
 
         /// <summary>
-        /// 获取年龄。
+        /// 获取当前 <see cref="Member"/> 对象的年龄。
         /// </summary>
         public int Age => GetInfo().Age;
 
         /// <summary>
-        /// 获取群名片。
+        /// 获取当前 <see cref="Member"/> 对象的群名片。
         /// </summary>
         public string Alias => GetInfo().Alias;
 
         /// <summary>
-        /// 获取一个值，指示该成员是否可以编辑群名片。
+        /// 获取一个值，指示当前 <see cref="Member"/> 对象是否可以编辑 <see cref="Alias"/>。
         /// </summary>
         public bool CanEditAlias => GetInfo().CanEditAlias;
 
         /// <summary>
-        /// 获取自定义头衔。
+        /// 获取当前 <see cref="Member"/> 对象的自定义头衔。
         /// </summary>
         public CustomTitle CustomTitle => GetInfo().CustomTitle;
 
         /// <summary>
-        /// 获取显示名称。
+        /// 获取当前 <see cref="Member"/> 对象的显示名称。
+        /// 对于 <see cref="Member"/> 对象，在 <see cref="Alias"/> 不为 <c>null</c> 时为 <see cref="Alias"/>；否则为 <see cref="Nickname"/>。
         /// </summary>
         public override string DisplayName => Alias ?? Nickname;
 
         /// <summary>
-        /// 获取入群时间。
+        /// 获取当前 <see cref="Member"/> 对象加入 <see cref="Group"/> 的时间。
         /// </summary>
         public DateTime EntranceTime => GetInfo().EntranceTime;
 
         /// <summary>
-        /// 获取性别。
+        /// 获取当前 <see cref="Member"/> 对象的性别。
         /// </summary>
         public Gender Gender => GetInfo().Gender;
 
         /// <summary>
-        /// 获取所在群。
+        /// 获取当前 <see cref="Member"/> 对象的所属 <see cref="CoolQ.Group"/> 对象。
+        /// 如果当前 <see cref="Member"/> 对象是 <see cref="CurrentUser.MessageReceived"/> 事件数据的 <see cref="MessageReceivedEventArgs.Sender"/> 属性的值，则为 <c>null</c>。
         /// </summary>
         public Group Group { get; }
 
         /// <summary>
-        /// 获取一个值，指示是否有不良记录。
+        /// 获取一个值，指示当前 <see cref="Member"/> 对象是否有不良记录。
         /// </summary>
         public bool HasBadRecord => GetInfo().HasBadRecord;
 
         /// <summary>
-        /// 获取一个值，指示是否为管理员或群主。
+        /// 获取一个值，指示当前 <see cref="Member"/> 对象的 <see cref="Role"/> 属性是否为 <see cref="MemberRole.Administrator"/> 或 <see cref="MemberRole.Owner"/>。
         /// </summary>
         public bool IsAdministrator => Role == MemberRole.Administrator || Role == MemberRole.Owner;
 
         /// <summary>
-        /// 获取最后发言时间。
+        /// 获取当前 <see cref="Member"/> 对象的最后发言时间。
         /// </summary>
         public DateTime LastSpeakTime => GetInfo().LastSpeakTime;
 
         /// <summary>
-        /// 获取等级。
+        /// 获取当前 <see cref="Member"/> 对象的等级。
         /// </summary>
         public string Level => GetInfo().Level;
 
         /// <summary>
-        /// 获取位置。
+        /// 获取当前 <see cref="Member"/> 对象的位置。
         /// </summary>
         public string Location => GetInfo().Location;
 
         /// <summary>
-        /// 获取昵称。
+        /// 获取当前 <see cref="Member"/> 对象的昵称。
         /// </summary>
         public override string Nickname => GetInfo().Nickname;
 
         /// <summary>
-        /// 获取角色。
+        /// 获取当前 <see cref="Member"/> 对象的角色。
         /// </summary>
         public MemberRole Role => GetInfo().Role;
 
@@ -119,9 +132,10 @@ namespace HuajiTech.CoolQ
         public static event EventHandler<MemberUnmutedEventArgs> Unmuted;
 
         /// <summary>
-        /// 踢出。
+        /// 将当前 <see cref="Member"/> 对象踢出所在群。
         /// </summary>
-        /// <param name="disallowRejoin">是否禁止再次加群。</param>
+        /// <param name="disallowRejoin">如果不再接收当前 <see cref="Member"/> 对象的 <see cref="EntranceRequest"/>，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Kick(bool disallowRejoin = false)
         {
             NativeMethods.KickMember(
@@ -129,18 +143,22 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 以异步操作踢出。
+        /// 以异步操作将当前 <see cref="Member"/> 对象踢出所在群。
         /// </summary>
-        /// <param name="disallowRejoin">是否禁止再次加群。</param>
+        /// <param name="disallowRejoin">如果不再接收当前 <see cref="Member"/> 对象的 <see cref="EntranceRequest"/>，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task KickAsync(bool disallowRejoin = false)
         {
             return Task.Run(() => Kick(disallowRejoin));
         }
 
         /// <summary>
-        /// 禁言。
+        /// 禁言当前 <see cref="Member"/> 对象。
         /// </summary>
-        /// <param name="duration">禁言时长。</param>
+        /// <param name="duration">要禁言当前 <see cref="Member"/> 对象的时长。</param>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="duration"/> 小于或等于 <see cref="TimeSpan.Zero"/>。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Mute(TimeSpan duration)
         {
             if (duration <= TimeSpan.Zero)
@@ -148,23 +166,32 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentOutOfRangeException(nameof(duration));
             }
 
+            if (!Bot.CurrentUser.AsMemberOf(Group).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
+            }
+
             NativeMethods.MuteMember(
                 Bot.AuthCode, Group.Number, Number, (long)duration.TotalSeconds).CheckError();
         }
 
         /// <summary>
-        /// 以异步操作禁言。
+        /// 以异步操作禁言当前 <see cref="Member"/> 对象。
         /// </summary>
-        /// <param name="duration">禁言时长。</param>
+        /// <param name="duration">要禁言当前 <see cref="Member"/> 对象的时长。</param>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="duration"/> 小于或等于 <see cref="TimeSpan.Zero"/>。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task MuteAsync(TimeSpan duration)
         {
             return Task.Run(() => Mute(duration));
         }
 
         /// <summary>
-        /// 请求信息。
+        /// 请求当前 <see cref="Member"/> 对象的信息。
         /// </summary>
-        /// <param name="refresh">是否刷新缓存。</param>
+        /// <param name="refresh">如果要求酷Q不使用缓存的信息，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public override void RequestInfo(bool refresh = false)
         {
             _info = null;
@@ -172,30 +199,44 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 设为管理员。
+        /// 将当前 <see cref="Member"/> 对象设为 <see cref="Group"/> 的管理员。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是<see cref="Group"/> 的群主。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Role"/> 为 <see cref="MemberRole.Owner"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void SetAsAdministrator()
         {
             SetIsAdministrator(true);
         }
 
         /// <summary>
-        /// 以异步操作设为管理员。
+        /// 以异步操作将当前 <see cref="Member"/> 对象设为 <see cref="Group"/> 的管理员。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是<see cref="Group"/> 的群主。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Role"/> 为 <see cref="MemberRole.Owner"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task SetAsAdministratorAsync()
         {
             return Task.Run(SetAsAdministrator);
         }
 
         /// <summary>
-        /// 设置群名片。
+        /// 设置当前 <see cref="Member"/> 对象的 <see cref="Alias"/>。
         /// </summary>
-        /// <param name="alias">要设置的群名片。</param>
+        /// <param name="alias">要设置的 <see cref="Alias"/> 的值。</param>
+        /// <exception cref="ArgumentException"><paramref name="alias"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void SetAlias(string alias)
         {
-            if (string.IsNullOrEmpty(alias))
+            if (string.IsNullOrWhiteSpace(alias))
             {
-                throw new ArgumentException(Resources.FieldCannotBeEmpty);
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace);
+            }
+
+            if (!Bot.CurrentUser.AsMemberOf(Group).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
             }
 
             NativeMethods.SetMemberAlias(
@@ -205,23 +246,34 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 以异步操作设置群名片。
+        /// 以异步操作设置当前 <see cref="Member"/> 对象的 <see cref="Alias"/>。
         /// </summary>
-        /// <param name="alias">要设置的群名片。</param>
+        /// <param name="alias">要设置的 <see cref="Alias"/> 的值。</param>
+        /// <exception cref="ArgumentException"><paramref name="alias"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task SetAliasAsync(string alias)
         {
             return Task.Run(() => SetAlias(alias));
         }
 
         /// <summary>
-        /// 设置自定义头衔。
+        /// 设置当前 <see cref="Member"/> 对象的 <see cref="CustomTitle"/>。
         /// </summary>
-        /// <param name="title">要设置的头衔。</param>
+        /// <param name="title">要设置的 <see cref="CustomTitle"/> 的值。</param>
+        /// <exception cref="ArgumentNullException"><paramref name="title"/> 为 <c>null</c>。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void SetCustomTitle(CustomTitle title)
         {
             if (title is null)
             {
                 throw new ArgumentNullException(nameof(title));
+            }
+
+            if (!Bot.CurrentUser.AsMemberOf(Group).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
             }
 
             var expirationSeconds = (long)((title.ExpirationTime - DateTime.Now)?.TotalSeconds ?? -1);
@@ -233,17 +285,22 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 以异步操作设置自定义头衔。
+        /// 以异步操作设置当前 <see cref="Member"/> 对象的 <see cref="CustomTitle"/>。
         /// </summary>
-        /// <param name="title">要设置的头衔。</param>
+        /// <param name="title">要设置的 <see cref="CustomTitle"/> 的值。</param>
+        /// <exception cref="ArgumentNullException"><paramref name="title"/> 为 <c>null</c>。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task SetCustomTitleAsync(CustomTitle title)
         {
             return Task.Run(() => SetCustomTitle(title));
         }
 
         /// <summary>
-        /// 解除禁言。
+        /// 将当前 <see cref="Member"/> 对象解除禁言。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void Unmute()
         {
             NativeMethods.MuteMember(
@@ -251,24 +308,32 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 以异步操作解除禁言。
+        /// 以异步操作将当前 <see cref="Member"/> 对象解除禁言。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是 <see cref="Group"/> 的管理员。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task UnmuteAsync()
         {
             return Task.Run(Unmute);
         }
 
         /// <summary>
-        /// 解除管理员身份。
+        /// 解除当前 <see cref="Member"/> 对象在 <see cref="Group"/> 的管理员身份。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是<see cref="Group"/> 的群主。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Role"/> 为 <see cref="MemberRole.Owner"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void UnsetAsAdministrator()
         {
             SetIsAdministrator(false);
         }
 
         /// <summary>
-        /// 以异步操作解除管理员身份。
+        /// 以异步操作解除当前 <see cref="Member"/> 对象在 <see cref="Group"/> 的管理员身份。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是<see cref="Group"/> 的群主。</exception>
+        /// <exception cref="InvalidOperationException"><see cref="Role"/> 为 <see cref="MemberRole.Owner"/>。</exception>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task UnsetAsAdministratorAsync()
         {
             return Task.Run(UnsetAsAdministrator);
@@ -305,6 +370,11 @@ namespace HuajiTech.CoolQ
 
         private void SetIsAdministrator(bool isAdministrator)
         {
+            if (!Bot.CurrentUser.AsMemberOf(Group).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
+            }
+
             if (Role == MemberRole.Owner)
             {
                 throw new InvalidOperationException(Resources.MemberIsOwner);
