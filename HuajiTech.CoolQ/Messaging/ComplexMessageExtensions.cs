@@ -12,6 +12,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 1 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0)
@@ -28,6 +29,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 2 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -46,6 +48,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 3 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -66,6 +69,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 4 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -88,6 +92,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 5 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -112,6 +117,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 6 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -138,6 +144,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 7 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -166,6 +173,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 8 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -196,6 +204,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 9 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -228,6 +237,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 10 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -262,6 +272,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 11 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -298,6 +309,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 12 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -336,6 +348,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 13 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -376,6 +389,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 14 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -418,6 +432,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 15 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
@@ -462,6 +477,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="ComplexMessage"/> 对象解构为 16 个不同的 <see cref="MessageElement"/> 对象。
         /// 如果要求的 <see cref="MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         public static void Deconstruct(
             this ComplexMessage message,
             out MessageElement element0,
