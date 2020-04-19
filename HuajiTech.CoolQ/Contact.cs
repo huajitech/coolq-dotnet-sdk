@@ -1,6 +1,4 @@
 using HuajiTech.CoolQ.DataExchange;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace HuajiTech.CoolQ
