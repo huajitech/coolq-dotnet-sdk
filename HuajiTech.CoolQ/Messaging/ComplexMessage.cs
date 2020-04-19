@@ -182,7 +182,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 要包含返回的数组中的空数组元素，则为 <see cref="StringSplitOptions.None"/>。
         /// </param>
         /// <param name="separator">分隔此 <see cref="ComplexMessage"/> 对象中 <see cref="PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
-        /// <returns>一个 <see cref="ComplexMessage"/> 对象，其元素包含此 <see cref="ComplexMessage"/> 对象中的子 <see cref="PlainText"/> 对象，这些子 <see cref="PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
+        /// <returns>一个 <see cref="ComplexMessage"/> 对象，其元素包含此 <see cref="ComplexMessage"/> 对象中的子 <see cref="PlainText"/> 对象，这些子子 <see cref="PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
         /// <exception cref="ArgumentException"><paramref name="options"/> 不是 <see cref="StringSplitOptions"/> 值之一。</exception>
         public ComplexMessage SplitPlainText(StringSplitOptions options, params string[] separator)
         {
