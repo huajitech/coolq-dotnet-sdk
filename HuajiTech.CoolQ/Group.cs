@@ -104,15 +104,22 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 禁用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void DisableAnonymous()
         {
+            if (!Bot.CurrentUser.AsMemberOf(this).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
+            }
+
             NativeMethods.SetGroupIsAnonymousEnabled(Bot.AuthCode, Number, false).CheckError();
         }
 
         /// <summary>
         /// 以异步操作禁用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task DisableAnonymousAsync()
         {
@@ -122,15 +129,22 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 启用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public void EnableAnonymous()
         {
+            if (!Bot.CurrentUser.AsMemberOf(this).IsAdministrator)
+            {
+                throw new InvalidOperationException(Resources.AdministratorOnlyOperation);
+            }
+
             NativeMethods.SetGroupIsAnonymousEnabled(Bot.AuthCode, Number, true).CheckError();
         }
 
         /// <summary>
         /// 启用当前 <see cref="Group"/> 对象的匿名聊天功能。
         /// </summary>
+        /// <exception cref="InvalidOperationException"><see cref="Bot.CurrentUser"/> 不是当前 <see cref="Group"/> 对象的管理员。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task EnableAnonymousAsync()
         {
