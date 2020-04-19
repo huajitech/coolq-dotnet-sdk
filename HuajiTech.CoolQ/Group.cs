@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 表示群。
+    /// 表示群聊。
     /// </summary>
     public partial class Group : Chat
     {
