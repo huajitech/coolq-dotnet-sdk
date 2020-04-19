@@ -165,7 +165,8 @@
   
   <a id="HuajiTech_CoolQ_User_DisplayName_" data-uid="HuajiTech.CoolQ.User.DisplayName*"></a>
   <h4 id="HuajiTech_CoolQ_User_DisplayName" data-uid="HuajiTech.CoolQ.User.DisplayName">DisplayName</h4>
-  <div class="markdown level1 summary"><p>获取显示名称。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象的显示名称。
+对于 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象，为 <a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_Nickname">Nickname</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -193,7 +194,7 @@
   
   <a id="HuajiTech_CoolQ_User_HasInfo_" data-uid="HuajiTech.CoolQ.User.HasInfo*"></a>
   <h4 id="HuajiTech_CoolQ_User_HasInfo" data-uid="HuajiTech.CoolQ.User.HasInfo">HasInfo</h4>
-  <div class="markdown level1 summary"><p>获取一个值，指示是否已请求信息。</p>
+  <div class="markdown level1 summary"><p>获取一个值，指示当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象是否含有信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -219,7 +220,7 @@
   
   <a id="HuajiTech_CoolQ_User_Nickname_" data-uid="HuajiTech.CoolQ.User.Nickname*"></a>
   <h4 id="HuajiTech_CoolQ_User_Nickname" data-uid="HuajiTech.CoolQ.User.Nickname">Nickname</h4>
-  <div class="markdown level1 summary"><p>获取昵称。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象的昵称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -247,7 +248,7 @@
   
   <a id="HuajiTech_CoolQ_User_GiveThumbsUp_" data-uid="HuajiTech.CoolQ.User.GiveThumbsUp*"></a>
   <h4 id="HuajiTech_CoolQ_User_GiveThumbsUp_System_Int32_" data-uid="HuajiTech.CoolQ.User.GiveThumbsUp(System.Int32)">GiveThumbsUp(Int32)</h4>
-  <div class="markdown level1 summary"><p>点赞。</p>
+  <div class="markdown level1 summary"><p>给予当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象指定数量的赞。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -267,7 +268,23 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">count</span></td>
-        <td><p>数量。</p>
+        <td><p>赞的数量。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -276,7 +293,7 @@
   
   <a id="HuajiTech_CoolQ_User_GiveThumbsUpAsync_" data-uid="HuajiTech.CoolQ.User.GiveThumbsUpAsync*"></a>
   <h4 id="HuajiTech_CoolQ_User_GiveThumbsUpAsync_System_Int32_" data-uid="HuajiTech.CoolQ.User.GiveThumbsUpAsync(System.Int32)">GiveThumbsUpAsync(Int32)</h4>
-  <div class="markdown level1 summary"><p>以异步操作点赞。</p>
+  <div class="markdown level1 summary"><p>以异步操作给予当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象指定数量的赞。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -296,7 +313,7 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">count</span></td>
-        <td><p>数量。</p>
+        <td><p>赞的数量。</p>
 </td>
       </tr>
     </tbody>
@@ -316,11 +333,27 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_User_RequestInfo_" data-uid="HuajiTech.CoolQ.User.RequestInfo*"></a>
   <h4 id="HuajiTech_CoolQ_User_RequestInfo_System_Boolean_" data-uid="HuajiTech.CoolQ.User.RequestInfo(System.Boolean)">RequestInfo(Boolean)</h4>
-  <div class="markdown level1 summary"><p>请求信息。</p>
+  <div class="markdown level1 summary"><p>请求当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象的信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -340,7 +373,23 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">refresh</span></td>
-        <td><p>是否刷新缓存。</p>
+        <td><p>如果要求酷Q不使用缓存的信息，则为 <code>true</code>；否则为 <code>false</code>。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -349,7 +398,7 @@
   
   <a id="HuajiTech_CoolQ_User_RequestInfoAsync_" data-uid="HuajiTech.CoolQ.User.RequestInfoAsync*"></a>
   <h4 id="HuajiTech_CoolQ_User_RequestInfoAsync_System_Boolean_" data-uid="HuajiTech.CoolQ.User.RequestInfoAsync(System.Boolean)">RequestInfoAsync(Boolean)</h4>
-  <div class="markdown level1 summary"><p>以异步操作请求信息。</p>
+  <div class="markdown level1 summary"><p>以异步操作请求当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象的信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -369,7 +418,7 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">refresh</span></td>
-        <td><p>是否刷新缓存。</p>
+        <td><p>如果要求酷Q不使用缓存的信息，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </td>
       </tr>
     </tbody>
@@ -389,11 +438,27 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_User_Send_" data-uid="HuajiTech.CoolQ.User.Send*"></a>
   <h4 id="HuajiTech_CoolQ_User_Send_System_String_" data-uid="HuajiTech.CoolQ.User.Send(System.String)">Send(String)</h4>
-  <div class="markdown level1 summary"><p>发送消息。</p>
+  <div class="markdown level1 summary"><p>向当前 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象发送消息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -429,13 +494,34 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
-        <td><p>发送的消息。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">&#37325;&#20889;</h5>
   <div><a class="xref" href="HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_Send_System_String_">Chat.Send(String)</a></div>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code> 或 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">&#23454;&#29616;</h3>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>

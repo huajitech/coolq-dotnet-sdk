@@ -81,19 +81,17 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Message</span></div>
   </div>
+  <div classs="implements">
+    <h5>&#23454;&#29616;</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -106,7 +104,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
   <h5 id="HuajiTech_CoolQ_Message_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Message</code></pre>
+    <pre><code class="lang-csharp hljs">public class Message : IEquatable&lt;Message&gt;</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -114,7 +112,8 @@
   
   <a id="HuajiTech_CoolQ_Message__ctor_" data-uid="HuajiTech.CoolQ.Message.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_Message__ctor_System_Int64_System_String_" data-uid="HuajiTech.CoolQ.Message.#ctor(System.Int64,System.String)">Message(Int64, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>以指定的 ID 和内容初始化一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 类的新实例。</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -133,12 +132,14 @@
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>消息的 ID。</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">content</span></td>
-        <td></td>
+        <td><p>消息的内容。</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -148,7 +149,7 @@
   
   <a id="HuajiTech_CoolQ_Message_Content_" data-uid="HuajiTech.CoolQ.Message.Content*"></a>
   <h4 id="HuajiTech_CoolQ_Message_Content" data-uid="HuajiTech.CoolQ.Message.Content">Content</h4>
-  <div class="markdown level1 summary"><p>获取内容。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象的内容。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -174,7 +175,7 @@
   
   <a id="HuajiTech_CoolQ_Message_Id_" data-uid="HuajiTech.CoolQ.Message.Id*"></a>
   <h4 id="HuajiTech_CoolQ_Message_Id" data-uid="HuajiTech.CoolQ.Message.Id">Id</h4>
-  <div class="markdown level1 summary"><p>获取 ID。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象的ID。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -200,20 +201,149 @@
   </h3>
   
   
+  <a id="HuajiTech_CoolQ_Message_Equals_" data-uid="HuajiTech.CoolQ.Message.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Message_Equals_HuajiTech_CoolQ_Message_" data-uid="HuajiTech.CoolQ.Message.Equals(HuajiTech.CoolQ.Message)">Equals(Message)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Message other)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Message_Equals_" data-uid="HuajiTech.CoolQ.Message.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Message_Equals_System_Object_" data-uid="HuajiTech.CoolQ.Message.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">&#37325;&#20889;</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="HuajiTech_CoolQ_Message_GetHashCode_" data-uid="HuajiTech.CoolQ.Message.GetHashCode*"></a>
+  <h4 id="HuajiTech_CoolQ_Message_GetHashCode" data-uid="HuajiTech.CoolQ.Message.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">&#37325;&#20889;</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
   <a id="HuajiTech_CoolQ_Message_Recall_" data-uid="HuajiTech.CoolQ.Message.Recall*"></a>
   <h4 id="HuajiTech_CoolQ_Message_Recall" data-uid="HuajiTech.CoolQ.Message.Recall">Recall()</h4>
-  <div class="markdown level1 summary"><p>撤回。</p>
+  <div class="markdown level1 summary"><p>撤回当前 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Recall()</code></pre>
   </div>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Message_RecallAsync_" data-uid="HuajiTech.CoolQ.Message.RecallAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Message_RecallAsync" data-uid="HuajiTech.CoolQ.Message.RecallAsync">RecallAsync()</h4>
-  <div class="markdown level1 summary"><p>以异步操作撤回。</p>
+  <div class="markdown level1 summary"><p>以异步操作撤回当前 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -232,6 +362,22 @@
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -264,6 +410,53 @@
   <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="operators">&#36816;&#31639;&#31526;
   </h3>
+  
+  
+  <a id="HuajiTech_CoolQ_Message_op_Equality_" data-uid="HuajiTech.CoolQ.Message.op_Equality*"></a>
+  <h4 id="HuajiTech_CoolQ_Message_op_Equality_HuajiTech_CoolQ_Message_HuajiTech_CoolQ_Message_" data-uid="HuajiTech.CoolQ.Message.op_Equality(HuajiTech.CoolQ.Message,HuajiTech.CoolQ.Message)">Equality(Message, Message)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Message left, Message right)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Message_op_Implicit_" data-uid="HuajiTech.CoolQ.Message.op_Implicit*"></a>
@@ -306,6 +499,57 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Message_op_Inequality_" data-uid="HuajiTech.CoolQ.Message.op_Inequality*"></a>
+  <h4 id="HuajiTech_CoolQ_Message_op_Inequality_HuajiTech_CoolQ_Message_HuajiTech_CoolQ_Message_" data-uid="HuajiTech.CoolQ.Message.op_Inequality(HuajiTech.CoolQ.Message,HuajiTech.CoolQ.Message)">Inequality(Message, Message)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Message left, Message right)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
   <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
   <div>
       <a class="xref" href="HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_Message_">Extensions.RegexDecode(Message)</a>

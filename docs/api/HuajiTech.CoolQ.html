@@ -81,13 +81,15 @@
       <section><p>为 <a class="xref" href="HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_AdministratorAdded">AdministratorAdded</a> 和 <a class="xref" href="HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_AdministratorRemoved">AdministratorRemoved</a> 事件提供数据。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.AnonymousMember.html">AnonymousMember</a></h4>
-      <section><p>表示一个匿名成员。</p>
+      <section><p>表示匿名成员。
+此类不能在外部被实例化。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.AnonymousMessageReceivedEventArgs.html">AnonymousMessageReceivedEventArgs</a></h4>
       <section><p>为 <a class="xref" href="HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_AnonymousMessageReceived">AnonymousMessageReceived</a> 事件提供数据。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.AppAttribute.html">AppAttribute</a></h4>
-      <section><p>指示用作酷Q应用入口点的类。</p>
+      <section><p>指示用作酷Q应用入口点的类。
+此类不能被继承。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.Bot.html">Bot</a></h4>
       <section><p>提供与机器人交互的方法、事件和属性的静态类。</p>
@@ -103,7 +105,8 @@
       <section><p>为 <a class="xref" href="HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_ContactAdded">ContactAdded</a> 事件提供数据。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.ContactRequest.html">ContactRequest</a></h4>
-      <section><p>表示联系人请求。</p>
+      <section><p>表示联系人请求。
+此类不能在外部被实例化。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.ContactRequestedEventArgs.html">ContactRequestedEventArgs</a></h4>
       <section><p>为 <a class="xref" href="HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_ContactRequested">ContactRequested</a> 事件提供数据。</p>
@@ -112,19 +115,22 @@
       <section><p>在酷Q返回了意料之外的值时引发的异常。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.CurrentUser.html">CurrentUser</a></h4>
-      <section><p>表示当前用户，并提供与当前用户交互的静态方法、事件和属性。</p>
+      <section><p>表示当前用户，并提供与当前用户交互的静态方法、事件和属性。
+可通过 <a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 属性获取 <a class="xref" href="HuajiTech.CoolQ.CurrentUser.html">CurrentUser</a> 类的实例。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.CustomTitle.html">CustomTitle</a></h4>
       <section><p>表示自定义头衔。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.EntranceInvitation.html">EntranceInvitation</a></h4>
-      <section><p>表示入群邀请。</p>
+      <section><p>表示入群邀请。
+此类不能在外部被实例化。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.EntranceInvitedEventArgs.html">EntranceInvitedEventArgs</a></h4>
       <section><p>为 <a class="xref" href="HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_EntranceInvited">EntranceInvited</a> 事件提供数据。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.EntranceRequest.html">EntranceRequest</a></h4>
-      <section><p>表示入群请求。</p>
+      <section><p>表示入群请求。
+此类不能在外部被实例化。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.EntranceRequestedEventArgs.html">EntranceRequestedEventArgs</a></h4>
       <section><p>为 <a class="xref" href="HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_EntranceRequested">EntranceRequested</a> 事件提供数据。</p>
@@ -145,7 +151,9 @@
       <section><p>为 <a class="xref" href="HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_Muted">Muted</a> 和 <a class="xref" href="HuajiTech.CoolQ.Group.html#HuajiTech_CoolQ_Group_Unmuted">Unmuted</a> 事件提供数据。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.Logger.html">Logger</a></h4>
-      <section></section>
+      <section><p>提供用于记录日志的方法的静态类。
+即使记录失败，此类的方法也不会抛出任何异常。</p>
+</section>
       <h4><a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a></h4>
       <section><p>表示成员。</p>
 </section>

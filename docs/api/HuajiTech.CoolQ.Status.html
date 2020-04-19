@@ -81,22 +81,20 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Status</span></div>
   </div>
+  <div classs="implements">
+    <h5>&#23454;&#29616;</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
     <div>
       <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -109,7 +107,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
   <h5 id="HuajiTech_CoolQ_Status_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Status</code></pre>
+    <pre><code class="lang-csharp hljs">public class Status : IEquatable&lt;Status&gt;</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -137,19 +135,40 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">value</span></td>
-        <td><p>值。</p>
+        <td><p>状态的值。</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">unit</span></td>
-        <td><p>单位。</p>
+        <td><p>状态的单位。</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.StatusColor.html">StatusColor</a></td>
         <td><span class="parametername">color</span></td>
-        <td><p>颜色。</p>
+        <td><p>状态的颜色。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">unit</code> 为 <code>null</code>。</p>
 </td>
       </tr>
     </tbody>
@@ -160,7 +179,7 @@
   
   <a id="HuajiTech_CoolQ_Status_Color_" data-uid="HuajiTech.CoolQ.Status.Color*"></a>
   <h4 id="HuajiTech_CoolQ_Status_Color" data-uid="HuajiTech.CoolQ.Status.Color">Color</h4>
-  <div class="markdown level1 summary"><p>获取颜色。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a> 对象的颜色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -186,7 +205,7 @@
   
   <a id="HuajiTech_CoolQ_Status_Unit_" data-uid="HuajiTech.CoolQ.Status.Unit*"></a>
   <h4 id="HuajiTech_CoolQ_Status_Unit" data-uid="HuajiTech.CoolQ.Status.Unit">Unit</h4>
-  <div class="markdown level1 summary"><p>获取单位。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a> 对象的单位。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -212,7 +231,7 @@
   
   <a id="HuajiTech_CoolQ_Status_Value_" data-uid="HuajiTech.CoolQ.Status.Value*"></a>
   <h4 id="HuajiTech_CoolQ_Status_Value" data-uid="HuajiTech.CoolQ.Status.Value">Value</h4>
-  <div class="markdown level1 summary"><p>获取值。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a> 对象的值。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -240,7 +259,7 @@
   
   <a id="HuajiTech_CoolQ_Status_Encode_" data-uid="HuajiTech.CoolQ.Status.Encode*"></a>
   <h4 id="HuajiTech_CoolQ_Status_Encode" data-uid="HuajiTech.CoolQ.Status.Encode">Encode()</h4>
-  <div class="markdown level1 summary"><p>编码。</p>
+  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a> 对象的值编码为可被酷Q使用的 Base64 字符串。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -258,11 +277,224 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>编码后的字符串。</p>
+        <td><p>编码后的 Base64 字符串。</p>
 </td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Status_Equals_" data-uid="HuajiTech.CoolQ.Status.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Status_Equals_HuajiTech_CoolQ_Status_" data-uid="HuajiTech.CoolQ.Status.Equals(HuajiTech.CoolQ.Status)">Equals(Status)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Status other)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Status_Equals_" data-uid="HuajiTech.CoolQ.Status.Equals*"></a>
+  <h4 id="HuajiTech_CoolQ_Status_Equals_System_Object_" data-uid="HuajiTech.CoolQ.Status.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">&#37325;&#20889;</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
+  <a id="HuajiTech_CoolQ_Status_GetHashCode_" data-uid="HuajiTech.CoolQ.Status.GetHashCode*"></a>
+  <h4 id="HuajiTech_CoolQ_Status_GetHashCode" data-uid="HuajiTech.CoolQ.Status.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">&#37325;&#20889;</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <h3 id="operators">&#36816;&#31639;&#31526;
+  </h3>
+  
+  
+  <a id="HuajiTech_CoolQ_Status_op_Equality_" data-uid="HuajiTech.CoolQ.Status.op_Equality*"></a>
+  <h4 id="HuajiTech_CoolQ_Status_op_Equality_HuajiTech_CoolQ_Status_HuajiTech_CoolQ_Status_" data-uid="HuajiTech.CoolQ.Status.op_Equality(HuajiTech.CoolQ.Status,HuajiTech.CoolQ.Status)">Equality(Status, Status)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Status left, Status right)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="HuajiTech_CoolQ_Status_op_Inequality_" data-uid="HuajiTech.CoolQ.Status.op_Inequality*"></a>
+  <h4 id="HuajiTech_CoolQ_Status_op_Inequality_HuajiTech_CoolQ_Status_HuajiTech_CoolQ_Status_" data-uid="HuajiTech.CoolQ.Status.op_Inequality(HuajiTech.CoolQ.Status,HuajiTech.CoolQ.Status)">Inequality(Status, Status)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Status left, Status right)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
 </article>
           </div>
           

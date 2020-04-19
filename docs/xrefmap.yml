@@ -443,6 +443,19 @@ references:
   commentId: T:HuajiTech.CoolQ.Chat
   fullName: HuajiTech.CoolQ.Chat
   nameWithType: Chat
+- uid: HuajiTech.CoolQ.Chat.#ctor(System.Int64)
+  name: Chat(Int64)
+  href: api/HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat__ctor_System_Int64_
+  commentId: M:HuajiTech.CoolQ.Chat.#ctor(System.Int64)
+  fullName: HuajiTech.CoolQ.Chat.Chat(System.Int64)
+  nameWithType: Chat.Chat(Int64)
+- uid: HuajiTech.CoolQ.Chat.#ctor*
+  name: Chat
+  href: api/HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat__ctor_
+  commentId: Overload:HuajiTech.CoolQ.Chat.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Chat.Chat
+  nameWithType: Chat.Chat
 - uid: HuajiTech.CoolQ.Chat.DisplayName
   name: DisplayName
   href: api/HuajiTech.CoolQ.Chat.html#HuajiTech_CoolQ_Chat_DisplayName
@@ -572,6 +585,19 @@ references:
   commentId: T:HuajiTech.CoolQ.Contact
   fullName: HuajiTech.CoolQ.Contact
   nameWithType: Contact
+- uid: HuajiTech.CoolQ.Contact.#ctor(System.Int64)
+  name: Contact(Int64)
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact__ctor_System_Int64_
+  commentId: M:HuajiTech.CoolQ.Contact.#ctor(System.Int64)
+  fullName: HuajiTech.CoolQ.Contact.Contact(System.Int64)
+  nameWithType: Contact.Contact(Int64)
+- uid: HuajiTech.CoolQ.Contact.#ctor*
+  name: Contact
+  href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact__ctor_
+  commentId: Overload:HuajiTech.CoolQ.Contact.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Contact.Contact
+  nameWithType: Contact.Contact
 - uid: HuajiTech.CoolQ.Contact.Alias
   name: Alias
   href: api/HuajiTech.CoolQ.Contact.html#HuajiTech_CoolQ_Contact_Alias
@@ -878,19 +904,6 @@ references:
   commentId: E:HuajiTech.CoolQ.CurrentUser.ContactRequested
   fullName: HuajiTech.CoolQ.CurrentUser.ContactRequested
   nameWithType: CurrentUser.ContactRequested
-- uid: HuajiTech.CoolQ.CurrentUser.CsrfToken
-  name: CsrfToken
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_CsrfToken
-  commentId: P:HuajiTech.CoolQ.CurrentUser.CsrfToken
-  fullName: HuajiTech.CoolQ.CurrentUser.CsrfToken
-  nameWithType: CurrentUser.CsrfToken
-- uid: HuajiTech.CoolQ.CurrentUser.CsrfToken*
-  name: CsrfToken
-  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_CsrfToken_
-  commentId: Overload:HuajiTech.CoolQ.CurrentUser.CsrfToken
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.CurrentUser.CsrfToken
-  nameWithType: CurrentUser.CsrfToken
 - uid: HuajiTech.CoolQ.CurrentUser.EntranceInvited
   name: EntranceInvited
   href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_EntranceInvited
@@ -936,6 +949,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.CurrentUser.GetCookies
   nameWithType: CurrentUser.GetCookies
+- uid: HuajiTech.CoolQ.CurrentUser.GetCsrfToken
+  name: GetCsrfToken()
+  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCsrfToken
+  commentId: M:HuajiTech.CoolQ.CurrentUser.GetCsrfToken
+  fullName: HuajiTech.CoolQ.CurrentUser.GetCsrfToken()
+  nameWithType: CurrentUser.GetCsrfToken()
+- uid: HuajiTech.CoolQ.CurrentUser.GetCsrfToken*
+  name: GetCsrfToken
+  href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetCsrfToken_
+  commentId: Overload:HuajiTech.CoolQ.CurrentUser.GetCsrfToken
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.CurrentUser.GetCsrfToken
+  nameWithType: CurrentUser.GetCsrfToken
 - uid: HuajiTech.CoolQ.CurrentUser.GetGroups
   name: GetGroups()
   href: api/HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_GetGroups
@@ -2910,6 +2936,38 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Message.Content
   nameWithType: Message.Content
+- uid: HuajiTech.CoolQ.Message.Equals(HuajiTech.CoolQ.Message)
+  name: Equals(Message)
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Equals_HuajiTech_CoolQ_Message_
+  commentId: M:HuajiTech.CoolQ.Message.Equals(HuajiTech.CoolQ.Message)
+  fullName: HuajiTech.CoolQ.Message.Equals(HuajiTech.CoolQ.Message)
+  nameWithType: Message.Equals(Message)
+- uid: HuajiTech.CoolQ.Message.Equals(System.Object)
+  name: Equals(Object)
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Equals_System_Object_
+  commentId: M:HuajiTech.CoolQ.Message.Equals(System.Object)
+  fullName: HuajiTech.CoolQ.Message.Equals(System.Object)
+  nameWithType: Message.Equals(Object)
+- uid: HuajiTech.CoolQ.Message.Equals*
+  name: Equals
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Equals_
+  commentId: Overload:HuajiTech.CoolQ.Message.Equals
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Message.Equals
+  nameWithType: Message.Equals
+- uid: HuajiTech.CoolQ.Message.GetHashCode
+  name: GetHashCode()
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_GetHashCode
+  commentId: M:HuajiTech.CoolQ.Message.GetHashCode
+  fullName: HuajiTech.CoolQ.Message.GetHashCode()
+  nameWithType: Message.GetHashCode()
+- uid: HuajiTech.CoolQ.Message.GetHashCode*
+  name: GetHashCode
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_GetHashCode_
+  commentId: Overload:HuajiTech.CoolQ.Message.GetHashCode
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Message.GetHashCode
+  nameWithType: Message.GetHashCode
 - uid: HuajiTech.CoolQ.Message.Id
   name: Id
   href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Id
@@ -2923,6 +2981,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Message.Id
   nameWithType: Message.Id
+- uid: HuajiTech.CoolQ.Message.op_Equality(HuajiTech.CoolQ.Message,HuajiTech.CoolQ.Message)
+  name: Equality(Message, Message)
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_op_Equality_HuajiTech_CoolQ_Message_HuajiTech_CoolQ_Message_
+  commentId: M:HuajiTech.CoolQ.Message.op_Equality(HuajiTech.CoolQ.Message,HuajiTech.CoolQ.Message)
+  fullName: HuajiTech.CoolQ.Message.Equality(HuajiTech.CoolQ.Message, HuajiTech.CoolQ.Message)
+  nameWithType: Message.Equality(Message, Message)
+- uid: HuajiTech.CoolQ.Message.op_Equality*
+  name: Equality
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_op_Equality_
+  commentId: Overload:HuajiTech.CoolQ.Message.op_Equality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Message.Equality
+  nameWithType: Message.Equality
 - uid: HuajiTech.CoolQ.Message.op_Implicit(HuajiTech.CoolQ.Message)~System.String
   name: Implicit(Message to String)
   href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_op_Implicit_HuajiTech_CoolQ_Message__System_String
@@ -2942,6 +3013,19 @@ references:
   fullName.vb: HuajiTech.CoolQ.Message.Widening
   nameWithType: Message.Implicit
   nameWithType.vb: Message.Widening
+- uid: HuajiTech.CoolQ.Message.op_Inequality(HuajiTech.CoolQ.Message,HuajiTech.CoolQ.Message)
+  name: Inequality(Message, Message)
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_op_Inequality_HuajiTech_CoolQ_Message_HuajiTech_CoolQ_Message_
+  commentId: M:HuajiTech.CoolQ.Message.op_Inequality(HuajiTech.CoolQ.Message,HuajiTech.CoolQ.Message)
+  fullName: HuajiTech.CoolQ.Message.Inequality(HuajiTech.CoolQ.Message, HuajiTech.CoolQ.Message)
+  nameWithType: Message.Inequality(Message, Message)
+- uid: HuajiTech.CoolQ.Message.op_Inequality*
+  name: Inequality
+  href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_op_Inequality_
+  commentId: Overload:HuajiTech.CoolQ.Message.op_Inequality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Message.Inequality
+  nameWithType: Message.Inequality
 - uid: HuajiTech.CoolQ.Message.Recall
   name: Recall()
   href: api/HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Recall
@@ -5282,6 +5366,64 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Status.Encode
   nameWithType: Status.Encode
+- uid: HuajiTech.CoolQ.Status.Equals(HuajiTech.CoolQ.Status)
+  name: Equals(Status)
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Equals_HuajiTech_CoolQ_Status_
+  commentId: M:HuajiTech.CoolQ.Status.Equals(HuajiTech.CoolQ.Status)
+  fullName: HuajiTech.CoolQ.Status.Equals(HuajiTech.CoolQ.Status)
+  nameWithType: Status.Equals(Status)
+- uid: HuajiTech.CoolQ.Status.Equals(System.Object)
+  name: Equals(Object)
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Equals_System_Object_
+  commentId: M:HuajiTech.CoolQ.Status.Equals(System.Object)
+  fullName: HuajiTech.CoolQ.Status.Equals(System.Object)
+  nameWithType: Status.Equals(Object)
+- uid: HuajiTech.CoolQ.Status.Equals*
+  name: Equals
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Equals_
+  commentId: Overload:HuajiTech.CoolQ.Status.Equals
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Status.Equals
+  nameWithType: Status.Equals
+- uid: HuajiTech.CoolQ.Status.GetHashCode
+  name: GetHashCode()
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_GetHashCode
+  commentId: M:HuajiTech.CoolQ.Status.GetHashCode
+  fullName: HuajiTech.CoolQ.Status.GetHashCode()
+  nameWithType: Status.GetHashCode()
+- uid: HuajiTech.CoolQ.Status.GetHashCode*
+  name: GetHashCode
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_GetHashCode_
+  commentId: Overload:HuajiTech.CoolQ.Status.GetHashCode
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Status.GetHashCode
+  nameWithType: Status.GetHashCode
+- uid: HuajiTech.CoolQ.Status.op_Equality(HuajiTech.CoolQ.Status,HuajiTech.CoolQ.Status)
+  name: Equality(Status, Status)
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_op_Equality_HuajiTech_CoolQ_Status_HuajiTech_CoolQ_Status_
+  commentId: M:HuajiTech.CoolQ.Status.op_Equality(HuajiTech.CoolQ.Status,HuajiTech.CoolQ.Status)
+  fullName: HuajiTech.CoolQ.Status.Equality(HuajiTech.CoolQ.Status, HuajiTech.CoolQ.Status)
+  nameWithType: Status.Equality(Status, Status)
+- uid: HuajiTech.CoolQ.Status.op_Equality*
+  name: Equality
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_op_Equality_
+  commentId: Overload:HuajiTech.CoolQ.Status.op_Equality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Status.Equality
+  nameWithType: Status.Equality
+- uid: HuajiTech.CoolQ.Status.op_Inequality(HuajiTech.CoolQ.Status,HuajiTech.CoolQ.Status)
+  name: Inequality(Status, Status)
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_op_Inequality_HuajiTech_CoolQ_Status_HuajiTech_CoolQ_Status_
+  commentId: M:HuajiTech.CoolQ.Status.op_Inequality(HuajiTech.CoolQ.Status,HuajiTech.CoolQ.Status)
+  fullName: HuajiTech.CoolQ.Status.Inequality(HuajiTech.CoolQ.Status, HuajiTech.CoolQ.Status)
+  nameWithType: Status.Inequality(Status, Status)
+- uid: HuajiTech.CoolQ.Status.op_Inequality*
+  name: Inequality
+  href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_op_Inequality_
+  commentId: Overload:HuajiTech.CoolQ.Status.op_Inequality
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Status.Inequality
+  nameWithType: Status.Inequality
 - uid: HuajiTech.CoolQ.Status.Unit
   name: Unit
   href: api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Unit

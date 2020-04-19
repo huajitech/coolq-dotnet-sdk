@@ -164,7 +164,23 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Group.html">Group</a></td>
         <td><span class="parametername">group</span></td>
-        <td><p>群。</p>
+        <td><p>所在群聊。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">group</code> 为 <code>null</code>。</p>
 </td>
       </tr>
     </tbody>
@@ -175,7 +191,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Age_" data-uid="HuajiTech.CoolQ.Member.Age*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Age" data-uid="HuajiTech.CoolQ.Member.Age">Age</h4>
-  <div class="markdown level1 summary"><p>获取年龄。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的年龄。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -201,7 +217,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Alias_" data-uid="HuajiTech.CoolQ.Member.Alias*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Alias" data-uid="HuajiTech.CoolQ.Member.Alias">Alias</h4>
-  <div class="markdown level1 summary"><p>获取群名片。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的群名片。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -227,7 +243,7 @@
   
   <a id="HuajiTech_CoolQ_Member_CanEditAlias_" data-uid="HuajiTech.CoolQ.Member.CanEditAlias*"></a>
   <h4 id="HuajiTech_CoolQ_Member_CanEditAlias" data-uid="HuajiTech.CoolQ.Member.CanEditAlias">CanEditAlias</h4>
-  <div class="markdown level1 summary"><p>获取一个值，指示该成员是否可以编辑群名片。</p>
+  <div class="markdown level1 summary"><p>获取一个值，指示当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象是否可以编辑 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Alias">Alias</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -253,7 +269,7 @@
   
   <a id="HuajiTech_CoolQ_Member_CustomTitle_" data-uid="HuajiTech.CoolQ.Member.CustomTitle*"></a>
   <h4 id="HuajiTech_CoolQ_Member_CustomTitle" data-uid="HuajiTech.CoolQ.Member.CustomTitle">CustomTitle</h4>
-  <div class="markdown level1 summary"><p>获取自定义头衔。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的自定义头衔。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -279,7 +295,8 @@
   
   <a id="HuajiTech_CoolQ_Member_DisplayName_" data-uid="HuajiTech.CoolQ.Member.DisplayName*"></a>
   <h4 id="HuajiTech_CoolQ_Member_DisplayName" data-uid="HuajiTech.CoolQ.Member.DisplayName">DisplayName</h4>
-  <div class="markdown level1 summary"><p>获取显示名称。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的显示名称。
+对于 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象，在 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Alias">Alias</a> 不为 <code>null</code> 时为 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Alias">Alias</a>；否则为 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Nickname">Nickname</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -307,7 +324,7 @@
   
   <a id="HuajiTech_CoolQ_Member_EntranceTime_" data-uid="HuajiTech.CoolQ.Member.EntranceTime*"></a>
   <h4 id="HuajiTech_CoolQ_Member_EntranceTime" data-uid="HuajiTech.CoolQ.Member.EntranceTime">EntranceTime</h4>
-  <div class="markdown level1 summary"><p>获取入群时间。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象加入 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的时间。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -333,7 +350,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Gender_" data-uid="HuajiTech.CoolQ.Member.Gender*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Gender" data-uid="HuajiTech.CoolQ.Member.Gender">Gender</h4>
-  <div class="markdown level1 summary"><p>获取性别。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的性别。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -359,7 +376,8 @@
   
   <a id="HuajiTech_CoolQ_Member_Group_" data-uid="HuajiTech.CoolQ.Member.Group*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Group" data-uid="HuajiTech.CoolQ.Member.Group">Group</h4>
-  <div class="markdown level1 summary"><p>获取所在群。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的所属 <a class="xref" href="HuajiTech.CoolQ.Group.html">Group</a> 对象。
+如果当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象是 <a class="xref" href="HuajiTech.CoolQ.CurrentUser.html#HuajiTech_CoolQ_CurrentUser_MessageReceived">MessageReceived</a> 事件数据的 <a class="xref" href="HuajiTech.CoolQ.MessageReceivedEventArgs.html#HuajiTech_CoolQ_MessageReceivedEventArgs_Sender">Sender</a> 属性的值，则为 <code>null</code>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -385,7 +403,7 @@
   
   <a id="HuajiTech_CoolQ_Member_HasBadRecord_" data-uid="HuajiTech.CoolQ.Member.HasBadRecord*"></a>
   <h4 id="HuajiTech_CoolQ_Member_HasBadRecord" data-uid="HuajiTech.CoolQ.Member.HasBadRecord">HasBadRecord</h4>
-  <div class="markdown level1 summary"><p>获取一个值，指示是否有不良记录。</p>
+  <div class="markdown level1 summary"><p>获取一个值，指示当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象是否有不良记录。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -411,7 +429,7 @@
   
   <a id="HuajiTech_CoolQ_Member_HasInfo_" data-uid="HuajiTech.CoolQ.Member.HasInfo*"></a>
   <h4 id="HuajiTech_CoolQ_Member_HasInfo" data-uid="HuajiTech.CoolQ.Member.HasInfo">HasInfo</h4>
-  <div class="markdown level1 summary"><p>获取一个值，指示是否已请求信息。</p>
+  <div class="markdown level1 summary"><p>获取一个值，指示当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象是否含有信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -439,7 +457,7 @@
   
   <a id="HuajiTech_CoolQ_Member_IsAdministrator_" data-uid="HuajiTech.CoolQ.Member.IsAdministrator*"></a>
   <h4 id="HuajiTech_CoolQ_Member_IsAdministrator" data-uid="HuajiTech.CoolQ.Member.IsAdministrator">IsAdministrator</h4>
-  <div class="markdown level1 summary"><p>获取一个值，指示是否为管理员或群主。</p>
+  <div class="markdown level1 summary"><p>获取一个值，指示当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Role">Role</a> 属性是否为 <a class="xref" href="HuajiTech.CoolQ.MemberRole.html#HuajiTech_CoolQ_MemberRole_Administrator">Administrator</a> 或 <a class="xref" href="HuajiTech.CoolQ.MemberRole.html#HuajiTech_CoolQ_MemberRole_Owner">Owner</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -465,7 +483,7 @@
   
   <a id="HuajiTech_CoolQ_Member_LastSpeakTime_" data-uid="HuajiTech.CoolQ.Member.LastSpeakTime*"></a>
   <h4 id="HuajiTech_CoolQ_Member_LastSpeakTime" data-uid="HuajiTech.CoolQ.Member.LastSpeakTime">LastSpeakTime</h4>
-  <div class="markdown level1 summary"><p>获取最后发言时间。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的最后发言时间。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -491,7 +509,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Level_" data-uid="HuajiTech.CoolQ.Member.Level*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Level" data-uid="HuajiTech.CoolQ.Member.Level">Level</h4>
-  <div class="markdown level1 summary"><p>获取等级。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的等级。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -517,7 +535,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Location_" data-uid="HuajiTech.CoolQ.Member.Location*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Location" data-uid="HuajiTech.CoolQ.Member.Location">Location</h4>
-  <div class="markdown level1 summary"><p>获取位置。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的位置。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -543,7 +561,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Nickname_" data-uid="HuajiTech.CoolQ.Member.Nickname*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Nickname" data-uid="HuajiTech.CoolQ.Member.Nickname">Nickname</h4>
-  <div class="markdown level1 summary"><p>获取昵称。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的昵称。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -571,7 +589,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Role_" data-uid="HuajiTech.CoolQ.Member.Role*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Role" data-uid="HuajiTech.CoolQ.Member.Role">Role</h4>
-  <div class="markdown level1 summary"><p>获取角色。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的角色。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -643,7 +661,7 @@
   
   <a id="HuajiTech_CoolQ_Member_Kick_" data-uid="HuajiTech.CoolQ.Member.Kick*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Kick_System_Boolean_" data-uid="HuajiTech.CoolQ.Member.Kick(System.Boolean)">Kick(Boolean)</h4>
-  <div class="markdown level1 summary"><p>踢出。</p>
+  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象踢出所在群。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -663,7 +681,23 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">disallowRejoin</span></td>
-        <td><p>是否禁止再次加群。</p>
+        <td><p>如果不再接收当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.EntranceRequest.html">EntranceRequest</a>，则为 <code>true</code>；否则为 <code>false</code>。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -672,7 +706,7 @@
   
   <a id="HuajiTech_CoolQ_Member_KickAsync_" data-uid="HuajiTech.CoolQ.Member.KickAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Member_KickAsync_System_Boolean_" data-uid="HuajiTech.CoolQ.Member.KickAsync(System.Boolean)">KickAsync(Boolean)</h4>
-  <div class="markdown level1 summary"><p>以异步操作踢出。</p>
+  <div class="markdown level1 summary"><p>以异步操作将当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象踢出所在群。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -692,7 +726,7 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">disallowRejoin</span></td>
-        <td><p>是否禁止再次加群。</p>
+        <td><p>如果不再接收当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.EntranceRequest.html">EntranceRequest</a>，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </td>
       </tr>
     </tbody>
@@ -712,11 +746,27 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_Mute_" data-uid="HuajiTech.CoolQ.Member.Mute*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Mute_System_TimeSpan_" data-uid="HuajiTech.CoolQ.Member.Mute(System.TimeSpan)">Mute(TimeSpan)</h4>
-  <div class="markdown level1 summary"><p>禁言。</p>
+  <div class="markdown level1 summary"><p>禁言当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -736,7 +786,33 @@
       <tr>
         <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">duration</span></td>
-        <td><p>禁言时长。</p>
+        <td><p>要禁言当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的时长。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">duration</code> 小于或等于 <span class="xref">System.TimeSpan.Zero</span>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -745,7 +821,7 @@
   
   <a id="HuajiTech_CoolQ_Member_MuteAsync_" data-uid="HuajiTech.CoolQ.Member.MuteAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Member_MuteAsync_System_TimeSpan_" data-uid="HuajiTech.CoolQ.Member.MuteAsync(System.TimeSpan)">MuteAsync(TimeSpan)</h4>
-  <div class="markdown level1 summary"><p>以异步操作禁言。</p>
+  <div class="markdown level1 summary"><p>以异步操作禁言当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -765,7 +841,7 @@
       <tr>
         <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">duration</span></td>
-        <td><p>禁言时长。</p>
+        <td><p>要禁言当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的时长。</p>
 </td>
       </tr>
     </tbody>
@@ -785,11 +861,37 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">duration</code> 小于或等于 <span class="xref">System.TimeSpan.Zero</span>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_RequestInfo_" data-uid="HuajiTech.CoolQ.Member.RequestInfo*"></a>
   <h4 id="HuajiTech_CoolQ_Member_RequestInfo_System_Boolean_" data-uid="HuajiTech.CoolQ.Member.RequestInfo(System.Boolean)">RequestInfo(Boolean)</h4>
-  <div class="markdown level1 summary"><p>请求信息。</p>
+  <div class="markdown level1 summary"><p>请求当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的信息。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -809,18 +911,34 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">refresh</span></td>
-        <td><p>是否刷新缓存。</p>
+        <td><p>如果要求酷Q不使用缓存的信息，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">&#37325;&#20889;</h5>
   <div><a class="xref" href="HuajiTech.CoolQ.User.html#HuajiTech_CoolQ_User_RequestInfo_System_Boolean_">User.RequestInfo(Boolean)</a></div>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_SetAlias_" data-uid="HuajiTech.CoolQ.Member.SetAlias*"></a>
   <h4 id="HuajiTech_CoolQ_Member_SetAlias_System_String_" data-uid="HuajiTech.CoolQ.Member.SetAlias(System.String)">SetAlias(String)</h4>
-  <div class="markdown level1 summary"><p>设置群名片。</p>
+  <div class="markdown level1 summary"><p>设置当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Alias">Alias</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -840,7 +958,33 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">alias</span></td>
-        <td><p>要设置的群名片。</p>
+        <td><p>要设置的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Alias">Alias</a> 的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">alias</code> 为 <code>null</code>、<span class="xref">System.String.Empty</span> 或仅由空白字符组成。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -849,7 +993,7 @@
   
   <a id="HuajiTech_CoolQ_Member_SetAliasAsync_" data-uid="HuajiTech.CoolQ.Member.SetAliasAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Member_SetAliasAsync_System_String_" data-uid="HuajiTech.CoolQ.Member.SetAliasAsync(System.String)">SetAliasAsync(String)</h4>
-  <div class="markdown level1 summary"><p>以异步操作设置群名片。</p>
+  <div class="markdown level1 summary"><p>以异步操作设置当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Alias">Alias</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -869,7 +1013,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">alias</span></td>
-        <td><p>要设置的群名片。</p>
+        <td><p>要设置的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Alias">Alias</a> 的值。</p>
 </td>
       </tr>
     </tbody>
@@ -889,22 +1033,74 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">alias</code> 为 <code>null</code>、<span class="xref">System.String.Empty</span> 或仅由空白字符组成。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_SetAsAdministrator_" data-uid="HuajiTech.CoolQ.Member.SetAsAdministrator*"></a>
   <h4 id="HuajiTech_CoolQ_Member_SetAsAdministrator" data-uid="HuajiTech.CoolQ.Member.SetAsAdministrator">SetAsAdministrator()</h4>
-  <div class="markdown level1 summary"><p>设为管理员。</p>
+  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象设为 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetAsAdministrator()</code></pre>
   </div>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是<a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的群主。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Role">Role</a> 为 <a class="xref" href="HuajiTech.CoolQ.MemberRole.html#HuajiTech_CoolQ_MemberRole_Owner">Owner</a>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_SetAsAdministratorAsync_" data-uid="HuajiTech.CoolQ.Member.SetAsAdministratorAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Member_SetAsAdministratorAsync" data-uid="HuajiTech.CoolQ.Member.SetAsAdministratorAsync">SetAsAdministratorAsync()</h4>
-  <div class="markdown level1 summary"><p>以异步操作设为管理员。</p>
+  <div class="markdown level1 summary"><p>以异步操作将当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象设为 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -926,11 +1122,37 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是<a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的群主。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Role">Role</a> 为 <a class="xref" href="HuajiTech.CoolQ.MemberRole.html#HuajiTech_CoolQ_MemberRole_Owner">Owner</a>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_SetCustomTitle_" data-uid="HuajiTech.CoolQ.Member.SetCustomTitle*"></a>
   <h4 id="HuajiTech_CoolQ_Member_SetCustomTitle_HuajiTech_CoolQ_CustomTitle_" data-uid="HuajiTech.CoolQ.Member.SetCustomTitle(HuajiTech.CoolQ.CustomTitle)">SetCustomTitle(CustomTitle)</h4>
-  <div class="markdown level1 summary"><p>设置自定义头衔。</p>
+  <div class="markdown level1 summary"><p>设置当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_CustomTitle">CustomTitle</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -950,7 +1172,33 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.CustomTitle.html">CustomTitle</a></td>
         <td><span class="parametername">title</span></td>
-        <td><p>要设置的头衔。</p>
+        <td><p>要设置的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_CustomTitle">CustomTitle</a> 的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">title</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -959,7 +1207,7 @@
   
   <a id="HuajiTech_CoolQ_Member_SetCustomTitleAsync_" data-uid="HuajiTech.CoolQ.Member.SetCustomTitleAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Member_SetCustomTitleAsync_HuajiTech_CoolQ_CustomTitle_" data-uid="HuajiTech.CoolQ.Member.SetCustomTitleAsync(HuajiTech.CoolQ.CustomTitle)">SetCustomTitleAsync(CustomTitle)</h4>
-  <div class="markdown level1 summary"><p>以异步操作设置自定义头衔。</p>
+  <div class="markdown level1 summary"><p>以异步操作设置当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_CustomTitle">CustomTitle</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -979,7 +1227,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.CustomTitle.html">CustomTitle</a></td>
         <td><span class="parametername">title</span></td>
-        <td><p>要设置的头衔。</p>
+        <td><p>要设置的 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_CustomTitle">CustomTitle</a> 的值。</p>
 </td>
       </tr>
     </tbody>
@@ -996,6 +1244,32 @@
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">title</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1030,18 +1304,39 @@
   
   <a id="HuajiTech_CoolQ_Member_Unmute_" data-uid="HuajiTech.CoolQ.Member.Unmute*"></a>
   <h4 id="HuajiTech_CoolQ_Member_Unmute" data-uid="HuajiTech.CoolQ.Member.Unmute">Unmute()</h4>
-  <div class="markdown level1 summary"><p>解除禁言。</p>
+  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象解除禁言。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Unmute()</code></pre>
   </div>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_UnmuteAsync_" data-uid="HuajiTech.CoolQ.Member.UnmuteAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Member_UnmuteAsync" data-uid="HuajiTech.CoolQ.Member.UnmuteAsync">UnmuteAsync()</h4>
-  <div class="markdown level1 summary"><p>以异步操作解除禁言。</p>
+  <div class="markdown level1 summary"><p>以异步操作将当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象解除禁言。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -1063,22 +1358,69 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_UnsetAsAdministrator_" data-uid="HuajiTech.CoolQ.Member.UnsetAsAdministrator*"></a>
   <h4 id="HuajiTech_CoolQ_Member_UnsetAsAdministrator" data-uid="HuajiTech.CoolQ.Member.UnsetAsAdministrator">UnsetAsAdministrator()</h4>
-  <div class="markdown level1 summary"><p>解除管理员身份。</p>
+  <div class="markdown level1 summary"><p>解除当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象在 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员身份。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void UnsetAsAdministrator()</code></pre>
   </div>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是<a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的群主。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Role">Role</a> 为 <a class="xref" href="HuajiTech.CoolQ.MemberRole.html#HuajiTech_CoolQ_MemberRole_Owner">Owner</a>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="HuajiTech_CoolQ_Member_UnsetAsAdministratorAsync_" data-uid="HuajiTech.CoolQ.Member.UnsetAsAdministratorAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Member_UnsetAsAdministratorAsync" data-uid="HuajiTech.CoolQ.Member.UnsetAsAdministratorAsync">UnsetAsAdministratorAsync()</h4>
-  <div class="markdown level1 summary"><p>以异步操作解除管理员身份。</p>
+  <div class="markdown level1 summary"><p>以异步操作解除当前 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象在 <a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的管理员身份。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -1097,6 +1439,32 @@
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_CurrentUser">CurrentUser</a> 不是<a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group">Group</a> 的群主。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Role">Role</a> 为 <a class="xref" href="HuajiTech.CoolQ.MemberRole.html#HuajiTech_CoolQ_MemberRole_Owner">Owner</a>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
+</td>
       </tr>
     </tbody>
   </table>

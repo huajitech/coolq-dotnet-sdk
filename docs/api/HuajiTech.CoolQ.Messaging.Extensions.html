@@ -162,7 +162,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Parse_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_CoolQ_Message_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)">Parse(Message)</h4>
-  <div class="markdown level1 summary"><p>将消息解析为复合消息。</p>
+  <div class="markdown level1 summary"><p>将 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -182,7 +182,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
         <td><span class="parametername">message</span></td>
-        <td><p>要解析的消息。</p>
+        <td><p>要解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -198,7 +198,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
-        <td><p>解析后的复合消息。</p>
+        <td><p>与 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象等效的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -207,7 +207,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Send_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)">Send(Chat, ComplexMessage)</h4>
-  <div class="markdown level1 summary"><p>发送复合消息。</p>
+  <div class="markdown level1 summary"><p>向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -233,7 +233,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
         <td><span class="parametername">message</span></td>
-        <td><p>要发送的消息。</p>
+        <td><p>要发送的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -249,7 +249,38 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
-        <td><p>发送的消息。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 不包含任何元素，或其等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -258,7 +289,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Send_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)">Send(Chat, MessageElement)</h4>
-  <div class="markdown level1 summary"><p>发送消息元素。</p>
+  <div class="markdown level1 summary"><p>向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -284,7 +315,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a></td>
         <td><span class="parametername">element</span></td>
-        <td><p>要发送的消息。</p>
+        <td><p>要发送的 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -300,7 +331,38 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
-        <td><p>发送的消息。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 的等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示发送失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -309,7 +371,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)">SendAsync(Chat, ComplexMessage)</h4>
-  <div class="markdown level1 summary"><p>以异步操作发送复合消息。</p>
+  <div class="markdown level1 summary"><p>以异步操作向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -335,7 +397,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
         <td><span class="parametername">message</span></td>
-        <td><p>要发送的消息。</p>
+        <td><p>要发送的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -351,7 +413,38 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>&gt;</td>
-        <td><p>发送的消息。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 不包含任何元素，或其等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示发送失败的值。</p>
 </td>
       </tr>
     </tbody>
@@ -360,7 +453,7 @@
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)">SendAsync(Chat, MessageElement)</h4>
-  <div class="markdown level1 summary"><p>以异步操作发送消息元素。</p>
+  <div class="markdown level1 summary"><p>以异步操作向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -386,7 +479,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a></td>
         <td><span class="parametername">element</span></td>
-        <td><p>要发送的消息。</p>
+        <td><p>要发送的 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -402,7 +495,38 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>&gt;</td>
-        <td><p>发送的消息。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 的等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
+        <td><p>酷Q返回了指示发送失败的值。</p>
 </td>
       </tr>
     </tbody>
