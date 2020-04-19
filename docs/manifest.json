@@ -36,7 +36,7 @@
           "hash": "qZTukvM3kd37vuTv0yKhFg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "lh0M0slBUnTMgapLrobQIQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -564,7 +564,7 @@
           "hash": "aLyYG7Zclc/zfF4Vo/XlJw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -597,10 +597,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ComplexMessage.html",
-          "hash": "K6S0KrktWNjMVAZ8703aHg=="
+          "hash": "fxFPFVCg2HLsSLL757UFsg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -947,7 +947,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 66,
-          "skipped_file_count": 46
+          "skipped_file_count": 65
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

@@ -174,7 +174,7 @@ namespace HuajiTech.CoolQ.Messaging
 
         /// <summary>
         /// 基于数组中的字符串将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拆分为多个 <see cref="PlainText"/> 对象。
-        /// 可以指定子字符串是否包含空数组元素。
+        /// 可以指定子 <see cref="PlainText"/> 对象是否包含空数组元素。
         /// </summary>
         /// <param name="options">
         /// 要省略返回的数组中的空数组元素，则为 <see cref="StringSplitOptions.RemoveEmptyEntries"/>；
