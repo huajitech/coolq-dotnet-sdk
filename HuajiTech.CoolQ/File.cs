@@ -5,6 +5,13 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public class File
     {
+        /// <summary>
+        /// 以指定的 ID、名称、长度和 BusID 初始化一个 <see cref="File"/> 类的新实例。
+        /// </summary>
+        /// <param name="id">ID。</param>
+        /// <param name="name">名称。</param>
+        /// <param name="length">长度。</param>
+        /// <param name="busId">BusID。</param>
         public File(string id, string name, long length, long busId)
         {
             Id = id;
