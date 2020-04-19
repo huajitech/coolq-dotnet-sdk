@@ -31,8 +31,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public float Latitude
         {
-            get => GetParameterAsSingle("lat");
-            set => SetParameter("lat", value);
+            get => GetArgumentAsSingle("lat");
+            set => SetArgument("lat", value);
         }
 
         /// <summary>
@@ -40,8 +40,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public float Longitude
         {
-            get => GetParameterAsSingle("lon");
-            set => SetParameter("lon", value);
+            get => GetArgumentAsSingle("lon");
+            set => SetArgument("lon", value);
         }
 
         /// <summary>

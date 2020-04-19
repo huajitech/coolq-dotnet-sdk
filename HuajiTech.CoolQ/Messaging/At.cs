@@ -22,8 +22,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public User Target
         {
-            get => new User(GetParameterAsInt64("qq"));
-            set => SetParameter("qq", value?.Number ?? default);
+            get => new User(GetArgumentAsInt64("qq"));
+            set => SetArgument("qq", value?.Number ?? default);
         }
     }
 }

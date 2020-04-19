@@ -34,8 +34,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public bool IsVoiceChanged
         {
-            get => GetParameterAsBoolean("magic");
-            set => SetParameter("magic", value);
+            get => GetArgumentAsBoolean("magic");
+            set => SetArgument("magic", value);
         }
 
         /// <summary>

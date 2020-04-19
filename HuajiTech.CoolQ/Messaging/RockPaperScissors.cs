@@ -22,8 +22,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public RockPaperScissorsKind Kind
         {
-            get => (RockPaperScissorsKind)GetParameterAsInt32("type");
-            set => SetParameter("type", (int)value);
+            get => (RockPaperScissorsKind)GetArgumentAsInt32("type");
+            set => SetArgument("type", (int)value);
         }
     }
 }

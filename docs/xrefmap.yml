@@ -3960,71 +3960,71 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CQCode.Escape
   nameWithType: CQCode.Escape
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
-  name: GetParameterAsBoolean(String)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsBoolean_System_String_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
-  nameWithType: CQCode.GetParameterAsBoolean(String)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean*
-  name: GetParameterAsBoolean
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsBoolean_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsBoolean(System.String)
+  name: GetArgumentAsBoolean(String)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsBoolean_System_String_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsBoolean(System.String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsBoolean(System.String)
+  nameWithType: CQCode.GetArgumentAsBoolean(String)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsBoolean*
+  name: GetArgumentAsBoolean
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsBoolean_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsBoolean
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean
-  nameWithType: CQCode.GetParameterAsBoolean
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32(System.String)
-  name: GetParameterAsInt32(String)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsInt32_System_String_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32(System.String)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32(System.String)
-  nameWithType: CQCode.GetParameterAsInt32(String)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32*
-  name: GetParameterAsInt32
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsInt32_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsBoolean
+  nameWithType: CQCode.GetArgumentAsBoolean
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt32(System.String)
+  name: GetArgumentAsInt32(String)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsInt32_System_String_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt32(System.String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt32(System.String)
+  nameWithType: CQCode.GetArgumentAsInt32(String)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt32*
+  name: GetArgumentAsInt32
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsInt32_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt32
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32
-  nameWithType: CQCode.GetParameterAsInt32
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64(System.String)
-  name: GetParameterAsInt64(String)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsInt64_System_String_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64(System.String)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64(System.String)
-  nameWithType: CQCode.GetParameterAsInt64(String)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64*
-  name: GetParameterAsInt64
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsInt64_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt32
+  nameWithType: CQCode.GetArgumentAsInt32
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt64(System.String)
+  name: GetArgumentAsInt64(String)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsInt64_System_String_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt64(System.String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt64(System.String)
+  nameWithType: CQCode.GetArgumentAsInt64(String)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt64*
+  name: GetArgumentAsInt64
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsInt64_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt64
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64
-  nameWithType: CQCode.GetParameterAsInt64
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle(System.String)
-  name: GetParameterAsSingle(String)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsSingle_System_String_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle(System.String)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle(System.String)
-  nameWithType: CQCode.GetParameterAsSingle(String)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle*
-  name: GetParameterAsSingle
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsSingle_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsInt64
+  nameWithType: CQCode.GetArgumentAsInt64
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsSingle(System.String)
+  name: GetArgumentAsSingle(String)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsSingle_System_String_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsSingle(System.String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsSingle(System.String)
+  nameWithType: CQCode.GetArgumentAsSingle(String)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsSingle*
+  name: GetArgumentAsSingle
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsSingle_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsSingle
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle
-  nameWithType: CQCode.GetParameterAsSingle
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri(System.String)
-  name: GetParameterAsUri(String)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsUri_System_String_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri(System.String)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri(System.String)
-  nameWithType: CQCode.GetParameterAsUri(String)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri*
-  name: GetParameterAsUri
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsUri_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsSingle
+  nameWithType: CQCode.GetArgumentAsSingle
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsUri(System.String)
+  name: GetArgumentAsUri(String)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsUri_System_String_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsUri(System.String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsUri(System.String)
+  nameWithType: CQCode.GetArgumentAsUri(String)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsUri*
+  name: GetArgumentAsUri
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetArgumentAsUri_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsUri
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri
-  nameWithType: CQCode.GetParameterAsUri
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetArgumentAsUri
+  nameWithType: CQCode.GetArgumentAsUri
 - uid: HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
   name: Item[String]
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Item_System_String_
@@ -4041,43 +4041,43 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CQCode.Item
   nameWithType: CQCode.Item
-- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Boolean)
-  name: SetParameter(String, Boolean)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Boolean_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Boolean)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Boolean)
-  nameWithType: CQCode.SetParameter(String, Boolean)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int32)
-  name: SetParameter(String, Int32)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Int32_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int32)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Int32)
-  nameWithType: CQCode.SetParameter(String, Int32)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int64)
-  name: SetParameter(String, Int64)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Int64_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int64)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Int64)
-  nameWithType: CQCode.SetParameter(String, Int64)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Single)
-  name: SetParameter(String, Single)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Single_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Single)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Single)
-  nameWithType: CQCode.SetParameter(String, Single)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
-  name: SetParameter(String, Uri)
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Uri_
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Uri)
-  nameWithType: CQCode.SetParameter(String, Uri)
-- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter*
-  name: SetParameter
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.SetParameter
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Boolean)
+  name: SetArgument(String, Boolean)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetArgument_System_String_System_Boolean_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Boolean)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String, System.Boolean)
+  nameWithType: CQCode.SetArgument(String, Boolean)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Int32)
+  name: SetArgument(String, Int32)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetArgument_System_String_System_Int32_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Int32)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String, System.Int32)
+  nameWithType: CQCode.SetArgument(String, Int32)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Int64)
+  name: SetArgument(String, Int64)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetArgument_System_String_System_Int64_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Int64)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String, System.Int64)
+  nameWithType: CQCode.SetArgument(String, Int64)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Single)
+  name: SetArgument(String, Single)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetArgument_System_String_System_Single_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Single)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String, System.Single)
+  nameWithType: CQCode.SetArgument(String, Single)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Uri)
+  name: SetArgument(String, Uri)
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetArgument_System_String_System_Uri_
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Uri)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String, System.Uri)
+  nameWithType: CQCode.SetArgument(String, Uri)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetArgument*
+  name: SetArgument
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetArgument_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.SetArgument
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter
-  nameWithType: CQCode.SetParameter
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetArgument
+  nameWithType: CQCode.SetArgument
 - uid: HuajiTech.CoolQ.Messaging.CQCode.ToString
   name: ToString()
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_ToString

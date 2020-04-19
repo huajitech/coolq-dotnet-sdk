@@ -32,8 +32,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public Uri ImageUrl
         {
-            get => GetParameterAsUri("image");
-            set => SetParameter("image", value);
+            get => GetArgumentAsUri("image");
+            set => SetArgument("image", value);
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public Uri Url
         {
-            get => GetParameterAsUri("url");
-            set => SetParameter("url", value);
+            get => GetArgumentAsUri("url");
+            set => SetArgument("url", value);
         }
     }
 }

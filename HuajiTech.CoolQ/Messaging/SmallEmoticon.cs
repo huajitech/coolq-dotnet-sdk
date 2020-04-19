@@ -22,8 +22,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public int Id
         {
-            get => GetParameterAsInt32("id");
-            set => SetParameter("id", value);
+            get => GetArgumentAsInt32("id");
+            set => SetArgument("id", value);
         }
     }
 }

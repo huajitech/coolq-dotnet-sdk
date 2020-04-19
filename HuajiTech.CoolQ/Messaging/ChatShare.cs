@@ -25,8 +25,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
             get => this["type"] switch
             {
-                "qq" => new User(GetParameterAsInt64("id")),
-                "group" => new Group(GetParameterAsInt64("id")),
+                "qq" => new User(GetArgumentAsInt64("id")),
+                "group" => new Group(GetArgumentAsInt64("id")),
                 _ => null
             };
 
@@ -44,7 +44,7 @@ namespace HuajiTech.CoolQ.Messaging
                     _ => throw new ArgumentOutOfRangeException(nameof(value)),
                 };
 
-                SetParameter("id", value.Number);
+                SetArgument("id", value.Number);
             }
         }
     }

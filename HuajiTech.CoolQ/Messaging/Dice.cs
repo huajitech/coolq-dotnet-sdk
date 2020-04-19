@@ -22,8 +22,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public int Point
         {
-            get => GetParameterAsInt32("type");
-            set => SetParameter("type", value);
+            get => GetArgumentAsInt32("type");
+            set => SetArgument("type", value);
         }
     }
 }
