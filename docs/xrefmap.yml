@@ -5226,32 +5226,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.RichText.RichText
   nameWithType: RichText.RichText
-- uid: HuajiTech.CoolQ.Messaging.RichText.Content
-  name: Content
-  href: api/HuajiTech.CoolQ.Messaging.RichText.html#HuajiTech_CoolQ_Messaging_RichText_Content
-  commentId: P:HuajiTech.CoolQ.Messaging.RichText.Content
-  fullName: HuajiTech.CoolQ.Messaging.RichText.Content
-  nameWithType: RichText.Content
-- uid: HuajiTech.CoolQ.Messaging.RichText.Content*
-  name: Content
-  href: api/HuajiTech.CoolQ.Messaging.RichText.html#HuajiTech_CoolQ_Messaging_RichText_Content_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.RichText.Content
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.RichText.Content
-  nameWithType: RichText.Content
-- uid: HuajiTech.CoolQ.Messaging.RichText.Title
-  name: Title
-  href: api/HuajiTech.CoolQ.Messaging.RichText.html#HuajiTech_CoolQ_Messaging_RichText_Title
-  commentId: P:HuajiTech.CoolQ.Messaging.RichText.Title
-  fullName: HuajiTech.CoolQ.Messaging.RichText.Title
-  nameWithType: RichText.Title
-- uid: HuajiTech.CoolQ.Messaging.RichText.Title*
-  name: Title
-  href: api/HuajiTech.CoolQ.Messaging.RichText.html#HuajiTech_CoolQ_Messaging_RichText_Title_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.RichText.Title
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.RichText.Title
-  nameWithType: RichText.Title
 - uid: HuajiTech.CoolQ.Messaging.RockPaperScissors
   name: RockPaperScissors
   href: api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html
