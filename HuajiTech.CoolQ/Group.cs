@@ -290,7 +290,7 @@ namespace HuajiTech.CoolQ
             return Task.Run(Unmute);
         }
 
-        private GroupInfo GetInfo(bool handleException = true, bool refresh = false)
+        private GroupInfo GetInfo(bool throwException = false, bool refresh = false)
         {
             if (refresh || _info is null)
             {
@@ -300,7 +300,7 @@ namespace HuajiTech.CoolQ
                         NativeMethods.GetGroupInfoBase64(Bot.AuthCode, Number, refresh));
                     _info = reader.Read();
                 }
-                catch (CoolQException) when (handleException)
+                catch (CoolQException) when (!throwException)
                 {
                     return new GroupInfo();
                 }

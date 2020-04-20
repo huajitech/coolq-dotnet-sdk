@@ -349,7 +349,7 @@ namespace HuajiTech.CoolQ
             return GetType().Name + $"({Number},{Group})";
         }
 
-        private MemberInfo GetInfo(bool handleException = true, bool refresh = false)
+        private MemberInfo GetInfo(bool throwException = false, bool refresh = false)
         {
             if (refresh || _info is null)
             {
@@ -359,7 +359,7 @@ namespace HuajiTech.CoolQ
                         NativeMethods.GetMemberInfoBase64(Bot.AuthCode, Group.Number, Number, refresh));
                     _info = reader.Read();
                 }
-                catch (CoolQException) when (handleException)
+                catch (CoolQException) when (!throwException)
                 {
                     return new MemberInfo();
                 }

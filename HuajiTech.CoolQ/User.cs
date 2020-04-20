@@ -102,7 +102,7 @@ namespace HuajiTech.CoolQ
             return new Message(id, message);
         }
 
-        private UserInfo GetInfo(bool handleException = true, bool refresh = false)
+        private UserInfo GetInfo(bool throwException = false, bool refresh = false)
         {
             if (refresh || _info is null)
             {
@@ -112,7 +112,7 @@ namespace HuajiTech.CoolQ
                         NativeMethods.GetUserInfoBase64(Bot.AuthCode, Number, refresh));
                     _info = reader.Read();
                 }
-                catch (CoolQException) when (handleException)
+                catch (CoolQException) when (!throwException)
                 {
                     return new UserInfo();
                 }

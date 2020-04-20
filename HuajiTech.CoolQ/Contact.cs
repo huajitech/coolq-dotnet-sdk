@@ -46,14 +46,14 @@ namespace HuajiTech.CoolQ
             GetInfo(false);
         }
 
-        private ContactInfo GetInfo(bool handleException = true)
+        private ContactInfo GetInfo(bool throwException = false)
         {
             try
             {
                 return _info ??= CurrentUser.GetContactInfos()
                     .First(info => info.Number == Number);
             }
-            catch (CoolQException) when (handleException)
+            catch (CoolQException) when (!throwException)
             {
                 return new ContactInfo();
             }
