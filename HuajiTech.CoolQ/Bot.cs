@@ -90,21 +90,28 @@ namespace HuajiTech.CoolQ
         public static event EventHandler Stopping;
 
         /// <summary>
-        /// 请求图片。
+        /// 请求获取指定文件名的图片的文件。
         /// </summary>
-        /// <param name="fileName">图片的文件名。</param>
-        /// <returns>图片的文件信息。</returns>
+        /// <param name="fileName">请求获取的录音的文件名</param>
+        /// <returns>指定文件名的图片文件。</returns>
+        /// <exception cref="ArgumentException"><paramref name="fileName"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static FileInfo RequestImage(string fileName)
         {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileName));
+            }
+
             return new FileInfo(NativeMethods.RequestImage(AuthCode, fileName).CheckError());
         }
 
         /// <summary>
-        /// 以异步操作请求图片。
+        /// 以异步操作请求获取指定文件名的图片的文件。
         /// </summary>
-        /// <param name="fileName">图片的文件名。</param>
-        /// <returns>图片的文件信息。</returns>
+        /// <param name="fileName">请求获取的录音的文件名</param>
+        /// <returns>指定文件名的图片文件。</returns>
+        /// <exception cref="ArgumentException"><paramref name="fileName"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static Task<FileInfo> RequestImageAsync(string fileName)
         {
@@ -112,23 +119,37 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 请求录音。
+        /// 请求获取指定文件名的录音的文件。
         /// </summary>
-        /// <param name="fileName">录音的文件名。</param>
-        /// <param name="fileFormat">录音的格式。</param>
-        /// <returns>录音的文件信息。</returns>
+        /// <param name="fileName">请求获取的录音的文件名</param>
+        /// <param name="fileFormat">返回的文件的格式。</param>
+        /// <returns>指定文件名的录音文件。</returns>
+        /// <exception cref="ArgumentException"><paramref name="fileName"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentException"><paramref name="fileFormat"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static FileInfo RequestRecord(string fileName, string fileFormat)
         {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileName));
+            }
+
+            if (string.IsNullOrWhiteSpace(fileFormat))
+            {
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileFormat));
+            }
+
             return new FileInfo(NativeMethods.RequestRecord(AuthCode, fileName, fileFormat).CheckError());
         }
 
         /// <summary>
-        /// 以异步操作请求录音。
+        /// 以异步操作请求获取指定文件名的录音的文件。
         /// </summary>
-        /// <param name="fileName">录音的文件名。</param>
-        /// <param name="fileFormat">录音的格式。</param>
-        /// <returns>录音的文件信息。</returns>
+        /// <param name="fileName">请求获取的录音的文件名</param>
+        /// <param name="fileFormat">返回的文件的格式。</param>
+        /// <returns>指定文件名的录音文件。</returns>
+        /// <exception cref="ArgumentException"><paramref name="fileName"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentException"><paramref name="fileFormat"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static Task<FileInfo> RequestRecordAsync(string fileName, string fileFormat)
         {

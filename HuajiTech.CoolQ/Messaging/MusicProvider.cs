@@ -1,7 +1,7 @@
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 指定音乐类型。
+    /// 指定音乐提供商。
     /// </summary>
     public enum MusicProvider
     {

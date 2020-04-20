@@ -8,12 +8,12 @@ namespace HuajiTech.CoolQ.Messaging
     public class Dice : CQCode
     {
         public Dice()
-            : base("emoji")
+            : base("dice")
         {
         }
 
         public Dice(IDictionary<string, string> arguments)
-            : base("emoji", arguments)
+            : base("dice", arguments)
         {
         }
 

@@ -4991,43 +4991,43 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Music.Id
   nameWithType: Music.Id
-- uid: HuajiTech.CoolQ.Messaging.Music.MusicType
-  name: MusicType
-  href: api/HuajiTech.CoolQ.Messaging.Music.html#HuajiTech_CoolQ_Messaging_Music_MusicType
-  commentId: P:HuajiTech.CoolQ.Messaging.Music.MusicType
-  fullName: HuajiTech.CoolQ.Messaging.Music.MusicType
-  nameWithType: Music.MusicType
-- uid: HuajiTech.CoolQ.Messaging.Music.MusicType*
-  name: MusicType
-  href: api/HuajiTech.CoolQ.Messaging.Music.html#HuajiTech_CoolQ_Messaging_Music_MusicType_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.Music.MusicType
+- uid: HuajiTech.CoolQ.Messaging.Music.Provider
+  name: Provider
+  href: api/HuajiTech.CoolQ.Messaging.Music.html#HuajiTech_CoolQ_Messaging_Music_Provider
+  commentId: P:HuajiTech.CoolQ.Messaging.Music.Provider
+  fullName: HuajiTech.CoolQ.Messaging.Music.Provider
+  nameWithType: Music.Provider
+- uid: HuajiTech.CoolQ.Messaging.Music.Provider*
+  name: Provider
+  href: api/HuajiTech.CoolQ.Messaging.Music.html#HuajiTech_CoolQ_Messaging_Music_Provider_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Music.Provider
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.Music.MusicType
-  nameWithType: Music.MusicType
-- uid: HuajiTech.CoolQ.Messaging.MusicType
-  name: MusicType
-  href: api/HuajiTech.CoolQ.Messaging.MusicType.html
-  commentId: T:HuajiTech.CoolQ.Messaging.MusicType
-  fullName: HuajiTech.CoolQ.Messaging.MusicType
-  nameWithType: MusicType
-- uid: HuajiTech.CoolQ.Messaging.MusicType.Netease
+  fullName: HuajiTech.CoolQ.Messaging.Music.Provider
+  nameWithType: Music.Provider
+- uid: HuajiTech.CoolQ.Messaging.MusicProvider
+  name: MusicProvider
+  href: api/HuajiTech.CoolQ.Messaging.MusicProvider.html
+  commentId: T:HuajiTech.CoolQ.Messaging.MusicProvider
+  fullName: HuajiTech.CoolQ.Messaging.MusicProvider
+  nameWithType: MusicProvider
+- uid: HuajiTech.CoolQ.Messaging.MusicProvider.Netease
   name: Netease
-  href: api/HuajiTech.CoolQ.Messaging.MusicType.html#HuajiTech_CoolQ_Messaging_MusicType_Netease
-  commentId: F:HuajiTech.CoolQ.Messaging.MusicType.Netease
-  fullName: HuajiTech.CoolQ.Messaging.MusicType.Netease
-  nameWithType: MusicType.Netease
-- uid: HuajiTech.CoolQ.Messaging.MusicType.None
+  href: api/HuajiTech.CoolQ.Messaging.MusicProvider.html#HuajiTech_CoolQ_Messaging_MusicProvider_Netease
+  commentId: F:HuajiTech.CoolQ.Messaging.MusicProvider.Netease
+  fullName: HuajiTech.CoolQ.Messaging.MusicProvider.Netease
+  nameWithType: MusicProvider.Netease
+- uid: HuajiTech.CoolQ.Messaging.MusicProvider.None
   name: None
-  href: api/HuajiTech.CoolQ.Messaging.MusicType.html#HuajiTech_CoolQ_Messaging_MusicType_None
-  commentId: F:HuajiTech.CoolQ.Messaging.MusicType.None
-  fullName: HuajiTech.CoolQ.Messaging.MusicType.None
-  nameWithType: MusicType.None
-- uid: HuajiTech.CoolQ.Messaging.MusicType.QQ
+  href: api/HuajiTech.CoolQ.Messaging.MusicProvider.html#HuajiTech_CoolQ_Messaging_MusicProvider_None
+  commentId: F:HuajiTech.CoolQ.Messaging.MusicProvider.None
+  fullName: HuajiTech.CoolQ.Messaging.MusicProvider.None
+  nameWithType: MusicProvider.None
+- uid: HuajiTech.CoolQ.Messaging.MusicProvider.QQ
   name: QQ
-  href: api/HuajiTech.CoolQ.Messaging.MusicType.html#HuajiTech_CoolQ_Messaging_MusicType_QQ
-  commentId: F:HuajiTech.CoolQ.Messaging.MusicType.QQ
-  fullName: HuajiTech.CoolQ.Messaging.MusicType.QQ
-  nameWithType: MusicType.QQ
+  href: api/HuajiTech.CoolQ.Messaging.MusicProvider.html#HuajiTech_CoolQ_Messaging_MusicProvider_QQ
+  commentId: F:HuajiTech.CoolQ.Messaging.MusicProvider.QQ
+  fullName: HuajiTech.CoolQ.Messaging.MusicProvider.QQ
+  nameWithType: MusicProvider.QQ
 - uid: HuajiTech.CoolQ.Messaging.PlainText
   name: PlainText
   href: api/HuajiTech.CoolQ.Messaging.PlainText.html

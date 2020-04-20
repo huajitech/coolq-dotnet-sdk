@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Bot.html",
-          "hash": "PJN+1Ox0rcJzyIALiUFxLA=="
+          "hash": "WR1+dw2poU7878QsD4Zckw=="
         }
       },
       "is_incremental": false,
@@ -693,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Image.html",
-          "hash": "uXmFvi2BEUyvCgfXzNzx0Q=="
+          "hash": "VNQVi3OEiS3uWBPuddCyCg=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Music.html",
-          "hash": "QtLwWD6f5j83/lXXnLcCYw=="
+          "hash": "hpRmMRXgB54mKJXCeYtFdg=="
         }
       },
       "is_incremental": false,
@@ -737,11 +737,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/HuajiTech.CoolQ.Messaging.MusicType.yml",
+      "source_relative_path": "obj/api/HuajiTech.CoolQ.Messaging.MusicProvider.yml",
       "output": {
         ".html": {
-          "relative_path": "api/HuajiTech.CoolQ.Messaging.MusicType.html",
-          "hash": "zhyAO/K2j5A8pmIsL3NtYw=="
+          "relative_path": "api/HuajiTech.CoolQ.Messaging.MusicProvider.html",
+          "hash": "uekFh9F6AeG0tnRPGHehCQ=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Record.html",
-          "hash": "6dDdE4ZuuyK5FVoy+N0Idw=="
+          "hash": "kcsCPi/DOpQPCPMlTIegLQ=="
         }
       },
       "is_incremental": false,
@@ -849,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.html",
-          "hash": "kXgMbDsqAx2RZZJ4gwj2uQ=="
+          "hash": "6PPih94k0sbfFh0CPhQVeA=="
         }
       },
       "is_incremental": false,
@@ -921,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "K7BXA0HIGwX9uL/X4Fxx/g=="
+          "hash": "0wThruArm86ddwX6VmAq/A=="
         }
       },
       "is_incremental": false,

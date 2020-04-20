@@ -29,18 +29,20 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 请求文件。
+        /// 以异步操作请求当前 <see cref="Image"/> 对象表示的文件。
         /// </summary>
-        /// <returns>请求到的文件。</returns>
+        /// <returns>当前 <see cref="Image"/> 对象表示的文件。</returns>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public FileInfo RequestFile()
         {
             return Bot.RequestImage(FileName);
         }
 
         /// <summary>
-        /// 以异步操作请求文件。
+        /// 以异步操作请求当前 <see cref="Image"/> 对象表示的文件。
         /// </summary>
-        /// <returns>请求到的文件。</returns>
+        /// <returns>当前 <see cref="Image"/> 对象表示的文件。</returns>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public Task<FileInfo> RequestFileAsync()
         {
             return Task.Run(RequestFile);
