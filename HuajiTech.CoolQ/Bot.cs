@@ -29,7 +29,7 @@ namespace HuajiTech.CoolQ
             new Lazy<CurrentUser>(() => new CurrentUser());
 
         private static readonly Lazy<DirectoryInfo> _dataDirectory =
-            new Lazy<DirectoryInfo>(() => new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode)));
+            new Lazy<DirectoryInfo>(() => new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode).CheckError()));
 
         static Bot()
         {
@@ -58,6 +58,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取应用的数据目录。
         /// </summary>
+        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public static DirectoryInfo DataDirectory => _dataDirectory.Value;
 
         /// <summary>
