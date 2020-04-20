@@ -373,6 +373,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Bot.DataDirectory
   nameWithType: Bot.DataDirectory
+- uid: HuajiTech.CoolQ.Bot.IsAppEnabled
+  name: IsAppEnabled
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_IsAppEnabled
+  commentId: P:HuajiTech.CoolQ.Bot.IsAppEnabled
+  fullName: HuajiTech.CoolQ.Bot.IsAppEnabled
+  nameWithType: Bot.IsAppEnabled
+- uid: HuajiTech.CoolQ.Bot.IsAppEnabled*
+  name: IsAppEnabled
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_IsAppEnabled_
+  commentId: Overload:HuajiTech.CoolQ.Bot.IsAppEnabled
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Bot.IsAppEnabled
+  nameWithType: Bot.IsAppEnabled
 - uid: HuajiTech.CoolQ.Bot.RequestImage(System.String)
   name: RequestImage(String)
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_RequestImage_System_String_

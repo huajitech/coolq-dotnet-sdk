@@ -60,7 +60,7 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 禁言当前 <see cref="AnonymousMember"/>。
+        /// 禁言当前 <see cref="AnonymousMember"/> 对象。
         /// </summary>
         /// <param name="duration">禁言时长。</param>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="duration"/> 小于 <see cref="TimeSpan.Zero"/>。</exception>

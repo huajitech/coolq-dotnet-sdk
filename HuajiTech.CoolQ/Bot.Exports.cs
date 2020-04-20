@@ -43,6 +43,7 @@ namespace HuajiTech.CoolQ
         [DllExport]
         private static int OnAppDisabling()
         {
+            IsAppEnabled = false;
             AppDisabling?.Invoke(null, EventArgs.Empty);
             return 0;
         }
@@ -54,6 +55,7 @@ namespace HuajiTech.CoolQ
                 Resources.TestingNotificationTitle,
                 string.Format(CultureInfo.InvariantCulture, Resources.TestingNotificationContent, AppId));
 
+            IsAppEnabled = true;
             AppEnabled?.Invoke(null, EventArgs.Empty);
             return 0;
         }

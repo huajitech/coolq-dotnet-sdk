@@ -55,6 +55,16 @@ namespace HuajiTech.CoolQ
         /// </summary>
         public static CurrentUser CurrentUser => _currentUser.Value;
 
+        /// <summary>
+        /// 获取应用的数据目录。
+        /// </summary>
+        public static DirectoryInfo DataDirectory => _dataDirectory.Value;
+
+        /// <summary>
+        /// 获取一个值，指示应用是否已被启用。
+        /// </summary>
+        public static bool IsAppEnabled { get; private set; }
+
         internal static object App { get; private set; }
 
         internal static int AuthCode { get; private set; }
@@ -78,11 +88,6 @@ namespace HuajiTech.CoolQ
         /// 在机器人停止时引发。
         /// </summary>
         public static event EventHandler Stopping;
-
-        /// <summary>
-        /// 获取应用的数据目录。
-        /// </summary>
-        public static DirectoryInfo DataDirectory => _dataDirectory.Value;
 
         /// <summary>
         /// 请求图片。
