@@ -32,6 +32,7 @@
     <LangVersion>8.0</LangVersion>
     <CodeAnalysisRuleSet>HuajiTech.CoolQ.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\Release\HuajiTech.CoolQ.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -43,6 +44,7 @@
     <LangVersion>8.0</LangVersion>
     <CodeAnalysisRuleSet>HuajiTech.CoolQ.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\Release\HuajiTech.CoolQ.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>

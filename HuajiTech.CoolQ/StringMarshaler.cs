@@ -55,29 +55,22 @@ namespace HuajiTech.CoolQ
             throw new MarshalDirectiveException();
         }
 
-        public object MarshalNativeToManaged(IntPtr pNativeData)
+        public unsafe object MarshalNativeToManaged(IntPtr pNativeData)
         {
             if (pNativeData == IntPtr.Zero)
             {
                 return null;
             }
 
-            IEnumerable<byte> GetBytes()
+            var ptr = (sbyte*)pNativeData.ToPointer();
+            var length = 0;
+
+            while (*(ptr + length) != '\0')
             {
-                for (var i = 0; ; i++)
-                {
-                    var currentByte = Marshal.ReadByte(pNativeData, i);
-
-                    if (currentByte == 0)
-                    {
-                        yield break;
-                    }
-
-                    yield return currentByte;
-                }
+                length++;
             }
 
-            return Encoding.GetString(GetBytes().ToArray());
+            return new string(ptr, 0, length, Encoding);
         }
     }
 }
