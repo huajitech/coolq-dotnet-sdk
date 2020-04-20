@@ -30,19 +30,19 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Music"/> 对象的音乐类型。
         /// </summary>
-        public MusicType MusicType
+        public MusicProvider Provider
         {
             get => this["type"] switch
             {
-                "qq" => MusicType.QQ,
-                "163" => MusicType.Netease,
-                _ => MusicType.None
+                "qq" => MusicProvider.QQ,
+                "163" => MusicProvider.Netease,
+                _ => MusicProvider.None
             };
 
             set => this["type"] = value switch
             {
-                MusicType.QQ => "qq",
-                MusicType.Netease => "163",
+                MusicProvider.QQ => "qq",
+                MusicProvider.Netease => "163",
                 _ => throw new ArgumentOutOfRangeException(nameof(value))
             };
         }

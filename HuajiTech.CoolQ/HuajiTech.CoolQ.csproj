@@ -82,7 +82,7 @@
     <Compile Include="Messaging\Emoji.cs" />
     <Compile Include="Messaging\Music.cs" />
     <Compile Include="Messaging\Location.cs" />
-    <Compile Include="Messaging\MusicType.cs" />
+    <Compile Include="Messaging\MusicProvider.cs" />
     <Compile Include="Messaging\Shake.cs" />
     <Compile Include="Messaging\Record.cs" />
     <Compile Include="Messaging\Image.cs" />
