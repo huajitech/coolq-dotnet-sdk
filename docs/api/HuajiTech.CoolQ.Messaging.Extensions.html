@@ -161,13 +161,13 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Parse_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_CoolQ_Message_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)">Parse(Message)</h4>
-  <div class="markdown level1 summary"><p>将 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_CoolQ_Message_System_Boolean_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message,System.Boolean)">Parse(Message, Boolean)</h4>
+  <div class="markdown level1 summary"><p>将 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(this Message message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(this Message message, bool useEmojiCQCode = false)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,7 +182,13 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
         <td><span class="parametername">message</span></td>
-        <td><p>要解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象。</p>
+        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>对象，该 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Content">Content</a> 属性的值为要解析的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象的字符串表示形式。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useEmojiCQCode</span></td>
+        <td><p>如果要在返回的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象中包含 <a class="xref" href="HuajiTech.CoolQ.Messaging.Emoji.html">Emoji</a> 对象，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </td>
       </tr>
     </tbody>
@@ -198,7 +204,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
-        <td><p>与 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象等效的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
+        <td><p>与 <a class="xref" href="HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Content">Content</a> 等效的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </td>
       </tr>
     </tbody>

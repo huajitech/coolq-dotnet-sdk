@@ -416,6 +416,31 @@
   </div>
   
   
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_CombinePlainText_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_CombinePlainText" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText">CombinePlainText()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComplexMessage CombinePlainText()</code></pre>
+  </div>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Contains_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Contains*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Contains_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Contains(HuajiTech.CoolQ.Messaging.MessageElement)">Contains(MessageElement)</h4>
   <div class="markdown level1 summary"></div>
@@ -912,20 +937,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>一个由当前 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象中所有 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a> 对象组成的字符串，这些字符串以 <code data-dev-comment-type="paramref" class="paramref">separator</code> 分隔。
+如果当前  <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象不包含任何 <a class="xref" href="HuajiTech.CoolQ.Messaging.PlainText.html">PlainText</a> 对象，则该方法返回 <span class="xref">System.String.Empty</span>。</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Parse*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_System_String_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String)">Parse(String)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_System_String_System_Boolean_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String,System.Boolean)">Parse(String, Boolean)</h4>
   <div class="markdown level1 summary"><p>将字符串解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(string str)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(string str, bool useEmojiCQCode = false)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -941,6 +968,12 @@
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">str</span></td>
         <td><p>要解析的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象的字符串表示形式。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useEmojiCQCode</span></td>
+        <td><p>如果要在返回的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象中包含 <a class="xref" href="HuajiTech.CoolQ.Messaging.Emoji.html">Emoji</a> 对象，则为 <code>true</code>；否则为 <code>false</code>。</p>
 </td>
       </tr>
     </tbody>

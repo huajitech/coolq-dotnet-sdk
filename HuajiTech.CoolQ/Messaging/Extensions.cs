@@ -22,13 +22,14 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 将 <see cref="Message"/> 解析为 <see cref="ComplexMessage"/> 对象。
+        /// 将 <see cref="Message"/> 对象解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
-        /// <param name="message">要解析为 <see cref="ComplexMessage"/> 对象的 <see cref="Message"/> 对象。</param>
-        /// <returns>与 <see cref="Message"/> 对象等效的 <see cref="ComplexMessage"/> 对象。</returns>
-        public static ComplexMessage Parse(this Message message)
+        /// <param name="message">一个 <see cref="Message"/>对象，该 <see cref="Message"/> 对象的 <see cref="Message.Content"/> 属性的值为要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
+        /// <param name="useEmojiCQCode">如果要在返回的 <see cref="ComplexMessage"/> 对象中包含 <see cref="Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <returns>与 <see cref="Message.Content"/> 等效的 <see cref="ComplexMessage"/> 对象。</returns>
+        public static ComplexMessage Parse(this Message message, bool useEmojiCQCode = false)
         {
-            return ComplexMessage.Parse(message?.Content);
+            return ComplexMessage.Parse(message?.Content, useEmojiCQCode);
         }
 
         /// <summary>

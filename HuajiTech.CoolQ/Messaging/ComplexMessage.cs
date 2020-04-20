@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace HuajiTech.CoolQ.Messaging
@@ -62,8 +63,9 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将字符串解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
         /// <param name="str">要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
+        /// <param name="useEmojiCQCode">如果要在返回的 <see cref="ComplexMessage"/> 对象中包含 <see cref="Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
         /// <returns>与字符串等效的 <see cref="ComplexMessage"/> 对象。</returns>
-        public static ComplexMessage Parse(string str)
+        public static ComplexMessage Parse(string str, bool useEmojiCQCode = false)
         {
             IEnumerable<MessageElement> GetMessageElements()
             {
@@ -107,6 +109,13 @@ namespace HuajiTech.CoolQ.Messaging
                 {
                     yield return new PlainText(PlainText.Unescape(str.Substring(lastMatchEndIndex)));
                 }
+            }
+
+            if (!useEmojiCQCode)
+            {
+                var convertedElements = GetMessageElements()
+                    .Select(element => element is Emoji emoji ? emoji.ConvertToString() : element);
+                return new ComplexMessage(GetPlainTextCombinedMessageElements(convertedElements));
             }
 
             return new ComplexMessage(GetMessageElements());
@@ -164,10 +173,19 @@ namespace HuajiTech.CoolQ.Messaging
             return new ComplexMessage(GetMessageElements());
         }
 
+        public ComplexMessage CombinePlainText()
+        {
+            return new ComplexMessage(GetPlainTextCombinedMessageElements(this));
+        }
+
         /// <summary>
         /// 使用指定的分隔符将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拼接为字符串。
         /// </summary>
         /// <param name="separator">要用作分隔符的字符串。</param>
+        /// <returns>
+        /// 一个由当前 <see cref="ComplexMessage"/> 对象中所有 <see cref="PlainText"/> 对象组成的字符串，这些字符串以 <paramref name="separator"/> 分隔。
+        /// 如果当前  <see cref="ComplexMessage"/> 对象不包含任何 <see cref="PlainText"/> 对象，则该方法返回 <see cref="string.Empty"/>。
+        /// </returns>
         public string JoinPlainText(string separator = "")
         {
             return string.Join(separator, this.OfType<PlainText>());
@@ -339,6 +357,28 @@ namespace HuajiTech.CoolQ.Messaging
         public override int GetHashCode()
         {
             return ToString().GetHashCode();
+        }
+
+        private static IEnumerable<MessageElement> GetPlainTextCombinedMessageElements(IEnumerable<MessageElement> elements)
+        {
+            var buffer = new StringBuilder();
+
+            foreach (var element in elements)
+            {
+                if (element is PlainText text)
+                {
+                    buffer.Append(text);
+                    continue;
+                }
+
+                if (buffer.Length > 0)
+                {
+                    yield return buffer.ToString();
+                    buffer.Clear();
+                }
+
+                yield return element;
+            }
         }
 
         public static bool operator ==(ComplexMessage left, ComplexMessage right)

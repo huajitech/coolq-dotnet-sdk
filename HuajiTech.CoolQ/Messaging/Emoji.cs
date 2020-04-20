@@ -25,5 +25,10 @@ namespace HuajiTech.CoolQ.Messaging
             get => GetArgumentAsInt32("id");
             set => SetArgument("id", value);
         }
+
+        public string ConvertToString()
+        {
+            return char.ConvertFromUtf32(Id);
+        }
     }
 }

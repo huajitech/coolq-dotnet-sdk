@@ -3429,6 +3429,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Clear
   nameWithType: ComplexMessage.Clear
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText
+  name: CombinePlainText()
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_CombinePlainText
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText()
+  nameWithType: ComplexMessage.CombinePlainText()
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText*
+  name: CombinePlainText
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_CombinePlainText_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText
+  nameWithType: ComplexMessage.CombinePlainText
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage.Contains(HuajiTech.CoolQ.Messaging.MessageElement)
   name: Contains(MessageElement)
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_Contains_HuajiTech_CoolQ_Messaging_MessageElement_
@@ -3718,12 +3731,12 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Subtraction
   nameWithType: ComplexMessage.Subtraction
-- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String)
-  name: Parse(String)
-  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_System_String_
-  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String)
-  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String)
-  nameWithType: ComplexMessage.Parse(String)
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String,System.Boolean)
+  name: Parse(String, Boolean)
+  href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_System_String_System_Boolean_
+  commentId: M:HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String,System.Boolean)
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String, System.Boolean)
+  nameWithType: ComplexMessage.Parse(String, Boolean)
 - uid: HuajiTech.CoolQ.Messaging.ComplexMessage.Parse*
   name: Parse
   href: api/HuajiTech.CoolQ.Messaging.ComplexMessage.html#HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_
@@ -4518,6 +4531,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Emoji.Emoji
   nameWithType: Emoji.Emoji
+- uid: HuajiTech.CoolQ.Messaging.Emoji.ConvertToString
+  name: ConvertToString()
+  href: api/HuajiTech.CoolQ.Messaging.Emoji.html#HuajiTech_CoolQ_Messaging_Emoji_ConvertToString
+  commentId: M:HuajiTech.CoolQ.Messaging.Emoji.ConvertToString
+  fullName: HuajiTech.CoolQ.Messaging.Emoji.ConvertToString()
+  nameWithType: Emoji.ConvertToString()
+- uid: HuajiTech.CoolQ.Messaging.Emoji.ConvertToString*
+  name: ConvertToString
+  href: api/HuajiTech.CoolQ.Messaging.Emoji.html#HuajiTech_CoolQ_Messaging_Emoji_ConvertToString_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Emoji.ConvertToString
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.Emoji.ConvertToString
+  nameWithType: Emoji.ConvertToString
 - uid: HuajiTech.CoolQ.Messaging.Emoji.Id
   name: Id
   href: api/HuajiTech.CoolQ.Messaging.Emoji.html#HuajiTech_CoolQ_Messaging_Emoji_Id
@@ -4591,12 +4617,12 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Extensions.At
   nameWithType: Extensions.At
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)
-  name: Parse(Message)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_CoolQ_Message_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)
-  nameWithType: Extensions.Parse(Message)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message,System.Boolean)
+  name: Parse(Message, Boolean)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_CoolQ_Message_System_Boolean_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message,System.Boolean)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message, System.Boolean)
+  nameWithType: Extensions.Parse(Message, Boolean)
 - uid: HuajiTech.CoolQ.Messaging.Extensions.Parse*
   name: Parse
   href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_
