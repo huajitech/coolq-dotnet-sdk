@@ -8,12 +8,12 @@ namespace HuajiTech.CoolQ.Messaging
     public class Emoticon : CQCode
     {
         public Emoticon()
-            : base("image")
+            : base("face")
         {
         }
 
         public Emoticon(IDictionary<string, string> arguments)
-            : base("image", arguments)
+            : base("face", arguments)
         {
         }
 
