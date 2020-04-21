@@ -24,20 +24,18 @@ namespace HuajiTech.CoolQ.DataExchange
                 LastSpeakTime = ReadDateTime(),
                 Level = ReadString(),
                 Role = (MemberRole)ReadInt32(),
-                HasBadRecord = ReadBoolean(),
-                CustomTitle = new CustomTitle(
-                    text: ReadString(),
-                    expirationTime: ReadDateTime()),
-                CanEditAlias = ReadBoolean()
+                HasBadRecord = ReadBoolean()
             };
 
-            if (info.CustomTitle.Text is null)
+            var titleText = ReadString();
+            var titleExpirationTime = ReadDateTime();
+            info.CanEditAlias = ReadBoolean();
+
+            if (!(titleText is null))
             {
-                info.CustomTitle = null;
-            }
-            else if (info.CustomTitle.ExpirationTime <= Timestamp.Base)
-            {
-                info.CustomTitle = new CustomTitle(info.CustomTitle.Text);
+                info.CustomTitle = titleExpirationTime <= Timestamp.Base ?
+                    new CustomTitle(titleText) :
+                    new CustomTitle(titleText, titleExpirationTime);
             }
 
             return info;
