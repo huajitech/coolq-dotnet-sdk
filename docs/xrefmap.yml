@@ -2043,6 +2043,63 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Logger.LogInfo
   nameWithType: Logger.LogInfo
+- uid: HuajiTech.CoolQ.Logger.LogReceiving(System.String)
+  name: LogReceiving(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogReceiving_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogReceiving(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogReceiving(System.String)
+  nameWithType: Logger.LogReceiving(String)
+- uid: HuajiTech.CoolQ.Logger.LogReceiving(System.String,System.String)
+  name: LogReceiving(String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogReceiving_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogReceiving(System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogReceiving(System.String, System.String)
+  nameWithType: Logger.LogReceiving(String, String)
+- uid: HuajiTech.CoolQ.Logger.LogReceiving*
+  name: LogReceiving
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogReceiving_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogReceiving
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogReceiving
+  nameWithType: Logger.LogReceiving
+- uid: HuajiTech.CoolQ.Logger.LogSending(System.String)
+  name: LogSending(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogSending_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogSending(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogSending(System.String)
+  nameWithType: Logger.LogSending(String)
+- uid: HuajiTech.CoolQ.Logger.LogSending(System.String,System.String)
+  name: LogSending(String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogSending_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogSending(System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogSending(System.String, System.String)
+  nameWithType: Logger.LogSending(String, String)
+- uid: HuajiTech.CoolQ.Logger.LogSending*
+  name: LogSending
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogSending_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogSending
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogSending
+  nameWithType: Logger.LogSending
+- uid: HuajiTech.CoolQ.Logger.LogSuccess(System.String)
+  name: LogSuccess(String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogSuccess_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogSuccess(System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogSuccess(System.String)
+  nameWithType: Logger.LogSuccess(String)
+- uid: HuajiTech.CoolQ.Logger.LogSuccess(System.String,System.String)
+  name: LogSuccess(String, String)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogSuccess_System_String_System_String_
+  commentId: M:HuajiTech.CoolQ.Logger.LogSuccess(System.String,System.String)
+  fullName: HuajiTech.CoolQ.Logger.LogSuccess(System.String, System.String)
+  nameWithType: Logger.LogSuccess(String, String)
+- uid: HuajiTech.CoolQ.Logger.LogSuccess*
+  name: LogSuccess
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogSuccess_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogSuccess
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogSuccess
+  nameWithType: Logger.LogSuccess
 - uid: HuajiTech.CoolQ.Logger.LogWarning(System.Exception)
   name: LogWarning(Exception)
   href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogWarning_System_Exception_
@@ -2098,6 +2155,24 @@ references:
   commentId: F:HuajiTech.CoolQ.LogLevel.Info
   fullName: HuajiTech.CoolQ.LogLevel.Info
   nameWithType: LogLevel.Info
+- uid: HuajiTech.CoolQ.LogLevel.Receiving
+  name: Receiving
+  href: api/HuajiTech.CoolQ.LogLevel.html#HuajiTech_CoolQ_LogLevel_Receiving
+  commentId: F:HuajiTech.CoolQ.LogLevel.Receiving
+  fullName: HuajiTech.CoolQ.LogLevel.Receiving
+  nameWithType: LogLevel.Receiving
+- uid: HuajiTech.CoolQ.LogLevel.Sending
+  name: Sending
+  href: api/HuajiTech.CoolQ.LogLevel.html#HuajiTech_CoolQ_LogLevel_Sending
+  commentId: F:HuajiTech.CoolQ.LogLevel.Sending
+  fullName: HuajiTech.CoolQ.LogLevel.Sending
+  nameWithType: LogLevel.Sending
+- uid: HuajiTech.CoolQ.LogLevel.Success
+  name: Success
+  href: api/HuajiTech.CoolQ.LogLevel.html#HuajiTech_CoolQ_LogLevel_Success
+  commentId: F:HuajiTech.CoolQ.LogLevel.Success
+  fullName: HuajiTech.CoolQ.LogLevel.Success
+  nameWithType: LogLevel.Success
 - uid: HuajiTech.CoolQ.LogLevel.Warning
   name: Warning
   href: api/HuajiTech.CoolQ.LogLevel.html#HuajiTech_CoolQ_LogLevel_Warning
