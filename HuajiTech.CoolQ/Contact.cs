@@ -1,4 +1,5 @@
 using HuajiTech.CoolQ.DataExchange;
+using System;
 using System.Linq;
 
 namespace HuajiTech.CoolQ
@@ -40,6 +41,7 @@ namespace HuajiTech.CoolQ
         /// 请求信息。
         /// </summary>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
+        /// <exception cref="InvalidOperationException">当前 <see cref="Contact"/> 对象表示的联系人不存在。</exception>
         public void RequestInfo()
         {
             _info = null;
@@ -55,6 +57,15 @@ namespace HuajiTech.CoolQ
             }
             catch (CoolQException) when (!throwException)
             {
+                return new ContactInfo();
+            }
+            catch (InvalidOperationException)
+            {
+                if (throwException)
+                {
+                    throw new InvalidOperationException(Resources.ContactNotExist);
+                }
+
                 return new ContactInfo();
             }
         }

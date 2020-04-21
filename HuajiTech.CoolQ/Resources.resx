@@ -123,6 +123,9 @@
   <data name="AppNotFound" xml:space="preserve">
     <value>未找到或找到多个应用类。</value>
   </data>
+  <data name="ContactNotExist" xml:space="preserve">
+    <value>该联系人不存在。</value>
+  </data>
   <data name="Debug" xml:space="preserve">
     <value>调试</value>
   </data>

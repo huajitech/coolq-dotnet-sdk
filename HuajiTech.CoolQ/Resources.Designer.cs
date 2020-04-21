@@ -79,6 +79,15 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 该联系人不存在。 的本地化字符串。
+        /// </summary>
+        internal static string ContactNotExist {
+            get {
+                return ResourceManager.GetString("ContactNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 调试 的本地化字符串。
         /// </summary>
         internal static string Debug {

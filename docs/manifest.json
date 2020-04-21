@@ -36,7 +36,7 @@
           "hash": "qZTukvM3kd37vuTv0yKhFg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Contact.html",
-          "hash": "A08rPaJWrKk8Ago4/BTfFw=="
+          "hash": "tigeTGnL/9UmwYA0qrDS0g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -204,7 +204,7 @@
           "hash": "QlT33Vo86vHusoeEyCmocA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -252,7 +252,7 @@
           "hash": "cFAm3wsNL0vBQb8mZphCTA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -420,7 +420,7 @@
           "hash": "PcHONWl542R2VCxq9fRxOg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -900,7 +900,7 @@
           "hash": "tO5H+qv1A3ob46GkHMOVOA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -912,7 +912,7 @@
           "hash": "qM1thFhug1lOGJdH2goBhQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -959,7 +959,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 67,
-          "skipped_file_count": 67
+          "skipped_file_count": 66
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
