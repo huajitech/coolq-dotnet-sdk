@@ -29,12 +29,12 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取当前 <see cref="Contact"/> 对象的备注名。
         /// </summary>
-        public string Alias => _info.Alias;
+        public string Alias => GetInfo().Alias;
 
         /// <summary>
         /// 获取当前 <see cref="Contact"/> 对象的昵称。
         /// </summary>
-        public override string Nickname => GetInfo().Nickname ?? base.Nickname;
+        public override string Nickname => _info?.Nickname ?? base.Nickname;
 
         /// <summary>
         /// 请求信息。
