@@ -379,6 +379,11 @@ namespace HuajiTech.CoolQ.Messaging
 
                 yield return element;
             }
+
+            if (buffer.Length > 0)
+            {
+                yield return buffer.ToString();
+            }
         }
 
         public static bool operator ==(ComplexMessage left, ComplexMessage right)
