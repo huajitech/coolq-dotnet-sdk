@@ -195,7 +195,7 @@ namespace HuajiTech.CoolQ
         public override void RequestInfo(bool refresh = false)
         {
             _info = null;
-            GetInfo(false, refresh);
+            GetInfo(true, refresh);
         }
 
         /// <summary>
