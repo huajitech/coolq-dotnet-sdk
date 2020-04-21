@@ -16,6 +16,21 @@ namespace HuajiTech.CoolQ
         Info = 10,
 
         /// <summary>
+        /// 成功。
+        /// </summary>
+        Success = 11,
+
+        /// <summary>
+        /// 接收。
+        /// </summary>
+        Receiving = 12,
+
+        /// <summary>
+        /// 发送。
+        /// </summary>
+        Sending = 13,
+
+        /// <summary>
         /// 警告。
         /// </summary>
         Warning = 20,

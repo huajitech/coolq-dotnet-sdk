@@ -60,6 +60,63 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
+        /// 记录一个成功。
+        /// </summary>
+        /// <param name="type">日志的类型。</param>
+        /// <param name="message">日志的消息。</param>
+        public static void LogSuccess(string type, string message)
+        {
+            Log(LogLevel.Success, type, message);
+        }
+
+        /// <summary>
+        /// 记录一个成功。
+        /// </summary>
+        /// <param name="message">日志的消息。</param>
+        public static void LogSuccess(string message)
+        {
+            LogSuccess(Resources.Success, message);
+        }
+
+        /// <summary>
+        /// 记录一个接收。
+        /// </summary>
+        /// <param name="type">日志的类型。</param>
+        /// <param name="message">日志的消息。</param>
+        public static void LogReceiving(string type, string message)
+        {
+            Log(LogLevel.Receiving, type, message);
+        }
+
+        /// <summary>
+        /// 记录一个接收。
+        /// </summary>
+        /// <param name="message">日志的消息。</param>
+        public static void LogReceiving(string message)
+        {
+            LogReceiving(Resources.Receiving, message);
+        }
+
+        /// <summary>
+        /// 记录一个发送。
+        /// </summary>
+        /// <param name="type">日志的类型。</param>
+        /// <param name="message">日志的消息。</param>
+        public static void LogSending(string type, string message)
+        {
+            Log(LogLevel.Sending, type, message);
+        }
+
+        /// <summary>
+        /// 记录一个发送。
+        /// </summary>
+        /// <param name="message">日志的消息。</param>
+        public static void LogSending(string message)
+        {
+            LogSending(Resources.Sending, message);
+        }
+
+        /// <summary>
         /// 记录一个警告。
         /// </summary>
         /// <param name="type">日志的类型。</param>

@@ -169,6 +169,33 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 接收 的本地化字符串。
+        /// </summary>
+        internal static string Receiving {
+            get {
+                return ResourceManager.GetString("Receiving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 发送 的本地化字符串。
+        /// </summary>
+        internal static string Sending {
+            get {
+                return ResourceManager.GetString("Sending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 成功 的本地化字符串。
+        /// </summary>
+        internal static string Success {
+            get {
+                return ResourceManager.GetString("Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ 开发，不建议在生产环境使用。此提示不是由任何错误导致的，也不会对使用造成任何影响。测试版本迭代较快，请及时更新。如果遇到BUG，欢迎进行反馈。感谢您的配合。 的本地化字符串。
         /// </summary>
         internal static string TestingNotificationContent {

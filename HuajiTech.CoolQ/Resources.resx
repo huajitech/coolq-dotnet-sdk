@@ -153,6 +153,15 @@
   <data name="OwnerOnlyOperation" xml:space="preserve">
     <value>该操作只能由群主执行。</value>
   </data>
+  <data name="Receiving" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>发送</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
   <data name="TestingNotificationContent" xml:space="preserve">
     <value>此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ 开发，不建议在生产环境使用。此提示不是由任何错误导致的，也不会对使用造成任何影响。测试版本迭代较快，请及时更新。如果遇到BUG，欢迎进行反馈。感谢您的配合。</value>
   </data>
