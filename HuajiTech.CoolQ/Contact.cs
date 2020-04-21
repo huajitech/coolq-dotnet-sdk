@@ -43,7 +43,7 @@ namespace HuajiTech.CoolQ
         public void RequestInfo()
         {
             _info = null;
-            GetInfo(false);
+            GetInfo(true);
         }
 
         private ContactInfo GetInfo(bool throwException = false)
