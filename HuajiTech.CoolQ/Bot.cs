@@ -19,16 +19,16 @@ namespace HuajiTech.CoolQ
         internal const string ApiVersion = "9";
         private static readonly ConstructorInfo AppConstructor;
 
-        private static readonly Lazy<bool> _canSendImage =
+        private static readonly Lazy<bool> _CanSendImage =
             new Lazy<bool>(() => NativeMethods.GetCanSendImage(AuthCode));
 
-        private static readonly Lazy<bool> _canSendRecord =
+        private static readonly Lazy<bool> _CanSendRecord =
             new Lazy<bool>(() => NativeMethods.GetCanSendRecord(AuthCode));
 
-        private static readonly Lazy<CurrentUser> _currentUser =
+        private static readonly Lazy<CurrentUser> _CurrentUser =
             new Lazy<CurrentUser>(() => new CurrentUser());
 
-        private static readonly Lazy<DirectoryInfo> _dataDirectory =
+        private static readonly Lazy<DirectoryInfo> _DataDirectory =
             new Lazy<DirectoryInfo>(() => new DirectoryInfo(NativeMethods.GetDataDirectory(AuthCode).CheckError()));
 
         static Bot()
@@ -43,23 +43,23 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取一个值，指示是否可以发送图片。
         /// </summary>
-        public static bool CanSendImage => _canSendImage.Value;
+        public static bool CanSendImage => _CanSendImage.Value;
 
         /// <summary>
         /// 获取一个值，指示是否可以发送录音。
         /// </summary>
-        public static bool CanSendRecord => _canSendRecord.Value;
+        public static bool CanSendRecord => _CanSendRecord.Value;
 
         /// <summary>
         /// 获取机器人的当前用户。
         /// </summary>
-        public static CurrentUser CurrentUser => _currentUser.Value;
+        public static CurrentUser CurrentUser => _CurrentUser.Value;
 
         /// <summary>
         /// 获取应用的数据目录。
         /// </summary>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public static DirectoryInfo DataDirectory => _dataDirectory.Value;
+        public static DirectoryInfo DataDirectory => _DataDirectory.Value;
 
         /// <summary>
         /// 获取一个值，指示应用是否已被启用。
