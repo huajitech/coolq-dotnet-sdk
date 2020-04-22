@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public Anonymous(IDictionary<string, string> arguments)
-            : base("anonymous", arguments)
+        public Anonymous(IDictionary<string, string> parameters)
+            : base("anonymous", parameters)
         {
         }
 

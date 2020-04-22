@@ -23,17 +23,17 @@ namespace HuajiTech.CoolQ.Messaging
             }
 
             Type = type;
-            Arguments = new Dictionary<string, string>();
+            Parameters = new Dictionary<string, string>();
         }
 
         /// <summary>
         /// 以指定的类型和参数初始化一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
         /// <param name="type">CQ码的类型。</param>
-        /// <param name="arguments">一个字典，包含 <see cref="CQCode"/> 的所有参数。</param>
+        /// <param name="parameters">一个字典，包含 <see cref="CQCode"/> 的所有参数。</param>
         /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="arguments"/> 为 <c>null</c>。</exception>
-        public CQCode(string type, IDictionary<string, string> arguments)
+        /// <exception cref="ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
+        public CQCode(string type, IDictionary<string, string> parameters)
         {
             if (string.IsNullOrWhiteSpace(type))
             {
@@ -41,7 +41,7 @@ namespace HuajiTech.CoolQ.Messaging
             }
 
             Type = type;
-            Arguments = arguments ?? throw new ArgumentNullException(nameof(arguments));
+            Parameters = parameters ?? throw new ArgumentNullException(nameof(parameters));
         }
 
         /// <summary>
@@ -56,21 +56,21 @@ namespace HuajiTech.CoolQ.Messaging
         {
             get
             {
-                if (!Arguments.ContainsKey(key))
+                if (!Parameters.ContainsKey(key))
                 {
                     return null;
                 }
 
-                return Arguments[key];
+                return Parameters[key];
             }
 
-            set => Arguments[key] = value;
+            set => Parameters[key] = value;
         }
 
         /// <summary>
         /// 获取当前 <see cref="CQCode"/> 对象的参数。
         /// </summary>
-        public IDictionary<string, string> Arguments { get; }
+        public IDictionary<string, string> Parameters { get; }
 
         /// <summary>
         /// 获取当前 <see cref="CQCode"/> 对象的类型。
@@ -103,8 +103,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// <returns>当前 <see cref="CQCode"/> 对象的值的字符串表示形式。</returns>
         public override string ToString()
         {
-            return Arguments.Any() ?
-                $"[CQ:{Type},{string.Join(",", Arguments.Select(para => $"{para.Key}={Escape(para.Value)}"))}]" :
+            return Parameters.Any() ?
+                $"[CQ:{Type},{string.Join(",", Parameters.Select(para => $"{para.Key}={Escape(para.Value)}"))}]" :
                 $"[CQ:{Type}]";
         }
 

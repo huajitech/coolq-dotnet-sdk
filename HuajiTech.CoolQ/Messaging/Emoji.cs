@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public Emoji(IDictionary<string, string> arguments)
-            : base("emoji", arguments)
+        public Emoji(IDictionary<string, string> parameters)
+            : base("emoji", parameters)
         {
         }
 

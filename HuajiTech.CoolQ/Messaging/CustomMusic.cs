@@ -14,8 +14,8 @@ namespace HuajiTech.CoolQ.Messaging
             this["type"] = "custom";
         }
 
-        public CustomMusic(IDictionary<string, string> arguments)
-            : base("music", arguments)
+        public CustomMusic(IDictionary<string, string> parameters)
+            : base("music", parameters)
         {
         }
 

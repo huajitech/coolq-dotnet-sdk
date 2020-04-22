@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public RichText(IDictionary<string, string> arguments)
-            : base("rich", arguments)
+        public RichText(IDictionary<string, string> parameters)
+            : base("rich", parameters)
         {
         }
     }

@@ -4132,19 +4132,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CQCode.CQCode
   nameWithType: CQCode.CQCode
-- uid: HuajiTech.CoolQ.Messaging.CQCode.Arguments
-  name: Arguments
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Arguments
-  commentId: P:HuajiTech.CoolQ.Messaging.CQCode.Arguments
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Arguments
-  nameWithType: CQCode.Arguments
-- uid: HuajiTech.CoolQ.Messaging.CQCode.Arguments*
-  name: Arguments
-  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Arguments_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Arguments
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.Arguments
-  nameWithType: CQCode.Arguments
 - uid: HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)
   name: Escape(String)
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Escape_System_String_
@@ -4239,6 +4226,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.CQCode.Item
   nameWithType: CQCode.Item
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  name: Parameters
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Parameters
+  commentId: P:HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  nameWithType: CQCode.Parameters
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Parameters*
+  name: Parameters
+  href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Parameters_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  nameWithType: CQCode.Parameters
 - uid: HuajiTech.CoolQ.Messaging.CQCode.SetArgument(System.String,System.Boolean)
   name: SetArgument(String, Boolean)
   href: api/HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetArgument_System_String_System_Boolean_

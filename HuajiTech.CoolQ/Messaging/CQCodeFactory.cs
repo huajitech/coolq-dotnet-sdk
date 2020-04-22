@@ -12,44 +12,44 @@ namespace HuajiTech.CoolQ.Messaging
         /// 以指定的类型和参数创建一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
         /// <param name="type">要创建的 <see cref="CQCode"/> 对象的类型。</param>
-        /// <param name="arguments">要创建的 <see cref="CQCode"/> 对象的参数。</param>
+        /// <param name="parameters">要创建的 <see cref="CQCode"/> 对象的参数。</param>
         /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
         /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="arguments"/> 为 <c>null</c>。</exception>
-        public static CQCode Create(string type, IDictionary<string, string> arguments)
+        /// <exception cref="ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
+        public static CQCode Create(string type, IDictionary<string, string> parameters)
         {
             if (string.IsNullOrWhiteSpace(type))
             {
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(type));
             }
 
-            if (arguments is null)
+            if (parameters is null)
             {
-                throw new ArgumentNullException(nameof(arguments));
+                throw new ArgumentNullException(nameof(parameters));
             }
 
             return type switch
             {
-                "face" => new Emoticon(arguments),
-                "emoji" => new Emoji(arguments),
-                "bface" => new CustomEmoticon(arguments),
-                "sface" => new SmallEmoticon(arguments),
-                "image" => new Image(arguments),
-                "record" => new Record(arguments),
-                "at" when arguments["qq"] != "all" => new At(arguments),
-                "at" when arguments["qq"] == "all" => new AtAll(arguments),
-                "rps" => new RockPaperScissors(arguments),
-                "dice" => new Dice(arguments),
-                "shake" => new Shake(arguments),
-                "anonymous" => new Anonymous(arguments),
-                "location" => new Location(arguments),
-                "sign" => new ClockingIn(arguments),
-                "music" when arguments["type"] != "custom" => new Music(arguments),
-                "music" when arguments["type"] == "custom" => new CustomMusic(arguments),
-                "share" => new Share(arguments),
-                "rich" => new RichText(arguments),
-                "contact" => new ChatShare(arguments),
-                _ => new CQCode(type, arguments)
+                "face" => new Emoticon(parameters),
+                "emoji" => new Emoji(parameters),
+                "bface" => new CustomEmoticon(parameters),
+                "sface" => new SmallEmoticon(parameters),
+                "image" => new Image(parameters),
+                "record" => new Record(parameters),
+                "at" when parameters["qq"] != "all" => new At(parameters),
+                "at" when parameters["qq"] == "all" => new AtAll(parameters),
+                "rps" => new RockPaperScissors(parameters),
+                "dice" => new Dice(parameters),
+                "shake" => new Shake(parameters),
+                "anonymous" => new Anonymous(parameters),
+                "location" => new Location(parameters),
+                "sign" => new ClockingIn(parameters),
+                "music" when parameters["type"] != "custom" => new Music(parameters),
+                "music" when parameters["type"] == "custom" => new CustomMusic(parameters),
+                "share" => new Share(parameters),
+                "rich" => new RichText(parameters),
+                "contact" => new ChatShare(parameters),
+                _ => new CQCode(type, parameters)
             };
         }
 

@@ -13,8 +13,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public Share(IDictionary<string, string> arguments)
-            : base("share", arguments)
+        public Share(IDictionary<string, string> parameters)
+            : base("share", parameters)
         {
         }
 

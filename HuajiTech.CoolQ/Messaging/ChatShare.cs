@@ -13,8 +13,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public ChatShare(IDictionary<string, string> arguments)
-            : base("contact", arguments)
+        public ChatShare(IDictionary<string, string> parameters)
+            : base("contact", parameters)
         {
         }
 

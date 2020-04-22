@@ -13,8 +13,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public Music(IDictionary<string, string> arguments)
-            : base("music", arguments)
+        public Music(IDictionary<string, string> parameters)
+            : base("music", parameters)
         {
         }
 

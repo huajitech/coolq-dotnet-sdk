@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public RockPaperScissors(IDictionary<string, string> arguments)
-            : base("rps", arguments)
+        public RockPaperScissors(IDictionary<string, string> parameters)
+            : base("rps", parameters)
         {
         }
 

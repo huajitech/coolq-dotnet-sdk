@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public Shake(IDictionary<string, string> arguments)
-            : base("shake", arguments)
+        public Shake(IDictionary<string, string> parameters)
+            : base("shake", parameters)
         {
         }
 

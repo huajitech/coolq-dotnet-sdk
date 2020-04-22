@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public CustomEmoticon(IDictionary<string, string> arguments)
-            : base("bface", arguments)
+        public CustomEmoticon(IDictionary<string, string> parameters)
+            : base("bface", parameters)
         {
         }
 

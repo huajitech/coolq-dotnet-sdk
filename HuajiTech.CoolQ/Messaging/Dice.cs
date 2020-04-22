@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public Dice(IDictionary<string, string> arguments)
-            : base("dice", arguments)
+        public Dice(IDictionary<string, string> parameters)
+            : base("dice", parameters)
         {
         }
 

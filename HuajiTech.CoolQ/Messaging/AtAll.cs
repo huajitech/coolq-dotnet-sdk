@@ -13,8 +13,8 @@ namespace HuajiTech.CoolQ.Messaging
             this["qq"] = "all";
         }
 
-        public AtAll(IDictionary<string, string> arguments)
-            : base("at", arguments)
+        public AtAll(IDictionary<string, string> parameters)
+            : base("at", parameters)
         {
         }
     }

@@ -12,8 +12,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public At(IDictionary<string, string> arguments)
-            : base("at", arguments)
+        public At(IDictionary<string, string> parameters)
+            : base("at", parameters)
         {
         }
 

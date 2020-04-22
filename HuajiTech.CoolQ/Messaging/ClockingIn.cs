@@ -13,8 +13,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
         }
 
-        public ClockingIn(IDictionary<string, string> arguments)
-            : base("sign", arguments)
+        public ClockingIn(IDictionary<string, string> parameters)
+            : base("sign", parameters)
         {
         }
 
