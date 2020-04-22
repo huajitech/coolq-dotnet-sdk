@@ -513,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Anonymous.html",
-          "hash": "Jqe0Drg3a/iHJHjT+2hUow=="
+          "hash": "YPNTmJ/lFin0N2Ov/QXf3g=="
         }
       },
       "is_incremental": false,
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.At.html",
-          "hash": "Xhl96r9W8ACxjL3fvtxh9Q=="
+          "hash": "t8/hnyhHiZltJb/4512X4g=="
         }
       },
       "is_incremental": false,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.AtAll.html",
-          "hash": "7l5egFKI6b8oAOS9M3o/iA=="
+          "hash": "1EVw9xWwlr9TNiaiKwhzxA=="
         }
       },
       "is_incremental": false,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CQCode.html",
-          "hash": "HQA0Q2y0Di2Z0QJoNRRUwA=="
+          "hash": "Sz7k2Jcl7Awma0RGlyl03w=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ChatShare.html",
-          "hash": "Oo5jSbTkCgynslD8XEyuLg=="
+          "hash": "1P/o0bxkNzmw3OoSzznumA=="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ClockingIn.html",
-          "hash": "Ll1DY6W4zcLtsPNVMiQPqA=="
+          "hash": "moEWmdAf3I9U1r+3CccX8A=="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CustomEmoticon.html",
-          "hash": "IGlfyqFCeTD15mqNQhOWHA=="
+          "hash": "OdpjC+N5y/Mp8i0U1n4bXA=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CustomMusic.html",
-          "hash": "E3/FePemP2FZ9bB3qdJdmg=="
+          "hash": "2TxoxIA8cuORnTsyjAURNQ=="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Dice.html",
-          "hash": "KNdddcl5aB1tzmx0vgyk4A=="
+          "hash": "vfEna9Ykuc/cc7mLsxMFhw=="
         }
       },
       "is_incremental": false,
@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Emoji.html",
-          "hash": "kb7dMmUdVde0wdurg0AUNQ=="
+          "hash": "3Jcm6hXAlIJ3j61XGTsc2g=="
         }
       },
       "is_incremental": false,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Emoticon.html",
-          "hash": "qCSZvledNRX5kF2g70DU+w=="
+          "hash": "MabyI0vM2cf3SzbJ333MKw=="
         }
       },
       "is_incremental": false,
@@ -693,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Image.html",
-          "hash": "9e9KRhrI0a2pWMFMWzHrvg=="
+          "hash": "HYSwZrnEpTdZ+gVzb48wvA=="
         }
       },
       "is_incremental": false,
@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Location.html",
-          "hash": "tVZuzLv8Xu4Pnb0yVKVEQg=="
+          "hash": "0e/9lXSYKH4n9pA/Rslemg=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Music.html",
-          "hash": "Rka0QM1xila61YT91vP2NA=="
+          "hash": "2xs8VGgsDr66qOm5GmP3vw=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Record.html",
-          "hash": "lCqW5QgOxw7/5YC+auqQew=="
+          "hash": "ZdGsU3Ma7D151u+CspXtvA=="
         }
       },
       "is_incremental": false,
@@ -777,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.RichText.html",
-          "hash": "atiIqsJ26VDYKVx9OJQJNA=="
+          "hash": "Biv+LYrTALZMJyQcRULScA=="
         }
       },
       "is_incremental": false,
@@ -789,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html",
-          "hash": "qcz6+fGEQmmNlLD3x52KDQ=="
+          "hash": "QWyhglIpLz9oK2wE5Kkv2g=="
         }
       },
       "is_incremental": false,
@@ -813,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Shake.html",
-          "hash": "0IWCr1p2jZD4Il5y4Guz/Q=="
+          "hash": "GhhuKFlgpfHt2hSzxuhTFw=="
         }
       },
       "is_incremental": false,
@@ -825,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Share.html",
-          "hash": "MO2acMhnH0QpMAdfgwVGfA=="
+          "hash": "3Z9RJcJbkaCluFAXx71VrQ=="
         }
       },
       "is_incremental": false,
@@ -837,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.SmallEmoticon.html",
-          "hash": "XZW3F0uSefVAE5oe3MhJwg=="
+          "hash": "jg38K2WFmnlI2sBHdo6RZg=="
         }
       },
       "is_incremental": false,
@@ -959,7 +959,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 67,
-          "skipped_file_count": 46
+          "skipped_file_count": 47
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

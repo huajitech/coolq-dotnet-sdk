@@ -23,8 +23,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public Uri ImageUrl
         {
-            get => GetArgumentAsUri("image");
-            set => SetArgument("image", value);
+            get => GetParameterAsUri("image");
+            set => SetParameter("image", value);
         }
 
         /// <summary>

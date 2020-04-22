@@ -22,8 +22,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public bool DoesFallback
         {
-            get => GetArgumentAsBoolean("ignore");
-            set => SetArgument("ignore", value);
+            get => GetParameterAsBoolean("ignore");
+            set => SetParameter("ignore", value);
         }
     }
 }

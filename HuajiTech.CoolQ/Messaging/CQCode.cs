@@ -108,12 +108,12 @@ namespace HuajiTech.CoolQ.Messaging
                 $"[CQ:{Type}]";
         }
 
-        protected bool GetArgumentAsBoolean(string key)
+        protected bool GetParameterAsBoolean(string key)
         {
             return this[key] == "true";
         }
 
-        protected int GetArgumentAsInt32(string key)
+        protected int GetParameterAsInt32(string key)
         {
             if (int.TryParse(this[key], NumberStyles.Integer, CultureInfo.InvariantCulture, out var value))
             {
@@ -123,7 +123,7 @@ namespace HuajiTech.CoolQ.Messaging
             return default;
         }
 
-        protected long GetArgumentAsInt64(string key)
+        protected long GetParameterAsInt64(string key)
         {
             if (long.TryParse(this[key], NumberStyles.Integer, CultureInfo.InvariantCulture, out var value))
             {
@@ -133,7 +133,7 @@ namespace HuajiTech.CoolQ.Messaging
             return default;
         }
 
-        protected float GetArgumentAsSingle(string key)
+        protected float GetParameterAsSingle(string key)
         {
             if (float.TryParse(this[key], NumberStyles.Float, CultureInfo.InvariantCulture, out var value))
             {
@@ -143,7 +143,7 @@ namespace HuajiTech.CoolQ.Messaging
             return default;
         }
 
-        protected Uri GetArgumentAsUri(string key)
+        protected Uri GetParameterAsUri(string key)
         {
             try
             {
@@ -155,27 +155,27 @@ namespace HuajiTech.CoolQ.Messaging
             }
         }
 
-        protected void SetArgument(string key, bool value)
+        protected void SetParameter(string key, bool value)
         {
             this[key] = value ? "true" : "false";
         }
 
-        protected void SetArgument(string key, int value)
+        protected void SetParameter(string key, int value)
         {
             this[key] = value.ToString(CultureInfo.InvariantCulture);
         }
 
-        protected void SetArgument(string key, long value)
+        protected void SetParameter(string key, long value)
         {
             this[key] = value.ToString(CultureInfo.InvariantCulture);
         }
 
-        protected void SetArgument(string key, float value)
+        protected void SetParameter(string key, float value)
         {
             this[key] = value.ToString(CultureInfo.InvariantCulture);
         }
 
-        protected void SetArgument(string key, Uri value)
+        protected void SetParameter(string key, Uri value)
         {
             this[key] = value?.ToString();
         }
