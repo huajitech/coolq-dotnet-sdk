@@ -35,7 +35,7 @@ namespace HuajiTech.CoolQ
                 }
             };
 
-            App = AppConstructor.Invoke(null);
+            App = _appConstructor.Invoke(null);
 
             return 0;
         }
