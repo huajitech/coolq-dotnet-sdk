@@ -55,6 +55,7 @@ namespace HuajiTech.CoolQ
             }
 
             using var reader = new StringKeyValuePairReader(message.Content);
+
             try
             {
                 return reader.ReadAll().ToDictionary(pair => pair.Key, pair => pair.Value);
