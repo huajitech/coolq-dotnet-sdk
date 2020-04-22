@@ -8,7 +8,7 @@ namespace HuajiTech.CoolQ
     public class CustomTitle
     {
         /// <summary>
-        /// 以指定的文本和过期时间初始化一个 <see cref="CustomTitle"/> 类的实例。
+        /// 以指定的文本和过期时间初始化一个 <see cref="CustomTitle"/> 类的新实例。
         /// </summary>
         /// <param name="text">文本。</param>
         /// <param name="expirationTime">过期时间。</param>

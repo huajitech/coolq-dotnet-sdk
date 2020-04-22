@@ -15,7 +15,12 @@ namespace HuajiTech.CoolQ.Messaging
 
         public ComplexMessage Add(MessageElement element)
         {
-            return ComplexMessage.FromMessageElement(this).Add(element);
+            return ToComplexMessage().Add(element);
+        }
+
+        public ComplexMessage ToComplexMessage()
+        {
+            return new ComplexMessage(this);
         }
 
         public abstract override string ToString();
@@ -53,6 +58,11 @@ namespace HuajiTech.CoolQ.Messaging
         public static implicit operator MessageElement(string str)
         {
             return FromString(str);
+        }
+
+        public static implicit operator ComplexMessage(MessageElement element)
+        {
+            return element?.ToComplexMessage();
         }
     }
 }
