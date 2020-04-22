@@ -33,7 +33,7 @@ namespace HuajiTech.CoolQ.DataExchange
 
             if (!(titleText is null))
             {
-                info.CustomTitle = titleExpirationTime <= Timestamp.Base ?
+                info.CustomTitle = titleExpirationTime <= Timestamp.Zero ?
                     new CustomTitle(titleText) :
                     new CustomTitle(titleText, titleExpirationTime);
             }
