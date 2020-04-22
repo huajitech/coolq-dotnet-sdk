@@ -84,15 +84,10 @@ using System.Linq;
 </code></pre><h3 id="示例">示例</h3>
 <ul>
 <li><p>获取消息中的所有纯文本拼接成的字符串。</p>
-<pre><code class="lang-csharp">message.GetPlainText();
-</code></pre></li>
-<li><p>获取消息中指定类型的元素。</p>
-<pre><code class="lang-csharp">var cqCodes = message.OfType&lt;CQCode&gt;();
-var images = message.OfType&lt;Image&gt;();
-var emojis = message.OfType&lt;Emoji&gt;();
+<pre><code class="lang-csharp">string.Join(string.Empty, message.OfType&lt;PlainText&gt;());
 </code></pre></li>
 <li><p>如果消息包含对机器人的 At，发送一张图片和一个表情。</p>
-<pre><code class="lang-csharp">if (message.Contains(CurrentUser.AsUser().At()))
+<pre><code class="lang-csharp">if (message.Contains(Bot.CurrentUser.At()))
 {
     var image = new Image { FileName = &quot;SmallYellowPicture.png&quot; };
     e.Source.Send(e.Sender.At() + &quot; &quot; + image);

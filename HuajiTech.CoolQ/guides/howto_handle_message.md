@@ -30,21 +30,13 @@ var message = e.Message.Parse();
 - 获取消息中的所有纯文本拼接成的字符串。
 
   ```csharp
-  message.GetPlainText();
-  ```
-
-- 获取消息中指定类型的元素。
-
-  ```csharp
-  var cqCodes = message.OfType<CQCode>();
-  var images = message.OfType<Image>();
-  var emojis = message.OfType<Emoji>();
+  string.Join(string.Empty, message.OfType<PlainText>());
   ```
 
 - 如果消息包含对机器人的 At，发送一张图片和一个表情。
 
   ```csharp
-  if (message.Contains(CurrentUser.AsUser().At()))
+  if (message.Contains(Bot.CurrentUser.At()))
   {
       var image = new Image { FileName = "SmallYellowPicture.png" };
       e.Source.Send(e.Sender.At() + " " + image);
