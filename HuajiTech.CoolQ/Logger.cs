@@ -139,7 +139,7 @@ namespace HuajiTech.CoolQ
         /// 将异常记录为一个警告。
         /// </summary>
         /// <param name="exception">要记录的异常。</param>
-        public static void LogWarning(this Exception exception)
+        public static void LogAsWarning(this Exception exception)
         {
             if (exception is null)
             {
@@ -172,7 +172,7 @@ namespace HuajiTech.CoolQ
         /// 将异常记录为一个错误。
         /// </summary>
         /// <param name="exception">要记录的异常。</param>
-        public static void LogError(this Exception exception)
+        public static void LogAsError(this Exception exception)
         {
             if (exception is null)
             {
