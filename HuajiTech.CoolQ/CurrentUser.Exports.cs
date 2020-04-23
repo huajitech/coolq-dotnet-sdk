@@ -128,7 +128,7 @@ namespace HuajiTech.CoolQ
             var sender = type switch
             {
                 PrivateMessageType.User => new User(senderNumber),
-                PrivateMessageType.Group => new Member(senderNumber, null),
+                PrivateMessageType.Group => new Member(senderNumber, new Group(0)),
                 PrivateMessageType.Contact => new Contact(senderNumber),
                 _ => throw new ArgumentOutOfRangeException(nameof(type))
             };

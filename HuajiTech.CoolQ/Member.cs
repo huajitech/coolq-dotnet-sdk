@@ -18,19 +18,9 @@ namespace HuajiTech.CoolQ
         /// <param name="group">所在群聊。</param>
         /// <exception cref="ArgumentNullException"><paramref name="group"/> 为 <c>null</c>。</exception>
         public Member(long number, Group group)
-            : this(number, group, false)
-        {
-        }
-
-        internal Member(long number, Group group, bool groupCanBeNull)
             : base(number)
         {
-            if (!groupCanBeNull && group is null)
-            {
-                throw new ArgumentNullException(nameof(group));
-            }
-
-            Group = group;
+            Group = group ?? throw new ArgumentNullException(nameof(group));
         }
 
         internal Member(MemberInfo info)
@@ -82,7 +72,6 @@ namespace HuajiTech.CoolQ
 
         /// <summary>
         /// 获取当前 <see cref="Member"/> 对象的所属 <see cref="CoolQ.Group"/> 对象。
-        /// 如果当前 <see cref="Member"/> 对象是 <see cref="CurrentUser.MessageReceived"/> 事件数据的 <see cref="MessageReceivedEventArgs.Sender"/> 属性的值，则为 <c>null</c>。
         /// </summary>
         public Group Group { get; }
 
@@ -342,6 +331,11 @@ namespace HuajiTech.CoolQ
         public override bool Equals(Chat other)
         {
             return base.Equals(other) && other is Member member && member.Group == Group;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode() ^ Group.GetHashCode();
         }
 
         public override string ToString()

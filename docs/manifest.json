@@ -36,7 +36,7 @@
           "hash": "qZTukvM3kd37vuTv0yKhFg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Chat.html",
-          "hash": "Lnq3gOXjQ2pWluudZsX7ig=="
+          "hash": "JvCR7G/TvtAA1/6StXa4qQ=="
         }
       },
       "is_incremental": true,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.CoolQException.html",
-          "hash": "gPmc+WH/MjEno9GElaA2Rg=="
+          "hash": "vEpbnHKUxobwn/Ioz8N+Ow=="
         }
       },
       "is_incremental": true,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Logger.html",
-          "hash": "QTVqHQjPaPHCJomEapL2lQ=="
+          "hash": "HcA4pTa/6u7LPMAJQ8bWVg=="
         }
       },
       "is_incremental": true,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Member.html",
-          "hash": "PcHONWl542R2VCxq9fRxOg=="
+          "hash": "x/TC2ZMUKhLhAPn9sEnVbw=="
         }
       },
       "is_incremental": true,
@@ -516,7 +516,7 @@
           "hash": "YPNTmJ/lFin0N2Ov/QXf3g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -528,7 +528,7 @@
           "hash": "t8/hnyhHiZltJb/4512X4g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -540,7 +540,7 @@
           "hash": "1EVw9xWwlr9TNiaiKwhzxA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -552,7 +552,7 @@
           "hash": "Sz7k2Jcl7Awma0RGlyl03w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -564,7 +564,7 @@
           "hash": "jIILZb7yLiyD+dLnp6t/4A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -576,7 +576,7 @@
           "hash": "1P/o0bxkNzmw3OoSzznumA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -588,7 +588,7 @@
           "hash": "moEWmdAf3I9U1r+3CccX8A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -597,10 +597,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ComplexMessage.html",
-          "hash": "oqvHgsJhrXU6nutsgO3COA=="
+          "hash": "3PRxiZan8/yqkm4pIKSoIA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -624,7 +624,7 @@
           "hash": "OdpjC+N5y/Mp8i0U1n4bXA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -636,7 +636,7 @@
           "hash": "2TxoxIA8cuORnTsyjAURNQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -648,7 +648,7 @@
           "hash": "vfEna9Ykuc/cc7mLsxMFhw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -660,7 +660,7 @@
           "hash": "3Jcm6hXAlIJ3j61XGTsc2g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -672,7 +672,7 @@
           "hash": "MabyI0vM2cf3SzbJ333MKw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -681,10 +681,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Extensions.html",
-          "hash": "1f/aj56e9foFnN9PnnnBsA=="
+          "hash": "0Ar6DuRPcamNQddcEUXA2Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -696,7 +696,7 @@
           "hash": "HYSwZrnEpTdZ+gVzb48wvA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -708,7 +708,7 @@
           "hash": "0e/9lXSYKH4n9pA/Rslemg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -720,7 +720,7 @@
           "hash": "J3o4ejtlLFSN1cKEE0HLbQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -732,7 +732,7 @@
           "hash": "2xs8VGgsDr66qOm5GmP3vw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -756,7 +756,7 @@
           "hash": "4ghW1ubD/gNDA/Vo5uUOHQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -768,7 +768,7 @@
           "hash": "ZdGsU3Ma7D151u+CspXtvA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -780,7 +780,7 @@
           "hash": "Biv+LYrTALZMJyQcRULScA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -792,7 +792,7 @@
           "hash": "QWyhglIpLz9oK2wE5Kkv2g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -816,7 +816,7 @@
           "hash": "GhhuKFlgpfHt2hSzxuhTFw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -828,7 +828,7 @@
           "hash": "3Z9RJcJbkaCluFAXx71VrQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -840,7 +840,7 @@
           "hash": "jg38K2WFmnlI2sBHdo6RZg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -852,7 +852,7 @@
           "hash": "6PPih94k0sbfFh0CPhQVeA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -959,7 +959,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 67,
-          "skipped_file_count": 47
+          "skipped_file_count": 67
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

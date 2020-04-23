@@ -1967,6 +1967,32 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Logger.Log
   nameWithType: Logger.Log
+- uid: HuajiTech.CoolQ.Logger.LogAsError(System.Exception)
+  name: LogAsError(Exception)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogAsError_System_Exception_
+  commentId: M:HuajiTech.CoolQ.Logger.LogAsError(System.Exception)
+  fullName: HuajiTech.CoolQ.Logger.LogAsError(System.Exception)
+  nameWithType: Logger.LogAsError(Exception)
+- uid: HuajiTech.CoolQ.Logger.LogAsError*
+  name: LogAsError
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogAsError_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogAsError
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogAsError
+  nameWithType: Logger.LogAsError
+- uid: HuajiTech.CoolQ.Logger.LogAsWarning(System.Exception)
+  name: LogAsWarning(Exception)
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogAsWarning_System_Exception_
+  commentId: M:HuajiTech.CoolQ.Logger.LogAsWarning(System.Exception)
+  fullName: HuajiTech.CoolQ.Logger.LogAsWarning(System.Exception)
+  nameWithType: Logger.LogAsWarning(Exception)
+- uid: HuajiTech.CoolQ.Logger.LogAsWarning*
+  name: LogAsWarning
+  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogAsWarning_
+  commentId: Overload:HuajiTech.CoolQ.Logger.LogAsWarning
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Logger.LogAsWarning
+  nameWithType: Logger.LogAsWarning
 - uid: HuajiTech.CoolQ.Logger.LogDebug(System.String)
   name: LogDebug(String)
   href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogDebug_System_String_
@@ -1986,12 +2012,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Logger.LogDebug
   nameWithType: Logger.LogDebug
-- uid: HuajiTech.CoolQ.Logger.LogError(System.Exception)
-  name: LogError(Exception)
-  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogError_System_Exception_
-  commentId: M:HuajiTech.CoolQ.Logger.LogError(System.Exception)
-  fullName: HuajiTech.CoolQ.Logger.LogError(System.Exception)
-  nameWithType: Logger.LogError(Exception)
 - uid: HuajiTech.CoolQ.Logger.LogError(System.String)
   name: LogError(String)
   href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogError_System_String_
@@ -2100,12 +2120,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Logger.LogSuccess
   nameWithType: Logger.LogSuccess
-- uid: HuajiTech.CoolQ.Logger.LogWarning(System.Exception)
-  name: LogWarning(Exception)
-  href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogWarning_System_Exception_
-  commentId: M:HuajiTech.CoolQ.Logger.LogWarning(System.Exception)
-  fullName: HuajiTech.CoolQ.Logger.LogWarning(System.Exception)
-  nameWithType: Logger.LogWarning(Exception)
 - uid: HuajiTech.CoolQ.Logger.LogWarning(System.String)
   name: LogWarning(String)
   href: api/HuajiTech.CoolQ.Logger.html#HuajiTech_CoolQ_Logger_LogWarning_System_String_
@@ -2302,6 +2316,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Member.Gender
   nameWithType: Member.Gender
+- uid: HuajiTech.CoolQ.Member.GetHashCode
+  name: GetHashCode()
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_GetHashCode
+  commentId: M:HuajiTech.CoolQ.Member.GetHashCode
+  fullName: HuajiTech.CoolQ.Member.GetHashCode()
+  nameWithType: Member.GetHashCode()
+- uid: HuajiTech.CoolQ.Member.GetHashCode*
+  name: GetHashCode
+  href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_GetHashCode_
+  commentId: Overload:HuajiTech.CoolQ.Member.GetHashCode
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Member.GetHashCode
+  nameWithType: Member.GetHashCode
 - uid: HuajiTech.CoolQ.Member.Group
   name: Group
   href: api/HuajiTech.CoolQ.Member.html#HuajiTech_CoolQ_Member_Group
@@ -4683,6 +4710,22 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
   nameWithType: Extensions.SendAsync
+- uid: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})
+  name: ToComplexMessage(IEnumerable<MessageElement>)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_ToComplexMessage_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})
+  name.vb: ToComplexMessage(IEnumerable(Of MessageElement))
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable<HuajiTech.CoolQ.Messaging.MessageElement>)
+  fullName.vb: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable(Of HuajiTech.CoolQ.Messaging.MessageElement))
+  nameWithType: Extensions.ToComplexMessage(IEnumerable<MessageElement>)
+  nameWithType.vb: Extensions.ToComplexMessage(IEnumerable(Of MessageElement))
+- uid: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage*
+  name: ToComplexMessage
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_ToComplexMessage_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage
+  nameWithType: Extensions.ToComplexMessage
 - uid: HuajiTech.CoolQ.Messaging.Image
   name: Image
   href: api/HuajiTech.CoolQ.Messaging.Image.html
