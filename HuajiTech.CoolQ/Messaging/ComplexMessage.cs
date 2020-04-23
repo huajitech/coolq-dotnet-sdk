@@ -42,10 +42,10 @@ namespace HuajiTech.CoolQ.Messaging
         /// 以指定的 <see cref="MessageElement"/> 集合初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         /// <param name="elements"><see cref="MessageElement"/> 集合。</param>
+        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
         public ComplexMessage(IEnumerable<MessageElement> elements)
-            : this()
         {
-            Add(elements);
+            _elements = new List<MessageElement>(elements);
         }
 
         /// <summary>
@@ -367,7 +367,7 @@ namespace HuajiTech.CoolQ.Messaging
     }
 
     /// <summary>
-    /// <see cref="IList{MessageElement}"/> 和 <see cref="IReadOnlyList{MessageElement}"/> 的实现。
+    /// <see cref="IList{T}"/> 和 <see cref="IReadOnlyList{T}"/> 的实现。
     /// </summary>
     public partial class ComplexMessage : IList<MessageElement>, IReadOnlyList<MessageElement>
     {

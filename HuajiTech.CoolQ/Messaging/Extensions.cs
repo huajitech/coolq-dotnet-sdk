@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace HuajiTech.CoolQ.Messaging
@@ -30,6 +31,17 @@ namespace HuajiTech.CoolQ.Messaging
         public static ComplexMessage Parse(this Message message, bool useEmojiCQCode = false)
         {
             return ComplexMessage.Parse(message?.Content, useEmojiCQCode);
+        }
+
+        /// <summary>
+        /// 从 <see cref="IEnumerable{T}"/> 创建 <see cref="ComplexMessage"/>。
+        /// </summary>
+        /// <param name="elements">要用于创建 <see cref="ComplexMessage"/> 的消息元素集合。</param>
+        /// <returns>一个 <see cref="ComplexMessage"/>，其中包含输入序列中的元素。</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+        public static ComplexMessage ToComplexMessage(this IEnumerable<MessageElement> elements)
+        {
+            return new ComplexMessage(elements);
         }
 
         /// <summary>

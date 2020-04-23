@@ -50,14 +50,14 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 向当前 <see cref="Chat"/> 发送消息。
+        /// 向当前 <see cref="Chat"/> 对象发送消息。
         /// </summary>
         /// <param name="message">要发送的消息。</param>
         /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
         public abstract Message Send(string message);
 
         /// <summary>
-        /// 以异步操作向当前 <see cref="Chat"/> 发送消息。
+        /// 以异步操作向当前 <see cref="Chat"/> 对象发送消息。
         /// </summary>
         /// <param name="message">要发送的消息。</param>
         /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
