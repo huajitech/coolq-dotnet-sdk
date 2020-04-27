@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.QQ.pfx</AssemblyOriginatorKeyFile>
-    <Version>0.2.0-alpha.2004.1</Version>
+    <Version>0.2.0-alpha.2004.2</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>用于QQ机器人的可移植接口类库。</Description>

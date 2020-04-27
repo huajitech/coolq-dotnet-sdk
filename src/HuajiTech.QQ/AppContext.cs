@@ -16,8 +16,6 @@ namespace HuajiTech.QQ
             set => _currentContext = value ?? throw new ArgumentNullException(nameof(value));
         }
 
-        public abstract string AppId { get; }
-
         public abstract IBot Bot { get; }
 
         public abstract IUser GetUser(long number);

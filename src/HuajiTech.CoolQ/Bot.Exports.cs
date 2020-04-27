@@ -22,15 +22,14 @@ namespace HuajiTech.CoolQ
         [DllExport(EntryPoint = "AppInfo")]
         private static string GetAppInfo()
         {
-            _appId = GetAppId();
-            return ApiVersion + "," + _appId;
+            return ApiVersion + "," + AppId;
         }
 
         [DllExport]
         private static int Initialize(int authCode)
         {
             Instance = new Bot(authCode);
-            QQ.AppContext.CurrentContext = new DefaultAppContext(_appId, Instance);
+            QQ.AppContext.CurrentContext = new DefaultAppContext(Instance);
 
             AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
             {
@@ -58,7 +57,7 @@ namespace HuajiTech.CoolQ
                 .As<ILogger>();
 
             builder
-                .RegisterInstance(Instance.CurrentUser)
+                .Register(context => Instance.CurrentUser)
                 .As<ICurrentUser>();
 
             builder
@@ -90,16 +89,6 @@ namespace HuajiTech.CoolQ
             catch (Exception ex)
             {
                 throw new EntryPointNotFoundException(Resources.AppNotFound, ex);
-            }
-
-            foreach (var app in Instance.Apps)
-            {
-                Instance.Logger.LogDebug(
-                    Resources.AppLoadTitle,
-                    string.Format(
-                        CultureInfo.InvariantCulture,
-                        Resources.AppLoadMessage,
-                        app.GetType().FullName));
             }
 
             return 0;

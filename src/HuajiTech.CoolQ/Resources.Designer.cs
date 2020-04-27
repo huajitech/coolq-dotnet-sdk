@@ -205,7 +205,7 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 此应用 ({0}) 使用内部测试版本的 HuajiTech.CoolQ 开发，不应外泄或在生产环境使用。 的本地化字符串。
+        ///   查找类似 此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ 开发，不建议在生产环境使用。 的本地化字符串。
         /// </summary>
         internal static string TestingNotificationContent {
             get {
@@ -214,7 +214,7 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 HuajiTech.CoolQ 内部测试警告 的本地化字符串。
+        ///   查找类似 HuajiTech.CoolQ 测试提示 的本地化字符串。
         /// </summary>
         internal static string TestingNotificationTitle {
             get {

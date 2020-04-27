@@ -5,13 +5,10 @@ namespace HuajiTech.CoolQ
 {
     internal class DefaultAppContext : QQ.AppContext
     {
-        public DefaultAppContext(string appId, IBot bot)
+        public DefaultAppContext(IBot bot)
         {
-            AppId = appId ?? throw new ArgumentNullException(nameof(appId));
             Bot = bot ?? throw new ArgumentNullException(nameof(bot));
         }
-
-        public override string AppId { get; }
 
         public override IBot Bot { get; }
 

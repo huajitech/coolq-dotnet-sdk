@@ -37,9 +37,22 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         private static int OnAppEnabled()
         {
-            QQ.AppContext.CurrentContext.Bot.Logger.LogWarning(
+            Bot.Instance.Logger.LogInfo(
                 Resources.TestingNotificationTitle,
-                string.Format(CultureInfo.InvariantCulture, Resources.TestingNotificationContent, QQ.AppContext.CurrentContext.AppId));
+                string.Format(
+                    CultureInfo.InvariantCulture,
+                    Resources.TestingNotificationContent,
+                    Bot.Instance.AppId));
+
+            foreach (var app in Bot.Instance.Apps)
+            {
+                Bot.Instance.Logger.LogDebug(
+                    Resources.AppLoadTitle,
+                    string.Format(
+                        CultureInfo.InvariantCulture,
+                        Resources.AppLoadMessage,
+                        app.GetType().FullName));
+            }
 
             Instance.AppEnabled?.Invoke(null, EventArgs.Empty);
             return 0;

@@ -15,7 +15,7 @@ namespace HuajiTech.CoolQ
     {
         internal const string ApiVersion = "9";
 
-        private static string _appId;
+        public static readonly string AppId = GetAppId();
 
         private readonly Lazy<CurrentUser> _currentUser = new Lazy<CurrentUser>(() => new CurrentUser());
 
