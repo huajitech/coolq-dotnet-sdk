@@ -7,7 +7,7 @@
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.pfx</AssemblyOriginatorKeyFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CodeAnalysisRuleSet>HuajiTech.CoolQ.ruleset</CodeAnalysisRuleSet>
-    <Version>0.2.0-alpha.2004.1</Version>
+    <Version>0.2.0-alpha.2004.2</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>用于酷Q应用的 .NET SDK。</Description>
@@ -60,6 +60,12 @@
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.18.1">
+      <ExcludeAssets>build</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="HuajiTech.UnmanagedExports.MSBuild" Version="1.0.0-rc2">
+      <ExcludeAssets>build</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
 
