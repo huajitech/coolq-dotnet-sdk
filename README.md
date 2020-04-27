@@ -14,13 +14,15 @@
 
 ```csharp
 using HuajiTech.CoolQ;
+using HuajiTech.QQ.Events;
 
-[App("com.example.repeater")]
+[assembly: AppId("com.example.repeater")]
+
 public class Repeater
 {
-    public Repeater()
+    public Repeater(IMessageEventSource source)
     {
-        CurrentUser.MessageReceived += (sender, e) => e.Source.Send(e.Message);
+        source.MessageReceived += (sender, e) => e.Source.Send(e.Message.Content);
     }
 }
 ```
