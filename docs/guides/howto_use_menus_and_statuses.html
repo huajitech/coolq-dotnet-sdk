@@ -74,29 +74,34 @@
 <h3 id="菜单项被点击">菜单项被点击</h3>
 <p>菜单项被点击事件没有任何形参，也没有返回值。</p>
 <pre><code class="lang-csharp">static void OnMenuItemClicked();
-</code></pre><h3 id="悬浮窗状态更新">悬浮窗状态更新</h3>
+</code></pre>
+<h3 id="悬浮窗状态更新">悬浮窗状态更新</h3>
 <p>悬浮窗状态更新事件没有任何形参，返回一个字符串。返回的字符串是以 Base64 编码的状态数据。</p>
 <pre><code class="lang-csharp">static string OnStatusUpdating();
-</code></pre><p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html">Status</a> 类和 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Encode">Encode()</a> 方法可以方便地创建状态数据并进行编码。</p>
+</code></pre>
+<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html">Status</a> 类和 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Encode">Encode()</a> 方法可以方便地创建状态数据并进行编码。</p>
 <pre><code class="lang-csharp">static string OnStatusUpdating()
 {
-    return new HuajiTech.CoolQ.Status(
-        value: &quot;值&quot;,
-        unit: &quot;单位&quot;,
-        color: HuajiTech.CoolQ.StatusColor.Green
+	return new HuajiTech.CoolQ.Status(
+		value: &quot;值&quot;,
+		unit: &quot;单位&quot;,
+		color: HuajiTech.CoolQ.StatusColor.Green
     ).Encode();
 }
-</code></pre><h2 id="将托管方法导出为非托管方法">将托管方法导出为非托管方法</h2>
+</code></pre>
+<h2 id="将托管方法导出为非托管方法">将托管方法导出为非托管方法</h2>
 <p>上面创建的事件处理程序是托管方法，但酷Q只能调用以 StdCall 导出的非托管方法。
 通过 <code>HuajiTech.UnmanagedExports.DllExportAttribute</code> 可以标记要导出的方法。</p>
 <pre><code class="lang-csharp">[HuajiTech.UnmanagedExports.DllExport]
 static string OnStatusUpdating();
-</code></pre><p>通过设置 <code>HuajiTech.UnmanagedExports.DllExportAttribute.EntryPoint</code> 属性，可以自定义导出后的方法的入口点名称。
+</code></pre>
+<p>通过设置 <code>HuajiTech.UnmanagedExports.DllExportAttribute.EntryPoint</code> 属性，可以自定义导出后的方法的入口点名称。
 如果 <code>EntryPoint</code> 属性为 <code>null</code>，将会使用方法名称作为入口点名称。
 不能定义重复的入口点名称。</p>
 <pre><code class="lang-csharp">[HuajiTech.UnmanagedExports.DllExport(EntryPoint = &quot;OnMenuItemClicked&quot;)]
 static void OpenConfiguration();
-</code></pre><h2 id="配置-appjson">配置 <code>app.json</code></h2>
+</code></pre>
+<h2 id="配置-appjson">配置 <code>app.json</code></h2>
 <p>在 <code>app.json</code> 中的 <code>status</code> 或 <code>menu</code> 下增加相应格式的元素，并将 <code>function</code> 的值设为导出的入口点名称。</p>
 <pre><code class="lang-json">&quot;menu&quot;: [
   {
@@ -113,7 +118,8 @@ static void OpenConfiguration();
     &quot;period&quot;: &quot;1000&quot;
   }
 ]
-</code></pre></article>
+</code></pre>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

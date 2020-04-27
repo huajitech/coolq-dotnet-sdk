@@ -69,23 +69,27 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="如何处理消息">如何：处理消息</h1>
 
-<p><code>e</code> 为 <a class="xref" href="../api/HuajiTech.CoolQ.MessageReceivedEventArgs.html">MessageReceivedEventArgs</a> 类的实例。</p>
+<p><code>e</code> 为 @&quot;HuajiTech.CoolQ.MessageReceivedEventArgs&quot; 类的实例。</p>
 <h2 id="判断消息来源类型">判断消息来源类型</h2>
 <pre><code class="lang-csharp">if (e.Source is Group) { }   // 群消息。
 if (e.Source is User) { }    // 私聊消息（包括临时会话和好友消息）。
 if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 null）。
 if (e.Source is Contact) { } // 好友消息（Contact.Alias 为 null）。
-</code></pre><h2 id="使用-huajitechcoolqmessagingcomplexmessage复合消息">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>（复合消息）</h2>
+</code></pre>
+<h2 id="使用-复合消息">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>（复合消息）</h2>
 <p>使用复合消息需要对 LINQ 有一定了解。</p>
 <pre><code class="lang-csharp">using HuajiTech.CoolQ.Messaging;
 using System.Linq;
-</code></pre><p>通过 @&quot;HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)&quot; 扩展方法解析消息。</p>
+</code></pre>
+<p>通过 @&quot;HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)&quot; 扩展方法解析消息。</p>
 <pre><code class="lang-csharp">var message = e.Message.Parse();
-</code></pre><h3 id="示例">示例</h3>
+</code></pre>
+<h3 id="示例">示例</h3>
 <ul>
 <li><p>获取消息中的所有纯文本拼接成的字符串。</p>
 <pre><code class="lang-csharp">string.Join(string.Empty, message.OfType&lt;PlainText&gt;());
-</code></pre></li>
+</code></pre>
+</li>
 <li><p>如果消息包含对机器人的 At，发送一张图片和一个表情。</p>
 <pre><code class="lang-csharp">if (message.Contains(Bot.CurrentUser.At()))
 {
@@ -93,23 +97,32 @@ using System.Linq;
     e.Source.Send(e.Sender.At() + &quot; &quot; + image);
     e.Source.Send(new Emoticon { Id = 178 });
 }
-</code></pre></li>
+
+</code></pre>
+</li>
 <li><p>解析并请求录音文件。</p>
 <pre><code class="lang-csharp">if (message[0] is Record record)
 {
     var recordFile = record.RequestFile();
     // TODO: 对录音文件进行操作。
 }
-</code></pre></li>
+</code></pre>
+</li>
 </ul>
-<h2 id="使用正则消息">使用正则消息</h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_Message_">RegexDecode(Message)</a> 扩展方法解码正则消息。</p>
-<pre><code class="lang-csharp">var args = e.Message.RegexDecode();
-</code></pre><h3 id="示例-1">示例</h3>
+<pre><code>
+## 使用正则消息
+
+通过 @&quot;HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)&quot; 扩展方法解码正则消息。
+
+```csharp
+var args = e.Message.RegexDecode();
+</code></pre>
+<h3 id="示例-1">示例</h3>
 <ul>
 <li><p>获取 <code>Name</code> 键的值并发送问候。</p>
 <pre><code class="lang-csharp">e.Source.Send(&quot;你好，&quot; + args[&quot;Name&quot;]);
-</code></pre></li>
+</code></pre>
+</li>
 </ul>
 </article>
           </div>

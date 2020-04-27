@@ -116,13 +116,13 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_At_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.At*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_CoolQ_User_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.CoolQ.User)">At(User)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_QQ_IUser_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.IUser)">At(IUser)</h4>
   <div class="markdown level1 summary"><p>创建目标为指定用户的 <a class="xref" href="HuajiTech.CoolQ.Messaging.At.html">At</a> 类的新实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static At At(this User target)</code></pre>
+    <pre><code class="lang-csharp hljs">public static At At(this IUser target)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,7 +135,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.User.html">User</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IUser.html">IUser</a></td>
         <td><span class="parametername">target</span></td>
         <td><p>At (@) 的目标。</p>
 </td>
@@ -161,13 +161,13 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Parse_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_CoolQ_Message_System_Boolean_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message,System.Boolean)">Parse(Message, Boolean)</h4>
-  <div class="markdown level1 summary"><p>将 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_QQ_IMessage_System_Boolean_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage,System.Boolean)">Parse(IMessage, Boolean)</h4>
+  <div class="markdown level1 summary"><p>将 <span class="xref">HuajiTech.CoolQ.Message</span> 对象解析为 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(this Message message, bool useEmojiCQCode = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(this IMessage message, bool useEmojiCQCode = false)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,9 +180,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IMessage.html">IMessage</a></td>
         <td><span class="parametername">message</span></td>
-        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>对象，该 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Content">Content</a> 属性的值为要解析的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象的字符串表示形式。</p>
+        <td><p>一个 <span class="xref">HuajiTech.CoolQ.Message</span>对象，该 <span class="xref">HuajiTech.CoolQ.Message</span> 对象的 <span class="xref">HuajiTech.CoolQ.Message.Content</span> 属性的值为要解析的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象的字符串表示形式。</p>
 </td>
       </tr>
       <tr>
@@ -204,7 +204,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
-        <td><p>与 <a class="xref" href="HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Content">Content</a> 等效的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
+        <td><p>与 <span class="xref">HuajiTech.CoolQ.Message.Content</span> 等效的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -212,13 +212,13 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Send_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)">Send(Chat, ComplexMessage)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_IChattable_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.IChattable,HuajiTech.CoolQ.Messaging.ComplexMessage)">Send(IChattable, ComplexMessage)</h4>
   <div class="markdown level1 summary"><p>向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Message Send(this Chat chat, ComplexMessage message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IMessage Send(this IChattable chat, ComplexMessage message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,7 +231,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></td>
         <td><span class="parametername">chat</span></td>
         <td><p>目标聊天。</p>
 </td>
@@ -254,8 +254,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
-        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+        <td><a class="xref" href="HuajiTech.QQ.IMessage.html">IMessage</a></td>
+        <td><p>一个 <span class="xref">HuajiTech.CoolQ.Message</span> 对象，表示已发送的消息。</p>
 </td>
       </tr>
     </tbody>
@@ -294,13 +294,13 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Send_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)">Send(Chat, MessageElement)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_IChattable_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.IChattable,HuajiTech.CoolQ.Messaging.MessageElement)">Send(IChattable, MessageElement)</h4>
   <div class="markdown level1 summary"><p>向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Message Send(this Chat chat, MessageElement element)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IMessage Send(this IChattable chat, MessageElement element)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,7 +313,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></td>
         <td><span class="parametername">chat</span></td>
         <td><p>目标聊天。</p>
 </td>
@@ -336,8 +336,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
-        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+        <td><a class="xref" href="HuajiTech.QQ.IMessage.html">IMessage</a></td>
+        <td><p>一个 <span class="xref">HuajiTech.CoolQ.Message</span> 对象，表示已发送的消息。</p>
 </td>
       </tr>
     </tbody>
@@ -376,13 +376,13 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)">SendAsync(Chat, ComplexMessage)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_IChattable_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.IChattable,HuajiTech.CoolQ.Messaging.ComplexMessage)">SendAsync(IChattable, ComplexMessage)</h4>
   <div class="markdown level1 summary"><p>以异步操作向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;Message&gt; SendAsync(this Chat chat, ComplexMessage message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;IMessage&gt; SendAsync(this IChattable chat, ComplexMessage message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -395,7 +395,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></td>
         <td><span class="parametername">chat</span></td>
         <td><p>目标聊天。</p>
 </td>
@@ -418,8 +418,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>&gt;</td>
-        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.QQ.IMessage.html">IMessage</a>&gt;</td>
+        <td><p>一个 <span class="xref">HuajiTech.CoolQ.Message</span> 对象，表示已发送的消息。</p>
 </td>
       </tr>
     </tbody>
@@ -458,13 +458,13 @@
   
   
   <a id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_CoolQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)">SendAsync(Chat, MessageElement)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_IChattable_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.IChattable,HuajiTech.CoolQ.Messaging.MessageElement)">SendAsync(IChattable, MessageElement)</h4>
   <div class="markdown level1 summary"><p>以异步操作向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;Message&gt; SendAsync(this Chat chat, MessageElement element)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;IMessage&gt; SendAsync(this IChattable chat, MessageElement element)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -477,7 +477,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></td>
         <td><span class="parametername">chat</span></td>
         <td><p>目标聊天。</p>
 </td>
@@ -500,8 +500,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a>&gt;</td>
-        <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象，表示已发送的消息。</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.QQ.IMessage.html">IMessage</a>&gt;</td>
+        <td><p>一个 <span class="xref">HuajiTech.CoolQ.Message</span> 对象，表示已发送的消息。</p>
 </td>
       </tr>
     </tbody>

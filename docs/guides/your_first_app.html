@@ -72,24 +72,25 @@
 <ol>
 <li>创建一个新的 C# 类库项目，并选择 <strong>.NET Framework 4.5</strong> 及以上版本作为目标框架。</li>
 <li>安装 HuajiTech.CoolQ NuGet 包。</li>
-<li><p>将以下代码粘贴到 <code>MyFirstApp.cs</code>。</p>
+<li>将以下代码粘贴到 <code>MyFirstApp.cs</code>。</li>
+</ol>
 <pre><code class="lang-csharp">using HuajiTech.CoolQ;
 
 [App(&quot;com.example.myfirstapp&quot;)]
 public class MyFirstApp
 {
-  public MyFirstApp()
-  {
-      CurrentUser.MessageReceived += (sender, e) =&gt;
-      {
-          // 向消息来源聊天发送消息的内容，即复读。
-          e.Source.Send(e.Message);
-      }
-  }
+   public MyFirstApp()
+   {
+       CurrentUser.MessageReceived += (sender, e) =&gt;
+       {
+           // 向消息来源聊天发送消息的内容，即复读。
+           e.Source.Send(e.Message);
+       }
+   }
 }
-</code></pre></li>
-<li><p>编译。</p>
-</li>
+</code></pre>
+<ol start="4">
+<li>编译。</li>
 <li>将 <code>{输出目录}\app.publish\</code> 中的文件复制到酷Q的 <code>dev\com.example.myfirstapp\</code> 目录。</li>
 <li>重载应用并启用。</li>
 </ol>

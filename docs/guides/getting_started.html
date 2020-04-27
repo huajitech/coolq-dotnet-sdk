@@ -74,10 +74,10 @@
 <ul>
 <li>可以被实例化。</li>
 <li>有公共无参构造函数。</li>
-<li>应用了 <a class="xref" href="../api/HuajiTech.CoolQ.AppAttribute.html">AppAttribute</a> 特性。</li>
+<li>应用了 @&quot;HuajiTech.CoolQ.AppAttribute&quot; 特性。</li>
 </ul>
 <p>在同一个应用中，必须有且只有一个入口类。</p>
-<p>在 <code>AppInfo</code> 函数被调用时，将会查找入口类并将 <a class="xref" href="../api/HuajiTech.CoolQ.AppAttribute.html#HuajiTech_CoolQ_AppAttribute_Id">Id</a> 属性的值作为 <a href="https://docs.cqp.im/dev/v9/appid/">AppID</a> 返回给酷Q。
+<p>在 <code>AppInfo</code> 函数被调用时，将会查找入口类并将 @&quot;HuajiTech.CoolQ.AppAttribute.Id&quot; 属性的值作为 <a href="https://docs.cqp.im/dev/v9/appid/">AppID</a> 返回给酷Q。
 在 <code>Initialize</code> 函数被调用时，将会创建入口类的实例。
 所以，只应在构造方法内对类进行初始化，而不是对应用进行初始化。
 若要获取详细信息，参见<a href="https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96">酷Q文库</a>。</p>
@@ -87,8 +87,8 @@
 <p>部分酷Q事件被合并为一个或拆分为多个事件。若要获取详细信息，参见<a href="events.html">事件</a>。</p>
 <p>应在构造函数内将事件处理程序附加到事件。</p>
 <h3 id="路由">路由</h3>
-<p>酷Q的所有事件数据类都派生自 <a class="xref" href="../api/HuajiTech.CoolQ.RoutedEventArgs.html">RoutedEventArgs</a> 类。
-通过设置 <a class="xref" href="../api/HuajiTech.CoolQ.RoutedEventArgs.html#HuajiTech_CoolQ_RoutedEventArgs_Handled">Handled</a> 属性，可结束处理事件。</p>
+<p>酷Q的所有事件数据类都派生自 @&quot;HuajiTech.CoolQ.RoutedEventArgs&quot; 类。
+通过设置 @&quot;HuajiTech.CoolQ.RoutedEventArgs.Handled&quot; 属性，可结束处理事件。</p>
 <h3 id="菜单和悬浮窗状态">菜单和悬浮窗状态</h3>
 <p>菜单项被点击和悬浮窗状态更新均被视为事件。但由于静态语言限制，需要手动将方法导出。</p>
 <p>参见<a href="howto_use_menus_and_statuses.html">如何：使用菜单和悬浮窗状态</a>。</p>
@@ -96,18 +96,20 @@
 <p>酷Q的 API 被封装并放置在了多个不同的类中，以下是所有可以直接调用酷Q API 的类：</p>
 <h3 id="静态">静态</h3>
 <ul>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.Bot.html">Bot</a></li>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.CurrentUser.html">CurrentUser</a></li>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.Logger.html">Logger</a></li>
+<li>@&quot;HuajiTech.CoolQ.Bot&quot;</li>
+<li>@&quot;HuajiTech.CoolQ.CurrentUser&quot;</li>
+<li>@&quot;HuajiTech.CoolQ.Logger&quot;</li>
 </ul>
 <h3 id="聊天">聊天</h3>
 <ul>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.AnonymousMember.html">AnonymousMember</a></li>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.Chat.html">Chat</a><ul>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.Group.html">Group</a></li>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.User.html">User</a><ul>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.Contact.html">Contact</a></li>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.Member.html">Member</a></li>
+<li>@&quot;HuajiTech.CoolQ.AnonymousMember&quot;</li>
+<li>@&quot;HuajiTech.CoolQ.Chat&quot;
+<ul>
+<li>@&quot;HuajiTech.CoolQ.Group&quot;</li>
+<li>@&quot;HuajiTech.CoolQ.User&quot;
+<ul>
+<li>@&quot;HuajiTech.CoolQ.Contact&quot;</li>
+<li>@&quot;HuajiTech.CoolQ.Member&quot;</li>
 </ul>
 </li>
 </ul>
@@ -115,8 +117,8 @@
 </ul>
 <h3 id="请求">请求</h3>
 <ul>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.EntranceInvitation.html">EntranceInvitation</a></li>
-<li><a class="xref" href="../api/HuajiTech.CoolQ.EntranceRequest.html">EntranceRequest</a></li>
+<li>@&quot;HuajiTech.CoolQ.EntranceInvitation&quot;</li>
+<li>@&quot;HuajiTech.CoolQ.EntranceRequest&quot;</li>
 </ul>
 <h3 id="cq码">CQ码</h3>
 <ul>

@@ -115,110 +115,14 @@
   </h3>
   
   
-  <a id="HuajiTech_CoolQ_Extensions_AsMemberOf_" data-uid="HuajiTech.CoolQ.Extensions.AsMemberOf*"></a>
-  <h4 id="HuajiTech_CoolQ_Extensions_AsMemberOf_HuajiTech_CoolQ_User_HuajiTech_CoolQ_Group_" data-uid="HuajiTech.CoolQ.Extensions.AsMemberOf(HuajiTech.CoolQ.User,HuajiTech.CoolQ.Group)">AsMemberOf(User, Group)</h4>
-  <div class="markdown level1 summary"><p>获取在指定 <a class="xref" href="HuajiTech.CoolQ.Group.html">Group</a> 中表示 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Member AsMemberOf(this User user, Group group)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>要表示为成员的 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Group.html">Group</a></td>
-        <td><span class="parametername">group</span></td>
-        <td><p>成员所属的 <a class="xref" href="HuajiTech.CoolQ.Group.html">Group</a> 对象。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a></td>
-        <td><p>在指定 <code data-dev-comment-type="paramref" class="paramref">group</code> 中表示 <code data-dev-comment-type="paramref" class="paramref">user</code> 的 <a class="xref" href="HuajiTech.CoolQ.Member.html">Member</a> 对象。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="HuajiTech_CoolQ_Extensions_AsUser_" data-uid="HuajiTech.CoolQ.Extensions.AsUser*"></a>
-  <h4 id="HuajiTech_CoolQ_Extensions_AsUser_HuajiTech_CoolQ_User_" data-uid="HuajiTech.CoolQ.Extensions.AsUser(HuajiTech.CoolQ.User)">AsUser(User)</h4>
-  <div class="markdown level1 summary"><p>将 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> (包括其派生类) 对象转换为 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 类的实例。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User AsUser(this User user)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>要转换的 <a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 对象。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.User.html">User</a></td>
-        <td><p><a class="xref" href="HuajiTech.CoolQ.User.html">User</a> 类的实例。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="HuajiTech_CoolQ_Extensions_RegexDecode_" data-uid="HuajiTech.CoolQ.Extensions.RegexDecode*"></a>
-  <h4 id="HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_Message_" data-uid="HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)">RegexDecode(Message)</h4>
-  <div class="markdown level1 summary"><p>将 <a class="xref" href="HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Content">Content</a> 为编码后的正则消息匹配结果的 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象解码为只读字典。</p>
+  <h4 id="HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_QQ_IMessage_" data-uid="HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)">RegexDecode(IMessage)</h4>
+  <div class="markdown level1 summary"><p>将 <span class="xref">HuajiTech.CoolQ.Message.Content</span> 为编码后的正则消息匹配结果的 <span class="xref">HuajiTech.CoolQ.Message</span> 对象解码为只读字典。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, string&gt; RegexDecode(this Message message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, string&gt; RegexDecode(this IMessage message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,9 +135,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IMessage.html">IMessage</a></td>
         <td><span class="parametername">message</span></td>
-        <td><p>要解析为只读字典的 <a class="xref" href="HuajiTech.CoolQ.Message.html">Message</a> 对象。</p>
+        <td><p>要解析为只读字典的 <span class="xref">HuajiTech.CoolQ.Message</span> 对象。</p>
 </td>
       </tr>
     </tbody>
@@ -249,7 +153,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>与 <a class="xref" href="HuajiTech.CoolQ.Message.html#HuajiTech_CoolQ_Message_Content">Content</a> 等效的只读字典。</p>
+        <td><p>与 <span class="xref">HuajiTech.CoolQ.Message.Content</span> 等效的只读字典。</p>
 </td>
       </tr>
     </tbody>
