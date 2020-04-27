@@ -1,4 +1,4 @@
-﻿namespace HuajiTech.QQ
+﻿namespace HuajiTech.CoolQ
 {
     public abstract class App
     {
