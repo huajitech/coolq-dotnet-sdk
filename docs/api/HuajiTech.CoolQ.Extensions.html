@@ -84,16 +84,10 @@
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
     <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.GetHashCode()</span>
@@ -103,6 +97,12 @@
     </div>
     <div>
       <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.html">HuajiTech.CoolQ</a></h6>
@@ -116,13 +116,13 @@
   
   
   <a id="HuajiTech_CoolQ_Extensions_RegexDecode_" data-uid="HuajiTech.CoolQ.Extensions.RegexDecode*"></a>
-  <h4 id="HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_QQ_IMessage_" data-uid="HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)">RegexDecode(IMessage)</h4>
-  <div class="markdown level1 summary"><p>将 <span class="xref">HuajiTech.CoolQ.Message.Content</span> 为编码后的正则消息匹配结果的 <span class="xref">HuajiTech.CoolQ.Message</span> 对象解码为只读字典。</p>
+  <h4 id="HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_QQ_Message_" data-uid="HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.Message)">RegexDecode(Message)</h4>
+  <div class="markdown level1 summary"><p>将 <a class="xref" href="HuajiTech.QQ.Message.html#HuajiTech_QQ_Message_Content">Content</a> 为编码后的正则消息匹配结果的 <a class="xref" href="HuajiTech.QQ.Message.html">Message</a> 对象解码为只读字典。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, string&gt; RegexDecode(this IMessage message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, string&gt; RegexDecode(this Message message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,7 +135,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.QQ.IMessage.html">IMessage</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.Message.html">Message</a></td>
         <td><span class="parametername">message</span></td>
         <td><p>要解析为只读字典的 <span class="xref">HuajiTech.CoolQ.Message</span> 对象。</p>
 </td>
@@ -153,7 +153,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>与 <span class="xref">HuajiTech.CoolQ.Message.Content</span> 等效的只读字典。</p>
+        <td><p>与 <a class="xref" href="HuajiTech.QQ.Message.html#HuajiTech_QQ_Message_Content">Content</a> 等效的只读字典。</p>
 </td>
       </tr>
     </tbody>

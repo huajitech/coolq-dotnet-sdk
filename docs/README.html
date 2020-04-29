@@ -72,13 +72,15 @@
 </ul>
 <h2 id="复读机示例">复读机示例</h2>
 <pre><code class="lang-csharp">using HuajiTech.CoolQ;
+using HuajiTech.QQ.Events;
 
-[App(&quot;com.example.repeater&quot;)]
+[assembly: AppId(&quot;com.example.repeater&quot;)]
+
 public class Repeater
 {
-    public Repeater()
+    public Repeater(IMessageEventSource source)
     {
-        CurrentUser.MessageReceived += (sender, e) =&gt; e.Source.Send(e.Message);
+        source.MessageReceived += (sender, e) =&gt; e.Source.Send(e.Message.Content);
     }
 }
 </code></pre>

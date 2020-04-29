@@ -3,7 +3,7 @@
 namespace HuajiTech.QQ
 {
     /// <summary>
-    /// 提供更友好的记录日志的方法。
+    /// 提供记录日志的方法。
     /// 此类为抽象类。
     /// </summary>
     public abstract class Logger

@@ -1,56 +1,57 @@
 # 如何：处理消息
 
-`e` 为 @"HuajiTech.CoolQ.MessageReceivedEventArgs" 类的实例。
-
 ## 判断消息来源类型
 
 ```csharp
 if (e.Source is Group) { }   // 群消息。
 if (e.Source is User) { }    // 私聊消息（包括临时会话和好友消息）。
-if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 null）。
-if (e.Source is Contact) { } // 好友消息（Contact.Alias 为 null）。
+if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 Group(0)）。
+if (e.Source is Contact) { } // 好友消息。
 ```
 
 ## 使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage"（复合消息）
 
-使用复合消息需要对 LINQ 有一定了解。
-
-```csharp
-using HuajiTech.CoolQ.Messaging;
-using System.Linq;
-```
-通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)" 扩展方法解析消息。
+通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message)" 扩展方法解析消息。
 
 ```csharp
 var message = e.Message.Parse();
 ```
 
-### 示例
+获取消息中的所有纯文本拼接成的字符串。
 
-- 获取消息中的所有纯文本拼接成的字符串。
+```csharp
+string.GetPlainText();
+```
 
-  ```csharp
-  string.Join(string.Empty, message.OfType<PlainText>());
-  ```
+判断机器人是否被 @。
 
-- 如果消息包含对机器人的 At，发送一张图片和一个表情。
+```csharp
+if (message.Contains(CurrentUser.At()))
+{
+    [...]
+}
+```
 
-  ```csharp
-  if (message.Contains(Bot.CurrentUser.At()))
-  {
-      var image = new Image { FileName = "SmallYellowPicture.png" };
-      e.Source.Send(e.Sender.At() + " " + image);
-  	  e.Source.Send(new Emoticon { Id = 178 });
-  }
+使用 @"HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)" @ 消息的发送者。
 
-- 解析并请求录音文件。
+```csharp
+e.Source.Send(e.Sender.At() + [...])
+```
 
-  ```csharp
-  if (message[0] is Record record)
-  {
-      var recordFile = record.RequestFile();
-      // TODO: 对录音文件进行操作。
-  }
+解构复合消息
+
+```csharp
+var (a, b, c) = message;
+```
+
+解构、模式匹配并获取剩余内容。
+
+```csharp
+if (message is (At at, Image image))
+{
+    var rest = message.Skip(2).ToComplexMessage();
+    [...]
+}
 ```
 
 ## 使用正则消息
@@ -61,10 +62,8 @@ var message = e.Message.Parse();
 var args = e.Message.RegexDecode();
 ```
 
-### 示例
+获取 `Name` 键的值。
 
-- 获取 `Name` 键的值并发送问候。
-
-  ```csharp
-  e.Source.Send("你好，" + args["Name"]);
-  ```
+```csharp
+args["Name"]
+```

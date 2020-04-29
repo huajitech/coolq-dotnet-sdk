@@ -1,12 +1,14 @@
-# HuajiTech.CoolQ 文档
+# HuajiTech.CoolQ
 
-HuajiTech.CoolQ 是一个用于酷Q应用的 .NET SDK，旨在简化开发。
+用于酷Q应用的 .NET SDK。
 
-现阶段只对 C# 提供官方支持。
+**项目目前处于测试阶段，不建议用于生产环境。**
 
-## 警告
+## 特性
 
-此项目刚刚经过大改，文档暂未更新。
+- 通过 StdCall 导出。
+- 以 [NuGet 包](https://www.nuget.org/packages/HuajiTech.CoolQ/)发布。
+- **不使用易语言的开发模式。**
 
 ## 讨论
 

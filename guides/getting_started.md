@@ -1,65 +1,119 @@
 # 入门
 
-## 应用入口
+## AppID
 
-如果一个类满足以下所有条件，则它是应用的入口类：
+通过在程序集上应用 @"HuajiTech.CoolQ.AppIdAttribute"，可以指定 [AppID](https://docs.cqp.im/dev/v9/appid/)。
+在同一个应用中，不允许多个 @"HuajiTech.CoolQ.AppIdAttribute"。
 
-- 可以被实例化。
-- 有公共无参构造函数。
-- 应用了 @"HuajiTech.CoolQ.AppAttribute" 特性。
+## 插件类
 
-在同一个应用中，必须有且只有一个入口类。
+如果一个**可被实例化**的类派生自 @"HuajiTech.QQ.Plugin"，则它是一个插件类。
+在同一个应用中，可以有多个插件类。
 
-在 `AppInfo` 函数被调用时，将会查找入口类并将 @"HuajiTech.CoolQ.AppAttribute.Id" 属性的值作为 [AppID](https://docs.cqp.im/dev/v9/appid/) 返回给酷Q。
-在 `Initialize` 函数被调用时，将会创建入口类的实例。
-所以，只应在构造方法内对类进行初始化，而不是对应用进行初始化。
-若要获取详细信息，参见[酷Q文库](https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96)。
+在 `Initialize` 函数被调用时，将会创建所有插件类的实例。
+根据[酷Q文库](https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96)所描述的内容，应遵循以下原则：
+
+- ✔ 在插件类构造函数内对**类**进行初始化。
+- ✔ 在 @"HuajiTech.QQ.Events.IBotEventSource.AppEnabled" 事件中初始化**应用**。
+- ✘ 不应在插件类构造函数内调用酷Q API。
+- ✘ 插件类构造函数不应长时间阻塞线程。
+- ✘ 插件类构造函数不应抛出异常。
+
+> [!WARNING]
+> @"HuajiTech.QQ.CurrentUser" 类的实例化需要调用酷Q API。如果类需要使用 @"HuajiTech.QQ.CurrentUser" 对象，请考虑使用 `Lazy<CurrentUser>` 类型、 @"HuajiTech.QQ.IBot.CurrentUser" 属性或 @"HuajiTech.QQ.Plugin.CurrentUser" 属性。
 
 ## 事件
 
-酷Q事件都被封装为了 .NET 静态事件。
+酷Q事件都被封装为了 .NET 事件。
 当酷Q使用 StdCall 调用事件对应函数时，将会对事件数据进行封装并引发相应的事件。
 
-部分酷Q事件被合并为一个或拆分为多个事件。若要获取详细信息，参见[事件](events.md)。
+✘ 不允许更改 `app.json` 中预定义的事件函数名。
 
-应在构造函数内将事件处理程序附加到事件。
+部分酷Q事件被合并为一个或拆分为多个事件。若要获取详细信息，请参见[事件](events.md)。
+
+### 事件源
+
+事件源定义了一组相关的事件。事件源是接口类型，可以实现自定义事件源。
+
+### 处理事件
+
+通过在插件类构造函数中添加事件源类型的参数并向事件源附加事件处理程序可处理事件。
+在插件类被实例化时，事件源的实现将会通过**依赖注入**提供为参数。
+
+```csharp
+public MyPlugin(
+    IMessageEventSource messageEventSource,
+    IBotEventSource botEventSource)
+{
+    messageEventSource.MessageReceived += [...]
+    botEventSource.AppEnabled += [...]
+}
+```
 
 ### 路由
 
-酷Q的所有事件数据类都派生自 @"HuajiTech.CoolQ.RoutedEventArgs" 类。
-通过设置 @"HuajiTech.CoolQ.RoutedEventArgs.Handled" 属性，可结束处理事件。
+酷Q的所有事件数据类均派生自 @"HuajiTech.QQ.Events.RoutedEventArgs" 类。
+通过设置 @"HuajiTech.QQ.RoutedEventArgs.Events.Handled" 属性，可阻断事件。
 
 ### 菜单和悬浮窗状态
 
-菜单项被点击和悬浮窗状态更新均被视为事件。但由于静态语言限制，需要手动将方法导出。
+菜单项被点击和悬浮窗状态更新均被视为事件。由于事件的数量无法确定，需要手动将事件处理程序导出。
 
-参见[如何：使用菜单和悬浮窗状态](howto_use_menus_and_statuses.md)。
+有关详细信息，请参见[菜单和悬浮窗状态](menus_and_statuses.md)。
 
 ## 酷Q API
 
-酷Q的 API 被封装并放置在了多个不同的类中，以下是所有可以直接调用酷Q API 的类：
+可以通过事件数据中提供的对象被动地调用酷Q API。
 
-### 静态
+```csharp
+private void MemberJoined(object sender, GroupMemberEventArgs e)
+{
+    e.Operatee.Mute(TimeSpan.FromMinutes(5));
+    e.Source.Send("欢迎 " + e.Operatee.DisplayName);
+}
+```
 
-- @"HuajiTech.CoolQ.Bot"
-- @"HuajiTech.CoolQ.CurrentUser"
-- @"HuajiTech.CoolQ.Logger"
+插件上下文（@"HuajiTech.QQ.PluginContext"）提供了主动调用酷Q API 的能力。
 
-### 聊天
+```csharp
+PluginContext.Current.GetUser(114514).Send("Hello!");
+```
 
-- @"HuajiTech.CoolQ.AnonymousMember"
-- @"HuajiTech.CoolQ.Chat"
-     - @"HuajiTech.CoolQ.Group"
-     - @"HuajiTech.CoolQ.User"
-         - @"HuajiTech.CoolQ.Contact"
-         - @"HuajiTech.CoolQ.Member"
+对于在插件类中的使用，@"HuajiTech.QQ.Plugin" 类提供了更便捷的方法。
 
-### 请求
+```csharp
+public class MyPlugin : Plugin
+{
+    [...]
+    foreach (var member in Group(1919810).GetMembers())
+    [...]
+}
+```
 
-- @"HuajiTech.CoolQ.EntranceInvitation"
-- @"HuajiTech.CoolQ.EntranceRequest"
+@"HuajiTech.QQ.CurrentPluginContextExtensions" 类提供了一些常用的扩展方法。
 
-### CQ码
+```csharp
+try
+{
+    if (_administrators.Contains(e.Sender.AsUser()))
+    {
+        [...]
+    }
+}
+catch (Exception ex)
+{
+    ex.LogAsError();
+}
+```
 
-- @"HuajiTech.CoolQ.Messaging.Record"
-- @"HuajiTech.CoolQ.Messaging.Image"
+@"HuajiTech.CoolQ.Messaging.Image" 和 @"HuajiTech.CoolQ.Messaging.Record" 类也提供了调用酷Q API 的方法。
+
+```csharp
+image.RequestFile();
+```
+
+## CQ码
+
+可以使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage" 类处理CQ码。
+
+有关详细信息，请参见[如何：处理消息](howto_handle_message.md)中的`使用复合消息`部分。

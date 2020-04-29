@@ -5,6 +5,7 @@ namespace HuajiTech.QQ
 {
     /// <summary>
     /// 表示成员。
+    /// 此类为抽象类。
     /// </summary>
     public abstract class Member : User, IMember, IAliased
     {

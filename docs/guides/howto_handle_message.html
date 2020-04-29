@@ -69,61 +69,45 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="如何处理消息">如何：处理消息</h1>
 
-<p><code>e</code> 为 @&quot;HuajiTech.CoolQ.MessageReceivedEventArgs&quot; 类的实例。</p>
 <h2 id="判断消息来源类型">判断消息来源类型</h2>
 <pre><code class="lang-csharp">if (e.Source is Group) { }   // 群消息。
 if (e.Source is User) { }    // 私聊消息（包括临时会话和好友消息）。
-if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 null）。
-if (e.Source is Contact) { } // 好友消息（Contact.Alias 为 null）。
+if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 Group(0)）。
+if (e.Source is Contact) { } // 好友消息。
 </code></pre>
 <h2 id="使用-复合消息">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>（复合消息）</h2>
-<p>使用复合消息需要对 LINQ 有一定了解。</p>
-<pre><code class="lang-csharp">using HuajiTech.CoolQ.Messaging;
-using System.Linq;
-</code></pre>
-<p>通过 @&quot;HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.CoolQ.Message)&quot; 扩展方法解析消息。</p>
+<p>通过 @&quot;HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message)&quot; 扩展方法解析消息。</p>
 <pre><code class="lang-csharp">var message = e.Message.Parse();
 </code></pre>
-<h3 id="示例">示例</h3>
-<ul>
-<li><p>获取消息中的所有纯文本拼接成的字符串。</p>
-<pre><code class="lang-csharp">string.Join(string.Empty, message.OfType&lt;PlainText&gt;());
+<p>获取消息中的所有纯文本拼接成的字符串。</p>
+<pre><code class="lang-csharp">string.GetPlainText();
 </code></pre>
-</li>
-<li><p>如果消息包含对机器人的 At，发送一张图片和一个表情。</p>
-<pre><code class="lang-csharp">if (message.Contains(Bot.CurrentUser.At()))
+<p>判断机器人是否被 @。</p>
+<pre><code class="lang-csharp">if (message.Contains(CurrentUser.At()))
 {
-    var image = new Image { FileName = &quot;SmallYellowPicture.png&quot; };
-    e.Source.Send(e.Sender.At() + &quot; &quot; + image);
-    e.Source.Send(new Emoticon { Id = 178 });
-}
-
-</code></pre>
-</li>
-<li><p>解析并请求录音文件。</p>
-<pre><code class="lang-csharp">if (message[0] is Record record)
-{
-    var recordFile = record.RequestFile();
-    // TODO: 对录音文件进行操作。
+    [...]
 }
 </code></pre>
-</li>
-</ul>
-<pre><code>
-## 使用正则消息
-
-通过 @&quot;HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)&quot; 扩展方法解码正则消息。
-
-```csharp
-var args = e.Message.RegexDecode();
+<p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_QQ_User_">At(User)</a> @ 消息的发送者。</p>
+<pre><code class="lang-csharp">e.Source.Send(e.Sender.At() + [...])
 </code></pre>
-<h3 id="示例-1">示例</h3>
-<ul>
-<li><p>获取 <code>Name</code> 键的值并发送问候。</p>
-<pre><code class="lang-csharp">e.Source.Send(&quot;你好，&quot; + args[&quot;Name&quot;]);
+<p>解构复合消息</p>
+<pre><code class="lang-csharp">var (a, b, c) = message;
 </code></pre>
-</li>
-</ul>
+<p>解构、模式匹配并获取剩余内容。</p>
+<pre><code class="lang-csharp">if (message is (At at, Image image))
+{
+    var rest = message.Skip(2).ToComplexMessage();
+    [...]
+}
+</code></pre>
+<h2 id="使用正则消息">使用正则消息</h2>
+<p>通过 @&quot;HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)&quot; 扩展方法解码正则消息。</p>
+<pre><code class="lang-csharp">var args = e.Message.RegexDecode();
+</code></pre>
+<p>获取 <code>Name</code> 键的值。</p>
+<pre><code class="lang-csharp">args[&quot;Name&quot;]
+</code></pre>
 </article>
           </div>
           

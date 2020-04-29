@@ -4,6 +4,7 @@ namespace HuajiTech.QQ
 {
     /// <summary>
     /// 表示用户。
+    /// 此类为抽象类。
     /// </summary>
     public abstract class User : Chat, IRequestable, IRefreshable
     {

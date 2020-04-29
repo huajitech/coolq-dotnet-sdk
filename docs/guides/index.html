@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#22914;&#20309;&#65306;&#20351;&#29992;&#33756;&#21333;&#21644;&#24748;&#28014;&#31383;&#29366;&#24577; </title>
+    <title>HuajiTech.CoolQ &#25991;&#26723; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#22914;&#20309;&#65306;&#20351;&#29992;&#33756;&#21333;&#21644;&#24748;&#28014;&#31383;&#29366;&#24577; ">
+    <meta name="title" content="HuajiTech.CoolQ &#25991;&#26723; ">
     <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,58 +67,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="如何使用菜单和悬浮窗状态">如何：使用菜单和悬浮窗状态</h1>
+<h1 id="huajitechcoolq-文档">HuajiTech.CoolQ 文档</h1>
 
-<h2 id="编写事件处理程序">编写事件处理程序</h2>
-<p>事件处理程序必须为静态方法。</p>
-<h3 id="菜单项被点击">菜单项被点击</h3>
-<p>菜单项被点击事件没有任何形参，也没有返回值。</p>
-<pre><code class="lang-csharp">static void OnMenuItemClicked();
-</code></pre>
-<h3 id="悬浮窗状态更新">悬浮窗状态更新</h3>
-<p>悬浮窗状态更新事件没有任何形参，返回一个字符串。返回的字符串是以 Base64 编码的状态数据。</p>
-<pre><code class="lang-csharp">static string OnStatusUpdating();
-</code></pre>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html">Status</a> 类和 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Encode">Encode()</a> 方法可以方便地创建状态数据并进行编码。</p>
-<pre><code class="lang-csharp">static string OnStatusUpdating()
-{
-	return new HuajiTech.CoolQ.Status(
-		value: &quot;值&quot;,
-		unit: &quot;单位&quot;,
-		color: HuajiTech.CoolQ.StatusColor.Green
-    ).Encode();
-}
-</code></pre>
-<h2 id="将托管方法导出为非托管方法">将托管方法导出为非托管方法</h2>
-<p>上面创建的事件处理程序是托管方法，但酷Q只能调用以 StdCall 导出的非托管方法。
-通过 <code>HuajiTech.UnmanagedExports.DllExportAttribute</code> 可以标记要导出的方法。</p>
-<pre><code class="lang-csharp">[HuajiTech.UnmanagedExports.DllExport]
-static string OnStatusUpdating();
-</code></pre>
-<p>通过设置 <code>HuajiTech.UnmanagedExports.DllExportAttribute.EntryPoint</code> 属性，可以自定义导出后的方法的入口点名称。
-如果 <code>EntryPoint</code> 属性为 <code>null</code>，将会使用方法名称作为入口点名称。
-不能定义重复的入口点名称。</p>
-<pre><code class="lang-csharp">[HuajiTech.UnmanagedExports.DllExport(EntryPoint = &quot;OnMenuItemClicked&quot;)]
-static void OpenConfiguration();
-</code></pre>
-<h2 id="配置-appjson">配置 <code>app.json</code></h2>
-<p>在 <code>app.json</code> 中的 <code>status</code> 或 <code>menu</code> 下增加相应格式的元素，并将 <code>function</code> 的值设为导出的入口点名称。</p>
-<pre><code class="lang-json">&quot;menu&quot;: [
-  {
-    &quot;name&quot;: &quot;菜单项&quot;,
-    &quot;function&quot;: &quot;OnMenuItemClicked&quot;
-  }
-],
-&quot;status&quot;: [
-  {
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;悬浮窗&quot;,
-    &quot;title&quot;: &quot;FLOAT&quot;,
-    &quot;function&quot;: &quot;OnStatusUpdating&quot;,
-    &quot;period&quot;: &quot;1000&quot;
-  }
-]
-</code></pre>
+<p>HuajiTech.CoolQ 是一个用于酷Q应用的 .NET SDK，旨在简化开发。</p>
+<p>现阶段只对 C# 提供官方支持。</p>
+<h2 id="讨论">讨论</h2>
+<p>建议使用 Github Issues，
+但也可以选择加入<a href="https://jq.qq.com/?_wv=1027&amp;k=5HPLCyU">QQ群</a>（1094829331）。</p>
+<h2 id="许可">许可</h2>
+<p>本项目使用 LGPL v3 进行许可。
+本文档使用 CC BY-NC-SA 4.0 进行许可。</p>
 </article>
           </div>
           

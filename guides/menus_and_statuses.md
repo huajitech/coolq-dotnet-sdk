@@ -1,8 +1,8 @@
-# 如何：使用菜单和悬浮窗状态
+# 菜单和悬浮窗状态
 
-## 编写事件处理程序
+## 事件处理程序
 
-事件处理程序必须为静态方法。
+菜单和悬浮窗状态的事件处理程序必须为静态方法。
 
 ### 菜单项被点击
 
@@ -25,10 +25,10 @@ static string OnStatusUpdating();
 ```csharp
 static string OnStatusUpdating()
 {
-	return new HuajiTech.CoolQ.Status(
-		value: "值",
-		unit: "单位",
-		color: HuajiTech.CoolQ.StatusColor.Green
+  return new HuajiTech.CoolQ.Status(
+    value: "值",
+    unit: "单位",
+    color: HuajiTech.CoolQ.StatusColor.Green
     ).Encode();
 }
 ```
