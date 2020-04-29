@@ -65,7 +65,7 @@ namespace HuajiTech.CoolQ.Events
                 _ => throw new ArgumentOutOfRangeException(nameof(type))
             };
 
-            ev?.Invoke(null, e);
+            ev?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -91,7 +91,7 @@ namespace HuajiTech.CoolQ.Events
                 new User(requesterNumber),
                 new EntranceRequest(requestToken, message));
 
-            Instance.EntranceRequested?.Invoke(null, e);
+            Instance.EntranceRequested?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -112,7 +112,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new FileUploadedEventArgs(
                 Timestamp.ToDateTime(timestampUploaded), source, new Member(uploaderNumber, source), file);
 
-            Instance.FileUploaded?.Invoke(null, e);
+            Instance.FileUploaded?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -145,7 +145,7 @@ namespace HuajiTech.CoolQ.Events
                 _ => throw new ArgumentOutOfRangeException(nameof(type))
             };
 
-            ev?.Invoke(null, e);
+            ev?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -169,7 +169,7 @@ namespace HuajiTech.CoolQ.Events
                 isPassive ? null : new Member(operatorNumber, source),
                 new Member(affecteeNumber, source));
 
-            Instance.MemberJoined?.Invoke(null, e);
+            Instance.MemberJoined?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -193,7 +193,7 @@ namespace HuajiTech.CoolQ.Events
                 isPassive ? new Member(operatorNumber, source) : null,
                 new Member(affecteeNumber, source));
 
-            Instance.MemberLeft?.Invoke(null, e);
+            Instance.MemberLeft?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -223,13 +223,13 @@ namespace HuajiTech.CoolQ.Events
                 case MuteEventType.Mute:
                     var eMute = new MemberMutedEventArgs(
                         timeChanged, source, @operator, affectee, TimeSpan.FromSeconds(secondsMuted));
-                    Instance.MemberMuted?.Invoke(null, eMute);
+                    Instance.MemberMuted?.Invoke(Instance, eMute);
                     return eMute.Handled;
 
                 case MuteEventType.Unmute:
                     var eUnmute = new GroupEventArgs(
                         timeChanged, source, @operator, affectee);
-                    Instance.MemberUnmuted?.Invoke(null, eUnmute);
+                    Instance.MemberUnmuted?.Invoke(Instance, eUnmute);
                     return eUnmute.Handled;
 
                 default:

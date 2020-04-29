@@ -118,8 +118,15 @@ namespace HuajiTech.QQ
         /// </summary>
         /// <param name="user">用户。</param>
         /// <param name="group">群。</param>
-        public virtual Member GetMember(User user, Group group) =>
-            GetMember(user?.Number ?? throw new ArgumentNullException(nameof(user)), group);
+        public virtual Member GetMember(User user, Group group)
+        {
+            if (user is null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
+
+            return GetMember(user.Number, group);
+        }
 
         /// <summary>
         /// 获取号码为指定用户的号码，群为指定群号码的群的 <see cref="Member"/> 对象。

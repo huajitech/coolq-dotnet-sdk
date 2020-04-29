@@ -30,7 +30,7 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         private static int OnAppDisabling()
         {
-            Instance.AppDisabling?.Invoke(null, EventArgs.Empty);
+            Instance.AppDisabling?.Invoke(Instance, EventArgs.Empty);
             return 0;
         }
 
@@ -57,21 +57,21 @@ namespace HuajiTech.CoolQ.Events
                 }
             }
 
-            Instance.AppEnabled?.Invoke(null, EventArgs.Empty);
+            Instance.AppEnabled?.Invoke(Instance, EventArgs.Empty);
             return 0;
         }
 
         [DllExport]
         private static int OnStarted()
         {
-            Instance.BotStarted?.Invoke(null, EventArgs.Empty);
+            Instance.BotStarted?.Invoke(Instance, EventArgs.Empty);
             return 0;
         }
 
         [DllExport]
         private static int OnStopping()
         {
-            Instance.BotStopping?.Invoke(null, EventArgs.Empty);
+            Instance.BotStopping?.Invoke(Instance, EventArgs.Empty);
             return 0;
         }
     }

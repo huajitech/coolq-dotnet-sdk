@@ -37,7 +37,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new MessageReceivedEventArgs(
                 new Message(messageId, message), source, sender);
 
-            Instance.MessageReceived?.Invoke(null, e);
+            Instance.MessageReceived?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -48,7 +48,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new AnonymousMessageReceivedEventArgs(
                 new Message(messageId, message), source, sender);
 
-            Instance.AnonymousMessageReceived?.Invoke(null, e);
+            Instance.AnonymousMessageReceived?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -108,7 +108,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new ContactAddedEventArgs(
                 Timestamp.ToDateTime(timestampAdded), new Contact(requesterNumber));
 
-            Instance.ContactAdded?.Invoke(null, e);
+            Instance.ContactAdded?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -127,7 +127,7 @@ namespace HuajiTech.CoolQ.Events
                 new User(requesterNumber),
                 new ContactRequest(requestToken, message));
 
-            Instance.ContactRequested?.Invoke(null, e);
+            Instance.ContactRequested?.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -153,7 +153,7 @@ namespace HuajiTech.CoolQ.Events
                 new User(inviterNumber),
                 new EntranceInvitation(requestToken, message));
 
-            Instance.EntranceInvited?.Invoke(null, e);
+            Instance.EntranceInvited?.Invoke(Instance, e);
 
             return e.Handled;
         }
