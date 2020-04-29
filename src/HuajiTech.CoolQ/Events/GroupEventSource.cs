@@ -23,9 +23,9 @@ namespace HuajiTech.CoolQ.Events
         {
         }
 
-        public event EventHandler<MemberEventArgs> MemberJoined;
+        public event EventHandler<GroupMemberEventArgs> MemberJoined;
 
-        public event EventHandler<MemberEventArgs> MemberLeft;
+        public event EventHandler<GroupMemberEventArgs> MemberLeft;
 
         public event EventHandler<EntranceRequestedEventArgs> EntranceRequested;
 
@@ -162,7 +162,7 @@ namespace HuajiTech.CoolQ.Events
             var source = new Group(sourceNumber);
             var isPassive = type == MemberEventType.Passive;
 
-            var e = new MemberEventArgs(
+            var e = new GroupMemberEventArgs(
                 type == MemberEventType.Passive,
                 Timestamp.ToDateTime(timestampJoined),
                 source,
@@ -186,7 +186,7 @@ namespace HuajiTech.CoolQ.Events
             var source = new Group(sourceNumber);
             var isPassive = type == MemberEventType.Passive;
 
-            var e = new MemberEventArgs(
+            var e = new GroupMemberEventArgs(
                 isPassive,
                 Timestamp.ToDateTime(timestampLeft),
                 source,
