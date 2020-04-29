@@ -13,7 +13,7 @@ namespace HuajiTech.CoolQ.DataExchange
 
         public CustomTitle CustomTitle { get; set; }
 
-        public DateTime EntranceTime { get; set; }
+        public DateTime TimeEntered { get; set; }
 
         public Gender Gender { get; set; }
 

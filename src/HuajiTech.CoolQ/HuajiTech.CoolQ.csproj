@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <LangVersion>8</LangVersion>
+    <CodeAnalysisRuleSet>HuajiTech.CoolQ.ruleset</CodeAnalysisRuleSet>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.pfx</AssemblyOriginatorKeyFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <CodeAnalysisRuleSet>HuajiTech.CoolQ.ruleset</CodeAnalysisRuleSet>
-    <Version>0.2.0-alpha.2004.3</Version>
+    <Version>0.2.0-alpha.2004.4</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>用于酷Q应用的 .NET SDK。</Description>
@@ -28,9 +28,12 @@
     <DocumentationFile>C:\Users\SYC\source\repos\HuajiTech.CoolQ\src\HuajiTech.CoolQ\HuajiTech.CoolQ.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="app.json" />
-    <None Remove="HuajiTech.CoolQ.ruleset" />
     <None Remove="stylecop.json" />
     <None Include="..\..\Icon.png">
       <Pack>True</Pack>

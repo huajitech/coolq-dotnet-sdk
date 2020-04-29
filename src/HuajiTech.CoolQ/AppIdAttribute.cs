@@ -3,7 +3,7 @@ using System;
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 指示当前程序集的 AppID。
+    /// 指定当前程序集的 AppID。
     /// 此类不能被继承。
     /// </summary>
     [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]

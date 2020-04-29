@@ -21,7 +21,7 @@ namespace HuajiTech.CoolQ.DataExchange
                 Gender = (Gender)ReadInt32(),
                 Age = ReadInt32(),
                 Location = ReadString(),
-                EntranceTime = ReadDateTime(),
+                TimeEntered = ReadDateTime(),
                 LastSpeakTime = ReadDateTime(),
                 Level = ReadString(),
                 Role = (MemberRole)ReadInt32(),

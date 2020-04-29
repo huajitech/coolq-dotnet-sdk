@@ -8,7 +8,7 @@ namespace HuajiTech.QQ.Events
     public class EntranceRequestedEventArgs : TimedEventArgs
     {
         public EntranceRequestedEventArgs(
-            DateTime time, IGroup source, IUser requester, IEntranceRequest request)
+            DateTime time, Group source, User requester, EntranceRequest request)
             : base(time)
         {
             Source = source;
@@ -19,16 +19,16 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取来源群。
         /// </summary>
-        public IGroup Source { get; }
+        public Group Source { get; }
 
         /// <summary>
         /// 获取请求用户。
         /// </summary>
-        public IUser Requester { get; }
+        public User Requester { get; }
 
         /// <summary>
         /// 获取请求。
         /// </summary>
-        public IEntranceRequest Request { get; }
+        public EntranceRequest Request { get; }
     }
 }

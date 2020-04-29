@@ -1,5 +1,4 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,23 +10,13 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public static class Extensions
     {
-        public static IUser AsUser(this IUser user)
-        {
-            return QQ.AppContext.CurrentContext.GetUser(user);
-        }
-
-        public static IMember AsMemberOf(this IUser user, IGroup group)
-        {
-            return QQ.AppContext.CurrentContext.GetMember(user, group);
-        }
-
         /// <summary>
-        /// 将 <see cref="IMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="IMessage"/> 对象解码为只读字典。
+        /// 将 <see cref="QQ.Message.Content"/> 为编码后的正则消息匹配结果的 <see cref="QQ.Message"/> 对象解码为只读字典。
         /// </summary>
         /// <param name="message">要解析为只读字典的 <see cref="Message"/> 对象。</param>
-        /// <returns>与 <see cref="Message.Content"/> 等效的只读字典。</returns>
+        /// <returns>与 <see cref="QQ.Message.Content"/> 等效的只读字典。</returns>
         /// <exception cref="InvalidOperationException"><paramref name="message"/> 的值不合法。</exception>
-        public static IReadOnlyDictionary<string, string> RegexDecode(this IMessage message)
+        public static IReadOnlyDictionary<string, string> RegexDecode(this QQ.Message message)
         {
             if (message is null)
             {

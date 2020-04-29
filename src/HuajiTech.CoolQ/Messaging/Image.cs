@@ -1,4 +1,3 @@
-using HuajiTech.QQ;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -36,7 +35,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
         public FileInfo RequestFile()
         {
-            return AppContext.CurrentContext.Bot.RequestImage(FileName);
+            return QQ.PluginContext.Current.Bot.RequestImage(FileName);
         }
 
         /// <summary>

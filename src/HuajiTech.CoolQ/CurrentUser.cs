@@ -1,27 +1,31 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace HuajiTech.CoolQ
 {
-    /// <summary>
-    /// 表示当前用户，并提供与当前用户交互的静态方法、事件和属性。
-    /// </summary>
-    internal partial class CurrentUser : User, ICurrentUser
+    internal partial class CurrentUser : QQ.CurrentUser
     {
+        private static string _nickname;
+
         internal CurrentUser()
             : base(NativeMethods.GetCurrentUserNumber(Bot.Instance.AuthCode).CheckError())
         {
         }
 
-        /// <summary>
-        /// 获取当前用户的昵称。
-        /// </summary>
-        public override string Nickname =>
-            NativeMethods.GetCurrentUserNickname(Bot.Instance.AuthCode);
+        public override string Nickname
+        {
+            get
+            {
+                Request();
+                return _nickname;
+            }
+        }
+
+        public override bool HasRequested => throw new NotImplementedException();
+
+        public override string DisplayName => throw new NotImplementedException();
 
         internal static IReadOnlyCollection<ContactInfo> GetContactInfos()
         {
@@ -31,50 +35,24 @@ namespace HuajiTech.CoolQ
             return reader.ReadAll().ToList();
         }
 
-        /// <summary>
-        /// 获取当前用户的所有联系人。
-        /// </summary>
-        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public IReadOnlyCollection<IContact> GetContacts()
+        public override IReadOnlyCollection<QQ.Contact> GetContacts()
         {
             return GetContactInfos()
                 .Select(info => new Contact(info))
                 .ToList();
         }
 
-        /// <summary>
-        /// 以异步操作获取当前用户的所有联系人。
-        /// </summary>
-        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public Task<IReadOnlyCollection<IContact>> GetContactsAsync()
-        {
-            return Task.Run(GetContacts);
-        }
-
-        /// <summary>
-        /// 获取当前用户在指定域下的 Cookies。
-        /// </summary>
-        /// <param name="domain">指定的域名。</param>
-        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public string GetCookies(string domain)
+        public override string GetCookies(string domain)
         {
             return NativeMethods.GetCookies(Bot.Instance.AuthCode, domain).CheckError();
         }
 
-        /// <summary>
-        /// 获取当前用户的 CSRF 令牌。
-        /// </summary>
-        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public int GetCsrfToken()
+        public override int GetCsrfToken()
         {
             return NativeMethods.GetCsrfToken(Bot.Instance.AuthCode).CheckError();
         }
 
-        /// <summary>
-        /// 获取当前用户的所有群。
-        /// </summary>
-        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public IReadOnlyCollection<IGroup> GetGroups()
+        public override IReadOnlyCollection<QQ.Group> GetGroups()
         {
             using var reader = new BasicGroupInfoReader(
                 NativeMethods.GetGroupsBase64(Bot.Instance.AuthCode).CheckError());
@@ -84,13 +62,32 @@ namespace HuajiTech.CoolQ
                 .ToList();
         }
 
-        /// <summary>
-        /// 以异步操作获取当前用户的所有群。
-        /// </summary>
-        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public Task<IReadOnlyCollection<IGroup>> GetGroupsAsync()
+        public override void GiveThumbsUp(int count)
         {
-            return Task.Run(GetGroups);
+            throw new InvalidOperationException(Resources.CannotGiveThumbsUpToCurrentUser);
+        }
+
+        public override void Refresh()
+        {
+            _nickname = null;
+            Request();
+        }
+
+        public override void Request()
+        {
+            _nickname ??= NativeMethods.GetCurrentUserNickname(Bot.Instance.AuthCode);
+        }
+
+        public override QQ.Message Send(string message)
+        {
+            if (string.IsNullOrEmpty(message))
+            {
+                throw new ArgumentException(Resources.FieldCannotBeEmpty, nameof(message));
+            }
+
+            var id = NativeMethods.SendPrivateMessage(Bot.Instance.AuthCode, Number, message).CheckError();
+
+            return new Message(id, message);
         }
     }
 }

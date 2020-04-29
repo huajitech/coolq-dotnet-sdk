@@ -3,28 +3,29 @@ using System.Threading.Tasks;
 
 namespace HuajiTech.QQ
 {
-    public interface IGroup : IChattable, IMuteable, IRequestable, IRefreshable
+    /// <summary>
+    /// 定义群。
+    /// </summary>
+    public interface IGroup
     {
+        /// <summary>
+        /// 获取当前 <see cref="IGroup"/> 对象的成员容量。
+        /// </summary>
         int MemberCapacity { get; }
 
+        /// <summary>
+        /// 获取当前 <see cref="IGroup"/> 对象的成员数。
+        /// </summary>
         int MemberCount { get; }
 
-        string Name { get; }
+        /// <summary>
+        /// 获取当前 <see cref="IGroup"/> 对象的所有成员。
+        /// </summary>
+        IReadOnlyCollection<Member> GetMembers();
 
-        void DisableAnonymous();
-
-        Task DisableAnonymousAsync();
-
-        void EnableAnonymous();
-
-        Task EnableAnonymousAsync();
-
-        IReadOnlyCollection<IMember> GetMembers();
-
-        Task<IReadOnlyCollection<IMember>> GetMembersAsync();
-
-        void Leave(bool disband = false);
-
-        Task LeaveAsync(bool disband = false);
+        /// <summary>
+        /// 以异步操作获取当前 <see cref="IGroup"/> 对象的所有成员。
+        /// </summary>
+        Task<IReadOnlyCollection<Member>> GetMembersAsync();
     }
 }

@@ -70,29 +70,11 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 已加载类型 &apos;{0}&apos;。 的本地化字符串。
+        ///   查找类似 不能为当前用户点赞。 的本地化字符串。
         /// </summary>
-        internal static string AppLoadMessage {
+        internal static string CannotGiveThumbsUpToCurrentUser {
             get {
-                return ResourceManager.GetString("AppLoadMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 应用加载 的本地化字符串。
-        /// </summary>
-        internal static string AppLoadTitle {
-            get {
-                return ResourceManager.GetString("AppLoadTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 未找到应用类。 的本地化字符串。
-        /// </summary>
-        internal static string AppNotFound {
-            get {
-                return ResourceManager.GetString("AppNotFound", resourceCulture);
+                return ResourceManager.GetString("CannotGiveThumbsUpToCurrentUser", resourceCulture);
             }
         }
         
@@ -169,11 +151,38 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 初始化失败。 的本地化字符串。
+        /// </summary>
+        internal static string InitializationFailed {
+            get {
+                return ResourceManager.GetString("InitializationFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。 的本地化字符串。
         /// </summary>
         internal static string NullReturnValue {
             get {
                 return ResourceManager.GetString("NullReturnValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 已加载类型 &apos;{0}&apos;。 的本地化字符串。
+        /// </summary>
+        internal static string PluginLoadMessage {
+            get {
+                return ResourceManager.GetString("PluginLoadMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 插件加载 的本地化字符串。
+        /// </summary>
+        internal static string PluginLoadTitle {
+            get {
+                return ResourceManager.GetString("PluginLoadTitle", resourceCulture);
             }
         }
         

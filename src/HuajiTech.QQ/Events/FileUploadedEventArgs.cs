@@ -8,7 +8,7 @@ namespace HuajiTech.QQ.Events
     public class FileUploadedEventArgs : TimedEventArgs
     {
         public FileUploadedEventArgs(
-            DateTime time, IGroup source, IMember uploader, File file)
+            DateTime time, Group source, Member uploader, File file)
             : base(time)
         {
             Source = source;
@@ -19,12 +19,12 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取来源群。
         /// </summary>
-        public IGroup Source { get; }
+        public Group Source { get; }
 
         /// <summary>
         /// 获取上传用户。
         /// </summary>
-        public IMember Uploader { get; }
+        public Member Uploader { get; }
 
         /// <summary>
         /// 获取上传的文件。

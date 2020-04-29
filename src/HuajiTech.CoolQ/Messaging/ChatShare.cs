@@ -1,4 +1,3 @@
-using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
 
@@ -22,12 +21,12 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="ChatShare"/> 对象的内容。
         /// </summary>
-        public IChattable Content
+        public QQ.Chat Content
         {
             get => this["type"] switch
             {
-                "qq" => QQ.AppContext.CurrentContext.GetUser(GetParameterAsInt64("id")),
-                "group" => QQ.AppContext.CurrentContext.GetGroup(GetParameterAsInt64("id")),
+                "qq" => QQ.PluginContext.Current.GetUser(GetParameterAsInt64("id")),
+                "group" => QQ.PluginContext.Current.GetGroup(GetParameterAsInt64("id")),
                 _ => null
             };
 
@@ -40,8 +39,8 @@ namespace HuajiTech.CoolQ.Messaging
 
                 this["type"] = value switch
                 {
-                    IUser _ => "qq",
-                    IGroup _ => "group",
+                    QQ.User _ => "qq",
+                    QQ.Group _ => "group",
                     _ => throw new ArgumentOutOfRangeException(nameof(value)),
                 };
 

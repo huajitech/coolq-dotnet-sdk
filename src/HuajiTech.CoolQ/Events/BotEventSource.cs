@@ -49,10 +49,10 @@ namespace HuajiTech.CoolQ.Events
                 foreach (var app in Bot.Instance.Apps)
                 {
                     Bot.Instance.Logger.LogDebug(
-                        Resources.AppLoadTitle,
+                        Resources.PluginLoadTitle,
                         string.Format(
                             CultureInfo.InvariantCulture,
-                            Resources.AppLoadMessage,
+                            Resources.PluginLoadMessage,
                             app.GetType().FullName));
                 }
             }

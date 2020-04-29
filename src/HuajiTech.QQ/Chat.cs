@@ -1,15 +1,18 @@
-using HuajiTech.QQ;
 using System;
 using System.Threading.Tasks;
 
-namespace HuajiTech.CoolQ
+namespace HuajiTech.QQ
 {
     /// <summary>
     /// 表示聊天。
     /// 此类为抽象类。
     /// </summary>
-    internal abstract class Chat : IChattable
+    public abstract class Chat : ISendable, IEquatable<Chat>
     {
+        /// <summary>
+        /// 以指定的号码初始化一个 <see cref="Chat"/> 类的新实例。
+        /// </summary>
+        /// <param name="number">号码。</param>
         protected Chat(long number)
         {
             Number = number;
@@ -40,7 +43,7 @@ namespace HuajiTech.CoolQ
             return Equals(obj as Chat);
         }
 
-        public virtual bool Equals(IChattable other)
+        public virtual bool Equals(Chat other)
         {
             return base.Equals(other) || other?.Number == Number;
         }
@@ -50,19 +53,9 @@ namespace HuajiTech.CoolQ
             return (int)Number;
         }
 
-        /// <summary>
-        /// 向当前 <see cref="Chat"/> 对象发送消息。
-        /// </summary>
-        /// <param name="message">要发送的消息。</param>
-        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        public abstract IMessage Send(string message);
+        public abstract Message Send(string message);
 
-        /// <summary>
-        /// 以异步操作向当前 <see cref="Chat"/> 对象发送消息。
-        /// </summary>
-        /// <param name="message">要发送的消息。</param>
-        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        public virtual Task<IMessage> SendAsync(string message)
+        public virtual Task<Message> SendAsync(string message)
         {
             return Task.Run(() => Send(message));
         }

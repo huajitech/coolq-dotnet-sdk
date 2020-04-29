@@ -1,11 +1,9 @@
 using Autofac;
 using HuajiTech.CoolQ.Events;
-using HuajiTech.QQ;
 using HuajiTech.UnmanagedExports;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
@@ -29,7 +27,7 @@ namespace HuajiTech.CoolQ
         private static int Initialize(int authCode)
         {
             Instance = new Bot(authCode);
-            QQ.AppContext.CurrentContext = new DefaultAppContext(Instance);
+            QQ.PluginContext.Current = new PluginContext(Instance);
 
             AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
             {
@@ -54,11 +52,11 @@ namespace HuajiTech.CoolQ
 
             builder
                 .RegisterInstance(Instance.Logger)
-                .As<ILogger>();
+                .As<QQ.Logger>();
 
             builder
                 .Register(context => Instance.CurrentUser)
-                .As<ICurrentUser>();
+                .As<QQ.CurrentUser>();
 
             builder
                 .RegisterInstance(CurrentUserEventSource.Instance)
@@ -71,24 +69,24 @@ namespace HuajiTech.CoolQ
                 .AsImplementedInterfaces();
 
             builder
-                .Register(context => QQ.AppContext.CurrentContext)
-                .As<QQ.AppContext>();
+                .Register(context => QQ.PluginContext.Current)
+                .As<QQ.PluginContext>();
 
             builder
                 .RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
-                .AssignableTo<App>()
+                .AssignableTo<Plugin>()
                 .SingleInstance()
-                .As<App>();
+                .As<Plugin>();
 
             var container = builder.Build();
 
             try
             {
-                Instance.Apps = container.Resolve<ICollection<App>>();
+                Instance.Apps = container.Resolve<ICollection<Plugin>>();
             }
             catch (Exception ex)
             {
-                throw new EntryPointNotFoundException(Resources.AppNotFound, ex);
+                throw new EntryPointNotFoundException(Resources.InitializationFailed, ex);
             }
 
             return 0;

@@ -15,7 +15,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="target">At (@) 的目标。</param>
         /// <returns>目标为指定用户的 <see cref="Messaging.At"/> 类的新实例。</returns>
-        public static At At(this IUser target)
+        public static At At(this QQ.User target)
         {
             return new At
             {
@@ -26,10 +26,10 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 将 <see cref="Message"/> 对象解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
-        /// <param name="message">一个 <see cref="Message"/>对象，该 <see cref="Message"/> 对象的 <see cref="Message.Content"/> 属性的值为要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
+        /// <param name="message">一个 <see cref="Message"/>对象，该 <see cref="Message"/> 对象的 <see cref="QQ.Message.Content"/> 属性的值为要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
         /// <param name="useEmojiCQCode">如果要在返回的 <see cref="ComplexMessage"/> 对象中包含 <see cref="Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
-        /// <returns>与 <see cref="Message.Content"/> 等效的 <see cref="ComplexMessage"/> 对象。</returns>
-        public static ComplexMessage Parse(this IMessage message, bool useEmojiCQCode = false)
+        /// <returns>与 <see cref="QQ.Message.Content"/> 等效的 <see cref="ComplexMessage"/> 对象。</returns>
+        public static ComplexMessage Parse(this QQ.Message message, bool useEmojiCQCode = false)
         {
             return ComplexMessage.Parse(message?.Content, useEmojiCQCode);
         }
@@ -55,7 +55,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public static IMessage Send(this IChattable chat, ComplexMessage message)
+        public static QQ.Message Send(this Chat chat, ComplexMessage message)
         {
             if (chat is null)
             {
@@ -80,9 +80,19 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static Task<IMessage> SendAsync(this IChattable chat, ComplexMessage message)
+        public static Task<QQ.Message> SendAsync(this Chat chat, ComplexMessage message)
         {
-            return Task.Run(() => Send(chat, message));
+            if (chat is null)
+            {
+                throw new ArgumentNullException(nameof(chat));
+            }
+
+            if (message is null)
+            {
+                throw new ArgumentNullException(nameof(message));
+            }
+
+            return chat.SendAsync(message.ToString());
         }
 
         /// <summary>
@@ -95,7 +105,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static IMessage Send(this IChattable chat, MessageElement element)
+        public static QQ.Message Send(this Chat chat, MessageElement element)
         {
             if (chat is null)
             {
@@ -120,9 +130,19 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static Task<IMessage> SendAsync(this IChattable chat, MessageElement element)
+        public static Task<QQ.Message> SendAsync(this Chat chat, MessageElement element)
         {
-            return Task.Run(() => Send(chat, element));
+            if (chat is null)
+            {
+                throw new ArgumentNullException(nameof(chat));
+            }
+
+            if (element is null)
+            {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            return chat.SendAsync(element.ToString());
         }
     }
 }

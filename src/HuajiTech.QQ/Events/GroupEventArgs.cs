@@ -7,7 +7,7 @@ namespace HuajiTech.QQ.Events
     /// </summary>
     public class GroupEventArgs : TimedEventArgs
     {
-        public GroupEventArgs(DateTime time, IGroup source, IMember @operator, IMember operatee)
+        public GroupEventArgs(DateTime time, Group source, Member @operator, Member operatee)
             : base(time)
         {
             Source = source ?? throw new ArgumentNullException(nameof(source));
@@ -18,16 +18,16 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取来源群。
         /// </summary>
-        public IGroup Source { get; }
+        public Group Source { get; }
 
         /// <summary>
         /// 获取操作人。
         /// </summary>
-        public IMember Operator { get; }
+        public Member Operator { get; }
 
         /// <summary>
         /// 获取被操作人。
         /// </summary>
-        public IMember Operatee { get; }
+        public Member Operatee { get; }
     }
 }
