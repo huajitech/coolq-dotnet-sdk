@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.IFileEventSource
+  commentId: T:HuajiTech.QQ.Events.IFileEventSource
+  id: IFileEventSource
+  parent: HuajiTech.QQ.Events
+  children:
+  - HuajiTech.QQ.Events.IFileEventSource.FileUploaded
+  langs:
+  - csharp
+  - vb
+  name: IFileEventSource
+  nameWithType: IFileEventSource
+  fullName: HuajiTech.QQ.Events.IFileEventSource
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IFileEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IFileEventSource
+    path: src/HuajiTech.QQ/Events/IFileEventSource.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n定义文件事件。\n"
+  example: []
+  syntax:
+    content: public interface IFileEventSource
+    content.vb: Public Interface IFileEventSource
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.Events.IFileEventSource.FileUploaded
+  commentId: E:HuajiTech.QQ.Events.IFileEventSource.FileUploaded
+  id: FileUploaded
+  parent: HuajiTech.QQ.Events.IFileEventSource
+  langs:
+  - csharp
+  - vb
+  name: FileUploaded
+  nameWithType: IFileEventSource.FileUploaded
+  fullName: HuajiTech.QQ.Events.IFileEventSource.FileUploaded
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IFileEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: FileUploaded
+    path: src/HuajiTech.QQ/Events/IFileEventSource.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在上传文件时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<FileUploadedEventArgs> FileUploaded
+    return:
+      type: System.EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
+    content.vb: Event FileUploaded As EventHandler(Of FileUploadedEventArgs)
+references:
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: System.EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<FileUploadedEventArgs>
+  nameWithType: EventHandler<FileUploadedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.FileUploadedEventArgs>
+  nameWithType.vb: EventHandler(Of FileUploadedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.FileUploadedEventArgs)
+  name.vb: EventHandler(Of FileUploadedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Events.FileUploadedEventArgs
+    name: FileUploadedEventArgs
+    nameWithType: FileUploadedEventArgs
+    fullName: HuajiTech.QQ.Events.FileUploadedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Events.FileUploadedEventArgs
+    name: FileUploadedEventArgs
+    nameWithType: FileUploadedEventArgs
+    fullName: HuajiTech.QQ.Events.FileUploadedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

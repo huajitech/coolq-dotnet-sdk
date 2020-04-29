@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  commentId: T:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  id: RockPaperScissorsKind
+  parent: HuajiTech.CoolQ.Messaging
+  children:
+  - HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.None
+  - HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper
+  - HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock
+  - HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors
+  langs:
+  - csharp
+  - vb
+  name: RockPaperScissorsKind
+  nameWithType: RockPaperScissorsKind
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  type: Enum
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: RockPaperScissorsKind
+    path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+    startLine: 5
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n指定猜拳的类别。\n"
+  example: []
+  syntax:
+    content: public enum RockPaperScissorsKind
+    content.vb: Public Enum RockPaperScissorsKind
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.None
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.None
+  id: None
+  parent: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: RockPaperScissorsKind.None
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.None
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: None
+    path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: None = 0
+    return:
+      type: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock
+  id: Rock
+  parent: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  langs:
+  - csharp
+  - vb
+  name: Rock
+  nameWithType: RockPaperScissorsKind.Rock
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Rock
+    path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n石头。\n"
+  example: []
+  syntax:
+    content: Rock = 1
+    return:
+      type: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors
+  id: Scissors
+  parent: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  langs:
+  - csharp
+  - vb
+  name: Scissors
+  nameWithType: RockPaperScissorsKind.Scissors
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Scissors
+    path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n剪刀。\n"
+  example: []
+  syntax:
+    content: Scissors = 2
+    return:
+      type: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper
+  commentId: F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper
+  id: Paper
+  parent: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  langs:
+  - csharp
+  - vb
+  name: Paper
+  nameWithType: RockPaperScissorsKind.Paper
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Paper
+    path: src/HuajiTech.CoolQ/Messaging/RockPaperScissorsKind.cs
+    startLine: 22
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n布。\n"
+  example: []
+  syntax:
+    content: Paper = 3
+    return:
+      type: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: HuajiTech.CoolQ.Messaging
+  commentId: N:HuajiTech.CoolQ.Messaging
+  name: HuajiTech.CoolQ.Messaging
+  nameWithType: HuajiTech.CoolQ.Messaging
+  fullName: HuajiTech.CoolQ.Messaging
+- uid: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  commentId: T:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind
+  parent: HuajiTech.CoolQ.Messaging
+  name: RockPaperScissorsKind
+  nameWithType: RockPaperScissorsKind
+  fullName: HuajiTech.CoolQ.Messaging.RockPaperScissorsKind

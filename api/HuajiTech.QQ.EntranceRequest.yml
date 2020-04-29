@@ -1,0 +1,657 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.EntranceRequest
+  commentId: T:HuajiTech.QQ.EntranceRequest
+  id: EntranceRequest
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.EntranceRequest.Reject
+  - HuajiTech.QQ.EntranceRequest.Reject(System.String)
+  - HuajiTech.QQ.EntranceRequest.RejectAsync
+  - HuajiTech.QQ.EntranceRequest.RejectAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: EntranceRequest
+  nameWithType: EntranceRequest
+  fullName: HuajiTech.QQ.EntranceRequest
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.QQ/EntranceRequest.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: EntranceRequest
+    path: src/HuajiTech.QQ/EntranceRequest.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n表示加入请求。\n"
+  example: []
+  syntax:
+    content: 'public abstract class EntranceRequest : Request'
+    content.vb: >-
+      Public MustInherit Class EntranceRequest
+
+          Inherits Request
+  inheritance:
+  - System.Object
+  - HuajiTech.QQ.Request
+  inheritedMembers:
+  - HuajiTech.QQ.Request.Message
+  - HuajiTech.QQ.Request.Accept
+  - HuajiTech.QQ.Request.AcceptAsync
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: HuajiTech.QQ.EntranceRequest.Reject(System.String)
+  commentId: M:HuajiTech.QQ.EntranceRequest.Reject(System.String)
+  id: Reject(System.String)
+  parent: HuajiTech.QQ.EntranceRequest
+  langs:
+  - csharp
+  - vb
+  name: Reject(String)
+  nameWithType: EntranceRequest.Reject(String)
+  fullName: HuajiTech.QQ.EntranceRequest.Reject(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/EntranceRequest.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Reject
+    path: src/HuajiTech.QQ/EntranceRequest.cs
+    startLine: 13
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n拒绝当前请求，并指定拒绝的原因。\n"
+  example: []
+  syntax:
+    content: public abstract void Reject(string reason)
+    parameters:
+    - id: reason
+      type: System.String
+      description: 原因。
+    content.vb: Public MustOverride Sub Reject(reason As String)
+  overload: HuajiTech.QQ.EntranceRequest.Reject*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.EntranceRequest.RejectAsync(System.String)
+  commentId: M:HuajiTech.QQ.EntranceRequest.RejectAsync(System.String)
+  id: RejectAsync(System.String)
+  parent: HuajiTech.QQ.EntranceRequest
+  langs:
+  - csharp
+  - vb
+  name: RejectAsync(String)
+  nameWithType: EntranceRequest.RejectAsync(String)
+  fullName: HuajiTech.QQ.EntranceRequest.RejectAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/EntranceRequest.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: RejectAsync
+    path: src/HuajiTech.QQ/EntranceRequest.cs
+    startLine: 19
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作拒绝当前请求，并指定拒绝的原因。\n"
+  example: []
+  syntax:
+    content: public virtual Task RejectAsync(string reason)
+    parameters:
+    - id: reason
+      type: System.String
+      description: 原因。
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function RejectAsync(reason As String) As Task
+  overload: HuajiTech.QQ.EntranceRequest.RejectAsync*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.EntranceRequest.Reject
+  commentId: M:HuajiTech.QQ.EntranceRequest.Reject
+  id: Reject
+  parent: HuajiTech.QQ.EntranceRequest
+  langs:
+  - csharp
+  - vb
+  name: Reject()
+  nameWithType: EntranceRequest.Reject()
+  fullName: HuajiTech.QQ.EntranceRequest.Reject()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/EntranceRequest.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Reject
+    path: src/HuajiTech.QQ/EntranceRequest.cs
+    startLine: 21
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public override void Reject()
+    content.vb: Public Overrides Sub Reject
+  overridden: HuajiTech.QQ.Request.Reject
+  overload: HuajiTech.QQ.EntranceRequest.Reject*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: HuajiTech.QQ.EntranceRequest.RejectAsync
+  commentId: M:HuajiTech.QQ.EntranceRequest.RejectAsync
+  id: RejectAsync
+  parent: HuajiTech.QQ.EntranceRequest
+  langs:
+  - csharp
+  - vb
+  name: RejectAsync()
+  nameWithType: EntranceRequest.RejectAsync()
+  fullName: HuajiTech.QQ.EntranceRequest.RejectAsync()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/EntranceRequest.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: RejectAsync
+    path: src/HuajiTech.QQ/EntranceRequest.cs
+    startLine: 23
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public override Task RejectAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overrides Function RejectAsync As Task
+  overridden: HuajiTech.QQ.Request.RejectAsync
+  overload: HuajiTech.QQ.EntranceRequest.RejectAsync*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: HuajiTech.QQ.Request
+  commentId: T:HuajiTech.QQ.Request
+  parent: HuajiTech.QQ
+  name: Request
+  nameWithType: Request
+  fullName: HuajiTech.QQ.Request
+- uid: HuajiTech.QQ.Request.Message
+  commentId: P:HuajiTech.QQ.Request.Message
+  parent: HuajiTech.QQ.Request
+  name: Message
+  nameWithType: Request.Message
+  fullName: HuajiTech.QQ.Request.Message
+- uid: HuajiTech.QQ.Request.Accept
+  commentId: M:HuajiTech.QQ.Request.Accept
+  parent: HuajiTech.QQ.Request
+  name: Accept()
+  nameWithType: Request.Accept()
+  fullName: HuajiTech.QQ.Request.Accept()
+  spec.csharp:
+  - uid: HuajiTech.QQ.Request.Accept
+    name: Accept
+    nameWithType: Request.Accept
+    fullName: HuajiTech.QQ.Request.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Request.Accept
+    name: Accept
+    nameWithType: Request.Accept
+    fullName: HuajiTech.QQ.Request.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Request.AcceptAsync
+  commentId: M:HuajiTech.QQ.Request.AcceptAsync
+  parent: HuajiTech.QQ.Request
+  name: AcceptAsync()
+  nameWithType: Request.AcceptAsync()
+  fullName: HuajiTech.QQ.Request.AcceptAsync()
+  spec.csharp:
+  - uid: HuajiTech.QQ.Request.AcceptAsync
+    name: AcceptAsync
+    nameWithType: Request.AcceptAsync
+    fullName: HuajiTech.QQ.Request.AcceptAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Request.AcceptAsync
+    name: AcceptAsync
+    nameWithType: Request.AcceptAsync
+    fullName: HuajiTech.QQ.Request.AcceptAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HuajiTech.QQ.EntranceRequest.Reject*
+  commentId: Overload:HuajiTech.QQ.EntranceRequest.Reject
+  name: Reject
+  nameWithType: EntranceRequest.Reject
+  fullName: HuajiTech.QQ.EntranceRequest.Reject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: HuajiTech.QQ.EntranceRequest.RejectAsync*
+  commentId: Overload:HuajiTech.QQ.EntranceRequest.RejectAsync
+  name: RejectAsync
+  nameWithType: EntranceRequest.RejectAsync
+  fullName: HuajiTech.QQ.EntranceRequest.RejectAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: HuajiTech.QQ.Request.Reject
+  commentId: M:HuajiTech.QQ.Request.Reject
+  parent: HuajiTech.QQ.Request
+  name: Reject()
+  nameWithType: Request.Reject()
+  fullName: HuajiTech.QQ.Request.Reject()
+  spec.csharp:
+  - uid: HuajiTech.QQ.Request.Reject
+    name: Reject
+    nameWithType: Request.Reject
+    fullName: HuajiTech.QQ.Request.Reject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Request.Reject
+    name: Reject
+    nameWithType: Request.Reject
+    fullName: HuajiTech.QQ.Request.Reject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Request.RejectAsync
+  commentId: M:HuajiTech.QQ.Request.RejectAsync
+  parent: HuajiTech.QQ.Request
+  name: RejectAsync()
+  nameWithType: Request.RejectAsync()
+  fullName: HuajiTech.QQ.Request.RejectAsync()
+  spec.csharp:
+  - uid: HuajiTech.QQ.Request.RejectAsync
+    name: RejectAsync
+    nameWithType: Request.RejectAsync
+    fullName: HuajiTech.QQ.Request.RejectAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Request.RejectAsync
+    name: RejectAsync
+    nameWithType: Request.RejectAsync
+    fullName: HuajiTech.QQ.Request.RejectAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

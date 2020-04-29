@@ -1,0 +1,1527 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.CoolQ.Messaging.CQCode
+  commentId: T:HuajiTech.CoolQ.Messaging.CQCode
+  id: CQCode
+  parent: HuajiTech.CoolQ.Messaging
+  children:
+  - HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
+  - HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
+  - HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Boolean)
+  - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int32)
+  - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int64)
+  - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Single)
+  - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
+  - HuajiTech.CoolQ.Messaging.CQCode.ToString
+  - HuajiTech.CoolQ.Messaging.CQCode.Type
+  - HuajiTech.CoolQ.Messaging.CQCode.Unescape(System.String)
+  langs:
+  - csharp
+  - vb
+  name: CQCode
+  nameWithType: CQCode
+  fullName: HuajiTech.CoolQ.Messaging.CQCode
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: CQCode
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 10
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n表示CQ码。\n"
+  example: []
+  syntax:
+    content: 'public class CQCode : MessageElement, IEquatable<MessageElement>'
+    content.vb: >-
+      Public Class CQCode
+
+          Inherits MessageElement
+
+          Implements IEquatable(Of MessageElement)
+  inheritance:
+  - System.Object
+  - HuajiTech.CoolQ.Messaging.MessageElement
+  derivedClasses:
+  - HuajiTech.CoolQ.Messaging.Anonymous
+  - HuajiTech.CoolQ.Messaging.At
+  - HuajiTech.CoolQ.Messaging.AtAll
+  - HuajiTech.CoolQ.Messaging.ChatShare
+  - HuajiTech.CoolQ.Messaging.ClockingIn
+  - HuajiTech.CoolQ.Messaging.CustomEmoticon
+  - HuajiTech.CoolQ.Messaging.CustomMusic
+  - HuajiTech.CoolQ.Messaging.Dice
+  - HuajiTech.CoolQ.Messaging.Emoji
+  - HuajiTech.CoolQ.Messaging.Emoticon
+  - HuajiTech.CoolQ.Messaging.Image
+  - HuajiTech.CoolQ.Messaging.Location
+  - HuajiTech.CoolQ.Messaging.Music
+  - HuajiTech.CoolQ.Messaging.Record
+  - HuajiTech.CoolQ.Messaging.RichText
+  - HuajiTech.CoolQ.Messaging.RockPaperScissors
+  - HuajiTech.CoolQ.Messaging.Shake
+  - HuajiTech.CoolQ.Messaging.Share
+  - HuajiTech.CoolQ.Messaging.SmallEmoticon
+  implements:
+  - System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
+  inheritedMembers:
+  - HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
+  - HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
+  - HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
+  - HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  - HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+  - HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: CQCode(String)
+  nameWithType: CQCode.CQCode(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.CQCode(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: .ctor
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n以指定的类型初始化一个 <xref href=\"HuajiTech.CoolQ.Messaging.CQCode\" data-throw-if-not-resolved=\"false\"></xref> 类的新实例。\n"
+  example: []
+  syntax:
+    content: public CQCode(string type)
+    parameters:
+    - id: type
+      type: System.String
+      description: CQ码的类型。
+    content.vb: Public Sub New(type As String)
+  overload: HuajiTech.CoolQ.Messaging.CQCode.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: <code data-dev-comment-type="paramref" class="paramref">type</code> 为 <code>null</code>、<xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref> 或仅由空白字符组成。
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})
+  id: '#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})'
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: CQCode(String, IDictionary<String, String>)
+  nameWithType: CQCode.CQCode(String, IDictionary<String, String>)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.CQCode(System.String, System.Collections.Generic.IDictionary<System.String, System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: .ctor
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 35
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n以指定的类型和参数初始化一个 <xref href=\"HuajiTech.CoolQ.Messaging.CQCode\" data-throw-if-not-resolved=\"false\"></xref> 类的新实例。\n"
+  example: []
+  syntax:
+    content: public CQCode(string type, IDictionary<string, string> parameters)
+    parameters:
+    - id: type
+      type: System.String
+      description: CQ码的类型。
+    - id: parameters
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
+      description: 一个字典，包含 <xref href="HuajiTech.CoolQ.Messaging.CQCode" data-throw-if-not-resolved="false"></xref> 的所有参数。
+    content.vb: Public Sub New(type As String, parameters As IDictionary(Of String, String))
+  overload: HuajiTech.CoolQ.Messaging.CQCode.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: <code data-dev-comment-type="paramref" class="paramref">type</code> 为 <code>null</code>、<xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref> 或仅由空白字符组成。
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">parameters</code> 为 <code>null</code>。
+  nameWithType.vb: CQCode.CQCode(String, IDictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: HuajiTech.CoolQ.Messaging.CQCode.CQCode(System.String, System.Collections.Generic.IDictionary(Of System.String, System.String))
+  name.vb: CQCode(String, IDictionary(Of String, String))
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
+  commentId: P:HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
+  id: Item(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: CQCode.Item[String]
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Item[System.String]
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: this[]
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 54
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n获取或设置指定键处的参数的值。\n"
+  example: []
+  syntax:
+    content: public string this[string key] { get; set; }
+    parameters:
+    - id: key
+      type: System.String
+      description: 要获取或设置的参数的键。
+    return:
+      type: System.String
+      description: "\n指定 <code data-dev-comment-type=\"paramref\" class=\"paramref\">key</code> 处的参数的值。\n如果指定键不存在，则为 <code>null</code>。\n"
+    content.vb: Public Property Item(key As String) As String
+  overload: HuajiTech.CoolQ.Messaging.CQCode.Item*
+  nameWithType.vb: CQCode.Item(String)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
+  name.vb: Item(String)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  commentId: P:HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  id: Parameters
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: CQCode.Parameters
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Parameters
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 72
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n获取当前 <xref href=\"HuajiTech.CoolQ.Messaging.CQCode\" data-throw-if-not-resolved=\"false\"></xref> 对象的参数。\n"
+  example: []
+  syntax:
+    content: public IDictionary<string, string> Parameters { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
+    content.vb: Public ReadOnly Property Parameters As IDictionary(Of String, String)
+  overload: HuajiTech.CoolQ.Messaging.CQCode.Parameters*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Type
+  commentId: P:HuajiTech.CoolQ.Messaging.CQCode.Type
+  id: Type
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: CQCode.Type
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Type
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Type
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 77
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n获取当前 <xref href=\"HuajiTech.CoolQ.Messaging.CQCode\" data-throw-if-not-resolved=\"false\"></xref> 对象的类型。\n"
+  example: []
+  syntax:
+    content: public string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Type As String
+  overload: HuajiTech.CoolQ.Messaging.CQCode.Type*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)
+  id: Escape(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: Escape(String)
+  nameWithType: CQCode.Escape(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Escape
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 84
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n将指定的字符串转换为可以让酷Q按原义解释字符的语法。\n"
+  example: []
+  syntax:
+    content: public static string Escape(string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: 要转换的字符串。
+    return:
+      type: System.String
+      description: 指定字符串的已转换值。
+    content.vb: Public Shared Function Escape(str As String) As String
+  overload: HuajiTech.CoolQ.Messaging.CQCode.Escape*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Unescape(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.Unescape(System.String)
+  id: Unescape(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: Unescape(String)
+  nameWithType: CQCode.Unescape(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Unescape(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Unescape
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 94
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n将字符串中的转义字符转换为具有特殊意义的酷Q字符。\n"
+  example: []
+  syntax:
+    content: public static string Unescape(string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: 要转换的字符串。
+    return:
+      type: System.String
+      description: 指定字符串的已转换值。
+    content.vb: Public Shared Function Unescape(str As String) As String
+  overload: HuajiTech.CoolQ.Messaging.CQCode.Unescape*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.CoolQ.Messaging.CQCode.ToString
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.ToString
+  id: ToString
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: CQCode.ToString()
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: ToString
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 103
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n将当前 <xref href=\"HuajiTech.CoolQ.Messaging.CQCode\" data-throw-if-not-resolved=\"false\"></xref> 对象的值转换为它的等效字符串表示形式。\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: 当前 <xref href="HuajiTech.CoolQ.Messaging.CQCode" data-throw-if-not-resolved="false"></xref> 对象的值的字符串表示形式。
+    content.vb: Public Overrides Function ToString As String
+  overridden: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  overload: HuajiTech.CoolQ.Messaging.CQCode.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
+  id: GetParameterAsBoolean(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: GetParameterAsBoolean(String)
+  nameWithType: CQCode.GetParameterAsBoolean(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetParameterAsBoolean
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 110
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected bool GetParameterAsBoolean(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Protected Function GetParameterAsBoolean(key As String) As Boolean
+  overload: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32(System.String)
+  id: GetParameterAsInt32(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: GetParameterAsInt32(String)
+  nameWithType: CQCode.GetParameterAsInt32(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetParameterAsInt32
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 115
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected int GetParameterAsInt32(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Protected Function GetParameterAsInt32(key As String) As Integer
+  overload: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64(System.String)
+  id: GetParameterAsInt64(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: GetParameterAsInt64(String)
+  nameWithType: CQCode.GetParameterAsInt64(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetParameterAsInt64
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 125
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected long GetParameterAsInt64(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Int64
+    content.vb: Protected Function GetParameterAsInt64(key As String) As Long
+  overload: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle(System.String)
+  id: GetParameterAsSingle(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: GetParameterAsSingle(String)
+  nameWithType: CQCode.GetParameterAsSingle(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetParameterAsSingle
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 135
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected float GetParameterAsSingle(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Single
+    content.vb: Protected Function GetParameterAsSingle(key As String) As Single
+  overload: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri(System.String)
+  id: GetParameterAsUri(System.String)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: GetParameterAsUri(String)
+  nameWithType: CQCode.GetParameterAsUri(String)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetParameterAsUri
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 145
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected Uri GetParameterAsUri(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Uri
+    content.vb: Protected Function GetParameterAsUri(key As String) As Uri
+  overload: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Boolean)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Boolean)
+  id: SetParameter(System.String,System.Boolean)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: SetParameter(String, Boolean)
+  nameWithType: CQCode.SetParameter(String, Boolean)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetParameter
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 157
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected void SetParameter(string key, bool value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Boolean
+    content.vb: Protected Sub SetParameter(key As String, value As Boolean)
+  overload: HuajiTech.CoolQ.Messaging.CQCode.SetParameter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int32)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int32)
+  id: SetParameter(System.String,System.Int32)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: SetParameter(String, Int32)
+  nameWithType: CQCode.SetParameter(String, Int32)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetParameter
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 162
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected void SetParameter(string key, int value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Int32
+    content.vb: Protected Sub SetParameter(key As String, value As Integer)
+  overload: HuajiTech.CoolQ.Messaging.CQCode.SetParameter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int64)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int64)
+  id: SetParameter(System.String,System.Int64)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: SetParameter(String, Int64)
+  nameWithType: CQCode.SetParameter(String, Int64)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetParameter
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 167
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected void SetParameter(string key, long value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Int64
+    content.vb: Protected Sub SetParameter(key As String, value As Long)
+  overload: HuajiTech.CoolQ.Messaging.CQCode.SetParameter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Single)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Single)
+  id: SetParameter(System.String,System.Single)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: SetParameter(String, Single)
+  nameWithType: CQCode.SetParameter(String, Single)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetParameter
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 172
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected void SetParameter(string key, float value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Single
+    content.vb: Protected Sub SetParameter(key As String, value As Single)
+  overload: HuajiTech.CoolQ.Messaging.CQCode.SetParameter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
+  id: SetParameter(System.String,System.Uri)
+  parent: HuajiTech.CoolQ.Messaging.CQCode
+  langs:
+  - csharp
+  - vb
+  name: SetParameter(String, Uri)
+  nameWithType: CQCode.SetParameter(String, Uri)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetParameter
+    path: src/HuajiTech.CoolQ/Messaging/CQCode.cs
+    startLine: 177
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  syntax:
+    content: protected void SetParameter(string key, Uri value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Uri
+    content.vb: Protected Sub SetParameter(key As String, value As Uri)
+  overload: HuajiTech.CoolQ.Messaging.CQCode.SetParameter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: HuajiTech.CoolQ.Messaging
+  commentId: N:HuajiTech.CoolQ.Messaging
+  name: HuajiTech.CoolQ.Messaging
+  nameWithType: HuajiTech.CoolQ.Messaging
+  fullName: HuajiTech.CoolQ.Messaging
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: HuajiTech.CoolQ.Messaging.MessageElement
+  commentId: T:HuajiTech.CoolQ.Messaging.MessageElement
+  parent: HuajiTech.CoolQ.Messaging
+  name: MessageElement
+  nameWithType: MessageElement
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement
+- uid: System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
+  commentId: T:System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<MessageElement>
+  nameWithType: IEquatable<MessageElement>
+  fullName: System.IEquatable<HuajiTech.CoolQ.Messaging.MessageElement>
+  nameWithType.vb: IEquatable(Of MessageElement)
+  fullName.vb: System.IEquatable(Of HuajiTech.CoolQ.Messaging.MessageElement)
+  name.vb: IEquatable(Of MessageElement)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
+  parent: HuajiTech.CoolQ.Messaging.MessageElement
+  isExternal: true
+  name: FromString(String)
+  nameWithType: MessageElement.FromString(String)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
+    name: FromString
+    nameWithType: MessageElement.FromString
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.FromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
+    name: FromString
+    nameWithType: MessageElement.FromString
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.FromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
+  parent: HuajiTech.CoolQ.Messaging.MessageElement
+  name: Add(MessageElement)
+  nameWithType: MessageElement.Add(MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Add
+    nameWithType: MessageElement.Add
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Add
+    nameWithType: MessageElement.Add
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
+  parent: HuajiTech.CoolQ.Messaging.MessageElement
+  name: ToComplexMessage()
+  nameWithType: MessageElement.ToComplexMessage()
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage()
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
+    name: ToComplexMessage
+    nameWithType: MessageElement.ToComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
+    name: ToComplexMessage
+    nameWithType: MessageElement.ToComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  parent: HuajiTech.CoolQ.Messaging.MessageElement
+  name: GetHashCode()
+  nameWithType: MessageElement.GetHashCode()
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode()
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+    name: GetHashCode
+    nameWithType: MessageElement.GetHashCode
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+    name: GetHashCode
+    nameWithType: MessageElement.GetHashCode
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+  parent: HuajiTech.CoolQ.Messaging.MessageElement
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: MessageElement.Equals(Object)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+    name: Equals
+    nameWithType: MessageElement.Equals
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
+    name: Equals
+    nameWithType: MessageElement.Equals
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+  parent: HuajiTech.CoolQ.Messaging.MessageElement
+  name: Equals(MessageElement)
+  nameWithType: MessageElement.Equals(MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Equals
+    nameWithType: MessageElement.Equals
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Equals
+    nameWithType: MessageElement.Equals
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.CQCode
+  commentId: T:HuajiTech.CoolQ.Messaging.CQCode
+  parent: HuajiTech.CoolQ.Messaging
+  name: CQCode
+  nameWithType: CQCode
+  fullName: HuajiTech.CoolQ.Messaging.CQCode
+- uid: System.String.Empty
+  commentId: F:System.String.Empty
+  isExternal: true
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: HuajiTech.CoolQ.Messaging.CQCode.#ctor*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.#ctor
+  name: CQCode
+  nameWithType: CQCode.CQCode
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.CQCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  name: IDictionary<String, String>
+  nameWithType: IDictionary<String, String>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
+  nameWithType.vb: IDictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
+  name.vb: IDictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Item*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Item
+  name: Item
+  nameWithType: CQCode.Item
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Item
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Parameters*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Parameters
+  name: Parameters
+  nameWithType: CQCode.Parameters
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Parameters
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Type*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Type
+  name: Type
+  nameWithType: CQCode.Type
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Type
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Escape*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Escape
+  name: Escape
+  nameWithType: CQCode.Escape
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Escape
+- uid: HuajiTech.CoolQ.Messaging.CQCode.Unescape*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.Unescape
+  name: Unescape
+  nameWithType: CQCode.Unescape
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.Unescape
+- uid: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  parent: HuajiTech.CoolQ.Messaging.MessageElement
+  name: ToString()
+  nameWithType: MessageElement.ToString()
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToString()
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+    name: ToString
+    nameWithType: MessageElement.ToString
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+    name: ToString
+    nameWithType: MessageElement.ToString
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.CQCode.ToString*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.ToString
+  name: ToString
+  nameWithType: CQCode.ToString
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.ToString
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean
+  name: GetParameterAsBoolean
+  nameWithType: CQCode.GetParameterAsBoolean
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsBoolean
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32
+  name: GetParameterAsInt32
+  nameWithType: CQCode.GetParameterAsInt32
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt32
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64
+  name: GetParameterAsInt64
+  nameWithType: CQCode.GetParameterAsInt64
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsInt64
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle
+  name: GetParameterAsSingle
+  nameWithType: CQCode.GetParameterAsSingle
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsSingle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri
+  name: GetParameterAsUri
+  nameWithType: CQCode.GetParameterAsUri
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.GetParameterAsUri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.CQCode.SetParameter
+  name: SetParameter
+  nameWithType: CQCode.SetParameter
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter

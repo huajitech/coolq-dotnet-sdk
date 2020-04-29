@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.IRefreshable
+  commentId: T:HuajiTech.QQ.IRefreshable
+  id: IRefreshable
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.IRefreshable.Refresh
+  - HuajiTech.QQ.IRefreshable.RefreshAsync
+  langs:
+  - csharp
+  - vb
+  name: IRefreshable
+  nameWithType: IRefreshable
+  fullName: HuajiTech.QQ.IRefreshable
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/IRefreshable.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IRefreshable
+    path: src/HuajiTech.QQ/IRefreshable.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n定义可刷新的对象。\n"
+  example: []
+  syntax:
+    content: public interface IRefreshable
+    content.vb: Public Interface IRefreshable
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.IRefreshable.Refresh
+  commentId: M:HuajiTech.QQ.IRefreshable.Refresh
+  id: Refresh
+  parent: HuajiTech.QQ.IRefreshable
+  langs:
+  - csharp
+  - vb
+  name: Refresh()
+  nameWithType: IRefreshable.Refresh()
+  fullName: HuajiTech.QQ.IRefreshable.Refresh()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/IRefreshable.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Refresh
+    path: src/HuajiTech.QQ/IRefreshable.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n刷新当前 <xref href=\"HuajiTech.QQ.IRefreshable\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: void Refresh()
+    content.vb: Sub Refresh
+  overload: HuajiTech.QQ.IRefreshable.Refresh*
+- uid: HuajiTech.QQ.IRefreshable.RefreshAsync
+  commentId: M:HuajiTech.QQ.IRefreshable.RefreshAsync
+  id: RefreshAsync
+  parent: HuajiTech.QQ.IRefreshable
+  langs:
+  - csharp
+  - vb
+  name: RefreshAsync()
+  nameWithType: IRefreshable.RefreshAsync()
+  fullName: HuajiTech.QQ.IRefreshable.RefreshAsync()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/IRefreshable.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: RefreshAsync
+    path: src/HuajiTech.QQ/IRefreshable.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作刷新当前 <xref href=\"HuajiTech.QQ.IRefreshable\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: Task RefreshAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function RefreshAsync As Task
+  overload: HuajiTech.QQ.IRefreshable.RefreshAsync*
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: HuajiTech.QQ.IRefreshable
+  commentId: T:HuajiTech.QQ.IRefreshable
+  parent: HuajiTech.QQ
+  name: IRefreshable
+  nameWithType: IRefreshable
+  fullName: HuajiTech.QQ.IRefreshable
+- uid: HuajiTech.QQ.IRefreshable.Refresh*
+  commentId: Overload:HuajiTech.QQ.IRefreshable.Refresh
+  name: Refresh
+  nameWithType: IRefreshable.Refresh
+  fullName: HuajiTech.QQ.IRefreshable.Refresh
+- uid: HuajiTech.QQ.IRefreshable.RefreshAsync*
+  commentId: Overload:HuajiTech.QQ.IRefreshable.RefreshAsync
+  name: RefreshAsync
+  nameWithType: IRefreshable.RefreshAsync
+  fullName: HuajiTech.QQ.IRefreshable.RefreshAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

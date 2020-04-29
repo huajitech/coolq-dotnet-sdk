@@ -1,0 +1,1013 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.CoolQ.Messaging.Extensions
+  commentId: T:HuajiTech.CoolQ.Messaging.Extensions
+  id: Extensions
+  parent: HuajiTech.CoolQ.Messaging
+  children:
+  - HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  - HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message,System.Boolean)
+  - HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  - HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  - HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  - HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  - HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})
+  langs:
+  - csharp
+  - vb
+  name: Extensions
+  nameWithType: Extensions
+  fullName: HuajiTech.CoolQ.Messaging.Extensions
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Extensions
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 10
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n定义扩展方法。\n"
+  example: []
+  syntax:
+    content: public static class Extensions
+    content.vb: Public Module Extensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  id: At(HuajiTech.QQ.User)
+  isExtensionMethod: true
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  langs:
+  - csharp
+  - vb
+  name: At(User)
+  nameWithType: Extensions.At(User)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: At
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n创建目标为指定用户的 <xref href=\"HuajiTech.CoolQ.Messaging.At\" data-throw-if-not-resolved=\"false\"></xref> 类的新实例。\n"
+  example: []
+  syntax:
+    content: public static At At(this User target)
+    parameters:
+    - id: target
+      type: HuajiTech.QQ.User
+      description: At (@) 的目标。
+    return:
+      type: HuajiTech.CoolQ.Messaging.At
+      description: 目标为指定用户的 <xref href="HuajiTech.CoolQ.Messaging.At" data-throw-if-not-resolved="false"></xref> 类的新实例。
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function At(target As User) As At
+  overload: HuajiTech.CoolQ.Messaging.Extensions.At*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message,System.Boolean)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message,System.Boolean)
+  id: Parse(HuajiTech.QQ.Message,System.Boolean)
+  isExtensionMethod: true
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  langs:
+  - csharp
+  - vb
+  name: Parse(Message, Boolean)
+  nameWithType: Extensions.Parse(Message, Boolean)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Parse
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 31
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n将 <xref href=\"HuajiTech.CoolQ.Message\" data-throw-if-not-resolved=\"false\"></xref> 对象解析为 <xref href=\"HuajiTech.CoolQ.Messaging.ComplexMessage\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public static ComplexMessage Parse(this Message message, bool useEmojiCQCode = false)
+    parameters:
+    - id: message
+      type: HuajiTech.QQ.Message
+      description: 一个 <xref href="HuajiTech.CoolQ.Message" data-throw-if-not-resolved="false"></xref>对象，该 <xref href="HuajiTech.CoolQ.Message" data-throw-if-not-resolved="false"></xref> 对象的 <xref href="HuajiTech.QQ.Message.Content" data-throw-if-not-resolved="false"></xref> 属性的值为要解析的 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 对象的字符串表示形式。
+    - id: useEmojiCQCode
+      type: System.Boolean
+      description: 如果要在返回的 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 对象中包含 <xref href="HuajiTech.CoolQ.Messaging.Emoji" data-throw-if-not-resolved="false"></xref> 对象，则为 <code>true</code>；否则为 <code>false</code>。
+    return:
+      type: HuajiTech.CoolQ.Messaging.ComplexMessage
+      description: 与 <xref href="HuajiTech.QQ.Message.Content" data-throw-if-not-resolved="false"></xref> 等效的 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 对象。
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Parse(message As Message, useEmojiCQCode As Boolean = False) As ComplexMessage
+  overload: HuajiTech.CoolQ.Messaging.Extensions.Parse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})
+  id: ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})
+  isExtensionMethod: true
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToComplexMessage(IEnumerable<MessageElement>)
+  nameWithType: Extensions.ToComplexMessage(IEnumerable<MessageElement>)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable<HuajiTech.CoolQ.Messaging.MessageElement>)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: ToComplexMessage
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 42
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n从 <xref href=\"System.Collections.Generic.IEnumerable%601\" data-throw-if-not-resolved=\"false\"></xref> 创建 <xref href=\"HuajiTech.CoolQ.Messaging.ComplexMessage\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public static ComplexMessage ToComplexMessage(this IEnumerable<MessageElement> elements)
+    parameters:
+    - id: elements
+      type: System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement}
+      description: 要用于创建 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 的消息元素集合。
+    return:
+      type: HuajiTech.CoolQ.Messaging.ComplexMessage
+      description: 一个 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref>，其中包含输入序列中的元素。
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToComplexMessage(elements As IEnumerable(Of MessageElement)) As ComplexMessage
+  overload: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">elements</code> 为 <code>null</code>。
+  nameWithType.vb: Extensions.ToComplexMessage(IEnumerable(Of MessageElement))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable(Of HuajiTech.CoolQ.Messaging.MessageElement))
+  name.vb: ToComplexMessage(IEnumerable(Of MessageElement))
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  id: Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  isExtensionMethod: true
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  langs:
+  - csharp
+  - vb
+  name: Send(Chat, ComplexMessage)
+  nameWithType: Extensions.Send(Chat, ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Send
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 57
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.ComplexMessage\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public static Message Send(this Chat chat, ComplexMessage message)
+    parameters:
+    - id: chat
+      type: HuajiTech.QQ.Chat
+      description: 目标聊天。
+    - id: message
+      type: HuajiTech.CoolQ.Messaging.ComplexMessage
+      description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 对象。
+    return:
+      type: HuajiTech.QQ.Message
+      description: 一个 <xref href="HuajiTech.CoolQ.Message" data-throw-if-not-resolved="false"></xref> 对象，表示已发送的消息。
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Send(chat As Chat, message As ComplexMessage) As Message
+  overload: HuajiTech.CoolQ.Messaging.Extensions.Send*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: <code data-dev-comment-type="paramref" class="paramref">message</code> 不包含任何元素，或其等效字符串表示形式为 <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>。
+  - type: HuajiTech.CoolQ.CoolQException
+    commentId: T:HuajiTech.CoolQ.CoolQException
+    description: 酷Q返回了指示操作失败的值。
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  id: SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  isExtensionMethod: true
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(Chat, ComplexMessage)
+  nameWithType: Extensions.SendAsync(Chat, ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SendAsync
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 82
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n以异步操作向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.ComplexMessage\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public static Task<Message> SendAsync(this Chat chat, ComplexMessage message)
+    parameters:
+    - id: chat
+      type: HuajiTech.QQ.Chat
+      description: 目标聊天。
+    - id: message
+      type: HuajiTech.CoolQ.Messaging.ComplexMessage
+      description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 对象。
+    return:
+      type: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+      description: 一个 <xref href="HuajiTech.CoolQ.Message" data-throw-if-not-resolved="false"></xref> 对象，表示已发送的消息。
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SendAsync(chat As Chat, message As ComplexMessage) As Task(Of Message)
+  overload: HuajiTech.CoolQ.Messaging.Extensions.SendAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: <code data-dev-comment-type="paramref" class="paramref">message</code> 不包含任何元素，或其等效字符串表示形式为 <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>。
+  - type: HuajiTech.CoolQ.CoolQException
+    commentId: T:HuajiTech.CoolQ.CoolQException
+    description: 酷Q返回了指示发送失败的值。
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  id: Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  isExtensionMethod: true
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  langs:
+  - csharp
+  - vb
+  name: Send(Chat, MessageElement)
+  nameWithType: Extensions.Send(Chat, MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Send
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 107
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.MessageElement\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public static Message Send(this Chat chat, MessageElement element)
+    parameters:
+    - id: chat
+      type: HuajiTech.QQ.Chat
+      description: 目标聊天。
+    - id: element
+      type: HuajiTech.CoolQ.Messaging.MessageElement
+      description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.MessageElement" data-throw-if-not-resolved="false"></xref> 对象。
+    return:
+      type: HuajiTech.QQ.Message
+      description: 一个 <xref href="HuajiTech.CoolQ.Message" data-throw-if-not-resolved="false"></xref> 对象，表示已发送的消息。
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Send(chat As Chat, element As MessageElement) As Message
+  overload: HuajiTech.CoolQ.Messaging.Extensions.Send*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: <code data-dev-comment-type="paramref" class="paramref">element</code> 的等效字符串表示形式为 <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>。
+  - type: HuajiTech.CoolQ.CoolQException
+    commentId: T:HuajiTech.CoolQ.CoolQException
+    description: 酷Q返回了指示发送失败的值。
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  id: SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  isExtensionMethod: true
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(Chat, MessageElement)
+  nameWithType: Extensions.SendAsync(Chat, MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SendAsync
+    path: src/HuajiTech.CoolQ/Messaging/Extensions.cs
+    startLine: 132
+  assemblies:
+  - HuajiTech.CoolQ
+  namespace: HuajiTech.CoolQ.Messaging
+  summary: "\n以异步操作向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.MessageElement\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public static Task<Message> SendAsync(this Chat chat, MessageElement element)
+    parameters:
+    - id: chat
+      type: HuajiTech.QQ.Chat
+      description: 目标聊天。
+    - id: element
+      type: HuajiTech.CoolQ.Messaging.MessageElement
+      description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.MessageElement" data-throw-if-not-resolved="false"></xref> 对象。
+    return:
+      type: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+      description: 一个 <xref href="HuajiTech.CoolQ.Message" data-throw-if-not-resolved="false"></xref> 对象，表示已发送的消息。
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SendAsync(chat As Chat, element As MessageElement) As Task(Of Message)
+  overload: HuajiTech.CoolQ.Messaging.Extensions.SendAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: <code data-dev-comment-type="paramref" class="paramref">element</code> 的等效字符串表示形式为 <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>。
+  - type: HuajiTech.CoolQ.CoolQException
+    commentId: T:HuajiTech.CoolQ.CoolQException
+    description: 酷Q返回了指示发送失败的值。
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: HuajiTech.CoolQ.Messaging
+  commentId: N:HuajiTech.CoolQ.Messaging
+  name: HuajiTech.CoolQ.Messaging
+  nameWithType: HuajiTech.CoolQ.Messaging
+  fullName: HuajiTech.CoolQ.Messaging
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HuajiTech.CoolQ.Messaging.At
+  commentId: T:HuajiTech.CoolQ.Messaging.At
+  parent: HuajiTech.CoolQ.Messaging
+  name: At
+  nameWithType: At
+  fullName: HuajiTech.CoolQ.Messaging.At
+- uid: HuajiTech.CoolQ.Messaging.Extensions.At*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Extensions.At
+  name: At
+  nameWithType: Extensions.At
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.At
+- uid: HuajiTech.QQ.User
+  commentId: T:HuajiTech.QQ.User
+  parent: HuajiTech.QQ
+  name: User
+  nameWithType: User
+  fullName: HuajiTech.QQ.User
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: HuajiTech.CoolQ.Message
+  commentId: T:HuajiTech.CoolQ.Message
+  isExternal: true
+- uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+  commentId: T:HuajiTech.CoolQ.Messaging.ComplexMessage
+  parent: HuajiTech.CoolQ.Messaging
+  name: ComplexMessage
+  nameWithType: ComplexMessage
+  fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+- uid: HuajiTech.QQ.Message.Content
+  commentId: P:HuajiTech.QQ.Message.Content
+  isExternal: true
+- uid: HuajiTech.CoolQ.Messaging.Emoji
+  commentId: T:HuajiTech.CoolQ.Messaging.Emoji
+  name: Emoji
+  nameWithType: Emoji
+  fullName: HuajiTech.CoolQ.Messaging.Emoji
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Parse*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Extensions.Parse
+  name: Parse
+  nameWithType: Extensions.Parse
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse
+- uid: HuajiTech.QQ.Message
+  commentId: T:HuajiTech.QQ.Message
+  parent: HuajiTech.QQ
+  name: Message
+  nameWithType: Message
+  fullName: HuajiTech.QQ.Message
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage
+  name: ToComplexMessage
+  nameWithType: Extensions.ToComplexMessage
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage
+- uid: System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement}
+  commentId: T:System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<MessageElement>
+  nameWithType: IEnumerable<MessageElement>
+  fullName: System.Collections.Generic.IEnumerable<HuajiTech.CoolQ.Messaging.MessageElement>
+  nameWithType.vb: IEnumerable(Of MessageElement)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of HuajiTech.CoolQ.Messaging.MessageElement)
+  name.vb: IEnumerable(Of MessageElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.String.Empty
+  commentId: F:System.String.Empty
+  isExternal: true
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: HuajiTech.CoolQ.CoolQException
+  commentId: T:HuajiTech.CoolQ.CoolQException
+  name: CoolQException
+  nameWithType: CoolQException
+  fullName: HuajiTech.CoolQ.CoolQException
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Extensions.Send
+  name: Send
+  nameWithType: Extensions.Send
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+- uid: HuajiTech.QQ.Chat
+  commentId: T:HuajiTech.QQ.Chat
+  parent: HuajiTech.QQ
+  name: Chat
+  nameWithType: Chat
+  fullName: HuajiTech.QQ.Chat
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync*
+  commentId: Overload:HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  name: SendAsync
+  nameWithType: Extensions.SendAsync
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+- uid: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  commentId: T:System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Message>
+  nameWithType: Task<Message>
+  fullName: System.Threading.Tasks.Task<HuajiTech.QQ.Message>
+  nameWithType.vb: Task(Of Message)
+  fullName.vb: System.Threading.Tasks.Task(Of HuajiTech.QQ.Message)
+  name.vb: Task(Of Message)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Message
+    name: Message
+    nameWithType: Message
+    fullName: HuajiTech.QQ.Message
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Message
+    name: Message
+    nameWithType: Message
+    fullName: HuajiTech.QQ.Message
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: HuajiTech.CoolQ.Messaging.MessageElement
+  commentId: T:HuajiTech.CoolQ.Messaging.MessageElement
+  parent: HuajiTech.CoolQ.Messaging
+  name: MessageElement
+  nameWithType: MessageElement
+  fullName: HuajiTech.CoolQ.Messaging.MessageElement

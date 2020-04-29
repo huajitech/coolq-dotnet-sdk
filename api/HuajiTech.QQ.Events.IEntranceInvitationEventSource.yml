@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  commentId: T:HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  id: IEntranceInvitationEventSource
+  parent: HuajiTech.QQ.Events
+  children:
+  - HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  langs:
+  - csharp
+  - vb
+  name: IEntranceInvitationEventSource
+  nameWithType: IEntranceInvitationEventSource
+  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IEntranceInvitationEventSource
+    path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n定义入群邀请事件。\n"
+  example: []
+  syntax:
+    content: public interface IEntranceInvitationEventSource
+    content.vb: Public Interface IEntranceInvitationEventSource
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  commentId: E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  id: EntranceInvited
+  parent: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  langs:
+  - csharp
+  - vb
+  name: EntranceInvited
+  nameWithType: IEntranceInvitationEventSource.EntranceInvited
+  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: EntranceInvited
+    path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在被邀请加群时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<EntranceInvitedEventArgs> EntranceInvited
+    return:
+      type: System.EventHandler{HuajiTech.QQ.Events.EntranceInvitedEventArgs}
+    content.vb: Event EntranceInvited As EventHandler(Of EntranceInvitedEventArgs)
+references:
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: System.EventHandler{HuajiTech.QQ.Events.EntranceInvitedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.EntranceInvitedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<EntranceInvitedEventArgs>
+  nameWithType: EventHandler<EntranceInvitedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.EntranceInvitedEventArgs>
+  nameWithType.vb: EventHandler(Of EntranceInvitedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.EntranceInvitedEventArgs)
+  name.vb: EventHandler(Of EntranceInvitedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Events.EntranceInvitedEventArgs
+    name: EntranceInvitedEventArgs
+    nameWithType: EntranceInvitedEventArgs
+    fullName: HuajiTech.QQ.Events.EntranceInvitedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Events.EntranceInvitedEventArgs
+    name: EntranceInvitedEventArgs
+    nameWithType: EntranceInvitedEventArgs
+    fullName: HuajiTech.QQ.Events.EntranceInvitedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

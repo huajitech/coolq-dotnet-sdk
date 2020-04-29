@@ -1,0 +1,610 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions
+  commentId: T:HuajiTech.QQ.CurrentPluginContextExtensions
+  id: CurrentPluginContextExtensions
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  - HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  - HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  - HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  - HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: CurrentPluginContextExtensions
+  nameWithType: CurrentPluginContextExtensions
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: CurrentPluginContextExtensions
+    path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n定义用于操作 <xref href=\"HuajiTech.QQ.PluginContext.Current\" data-throw-if-not-resolved=\"false\"></xref> 的扩展方法。\n"
+  example: []
+  syntax:
+    content: public static class CurrentPluginContextExtensions
+    content.vb: Public Module CurrentPluginContextExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  id: AsUser(HuajiTech.QQ.User)
+  isExtensionMethod: true
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsUser(User)
+  nameWithType: CurrentPluginContextExtensions.AsUser(User)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: AsUser
+    path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+    startLine: 9
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public static User AsUser(this User user)
+    parameters:
+    - id: user
+      type: HuajiTech.QQ.User
+    return:
+      type: HuajiTech.QQ.User
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AsUser(user As User) As User
+  overload: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  id: AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  isExtensionMethod: true
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsMemberOf(User, Group)
+  nameWithType: CurrentPluginContextExtensions.AsMemberOf(User, Group)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User, HuajiTech.QQ.Group)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: AsMemberOf
+    path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+    startLine: 11
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public static Member AsMemberOf(this User user, Group group)
+    parameters:
+    - id: user
+      type: HuajiTech.QQ.User
+    - id: group
+      type: HuajiTech.QQ.Group
+    return:
+      type: HuajiTech.QQ.Member
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AsMemberOf(user As User, group As Group) As Member
+  overload: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  id: AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  isExtensionMethod: true
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsMemberOf(User, Int64)
+  nameWithType: CurrentPluginContextExtensions.AsMemberOf(User, Int64)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: AsMemberOf
+    path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+    startLine: 13
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public static Member AsMemberOf(this User user, long groupNumber)
+    parameters:
+    - id: user
+      type: HuajiTech.QQ.User
+    - id: groupNumber
+      type: System.Int64
+    return:
+      type: HuajiTech.QQ.Member
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AsMemberOf(user As User, groupNumber As Long) As Member
+  overload: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  id: LogAsWarning(System.Exception)
+  isExtensionMethod: true
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: LogAsWarning(Exception)
+  nameWithType: CurrentPluginContextExtensions.LogAsWarning(Exception)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogAsWarning
+    path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+    startLine: 15
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public static void LogAsWarning(this Exception ex)
+    parameters:
+    - id: ex
+      type: System.Exception
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub LogAsWarning(ex As Exception)
+  overload: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  id: LogAsError(System.Exception)
+  isExtensionMethod: true
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: LogAsError(Exception)
+  nameWithType: CurrentPluginContextExtensions.LogAsError(Exception)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogAsError
+    path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public static void LogAsError(this Exception ex)
+    parameters:
+    - id: ex
+      type: System.Exception
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub LogAsError(ex As Exception)
+  overload: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: HuajiTech.QQ.PluginContext.Current
+  commentId: P:HuajiTech.QQ.PluginContext.Current
+  isExternal: true
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser*
+  commentId: Overload:HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+  name: AsUser
+  nameWithType: CurrentPluginContextExtensions.AsUser
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+- uid: HuajiTech.QQ.User
+  commentId: T:HuajiTech.QQ.User
+  parent: HuajiTech.QQ
+  name: User
+  nameWithType: User
+  fullName: HuajiTech.QQ.User
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf*
+  commentId: Overload:HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  name: AsMemberOf
+  nameWithType: CurrentPluginContextExtensions.AsMemberOf
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+- uid: HuajiTech.QQ.Group
+  commentId: T:HuajiTech.QQ.Group
+  parent: HuajiTech.QQ
+  name: Group
+  nameWithType: Group
+  fullName: HuajiTech.QQ.Group
+- uid: HuajiTech.QQ.Member
+  commentId: T:HuajiTech.QQ.Member
+  parent: HuajiTech.QQ
+  name: Member
+  nameWithType: Member
+  fullName: HuajiTech.QQ.Member
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning*
+  commentId: Overload:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+  name: LogAsWarning
+  nameWithType: CurrentPluginContextExtensions.LogAsWarning
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError*
+  commentId: Overload:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+  name: LogAsError
+  nameWithType: CurrentPluginContextExtensions.LogAsError
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError

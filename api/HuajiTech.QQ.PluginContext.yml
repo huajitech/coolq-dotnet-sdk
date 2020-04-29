@@ -1,0 +1,969 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.PluginContext
+  commentId: T:HuajiTech.QQ.PluginContext
+  id: PluginContext
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.PluginContext.Bot
+  - HuajiTech.QQ.PluginContext.Current
+  - HuajiTech.QQ.PluginContext.GetContact(HuajiTech.QQ.Contact)
+  - HuajiTech.QQ.PluginContext.GetContact(System.Int64)
+  - HuajiTech.QQ.PluginContext.GetGroup(HuajiTech.QQ.Group)
+  - HuajiTech.QQ.PluginContext.GetGroup(System.Int64)
+  - HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.Member)
+  - HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  - HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,System.Int64)
+  - HuajiTech.QQ.PluginContext.GetMember(System.Int64,HuajiTech.QQ.Group)
+  - HuajiTech.QQ.PluginContext.GetMember(System.Int64,System.Int64)
+  - HuajiTech.QQ.PluginContext.GetUser(HuajiTech.QQ.User)
+  - HuajiTech.QQ.PluginContext.GetUser(System.Int64)
+  langs:
+  - csharp
+  - vb
+  name: PluginContext
+  nameWithType: PluginContext
+  fullName: HuajiTech.QQ.PluginContext
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: PluginContext
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 8
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n表示插件上下文。\n此类为抽象类。\n"
+  example: []
+  syntax:
+    content: public abstract class PluginContext
+    content.vb: Public MustInherit Class PluginContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: HuajiTech.QQ.PluginContext.Current
+  commentId: P:HuajiTech.QQ.PluginContext.Current
+  id: Current
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: PluginContext.Current
+  fullName: HuajiTech.QQ.PluginContext.Current
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Current
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 16
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取或设置当前插件的插件上下文。\n"
+  example: []
+  syntax:
+    content: public static PluginContext Current { get; set; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.PluginContext
+    content.vb: Public Shared Property Current As PluginContext
+  overload: HuajiTech.QQ.PluginContext.Current*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">value</code> 为 <code>null</code>。
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HuajiTech.QQ.PluginContext.Bot
+  commentId: P:HuajiTech.QQ.PluginContext.Bot
+  id: Bot
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: Bot
+  nameWithType: PluginContext.Bot
+  fullName: HuajiTech.QQ.PluginContext.Bot
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Bot
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 25
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.PluginContext\" data-throw-if-not-resolved=\"false\"></xref> 对象的 <xref href=\"HuajiTech.QQ.IBot\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public abstract IBot Bot { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.IBot
+    content.vb: Public MustOverride ReadOnly Property Bot As IBot
+  overload: HuajiTech.QQ.PluginContext.Bot*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.PluginContext.GetUser(System.Int64)
+  commentId: M:HuajiTech.QQ.PluginContext.GetUser(System.Int64)
+  id: GetUser(System.Int64)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetUser(Int64)
+  nameWithType: PluginContext.GetUser(Int64)
+  fullName: HuajiTech.QQ.PluginContext.GetUser(System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetUser
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 31
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取指定号码的用户。\n"
+  example: []
+  syntax:
+    content: public abstract User GetUser(long number)
+    parameters:
+    - id: number
+      type: System.Int64
+      description: 号码。
+    return:
+      type: HuajiTech.QQ.User
+    content.vb: Public MustOverride Function GetUser(number As Long) As User
+  overload: HuajiTech.QQ.PluginContext.GetUser*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.PluginContext.GetUser(HuajiTech.QQ.User)
+  commentId: M:HuajiTech.QQ.PluginContext.GetUser(HuajiTech.QQ.User)
+  id: GetUser(HuajiTech.QQ.User)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetUser(User)
+  nameWithType: PluginContext.GetUser(User)
+  fullName: HuajiTech.QQ.PluginContext.GetUser(HuajiTech.QQ.User)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetUser
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 37
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取号码为指定用户的号码的 <xref href=\"HuajiTech.QQ.User\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public virtual User GetUser(User user)
+    parameters:
+    - id: user
+      type: HuajiTech.QQ.User
+      description: 用户。
+    return:
+      type: HuajiTech.QQ.User
+    content.vb: Public Overridable Function GetUser(user As User) As User
+  overload: HuajiTech.QQ.PluginContext.GetUser*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.PluginContext.GetContact(System.Int64)
+  commentId: M:HuajiTech.QQ.PluginContext.GetContact(System.Int64)
+  id: GetContact(System.Int64)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetContact(Int64)
+  nameWithType: PluginContext.GetContact(Int64)
+  fullName: HuajiTech.QQ.PluginContext.GetContact(System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetContact
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 51
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取指定号码的联系人。\n"
+  example: []
+  syntax:
+    content: public abstract Contact GetContact(long number)
+    parameters:
+    - id: number
+      type: System.Int64
+      description: 号码。
+    return:
+      type: HuajiTech.QQ.Contact
+    content.vb: Public MustOverride Function GetContact(number As Long) As Contact
+  overload: HuajiTech.QQ.PluginContext.GetContact*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.PluginContext.GetContact(HuajiTech.QQ.Contact)
+  commentId: M:HuajiTech.QQ.PluginContext.GetContact(HuajiTech.QQ.Contact)
+  id: GetContact(HuajiTech.QQ.Contact)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetContact(Contact)
+  nameWithType: PluginContext.GetContact(Contact)
+  fullName: HuajiTech.QQ.PluginContext.GetContact(HuajiTech.QQ.Contact)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetContact
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 57
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取号码为指定联系人的号码的 <xref href=\"HuajiTech.QQ.Contact\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public virtual Contact GetContact(Contact contact)
+    parameters:
+    - id: contact
+      type: HuajiTech.QQ.Contact
+      description: 联系人。
+    return:
+      type: HuajiTech.QQ.Contact
+    content.vb: Public Overridable Function GetContact(contact As Contact) As Contact
+  overload: HuajiTech.QQ.PluginContext.GetContact*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.PluginContext.GetGroup(System.Int64)
+  commentId: M:HuajiTech.QQ.PluginContext.GetGroup(System.Int64)
+  id: GetGroup(System.Int64)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetGroup(Int64)
+  nameWithType: PluginContext.GetGroup(Int64)
+  fullName: HuajiTech.QQ.PluginContext.GetGroup(System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetGroup
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 71
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取指定号码的群。\n"
+  example: []
+  syntax:
+    content: public abstract Group GetGroup(long number)
+    parameters:
+    - id: number
+      type: System.Int64
+      description: 号码。
+    return:
+      type: HuajiTech.QQ.Group
+    content.vb: Public MustOverride Function GetGroup(number As Long) As Group
+  overload: HuajiTech.QQ.PluginContext.GetGroup*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.PluginContext.GetGroup(HuajiTech.QQ.Group)
+  commentId: M:HuajiTech.QQ.PluginContext.GetGroup(HuajiTech.QQ.Group)
+  id: GetGroup(HuajiTech.QQ.Group)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetGroup(Group)
+  nameWithType: PluginContext.GetGroup(Group)
+  fullName: HuajiTech.QQ.PluginContext.GetGroup(HuajiTech.QQ.Group)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetGroup
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 77
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取号码为指定群的号码的 <xref href=\"HuajiTech.QQ.Group\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public virtual Group GetGroup(Group group)
+    parameters:
+    - id: group
+      type: HuajiTech.QQ.Group
+      description: 群。
+    return:
+      type: HuajiTech.QQ.Group
+    content.vb: Public Overridable Function GetGroup(group As Group) As Group
+  overload: HuajiTech.QQ.PluginContext.GetGroup*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.PluginContext.GetMember(System.Int64,HuajiTech.QQ.Group)
+  commentId: M:HuajiTech.QQ.PluginContext.GetMember(System.Int64,HuajiTech.QQ.Group)
+  id: GetMember(System.Int64,HuajiTech.QQ.Group)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetMember(Int64, Group)
+  nameWithType: PluginContext.GetMember(Int64, Group)
+  fullName: HuajiTech.QQ.PluginContext.GetMember(System.Int64, HuajiTech.QQ.Group)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetMember
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 92
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取指定号码和群的成员。\n"
+  example: []
+  syntax:
+    content: public abstract Member GetMember(long number, Group group)
+    parameters:
+    - id: number
+      type: System.Int64
+      description: 号码。
+    - id: group
+      type: HuajiTech.QQ.Group
+      description: 群。
+    return:
+      type: HuajiTech.QQ.Member
+    content.vb: Public MustOverride Function GetMember(number As Long, group As Group) As Member
+  overload: HuajiTech.QQ.PluginContext.GetMember*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.Member)
+  commentId: M:HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.Member)
+  id: GetMember(HuajiTech.QQ.Member)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetMember(Member)
+  nameWithType: PluginContext.GetMember(Member)
+  fullName: HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.Member)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetMember
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 98
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取号码和群为指定成员的号码和群的 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public virtual Member GetMember(Member member)
+    parameters:
+    - id: member
+      type: HuajiTech.QQ.Member
+      description: 成员。
+    return:
+      type: HuajiTech.QQ.Member
+    content.vb: Public Overridable Function GetMember(member As Member) As Member
+  overload: HuajiTech.QQ.PluginContext.GetMember*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.PluginContext.GetMember(System.Int64,System.Int64)
+  commentId: M:HuajiTech.QQ.PluginContext.GetMember(System.Int64,System.Int64)
+  id: GetMember(System.Int64,System.Int64)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetMember(Int64, Int64)
+  nameWithType: PluginContext.GetMember(Int64, Int64)
+  fullName: HuajiTech.QQ.PluginContext.GetMember(System.Int64, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetMember
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 113
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取指定号码和群号码的成员。\n"
+  example: []
+  syntax:
+    content: public virtual Member GetMember(long number, long groupNumber)
+    parameters:
+    - id: number
+      type: System.Int64
+      description: 号码。
+    - id: groupNumber
+      type: System.Int64
+      description: 群号码。
+    return:
+      type: HuajiTech.QQ.Member
+    content.vb: Public Overridable Function GetMember(number As Long, groupNumber As Long) As Member
+  overload: HuajiTech.QQ.PluginContext.GetMember*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  commentId: M:HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  id: GetMember(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetMember(User, Group)
+  nameWithType: PluginContext.GetMember(User, Group)
+  fullName: HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User, HuajiTech.QQ.Group)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetMember
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 120
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取号码为指定用户的号码，群为指定群的 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public virtual Member GetMember(User user, Group group)
+    parameters:
+    - id: user
+      type: HuajiTech.QQ.User
+      description: 用户。
+    - id: group
+      type: HuajiTech.QQ.Group
+      description: 群。
+    return:
+      type: HuajiTech.QQ.Member
+    content.vb: Public Overridable Function GetMember(user As User, group As Group) As Member
+  overload: HuajiTech.QQ.PluginContext.GetMember*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,System.Int64)
+  commentId: M:HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,System.Int64)
+  id: GetMember(HuajiTech.QQ.User,System.Int64)
+  parent: HuajiTech.QQ.PluginContext
+  langs:
+  - csharp
+  - vb
+  name: GetMember(User, Int64)
+  nameWithType: PluginContext.GetMember(User, Int64)
+  fullName: HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/PluginContext.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetMember
+    path: src/HuajiTech.QQ/PluginContext.cs
+    startLine: 135
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取号码为指定用户的号码，群为指定群号码的群的 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public virtual Member GetMember(User user, long groupNumber)
+    parameters:
+    - id: user
+      type: HuajiTech.QQ.User
+      description: 用户。
+    - id: groupNumber
+      type: System.Int64
+      description: 群号码。
+    return:
+      type: HuajiTech.QQ.Member
+    content.vb: Public Overridable Function GetMember(user As User, groupNumber As Long) As Member
+  overload: HuajiTech.QQ.PluginContext.GetMember*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: HuajiTech.QQ.PluginContext.Current*
+  commentId: Overload:HuajiTech.QQ.PluginContext.Current
+  name: Current
+  nameWithType: PluginContext.Current
+  fullName: HuajiTech.QQ.PluginContext.Current
+- uid: HuajiTech.QQ.PluginContext
+  commentId: T:HuajiTech.QQ.PluginContext
+  parent: HuajiTech.QQ
+  name: PluginContext
+  nameWithType: PluginContext
+  fullName: HuajiTech.QQ.PluginContext
+- uid: HuajiTech.QQ.IBot
+  commentId: T:HuajiTech.QQ.IBot
+  parent: HuajiTech.QQ
+  name: IBot
+  nameWithType: IBot
+  fullName: HuajiTech.QQ.IBot
+- uid: HuajiTech.QQ.PluginContext.Bot*
+  commentId: Overload:HuajiTech.QQ.PluginContext.Bot
+  name: Bot
+  nameWithType: PluginContext.Bot
+  fullName: HuajiTech.QQ.PluginContext.Bot
+- uid: HuajiTech.QQ.PluginContext.GetUser*
+  commentId: Overload:HuajiTech.QQ.PluginContext.GetUser
+  name: GetUser
+  nameWithType: PluginContext.GetUser
+  fullName: HuajiTech.QQ.PluginContext.GetUser
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: HuajiTech.QQ.User
+  commentId: T:HuajiTech.QQ.User
+  parent: HuajiTech.QQ
+  name: User
+  nameWithType: User
+  fullName: HuajiTech.QQ.User
+- uid: HuajiTech.QQ.PluginContext.GetContact*
+  commentId: Overload:HuajiTech.QQ.PluginContext.GetContact
+  name: GetContact
+  nameWithType: PluginContext.GetContact
+  fullName: HuajiTech.QQ.PluginContext.GetContact
+- uid: HuajiTech.QQ.Contact
+  commentId: T:HuajiTech.QQ.Contact
+  parent: HuajiTech.QQ
+  name: Contact
+  nameWithType: Contact
+  fullName: HuajiTech.QQ.Contact
+- uid: HuajiTech.QQ.PluginContext.GetGroup*
+  commentId: Overload:HuajiTech.QQ.PluginContext.GetGroup
+  name: GetGroup
+  nameWithType: PluginContext.GetGroup
+  fullName: HuajiTech.QQ.PluginContext.GetGroup
+- uid: HuajiTech.QQ.Group
+  commentId: T:HuajiTech.QQ.Group
+  parent: HuajiTech.QQ
+  name: Group
+  nameWithType: Group
+  fullName: HuajiTech.QQ.Group
+- uid: HuajiTech.QQ.PluginContext.GetMember*
+  commentId: Overload:HuajiTech.QQ.PluginContext.GetMember
+  name: GetMember
+  nameWithType: PluginContext.GetMember
+  fullName: HuajiTech.QQ.PluginContext.GetMember
+- uid: HuajiTech.QQ.Member
+  commentId: T:HuajiTech.QQ.Member
+  parent: HuajiTech.QQ
+  name: Member
+  nameWithType: Member
+  fullName: HuajiTech.QQ.Member

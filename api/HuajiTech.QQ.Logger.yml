@@ -1,0 +1,1140 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Logger
+  commentId: T:HuajiTech.QQ.Logger
+  id: Logger
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.Logger.Log(HuajiTech.QQ.LogLevel,System.String,System.String)
+  - HuajiTech.QQ.Logger.LogDebug(System.String)
+  - HuajiTech.QQ.Logger.LogDebug(System.String,System.String)
+  - HuajiTech.QQ.Logger.LogError(System.Exception)
+  - HuajiTech.QQ.Logger.LogError(System.String)
+  - HuajiTech.QQ.Logger.LogError(System.String,System.String)
+  - HuajiTech.QQ.Logger.LogFatal(System.String)
+  - HuajiTech.QQ.Logger.LogInfo(System.String)
+  - HuajiTech.QQ.Logger.LogInfo(System.String,System.String)
+  - HuajiTech.QQ.Logger.LogReceiving(System.String)
+  - HuajiTech.QQ.Logger.LogReceiving(System.String,System.String)
+  - HuajiTech.QQ.Logger.LogSending(System.String)
+  - HuajiTech.QQ.Logger.LogSending(System.String,System.String)
+  - HuajiTech.QQ.Logger.LogSuccess(System.String)
+  - HuajiTech.QQ.Logger.LogSuccess(System.String,System.String)
+  - HuajiTech.QQ.Logger.LogWarning(System.Exception)
+  - HuajiTech.QQ.Logger.LogWarning(System.String)
+  - HuajiTech.QQ.Logger.LogWarning(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: Logger
+  fullName: HuajiTech.QQ.Logger
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Logger
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 8
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n提供记录日志的方法。\n此类为抽象类。\n"
+  example: []
+  syntax:
+    content: public abstract class Logger
+    content.vb: Public MustInherit Class Logger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: HuajiTech.QQ.Logger.Log(HuajiTech.QQ.LogLevel,System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.Log(HuajiTech.QQ.LogLevel,System.String,System.String)
+  id: Log(HuajiTech.QQ.LogLevel,System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: Log(LogLevel, String, String)
+  nameWithType: Logger.Log(LogLevel, String, String)
+  fullName: HuajiTech.QQ.Logger.Log(HuajiTech.QQ.LogLevel, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Log
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 16
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一条日志。\n"
+  example: []
+  syntax:
+    content: public abstract void Log(LogLevel level, string type, string message)
+    parameters:
+    - id: level
+      type: HuajiTech.QQ.LogLevel
+      description: 日志的等级。
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public MustOverride Sub Log(level As LogLevel, type As String, message As String)
+  overload: HuajiTech.QQ.Logger.Log*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Logger.LogDebug(System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogDebug(System.String,System.String)
+  id: LogDebug(System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogDebug(String, String)
+  nameWithType: Logger.LogDebug(String, String)
+  fullName: HuajiTech.QQ.Logger.LogDebug(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogDebug
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 23
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一条调试信息。\n"
+  example: []
+  syntax:
+    content: public virtual void LogDebug(string type, string message)
+    parameters:
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogDebug(type As String, message As String)
+  overload: HuajiTech.QQ.Logger.LogDebug*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogDebug(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogDebug(System.String)
+  id: LogDebug(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogDebug(String)
+  nameWithType: Logger.LogDebug(String)
+  fullName: HuajiTech.QQ.Logger.LogDebug(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogDebug
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 29
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一条调试信息。\n"
+  example: []
+  syntax:
+    content: public virtual void LogDebug(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogDebug(message As String)
+  overload: HuajiTech.QQ.Logger.LogDebug*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogInfo(System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogInfo(System.String,System.String)
+  id: LogInfo(System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogInfo(String, String)
+  nameWithType: Logger.LogInfo(String, String)
+  fullName: HuajiTech.QQ.Logger.LogInfo(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogInfo
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 36
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一条信息。\n"
+  example: []
+  syntax:
+    content: public virtual void LogInfo(string type, string message)
+    parameters:
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogInfo(type As String, message As String)
+  overload: HuajiTech.QQ.Logger.LogInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogInfo(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogInfo(System.String)
+  id: LogInfo(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogInfo(String)
+  nameWithType: Logger.LogInfo(String)
+  fullName: HuajiTech.QQ.Logger.LogInfo(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogInfo
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 42
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一条信息。\n"
+  example: []
+  syntax:
+    content: public virtual void LogInfo(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogInfo(message As String)
+  overload: HuajiTech.QQ.Logger.LogInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogSuccess(System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogSuccess(System.String,System.String)
+  id: LogSuccess(System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogSuccess(String, String)
+  nameWithType: Logger.LogSuccess(String, String)
+  fullName: HuajiTech.QQ.Logger.LogSuccess(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogSuccess
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 49
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个成功。\n"
+  example: []
+  syntax:
+    content: public virtual void LogSuccess(string type, string message)
+    parameters:
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogSuccess(type As String, message As String)
+  overload: HuajiTech.QQ.Logger.LogSuccess*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogSuccess(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogSuccess(System.String)
+  id: LogSuccess(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogSuccess(String)
+  nameWithType: Logger.LogSuccess(String)
+  fullName: HuajiTech.QQ.Logger.LogSuccess(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogSuccess
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 55
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个成功。\n"
+  example: []
+  syntax:
+    content: public virtual void LogSuccess(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogSuccess(message As String)
+  overload: HuajiTech.QQ.Logger.LogSuccess*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogReceiving(System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogReceiving(System.String,System.String)
+  id: LogReceiving(System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogReceiving(String, String)
+  nameWithType: Logger.LogReceiving(String, String)
+  fullName: HuajiTech.QQ.Logger.LogReceiving(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogReceiving
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 62
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个接收。\n"
+  example: []
+  syntax:
+    content: public virtual void LogReceiving(string type, string message)
+    parameters:
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogReceiving(type As String, message As String)
+  overload: HuajiTech.QQ.Logger.LogReceiving*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogReceiving(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogReceiving(System.String)
+  id: LogReceiving(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogReceiving(String)
+  nameWithType: Logger.LogReceiving(String)
+  fullName: HuajiTech.QQ.Logger.LogReceiving(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogReceiving
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 68
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个接收。\n"
+  example: []
+  syntax:
+    content: public virtual void LogReceiving(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogReceiving(message As String)
+  overload: HuajiTech.QQ.Logger.LogReceiving*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogSending(System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogSending(System.String,System.String)
+  id: LogSending(System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogSending(String, String)
+  nameWithType: Logger.LogSending(String, String)
+  fullName: HuajiTech.QQ.Logger.LogSending(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogSending
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 75
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个发送。\n"
+  example: []
+  syntax:
+    content: public virtual void LogSending(string type, string message)
+    parameters:
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogSending(type As String, message As String)
+  overload: HuajiTech.QQ.Logger.LogSending*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogSending(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogSending(System.String)
+  id: LogSending(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogSending(String)
+  nameWithType: Logger.LogSending(String)
+  fullName: HuajiTech.QQ.Logger.LogSending(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogSending
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 81
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个发送。\n"
+  example: []
+  syntax:
+    content: public virtual void LogSending(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogSending(message As String)
+  overload: HuajiTech.QQ.Logger.LogSending*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogWarning(System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogWarning(System.String,System.String)
+  id: LogWarning(System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogWarning(String, String)
+  nameWithType: Logger.LogWarning(String, String)
+  fullName: HuajiTech.QQ.Logger.LogWarning(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogWarning
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 88
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个警告。\n"
+  example: []
+  syntax:
+    content: public virtual void LogWarning(string type, string message)
+    parameters:
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogWarning(type As String, message As String)
+  overload: HuajiTech.QQ.Logger.LogWarning*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogWarning(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogWarning(System.String)
+  id: LogWarning(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogWarning(String)
+  nameWithType: Logger.LogWarning(String)
+  fullName: HuajiTech.QQ.Logger.LogWarning(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogWarning
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 94
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个警告。\n"
+  example: []
+  syntax:
+    content: public virtual void LogWarning(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogWarning(message As String)
+  overload: HuajiTech.QQ.Logger.LogWarning*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogWarning(System.Exception)
+  commentId: M:HuajiTech.QQ.Logger.LogWarning(System.Exception)
+  id: LogWarning(System.Exception)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogWarning(Exception)
+  nameWithType: Logger.LogWarning(Exception)
+  fullName: HuajiTech.QQ.Logger.LogWarning(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogWarning
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 100
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n将异常记录为一个警告。\n"
+  example: []
+  syntax:
+    content: public virtual void LogWarning(Exception exception)
+    parameters:
+    - id: exception
+      type: System.Exception
+      description: 要记录的异常。
+    content.vb: Public Overridable Sub LogWarning(exception As Exception)
+  overload: HuajiTech.QQ.Logger.LogWarning*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogError(System.String,System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogError(System.String,System.String)
+  id: LogError(System.String,System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogError(String, String)
+  nameWithType: Logger.LogError(String, String)
+  fullName: HuajiTech.QQ.Logger.LogError(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogError
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 107
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个错误。\n"
+  example: []
+  syntax:
+    content: public virtual void LogError(string type, string message)
+    parameters:
+    - id: type
+      type: System.String
+      description: 日志的类型。
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogError(type As String, message As String)
+  overload: HuajiTech.QQ.Logger.LogError*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogError(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogError(System.String)
+  id: LogError(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogError(String)
+  nameWithType: Logger.LogError(String)
+  fullName: HuajiTech.QQ.Logger.LogError(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogError
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 113
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个错误。\n"
+  example: []
+  syntax:
+    content: public virtual void LogError(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 日志的消息。
+    content.vb: Public Overridable Sub LogError(message As String)
+  overload: HuajiTech.QQ.Logger.LogError*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogError(System.Exception)
+  commentId: M:HuajiTech.QQ.Logger.LogError(System.Exception)
+  id: LogError(System.Exception)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogError(Exception)
+  nameWithType: Logger.LogError(Exception)
+  fullName: HuajiTech.QQ.Logger.LogError(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogError
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 119
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n将异常记录为一个错误。\n"
+  example: []
+  syntax:
+    content: public virtual void LogError(Exception exception)
+    parameters:
+    - id: exception
+      type: System.Exception
+      description: 要记录的异常。
+    content.vb: Public Overridable Sub LogError(exception As Exception)
+  overload: HuajiTech.QQ.Logger.LogError*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Logger.LogFatal(System.String)
+  commentId: M:HuajiTech.QQ.Logger.LogFatal(System.String)
+  id: LogFatal(System.String)
+  parent: HuajiTech.QQ.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogFatal(String)
+  nameWithType: Logger.LogFatal(String)
+  fullName: HuajiTech.QQ.Logger.LogFatal(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Logger.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LogFatal
+    path: src/HuajiTech.QQ/Logger.cs
+    startLine: 125
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n记录一个致命错误。\n"
+  example: []
+  syntax:
+    content: public abstract void LogFatal(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 致命错误的消息。
+    content.vb: Public MustOverride Sub LogFatal(message As String)
+  overload: HuajiTech.QQ.Logger.LogFatal*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HuajiTech.QQ.Logger.Log*
+  commentId: Overload:HuajiTech.QQ.Logger.Log
+  name: Log
+  nameWithType: Logger.Log
+  fullName: HuajiTech.QQ.Logger.Log
+- uid: HuajiTech.QQ.LogLevel
+  commentId: T:HuajiTech.QQ.LogLevel
+  parent: HuajiTech.QQ
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: HuajiTech.QQ.LogLevel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: HuajiTech.QQ.Logger.LogDebug*
+  commentId: Overload:HuajiTech.QQ.Logger.LogDebug
+  name: LogDebug
+  nameWithType: Logger.LogDebug
+  fullName: HuajiTech.QQ.Logger.LogDebug
+- uid: HuajiTech.QQ.Logger.LogInfo*
+  commentId: Overload:HuajiTech.QQ.Logger.LogInfo
+  name: LogInfo
+  nameWithType: Logger.LogInfo
+  fullName: HuajiTech.QQ.Logger.LogInfo
+- uid: HuajiTech.QQ.Logger.LogSuccess*
+  commentId: Overload:HuajiTech.QQ.Logger.LogSuccess
+  name: LogSuccess
+  nameWithType: Logger.LogSuccess
+  fullName: HuajiTech.QQ.Logger.LogSuccess
+- uid: HuajiTech.QQ.Logger.LogReceiving*
+  commentId: Overload:HuajiTech.QQ.Logger.LogReceiving
+  name: LogReceiving
+  nameWithType: Logger.LogReceiving
+  fullName: HuajiTech.QQ.Logger.LogReceiving
+- uid: HuajiTech.QQ.Logger.LogSending*
+  commentId: Overload:HuajiTech.QQ.Logger.LogSending
+  name: LogSending
+  nameWithType: Logger.LogSending
+  fullName: HuajiTech.QQ.Logger.LogSending
+- uid: HuajiTech.QQ.Logger.LogWarning*
+  commentId: Overload:HuajiTech.QQ.Logger.LogWarning
+  name: LogWarning
+  nameWithType: Logger.LogWarning
+  fullName: HuajiTech.QQ.Logger.LogWarning
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: HuajiTech.QQ.Logger.LogError*
+  commentId: Overload:HuajiTech.QQ.Logger.LogError
+  name: LogError
+  nameWithType: Logger.LogError
+  fullName: HuajiTech.QQ.Logger.LogError
+- uid: HuajiTech.QQ.Logger.LogFatal*
+  commentId: Overload:HuajiTech.QQ.Logger.LogFatal
+  name: LogFatal
+  nameWithType: Logger.LogFatal
+  fullName: HuajiTech.QQ.Logger.LogFatal

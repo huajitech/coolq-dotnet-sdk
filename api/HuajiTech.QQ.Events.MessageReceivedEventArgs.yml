@@ -1,0 +1,584 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  commentId: T:HuajiTech.QQ.Events.MessageReceivedEventArgs
+  id: MessageReceivedEventArgs
+  parent: HuajiTech.QQ.Events
+  children:
+  - HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor(HuajiTech.QQ.Message,HuajiTech.QQ.Chat,HuajiTech.QQ.User)
+  - HuajiTech.QQ.Events.MessageReceivedEventArgs.Message
+  - HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender
+  - HuajiTech.QQ.Events.MessageReceivedEventArgs.Source
+  langs:
+  - csharp
+  - vb
+  name: MessageReceivedEventArgs
+  nameWithType: MessageReceivedEventArgs
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MessageReceivedEventArgs
+    path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+    startLine: 5
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n为 <xref href=\"HuajiTech.QQ.Events.IMessageEventSource.MessageReceived\" data-throw-if-not-resolved=\"false\"></xref> 事件提供数据。\n"
+  example: []
+  syntax:
+    content: 'public class MessageReceivedEventArgs : RoutedEventArgs'
+    content.vb: >-
+      Public Class MessageReceivedEventArgs
+
+          Inherits RoutedEventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  - HuajiTech.QQ.Events.RoutedEventArgs
+  inheritedMembers:
+  - HuajiTech.QQ.Events.RoutedEventArgs.Handled
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor(HuajiTech.QQ.Message,HuajiTech.QQ.Chat,HuajiTech.QQ.User)
+  commentId: M:HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor(HuajiTech.QQ.Message,HuajiTech.QQ.Chat,HuajiTech.QQ.User)
+  id: '#ctor(HuajiTech.QQ.Message,HuajiTech.QQ.Chat,HuajiTech.QQ.User)'
+  parent: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: MessageReceivedEventArgs(Message, Chat, User)
+  nameWithType: MessageReceivedEventArgs.MessageReceivedEventArgs(Message, Chat, User)
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.MessageReceivedEventArgs(HuajiTech.QQ.Message, HuajiTech.QQ.Chat, HuajiTech.QQ.User)
+  type: Constructor
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: .ctor
+    path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  syntax:
+    content: public MessageReceivedEventArgs(Message message, Chat source, User sender)
+    parameters:
+    - id: message
+      type: HuajiTech.QQ.Message
+    - id: source
+      type: HuajiTech.QQ.Chat
+    - id: sender
+      type: HuajiTech.QQ.User
+    content.vb: Public Sub New(message As Message, source As Chat, sender As User)
+  overload: HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.Message
+  commentId: P:HuajiTech.QQ.Events.MessageReceivedEventArgs.Message
+  id: Message
+  parent: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: MessageReceivedEventArgs.Message
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.Message
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Message
+    path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n获取消息。\n"
+  example: []
+  syntax:
+    content: public Message Message { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.Message
+    content.vb: Public ReadOnly Property Message As Message
+  overload: HuajiTech.QQ.Events.MessageReceivedEventArgs.Message*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender
+  commentId: P:HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender
+  id: Sender
+  parent: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Sender
+  nameWithType: MessageReceivedEventArgs.Sender
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Sender
+    path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+    startLine: 22
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n获取发送者。\n"
+  example: []
+  syntax:
+    content: public User Sender { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.User
+    content.vb: Public ReadOnly Property Sender As User
+  overload: HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.Source
+  commentId: P:HuajiTech.QQ.Events.MessageReceivedEventArgs.Source
+  id: Source
+  parent: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: MessageReceivedEventArgs.Source
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.Source
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Source
+    path: src/HuajiTech.QQ/Events/MessageReceivedEventArgs.cs
+    startLine: 27
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n获取来源聊天。\n"
+  example: []
+  syntax:
+    content: public Chat Source { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.Chat
+    content.vb: Public ReadOnly Property Source As Chat
+  overload: HuajiTech.QQ.Events.MessageReceivedEventArgs.Source*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  commentId: E:HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  parent: HuajiTech.QQ.Events.IMessageEventSource
+  name: MessageReceived
+  nameWithType: IMessageEventSource.MessageReceived
+  fullName: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: HuajiTech.QQ.Events.RoutedEventArgs
+  commentId: T:HuajiTech.QQ.Events.RoutedEventArgs
+  parent: HuajiTech.QQ.Events
+  name: RoutedEventArgs
+  nameWithType: RoutedEventArgs
+  fullName: HuajiTech.QQ.Events.RoutedEventArgs
+- uid: HuajiTech.QQ.Events.RoutedEventArgs.Handled
+  commentId: P:HuajiTech.QQ.Events.RoutedEventArgs.Handled
+  parent: HuajiTech.QQ.Events.RoutedEventArgs
+  name: Handled
+  nameWithType: RoutedEventArgs.Handled
+  fullName: HuajiTech.QQ.Events.RoutedEventArgs.Handled
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Events.IMessageEventSource
+  commentId: T:HuajiTech.QQ.Events.IMessageEventSource
+  parent: HuajiTech.QQ.Events
+  name: IMessageEventSource
+  nameWithType: IMessageEventSource
+  fullName: HuajiTech.QQ.Events.IMessageEventSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor*
+  commentId: Overload:HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor
+  name: MessageReceivedEventArgs
+  nameWithType: MessageReceivedEventArgs.MessageReceivedEventArgs
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.MessageReceivedEventArgs
+- uid: HuajiTech.QQ.Message
+  commentId: T:HuajiTech.QQ.Message
+  parent: HuajiTech.QQ
+  name: Message
+  nameWithType: Message
+  fullName: HuajiTech.QQ.Message
+- uid: HuajiTech.QQ.Chat
+  commentId: T:HuajiTech.QQ.Chat
+  parent: HuajiTech.QQ
+  name: Chat
+  nameWithType: Chat
+  fullName: HuajiTech.QQ.Chat
+- uid: HuajiTech.QQ.User
+  commentId: T:HuajiTech.QQ.User
+  parent: HuajiTech.QQ
+  name: User
+  nameWithType: User
+  fullName: HuajiTech.QQ.User
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.Message*
+  commentId: Overload:HuajiTech.QQ.Events.MessageReceivedEventArgs.Message
+  name: Message
+  nameWithType: MessageReceivedEventArgs.Message
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.Message
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender*
+  commentId: Overload:HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender
+  name: Sender
+  nameWithType: MessageReceivedEventArgs.Sender
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.Sender
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.Source*
+  commentId: Overload:HuajiTech.QQ.Events.MessageReceivedEventArgs.Source
+  name: Source
+  nameWithType: MessageReceivedEventArgs.Source
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.Source

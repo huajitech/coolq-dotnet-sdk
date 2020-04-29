@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.IGroupMemberEventSource
+  commentId: T:HuajiTech.QQ.Events.IGroupMemberEventSource
+  id: IGroupMemberEventSource
+  parent: HuajiTech.QQ.Events
+  children:
+  - HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined
+  - HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
+  langs:
+  - csharp
+  - vb
+  name: IGroupMemberEventSource
+  nameWithType: IGroupMemberEventSource
+  fullName: HuajiTech.QQ.Events.IGroupMemberEventSource
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IGroupMemberEventSource
+    path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n定义群成员事件。\n"
+  example: []
+  syntax:
+    content: public interface IGroupMemberEventSource
+    content.vb: Public Interface IGroupMemberEventSource
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined
+  commentId: E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined
+  id: MemberJoined
+  parent: HuajiTech.QQ.Events.IGroupMemberEventSource
+  langs:
+  - csharp
+  - vb
+  name: MemberJoined
+  nameWithType: IGroupMemberEventSource.MemberJoined
+  fullName: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MemberJoined
+    path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在成员加入时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<MemberChangeEventArgs> MemberJoined
+    return:
+      type: System.EventHandler{MemberChangeEventArgs}
+    content.vb: Event MemberJoined As EventHandler(Of MemberChangeEventArgs)
+- uid: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
+  commentId: E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
+  id: MemberLeft
+  parent: HuajiTech.QQ.Events.IGroupMemberEventSource
+  langs:
+  - csharp
+  - vb
+  name: MemberLeft
+  nameWithType: IGroupMemberEventSource.MemberLeft
+  fullName: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MemberLeft
+    path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在成员离开时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<MemberChangeEventArgs> MemberLeft
+    return:
+      type: System.EventHandler{MemberChangeEventArgs}
+    content.vb: Event MemberLeft As EventHandler(Of MemberChangeEventArgs)
+references:
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: System.EventHandler{MemberChangeEventArgs}
+  commentId: T:System.EventHandler{MemberChangeEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<MemberChangeEventArgs>
+  nameWithType: EventHandler<MemberChangeEventArgs>
+  fullName: System.EventHandler<MemberChangeEventArgs>
+  nameWithType.vb: EventHandler(Of MemberChangeEventArgs)
+  fullName.vb: System.EventHandler(Of MemberChangeEventArgs)
+  name.vb: EventHandler(Of MemberChangeEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MemberChangeEventArgs
+    name: MemberChangeEventArgs
+    nameWithType: MemberChangeEventArgs
+    fullName: MemberChangeEventArgs
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MemberChangeEventArgs
+    name: MemberChangeEventArgs
+    nameWithType: MemberChangeEventArgs
+    fullName: MemberChangeEventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

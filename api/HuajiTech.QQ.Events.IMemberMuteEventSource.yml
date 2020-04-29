@@ -1,0 +1,231 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.IMemberMuteEventSource
+  commentId: T:HuajiTech.QQ.Events.IMemberMuteEventSource
+  id: IMemberMuteEventSource
+  parent: HuajiTech.QQ.Events
+  children:
+  - HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  - HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+  langs:
+  - csharp
+  - vb
+  name: IMemberMuteEventSource
+  nameWithType: IMemberMuteEventSource
+  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IMemberMuteEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IMemberMuteEventSource
+    path: src/HuajiTech.QQ/Events/IMemberMuteEventSource.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n定义成员禁言事件。\n"
+  example: []
+  syntax:
+    content: public interface IMemberMuteEventSource
+    content.vb: Public Interface IMemberMuteEventSource
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  commentId: E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  id: MemberMuted
+  parent: HuajiTech.QQ.Events.IMemberMuteEventSource
+  langs:
+  - csharp
+  - vb
+  name: MemberMuted
+  nameWithType: IMemberMuteEventSource.MemberMuted
+  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IMemberMuteEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MemberMuted
+    path: src/HuajiTech.QQ/Events/IMemberMuteEventSource.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在禁言时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<MemberMutedEventArgs> MemberMuted
+    return:
+      type: System.EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
+    content.vb: Event MemberMuted As EventHandler(Of MemberMutedEventArgs)
+- uid: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+  commentId: E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+  id: MemberUnmuted
+  parent: HuajiTech.QQ.Events.IMemberMuteEventSource
+  langs:
+  - csharp
+  - vb
+  name: MemberUnmuted
+  nameWithType: IMemberMuteEventSource.MemberUnmuted
+  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IMemberMuteEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MemberUnmuted
+    path: src/HuajiTech.QQ/Events/IMemberMuteEventSource.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在解除禁言时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<GroupEventArgs> MemberUnmuted
+    return:
+      type: System.EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
+    content.vb: Event MemberUnmuted As EventHandler(Of GroupEventArgs)
+references:
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: System.EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<MemberMutedEventArgs>
+  nameWithType: EventHandler<MemberMutedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.MemberMutedEventArgs>
+  nameWithType.vb: EventHandler(Of MemberMutedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.MemberMutedEventArgs)
+  name.vb: EventHandler(Of MemberMutedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Events.MemberMutedEventArgs
+    name: MemberMutedEventArgs
+    nameWithType: MemberMutedEventArgs
+    fullName: HuajiTech.QQ.Events.MemberMutedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Events.MemberMutedEventArgs
+    name: MemberMutedEventArgs
+    nameWithType: MemberMutedEventArgs
+    fullName: HuajiTech.QQ.Events.MemberMutedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<GroupEventArgs>
+  nameWithType: EventHandler<GroupEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.GroupEventArgs>
+  nameWithType.vb: EventHandler(Of GroupEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.GroupEventArgs)
+  name.vb: EventHandler(Of GroupEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Events.GroupEventArgs
+    name: GroupEventArgs
+    nameWithType: GroupEventArgs
+    fullName: HuajiTech.QQ.Events.GroupEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Events.GroupEventArgs
+    name: GroupEventArgs
+    nameWithType: GroupEventArgs
+    fullName: HuajiTech.QQ.Events.GroupEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )

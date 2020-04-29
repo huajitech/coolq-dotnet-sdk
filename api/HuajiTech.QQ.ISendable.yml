@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.ISendable
+  commentId: T:HuajiTech.QQ.ISendable
+  id: ISendable
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.ISendable.Send(System.String)
+  - HuajiTech.QQ.ISendable.SendAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ISendable
+  nameWithType: ISendable
+  fullName: HuajiTech.QQ.ISendable
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/ISendable.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: ISendable
+    path: src/HuajiTech.QQ/ISendable.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n定义可发送消息的对象。\n"
+  example: []
+  syntax:
+    content: public interface ISendable
+    content.vb: Public Interface ISendable
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.ISendable.Send(System.String)
+  commentId: M:HuajiTech.QQ.ISendable.Send(System.String)
+  id: Send(System.String)
+  parent: HuajiTech.QQ.ISendable
+  langs:
+  - csharp
+  - vb
+  name: Send(String)
+  nameWithType: ISendable.Send(String)
+  fullName: HuajiTech.QQ.ISendable.Send(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/ISendable.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Send
+    path: src/HuajiTech.QQ/ISendable.cs
+    startLine: 14
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n向当前 <xref href=\"HuajiTech.QQ.ISendable\" data-throw-if-not-resolved=\"false\"></xref> 对象发送指定的字符串。\n"
+  example: []
+  syntax:
+    content: Message Send(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 要发送的字符串。
+    return:
+      type: HuajiTech.QQ.Message
+      description: 一个 <xref href="HuajiTech.QQ.Message" data-throw-if-not-resolved="false"></xref> 对象，表示已发送的消息。
+    content.vb: Function Send(message As String) As Message
+  overload: HuajiTech.QQ.ISendable.Send*
+- uid: HuajiTech.QQ.ISendable.SendAsync(System.String)
+  commentId: M:HuajiTech.QQ.ISendable.SendAsync(System.String)
+  id: SendAsync(System.String)
+  parent: HuajiTech.QQ.ISendable
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(String)
+  nameWithType: ISendable.SendAsync(String)
+  fullName: HuajiTech.QQ.ISendable.SendAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/ISendable.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SendAsync
+    path: src/HuajiTech.QQ/ISendable.cs
+    startLine: 21
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作向当前 <xref href=\"HuajiTech.QQ.ISendable\" data-throw-if-not-resolved=\"false\"></xref> 对象发送指定的字符串。\n"
+  example: []
+  syntax:
+    content: Task<Message> SendAsync(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 要发送的字符串。
+    return:
+      type: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+      description: 一个 <xref href="HuajiTech.QQ.Message" data-throw-if-not-resolved="false"></xref> 对象，表示已发送的消息。
+    content.vb: Function SendAsync(message As String) As Task(Of Message)
+  overload: HuajiTech.QQ.ISendable.SendAsync*
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: HuajiTech.QQ.ISendable
+  commentId: T:HuajiTech.QQ.ISendable
+  parent: HuajiTech.QQ
+  name: ISendable
+  nameWithType: ISendable
+  fullName: HuajiTech.QQ.ISendable
+- uid: HuajiTech.QQ.Message
+  commentId: T:HuajiTech.QQ.Message
+  parent: HuajiTech.QQ
+  name: Message
+  nameWithType: Message
+  fullName: HuajiTech.QQ.Message
+- uid: HuajiTech.QQ.ISendable.Send*
+  commentId: Overload:HuajiTech.QQ.ISendable.Send
+  name: Send
+  nameWithType: ISendable.Send
+  fullName: HuajiTech.QQ.ISendable.Send
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HuajiTech.QQ.ISendable.SendAsync*
+  commentId: Overload:HuajiTech.QQ.ISendable.SendAsync
+  name: SendAsync
+  nameWithType: ISendable.SendAsync
+  fullName: HuajiTech.QQ.ISendable.SendAsync
+- uid: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  commentId: T:System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Message>
+  nameWithType: Task<Message>
+  fullName: System.Threading.Tasks.Task<HuajiTech.QQ.Message>
+  nameWithType.vb: Task(Of Message)
+  fullName.vb: System.Threading.Tasks.Task(Of HuajiTech.QQ.Message)
+  name.vb: Task(Of Message)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Message
+    name: Message
+    nameWithType: Message
+    fullName: HuajiTech.QQ.Message
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Message
+    name: Message
+    nameWithType: Message
+    fullName: HuajiTech.QQ.Message
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

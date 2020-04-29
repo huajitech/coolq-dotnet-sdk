@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.MemberRole
+  commentId: T:HuajiTech.QQ.MemberRole
+  id: MemberRole
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.MemberRole.Administrator
+  - HuajiTech.QQ.MemberRole.Member
+  - HuajiTech.QQ.MemberRole.None
+  - HuajiTech.QQ.MemberRole.Owner
+  langs:
+  - csharp
+  - vb
+  name: MemberRole
+  nameWithType: MemberRole
+  fullName: HuajiTech.QQ.MemberRole
+  type: Enum
+  source:
+    remote:
+      path: src/HuajiTech.QQ/MemberRole.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MemberRole
+    path: src/HuajiTech.QQ/MemberRole.cs
+    startLine: 5
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n指定成员角色。\n"
+  example: []
+  syntax:
+    content: public enum MemberRole
+    content.vb: Public Enum MemberRole
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: HuajiTech.QQ.MemberRole.None
+  commentId: F:HuajiTech.QQ.MemberRole.None
+  id: None
+  parent: HuajiTech.QQ.MemberRole
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: MemberRole.None
+  fullName: HuajiTech.QQ.MemberRole.None
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.QQ/MemberRole.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: None
+    path: src/HuajiTech.QQ/MemberRole.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: None = 0
+    return:
+      type: HuajiTech.QQ.MemberRole
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.QQ.MemberRole.Member
+  commentId: F:HuajiTech.QQ.MemberRole.Member
+  id: Member
+  parent: HuajiTech.QQ.MemberRole
+  langs:
+  - csharp
+  - vb
+  name: Member
+  nameWithType: MemberRole.Member
+  fullName: HuajiTech.QQ.MemberRole.Member
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.QQ/MemberRole.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Member
+    path: src/HuajiTech.QQ/MemberRole.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n成员。\n"
+  example: []
+  syntax:
+    content: Member = 1
+    return:
+      type: HuajiTech.QQ.MemberRole
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.QQ.MemberRole.Administrator
+  commentId: F:HuajiTech.QQ.MemberRole.Administrator
+  id: Administrator
+  parent: HuajiTech.QQ.MemberRole
+  langs:
+  - csharp
+  - vb
+  name: Administrator
+  nameWithType: MemberRole.Administrator
+  fullName: HuajiTech.QQ.MemberRole.Administrator
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.QQ/MemberRole.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Administrator
+    path: src/HuajiTech.QQ/MemberRole.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n管理员。\n"
+  example: []
+  syntax:
+    content: Administrator = 2
+    return:
+      type: HuajiTech.QQ.MemberRole
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.QQ.MemberRole.Owner
+  commentId: F:HuajiTech.QQ.MemberRole.Owner
+  id: Owner
+  parent: HuajiTech.QQ.MemberRole
+  langs:
+  - csharp
+  - vb
+  name: Owner
+  nameWithType: MemberRole.Owner
+  fullName: HuajiTech.QQ.MemberRole.Owner
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.QQ/MemberRole.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Owner
+    path: src/HuajiTech.QQ/MemberRole.cs
+    startLine: 22
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n群主。\n"
+  example: []
+  syntax:
+    content: Owner = 3
+    return:
+      type: HuajiTech.QQ.MemberRole
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: HuajiTech.QQ.MemberRole
+  commentId: T:HuajiTech.QQ.MemberRole
+  parent: HuajiTech.QQ
+  name: MemberRole
+  nameWithType: MemberRole
+  fullName: HuajiTech.QQ.MemberRole

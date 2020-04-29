@@ -1,0 +1,231 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.IMessageEventSource
+  commentId: T:HuajiTech.QQ.Events.IMessageEventSource
+  id: IMessageEventSource
+  parent: HuajiTech.QQ.Events
+  children:
+  - HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+  - HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  langs:
+  - csharp
+  - vb
+  name: IMessageEventSource
+  nameWithType: IMessageEventSource
+  fullName: HuajiTech.QQ.Events.IMessageEventSource
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IMessageEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IMessageEventSource
+    path: src/HuajiTech.QQ/Events/IMessageEventSource.cs
+    startLine: 7
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n定义消息事件。\n"
+  example: []
+  syntax:
+    content: public interface IMessageEventSource
+    content.vb: Public Interface IMessageEventSource
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  commentId: E:HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  id: MessageReceived
+  parent: HuajiTech.QQ.Events.IMessageEventSource
+  langs:
+  - csharp
+  - vb
+  name: MessageReceived
+  nameWithType: IMessageEventSource.MessageReceived
+  fullName: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IMessageEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MessageReceived
+    path: src/HuajiTech.QQ/Events/IMessageEventSource.cs
+    startLine: 12
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在收到消息时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<MessageReceivedEventArgs> MessageReceived
+    return:
+      type: System.EventHandler{HuajiTech.QQ.Events.MessageReceivedEventArgs}
+    content.vb: Event MessageReceived As EventHandler(Of MessageReceivedEventArgs)
+- uid: HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+  commentId: E:HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+  id: AnonymousMessageReceived
+  parent: HuajiTech.QQ.Events.IMessageEventSource
+  langs:
+  - csharp
+  - vb
+  name: AnonymousMessageReceived
+  nameWithType: IMessageEventSource.AnonymousMessageReceived
+  fullName: HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+  type: Event
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IMessageEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: AnonymousMessageReceived
+    path: src/HuajiTech.QQ/Events/IMessageEventSource.cs
+    startLine: 17
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n在收到匿名消息时引发。\n"
+  example: []
+  syntax:
+    content: event EventHandler<AnonymousMessageReceivedEventArgs> AnonymousMessageReceived
+    return:
+      type: System.EventHandler{HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs}
+    content.vb: Event AnonymousMessageReceived As EventHandler(Of AnonymousMessageReceivedEventArgs)
+references:
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: System.EventHandler{HuajiTech.QQ.Events.MessageReceivedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.MessageReceivedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<MessageReceivedEventArgs>
+  nameWithType: EventHandler<MessageReceivedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.MessageReceivedEventArgs>
+  nameWithType.vb: EventHandler(Of MessageReceivedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.MessageReceivedEventArgs)
+  name.vb: EventHandler(Of MessageReceivedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Events.MessageReceivedEventArgs
+    name: MessageReceivedEventArgs
+    nameWithType: MessageReceivedEventArgs
+    fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Events.MessageReceivedEventArgs
+    name: MessageReceivedEventArgs
+    nameWithType: MessageReceivedEventArgs
+    fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<AnonymousMessageReceivedEventArgs>
+  nameWithType: EventHandler<AnonymousMessageReceivedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs>
+  nameWithType.vb: EventHandler(Of AnonymousMessageReceivedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs)
+  name.vb: EventHandler(Of AnonymousMessageReceivedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs
+    name: AnonymousMessageReceivedEventArgs
+    nameWithType: AnonymousMessageReceivedEventArgs
+    fullName: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs
+    name: AnonymousMessageReceivedEventArgs
+    nameWithType: AnonymousMessageReceivedEventArgs
+    fullName: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )

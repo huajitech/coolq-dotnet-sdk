@@ -14,11 +14,12 @@
 
 ```csharp
 using HuajiTech.CoolQ;
+using HuajiTech.QQ;
 using HuajiTech.QQ.Events;
 
 [assembly: AppId("com.example.repeater")]
 
-public class Repeater
+public class Repeater : Plugin
 {
     public Repeater(IMessageEventSource source)
     {

@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.ICurrentUserEventSource
+  commentId: T:HuajiTech.QQ.Events.ICurrentUserEventSource
+  id: ICurrentUserEventSource
+  parent: HuajiTech.QQ.Events
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ICurrentUserEventSource
+  nameWithType: ICurrentUserEventSource
+  fullName: HuajiTech.QQ.Events.ICurrentUserEventSource
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/ICurrentUserEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: ICurrentUserEventSource
+    path: src/HuajiTech.QQ/Events/ICurrentUserEventSource.cs
+    startLine: 2
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  syntax:
+    content: 'public interface ICurrentUserEventSource : IMessageEventSource, IEntranceInvitationEventSource, IContactEventSource'
+    content.vb: >-
+      Public Interface ICurrentUserEventSource
+
+          Inherits IMessageEventSource, IEntranceInvitationEventSource, IContactEventSource
+  inheritedMembers:
+  - HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  - HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+  - HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  - HuajiTech.QQ.Events.IContactEventSource.ContactAdded
+  - HuajiTech.QQ.Events.IContactEventSource.ContactRequested
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  commentId: E:HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  parent: HuajiTech.QQ.Events.IMessageEventSource
+  name: MessageReceived
+  nameWithType: IMessageEventSource.MessageReceived
+  fullName: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+- uid: HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+  commentId: E:HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+  parent: HuajiTech.QQ.Events.IMessageEventSource
+  name: AnonymousMessageReceived
+  nameWithType: IMessageEventSource.AnonymousMessageReceived
+  fullName: HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived
+- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  commentId: E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  parent: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  name: EntranceInvited
+  nameWithType: IEntranceInvitationEventSource.EntranceInvited
+  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+- uid: HuajiTech.QQ.Events.IContactEventSource.ContactAdded
+  commentId: E:HuajiTech.QQ.Events.IContactEventSource.ContactAdded
+  parent: HuajiTech.QQ.Events.IContactEventSource
+  name: ContactAdded
+  nameWithType: IContactEventSource.ContactAdded
+  fullName: HuajiTech.QQ.Events.IContactEventSource.ContactAdded
+- uid: HuajiTech.QQ.Events.IContactEventSource.ContactRequested
+  commentId: E:HuajiTech.QQ.Events.IContactEventSource.ContactRequested
+  parent: HuajiTech.QQ.Events.IContactEventSource
+  name: ContactRequested
+  nameWithType: IContactEventSource.ContactRequested
+  fullName: HuajiTech.QQ.Events.IContactEventSource.ContactRequested
+- uid: HuajiTech.QQ.Events.IMessageEventSource
+  commentId: T:HuajiTech.QQ.Events.IMessageEventSource
+  parent: HuajiTech.QQ.Events
+  name: IMessageEventSource
+  nameWithType: IMessageEventSource
+  fullName: HuajiTech.QQ.Events.IMessageEventSource
+- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  commentId: T:HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  parent: HuajiTech.QQ.Events
+  name: IEntranceInvitationEventSource
+  nameWithType: IEntranceInvitationEventSource
+  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+- uid: HuajiTech.QQ.Events.IContactEventSource
+  commentId: T:HuajiTech.QQ.Events.IContactEventSource
+  parent: HuajiTech.QQ.Events
+  name: IContactEventSource
+  nameWithType: IContactEventSource
+  fullName: HuajiTech.QQ.Events.IContactEventSource

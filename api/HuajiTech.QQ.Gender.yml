@@ -1,0 +1,153 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Gender
+  commentId: T:HuajiTech.QQ.Gender
+  id: Gender
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.Gender.Female
+  - HuajiTech.QQ.Gender.Male
+  - HuajiTech.QQ.Gender.Unknown
+  langs:
+  - csharp
+  - vb
+  name: Gender
+  nameWithType: Gender
+  fullName: HuajiTech.QQ.Gender
+  type: Enum
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Gender.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Gender
+    path: src/HuajiTech.QQ/Gender.cs
+    startLine: 5
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n指定性别。\n"
+  example: []
+  syntax:
+    content: public enum Gender
+    content.vb: Public Enum Gender
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: HuajiTech.QQ.Gender.Male
+  commentId: F:HuajiTech.QQ.Gender.Male
+  id: Male
+  parent: HuajiTech.QQ.Gender
+  langs:
+  - csharp
+  - vb
+  name: Male
+  nameWithType: Gender.Male
+  fullName: HuajiTech.QQ.Gender.Male
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Gender.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Male
+    path: src/HuajiTech.QQ/Gender.cs
+    startLine: 10
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n男。\n"
+  example: []
+  syntax:
+    content: Male = 0
+    return:
+      type: HuajiTech.QQ.Gender
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.QQ.Gender.Female
+  commentId: F:HuajiTech.QQ.Gender.Female
+  id: Female
+  parent: HuajiTech.QQ.Gender
+  langs:
+  - csharp
+  - vb
+  name: Female
+  nameWithType: Gender.Female
+  fullName: HuajiTech.QQ.Gender.Female
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Gender.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Female
+    path: src/HuajiTech.QQ/Gender.cs
+    startLine: 15
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n女。\n"
+  example: []
+  syntax:
+    content: Female = 1
+    return:
+      type: HuajiTech.QQ.Gender
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HuajiTech.QQ.Gender.Unknown
+  commentId: F:HuajiTech.QQ.Gender.Unknown
+  id: Unknown
+  parent: HuajiTech.QQ.Gender
+  langs:
+  - csharp
+  - vb
+  name: Unknown
+  nameWithType: Gender.Unknown
+  fullName: HuajiTech.QQ.Gender.Unknown
+  type: Field
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Gender.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Unknown
+    path: src/HuajiTech.QQ/Gender.cs
+    startLine: 20
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n未知。\n"
+  example: []
+  syntax:
+    content: Unknown = 255
+    return:
+      type: HuajiTech.QQ.Gender
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: HuajiTech.QQ.Gender
+  commentId: T:HuajiTech.QQ.Gender
+  parent: HuajiTech.QQ
+  name: Gender
+  nameWithType: Gender
+  fullName: HuajiTech.QQ.Gender

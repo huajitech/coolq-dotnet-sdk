@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Events.IMuteEventSource
+  commentId: T:HuajiTech.QQ.Events.IMuteEventSource
+  id: IMuteEventSource
+  parent: HuajiTech.QQ.Events
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IMuteEventSource
+  nameWithType: IMuteEventSource
+  fullName: HuajiTech.QQ.Events.IMuteEventSource
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Events/IMuteEventSource.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IMuteEventSource
+    path: src/HuajiTech.QQ/Events/IMuteEventSource.cs
+    startLine: 5
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ.Events
+  summary: "\n定义禁言事件\n"
+  example: []
+  syntax:
+    content: 'public interface IMuteEventSource : IGroupMuteEventSource, IMemberMuteEventSource'
+    content.vb: >-
+      Public Interface IMuteEventSource
+
+          Inherits IGroupMuteEventSource, IMemberMuteEventSource
+  inheritedMembers:
+  - HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted
+  - HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted
+  - HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  - HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: HuajiTech.QQ.Events
+  commentId: N:HuajiTech.QQ.Events
+  name: HuajiTech.QQ.Events
+  nameWithType: HuajiTech.QQ.Events
+  fullName: HuajiTech.QQ.Events
+- uid: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted
+  commentId: E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted
+  parent: HuajiTech.QQ.Events.IGroupMuteEventSource
+  name: GroupMuted
+  nameWithType: IGroupMuteEventSource.GroupMuted
+  fullName: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted
+- uid: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted
+  commentId: E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted
+  parent: HuajiTech.QQ.Events.IGroupMuteEventSource
+  name: GroupUnmuted
+  nameWithType: IGroupMuteEventSource.GroupUnmuted
+  fullName: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted
+- uid: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  commentId: E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  parent: HuajiTech.QQ.Events.IMemberMuteEventSource
+  name: MemberMuted
+  nameWithType: IMemberMuteEventSource.MemberMuted
+  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+- uid: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+  commentId: E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+  parent: HuajiTech.QQ.Events.IMemberMuteEventSource
+  name: MemberUnmuted
+  nameWithType: IMemberMuteEventSource.MemberUnmuted
+  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
+- uid: HuajiTech.QQ.Events.IGroupMuteEventSource
+  commentId: T:HuajiTech.QQ.Events.IGroupMuteEventSource
+  parent: HuajiTech.QQ.Events
+  name: IGroupMuteEventSource
+  nameWithType: IGroupMuteEventSource
+  fullName: HuajiTech.QQ.Events.IGroupMuteEventSource
+- uid: HuajiTech.QQ.Events.IMemberMuteEventSource
+  commentId: T:HuajiTech.QQ.Events.IMemberMuteEventSource
+  parent: HuajiTech.QQ.Events
+  name: IMemberMuteEventSource
+  nameWithType: IMemberMuteEventSource
+  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource

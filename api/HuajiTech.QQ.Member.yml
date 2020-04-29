@@ -1,0 +1,3415 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.Member
+  commentId: T:HuajiTech.QQ.Member
+  id: Member
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.Member.#ctor(System.Int64,HuajiTech.QQ.Group)
+  - HuajiTech.QQ.Member.Age
+  - HuajiTech.QQ.Member.Alias
+  - HuajiTech.QQ.Member.CanEditAlias
+  - HuajiTech.QQ.Member.CustomTitle
+  - HuajiTech.QQ.Member.DisplayName
+  - HuajiTech.QQ.Member.Equals(HuajiTech.QQ.IMember)
+  - HuajiTech.QQ.Member.Equals(System.Object)
+  - HuajiTech.QQ.Member.Gender
+  - HuajiTech.QQ.Member.GetHashCode
+  - HuajiTech.QQ.Member.Group
+  - HuajiTech.QQ.Member.HasBadRecord
+  - HuajiTech.QQ.Member.IsAdministrator
+  - HuajiTech.QQ.Member.Kick(System.Boolean)
+  - HuajiTech.QQ.Member.KickAsync(System.Boolean)
+  - HuajiTech.QQ.Member.LastSpeakTime
+  - HuajiTech.QQ.Member.Level
+  - HuajiTech.QQ.Member.Location
+  - HuajiTech.QQ.Member.Mute
+  - HuajiTech.QQ.Member.Mute(System.TimeSpan)
+  - HuajiTech.QQ.Member.MuteAsync
+  - HuajiTech.QQ.Member.MuteAsync(System.TimeSpan)
+  - HuajiTech.QQ.Member.Role
+  - HuajiTech.QQ.Member.SetAlias(System.String)
+  - HuajiTech.QQ.Member.SetAliasAsync(System.String)
+  - HuajiTech.QQ.Member.SetAsAdministrator
+  - HuajiTech.QQ.Member.SetAsAdministratorAsync
+  - HuajiTech.QQ.Member.SetCustomTitle(HuajiTech.QQ.CustomTitle)
+  - HuajiTech.QQ.Member.SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)
+  - HuajiTech.QQ.Member.TimeEntered
+  - HuajiTech.QQ.Member.Unmute
+  - HuajiTech.QQ.Member.UnmuteAsync
+  - HuajiTech.QQ.Member.UnsetAsAdministrator
+  - HuajiTech.QQ.Member.UnsetAsAdministratorAsync
+  langs:
+  - csharp
+  - vb
+  name: Member
+  nameWithType: Member
+  fullName: HuajiTech.QQ.Member
+  type: Class
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Member
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 9
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n表示成员。\n此类为抽象类。\n"
+  example: []
+  syntax:
+    content: 'public abstract class Member : User, ISendable, IEquatable<Chat>, IRequestable, IRefreshable, IMember, ITimedMuteable, IMuteable, IEquatable<IMember>, IAliased'
+    content.vb: >-
+      Public MustInherit Class Member
+
+          Inherits User
+
+          Implements ISendable, IEquatable(Of Chat), IRequestable, IRefreshable, IMember, ITimedMuteable, IMuteable, IEquatable(Of IMember), IAliased
+  inheritance:
+  - System.Object
+  - HuajiTech.QQ.Chat
+  - HuajiTech.QQ.User
+  implements:
+  - HuajiTech.QQ.ISendable
+  - System.IEquatable{HuajiTech.QQ.Chat}
+  - HuajiTech.QQ.IRequestable
+  - HuajiTech.QQ.IRefreshable
+  - HuajiTech.QQ.IMember
+  - HuajiTech.QQ.ITimedMuteable
+  - HuajiTech.QQ.IMuteable
+  - System.IEquatable{HuajiTech.QQ.IMember}
+  - HuajiTech.QQ.IAliased
+  inheritedMembers:
+  - HuajiTech.QQ.User.Nickname
+  - HuajiTech.QQ.User.HasRequested
+  - HuajiTech.QQ.User.GiveThumbsUp(System.Int32)
+  - HuajiTech.QQ.User.GiveThumbsUpAsync(System.Int32)
+  - HuajiTech.QQ.User.Refresh
+  - HuajiTech.QQ.User.RefreshAsync
+  - HuajiTech.QQ.User.Request
+  - HuajiTech.QQ.User.RequestAsync
+  - HuajiTech.QQ.Chat.Number
+  - HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - HuajiTech.QQ.Chat.Send(System.String)
+  - HuajiTech.QQ.Chat.SendAsync(System.String)
+  - HuajiTech.QQ.Chat.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - HuajiTech.QQ.User.HuajiTech.CoolQ.Messaging.Extensions.At
+  - HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  - HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  - HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.MessageElement)
+  - HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.MessageElement)
+  - HuajiTech.QQ.User.HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+  - HuajiTech.QQ.User.HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.Group)
+  - HuajiTech.QQ.User.HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(System.Int64)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: HuajiTech.QQ.Member.#ctor(System.Int64,HuajiTech.QQ.Group)
+  commentId: M:HuajiTech.QQ.Member.#ctor(System.Int64,HuajiTech.QQ.Group)
+  id: '#ctor(System.Int64,HuajiTech.QQ.Group)'
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Member(Int64, Group)
+  nameWithType: Member.Member(Int64, Group)
+  fullName: HuajiTech.QQ.Member.Member(System.Int64, HuajiTech.QQ.Group)
+  type: Constructor
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: .ctor
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 15
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以指定的号码和群初始化一个 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 类的新实例。\n"
+  example: []
+  syntax:
+    content: protected Member(long number, Group group)
+    parameters:
+    - id: number
+      type: System.Int64
+    - id: group
+      type: HuajiTech.QQ.Group
+    content.vb: Protected Sub New(number As Long, group As Group)
+  overload: HuajiTech.QQ.Member.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code data-dev-comment-type="paramref" class="paramref">group</code> 为 <code>null</code>。
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: HuajiTech.QQ.Member.Age
+  commentId: P:HuajiTech.QQ.Member.Age
+  id: Age
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Age
+  nameWithType: Member.Age
+  fullName: HuajiTech.QQ.Member.Age
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Age
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 24
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的年龄。\n"
+  example: []
+  syntax:
+    content: public abstract int Age { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public MustOverride ReadOnly Property Age As Integer
+  overload: HuajiTech.QQ.Member.Age*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.Alias
+  commentId: P:HuajiTech.QQ.Member.Alias
+  id: Alias
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Alias
+  nameWithType: Member.Alias
+  fullName: HuajiTech.QQ.Member.Alias
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Alias
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 26
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public abstract string Alias { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public MustOverride ReadOnly Property Alias As String
+  overload: HuajiTech.QQ.Member.Alias*
+  implements:
+  - HuajiTech.QQ.IAliased.Alias
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.CanEditAlias
+  commentId: P:HuajiTech.QQ.Member.CanEditAlias
+  id: CanEditAlias
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: CanEditAlias
+  nameWithType: Member.CanEditAlias
+  fullName: HuajiTech.QQ.Member.CanEditAlias
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: CanEditAlias
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 31
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取一个值，指示当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象是否可以编辑 <xref href=\"HuajiTech.QQ.Member.Alias\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public abstract bool CanEditAlias { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride ReadOnly Property CanEditAlias As Boolean
+  overload: HuajiTech.QQ.Member.CanEditAlias*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.CustomTitle
+  commentId: P:HuajiTech.QQ.Member.CustomTitle
+  id: CustomTitle
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: CustomTitle
+  nameWithType: Member.CustomTitle
+  fullName: HuajiTech.QQ.Member.CustomTitle
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: CustomTitle
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 36
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的自定义头衔。\n"
+  example: []
+  syntax:
+    content: public abstract CustomTitle CustomTitle { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.CustomTitle
+    content.vb: Public MustOverride ReadOnly Property CustomTitle As CustomTitle
+  overload: HuajiTech.QQ.Member.CustomTitle*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.DisplayName
+  commentId: P:HuajiTech.QQ.Member.DisplayName
+  id: DisplayName
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: Member.DisplayName
+  fullName: HuajiTech.QQ.Member.DisplayName
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: DisplayName
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 41
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的显示名称。\n"
+  example: []
+  syntax:
+    content: public override string DisplayName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property DisplayName As String
+  overridden: HuajiTech.QQ.Chat.DisplayName
+  overload: HuajiTech.QQ.Member.DisplayName*
+  implements:
+  - HuajiTech.QQ.IAliased.DisplayName
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.TimeEntered
+  commentId: P:HuajiTech.QQ.Member.TimeEntered
+  id: TimeEntered
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: TimeEntered
+  nameWithType: Member.TimeEntered
+  fullName: HuajiTech.QQ.Member.TimeEntered
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: TimeEntered
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 46
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象加入 <xref href=\"HuajiTech.QQ.Member.Group\" data-throw-if-not-resolved=\"false\"></xref> 的时间。\n"
+  example: []
+  syntax:
+    content: public abstract DateTime TimeEntered { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public MustOverride ReadOnly Property TimeEntered As Date
+  overload: HuajiTech.QQ.Member.TimeEntered*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.Gender
+  commentId: P:HuajiTech.QQ.Member.Gender
+  id: Gender
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Gender
+  nameWithType: Member.Gender
+  fullName: HuajiTech.QQ.Member.Gender
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Gender
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 51
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的性别。\n"
+  example: []
+  syntax:
+    content: public abstract Gender Gender { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.Gender
+    content.vb: Public MustOverride ReadOnly Property Gender As Gender
+  overload: HuajiTech.QQ.Member.Gender*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.Group
+  commentId: P:HuajiTech.QQ.Member.Group
+  id: Group
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: Member.Group
+  fullName: HuajiTech.QQ.Member.Group
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Group
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 56
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的所属 <xref href=\"HuajiTech.QQ.Group\" data-throw-if-not-resolved=\"false\"></xref> 对象。\n"
+  example: []
+  syntax:
+    content: public Group Group { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.Group
+    content.vb: Public ReadOnly Property Group As Group
+  overload: HuajiTech.QQ.Member.Group*
+  implements:
+  - HuajiTech.QQ.IMember.Group
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.HasBadRecord
+  commentId: P:HuajiTech.QQ.Member.HasBadRecord
+  id: HasBadRecord
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: HasBadRecord
+  nameWithType: Member.HasBadRecord
+  fullName: HuajiTech.QQ.Member.HasBadRecord
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: HasBadRecord
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 61
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取一个值，指示当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象是否有不良记录。\n"
+  example: []
+  syntax:
+    content: public abstract bool HasBadRecord { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride ReadOnly Property HasBadRecord As Boolean
+  overload: HuajiTech.QQ.Member.HasBadRecord*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.IsAdministrator
+  commentId: P:HuajiTech.QQ.Member.IsAdministrator
+  id: IsAdministrator
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: IsAdministrator
+  nameWithType: Member.IsAdministrator
+  fullName: HuajiTech.QQ.Member.IsAdministrator
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IsAdministrator
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 66
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取一个值，指示当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象是否为管理员或群主。\n"
+  example: []
+  syntax:
+    content: public virtual bool IsAdministrator { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable ReadOnly Property IsAdministrator As Boolean
+  overload: HuajiTech.QQ.Member.IsAdministrator*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.LastSpeakTime
+  commentId: P:HuajiTech.QQ.Member.LastSpeakTime
+  id: LastSpeakTime
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: LastSpeakTime
+  nameWithType: Member.LastSpeakTime
+  fullName: HuajiTech.QQ.Member.LastSpeakTime
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: LastSpeakTime
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 71
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的最后发言时间。\n"
+  example: []
+  syntax:
+    content: public abstract DateTime LastSpeakTime { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public MustOverride ReadOnly Property LastSpeakTime As Date
+  overload: HuajiTech.QQ.Member.LastSpeakTime*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.Level
+  commentId: P:HuajiTech.QQ.Member.Level
+  id: Level
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Member.Level
+  fullName: HuajiTech.QQ.Member.Level
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Level
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 76
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的等级。\n"
+  example: []
+  syntax:
+    content: public abstract string Level { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public MustOverride ReadOnly Property Level As String
+  overload: HuajiTech.QQ.Member.Level*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.Location
+  commentId: P:HuajiTech.QQ.Member.Location
+  id: Location
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Member.Location
+  fullName: HuajiTech.QQ.Member.Location
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Location
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 81
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的位置。\n"
+  example: []
+  syntax:
+    content: public abstract string Location { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public MustOverride ReadOnly Property Location As String
+  overload: HuajiTech.QQ.Member.Location*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.Role
+  commentId: P:HuajiTech.QQ.Member.Role
+  id: Role
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Role
+  nameWithType: Member.Role
+  fullName: HuajiTech.QQ.Member.Role
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Role
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 86
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的角色。\n"
+  example: []
+  syntax:
+    content: public abstract MemberRole Role { get; }
+    parameters: []
+    return:
+      type: HuajiTech.QQ.MemberRole
+    content.vb: Public MustOverride ReadOnly Property Role As MemberRole
+  overload: HuajiTech.QQ.Member.Role*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: HuajiTech.QQ.Member.Equals(HuajiTech.QQ.IMember)
+  commentId: M:HuajiTech.QQ.Member.Equals(HuajiTech.QQ.IMember)
+  id: Equals(HuajiTech.QQ.IMember)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Equals(IMember)
+  nameWithType: Member.Equals(IMember)
+  fullName: HuajiTech.QQ.Member.Equals(HuajiTech.QQ.IMember)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Equals
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 88
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public virtual bool Equals(IMember other)
+    parameters:
+    - id: other
+      type: HuajiTech.QQ.IMember
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Equals(other As IMember) As Boolean
+  overload: HuajiTech.QQ.Member.Equals*
+  implements:
+  - System.IEquatable{HuajiTech.QQ.IMember}.Equals(HuajiTech.QQ.IMember)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.Equals(System.Object)
+  commentId: M:HuajiTech.QQ.Member.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Member.Equals(Object)
+  fullName: HuajiTech.QQ.Member.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Equals
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 90
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: HuajiTech.QQ.Chat.Equals(System.Object)
+  overload: HuajiTech.QQ.Member.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: HuajiTech.QQ.Member.GetHashCode
+  commentId: M:HuajiTech.QQ.Member.GetHashCode
+  id: GetHashCode
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Member.GetHashCode()
+  fullName: HuajiTech.QQ.Member.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: GetHashCode
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 92
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: HuajiTech.QQ.Chat.GetHashCode
+  overload: HuajiTech.QQ.Member.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: HuajiTech.QQ.Member.Kick(System.Boolean)
+  commentId: M:HuajiTech.QQ.Member.Kick(System.Boolean)
+  id: Kick(System.Boolean)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Kick(Boolean)
+  nameWithType: Member.Kick(Boolean)
+  fullName: HuajiTech.QQ.Member.Kick(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Kick
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 98
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n将当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象踢出所在群。\n"
+  example: []
+  syntax:
+    content: public abstract void Kick(bool disallowRejoin = false)
+    parameters:
+    - id: disallowRejoin
+      type: System.Boolean
+      description: 如果不再接收当前 <xref href="HuajiTech.QQ.Member" data-throw-if-not-resolved="false"></xref> 对象的 <xref href="HuajiTech.QQ.EntranceRequest" data-throw-if-not-resolved="false"></xref>，则为 <code>true</code>；否则为 <code>false</code>。
+    content.vb: Public MustOverride Sub Kick(disallowRejoin As Boolean = False)
+  overload: HuajiTech.QQ.Member.Kick*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.KickAsync(System.Boolean)
+  commentId: M:HuajiTech.QQ.Member.KickAsync(System.Boolean)
+  id: KickAsync(System.Boolean)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: KickAsync(Boolean)
+  nameWithType: Member.KickAsync(Boolean)
+  fullName: HuajiTech.QQ.Member.KickAsync(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: KickAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 103
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作将当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象踢出所在群。\n"
+  example: []
+  syntax:
+    content: public virtual Task KickAsync(bool disallowRejoin = false)
+    parameters:
+    - id: disallowRejoin
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function KickAsync(disallowRejoin As Boolean = False) As Task
+  overload: HuajiTech.QQ.Member.KickAsync*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.Mute(System.TimeSpan)
+  commentId: M:HuajiTech.QQ.Member.Mute(System.TimeSpan)
+  id: Mute(System.TimeSpan)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Mute(TimeSpan)
+  nameWithType: Member.Mute(TimeSpan)
+  fullName: HuajiTech.QQ.Member.Mute(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Mute
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 105
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public abstract void Mute(TimeSpan duration)
+    parameters:
+    - id: duration
+      type: System.TimeSpan
+    content.vb: Public MustOverride Sub Mute(duration As TimeSpan)
+  overload: HuajiTech.QQ.Member.Mute*
+  implements:
+  - HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.Mute
+  commentId: M:HuajiTech.QQ.Member.Mute
+  id: Mute
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Mute()
+  nameWithType: Member.Mute()
+  fullName: HuajiTech.QQ.Member.Mute()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Mute
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 107
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public abstract void Mute()
+    content.vb: Public MustOverride Sub Mute
+  overload: HuajiTech.QQ.Member.Mute*
+  implements:
+  - HuajiTech.QQ.IMuteable.Mute
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.MuteAsync(System.TimeSpan)
+  commentId: M:HuajiTech.QQ.Member.MuteAsync(System.TimeSpan)
+  id: MuteAsync(System.TimeSpan)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: MuteAsync(TimeSpan)
+  nameWithType: Member.MuteAsync(TimeSpan)
+  fullName: HuajiTech.QQ.Member.MuteAsync(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MuteAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 109
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public virtual Task MuteAsync(TimeSpan duration)
+    parameters:
+    - id: duration
+      type: System.TimeSpan
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function MuteAsync(duration As TimeSpan) As Task
+  overload: HuajiTech.QQ.Member.MuteAsync*
+  implements:
+  - HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.MuteAsync
+  commentId: M:HuajiTech.QQ.Member.MuteAsync
+  id: MuteAsync
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: MuteAsync()
+  nameWithType: Member.MuteAsync()
+  fullName: HuajiTech.QQ.Member.MuteAsync()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: MuteAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 111
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public virtual Task MuteAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function MuteAsync As Task
+  overload: HuajiTech.QQ.Member.MuteAsync*
+  implements:
+  - HuajiTech.QQ.IMuteable.MuteAsync
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.SetAlias(System.String)
+  commentId: M:HuajiTech.QQ.Member.SetAlias(System.String)
+  id: SetAlias(System.String)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: SetAlias(String)
+  nameWithType: Member.SetAlias(String)
+  fullName: HuajiTech.QQ.Member.SetAlias(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetAlias
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 117
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n设置当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的 <xref href=\"HuajiTech.QQ.Member.Alias\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public abstract void SetAlias(string alias)
+    parameters:
+    - id: alias
+      type: System.String
+      description: 要设置的 <xref href="HuajiTech.QQ.Member.Alias" data-throw-if-not-resolved="false"></xref> 的值。
+    content.vb: Public MustOverride Sub SetAlias(alias As String)
+  overload: HuajiTech.QQ.Member.SetAlias*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.SetAliasAsync(System.String)
+  commentId: M:HuajiTech.QQ.Member.SetAliasAsync(System.String)
+  id: SetAliasAsync(System.String)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: SetAliasAsync(String)
+  nameWithType: Member.SetAliasAsync(String)
+  fullName: HuajiTech.QQ.Member.SetAliasAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetAliasAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 123
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作设置当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的 <xref href=\"HuajiTech.QQ.Member.Alias\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public virtual Task SetAliasAsync(string alias)
+    parameters:
+    - id: alias
+      type: System.String
+      description: 要设置的 <xref href="HuajiTech.QQ.Member.Alias" data-throw-if-not-resolved="false"></xref> 的值。
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function SetAliasAsync(alias As String) As Task
+  overload: HuajiTech.QQ.Member.SetAliasAsync*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.SetAsAdministrator
+  commentId: M:HuajiTech.QQ.Member.SetAsAdministrator
+  id: SetAsAdministrator
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: SetAsAdministrator()
+  nameWithType: Member.SetAsAdministrator()
+  fullName: HuajiTech.QQ.Member.SetAsAdministrator()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetAsAdministrator
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 128
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n将当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象设为 <xref href=\"HuajiTech.QQ.Member.Group\" data-throw-if-not-resolved=\"false\"></xref> 的管理员。\n"
+  example: []
+  syntax:
+    content: public abstract void SetAsAdministrator()
+    content.vb: Public MustOverride Sub SetAsAdministrator
+  overload: HuajiTech.QQ.Member.SetAsAdministrator*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.SetAsAdministratorAsync
+  commentId: M:HuajiTech.QQ.Member.SetAsAdministratorAsync
+  id: SetAsAdministratorAsync
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: SetAsAdministratorAsync()
+  nameWithType: Member.SetAsAdministratorAsync()
+  fullName: HuajiTech.QQ.Member.SetAsAdministratorAsync()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetAsAdministratorAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 133
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作将当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象设为 <xref href=\"HuajiTech.QQ.Member.Group\" data-throw-if-not-resolved=\"false\"></xref> 的管理员。\n"
+  example: []
+  syntax:
+    content: public virtual Task SetAsAdministratorAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function SetAsAdministratorAsync As Task
+  overload: HuajiTech.QQ.Member.SetAsAdministratorAsync*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.SetCustomTitle(HuajiTech.QQ.CustomTitle)
+  commentId: M:HuajiTech.QQ.Member.SetCustomTitle(HuajiTech.QQ.CustomTitle)
+  id: SetCustomTitle(HuajiTech.QQ.CustomTitle)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: SetCustomTitle(CustomTitle)
+  nameWithType: Member.SetCustomTitle(CustomTitle)
+  fullName: HuajiTech.QQ.Member.SetCustomTitle(HuajiTech.QQ.CustomTitle)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetCustomTitle
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 139
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n设置当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的 <xref href=\"HuajiTech.QQ.Member.CustomTitle\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public abstract void SetCustomTitle(CustomTitle title)
+    parameters:
+    - id: title
+      type: HuajiTech.QQ.CustomTitle
+      description: 要设置的 <xref href="HuajiTech.QQ.Member.CustomTitle" data-throw-if-not-resolved="false"></xref> 的值。
+    content.vb: Public MustOverride Sub SetCustomTitle(title As CustomTitle)
+  overload: HuajiTech.QQ.Member.SetCustomTitle*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)
+  commentId: M:HuajiTech.QQ.Member.SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)
+  id: SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: SetCustomTitleAsync(CustomTitle)
+  nameWithType: Member.SetCustomTitleAsync(CustomTitle)
+  fullName: HuajiTech.QQ.Member.SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: SetCustomTitleAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 145
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作设置当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象的 <xref href=\"HuajiTech.QQ.Member.CustomTitle\" data-throw-if-not-resolved=\"false\"></xref>。\n"
+  example: []
+  syntax:
+    content: public virtual Task SetCustomTitleAsync(CustomTitle title)
+    parameters:
+    - id: title
+      type: HuajiTech.QQ.CustomTitle
+      description: 要设置的 <xref href="HuajiTech.QQ.Member.CustomTitle" data-throw-if-not-resolved="false"></xref> 的值。
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function SetCustomTitleAsync(title As CustomTitle) As Task
+  overload: HuajiTech.QQ.Member.SetCustomTitleAsync*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.Unmute
+  commentId: M:HuajiTech.QQ.Member.Unmute
+  id: Unmute
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: Unmute()
+  nameWithType: Member.Unmute()
+  fullName: HuajiTech.QQ.Member.Unmute()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Unmute
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 147
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public abstract void Unmute()
+    content.vb: Public MustOverride Sub Unmute
+  overload: HuajiTech.QQ.Member.Unmute*
+  implements:
+  - HuajiTech.QQ.IMuteable.Unmute
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.UnmuteAsync
+  commentId: M:HuajiTech.QQ.Member.UnmuteAsync
+  id: UnmuteAsync
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: UnmuteAsync()
+  nameWithType: Member.UnmuteAsync()
+  fullName: HuajiTech.QQ.Member.UnmuteAsync()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: UnmuteAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 149
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  syntax:
+    content: public virtual Task UnmuteAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function UnmuteAsync As Task
+  overload: HuajiTech.QQ.Member.UnmuteAsync*
+  implements:
+  - HuajiTech.QQ.IMuteable.UnmuteAsync
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: HuajiTech.QQ.Member.UnsetAsAdministrator
+  commentId: M:HuajiTech.QQ.Member.UnsetAsAdministrator
+  id: UnsetAsAdministrator
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: UnsetAsAdministrator()
+  nameWithType: Member.UnsetAsAdministrator()
+  fullName: HuajiTech.QQ.Member.UnsetAsAdministrator()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: UnsetAsAdministrator
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 154
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n解除当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象在 <xref href=\"HuajiTech.QQ.Member.Group\" data-throw-if-not-resolved=\"false\"></xref> 的管理员身份。\n"
+  example: []
+  syntax:
+    content: public abstract void UnsetAsAdministrator()
+    content.vb: Public MustOverride Sub UnsetAsAdministrator
+  overload: HuajiTech.QQ.Member.UnsetAsAdministrator*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: HuajiTech.QQ.Member.UnsetAsAdministratorAsync
+  commentId: M:HuajiTech.QQ.Member.UnsetAsAdministratorAsync
+  id: UnsetAsAdministratorAsync
+  parent: HuajiTech.QQ.Member
+  langs:
+  - csharp
+  - vb
+  name: UnsetAsAdministratorAsync()
+  nameWithType: Member.UnsetAsAdministratorAsync()
+  fullName: HuajiTech.QQ.Member.UnsetAsAdministratorAsync()
+  type: Method
+  source:
+    remote:
+      path: src/HuajiTech.QQ/Member.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: UnsetAsAdministratorAsync
+    path: src/HuajiTech.QQ/Member.cs
+    startLine: 159
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n以异步操作解除当前 <xref href=\"HuajiTech.QQ.Member\" data-throw-if-not-resolved=\"false\"></xref> 对象在 <xref href=\"HuajiTech.QQ.Member.Group\" data-throw-if-not-resolved=\"false\"></xref> 的管理员身份。\n"
+  example: []
+  syntax:
+    content: public virtual Task UnsetAsAdministratorAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overridable Function UnsetAsAdministratorAsync As Task
+  overload: HuajiTech.QQ.Member.UnsetAsAdministratorAsync*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: HuajiTech.QQ.Chat
+  commentId: T:HuajiTech.QQ.Chat
+  parent: HuajiTech.QQ
+  name: Chat
+  nameWithType: Chat
+  fullName: HuajiTech.QQ.Chat
+- uid: HuajiTech.QQ.User
+  commentId: T:HuajiTech.QQ.User
+  parent: HuajiTech.QQ
+  name: User
+  nameWithType: User
+  fullName: HuajiTech.QQ.User
+- uid: HuajiTech.QQ.ISendable
+  commentId: T:HuajiTech.QQ.ISendable
+  parent: HuajiTech.QQ
+  name: ISendable
+  nameWithType: ISendable
+  fullName: HuajiTech.QQ.ISendable
+- uid: System.IEquatable{HuajiTech.QQ.Chat}
+  commentId: T:System.IEquatable{HuajiTech.QQ.Chat}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Chat>
+  nameWithType: IEquatable<Chat>
+  fullName: System.IEquatable<HuajiTech.QQ.Chat>
+  nameWithType.vb: IEquatable(Of Chat)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat)
+  name.vb: IEquatable(Of Chat)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.IRequestable
+  commentId: T:HuajiTech.QQ.IRequestable
+  parent: HuajiTech.QQ
+  name: IRequestable
+  nameWithType: IRequestable
+  fullName: HuajiTech.QQ.IRequestable
+- uid: HuajiTech.QQ.IRefreshable
+  commentId: T:HuajiTech.QQ.IRefreshable
+  parent: HuajiTech.QQ
+  name: IRefreshable
+  nameWithType: IRefreshable
+  fullName: HuajiTech.QQ.IRefreshable
+- uid: HuajiTech.QQ.IMember
+  commentId: T:HuajiTech.QQ.IMember
+  parent: HuajiTech.QQ
+  name: IMember
+  nameWithType: IMember
+  fullName: HuajiTech.QQ.IMember
+- uid: HuajiTech.QQ.ITimedMuteable
+  commentId: T:HuajiTech.QQ.ITimedMuteable
+  parent: HuajiTech.QQ
+  name: ITimedMuteable
+  nameWithType: ITimedMuteable
+  fullName: HuajiTech.QQ.ITimedMuteable
+- uid: HuajiTech.QQ.IMuteable
+  commentId: T:HuajiTech.QQ.IMuteable
+  parent: HuajiTech.QQ
+  name: IMuteable
+  nameWithType: IMuteable
+  fullName: HuajiTech.QQ.IMuteable
+- uid: System.IEquatable{HuajiTech.QQ.IMember}
+  commentId: T:System.IEquatable{HuajiTech.QQ.IMember}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<IMember>
+  nameWithType: IEquatable<IMember>
+  fullName: System.IEquatable<HuajiTech.QQ.IMember>
+  nameWithType.vb: IEquatable(Of IMember)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IMember)
+  name.vb: IEquatable(Of IMember)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HuajiTech.QQ.IMember
+    name: IMember
+    nameWithType: IMember
+    fullName: HuajiTech.QQ.IMember
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HuajiTech.QQ.IMember
+    name: IMember
+    nameWithType: IMember
+    fullName: HuajiTech.QQ.IMember
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.IAliased
+  commentId: T:HuajiTech.QQ.IAliased
+  parent: HuajiTech.QQ
+  name: IAliased
+  nameWithType: IAliased
+  fullName: HuajiTech.QQ.IAliased
+- uid: HuajiTech.QQ.User.Nickname
+  commentId: P:HuajiTech.QQ.User.Nickname
+  parent: HuajiTech.QQ.User
+  name: Nickname
+  nameWithType: User.Nickname
+  fullName: HuajiTech.QQ.User.Nickname
+- uid: HuajiTech.QQ.User.HasRequested
+  commentId: P:HuajiTech.QQ.User.HasRequested
+  parent: HuajiTech.QQ.User
+  name: HasRequested
+  nameWithType: User.HasRequested
+  fullName: HuajiTech.QQ.User.HasRequested
+- uid: HuajiTech.QQ.User.GiveThumbsUp(System.Int32)
+  commentId: M:HuajiTech.QQ.User.GiveThumbsUp(System.Int32)
+  parent: HuajiTech.QQ.User
+  isExternal: true
+  name: GiveThumbsUp(Int32)
+  nameWithType: User.GiveThumbsUp(Int32)
+  fullName: HuajiTech.QQ.User.GiveThumbsUp(System.Int32)
+  spec.csharp:
+  - uid: HuajiTech.QQ.User.GiveThumbsUp(System.Int32)
+    name: GiveThumbsUp
+    nameWithType: User.GiveThumbsUp
+    fullName: HuajiTech.QQ.User.GiveThumbsUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.User.GiveThumbsUp(System.Int32)
+    name: GiveThumbsUp
+    nameWithType: User.GiveThumbsUp
+    fullName: HuajiTech.QQ.User.GiveThumbsUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.GiveThumbsUpAsync(System.Int32)
+  commentId: M:HuajiTech.QQ.User.GiveThumbsUpAsync(System.Int32)
+  parent: HuajiTech.QQ.User
+  isExternal: true
+  name: GiveThumbsUpAsync(Int32)
+  nameWithType: User.GiveThumbsUpAsync(Int32)
+  fullName: HuajiTech.QQ.User.GiveThumbsUpAsync(System.Int32)
+  spec.csharp:
+  - uid: HuajiTech.QQ.User.GiveThumbsUpAsync(System.Int32)
+    name: GiveThumbsUpAsync
+    nameWithType: User.GiveThumbsUpAsync
+    fullName: HuajiTech.QQ.User.GiveThumbsUpAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.User.GiveThumbsUpAsync(System.Int32)
+    name: GiveThumbsUpAsync
+    nameWithType: User.GiveThumbsUpAsync
+    fullName: HuajiTech.QQ.User.GiveThumbsUpAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.Refresh
+  commentId: M:HuajiTech.QQ.User.Refresh
+  parent: HuajiTech.QQ.User
+  name: Refresh()
+  nameWithType: User.Refresh()
+  fullName: HuajiTech.QQ.User.Refresh()
+  spec.csharp:
+  - uid: HuajiTech.QQ.User.Refresh
+    name: Refresh
+    nameWithType: User.Refresh
+    fullName: HuajiTech.QQ.User.Refresh
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.User.Refresh
+    name: Refresh
+    nameWithType: User.Refresh
+    fullName: HuajiTech.QQ.User.Refresh
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.RefreshAsync
+  commentId: M:HuajiTech.QQ.User.RefreshAsync
+  parent: HuajiTech.QQ.User
+  name: RefreshAsync()
+  nameWithType: User.RefreshAsync()
+  fullName: HuajiTech.QQ.User.RefreshAsync()
+  spec.csharp:
+  - uid: HuajiTech.QQ.User.RefreshAsync
+    name: RefreshAsync
+    nameWithType: User.RefreshAsync
+    fullName: HuajiTech.QQ.User.RefreshAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.User.RefreshAsync
+    name: RefreshAsync
+    nameWithType: User.RefreshAsync
+    fullName: HuajiTech.QQ.User.RefreshAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.Request
+  commentId: M:HuajiTech.QQ.User.Request
+  parent: HuajiTech.QQ.User
+  name: Request()
+  nameWithType: User.Request()
+  fullName: HuajiTech.QQ.User.Request()
+  spec.csharp:
+  - uid: HuajiTech.QQ.User.Request
+    name: Request
+    nameWithType: User.Request
+    fullName: HuajiTech.QQ.User.Request
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.User.Request
+    name: Request
+    nameWithType: User.Request
+    fullName: HuajiTech.QQ.User.Request
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.RequestAsync
+  commentId: M:HuajiTech.QQ.User.RequestAsync
+  parent: HuajiTech.QQ.User
+  name: RequestAsync()
+  nameWithType: User.RequestAsync()
+  fullName: HuajiTech.QQ.User.RequestAsync()
+  spec.csharp:
+  - uid: HuajiTech.QQ.User.RequestAsync
+    name: RequestAsync
+    nameWithType: User.RequestAsync
+    fullName: HuajiTech.QQ.User.RequestAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.User.RequestAsync
+    name: RequestAsync
+    nameWithType: User.RequestAsync
+    fullName: HuajiTech.QQ.User.RequestAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.Number
+  commentId: P:HuajiTech.QQ.Chat.Number
+  parent: HuajiTech.QQ.Chat
+  name: Number
+  nameWithType: Chat.Number
+  fullName: HuajiTech.QQ.Chat.Number
+- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  parent: HuajiTech.QQ.Chat
+  name: Equals(Chat)
+  nameWithType: Chat.Equals(Chat)
+  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  spec.csharp:
+  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+    name: Equals
+    nameWithType: Chat.Equals
+    fullName: HuajiTech.QQ.Chat.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+    name: Equals
+    nameWithType: Chat.Equals
+    fullName: HuajiTech.QQ.Chat.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.Send(System.String)
+  commentId: M:HuajiTech.QQ.Chat.Send(System.String)
+  parent: HuajiTech.QQ.Chat
+  isExternal: true
+  name: Send(String)
+  nameWithType: Chat.Send(String)
+  fullName: HuajiTech.QQ.Chat.Send(System.String)
+  spec.csharp:
+  - uid: HuajiTech.QQ.Chat.Send(System.String)
+    name: Send
+    nameWithType: Chat.Send
+    fullName: HuajiTech.QQ.Chat.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Chat.Send(System.String)
+    name: Send
+    nameWithType: Chat.Send
+    fullName: HuajiTech.QQ.Chat.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.SendAsync(System.String)
+  commentId: M:HuajiTech.QQ.Chat.SendAsync(System.String)
+  parent: HuajiTech.QQ.Chat
+  isExternal: true
+  name: SendAsync(String)
+  nameWithType: Chat.SendAsync(String)
+  fullName: HuajiTech.QQ.Chat.SendAsync(System.String)
+  spec.csharp:
+  - uid: HuajiTech.QQ.Chat.SendAsync(System.String)
+    name: SendAsync
+    nameWithType: Chat.SendAsync
+    fullName: HuajiTech.QQ.Chat.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Chat.SendAsync(System.String)
+    name: SendAsync
+    nameWithType: Chat.SendAsync
+    fullName: HuajiTech.QQ.Chat.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.ToString
+  commentId: M:HuajiTech.QQ.Chat.ToString
+  parent: HuajiTech.QQ.Chat
+  name: ToString()
+  nameWithType: Chat.ToString()
+  fullName: HuajiTech.QQ.Chat.ToString()
+  spec.csharp:
+  - uid: HuajiTech.QQ.Chat.ToString
+    name: ToString
+    nameWithType: Chat.ToString
+    fullName: HuajiTech.QQ.Chat.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Chat.ToString
+    name: ToString
+    nameWithType: Chat.ToString
+    fullName: HuajiTech.QQ.Chat.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.HuajiTech.CoolQ.Messaging.Extensions.At
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  definition: HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  name: At()
+  nameWithType: Extensions.At()
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.At()
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.At
+    name: At
+    nameWithType: Extensions.At
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.At
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.At
+    name: At
+    nameWithType: Extensions.At
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.At
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  definition: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Send(ComplexMessage)
+  nameWithType: Extensions.Send(ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  definition: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: SendAsync(ComplexMessage)
+  nameWithType: Extensions.SendAsync(ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.ComplexMessage)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  definition: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Send(MessageElement)
+  nameWithType: Extensions.Send(MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.MessageElement)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  parent: HuajiTech.CoolQ.Messaging.Extensions
+  definition: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: SendAsync(MessageElement)
+  nameWithType: Extensions.SendAsync(MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.MessageElement)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.MessageElement)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  definition: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  name: AsUser()
+  nameWithType: CurrentPluginContextExtensions.AsUser()
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser()
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+    name: AsUser
+    nameWithType: CurrentPluginContextExtensions.AsUser
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+    name: AsUser
+    nameWithType: CurrentPluginContextExtensions.AsUser
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.Group)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  definition: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  name: AsMemberOf(Group)
+  nameWithType: CurrentPluginContextExtensions.AsMemberOf(Group)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.Group)
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.Group)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Group
+    name: Group
+    nameWithType: Group
+    fullName: HuajiTech.QQ.Group
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.Group)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Group
+    name: Group
+    nameWithType: Group
+    fullName: HuajiTech.QQ.Group
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.User.HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(System.Int64)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  definition: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  name: AsMemberOf(Int64)
+  nameWithType: CurrentPluginContextExtensions.AsMemberOf(Int64)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(System.Int64)
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(System.Int64)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(System.Int64)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  name: At(User)
+  nameWithType: Extensions.At(User)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+    name: At
+    nameWithType: Extensions.At
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.At
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
+    name: At
+    nameWithType: Extensions.At
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.At
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.Extensions
+  commentId: T:HuajiTech.CoolQ.Messaging.Extensions
+  parent: HuajiTech.CoolQ.Messaging
+  name: Extensions
+  nameWithType: Extensions
+  fullName: HuajiTech.CoolQ.Messaging.Extensions
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Send(Chat, ComplexMessage)
+  nameWithType: Extensions.Send(Chat, ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: SendAsync(Chat, ComplexMessage)
+  nameWithType: Extensions.SendAsync(Chat, ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.ComplexMessage
+    name: ComplexMessage
+    nameWithType: ComplexMessage
+    fullName: HuajiTech.CoolQ.Messaging.ComplexMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Send(Chat, MessageElement)
+  nameWithType: Extensions.Send(Chat, MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+    name: Send
+    nameWithType: Extensions.Send
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: SendAsync(Chat, MessageElement)
+  nameWithType: Extensions.SendAsync(Chat, MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
+  spec.csharp:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+    name: SendAsync
+    nameWithType: Extensions.SendAsync
+    fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.CoolQ.Messaging.MessageElement
+    name: MessageElement
+    nameWithType: MessageElement
+    fullName: HuajiTech.CoolQ.Messaging.MessageElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  name: AsUser(User)
+  nameWithType: CurrentPluginContextExtensions.AsUser(User)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+    name: AsUser
+    nameWithType: CurrentPluginContextExtensions.AsUser
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
+    name: AsUser
+    nameWithType: CurrentPluginContextExtensions.AsUser
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions
+  commentId: T:HuajiTech.QQ.CurrentPluginContextExtensions
+  parent: HuajiTech.QQ
+  name: CurrentPluginContextExtensions
+  nameWithType: CurrentPluginContextExtensions
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+  name: AsMemberOf(User, Group)
+  nameWithType: CurrentPluginContextExtensions.AsMemberOf(User, Group)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User, HuajiTech.QQ.Group)
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.QQ.Group
+    name: Group
+    nameWithType: Group
+    fullName: HuajiTech.QQ.Group
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: HuajiTech.QQ.Group
+    name: Group
+    nameWithType: Group
+    fullName: HuajiTech.QQ.Group
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+  isExternal: true
+  name: AsMemberOf(User, Int64)
+  nameWithType: CurrentPluginContextExtensions.AsMemberOf(User, Int64)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User, System.Int64)
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
+    name: AsMemberOf
+    nameWithType: CurrentPluginContextExtensions.AsMemberOf
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.User
+    name: User
+    nameWithType: User
+    fullName: HuajiTech.QQ.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.CoolQ.Messaging
+  commentId: N:HuajiTech.CoolQ.Messaging
+  name: HuajiTech.CoolQ.Messaging
+  nameWithType: HuajiTech.CoolQ.Messaging
+  fullName: HuajiTech.CoolQ.Messaging
+- uid: HuajiTech.QQ.Member
+  commentId: T:HuajiTech.QQ.Member
+  parent: HuajiTech.QQ
+  name: Member
+  nameWithType: Member
+  fullName: HuajiTech.QQ.Member
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: HuajiTech.QQ.Member.#ctor*
+  commentId: Overload:HuajiTech.QQ.Member.#ctor
+  name: Member
+  nameWithType: Member.Member
+  fullName: HuajiTech.QQ.Member.Member
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: HuajiTech.QQ.Group
+  commentId: T:HuajiTech.QQ.Group
+  parent: HuajiTech.QQ
+  name: Group
+  nameWithType: Group
+  fullName: HuajiTech.QQ.Group
+- uid: HuajiTech.QQ.Member.Age*
+  commentId: Overload:HuajiTech.QQ.Member.Age
+  name: Age
+  nameWithType: Member.Age
+  fullName: HuajiTech.QQ.Member.Age
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: HuajiTech.QQ.Member.Alias*
+  commentId: Overload:HuajiTech.QQ.Member.Alias
+  name: Alias
+  nameWithType: Member.Alias
+  fullName: HuajiTech.QQ.Member.Alias
+- uid: HuajiTech.QQ.IAliased.Alias
+  commentId: P:HuajiTech.QQ.IAliased.Alias
+  parent: HuajiTech.QQ.IAliased
+  name: Alias
+  nameWithType: IAliased.Alias
+  fullName: HuajiTech.QQ.IAliased.Alias
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: HuajiTech.QQ.Member.Alias
+  commentId: P:HuajiTech.QQ.Member.Alias
+  isExternal: true
+- uid: HuajiTech.QQ.Member.CanEditAlias*
+  commentId: Overload:HuajiTech.QQ.Member.CanEditAlias
+  name: CanEditAlias
+  nameWithType: Member.CanEditAlias
+  fullName: HuajiTech.QQ.Member.CanEditAlias
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: HuajiTech.QQ.Member.CustomTitle*
+  commentId: Overload:HuajiTech.QQ.Member.CustomTitle
+  name: CustomTitle
+  nameWithType: Member.CustomTitle
+  fullName: HuajiTech.QQ.Member.CustomTitle
+- uid: HuajiTech.QQ.CustomTitle
+  commentId: T:HuajiTech.QQ.CustomTitle
+  parent: HuajiTech.QQ
+  name: CustomTitle
+  nameWithType: CustomTitle
+  fullName: HuajiTech.QQ.CustomTitle
+- uid: HuajiTech.QQ.Chat.DisplayName
+  commentId: P:HuajiTech.QQ.Chat.DisplayName
+  parent: HuajiTech.QQ.Chat
+  name: DisplayName
+  nameWithType: Chat.DisplayName
+  fullName: HuajiTech.QQ.Chat.DisplayName
+- uid: HuajiTech.QQ.Member.DisplayName*
+  commentId: Overload:HuajiTech.QQ.Member.DisplayName
+  name: DisplayName
+  nameWithType: Member.DisplayName
+  fullName: HuajiTech.QQ.Member.DisplayName
+- uid: HuajiTech.QQ.IAliased.DisplayName
+  commentId: P:HuajiTech.QQ.IAliased.DisplayName
+  parent: HuajiTech.QQ.IAliased
+  name: DisplayName
+  nameWithType: IAliased.DisplayName
+  fullName: HuajiTech.QQ.IAliased.DisplayName
+- uid: HuajiTech.QQ.Member.Group
+  commentId: P:HuajiTech.QQ.Member.Group
+  isExternal: true
+- uid: HuajiTech.QQ.Member.TimeEntered*
+  commentId: Overload:HuajiTech.QQ.Member.TimeEntered
+  name: TimeEntered
+  nameWithType: Member.TimeEntered
+  fullName: HuajiTech.QQ.Member.TimeEntered
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: HuajiTech.QQ.Member.Gender*
+  commentId: Overload:HuajiTech.QQ.Member.Gender
+  name: Gender
+  nameWithType: Member.Gender
+  fullName: HuajiTech.QQ.Member.Gender
+- uid: HuajiTech.QQ.Gender
+  commentId: T:HuajiTech.QQ.Gender
+  parent: HuajiTech.QQ
+  name: Gender
+  nameWithType: Gender
+  fullName: HuajiTech.QQ.Gender
+- uid: HuajiTech.QQ.Member.Group*
+  commentId: Overload:HuajiTech.QQ.Member.Group
+  name: Group
+  nameWithType: Member.Group
+  fullName: HuajiTech.QQ.Member.Group
+- uid: HuajiTech.QQ.IMember.Group
+  commentId: P:HuajiTech.QQ.IMember.Group
+  parent: HuajiTech.QQ.IMember
+  name: Group
+  nameWithType: IMember.Group
+  fullName: HuajiTech.QQ.IMember.Group
+- uid: HuajiTech.QQ.Member.HasBadRecord*
+  commentId: Overload:HuajiTech.QQ.Member.HasBadRecord
+  name: HasBadRecord
+  nameWithType: Member.HasBadRecord
+  fullName: HuajiTech.QQ.Member.HasBadRecord
+- uid: HuajiTech.QQ.Member.IsAdministrator*
+  commentId: Overload:HuajiTech.QQ.Member.IsAdministrator
+  name: IsAdministrator
+  nameWithType: Member.IsAdministrator
+  fullName: HuajiTech.QQ.Member.IsAdministrator
+- uid: HuajiTech.QQ.Member.LastSpeakTime*
+  commentId: Overload:HuajiTech.QQ.Member.LastSpeakTime
+  name: LastSpeakTime
+  nameWithType: Member.LastSpeakTime
+  fullName: HuajiTech.QQ.Member.LastSpeakTime
+- uid: HuajiTech.QQ.Member.Level*
+  commentId: Overload:HuajiTech.QQ.Member.Level
+  name: Level
+  nameWithType: Member.Level
+  fullName: HuajiTech.QQ.Member.Level
+- uid: HuajiTech.QQ.Member.Location*
+  commentId: Overload:HuajiTech.QQ.Member.Location
+  name: Location
+  nameWithType: Member.Location
+  fullName: HuajiTech.QQ.Member.Location
+- uid: HuajiTech.QQ.Member.Role*
+  commentId: Overload:HuajiTech.QQ.Member.Role
+  name: Role
+  nameWithType: Member.Role
+  fullName: HuajiTech.QQ.Member.Role
+- uid: HuajiTech.QQ.MemberRole
+  commentId: T:HuajiTech.QQ.MemberRole
+  parent: HuajiTech.QQ
+  name: MemberRole
+  nameWithType: MemberRole
+  fullName: HuajiTech.QQ.MemberRole
+- uid: HuajiTech.QQ.Member.Equals*
+  commentId: Overload:HuajiTech.QQ.Member.Equals
+  name: Equals
+  nameWithType: Member.Equals
+  fullName: HuajiTech.QQ.Member.Equals
+- uid: System.IEquatable{HuajiTech.QQ.IMember}.Equals(HuajiTech.QQ.IMember)
+  commentId: M:System.IEquatable{HuajiTech.QQ.IMember}.Equals(HuajiTech.QQ.IMember)
+  parent: System.IEquatable{HuajiTech.QQ.IMember}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(IMember)
+  nameWithType: IEquatable<IMember>.Equals(IMember)
+  fullName: System.IEquatable<HuajiTech.QQ.IMember>.Equals(HuajiTech.QQ.IMember)
+  nameWithType.vb: IEquatable(Of IMember).Equals(IMember)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IMember).Equals(HuajiTech.QQ.IMember)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<IMember>.Equals
+    fullName: System.IEquatable<HuajiTech.QQ.IMember>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.IMember
+    name: IMember
+    nameWithType: IMember
+    fullName: HuajiTech.QQ.IMember
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of IMember).Equals
+    fullName: System.IEquatable(Of HuajiTech.QQ.IMember).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.IMember
+    name: IMember
+    nameWithType: IMember
+    fullName: HuajiTech.QQ.IMember
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.Equals(System.Object)
+  commentId: M:HuajiTech.QQ.Chat.Equals(System.Object)
+  parent: HuajiTech.QQ.Chat
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Chat.Equals(Object)
+  fullName: HuajiTech.QQ.Chat.Equals(System.Object)
+  spec.csharp:
+  - uid: HuajiTech.QQ.Chat.Equals(System.Object)
+    name: Equals
+    nameWithType: Chat.Equals
+    fullName: HuajiTech.QQ.Chat.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Chat.Equals(System.Object)
+    name: Equals
+    nameWithType: Chat.Equals
+    fullName: HuajiTech.QQ.Chat.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Chat.GetHashCode
+  commentId: M:HuajiTech.QQ.Chat.GetHashCode
+  parent: HuajiTech.QQ.Chat
+  name: GetHashCode()
+  nameWithType: Chat.GetHashCode()
+  fullName: HuajiTech.QQ.Chat.GetHashCode()
+  spec.csharp:
+  - uid: HuajiTech.QQ.Chat.GetHashCode
+    name: GetHashCode
+    nameWithType: Chat.GetHashCode
+    fullName: HuajiTech.QQ.Chat.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.Chat.GetHashCode
+    name: GetHashCode
+    nameWithType: Chat.GetHashCode
+    fullName: HuajiTech.QQ.Chat.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Member.GetHashCode*
+  commentId: Overload:HuajiTech.QQ.Member.GetHashCode
+  name: GetHashCode
+  nameWithType: Member.GetHashCode
+  fullName: HuajiTech.QQ.Member.GetHashCode
+- uid: HuajiTech.QQ.EntranceRequest
+  commentId: T:HuajiTech.QQ.EntranceRequest
+  parent: HuajiTech.QQ
+  name: EntranceRequest
+  nameWithType: EntranceRequest
+  fullName: HuajiTech.QQ.EntranceRequest
+- uid: HuajiTech.QQ.Member.Kick*
+  commentId: Overload:HuajiTech.QQ.Member.Kick
+  name: Kick
+  nameWithType: Member.Kick
+  fullName: HuajiTech.QQ.Member.Kick
+- uid: HuajiTech.QQ.Member.KickAsync*
+  commentId: Overload:HuajiTech.QQ.Member.KickAsync
+  name: KickAsync
+  nameWithType: Member.KickAsync
+  fullName: HuajiTech.QQ.Member.KickAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: HuajiTech.QQ.Member.Mute*
+  commentId: Overload:HuajiTech.QQ.Member.Mute
+  name: Mute
+  nameWithType: Member.Mute
+  fullName: HuajiTech.QQ.Member.Mute
+- uid: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  commentId: M:HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  parent: HuajiTech.QQ.ITimedMuteable
+  isExternal: true
+  name: Mute(TimeSpan)
+  nameWithType: ITimedMuteable.Mute(TimeSpan)
+  fullName: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  spec.csharp:
+  - uid: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+    name: Mute
+    nameWithType: ITimedMuteable.Mute
+    fullName: HuajiTech.QQ.ITimedMuteable.Mute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+    name: Mute
+    nameWithType: ITimedMuteable.Mute
+    fullName: HuajiTech.QQ.ITimedMuteable.Mute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: HuajiTech.QQ.IMuteable.Mute
+  commentId: M:HuajiTech.QQ.IMuteable.Mute
+  parent: HuajiTech.QQ.IMuteable
+  name: Mute()
+  nameWithType: IMuteable.Mute()
+  fullName: HuajiTech.QQ.IMuteable.Mute()
+  spec.csharp:
+  - uid: HuajiTech.QQ.IMuteable.Mute
+    name: Mute
+    nameWithType: IMuteable.Mute
+    fullName: HuajiTech.QQ.IMuteable.Mute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.IMuteable.Mute
+    name: Mute
+    nameWithType: IMuteable.Mute
+    fullName: HuajiTech.QQ.IMuteable.Mute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Member.MuteAsync*
+  commentId: Overload:HuajiTech.QQ.Member.MuteAsync
+  name: MuteAsync
+  nameWithType: Member.MuteAsync
+  fullName: HuajiTech.QQ.Member.MuteAsync
+- uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  commentId: M:HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  parent: HuajiTech.QQ.ITimedMuteable
+  isExternal: true
+  name: MuteAsync(TimeSpan)
+  nameWithType: ITimedMuteable.MuteAsync(TimeSpan)
+  fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  spec.csharp:
+  - uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+    name: MuteAsync
+    nameWithType: ITimedMuteable.MuteAsync
+    fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+    name: MuteAsync
+    nameWithType: ITimedMuteable.MuteAsync
+    fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.IMuteable.MuteAsync
+  commentId: M:HuajiTech.QQ.IMuteable.MuteAsync
+  parent: HuajiTech.QQ.IMuteable
+  name: MuteAsync()
+  nameWithType: IMuteable.MuteAsync()
+  fullName: HuajiTech.QQ.IMuteable.MuteAsync()
+  spec.csharp:
+  - uid: HuajiTech.QQ.IMuteable.MuteAsync
+    name: MuteAsync
+    nameWithType: IMuteable.MuteAsync
+    fullName: HuajiTech.QQ.IMuteable.MuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.IMuteable.MuteAsync
+    name: MuteAsync
+    nameWithType: IMuteable.MuteAsync
+    fullName: HuajiTech.QQ.IMuteable.MuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Member.SetAlias*
+  commentId: Overload:HuajiTech.QQ.Member.SetAlias
+  name: SetAlias
+  nameWithType: Member.SetAlias
+  fullName: HuajiTech.QQ.Member.SetAlias
+- uid: HuajiTech.QQ.Member.SetAliasAsync*
+  commentId: Overload:HuajiTech.QQ.Member.SetAliasAsync
+  name: SetAliasAsync
+  nameWithType: Member.SetAliasAsync
+  fullName: HuajiTech.QQ.Member.SetAliasAsync
+- uid: HuajiTech.QQ.Member.SetAsAdministrator*
+  commentId: Overload:HuajiTech.QQ.Member.SetAsAdministrator
+  name: SetAsAdministrator
+  nameWithType: Member.SetAsAdministrator
+  fullName: HuajiTech.QQ.Member.SetAsAdministrator
+- uid: HuajiTech.QQ.Member.SetAsAdministratorAsync*
+  commentId: Overload:HuajiTech.QQ.Member.SetAsAdministratorAsync
+  name: SetAsAdministratorAsync
+  nameWithType: Member.SetAsAdministratorAsync
+  fullName: HuajiTech.QQ.Member.SetAsAdministratorAsync
+- uid: HuajiTech.QQ.Member.CustomTitle
+  commentId: P:HuajiTech.QQ.Member.CustomTitle
+  isExternal: true
+- uid: HuajiTech.QQ.Member.SetCustomTitle*
+  commentId: Overload:HuajiTech.QQ.Member.SetCustomTitle
+  name: SetCustomTitle
+  nameWithType: Member.SetCustomTitle
+  fullName: HuajiTech.QQ.Member.SetCustomTitle
+- uid: HuajiTech.QQ.Member.SetCustomTitleAsync*
+  commentId: Overload:HuajiTech.QQ.Member.SetCustomTitleAsync
+  name: SetCustomTitleAsync
+  nameWithType: Member.SetCustomTitleAsync
+  fullName: HuajiTech.QQ.Member.SetCustomTitleAsync
+- uid: HuajiTech.QQ.Member.Unmute*
+  commentId: Overload:HuajiTech.QQ.Member.Unmute
+  name: Unmute
+  nameWithType: Member.Unmute
+  fullName: HuajiTech.QQ.Member.Unmute
+- uid: HuajiTech.QQ.IMuteable.Unmute
+  commentId: M:HuajiTech.QQ.IMuteable.Unmute
+  parent: HuajiTech.QQ.IMuteable
+  name: Unmute()
+  nameWithType: IMuteable.Unmute()
+  fullName: HuajiTech.QQ.IMuteable.Unmute()
+  spec.csharp:
+  - uid: HuajiTech.QQ.IMuteable.Unmute
+    name: Unmute
+    nameWithType: IMuteable.Unmute
+    fullName: HuajiTech.QQ.IMuteable.Unmute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.IMuteable.Unmute
+    name: Unmute
+    nameWithType: IMuteable.Unmute
+    fullName: HuajiTech.QQ.IMuteable.Unmute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Member.UnmuteAsync*
+  commentId: Overload:HuajiTech.QQ.Member.UnmuteAsync
+  name: UnmuteAsync
+  nameWithType: Member.UnmuteAsync
+  fullName: HuajiTech.QQ.Member.UnmuteAsync
+- uid: HuajiTech.QQ.IMuteable.UnmuteAsync
+  commentId: M:HuajiTech.QQ.IMuteable.UnmuteAsync
+  parent: HuajiTech.QQ.IMuteable
+  name: UnmuteAsync()
+  nameWithType: IMuteable.UnmuteAsync()
+  fullName: HuajiTech.QQ.IMuteable.UnmuteAsync()
+  spec.csharp:
+  - uid: HuajiTech.QQ.IMuteable.UnmuteAsync
+    name: UnmuteAsync
+    nameWithType: IMuteable.UnmuteAsync
+    fullName: HuajiTech.QQ.IMuteable.UnmuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.IMuteable.UnmuteAsync
+    name: UnmuteAsync
+    nameWithType: IMuteable.UnmuteAsync
+    fullName: HuajiTech.QQ.IMuteable.UnmuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.Member.UnsetAsAdministrator*
+  commentId: Overload:HuajiTech.QQ.Member.UnsetAsAdministrator
+  name: UnsetAsAdministrator
+  nameWithType: Member.UnsetAsAdministrator
+  fullName: HuajiTech.QQ.Member.UnsetAsAdministrator
+- uid: HuajiTech.QQ.Member.UnsetAsAdministratorAsync*
+  commentId: Overload:HuajiTech.QQ.Member.UnsetAsAdministratorAsync
+  name: UnsetAsAdministratorAsync
+  nameWithType: Member.UnsetAsAdministratorAsync
+  fullName: HuajiTech.QQ.Member.UnsetAsAdministratorAsync

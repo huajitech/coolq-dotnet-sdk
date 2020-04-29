@@ -1,0 +1,143 @@
+### YamlMime:ManagedReference
+items:
+- uid: HuajiTech.QQ.IAliased
+  commentId: T:HuajiTech.QQ.IAliased
+  id: IAliased
+  parent: HuajiTech.QQ
+  children:
+  - HuajiTech.QQ.IAliased.Alias
+  - HuajiTech.QQ.IAliased.DisplayName
+  langs:
+  - csharp
+  - vb
+  name: IAliased
+  nameWithType: IAliased
+  fullName: HuajiTech.QQ.IAliased
+  type: Interface
+  source:
+    remote:
+      path: src/HuajiTech.QQ/IAliased.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: IAliased
+    path: src/HuajiTech.QQ/IAliased.cs
+    startLine: 5
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n定义有别名的对象。\n"
+  example: []
+  syntax:
+    content: public interface IAliased
+    content.vb: Public Interface IAliased
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HuajiTech.QQ.IAliased.Alias
+  commentId: P:HuajiTech.QQ.IAliased.Alias
+  id: Alias
+  parent: HuajiTech.QQ.IAliased
+  langs:
+  - csharp
+  - vb
+  name: Alias
+  nameWithType: IAliased.Alias
+  fullName: HuajiTech.QQ.IAliased.Alias
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/IAliased.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: Alias
+    path: src/HuajiTech.QQ/IAliased.cs
+    startLine: 10
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.IAliased\" data-throw-if-not-resolved=\"false\"></xref> 对象的别名。\n"
+  example: []
+  syntax:
+    content: string Alias { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Alias As String
+  overload: HuajiTech.QQ.IAliased.Alias*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: HuajiTech.QQ.IAliased.DisplayName
+  commentId: P:HuajiTech.QQ.IAliased.DisplayName
+  id: DisplayName
+  parent: HuajiTech.QQ.IAliased
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: IAliased.DisplayName
+  fullName: HuajiTech.QQ.IAliased.DisplayName
+  type: Property
+  source:
+    remote:
+      path: src/HuajiTech.QQ/IAliased.cs
+      branch: master
+      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+    id: DisplayName
+    path: src/HuajiTech.QQ/IAliased.cs
+    startLine: 15
+  assemblies:
+  - HuajiTech.QQ
+  namespace: HuajiTech.QQ
+  summary: "\n获取当前 <xref href=\"HuajiTech.QQ.IAliased\" data-throw-if-not-resolved=\"false\"></xref> 对象的显示名称。\n"
+  example: []
+  syntax:
+    content: string DisplayName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property DisplayName As String
+  overload: HuajiTech.QQ.IAliased.DisplayName*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
+- uid: HuajiTech.QQ.IAliased
+  commentId: T:HuajiTech.QQ.IAliased
+  parent: HuajiTech.QQ
+  name: IAliased
+  nameWithType: IAliased
+  fullName: HuajiTech.QQ.IAliased
+- uid: HuajiTech.QQ.IAliased.Alias*
+  commentId: Overload:HuajiTech.QQ.IAliased.Alias
+  name: Alias
+  nameWithType: IAliased.Alias
+  fullName: HuajiTech.QQ.IAliased.Alias
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HuajiTech.QQ.IAliased.DisplayName*
+  commentId: Overload:HuajiTech.QQ.IAliased.DisplayName
+  name: DisplayName
+  nameWithType: IAliased.DisplayName
+  fullName: HuajiTech.QQ.IAliased.DisplayName
