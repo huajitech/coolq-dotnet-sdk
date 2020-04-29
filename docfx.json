@@ -56,11 +56,26 @@
 	  "default(zh-cn)",
 	  "templates/material"
     ],
-    "postProcessors": [],
+    "postProcessors": [
+	  "ExtractSearchIndex"
+	],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+	"globalMetadata": {
+      "_appTitle": "HuajiTech.CoolQ 文档",
+      "_gitContribute": {
+        "repo": "https://github.com/huajitech/coolq-dotnet-sdk",
+        "branch": "master",
+        "apiSpecFolder": "apidoc"
+	  },
+	  "_gitUrlPattern": "github",
+	  "_appLogoPath": "images/favicon.ico",
+	  "_appFaviconPath": "images/favicon.ico",
+	  "_enableSearch": true,
+	  "_appFooter": "本文档使用 CC BY-NC-SA 4.0 进行许可。"
+    },
   }
 }
