@@ -12,24 +12,24 @@
         </member>
         <member name="M:HuajiTech.QQ.AnonymousMember.#ctor(HuajiTech.QQ.Group)">
             <summary>
-            以指定的群初始化一个 <see cref="T:HuajiTech.QQ.AnonymousMember" /> 类的新实例。
+            以指定的群初始化一个 <see cref="T:HuajiTech.QQ.AnonymousMember"/> 类的新实例。
             </summary>
             <param name="group">所属群。</param>
-            <exception cref="T:System.ArgumentNullException"><paramref name="group" /> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="group"/> 为 <c>null</c>。</exception>
         </member>
         <member name="P:HuajiTech.QQ.AnonymousMember.Id">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.AnonymousMember" /> 对象的标识符。
+            获取当前 <see cref="T:HuajiTech.QQ.AnonymousMember"/> 对象的标识符。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.AnonymousMember.Group">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.AnonymousMember" /> 对象的所属群。
+            获取当前 <see cref="T:HuajiTech.QQ.AnonymousMember"/> 对象的所属群。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.AnonymousMember.Name">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.AnonymousMember" /> 对象的名称。
+            获取当前 <see cref="T:HuajiTech.QQ.AnonymousMember"/> 对象的名称。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.Chat">
@@ -40,18 +40,18 @@
         </member>
         <member name="M:HuajiTech.QQ.Chat.#ctor(System.Int64)">
             <summary>
-            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.Chat" /> 类的新实例。
+            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.Chat"/> 类的新实例。
             </summary>
             <param name="number">号码。</param>
         </member>
         <member name="P:HuajiTech.QQ.Chat.DisplayName">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Chat" /> 对象的显示名称。
+            获取当前 <see cref="T:HuajiTech.QQ.Chat"/> 对象的显示名称。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Chat.Number">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Chat" /> 对象的号码。
+            获取当前 <see cref="T:HuajiTech.QQ.Chat"/> 对象的号码。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.Contact">
@@ -62,7 +62,7 @@
         </member>
         <member name="M:HuajiTech.QQ.Contact.#ctor(System.Int64)">
             <summary>
-            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.Contact" /> 类的新实例。
+            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.Contact"/> 类的新实例。
             </summary>
             <param name="number">号码。</param>
         </member>
@@ -86,7 +86,7 @@
         </member>
         <member name="T:HuajiTech.QQ.CurrentPluginContextExtensions">
             <summary>
-            定义用于操作 <see cref="P:HuajiTech.QQ.PluginContext.Current" /> 的扩展方法。
+            定义用于操作 <see cref="P:HuajiTech.QQ.PluginContext.Current"/> 的扩展方法。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.CurrentUser">
@@ -97,38 +97,38 @@
         </member>
         <member name="M:HuajiTech.QQ.CurrentUser.#ctor(System.Int64)">
             <summary>
-            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.CurrentUser" /> 类的新实例。
+            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.CurrentUser"/> 类的新实例。
             </summary>
             <param name="number">号码。</param>
         </member>
         <member name="M:HuajiTech.QQ.CurrentUser.GetContacts">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser" /> 对象的所有联系人。
+            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser"/> 对象的所有联系人。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.CurrentUser.GetContactsAsync">
             <summary>
-            以异步操作获取当前 <see cref="T:HuajiTech.QQ.CurrentUser" /> 对象的所有联系人。
+            以异步操作获取当前 <see cref="T:HuajiTech.QQ.CurrentUser"/> 对象的所有联系人。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.CurrentUser.GetCookies(System.String)">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser" /> 对象在指定域下的 Cookies。
+            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser"/> 对象在指定域下的 Cookies。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.CurrentUser.GetCsrfToken">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser" /> 对象的 CSRF 令牌。
+            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser"/> 对象的 CSRF 令牌。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.CurrentUser.GetGroups">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser" /> 对象的所有群。
+            获取当前 <see cref="T:HuajiTech.QQ.CurrentUser"/> 对象的所有群。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.CurrentUser.GetGroupsAsync">
             <summary>
-            以异步操作获取当前 <see cref="T:HuajiTech.QQ.CurrentUser" /> 对象的所有群。
+            以异步操作获取当前 <see cref="T:HuajiTech.QQ.CurrentUser"/> 对象的所有群。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.CustomTitle">
@@ -138,21 +138,21 @@
         </member>
         <member name="M:HuajiTech.QQ.CustomTitle.#ctor(System.String,System.Nullable{System.DateTime})">
             <summary>
-            以指定的文本和过期时间初始化一个 <see cref="T:HuajiTech.QQ.CustomTitle" /> 类的新实例。
+            以指定的文本和过期时间初始化一个 <see cref="T:HuajiTech.QQ.CustomTitle"/> 类的新实例。
             </summary>
             <param name="text">文本。</param>
             <param name="expirationTime">过期时间。</param>
-            <exception cref="T:System.ArgumentException"><paramref name="text" /> 为 <c>null</c>、<see cref="F:System.String.Empty" /> 或仅由空白字符组成。</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="text"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
         </member>
         <member name="P:HuajiTech.QQ.CustomTitle.ExpirationTime">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.CustomTitle" /> 对象的过期时间。
+            获取当前 <see cref="T:HuajiTech.QQ.CustomTitle"/> 对象的过期时间。
             如果没有过期时间，则为 <c>null</c>。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.CustomTitle.Text">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.CustomTitle" /> 的文本。
+            获取当前 <see cref="T:HuajiTech.QQ.CustomTitle"/> 的文本。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.EntranceRequest">
@@ -174,7 +174,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.Message">
@@ -194,7 +194,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.ContactAddedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IContactEventSource.ContactAdded" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IContactEventSource.ContactAdded"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.ContactAddedEventArgs.Contact">
@@ -204,7 +204,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.ContactRequestedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IContactEventSource.ContactRequested" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IContactEventSource.ContactRequested"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.ContactRequestedEventArgs.Requester">
@@ -219,7 +219,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.EntranceInvitedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.EntranceInvitedEventArgs.Target">
@@ -239,7 +239,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.EntranceRequestedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IEntranceRequestEventSource.EntranceRequested" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IEntranceRequestEventSource.EntranceRequested"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.EntranceRequestedEventArgs.Source">
@@ -259,7 +259,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.FileUploadedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IFileEventSource.FileUploaded" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IFileEventSource.FileUploaded"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.FileUploadedEventArgs.Source">
@@ -299,7 +299,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.GroupMuteEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted" /> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted"/> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.GroupMuteEventArgs.Source">
@@ -464,7 +464,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.MemberEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined" /> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined"/> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.MemberEventArgs.IsPassive">
@@ -474,7 +474,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.MemberMutedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.MemberMutedEventArgs.Duration">
@@ -484,7 +484,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.MessageReceivedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IMessageEventSource.MessageReceived" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IMessageEventSource.MessageReceived"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.MessageReceivedEventArgs.Message">
@@ -529,7 +529,7 @@
         </member>
         <member name="M:HuajiTech.QQ.File.#ctor(System.String,System.String,System.Int64,System.Int64)">
             <summary>
-            以指定的 ID、名称、长度和 BusID 初始化一个 <see cref="T:HuajiTech.QQ.File" /> 类的新实例。
+            以指定的 ID、名称、长度和 BusID 初始化一个 <see cref="T:HuajiTech.QQ.File"/> 类的新实例。
             </summary>
             <param name="id">ID。</param>
             <param name="name">名称。</param>
@@ -538,22 +538,22 @@
         </member>
         <member name="P:HuajiTech.QQ.File.BusId">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.File" /> 对象的 BusID。
+            获取当前 <see cref="T:HuajiTech.QQ.File"/> 对象的 BusID。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.File.Id">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.File" /> 对象的 ID。
+            获取当前 <see cref="T:HuajiTech.QQ.File"/> 对象的 ID。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.File.Length">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.File" /> 对象的长度。
+            获取当前 <see cref="T:HuajiTech.QQ.File"/> 对象的长度。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.File.Name">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.File" /> 对象的名称。
+            获取当前 <see cref="T:HuajiTech.QQ.File"/> 对象的名称。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.Gender">
@@ -584,53 +584,53 @@
         </member>
         <member name="M:HuajiTech.QQ.Group.#ctor(System.Int64)">
             <summary>
-            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.Group" /> 类的新实例。
+            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.Group"/> 类的新实例。
             </summary>
             <param name="number">号码。</param>
         </member>
         <member name="P:HuajiTech.QQ.Group.Name">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Group" /> 对象的名称。
+            获取当前 <see cref="T:HuajiTech.QQ.Group"/> 对象的名称。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.DisableAnonymous">
             <summary>
-            禁用当前 <see cref="T:HuajiTech.QQ.Group" /> 对象的匿名功能。
+            禁用当前 <see cref="T:HuajiTech.QQ.Group"/> 对象的匿名功能。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.DisableAnonymousAsync">
             <summary>
-            以异步操作禁用当前 <see cref="T:HuajiTech.QQ.Group" /> 对象的匿名功能。
+            以异步操作禁用当前 <see cref="T:HuajiTech.QQ.Group"/> 对象的匿名功能。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.Disband">
             <summary>
-            解散当前 <see cref="T:HuajiTech.QQ.Group" /> 对象。
+            解散当前 <see cref="T:HuajiTech.QQ.Group"/> 对象。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.DisbandAsync">
             <summary>
-            以异步操作解散当前 <see cref="T:HuajiTech.QQ.Group" /> 对象。
+            以异步操作解散当前 <see cref="T:HuajiTech.QQ.Group"/> 对象。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.EnableAnonymous">
             <summary>
-            启用当前 <see cref="T:HuajiTech.QQ.Group" /> 对象的匿名功能。
+            启用当前 <see cref="T:HuajiTech.QQ.Group"/> 对象的匿名功能。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.EnableAnonymousAsync">
             <summary>
-            以异步操作启用当前 <see cref="T:HuajiTech.QQ.Group" /> 对象的匿名功能。
+            以异步操作启用当前 <see cref="T:HuajiTech.QQ.Group"/> 对象的匿名功能。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.Leave">
             <summary>
-            离开当前 <see cref="T:HuajiTech.QQ.Group" /> 对象。
+            离开当前 <see cref="T:HuajiTech.QQ.Group"/> 对象。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Group.LeaveAsync">
             <summary>
-            以异步操作离开当前 <see cref="T:HuajiTech.QQ.Group" /> 对象。
+            以异步操作离开当前 <see cref="T:HuajiTech.QQ.Group"/> 对象。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.IAliased">
@@ -640,18 +640,69 @@
         </member>
         <member name="P:HuajiTech.QQ.IAliased.Alias">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IAliased" /> 对象的别名。
+            获取当前 <see cref="T:HuajiTech.QQ.IAliased"/> 对象的别名。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.IAliased.DisplayName">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IAliased" /> 对象的显示名称。
+            获取当前 <see cref="T:HuajiTech.QQ.IAliased"/> 对象的显示名称。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.IBot">
             <summary>
             定义机器人。
             </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBot.CanSendImage">
+            <summary>
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象是否可以发送图片。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBot.CanSendRecord">
+            <summary>
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象是否可以发送录音。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBot.CurrentUser">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象的当前用户。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBot.Logger">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象的日志记录器。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBot.DataDirectory">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象的数据目录。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.QQ.IBot.RequestImage(System.String)">
+            <summary>
+            请求指定文件名的图片。
+            </summary>
+            <param name="fileName">请求获取的图片的文件名。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.IBot.RequestImageAsync(System.String)">
+            <summary>
+            以异步操作请求指定文件名的图片。
+            </summary>
+            <param name="fileName">请求获取的图片的文件名。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.IBot.RequestRecord(System.String,System.String)">
+            <summary>
+            请求指定文件名的录音。
+            </summary>
+            <param name="fileName">请求获取的录音的文件名。</param>
+            <param name="fileFormat">请求获取的录音的格式。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.IBot.RequestRecordAsync(System.String,System.String)">
+            <summary>
+            以异步操作请求指定文件名的录音。
+            </summary>
+            <param name="fileName">请求获取的录音的文件名。</param>
+            <param name="fileFormat">请求获取的录音的格式。</param>
         </member>
         <member name="T:HuajiTech.QQ.IGroup">
             <summary>
@@ -660,22 +711,22 @@
         </member>
         <member name="P:HuajiTech.QQ.IGroup.MemberCapacity">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IGroup" /> 对象的成员容量。
+            获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的成员容量。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.IGroup.MemberCount">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IGroup" /> 对象的成员数。
+            获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的成员数。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IGroup.GetMembers">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IGroup" /> 对象的所有成员。
+            获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的所有成员。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IGroup.GetMembersAsync">
             <summary>
-            以异步操作获取当前 <see cref="T:HuajiTech.QQ.IGroup" /> 对象的所有成员。
+            以异步操作获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的所有成员。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.IMember">
@@ -685,7 +736,7 @@
         </member>
         <member name="P:HuajiTech.QQ.IMember.Group">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IMember" /> 对象的所在群。
+            获取当前 <see cref="T:HuajiTech.QQ.IMember"/> 对象的所在群。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.IMuteable">
@@ -695,22 +746,22 @@
         </member>
         <member name="M:HuajiTech.QQ.IMuteable.Mute">
             <summary>
-            将当前 <see cref="T:HuajiTech.QQ.IMuteable" /> 对象禁言。
+            将当前 <see cref="T:HuajiTech.QQ.IMuteable"/> 对象禁言。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IMuteable.MuteAsync">
             <summary>
-            以异步操作将当前 <see cref="T:HuajiTech.QQ.IMuteable" /> 对象禁言。
+            以异步操作将当前 <see cref="T:HuajiTech.QQ.IMuteable"/> 对象禁言。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IMuteable.Unmute">
             <summary>
-            将当前 <see cref="T:HuajiTech.QQ.IMuteable" /> 对象解除禁言。
+            将当前 <see cref="T:HuajiTech.QQ.IMuteable"/> 对象解除禁言。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IMuteable.UnmuteAsync">
             <summary>
-            以异步操作将当前 <see cref="T:HuajiTech.QQ.IMuteable" /> 对象解除禁言。
+            以异步操作将当前 <see cref="T:HuajiTech.QQ.IMuteable"/> 对象解除禁言。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.IRequestable">
@@ -720,17 +771,17 @@
         </member>
         <member name="P:HuajiTech.QQ.IRequestable.HasRequested">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IRequestable" /> 对象是否已请求。
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IRequestable"/> 对象是否已请求。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IRequestable.Request">
             <summary>
-            请求当前 <see cref="T:HuajiTech.QQ.IRequestable" /> 对象。
+            请求当前 <see cref="T:HuajiTech.QQ.IRequestable"/> 对象。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IRequestable.RequestAsync">
             <summary>
-            以异步操作请求当前 <see cref="T:HuajiTech.QQ.IRequestable" /> 对象。
+            以异步操作请求当前 <see cref="T:HuajiTech.QQ.IRequestable"/> 对象。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.ISendable">
@@ -740,17 +791,17 @@
         </member>
         <member name="M:HuajiTech.QQ.ISendable.Send(System.String)">
             <summary>
-            向当前 <see cref="T:HuajiTech.QQ.ISendable" /> 对象发送指定的字符串。
+            向当前 <see cref="T:HuajiTech.QQ.ISendable"/> 对象发送指定的字符串。
             </summary>
             <param name="message">要发送的字符串。</param>
-            <returns>一个 <see cref="T:HuajiTech.QQ.Message" /> 对象，表示已发送的消息。</returns>
+            <returns>一个 <see cref="T:HuajiTech.QQ.Message"/> 对象，表示已发送的消息。</returns>
         </member>
         <member name="M:HuajiTech.QQ.ISendable.SendAsync(System.String)">
             <summary>
-            以异步操作向当前 <see cref="T:HuajiTech.QQ.ISendable" /> 对象发送指定的字符串。
+            以异步操作向当前 <see cref="T:HuajiTech.QQ.ISendable"/> 对象发送指定的字符串。
             </summary>
             <param name="message">要发送的字符串。</param>
-            <returns>一个 <see cref="T:HuajiTech.QQ.Message" /> 对象，表示已发送的消息。</returns>
+            <returns>一个 <see cref="T:HuajiTech.QQ.Message"/> 对象，表示已发送的消息。</returns>
         </member>
         <member name="T:HuajiTech.QQ.ITimedMuteable">
             <summary>
@@ -759,13 +810,13 @@
         </member>
         <member name="M:HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)">
             <summary>
-            将当前 <see cref="T:HuajiTech.QQ.ITimedMuteable" /> 对象禁言指定时长。
+            将当前 <see cref="T:HuajiTech.QQ.ITimedMuteable"/> 对象禁言指定时长。
             </summary>
             <param name="duration">要禁言的时长。</param>
         </member>
         <member name="M:HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)">
             <summary>
-            以异步操作将当前 <see cref="T:HuajiTech.QQ.ITimedMuteable" /> 对象禁言指定时长。
+            以异步操作将当前 <see cref="T:HuajiTech.QQ.ITimedMuteable"/> 对象禁言指定时长。
             </summary>
             <param name="duration">要禁言的时长。</param>
         </member>
@@ -944,128 +995,128 @@
         </member>
         <member name="M:HuajiTech.QQ.Member.#ctor(System.Int64,HuajiTech.QQ.Group)">
             <summary>
-            以指定的号码和群初始化一个 <see cref="T:HuajiTech.QQ.Member" /> 类的新实例。
+            以指定的号码和群初始化一个 <see cref="T:HuajiTech.QQ.Member"/> 类的新实例。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="group" /> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="group"/> 为 <c>null</c>。</exception>
         </member>
         <member name="P:HuajiTech.QQ.Member.Age">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的年龄。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的年龄。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.CanEditAlias">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.Member" /> 对象是否可以编辑 <see cref="P:HuajiTech.QQ.Member.Alias" />。
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.Member"/> 对象是否可以编辑 <see cref="P:HuajiTech.QQ.Member.Alias"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.CustomTitle">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的自定义头衔。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的自定义头衔。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.DisplayName">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的显示名称。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的显示名称。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.TimeEntered">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象加入 <see cref="P:HuajiTech.QQ.Member.Group" /> 的时间。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象加入 <see cref="P:HuajiTech.QQ.Member.Group"/> 的时间。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.Gender">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的性别。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的性别。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.Group">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的所属 <see cref="T:HuajiTech.QQ.Group" /> 对象。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的所属 <see cref="T:HuajiTech.QQ.Group"/> 对象。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.HasBadRecord">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.Member" /> 对象是否有不良记录。
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.Member"/> 对象是否有不良记录。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.IsAdministrator">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.Member" /> 对象是否为管理员或群主。
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.Member"/> 对象是否为管理员或群主。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.LastSpeakTime">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的最后发言时间。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的最后发言时间。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.Level">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的等级。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的等级。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.Location">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的位置。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的位置。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Member.Role">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的角色。
+            获取当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的角色。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Member.Kick(System.Boolean)">
             <summary>
-            将当前 <see cref="T:HuajiTech.QQ.Member" /> 对象踢出所在群。
+            将当前 <see cref="T:HuajiTech.QQ.Member"/> 对象踢出所在群。
             </summary>
-            <param name="disallowRejoin">如果不再接收当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的 <see cref="T:HuajiTech.QQ.EntranceRequest" />，则为 <c>true</c>；否则为 <c>false</c>。</param>
+            <param name="disallowRejoin">如果不再接收当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的 <see cref="T:HuajiTech.QQ.EntranceRequest"/>，则为 <c>true</c>；否则为 <c>false</c>。</param>
         </member>
         <member name="M:HuajiTech.QQ.Member.KickAsync(System.Boolean)">
             <summary>
-            以异步操作将当前 <see cref="T:HuajiTech.QQ.Member" /> 对象踢出所在群。
+            以异步操作将当前 <see cref="T:HuajiTech.QQ.Member"/> 对象踢出所在群。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Member.SetAlias(System.String)">
             <summary>
-            设置当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的 <see cref="P:HuajiTech.QQ.Member.Alias" />。
+            设置当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的 <see cref="P:HuajiTech.QQ.Member.Alias"/>。
             </summary>
-            <param name="alias">要设置的 <see cref="P:HuajiTech.QQ.Member.Alias" /> 的值。</param>
+            <param name="alias">要设置的 <see cref="P:HuajiTech.QQ.Member.Alias"/> 的值。</param>
         </member>
         <member name="M:HuajiTech.QQ.Member.SetAliasAsync(System.String)">
             <summary>
-            以异步操作设置当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的 <see cref="P:HuajiTech.QQ.Member.Alias" />。
+            以异步操作设置当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的 <see cref="P:HuajiTech.QQ.Member.Alias"/>。
             </summary>
-            <param name="alias">要设置的 <see cref="P:HuajiTech.QQ.Member.Alias" /> 的值。</param>
+            <param name="alias">要设置的 <see cref="P:HuajiTech.QQ.Member.Alias"/> 的值。</param>
         </member>
         <member name="M:HuajiTech.QQ.Member.SetAsAdministrator">
             <summary>
-            将当前 <see cref="T:HuajiTech.QQ.Member" /> 对象设为 <see cref="P:HuajiTech.QQ.Member.Group" /> 的管理员。
+            将当前 <see cref="T:HuajiTech.QQ.Member"/> 对象设为 <see cref="P:HuajiTech.QQ.Member.Group"/> 的管理员。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Member.SetAsAdministratorAsync">
             <summary>
-            以异步操作将当前 <see cref="T:HuajiTech.QQ.Member" /> 对象设为 <see cref="P:HuajiTech.QQ.Member.Group" /> 的管理员。
+            以异步操作将当前 <see cref="T:HuajiTech.QQ.Member"/> 对象设为 <see cref="P:HuajiTech.QQ.Member.Group"/> 的管理员。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Member.SetCustomTitle(HuajiTech.QQ.CustomTitle)">
             <summary>
-            设置当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的 <see cref="P:HuajiTech.QQ.Member.CustomTitle" />。
+            设置当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的 <see cref="P:HuajiTech.QQ.Member.CustomTitle"/>。
             </summary>
-            <param name="title">要设置的 <see cref="P:HuajiTech.QQ.Member.CustomTitle" /> 的值。</param>
+            <param name="title">要设置的 <see cref="P:HuajiTech.QQ.Member.CustomTitle"/> 的值。</param>
         </member>
         <member name="M:HuajiTech.QQ.Member.SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)">
             <summary>
-            以异步操作设置当前 <see cref="T:HuajiTech.QQ.Member" /> 对象的 <see cref="P:HuajiTech.QQ.Member.CustomTitle" />。
+            以异步操作设置当前 <see cref="T:HuajiTech.QQ.Member"/> 对象的 <see cref="P:HuajiTech.QQ.Member.CustomTitle"/>。
             </summary>
-            <param name="title">要设置的 <see cref="P:HuajiTech.QQ.Member.CustomTitle" /> 的值。</param>
+            <param name="title">要设置的 <see cref="P:HuajiTech.QQ.Member.CustomTitle"/> 的值。</param>
         </member>
         <member name="M:HuajiTech.QQ.Member.UnsetAsAdministrator">
             <summary>
-            解除当前 <see cref="T:HuajiTech.QQ.Member" /> 对象在 <see cref="P:HuajiTech.QQ.Member.Group" /> 的管理员身份。
+            解除当前 <see cref="T:HuajiTech.QQ.Member"/> 对象在 <see cref="P:HuajiTech.QQ.Member.Group"/> 的管理员身份。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Member.UnsetAsAdministratorAsync">
             <summary>
-            以异步操作解除当前 <see cref="T:HuajiTech.QQ.Member" /> 对象在 <see cref="P:HuajiTech.QQ.Member.Group" /> 的管理员身份。
+            以异步操作解除当前 <see cref="T:HuajiTech.QQ.Member"/> 对象在 <see cref="P:HuajiTech.QQ.Member.Group"/> 的管理员身份。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.MemberRole">
@@ -1096,24 +1147,23 @@
         </member>
         <member name="M:HuajiTech.QQ.Message.#ctor(System.String)">
             <summary>
-            以指定的标识符和内容初始化一个 <see cref="T:HuajiTech.QQ.Message" /> 类的新实例。
+            以指定的标识符和内容初始化一个 <see cref="T:HuajiTech.QQ.Message"/> 类的新实例。
             </summary>
-            <param name="id">标识符。</param>
             <param name="content">内容。</param>
         </member>
         <member name="P:HuajiTech.QQ.Message.Content">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Message" /> 对象的内容。
+            获取当前 <see cref="T:HuajiTech.QQ.Message"/> 对象的内容。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Message.Recall">
             <summary>
-            撤回当前 <see cref="T:HuajiTech.QQ.Message" /> 对象。
+            撤回当前 <see cref="T:HuajiTech.QQ.Message"/> 对象。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Message.RecallAsync">
             <summary>
-            以异步操作撤回当前 <see cref="T:HuajiTech.QQ.Message" /> 对象。
+            以异步操作撤回当前 <see cref="T:HuajiTech.QQ.Message"/> 对象。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.PluginContext">
@@ -1126,11 +1176,11 @@
             <summary>
             获取或设置当前插件的插件上下文。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="value" /> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
         </member>
         <member name="P:HuajiTech.QQ.PluginContext.Bot">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.PluginContext" /> 对象的 <see cref="T:HuajiTech.QQ.IBot" />。
+            获取当前 <see cref="T:HuajiTech.QQ.PluginContext"/> 对象的 <see cref="T:HuajiTech.QQ.IBot"/>。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetUser(System.Int64)">
@@ -1141,7 +1191,7 @@
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetUser(HuajiTech.QQ.User)">
             <summary>
-            获取号码为指定用户的号码的 <see cref="T:HuajiTech.QQ.User" /> 对象。
+            获取号码为指定用户的号码的 <see cref="T:HuajiTech.QQ.User"/> 对象。
             </summary>
             <param name="user">用户。</param>
         </member>
@@ -1153,7 +1203,7 @@
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetContact(HuajiTech.QQ.Contact)">
             <summary>
-            获取号码为指定联系人的号码的 <see cref="T:HuajiTech.QQ.Contact" /> 对象。
+            获取号码为指定联系人的号码的 <see cref="T:HuajiTech.QQ.Contact"/> 对象。
             </summary>
             <param name="contact">联系人。</param>
         </member>
@@ -1165,7 +1215,7 @@
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetGroup(HuajiTech.QQ.Group)">
             <summary>
-            获取号码为指定群的号码的 <see cref="T:HuajiTech.QQ.Group" /> 对象。
+            获取号码为指定群的号码的 <see cref="T:HuajiTech.QQ.Group"/> 对象。
             </summary>
             <param name="group">群。</param>
         </member>
@@ -1178,7 +1228,7 @@
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.Member)">
             <summary>
-            获取号码和群为指定成员的号码和群的 <see cref="T:HuajiTech.QQ.Member" /> 对象。
+            获取号码和群为指定成员的号码和群的 <see cref="T:HuajiTech.QQ.Member"/> 对象。
             </summary>
             <param name="member">成员。</param>
         </member>
@@ -1191,14 +1241,14 @@
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,HuajiTech.QQ.Group)">
             <summary>
-            获取号码为指定用户的号码，群为指定群的 <see cref="T:HuajiTech.QQ.Member" /> 对象。
+            获取号码为指定用户的号码，群为指定群的 <see cref="T:HuajiTech.QQ.Member"/> 对象。
             </summary>
             <param name="user">用户。</param>
             <param name="group">群。</param>
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetMember(HuajiTech.QQ.User,System.Int64)">
             <summary>
-            获取号码为指定用户的号码，群为指定群号码的群的 <see cref="T:HuajiTech.QQ.Member" /> 对象。
+            获取号码为指定用户的号码，群为指定群号码的群的 <see cref="T:HuajiTech.QQ.Member"/> 对象。
             </summary>
             <param name="user">用户。</param>
             <param name="groupNumber">群号码。</param>
@@ -1211,7 +1261,7 @@
         </member>
         <member name="P:HuajiTech.QQ.Request.Message">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.Request" /> 对象的消息。
+            获取当前 <see cref="T:HuajiTech.QQ.Request"/> 对象的消息。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Request.Accept">
@@ -1307,61 +1357,61 @@
         </member>
         <member name="M:HuajiTech.QQ.User.#ctor(System.Int64)">
             <summary>
-            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.User" /> 类的新实例。
+            以指定的号码初始化一个 <see cref="T:HuajiTech.QQ.User"/> 类的新实例。
             </summary>
             <param name="number">号码。</param>
         </member>
         <member name="P:HuajiTech.QQ.User.Nickname">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.User" /> 对象的昵称。
+            获取当前 <see cref="T:HuajiTech.QQ.User"/> 对象的昵称。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.User.GiveThumbsUp(System.Int32)">
             <summary>
-            给予当前 <see cref="T:HuajiTech.QQ.User" /> 对象指定数量的赞。
+            给予当前 <see cref="T:HuajiTech.QQ.User"/> 对象指定数量的赞。
             </summary>
             <param name="count">赞的数量。</param>
         </member>
         <member name="M:HuajiTech.QQ.User.GiveThumbsUpAsync(System.Int32)">
             <summary>
-            以异步操作给予当前 <see cref="T:HuajiTech.QQ.User" /> 对象指定数量的赞。
+            以异步操作给予当前 <see cref="T:HuajiTech.QQ.User"/> 对象指定数量的赞。
             </summary>
             <param name="count">赞的数量。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.Plugin">
             <summary>
-            用作插件的基类，并提供操作 <see cref="T:HuajiTech.QQ.PluginContext" /> 的方法。
+            用作插件的基类，并提供操作 <see cref="T:HuajiTech.QQ.PluginContext"/> 的方法。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.Plugin.#ctor(HuajiTech.QQ.PluginContext)">
             <summary>
-            以指定的 <see cref="T:HuajiTech.QQ.PluginContext" /> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin" /> 类的新实例。
+            以指定的 <see cref="T:HuajiTech.QQ.PluginContext"/> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin"/> 类的新实例。
             </summary>
-            <param name="context">当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象所使用的 <see cref="T:HuajiTech.QQ.PluginContext" />。</param>
+            <param name="context">当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象所使用的 <see cref="T:HuajiTech.QQ.PluginContext"/>。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.Plugin.#ctor">
             <summary>
-            以 <see cref="P:HuajiTech.QQ.PluginContext.Current" /> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin" /> 类的新实例。
+            以 <see cref="P:HuajiTech.QQ.PluginContext.Current"/> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin"/> 类的新实例。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.Bot">
             <summary>
-            当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="T:HuajiTech.QQ.IBot" />。
+            当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.QQ.IBot"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.CurrentUser">
             <summary>
-            当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.CurrentUser" />。
+            当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.CurrentUser"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.Logger">
             <summary>
-            当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.Logger" />。
+            当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.Logger"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.Context">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="T:HuajiTech.QQ.PluginContext" />。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.QQ.PluginContext"/>。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.Plugin.Contact(System.Int64)">

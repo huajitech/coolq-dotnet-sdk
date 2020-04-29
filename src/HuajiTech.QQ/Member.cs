@@ -100,7 +100,6 @@ namespace HuajiTech.QQ
         /// <summary>
         /// 以异步操作将当前 <see cref="Member"/> 对象踢出所在群。
         /// </summary>
-
         public virtual Task KickAsync(bool disallowRejoin = false) => Task.Run(() => Kick(disallowRejoin));
 
         public abstract void Mute(TimeSpan duration);

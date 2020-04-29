@@ -12,7 +12,6 @@ namespace HuajiTech.QQ
         /// <summary>
         /// 以指定的标识符和内容初始化一个 <see cref="Message"/> 类的新实例。
         /// </summary>
-        /// <param name="id">标识符。</param>
         /// <param name="content">内容。</param>
         protected Message(string content)
         {
