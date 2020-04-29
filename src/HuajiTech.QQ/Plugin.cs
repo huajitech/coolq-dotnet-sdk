@@ -1,6 +1,4 @@
-﻿using HuajiTech.QQ;
-
-namespace HuajiTech.CoolQ
+﻿namespace HuajiTech.QQ
 {
     /// <summary>
     /// 用作插件的基类，并提供操作 <see cref="PluginContext"/> 的方法。
