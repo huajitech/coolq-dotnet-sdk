@@ -20,7 +20,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IBotEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IBotEventSource
     path: src/HuajiTech.QQ/Events/IBotEventSource.cs
     startLine: 7
@@ -53,7 +53,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IBotEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: AppDisabling
     path: src/HuajiTech.QQ/Events/IBotEventSource.cs
     startLine: 12
@@ -65,7 +65,7 @@ items:
   syntax:
     content: event EventHandler AppDisabling
     return:
-      type: System.EventHandler
+      type: EventHandler
     content.vb: Event AppDisabling As EventHandler
 - uid: HuajiTech.QQ.Events.IBotEventSource.AppEnabled
   commentId: E:HuajiTech.QQ.Events.IBotEventSource.AppEnabled
@@ -82,7 +82,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IBotEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: AppEnabled
     path: src/HuajiTech.QQ/Events/IBotEventSource.cs
     startLine: 17
@@ -94,7 +94,7 @@ items:
   syntax:
     content: event EventHandler AppEnabled
     return:
-      type: System.EventHandler
+      type: EventHandler
     content.vb: Event AppEnabled As EventHandler
 - uid: HuajiTech.QQ.Events.IBotEventSource.BotStarted
   commentId: E:HuajiTech.QQ.Events.IBotEventSource.BotStarted
@@ -111,7 +111,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IBotEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: BotStarted
     path: src/HuajiTech.QQ/Events/IBotEventSource.cs
     startLine: 22
@@ -123,7 +123,7 @@ items:
   syntax:
     content: event EventHandler BotStarted
     return:
-      type: System.EventHandler
+      type: EventHandler
     content.vb: Event BotStarted As EventHandler
 - uid: HuajiTech.QQ.Events.IBotEventSource.BotStopping
   commentId: E:HuajiTech.QQ.Events.IBotEventSource.BotStopping
@@ -140,7 +140,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IBotEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: BotStopping
     path: src/HuajiTech.QQ/Events/IBotEventSource.cs
     startLine: 27
@@ -152,7 +152,7 @@ items:
   syntax:
     content: event EventHandler BotStopping
     return:
-      type: System.EventHandler
+      type: EventHandler
     content.vb: Event BotStopping As EventHandler
 references:
 - uid: HuajiTech.QQ.Events
@@ -160,16 +160,8 @@ references:
   name: HuajiTech.QQ.Events
   nameWithType: HuajiTech.QQ.Events
   fullName: HuajiTech.QQ.Events
-- uid: System.EventHandler
-  commentId: T:System.EventHandler
-  parent: System
+- uid: EventHandler
   isExternal: true
   name: EventHandler
   nameWithType: EventHandler
-  fullName: System.EventHandler
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
+  fullName: EventHandler

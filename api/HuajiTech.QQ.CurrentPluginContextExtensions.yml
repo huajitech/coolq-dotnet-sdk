@@ -8,8 +8,8 @@ items:
   - HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,HuajiTech.QQ.Group)
   - HuajiTech.QQ.CurrentPluginContextExtensions.AsMemberOf(HuajiTech.QQ.User,System.Int64)
   - HuajiTech.QQ.CurrentPluginContextExtensions.AsUser(HuajiTech.QQ.User)
-  - HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
-  - HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  - HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(Exception)
+  - HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(Exception)
   langs:
   - csharp
   - vb
@@ -21,7 +21,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: CurrentPluginContextExtensions
     path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
     startLine: 7
@@ -31,18 +31,13 @@ items:
   summary: "\n定义用于操作 <xref href=\"HuajiTech.QQ.PluginContext.Current\" data-throw-if-not-resolved=\"false\"></xref> 的扩展方法。\n"
   example: []
   syntax:
-    content: public static class CurrentPluginContextExtensions
-    content.vb: Public Module CurrentPluginContextExtensions
+    content: 'public static class CurrentPluginContextExtensions : object'
+    content.vb: >-
+      Public Module CurrentPluginContextExtensions
+
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -66,7 +61,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: AsUser
     path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
     startLine: 9
@@ -107,7 +102,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: AsMemberOf
     path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
     startLine: 11
@@ -150,7 +145,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: AsMemberOf
     path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
     startLine: 13
@@ -177,9 +172,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
-  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
-  id: LogAsWarning(System.Exception)
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(Exception)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(Exception)
+  id: LogAsWarning(Exception)
   isExtensionMethod: true
   parent: HuajiTech.QQ.CurrentPluginContextExtensions
   langs:
@@ -187,13 +182,13 @@ items:
   - vb
   name: LogAsWarning(Exception)
   nameWithType: CurrentPluginContextExtensions.LogAsWarning(Exception)
-  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(Exception)
   type: Method
   source:
     remote:
       path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: LogAsWarning
     path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
     startLine: 15
@@ -204,7 +199,7 @@ items:
     content: public static void LogAsWarning(this Exception ex)
     parameters:
     - id: ex
-      type: System.Exception
+      type: Exception
     content.vb: >-
       <ExtensionAttribute>
 
@@ -216,9 +211,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
-  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
-  id: LogAsError(System.Exception)
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(Exception)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(Exception)
+  id: LogAsError(Exception)
   isExtensionMethod: true
   parent: HuajiTech.QQ.CurrentPluginContextExtensions
   langs:
@@ -226,13 +221,13 @@ items:
   - vb
   name: LogAsError(Exception)
   nameWithType: CurrentPluginContextExtensions.LogAsError(Exception)
-  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(Exception)
   type: Method
   source:
     remote:
       path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: LogAsError
     path: src/HuajiTech.QQ/CurrentPluginContextExtensions.cs
     startLine: 17
@@ -243,7 +238,7 @@ items:
     content: public static void LogAsError(this Exception ex)
     parameters:
     - id: ex
-      type: System.Exception
+      type: Exception
     content.vb: >-
       <ExtensionAttribute>
 
@@ -265,297 +260,10 @@ references:
   nameWithType: HuajiTech.QQ
   fullName: HuajiTech.QQ
 - uid: System.Object
-  commentId: T:System.Object
-  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: HuajiTech.QQ.CurrentPluginContextExtensions.AsUser*
   commentId: Overload:HuajiTech.QQ.CurrentPluginContextExtensions.AsUser
   name: AsUser
@@ -585,8 +293,6 @@ references:
   nameWithType: Member
   fullName: HuajiTech.QQ.Member
 - uid: System.Int64
-  commentId: T:System.Int64
-  parent: System
   isExternal: true
   name: Int64
   nameWithType: Int64
@@ -596,13 +302,11 @@ references:
   name: LogAsWarning
   nameWithType: CurrentPluginContextExtensions.LogAsWarning
   fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
-- uid: System.Exception
-  commentId: T:System.Exception
-  parent: System
+- uid: Exception
   isExternal: true
   name: Exception
   nameWithType: Exception
-  fullName: System.Exception
+  fullName: Exception
 - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError*
   commentId: Overload:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
   name: LogAsError

@@ -16,7 +16,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IGroupEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IGroupEventSource
     path: src/HuajiTech.QQ/Events/IGroupEventSource.cs
     startLine: 2

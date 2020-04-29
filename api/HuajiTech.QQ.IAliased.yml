@@ -18,7 +18,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IAliased.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IAliased
     path: src/HuajiTech.QQ/IAliased.cs
     startLine: 5
@@ -51,7 +51,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IAliased.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Alias
     path: src/HuajiTech.QQ/IAliased.cs
     startLine: 10
@@ -86,7 +86,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IAliased.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: DisplayName
     path: src/HuajiTech.QQ/IAliased.cs
     startLine: 15
@@ -124,18 +124,10 @@ references:
   nameWithType: IAliased.Alias
   fullName: HuajiTech.QQ.IAliased.Alias
 - uid: System.String
-  commentId: T:System.String
-  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: HuajiTech.QQ.IAliased.DisplayName*
   commentId: Overload:HuajiTech.QQ.IAliased.DisplayName
   name: DisplayName

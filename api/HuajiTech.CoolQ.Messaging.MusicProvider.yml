@@ -19,7 +19,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: MusicProvider
     path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
     startLine: 5
@@ -29,8 +29,8 @@ items:
   summary: "\n指定音乐提供商。\n"
   example: []
   syntax:
-    content: public enum MusicProvider
-    content.vb: Public Enum MusicProvider
+    content: 'public enum MusicProvider : int'
+    content.vb: Public Enum MusicProvider As Integer
   modifiers.csharp:
   - public
   - enum
@@ -52,7 +52,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: None
     path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
     startLine: 7
@@ -84,7 +84,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: QQ
     path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
     startLine: 12
@@ -118,7 +118,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Netease
     path: src/HuajiTech.CoolQ/Messaging/MusicProvider.cs
     startLine: 17

@@ -20,7 +20,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IMuteable
     path: src/HuajiTech.QQ/IMuteable.cs
     startLine: 7
@@ -53,7 +53,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Mute
     path: src/HuajiTech.QQ/IMuteable.cs
     startLine: 12
@@ -81,7 +81,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: MuteAsync
     path: src/HuajiTech.QQ/IMuteable.cs
     startLine: 17
@@ -93,7 +93,7 @@ items:
   syntax:
     content: Task MuteAsync()
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
     content.vb: Function MuteAsync As Task
   overload: HuajiTech.QQ.IMuteable.MuteAsync*
 - uid: HuajiTech.QQ.IMuteable.Unmute
@@ -111,7 +111,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Unmute
     path: src/HuajiTech.QQ/IMuteable.cs
     startLine: 22
@@ -139,7 +139,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: UnmuteAsync
     path: src/HuajiTech.QQ/IMuteable.cs
     startLine: 27
@@ -151,7 +151,7 @@ items:
   syntax:
     content: Task UnmuteAsync()
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
     content.vb: Function UnmuteAsync As Task
   overload: HuajiTech.QQ.IMuteable.UnmuteAsync*
 references:
@@ -176,19 +176,11 @@ references:
   name: MuteAsync
   nameWithType: IMuteable.MuteAsync
   fullName: HuajiTech.QQ.IMuteable.MuteAsync
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
+- uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  fullName: Task
 - uid: HuajiTech.QQ.IMuteable.Unmute*
   commentId: Overload:HuajiTech.QQ.IMuteable.Unmute
   name: Unmute

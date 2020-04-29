@@ -16,7 +16,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IMuteEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IMuteEventSource
     path: src/HuajiTech.QQ/Events/IMuteEventSource.cs
     startLine: 5

@@ -5,8 +5,8 @@ items:
   id: ITimedMuteable
   parent: HuajiTech.QQ
   children:
-  - HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
-  - HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  - HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
+  - HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/ITimedMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: ITimedMuteable
     path: src/HuajiTech.QQ/ITimedMuteable.cs
     startLine: 8
@@ -44,22 +44,22 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
-  commentId: M:HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
-  id: Mute(System.TimeSpan)
+- uid: HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
+  commentId: M:HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
+  id: Mute(TimeSpan)
   parent: HuajiTech.QQ.ITimedMuteable
   langs:
   - csharp
   - vb
   name: Mute(TimeSpan)
   nameWithType: ITimedMuteable.Mute(TimeSpan)
-  fullName: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  fullName: HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
   type: Method
   source:
     remote:
       path: src/HuajiTech.QQ/ITimedMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Mute
     path: src/HuajiTech.QQ/ITimedMuteable.cs
     startLine: 14
@@ -72,26 +72,26 @@ items:
     content: void Mute(TimeSpan duration)
     parameters:
     - id: duration
-      type: System.TimeSpan
+      type: TimeSpan
       description: 要禁言的时长。
     content.vb: Sub Mute(duration As TimeSpan)
   overload: HuajiTech.QQ.ITimedMuteable.Mute*
-- uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
-  commentId: M:HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
-  id: MuteAsync(System.TimeSpan)
+- uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
+  commentId: M:HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
+  id: MuteAsync(TimeSpan)
   parent: HuajiTech.QQ.ITimedMuteable
   langs:
   - csharp
   - vb
   name: MuteAsync(TimeSpan)
   nameWithType: ITimedMuteable.MuteAsync(TimeSpan)
-  fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
   type: Method
   source:
     remote:
       path: src/HuajiTech.QQ/ITimedMuteable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: MuteAsync
     path: src/HuajiTech.QQ/ITimedMuteable.cs
     startLine: 20
@@ -104,10 +104,10 @@ items:
     content: Task MuteAsync(TimeSpan duration)
     parameters:
     - id: duration
-      type: System.TimeSpan
+      type: TimeSpan
       description: 要禁言的时长。
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
     content.vb: Function MuteAsync(duration As TimeSpan) As Task
   overload: HuajiTech.QQ.ITimedMuteable.MuteAsync*
 references:
@@ -245,34 +245,18 @@ references:
   name: Mute
   nameWithType: ITimedMuteable.Mute
   fullName: HuajiTech.QQ.ITimedMuteable.Mute
-- uid: System.TimeSpan
-  commentId: T:System.TimeSpan
-  parent: System
+- uid: TimeSpan
   isExternal: true
   name: TimeSpan
   nameWithType: TimeSpan
-  fullName: System.TimeSpan
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
+  fullName: TimeSpan
 - uid: HuajiTech.QQ.ITimedMuteable.MuteAsync*
   commentId: Overload:HuajiTech.QQ.ITimedMuteable.MuteAsync
   name: MuteAsync
   nameWithType: ITimedMuteable.MuteAsync
   fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
+- uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  fullName: Task

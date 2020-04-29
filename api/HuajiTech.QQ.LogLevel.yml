@@ -24,7 +24,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: LogLevel
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 5
@@ -34,8 +34,8 @@ items:
   summary: "\n指定日志级别。\n"
   example: []
   syntax:
-    content: public enum LogLevel
-    content.vb: Public Enum LogLevel
+    content: 'public enum LogLevel : int'
+    content.vb: Public Enum LogLevel As Integer
   modifiers.csharp:
   - public
   - enum
@@ -57,7 +57,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Debug
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 10
@@ -67,9 +67,10 @@ items:
   summary: "\n调试。\n"
   example: []
   syntax:
-    content: Debug = 0
+    content: Debug = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Debug = Nothing
   modifiers.csharp:
   - public
   - const
@@ -91,7 +92,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Info
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 15
@@ -101,9 +102,10 @@ items:
   summary: "\n信息。\n"
   example: []
   syntax:
-    content: Info = 10
+    content: Info = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Info = Nothing
   modifiers.csharp:
   - public
   - const
@@ -125,7 +127,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Success
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 20
@@ -135,9 +137,10 @@ items:
   summary: "\n成功。\n"
   example: []
   syntax:
-    content: Success = 11
+    content: Success = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Success = Nothing
   modifiers.csharp:
   - public
   - const
@@ -159,7 +162,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Receiving
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 25
@@ -169,9 +172,10 @@ items:
   summary: "\n接收。\n"
   example: []
   syntax:
-    content: Receiving = 12
+    content: Receiving = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Receiving = Nothing
   modifiers.csharp:
   - public
   - const
@@ -193,7 +197,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Sending
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 30
@@ -203,9 +207,10 @@ items:
   summary: "\n发送。\n"
   example: []
   syntax:
-    content: Sending = 13
+    content: Sending = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Sending = Nothing
   modifiers.csharp:
   - public
   - const
@@ -227,7 +232,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Warning
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 35
@@ -237,9 +242,10 @@ items:
   summary: "\n警告。\n"
   example: []
   syntax:
-    content: Warning = 20
+    content: Warning = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Warning = Nothing
   modifiers.csharp:
   - public
   - const
@@ -261,7 +267,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Error
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 40
@@ -271,9 +277,10 @@ items:
   summary: "\n错误。\n"
   example: []
   syntax:
-    content: Error = 30
+    content: Error = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Error = Nothing
   modifiers.csharp:
   - public
   - const
@@ -295,7 +302,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/LogLevel.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Fatal
     path: src/HuajiTech.QQ/LogLevel.cs
     startLine: 45
@@ -305,9 +312,10 @@ items:
   summary: "\n致命错误。\n"
   example: []
   syntax:
-    content: Fatal = 40
+    content: Fatal = null
     return:
       type: HuajiTech.QQ.LogLevel
+    content.vb: Fatal = Nothing
   modifiers.csharp:
   - public
   - const

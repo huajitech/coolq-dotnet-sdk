@@ -18,7 +18,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IRefreshable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IRefreshable
     path: src/HuajiTech.QQ/IRefreshable.cs
     startLine: 7
@@ -51,7 +51,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IRefreshable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Refresh
     path: src/HuajiTech.QQ/IRefreshable.cs
     startLine: 12
@@ -79,7 +79,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IRefreshable.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: RefreshAsync
     path: src/HuajiTech.QQ/IRefreshable.cs
     startLine: 17
@@ -91,7 +91,7 @@ items:
   syntax:
     content: Task RefreshAsync()
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
     content.vb: Function RefreshAsync As Task
   overload: HuajiTech.QQ.IRefreshable.RefreshAsync*
 references:
@@ -116,16 +116,8 @@ references:
   name: RefreshAsync
   nameWithType: IRefreshable.RefreshAsync
   fullName: HuajiTech.QQ.IRefreshable.RefreshAsync
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
+- uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  fullName: Task

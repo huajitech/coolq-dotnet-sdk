@@ -23,7 +23,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: CurrentUser
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 9
@@ -46,7 +46,7 @@ items:
   - HuajiTech.QQ.User
   implements:
   - HuajiTech.QQ.ISendable
-  - System.IEquatable{HuajiTech.QQ.Chat}
+  - IEquatable{HuajiTech.QQ.Chat}
   - HuajiTech.QQ.IRequestable
   - HuajiTech.QQ.IRefreshable
   inheritedMembers:
@@ -66,10 +66,6 @@ items:
   - HuajiTech.QQ.Chat.Send(System.String)
   - HuajiTech.QQ.Chat.SendAsync(System.String)
   - HuajiTech.QQ.Chat.ToString
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   extensionMethods:
   - HuajiTech.QQ.User.HuajiTech.CoolQ.Messaging.Extensions.At
   - HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.ComplexMessage)
@@ -102,7 +98,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: .ctor
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 15
@@ -138,7 +134,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetContacts
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 23
@@ -150,7 +146,7 @@ items:
   syntax:
     content: public abstract IReadOnlyCollection<Contact> GetContacts()
     return:
-      type: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Contact}
+      type: IReadOnlyCollection{HuajiTech.QQ.Contact}
     content.vb: Public MustOverride Function GetContacts As IReadOnlyCollection(Of Contact)
   overload: HuajiTech.QQ.CurrentUser.GetContacts*
   modifiers.csharp:
@@ -174,7 +170,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetContactsAsync
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 28
@@ -186,7 +182,7 @@ items:
   syntax:
     content: public virtual Task<IReadOnlyCollection<Contact>> GetContactsAsync()
     return:
-      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Contact}}
+      type: Task{IReadOnlyCollection{HuajiTech.QQ.Contact}}
     content.vb: Public Overridable Function GetContactsAsync As Task(Of IReadOnlyCollection(Of Contact))
   overload: HuajiTech.QQ.CurrentUser.GetContactsAsync*
   modifiers.csharp:
@@ -210,7 +206,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetCookies
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 33
@@ -249,7 +245,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetCsrfToken
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 38
@@ -285,7 +281,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetGroups
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 43
@@ -297,7 +293,7 @@ items:
   syntax:
     content: public abstract IReadOnlyCollection<Group> GetGroups()
     return:
-      type: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Group}
+      type: IReadOnlyCollection{HuajiTech.QQ.Group}
     content.vb: Public MustOverride Function GetGroups As IReadOnlyCollection(Of Group)
   overload: HuajiTech.QQ.CurrentUser.GetGroups*
   modifiers.csharp:
@@ -321,7 +317,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/CurrentUser.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetGroupsAsync
     path: src/HuajiTech.QQ/CurrentUser.cs
     startLine: 48
@@ -333,7 +329,7 @@ items:
   syntax:
     content: public virtual Task<IReadOnlyCollection<Group>> GetGroupsAsync()
     return:
-      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Group}}
+      type: Task{IReadOnlyCollection{HuajiTech.QQ.Group}}
     content.vb: Public Overridable Function GetGroupsAsync As Task(Of IReadOnlyCollection(Of Group))
   overload: HuajiTech.QQ.CurrentUser.GetGroupsAsync*
   modifiers.csharp:
@@ -349,8 +345,6 @@ references:
   nameWithType: HuajiTech.QQ
   fullName: HuajiTech.QQ
 - uid: System.Object
-  commentId: T:System.Object
-  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -373,21 +367,20 @@ references:
   name: ISendable
   nameWithType: ISendable
   fullName: HuajiTech.QQ.ISendable
-- uid: System.IEquatable{HuajiTech.QQ.Chat}
-  commentId: T:System.IEquatable{HuajiTech.QQ.Chat}
-  parent: System
-  definition: System.IEquatable`1
+- uid: IEquatable{HuajiTech.QQ.Chat}
+  commentId: '!:IEquatable{HuajiTech.QQ.Chat}'
+  definition: IEquatable`1
   name: IEquatable<Chat>
   nameWithType: IEquatable<Chat>
-  fullName: System.IEquatable<HuajiTech.QQ.Chat>
+  fullName: IEquatable<HuajiTech.QQ.Chat>
   nameWithType.vb: IEquatable(Of Chat)
-  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat)
+  fullName.vb: IEquatable(Of HuajiTech.QQ.Chat)
   name.vb: IEquatable(Of Chat)
   spec.csharp:
-  - uid: System.IEquatable`1
+  - uid: IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: System.IEquatable
+    fullName: IEquatable
     isExternal: true
   - name: <
     nameWithType: <
@@ -400,10 +393,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.IEquatable`1
+  - uid: IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: System.IEquatable
+    fullName: IEquatable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -850,182 +843,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: HuajiTech.QQ.User.HuajiTech.CoolQ.Messaging.Extensions.At
   commentId: M:HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
   parent: HuajiTech.CoolQ.Messaging.Extensions
@@ -1308,48 +1125,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System
-  commentId: N:System
+- uid: IEquatable`1
   isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: System.IEquatable`1
-  commentId: T:System.IEquatable`1
-  isExternal: true
-  name: IEquatable<T>
-  nameWithType: IEquatable<T>
-  fullName: System.IEquatable<T>
-  nameWithType.vb: IEquatable(Of T)
-  fullName.vb: System.IEquatable(Of T)
-  name.vb: IEquatable(Of T)
+  name: IEquatable<>
+  nameWithType: IEquatable<>
+  fullName: IEquatable<>
+  nameWithType.vb: IEquatable(Of )
+  fullName.vb: IEquatable(Of )
+  name.vb: IEquatable(Of )
   spec.csharp:
-  - uid: System.IEquatable`1
+  - uid: IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: System.IEquatable
+    fullName: IEquatable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.IEquatable`1
+  - uid: IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: System.IEquatable
+    fullName: IEquatable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
@@ -1749,8 +1559,6 @@ references:
   nameWithType: CurrentUser.CurrentUser
   fullName: HuajiTech.QQ.CurrentUser.CurrentUser
 - uid: System.Int64
-  commentId: T:System.Int64
-  parent: System
   isExternal: true
   name: Int64
   nameWithType: Int64
@@ -1760,21 +1568,20 @@ references:
   name: GetContacts
   nameWithType: CurrentUser.GetContacts
   fullName: HuajiTech.QQ.CurrentUser.GetContacts
-- uid: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Contact}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Contact}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IReadOnlyCollection`1
+- uid: IReadOnlyCollection{HuajiTech.QQ.Contact}
+  commentId: '!:IReadOnlyCollection{HuajiTech.QQ.Contact}'
+  definition: IReadOnlyCollection`1
   name: IReadOnlyCollection<Contact>
   nameWithType: IReadOnlyCollection<Contact>
-  fullName: System.Collections.Generic.IReadOnlyCollection<HuajiTech.QQ.Contact>
+  fullName: IReadOnlyCollection<HuajiTech.QQ.Contact>
   nameWithType.vb: IReadOnlyCollection(Of Contact)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of HuajiTech.QQ.Contact)
+  fullName.vb: IReadOnlyCollection(Of HuajiTech.QQ.Contact)
   name.vb: IReadOnlyCollection(Of Contact)
   spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -1787,10 +1594,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1802,79 +1609,71 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IReadOnlyCollection`1
-  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+- uid: IReadOnlyCollection`1
   isExternal: true
-  name: IReadOnlyCollection<T>
-  nameWithType: IReadOnlyCollection<T>
-  fullName: System.Collections.Generic.IReadOnlyCollection<T>
-  nameWithType.vb: IReadOnlyCollection(Of T)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
-  name.vb: IReadOnlyCollection(Of T)
+  name: IReadOnlyCollection<>
+  nameWithType: IReadOnlyCollection<>
+  fullName: IReadOnlyCollection<>
+  nameWithType.vb: IReadOnlyCollection(Of )
+  fullName.vb: IReadOnlyCollection(Of )
+  name.vb: IReadOnlyCollection(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: HuajiTech.QQ.CurrentUser.GetContactsAsync*
   commentId: Overload:HuajiTech.QQ.CurrentUser.GetContactsAsync
   name: GetContactsAsync
   nameWithType: CurrentUser.GetContactsAsync
   fullName: HuajiTech.QQ.CurrentUser.GetContactsAsync
-- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Contact}}
-  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Contact}}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
+- uid: Task{IReadOnlyCollection{HuajiTech.QQ.Contact}}
+  commentId: '!:Task{IReadOnlyCollection{HuajiTech.QQ.Contact}}'
+  definition: Task`1
   name: Task<IReadOnlyCollection<Contact>>
   nameWithType: Task<IReadOnlyCollection<Contact>>
-  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyCollection<HuajiTech.QQ.Contact>>
+  fullName: Task<IReadOnlyCollection<HuajiTech.QQ.Contact>>
   nameWithType.vb: Task(Of IReadOnlyCollection(Of Contact))
-  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyCollection(Of HuajiTech.QQ.Contact))
+  fullName.vb: Task(Of IReadOnlyCollection(Of HuajiTech.QQ.Contact))
   name.vb: Task(Of IReadOnlyCollection(Of Contact))
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -1890,18 +1689,18 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1916,59 +1715,50 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
+- uid: Task`1
   isExternal: true
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
 - uid: HuajiTech.QQ.CurrentUser.GetCookies*
   commentId: Overload:HuajiTech.QQ.CurrentUser.GetCookies
   name: GetCookies
   nameWithType: CurrentUser.GetCookies
   fullName: HuajiTech.QQ.CurrentUser.GetCookies
 - uid: System.String
-  commentId: T:System.String
-  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -1979,8 +1769,6 @@ references:
   nameWithType: CurrentUser.GetCsrfToken
   fullName: HuajiTech.QQ.CurrentUser.GetCsrfToken
 - uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
@@ -1990,21 +1778,20 @@ references:
   name: GetGroups
   nameWithType: CurrentUser.GetGroups
   fullName: HuajiTech.QQ.CurrentUser.GetGroups
-- uid: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Group}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Group}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IReadOnlyCollection`1
+- uid: IReadOnlyCollection{HuajiTech.QQ.Group}
+  commentId: '!:IReadOnlyCollection{HuajiTech.QQ.Group}'
+  definition: IReadOnlyCollection`1
   name: IReadOnlyCollection<Group>
   nameWithType: IReadOnlyCollection<Group>
-  fullName: System.Collections.Generic.IReadOnlyCollection<HuajiTech.QQ.Group>
+  fullName: IReadOnlyCollection<HuajiTech.QQ.Group>
   nameWithType.vb: IReadOnlyCollection(Of Group)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of HuajiTech.QQ.Group)
+  fullName.vb: IReadOnlyCollection(Of HuajiTech.QQ.Group)
   name.vb: IReadOnlyCollection(Of Group)
   spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -2017,10 +1804,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -2037,29 +1824,28 @@ references:
   name: GetGroupsAsync
   nameWithType: CurrentUser.GetGroupsAsync
   fullName: HuajiTech.QQ.CurrentUser.GetGroupsAsync
-- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Group}}
-  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Group}}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
+- uid: Task{IReadOnlyCollection{HuajiTech.QQ.Group}}
+  commentId: '!:Task{IReadOnlyCollection{HuajiTech.QQ.Group}}'
+  definition: Task`1
   name: Task<IReadOnlyCollection<Group>>
   nameWithType: Task<IReadOnlyCollection<Group>>
-  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyCollection<HuajiTech.QQ.Group>>
+  fullName: Task<IReadOnlyCollection<HuajiTech.QQ.Group>>
   nameWithType.vb: Task(Of IReadOnlyCollection(Of Group))
-  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyCollection(Of HuajiTech.QQ.Group))
+  fullName.vb: Task(Of IReadOnlyCollection(Of HuajiTech.QQ.Group))
   name.vb: Task(Of IReadOnlyCollection(Of Group))
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -2075,18 +1861,18 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
+  - uid: IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: System.Collections.Generic.IReadOnlyCollection
+    fullName: IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

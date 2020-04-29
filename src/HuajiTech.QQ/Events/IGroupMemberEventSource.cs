@@ -10,11 +10,11 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 在成员加入时引发。
         /// </summary>
-        event EventHandler<MemberChangeEventArgs> MemberJoined;
+        event EventHandler<GroupMemberEventArgs> MemberJoined;
 
         /// <summary>
         /// 在成员离开时引发。
         /// </summary>
-        event EventHandler<MemberChangeEventArgs> MemberLeft;
+        event EventHandler<GroupMemberEventArgs> MemberLeft;
     }
 }

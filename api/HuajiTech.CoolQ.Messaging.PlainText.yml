@@ -22,7 +22,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: PlainText
     path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
     startLine: 6
@@ -32,18 +32,14 @@ items:
   summary: "\n表示纯文本。\n此类不能被继承。\n"
   example: []
   syntax:
-    content: 'public sealed class PlainText : MessageElement, IEquatable<MessageElement>'
+    content: 'public sealed class PlainText : MessageElement'
     content.vb: >-
       Public NotInheritable Class PlainText
 
           Inherits MessageElement
-
-          Implements IEquatable(Of MessageElement)
   inheritance:
   - System.Object
   - HuajiTech.CoolQ.Messaging.MessageElement
-  implements:
-  - System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
   inheritedMembers:
   - HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
   - HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
@@ -51,10 +47,6 @@ items:
   - HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
   - HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
   - HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   modifiers.csharp:
   - public
   - sealed
@@ -78,7 +70,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: .ctor
     path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
     startLine: 12
@@ -114,7 +106,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Content
     path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
     startLine: 20
@@ -151,7 +143,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Escape
     path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
     startLine: 27
@@ -192,7 +184,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Unescape
     path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
     startLine: 39
@@ -233,7 +225,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: ToString
     path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
     startLine: 50
@@ -271,7 +263,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: op_Implicit
     path: src/HuajiTech.CoolQ/Messaging/PlainText.cs
     startLine: 55
@@ -303,8 +295,6 @@ references:
   nameWithType: HuajiTech.CoolQ.Messaging
   fullName: HuajiTech.CoolQ.Messaging
 - uid: System.Object
-  commentId: T:System.Object
-  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -315,48 +305,6 @@ references:
   name: MessageElement
   nameWithType: MessageElement
   fullName: HuajiTech.CoolQ.Messaging.MessageElement
-- uid: System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
-  commentId: T:System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
-  parent: System
-  definition: System.IEquatable`1
-  name: IEquatable<MessageElement>
-  nameWithType: IEquatable<MessageElement>
-  fullName: System.IEquatable<HuajiTech.CoolQ.Messaging.MessageElement>
-  nameWithType.vb: IEquatable(Of MessageElement)
-  fullName.vb: System.IEquatable(Of HuajiTech.CoolQ.Messaging.MessageElement)
-  name.vb: IEquatable(Of MessageElement)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: HuajiTech.CoolQ.Messaging.MessageElement
-    name: MessageElement
-    nameWithType: MessageElement
-    fullName: HuajiTech.CoolQ.Messaging.MessageElement
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: HuajiTech.CoolQ.Messaging.MessageElement
-    name: MessageElement
-    nameWithType: MessageElement
-    fullName: HuajiTech.CoolQ.Messaging.MessageElement
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
   commentId: M:HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
   parent: HuajiTech.CoolQ.Messaging.MessageElement
@@ -563,227 +511,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: System.IEquatable`1
-  commentId: T:System.IEquatable`1
-  isExternal: true
-  name: IEquatable<T>
-  nameWithType: IEquatable<T>
-  fullName: System.IEquatable<T>
-  nameWithType.vb: IEquatable(Of T)
-  fullName.vb: System.IEquatable(Of T)
-  name.vb: IEquatable(Of T)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: HuajiTech.CoolQ.Messaging.PlainText
   commentId: T:HuajiTech.CoolQ.Messaging.PlainText
   parent: HuajiTech.CoolQ.Messaging
@@ -796,8 +523,6 @@ references:
   nameWithType: PlainText.PlainText
   fullName: HuajiTech.CoolQ.Messaging.PlainText.PlainText
 - uid: System.String
-  commentId: T:System.String
-  parent: System
   isExternal: true
   name: String
   nameWithType: String

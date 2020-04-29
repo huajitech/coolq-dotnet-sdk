@@ -25,7 +25,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IBot
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 8
@@ -58,7 +58,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: CanSendImage
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 13
@@ -93,7 +93,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: CanSendRecord
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 18
@@ -128,7 +128,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: CurrentUser
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 23
@@ -163,7 +163,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Logger
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 28
@@ -198,7 +198,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: DataDirectory
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 33
@@ -211,7 +211,7 @@ items:
     content: DirectoryInfo DataDirectory { get; }
     parameters: []
     return:
-      type: System.IO.DirectoryInfo
+      type: DirectoryInfo
     content.vb: ReadOnly Property DataDirectory As DirectoryInfo
   overload: HuajiTech.QQ.IBot.DataDirectory*
   modifiers.csharp:
@@ -233,7 +233,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: RequestImage
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 39
@@ -249,7 +249,7 @@ items:
       type: System.String
       description: 请求获取的图片的文件名。
     return:
-      type: System.IO.FileInfo
+      type: FileInfo
     content.vb: Function RequestImage(fileName As String) As FileInfo
   overload: HuajiTech.QQ.IBot.RequestImage*
 - uid: HuajiTech.QQ.IBot.RequestImageAsync(System.String)
@@ -267,7 +267,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: RequestImageAsync
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 45
@@ -283,7 +283,7 @@ items:
       type: System.String
       description: 请求获取的图片的文件名。
     return:
-      type: System.Threading.Tasks.Task{System.IO.FileInfo}
+      type: Task{FileInfo}
     content.vb: Function RequestImageAsync(fileName As String) As Task(Of FileInfo)
   overload: HuajiTech.QQ.IBot.RequestImageAsync*
 - uid: HuajiTech.QQ.IBot.RequestRecord(System.String,System.String)
@@ -301,7 +301,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: RequestRecord
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 52
@@ -320,7 +320,7 @@ items:
       type: System.String
       description: 请求获取的录音的格式。
     return:
-      type: System.IO.FileInfo
+      type: FileInfo
     content.vb: Function RequestRecord(fileName As String, fileFormat As String) As FileInfo
   overload: HuajiTech.QQ.IBot.RequestRecord*
 - uid: HuajiTech.QQ.IBot.RequestRecordAsync(System.String,System.String)
@@ -338,7 +338,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IBot.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: RequestRecordAsync
     path: src/HuajiTech.QQ/IBot.cs
     startLine: 59
@@ -357,7 +357,7 @@ items:
       type: System.String
       description: 请求获取的录音的格式。
     return:
-      type: System.Threading.Tasks.Task{System.IO.FileInfo}
+      type: Task{FileInfo}
     content.vb: Function RequestRecordAsync(fileName As String, fileFormat As String) As Task(Of FileInfo)
   overload: HuajiTech.QQ.IBot.RequestRecordAsync*
 references:
@@ -378,18 +378,10 @@ references:
   nameWithType: IBot.CanSendImage
   fullName: HuajiTech.QQ.IBot.CanSendImage
 - uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: HuajiTech.QQ.IBot.CanSendRecord*
   commentId: Overload:HuajiTech.QQ.IBot.CanSendRecord
   name: CanSendRecord
@@ -422,132 +414,113 @@ references:
   name: DataDirectory
   nameWithType: IBot.DataDirectory
   fullName: HuajiTech.QQ.IBot.DataDirectory
-- uid: System.IO.DirectoryInfo
-  commentId: T:System.IO.DirectoryInfo
-  parent: System.IO
+- uid: DirectoryInfo
+  commentId: '!:DirectoryInfo'
   isExternal: true
   name: DirectoryInfo
   nameWithType: DirectoryInfo
-  fullName: System.IO.DirectoryInfo
-- uid: System.IO
-  commentId: N:System.IO
-  isExternal: true
-  name: System.IO
-  nameWithType: System.IO
-  fullName: System.IO
+  fullName: DirectoryInfo
 - uid: HuajiTech.QQ.IBot.RequestImage*
   commentId: Overload:HuajiTech.QQ.IBot.RequestImage
   name: RequestImage
   nameWithType: IBot.RequestImage
   fullName: HuajiTech.QQ.IBot.RequestImage
 - uid: System.String
-  commentId: T:System.String
-  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
-- uid: System.IO.FileInfo
-  commentId: T:System.IO.FileInfo
-  parent: System.IO
+- uid: FileInfo
   isExternal: true
   name: FileInfo
   nameWithType: FileInfo
-  fullName: System.IO.FileInfo
+  fullName: FileInfo
 - uid: HuajiTech.QQ.IBot.RequestImageAsync*
   commentId: Overload:HuajiTech.QQ.IBot.RequestImageAsync
   name: RequestImageAsync
   nameWithType: IBot.RequestImageAsync
   fullName: HuajiTech.QQ.IBot.RequestImageAsync
-- uid: System.Threading.Tasks.Task{System.IO.FileInfo}
-  commentId: T:System.Threading.Tasks.Task{System.IO.FileInfo}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
+- uid: Task{FileInfo}
+  commentId: '!:Task{FileInfo}'
+  definition: Task`1
   name: Task<FileInfo>
   nameWithType: Task<FileInfo>
-  fullName: System.Threading.Tasks.Task<System.IO.FileInfo>
+  fullName: Task<FileInfo>
   nameWithType.vb: Task(Of FileInfo)
-  fullName.vb: System.Threading.Tasks.Task(Of System.IO.FileInfo)
+  fullName.vb: Task(Of FileInfo)
   name.vb: Task(Of FileInfo)
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.IO.FileInfo
+  - uid: FileInfo
     name: FileInfo
     nameWithType: FileInfo
-    fullName: System.IO.FileInfo
+    fullName: FileInfo
     isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.IO.FileInfo
+  - uid: FileInfo
     name: FileInfo
     nameWithType: FileInfo
-    fullName: System.IO.FileInfo
+    fullName: FileInfo
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
+- uid: Task`1
   isExternal: true
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
+  - uid: Task`1
     name: Task
     nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
 - uid: HuajiTech.QQ.IBot.RequestRecord*
   commentId: Overload:HuajiTech.QQ.IBot.RequestRecord
   name: RequestRecord

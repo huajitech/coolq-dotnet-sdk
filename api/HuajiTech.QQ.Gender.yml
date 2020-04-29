@@ -19,7 +19,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Gender.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Gender
     path: src/HuajiTech.QQ/Gender.cs
     startLine: 5
@@ -29,8 +29,8 @@ items:
   summary: "\n指定性别。\n"
   example: []
   syntax:
-    content: public enum Gender
-    content.vb: Public Enum Gender
+    content: 'public enum Gender : int'
+    content.vb: Public Enum Gender As Integer
   modifiers.csharp:
   - public
   - enum
@@ -52,7 +52,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Gender.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Male
     path: src/HuajiTech.QQ/Gender.cs
     startLine: 10
@@ -86,7 +86,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Gender.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Female
     path: src/HuajiTech.QQ/Gender.cs
     startLine: 15
@@ -120,7 +120,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Gender.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Unknown
     path: src/HuajiTech.QQ/Gender.cs
     startLine: 20
@@ -130,9 +130,10 @@ items:
   summary: "\n未知。\n"
   example: []
   syntax:
-    content: Unknown = 255
+    content: Unknown = null
     return:
       type: HuajiTech.QQ.Gender
+    content.vb: Unknown = Nothing
   modifiers.csharp:
   - public
   - const

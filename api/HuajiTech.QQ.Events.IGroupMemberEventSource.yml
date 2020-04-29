@@ -18,7 +18,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IGroupMemberEventSource
     path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
     startLine: 7
@@ -51,7 +51,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: MemberJoined
     path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
     startLine: 12
@@ -61,10 +61,10 @@ items:
   summary: "\n在成员加入时引发。\n"
   example: []
   syntax:
-    content: event EventHandler<MemberChangeEventArgs> MemberJoined
+    content: event EventHandler<GroupMemberEventArgs> MemberJoined
     return:
-      type: System.EventHandler{MemberChangeEventArgs}
-    content.vb: Event MemberJoined As EventHandler(Of MemberChangeEventArgs)
+      type: EventHandler{HuajiTech.QQ.Events.GroupMemberEventArgs}
+    content.vb: Event MemberJoined As EventHandler(Of GroupMemberEventArgs)
 - uid: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
   commentId: E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
   id: MemberLeft
@@ -80,7 +80,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: MemberLeft
     path: src/HuajiTech.QQ/Events/IGroupMemberEventSource.cs
     startLine: 17
@@ -90,102 +90,92 @@ items:
   summary: "\n在成员离开时引发。\n"
   example: []
   syntax:
-    content: event EventHandler<MemberChangeEventArgs> MemberLeft
+    content: event EventHandler<GroupMemberEventArgs> MemberLeft
     return:
-      type: System.EventHandler{MemberChangeEventArgs}
-    content.vb: Event MemberLeft As EventHandler(Of MemberChangeEventArgs)
+      type: EventHandler{HuajiTech.QQ.Events.GroupMemberEventArgs}
+    content.vb: Event MemberLeft As EventHandler(Of GroupMemberEventArgs)
 references:
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
   nameWithType: HuajiTech.QQ.Events
   fullName: HuajiTech.QQ.Events
-- uid: System.EventHandler{MemberChangeEventArgs}
-  commentId: T:System.EventHandler{MemberChangeEventArgs}
-  parent: System
-  definition: System.EventHandler`1
-  name: EventHandler<MemberChangeEventArgs>
-  nameWithType: EventHandler<MemberChangeEventArgs>
-  fullName: System.EventHandler<MemberChangeEventArgs>
-  nameWithType.vb: EventHandler(Of MemberChangeEventArgs)
-  fullName.vb: System.EventHandler(Of MemberChangeEventArgs)
-  name.vb: EventHandler(Of MemberChangeEventArgs)
+- uid: EventHandler{HuajiTech.QQ.Events.GroupMemberEventArgs}
+  commentId: '!:EventHandler{HuajiTech.QQ.Events.GroupMemberEventArgs}'
+  definition: EventHandler`1
+  name: EventHandler<GroupMemberEventArgs>
+  nameWithType: EventHandler<GroupMemberEventArgs>
+  fullName: EventHandler<HuajiTech.QQ.Events.GroupMemberEventArgs>
+  nameWithType.vb: EventHandler(Of GroupMemberEventArgs)
+  fullName.vb: EventHandler(Of HuajiTech.QQ.Events.GroupMemberEventArgs)
+  name.vb: EventHandler(Of GroupMemberEventArgs)
   spec.csharp:
-  - uid: System.EventHandler`1
+  - uid: EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: System.EventHandler
+    fullName: EventHandler
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: MemberChangeEventArgs
-    name: MemberChangeEventArgs
-    nameWithType: MemberChangeEventArgs
-    fullName: MemberChangeEventArgs
-    isExternal: true
+  - uid: HuajiTech.QQ.Events.GroupMemberEventArgs
+    name: GroupMemberEventArgs
+    nameWithType: GroupMemberEventArgs
+    fullName: HuajiTech.QQ.Events.GroupMemberEventArgs
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.EventHandler`1
+  - uid: EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: System.EventHandler
+    fullName: EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: MemberChangeEventArgs
-    name: MemberChangeEventArgs
-    nameWithType: MemberChangeEventArgs
-    fullName: MemberChangeEventArgs
-    isExternal: true
+  - uid: HuajiTech.QQ.Events.GroupMemberEventArgs
+    name: GroupMemberEventArgs
+    nameWithType: GroupMemberEventArgs
+    fullName: HuajiTech.QQ.Events.GroupMemberEventArgs
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.EventHandler`1
-  commentId: T:System.EventHandler`1
+- uid: EventHandler`1
   isExternal: true
-  name: EventHandler<TEventArgs>
-  nameWithType: EventHandler<TEventArgs>
-  fullName: System.EventHandler<TEventArgs>
-  nameWithType.vb: EventHandler(Of TEventArgs)
-  fullName.vb: System.EventHandler(Of TEventArgs)
-  name.vb: EventHandler(Of TEventArgs)
+  name: EventHandler<>
+  nameWithType: EventHandler<>
+  fullName: EventHandler<>
+  nameWithType.vb: EventHandler(Of )
+  fullName.vb: EventHandler(Of )
+  name.vb: EventHandler(Of )
   spec.csharp:
-  - uid: System.EventHandler`1
+  - uid: EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: System.EventHandler
+    fullName: EventHandler
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TEventArgs
-    nameWithType: TEventArgs
-    fullName: TEventArgs
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.EventHandler`1
+  - uid: EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: System.EventHandler
+    fullName: EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TEventArgs
-    nameWithType: TEventArgs
-    fullName: TEventArgs
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System

@@ -6,7 +6,7 @@ items:
   parent: HuajiTech.CoolQ.Messaging
   children:
   - HuajiTech.CoolQ.Messaging.CustomMusic.#ctor
-  - HuajiTech.CoolQ.Messaging.CustomMusic.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
+  - HuajiTech.CoolQ.Messaging.CustomMusic.#ctor(IDictionary{System.String,System.String})
   - HuajiTech.CoolQ.Messaging.CustomMusic.AudioUrl
   - HuajiTech.CoolQ.Messaging.CustomMusic.ContentUrl
   - HuajiTech.CoolQ.Messaging.CustomMusic.Description
@@ -23,7 +23,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: CustomMusic
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 8
@@ -33,19 +33,15 @@ items:
   summary: "\n表示自定义音乐的 <xref href=\"HuajiTech.CoolQ.Messaging.CQCode\" data-throw-if-not-resolved=\"false\"></xref>。\n"
   example: []
   syntax:
-    content: 'public class CustomMusic : CQCode, IEquatable<MessageElement>'
+    content: 'public class CustomMusic : CQCode'
     content.vb: >-
       Public Class CustomMusic
 
           Inherits CQCode
-
-          Implements IEquatable(Of MessageElement)
   inheritance:
   - System.Object
   - HuajiTech.CoolQ.Messaging.MessageElement
   - HuajiTech.CoolQ.Messaging.CQCode
-  implements:
-  - System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
   inheritedMembers:
   - HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
   - HuajiTech.CoolQ.Messaging.CQCode.Parameters
@@ -62,17 +58,13 @@ items:
   - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int32)
   - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Int64)
   - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Single)
-  - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
+  - HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,Uri)
   - HuajiTech.CoolQ.Messaging.MessageElement.FromString(System.String)
   - HuajiTech.CoolQ.Messaging.MessageElement.Add(HuajiTech.CoolQ.Messaging.MessageElement)
   - HuajiTech.CoolQ.Messaging.MessageElement.ToComplexMessage
   - HuajiTech.CoolQ.Messaging.MessageElement.GetHashCode
   - HuajiTech.CoolQ.Messaging.MessageElement.Equals(System.Object)
   - HuajiTech.CoolQ.Messaging.MessageElement.Equals(HuajiTech.CoolQ.Messaging.MessageElement)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
   modifiers.csharp:
   - public
   - class
@@ -94,7 +86,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: .ctor
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 10
@@ -109,22 +101,22 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: HuajiTech.CoolQ.Messaging.CustomMusic.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
-  commentId: M:HuajiTech.CoolQ.Messaging.CustomMusic.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
-  id: '#ctor(System.Collections.Generic.IDictionary{System.String,System.String})'
+- uid: HuajiTech.CoolQ.Messaging.CustomMusic.#ctor(IDictionary{System.String,System.String})
+  commentId: M:HuajiTech.CoolQ.Messaging.CustomMusic.#ctor(IDictionary{System.String,System.String})
+  id: '#ctor(IDictionary{System.String,System.String})'
   parent: HuajiTech.CoolQ.Messaging.CustomMusic
   langs:
   - csharp
   - vb
   name: CustomMusic(IDictionary<String, String>)
   nameWithType: CustomMusic.CustomMusic(IDictionary<String, String>)
-  fullName: HuajiTech.CoolQ.Messaging.CustomMusic.CustomMusic(System.Collections.Generic.IDictionary<System.String, System.String>)
+  fullName: HuajiTech.CoolQ.Messaging.CustomMusic.CustomMusic(IDictionary<System.String, System.String>)
   type: Constructor
   source:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: .ctor
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 16
@@ -135,7 +127,7 @@ items:
     content: public CustomMusic(IDictionary<string, string> parameters)
     parameters:
     - id: parameters
-      type: System.Collections.Generic.IDictionary{System.String,System.String}
+      type: IDictionary{System.String,System.String}
     content.vb: Public Sub New(parameters As IDictionary(Of String, String))
   overload: HuajiTech.CoolQ.Messaging.CustomMusic.#ctor*
   nameWithType.vb: CustomMusic.CustomMusic(IDictionary(Of String, String))
@@ -143,7 +135,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: HuajiTech.CoolQ.Messaging.CustomMusic.CustomMusic(System.Collections.Generic.IDictionary(Of System.String, System.String))
+  fullName.vb: HuajiTech.CoolQ.Messaging.CustomMusic.CustomMusic(IDictionary(Of System.String, System.String))
   name.vb: CustomMusic(IDictionary(Of String, String))
 - uid: HuajiTech.CoolQ.Messaging.CustomMusic.AudioUrl
   commentId: P:HuajiTech.CoolQ.Messaging.CustomMusic.AudioUrl
@@ -160,7 +152,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: AudioUrl
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 24
@@ -173,7 +165,7 @@ items:
     content: public Uri AudioUrl { get; set; }
     parameters: []
     return:
-      type: System.Uri
+      type: Uri
     content.vb: Public Property AudioUrl As Uri
   overload: HuajiTech.CoolQ.Messaging.CustomMusic.AudioUrl*
   modifiers.csharp:
@@ -197,7 +189,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: ContentUrl
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 33
@@ -210,7 +202,7 @@ items:
     content: public Uri ContentUrl { get; set; }
     parameters: []
     return:
-      type: System.Uri
+      type: Uri
     content.vb: Public Property ContentUrl As Uri
   overload: HuajiTech.CoolQ.Messaging.CustomMusic.ContentUrl*
   modifiers.csharp:
@@ -234,7 +226,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Description
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 42
@@ -271,7 +263,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: ImageUrl
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 51
@@ -284,7 +276,7 @@ items:
     content: public Uri ImageUrl { get; set; }
     parameters: []
     return:
-      type: System.Uri
+      type: Uri
     content.vb: Public Property ImageUrl As Uri
   overload: HuajiTech.CoolQ.Messaging.CustomMusic.ImageUrl*
   modifiers.csharp:
@@ -308,7 +300,7 @@ items:
     remote:
       path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Title
     path: src/HuajiTech.CoolQ/Messaging/CustomMusic.cs
     startLine: 60
@@ -343,8 +335,6 @@ references:
   nameWithType: HuajiTech.CoolQ.Messaging
   fullName: HuajiTech.CoolQ.Messaging
 - uid: System.Object
-  commentId: T:System.Object
-  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -355,48 +345,6 @@ references:
   name: MessageElement
   nameWithType: MessageElement
   fullName: HuajiTech.CoolQ.Messaging.MessageElement
-- uid: System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
-  commentId: T:System.IEquatable{HuajiTech.CoolQ.Messaging.MessageElement}
-  parent: System
-  definition: System.IEquatable`1
-  name: IEquatable<MessageElement>
-  nameWithType: IEquatable<MessageElement>
-  fullName: System.IEquatable<HuajiTech.CoolQ.Messaging.MessageElement>
-  nameWithType.vb: IEquatable(Of MessageElement)
-  fullName.vb: System.IEquatable(Of HuajiTech.CoolQ.Messaging.MessageElement)
-  name.vb: IEquatable(Of MessageElement)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: HuajiTech.CoolQ.Messaging.MessageElement
-    name: MessageElement
-    nameWithType: MessageElement
-    fullName: HuajiTech.CoolQ.Messaging.MessageElement
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: HuajiTech.CoolQ.Messaging.MessageElement
-    name: MessageElement
-    nameWithType: MessageElement
-    fullName: HuajiTech.CoolQ.Messaging.MessageElement
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
   commentId: P:HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)
   parent: HuajiTech.CoolQ.Messaging.CQCode
@@ -972,15 +920,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
-  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
+- uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,Uri)
+  commentId: M:HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,Uri)
   parent: HuajiTech.CoolQ.Messaging.CQCode
   isExternal: true
   name: SetParameter(String, Uri)
   nameWithType: CQCode.SetParameter(String, Uri)
-  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, System.Uri)
+  fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String, Uri)
   spec.csharp:
-  - uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
+  - uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,Uri)
     name: SetParameter
     nameWithType: CQCode.SetParameter
     fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter
@@ -995,16 +943,16 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Uri
+  - uid: Uri
     name: Uri
     nameWithType: Uri
-    fullName: System.Uri
+    fullName: Uri
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,System.Uri)
+  - uid: HuajiTech.CoolQ.Messaging.CQCode.SetParameter(System.String,Uri)
     name: SetParameter
     nameWithType: CQCode.SetParameter
     fullName: HuajiTech.CoolQ.Messaging.CQCode.SetParameter
@@ -1019,10 +967,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Uri
+  - uid: Uri
     name: Uri
     nameWithType: Uri
-    fullName: System.Uri
+    fullName: Uri
     isExternal: true
   - name: )
     nameWithType: )
@@ -1233,247 +1181,25 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: System.IEquatable`1
-  commentId: T:System.IEquatable`1
-  isExternal: true
-  name: IEquatable<T>
-  nameWithType: IEquatable<T>
-  fullName: System.IEquatable<T>
-  nameWithType.vb: IEquatable(Of T)
-  fullName.vb: System.IEquatable(Of T)
-  name.vb: IEquatable(Of T)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: HuajiTech.CoolQ.Messaging.CustomMusic.#ctor*
   commentId: Overload:HuajiTech.CoolQ.Messaging.CustomMusic.#ctor
   name: CustomMusic
   nameWithType: CustomMusic.CustomMusic
   fullName: HuajiTech.CoolQ.Messaging.CustomMusic.CustomMusic
-- uid: System.Collections.Generic.IDictionary{System.String,System.String}
-  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IDictionary`2
+- uid: IDictionary{System.String,System.String}
+  commentId: '!:IDictionary{System.String,System.String}'
+  definition: IDictionary`2
   name: IDictionary<String, String>
   nameWithType: IDictionary<String, String>
-  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
+  fullName: IDictionary<System.String, System.String>
   nameWithType.vb: IDictionary(Of String, String)
-  fullName.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
+  fullName.vb: IDictionary(Of System.String, System.String)
   name.vb: IDictionary(Of String, String)
   spec.csharp:
-  - uid: System.Collections.Generic.IDictionary`2
+  - uid: IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
+    fullName: IDictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -1495,10 +1221,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IDictionary`2
+  - uid: IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
+    fullName: IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1519,63 +1245,56 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.IDictionary`2
-  commentId: T:System.Collections.Generic.IDictionary`2
+- uid: IDictionary`2
   isExternal: true
-  name: IDictionary<TKey, TValue>
-  nameWithType: IDictionary<TKey, TValue>
-  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
-  nameWithType.vb: IDictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
-  name.vb: IDictionary(Of TKey, TValue)
+  name: IDictionary<, >
+  nameWithType: IDictionary<, >
+  fullName: IDictionary<, >
+  nameWithType.vb: IDictionary(Of , )
+  fullName.vb: IDictionary(Of , )
+  name.vb: IDictionary(Of , )
   spec.csharp:
-  - uid: System.Collections.Generic.IDictionary`2
+  - uid: IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
+    fullName: IDictionary
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IDictionary`2
+  - uid: IDictionary`2
     name: IDictionary
     nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
+    fullName: IDictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: HuajiTech.CoolQ.Messaging.CustomMusic
   commentId: T:HuajiTech.CoolQ.Messaging.CustomMusic
   name: CustomMusic
@@ -1586,13 +1305,11 @@ references:
   name: AudioUrl
   nameWithType: CustomMusic.AudioUrl
   fullName: HuajiTech.CoolQ.Messaging.CustomMusic.AudioUrl
-- uid: System.Uri
-  commentId: T:System.Uri
-  parent: System
+- uid: Uri
   isExternal: true
   name: Uri
   nameWithType: Uri
-  fullName: System.Uri
+  fullName: Uri
 - uid: HuajiTech.CoolQ.Messaging.CustomMusic.ContentUrl*
   commentId: Overload:HuajiTech.CoolQ.Messaging.CustomMusic.ContentUrl
   name: ContentUrl
@@ -1604,8 +1321,6 @@ references:
   nameWithType: CustomMusic.Description
   fullName: HuajiTech.CoolQ.Messaging.CustomMusic.Description
 - uid: System.String
-  commentId: T:System.String
-  parent: System
   isExternal: true
   name: String
   nameWithType: String

@@ -17,7 +17,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IMember.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: IMember
     path: src/HuajiTech.QQ/IMember.cs
     startLine: 7
@@ -33,13 +33,12 @@ items:
 
           Inherits ITimedMuteable, IEquatable(Of IMember)
   inheritedMembers:
-  - HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
-  - HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  - HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
+  - HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
   - HuajiTech.QQ.IMuteable.Mute
   - HuajiTech.QQ.IMuteable.MuteAsync
   - HuajiTech.QQ.IMuteable.Unmute
   - HuajiTech.QQ.IMuteable.UnmuteAsync
-  - System.IEquatable{HuajiTech.QQ.IMember}.Equals(HuajiTech.QQ.IMember)
   modifiers.csharp:
   - public
   - interface
@@ -61,7 +60,7 @@ items:
     remote:
       path: src/HuajiTech.QQ/IMember.cs
       branch: master
-      repo: http://gitlab.internal.huajitech.net/huajitech/coolq-dotnet-sdk.git
+      repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Group
     path: src/HuajiTech.QQ/IMember.cs
     startLine: 12
@@ -87,80 +86,80 @@ references:
   name: HuajiTech.QQ
   nameWithType: HuajiTech.QQ
   fullName: HuajiTech.QQ
-- uid: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
-  commentId: M:HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+- uid: HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
+  commentId: M:HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
   parent: HuajiTech.QQ.ITimedMuteable
   isExternal: true
   name: Mute(TimeSpan)
   nameWithType: ITimedMuteable.Mute(TimeSpan)
-  fullName: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  fullName: HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
   spec.csharp:
-  - uid: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  - uid: HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
     name: Mute
     nameWithType: ITimedMuteable.Mute
     fullName: HuajiTech.QQ.ITimedMuteable.Mute
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.TimeSpan
+  - uid: TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: System.TimeSpan
+    fullName: TimeSpan
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: HuajiTech.QQ.ITimedMuteable.Mute(System.TimeSpan)
+  - uid: HuajiTech.QQ.ITimedMuteable.Mute(TimeSpan)
     name: Mute
     nameWithType: ITimedMuteable.Mute
     fullName: HuajiTech.QQ.ITimedMuteable.Mute
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.TimeSpan
+  - uid: TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: System.TimeSpan
+    fullName: TimeSpan
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
-  commentId: M:HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+- uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
+  commentId: M:HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
   parent: HuajiTech.QQ.ITimedMuteable
   isExternal: true
   name: MuteAsync(TimeSpan)
   nameWithType: ITimedMuteable.MuteAsync(TimeSpan)
-  fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
   spec.csharp:
-  - uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  - uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
     name: MuteAsync
     nameWithType: ITimedMuteable.MuteAsync
     fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.TimeSpan
+  - uid: TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: System.TimeSpan
+    fullName: TimeSpan
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(System.TimeSpan)
+  - uid: HuajiTech.QQ.ITimedMuteable.MuteAsync(TimeSpan)
     name: MuteAsync
     nameWithType: ITimedMuteable.MuteAsync
     fullName: HuajiTech.QQ.ITimedMuteable.MuteAsync
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.TimeSpan
+  - uid: TimeSpan
     name: TimeSpan
     nameWithType: TimeSpan
-    fullName: System.TimeSpan
+    fullName: TimeSpan
     isExternal: true
   - name: )
     nameWithType: )
@@ -277,47 +276,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.IEquatable{HuajiTech.QQ.IMember}.Equals(HuajiTech.QQ.IMember)
-  commentId: M:System.IEquatable{HuajiTech.QQ.IMember}.Equals(HuajiTech.QQ.IMember)
-  parent: System.IEquatable{HuajiTech.QQ.IMember}
-  definition: System.IEquatable`1.Equals(`0)
-  name: Equals(IMember)
-  nameWithType: IEquatable<IMember>.Equals(IMember)
-  fullName: System.IEquatable<HuajiTech.QQ.IMember>.Equals(HuajiTech.QQ.IMember)
-  nameWithType.vb: IEquatable(Of IMember).Equals(IMember)
-  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IMember).Equals(HuajiTech.QQ.IMember)
-  spec.csharp:
-  - uid: System.IEquatable`1.Equals(`0)
-    name: Equals
-    nameWithType: IEquatable<IMember>.Equals
-    fullName: System.IEquatable<HuajiTech.QQ.IMember>.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: HuajiTech.QQ.IMember
-    name: IMember
-    nameWithType: IMember
-    fullName: HuajiTech.QQ.IMember
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.IEquatable`1.Equals(`0)
-    name: Equals
-    nameWithType: IEquatable(Of IMember).Equals
-    fullName: System.IEquatable(Of HuajiTech.QQ.IMember).Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: HuajiTech.QQ.IMember
-    name: IMember
-    nameWithType: IMember
-    fullName: HuajiTech.QQ.IMember
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: HuajiTech.QQ.ITimedMuteable
   commentId: T:HuajiTech.QQ.ITimedMuteable
   parent: HuajiTech.QQ
@@ -330,131 +288,6 @@ references:
   name: IMuteable
   nameWithType: IMuteable
   fullName: HuajiTech.QQ.IMuteable
-- uid: System.IEquatable`1.Equals(`0)
-  commentId: M:System.IEquatable`1.Equals(`0)
-  isExternal: true
-  name: Equals(T)
-  nameWithType: IEquatable<T>.Equals(T)
-  fullName: System.IEquatable<T>.Equals(T)
-  nameWithType.vb: IEquatable(Of T).Equals(T)
-  fullName.vb: System.IEquatable(Of T).Equals(T)
-  spec.csharp:
-  - uid: System.IEquatable`1.Equals(`0)
-    name: Equals
-    nameWithType: IEquatable<T>.Equals
-    fullName: System.IEquatable<T>.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.IEquatable`1.Equals(`0)
-    name: Equals
-    nameWithType: IEquatable(Of T).Equals
-    fullName: System.IEquatable(Of T).Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.IEquatable{HuajiTech.QQ.IMember}
-  commentId: T:System.IEquatable{HuajiTech.QQ.IMember}
-  parent: System
-  definition: System.IEquatable`1
-  name: IEquatable<IMember>
-  nameWithType: IEquatable<IMember>
-  fullName: System.IEquatable<HuajiTech.QQ.IMember>
-  nameWithType.vb: IEquatable(Of IMember)
-  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IMember)
-  name.vb: IEquatable(Of IMember)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: HuajiTech.QQ.IMember
-    name: IMember
-    nameWithType: IMember
-    fullName: HuajiTech.QQ.IMember
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: HuajiTech.QQ.IMember
-    name: IMember
-    nameWithType: IMember
-    fullName: HuajiTech.QQ.IMember
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.IEquatable`1
-  commentId: T:System.IEquatable`1
-  isExternal: true
-  name: IEquatable<T>
-  nameWithType: IEquatable<T>
-  fullName: System.IEquatable<T>
-  nameWithType.vb: IEquatable(Of T)
-  fullName.vb: System.IEquatable(Of T)
-  name.vb: IEquatable(Of T)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    nameWithType: IEquatable
-    fullName: System.IEquatable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: HuajiTech.QQ.IMember
   commentId: T:HuajiTech.QQ.IMember
   parent: HuajiTech.QQ
