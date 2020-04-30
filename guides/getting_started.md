@@ -53,7 +53,7 @@ public MyPlugin(
 ### 路由
 
 酷Q的所有事件数据类均派生自 @"HuajiTech.QQ.Events.RoutedEventArgs" 类。
-通过设置 @"HuajiTech.QQ.RoutedEventArgs.Events.Handled" 属性，可阻断事件。
+通过设置 @"HuajiTech.QQ.Events.RoutedEventArgs.Handled" 属性，可阻断事件。
 
 ### 菜单和悬浮窗状态
 

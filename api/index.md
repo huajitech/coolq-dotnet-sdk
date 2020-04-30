@@ -1,3 +1,3 @@
 # API 参考
 
-浏览此项目的 API。
+浏览 HuajiTech.CoolQ 的 API。

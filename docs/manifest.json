@@ -1134,7 +1134,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "h6XWFZZIjIaa8TE6dCZhNw=="
+          "hash": "guWQsw/3eBxOsfa08b/T+Q=="
         }
       },
       "is_incremental": false,
@@ -1170,7 +1170,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/getting_started.html",
-          "hash": "YPgem1CbtrzKgsY5WZ0Muw=="
+          "hash": "tEmVW5RMvRvaJZqfStafKw=="
         }
       },
       "is_incremental": false,
@@ -1182,7 +1182,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/howto_handle_message.html",
-          "hash": "Y/sC71PtizdSLg2r6B9+pA=="
+          "hash": "7gcpxen+quRKyovL/YoOXw=="
         }
       },
       "is_incremental": false,
@@ -1297,13 +1297,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 10,
-          "skipped_file_count": 10
+          "skipped_file_count": 7
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 92,
-          "skipped_file_count": 27
+          "skipped_file_count": 92
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

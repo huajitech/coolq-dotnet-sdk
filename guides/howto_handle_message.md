@@ -11,7 +11,7 @@ if (e.Source is Contact) { } // 好友消息。
 
 ## 使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage"（复合消息）
 
-通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message)" 扩展方法解析消息。
+通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message,System.Boolean)" 扩展方法解析消息。
 
 ```csharp
 var message = e.Message.Parse();
@@ -20,7 +20,7 @@ var message = e.Message.Parse();
 获取消息中的所有纯文本拼接成的字符串。
 
 ```csharp
-string.GetPlainText();
+message.GetPlainText();
 ```
 
 判断机器人是否被 @。
@@ -38,7 +38,7 @@ if (message.Contains(CurrentUser.At()))
 e.Source.Send(e.Sender.At() + [...])
 ```
 
-解构复合消息
+解构复合消息。
 
 ```csharp
 var (a, b, c) = message;
@@ -56,7 +56,7 @@ if (message is (At at, Image image))
 
 ## 使用正则消息
 
-通过 @"HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)" 扩展方法解码正则消息。
+通过 @"HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.Message)" 扩展方法解码正则消息。
 
 ```csharp
 var args = e.Message.RegexDecode();
