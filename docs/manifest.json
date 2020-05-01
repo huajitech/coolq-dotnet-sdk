@@ -1122,7 +1122,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/events.html",
-          "hash": "iabfQvzGRkMqj6HM8PqSzw=="
+          "hash": "Wklutfw6Dzhwo+AS17mIOA=="
         }
       },
       "is_incremental": false,
@@ -1134,7 +1134,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/getting_started.html",
-          "hash": "tEmVW5RMvRvaJZqfStafKw=="
+          "hash": "/Q1/2Yr+luzzUaV45MHC3Q=="
         }
       },
       "is_incremental": false,
@@ -1261,13 +1261,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 10,
-          "skipped_file_count": 9
+          "skipped_file_count": 8
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 89,
-          "skipped_file_count": 66
+          "skipped_file_count": 89
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -66,7 +66,7 @@ public MyPlugin(
 可以通过事件数据中提供的对象被动地调用酷Q API。
 
 ```csharp
-private void MemberJoined(object sender, GroupMemberEventArgs e)
+private void OnMemberJoined(object sender, GroupMemberEventArgs e)
 {
     e.Operatee.Mute(TimeSpan.FromMinutes(5));
     e.Source.Send("欢迎 " + e.Operatee.DisplayName);

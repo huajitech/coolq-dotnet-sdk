@@ -11,7 +11,7 @@
 | 104 | 群禁言事件处理 | @"HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted"、@"HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted"、@"HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted"、@"HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted" |
 | 201 | 好友已添加事件处理 | @"HuajiTech.QQ.Events.IContactEventSource.ContactAdded" |
 | 301 | 好友添加请求处理 | @"HuajiTech.QQ.Events.IContactEventSource.ContactRequested" |
-| 302 | 群添加请求处理 | @"HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited"、@"HuajiTech.QQ.Events.IEntranceRequestEventSource.EntranceRequested" |
+| 302 | 群添加请求处理 | @"HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited"、@"HuajiTech.QQ.Events.IEntranceRequestEventSource.EntranceRequested" |
 | 1001 | 酷Q启动事件 | @"HuajiTech.QQ.Events.IBotEventSource.BotStarted" |
 | 1002 | 酷Q关闭事件 | @"HuajiTech.QQ.Events.IBotEventSource.BotStopping" |
 | 1003 | 应用已被启用 | @"HuajiTech.QQ.Events.IBotEventSource.AppEnabled" |

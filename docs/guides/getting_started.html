@@ -124,7 +124,7 @@
 <p>有关详细信息，请参见<a href="menus_and_statuses.html">菜单和悬浮窗状态</a>。</p>
 <h2 id="酷q-api">酷Q API</h2>
 <p>可以通过事件数据中提供的对象被动地调用酷Q API。</p>
-<pre><code class="lang-csharp">private void MemberJoined(object sender, GroupMemberEventArgs e)
+<pre><code class="lang-csharp">private void OnMemberJoined(object sender, GroupMemberEventArgs e)
 {
     e.Operatee.Mute(TimeSpan.FromMinutes(5));
     e.Source.Send(&quot;欢迎 &quot; + e.Operatee.DisplayName);
