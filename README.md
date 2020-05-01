@@ -23,7 +23,7 @@ public class Repeater : Plugin
 {
     public Repeater(IMessageEventSource source)
     {
-        source.MessageReceived += (sender, e) => e.Source.Send(e.Message.Content);
+        source.MessageReceived += (sender, e) => e.Source.Send(e.Message);
     }
 }
 ```
