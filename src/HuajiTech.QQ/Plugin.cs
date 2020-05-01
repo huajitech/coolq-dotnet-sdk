@@ -2,6 +2,7 @@
 {
     /// <summary>
     /// 用作插件的基类，并提供操作 <see cref="PluginContext"/> 的方法。
+    /// 此类为抽象类。
     /// </summary>
     public abstract class Plugin
     {

@@ -3,7 +3,7 @@ using System;
 namespace HuajiTech.QQ.Events
 {
     /// <summary>
-    /// 为 <see cref="IEntranceInvitationEventSource.EntranceInvited"/> 事件提供数据。
+    /// 为 <see cref="IEntranceInviteEventSource.EntranceInvited"/> 事件提供数据。
     /// </summary>
     public class EntranceInvitedEventArgs : TimedEventArgs
     {
