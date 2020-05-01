@@ -32,6 +32,11 @@
             获取当前 <see cref="T:HuajiTech.QQ.AnonymousMember"/> 对象的名称。
             </summary>
         </member>
+        <member name="T:HuajiTech.QQ.ApiException">
+            <summary>
+            在调用 API 发生错误时引发的异常。
+            </summary>
+        </member>
         <member name="T:HuajiTech.QQ.Chat">
             <summary>
             表示聊天。
@@ -698,6 +703,31 @@
             </summary>
             <param name="fileName">请求获取的录音的文件名。</param>
             <param name="fileFormat">请求获取的录音的格式。</param>
+        </member>
+        <member name="T:HuajiTech.QQ.IChattable">
+            <summary>
+            定义可聊天的对象。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IChattable.DisplayName">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IChattable"/> 对象的显示名称。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IChattable.Number">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IChattable"/> 对象的号码。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.QQ.IMember">
+            <summary>
+            定义成员。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IMember.Group">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IMember"/> 对象的所在群。
+            </summary>
         </member>
         <member name="T:HuajiTech.QQ.IMuteable">
             <summary>

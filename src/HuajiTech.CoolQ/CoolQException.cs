@@ -1,3 +1,4 @@
+using HuajiTech.QQ;
 using System;
 using System.Runtime.Serialization;
 
@@ -7,17 +8,16 @@ namespace HuajiTech.CoolQ
     /// 在酷Q返回了意料之外的值时引发的异常。
     /// </summary>
     [Serializable]
-    public class CoolQException : Exception
+    public class CoolQException : ApiException
     {
         public CoolQException(string message)
             : base(message)
         {
         }
 
-        public CoolQException(string message, int returnValue)
-            : base(message)
+        public CoolQException(string message, int errorValue)
+            : base(message, errorValue)
         {
-            ReturnValue = returnValue;
         }
 
         public CoolQException(string message, Exception innerException)
@@ -33,7 +33,5 @@ namespace HuajiTech.CoolQ
             : base(info, context)
         {
         }
-
-        public int? ReturnValue { get; }
     }
 }
