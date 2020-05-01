@@ -209,10 +209,7 @@ items:
 references:
 - uid: HuajiTech.QQ.Events.IEntranceRequestEventSource.EntranceRequested
   commentId: E:HuajiTech.QQ.Events.IEntranceRequestEventSource.EntranceRequested
-  parent: HuajiTech.QQ.Events.IEntranceRequestEventSource
-  name: EntranceRequested
-  nameWithType: IEntranceRequestEventSource.EntranceRequested
-  fullName: HuajiTech.QQ.Events.IEntranceRequestEventSource.EntranceRequested
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -542,12 +539,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IEntranceRequestEventSource
-  commentId: T:HuajiTech.QQ.Events.IEntranceRequestEventSource
-  parent: HuajiTech.QQ.Events
-  name: IEntranceRequestEventSource
-  nameWithType: IEntranceRequestEventSource
-  fullName: HuajiTech.QQ.Events.IEntranceRequestEventSource
 - uid: System
   commentId: N:System
   isExternal: true

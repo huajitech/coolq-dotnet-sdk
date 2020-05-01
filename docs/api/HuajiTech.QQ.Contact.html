@@ -96,8 +96,9 @@
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
+    <div><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a>&gt;</div>
     <div><a class="xref" href="HuajiTech.QQ.IRequestable.html">IRequestable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.IRefreshable.html">IRefreshable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.IAliased.html">IAliased</a></div>
@@ -138,7 +139,7 @@
       <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_System_Object_">Chat.Equals(Object)</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_Chat_">Chat.Equals(Chat)</a>
+      <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_IChattable_">Chat.Equals(IChattable)</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_GetHashCode">Chat.GetHashCode()</a>
@@ -169,7 +170,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_Contact_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Contact : User, ISendable, IEquatable&lt;Chat&gt;, IRequestable, IRefreshable, IAliased</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Contact : User, IChattable, ISendable, IEquatable&lt;IChattable&gt;, IRequestable, IRefreshable, IAliased</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -240,6 +241,9 @@
     </tbody>
   </table>
   <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a>
+  </div>
   <div>
       <a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a>
   </div>

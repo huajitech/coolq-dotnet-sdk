@@ -17,7 +17,7 @@ items:
   - HuajiTech.QQ.Group
   - HuajiTech.QQ.IAliased
   - HuajiTech.QQ.IBot
-  - HuajiTech.QQ.IGroup
+  - HuajiTech.QQ.IChattable
   - HuajiTech.QQ.IMember
   - HuajiTech.QQ.IMuteable
   - HuajiTech.QQ.IRefreshable
@@ -121,12 +121,12 @@ references:
   name: IBot
   nameWithType: IBot
   fullName: HuajiTech.QQ.IBot
-- uid: HuajiTech.QQ.IGroup
-  commentId: T:HuajiTech.QQ.IGroup
+- uid: HuajiTech.QQ.IChattable
+  commentId: T:HuajiTech.QQ.IChattable
   parent: HuajiTech.QQ
-  name: IGroup
-  nameWithType: IGroup
-  fullName: HuajiTech.QQ.IGroup
+  name: IChattable
+  nameWithType: IChattable
+  fullName: HuajiTech.QQ.IChattable
 - uid: HuajiTech.QQ.IMember
   commentId: T:HuajiTech.QQ.IMember
   parent: HuajiTech.QQ

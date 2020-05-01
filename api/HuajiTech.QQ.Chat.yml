@@ -7,7 +7,7 @@ items:
   children:
   - HuajiTech.QQ.Chat.#ctor(System.Int64)
   - HuajiTech.QQ.Chat.DisplayName
-  - HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   - HuajiTech.QQ.Chat.Equals(System.Object)
   - HuajiTech.QQ.Chat.GetHashCode
   - HuajiTech.QQ.Chat.Number
@@ -30,25 +30,26 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Chat
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 9
+    startLine: 8
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
   summary: "\n表示聊天。\n此类为抽象类。\n"
   example: []
   syntax:
-    content: 'public abstract class Chat : ISendable, IEquatable<Chat>'
+    content: 'public abstract class Chat : IChattable, ISendable, IEquatable<IChattable>'
     content.vb: >-
       Public MustInherit Class Chat
-          Implements ISendable, IEquatable(Of Chat)
+          Implements IChattable, ISendable, IEquatable(Of IChattable)
   inheritance:
   - System.Object
   derivedClasses:
   - HuajiTech.QQ.Group
   - HuajiTech.QQ.User
   implements:
+  - HuajiTech.QQ.IChattable
   - HuajiTech.QQ.ISendable
-  - System.IEquatable{HuajiTech.QQ.Chat}
+  - System.IEquatable{HuajiTech.QQ.IChattable}
   inheritedMembers:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
@@ -85,7 +86,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: .ctor
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 15
+    startLine: 14
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -121,7 +122,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: DisplayName
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -134,6 +135,8 @@ items:
       type: System.String
     content.vb: Public MustOverride ReadOnly Property DisplayName As String
   overload: HuajiTech.QQ.Chat.DisplayName*
+  implements:
+  - HuajiTech.QQ.IChattable.DisplayName
   modifiers.csharp:
   - public
   - abstract
@@ -160,7 +163,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Number
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 25
+    startLine: 24
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -173,6 +176,8 @@ items:
       type: System.Int64
     content.vb: Public ReadOnly Property Number As Long
   overload: HuajiTech.QQ.Chat.Number*
+  implements:
+  - HuajiTech.QQ.IChattable.Number
   modifiers.csharp:
   - public
   - get
@@ -197,7 +202,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: op_Inequality
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 27
+    startLine: 26
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -236,7 +241,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: op_Equality
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 29
+    startLine: 28
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -275,7 +280,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Equals
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 31
+    startLine: 30
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -295,16 +300,16 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
-  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
-  id: Equals(HuajiTech.QQ.Chat)
+- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
+  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
+  id: Equals(HuajiTech.QQ.IChattable)
   parent: HuajiTech.QQ.Chat
   langs:
   - csharp
   - vb
-  name: Equals(Chat)
-  nameWithType: Chat.Equals(Chat)
-  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  name: Equals(IChattable)
+  nameWithType: Chat.Equals(IChattable)
+  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   type: Method
   source:
     remote:
@@ -313,21 +318,21 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Equals
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 33
+    startLine: 32
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
   syntax:
-    content: public virtual bool Equals(Chat other)
+    content: public virtual bool Equals(IChattable other)
     parameters:
     - id: other
-      type: HuajiTech.QQ.Chat
+      type: HuajiTech.QQ.IChattable
     return:
       type: System.Boolean
-    content.vb: Public Overridable Function Equals(other As Chat) As Boolean
+    content.vb: Public Overridable Function Equals(other As IChattable) As Boolean
   overload: HuajiTech.QQ.Chat.Equals*
   implements:
-  - System.IEquatable{HuajiTech.QQ.Chat}.Equals(HuajiTech.QQ.Chat)
+  - System.IEquatable{HuajiTech.QQ.IChattable}.Equals(HuajiTech.QQ.IChattable)
   modifiers.csharp:
   - public
   - virtual
@@ -352,7 +357,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetHashCode
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 35
+    startLine: 34
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -387,7 +392,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Send
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 37
+    startLine: 36
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -426,7 +431,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: SendAsync
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 39
+    startLine: 38
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -465,7 +470,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: ToString
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 41
+    startLine: 40
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -495,22 +500,28 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: HuajiTech.QQ.IChattable
+  commentId: T:HuajiTech.QQ.IChattable
+  parent: HuajiTech.QQ
+  name: IChattable
+  nameWithType: IChattable
+  fullName: HuajiTech.QQ.IChattable
 - uid: HuajiTech.QQ.ISendable
   commentId: T:HuajiTech.QQ.ISendable
   parent: HuajiTech.QQ
   name: ISendable
   nameWithType: ISendable
   fullName: HuajiTech.QQ.ISendable
-- uid: System.IEquatable{HuajiTech.QQ.Chat}
-  commentId: T:System.IEquatable{HuajiTech.QQ.Chat}
+- uid: System.IEquatable{HuajiTech.QQ.IChattable}
+  commentId: T:System.IEquatable{HuajiTech.QQ.IChattable}
   parent: System
   definition: System.IEquatable`1
-  name: IEquatable<Chat>
-  nameWithType: IEquatable<Chat>
-  fullName: System.IEquatable<HuajiTech.QQ.Chat>
-  nameWithType.vb: IEquatable(Of Chat)
-  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat)
-  name.vb: IEquatable(Of Chat)
+  name: IEquatable<IChattable>
+  nameWithType: IEquatable<IChattable>
+  fullName: System.IEquatable<HuajiTech.QQ.IChattable>
+  nameWithType.vb: IEquatable(Of IChattable)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IChattable)
+  name.vb: IEquatable(Of IChattable)
   spec.csharp:
   - uid: System.IEquatable`1
     name: IEquatable
@@ -520,10 +531,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -536,10 +547,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )
@@ -1142,6 +1153,12 @@ references:
   name: DisplayName
   nameWithType: Chat.DisplayName
   fullName: HuajiTech.QQ.Chat.DisplayName
+- uid: HuajiTech.QQ.IChattable.DisplayName
+  commentId: P:HuajiTech.QQ.IChattable.DisplayName
+  parent: HuajiTech.QQ.IChattable
+  name: DisplayName
+  nameWithType: IChattable.DisplayName
+  fullName: HuajiTech.QQ.IChattable.DisplayName
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1154,6 +1171,12 @@ references:
   name: Number
   nameWithType: Chat.Number
   fullName: HuajiTech.QQ.Chat.Number
+- uid: HuajiTech.QQ.IChattable.Number
+  commentId: P:HuajiTech.QQ.IChattable.Number
+  parent: HuajiTech.QQ.IChattable
+  name: Number
+  nameWithType: IChattable.Number
+  fullName: HuajiTech.QQ.IChattable.Number
 - uid: HuajiTech.QQ.Chat.op_Inequality*
   commentId: Overload:HuajiTech.QQ.Chat.op_Inequality
   name: Inequality
@@ -1217,44 +1240,44 @@ references:
   name: Equals
   nameWithType: Chat.Equals
   fullName: HuajiTech.QQ.Chat.Equals
-- uid: System.IEquatable{HuajiTech.QQ.Chat}.Equals(HuajiTech.QQ.Chat)
-  commentId: M:System.IEquatable{HuajiTech.QQ.Chat}.Equals(HuajiTech.QQ.Chat)
-  parent: System.IEquatable{HuajiTech.QQ.Chat}
+- uid: System.IEquatable{HuajiTech.QQ.IChattable}.Equals(HuajiTech.QQ.IChattable)
+  commentId: M:System.IEquatable{HuajiTech.QQ.IChattable}.Equals(HuajiTech.QQ.IChattable)
+  parent: System.IEquatable{HuajiTech.QQ.IChattable}
   definition: System.IEquatable`1.Equals(`0)
-  name: Equals(Chat)
-  nameWithType: IEquatable<Chat>.Equals(Chat)
-  fullName: System.IEquatable<HuajiTech.QQ.Chat>.Equals(HuajiTech.QQ.Chat)
-  nameWithType.vb: IEquatable(Of Chat).Equals(Chat)
-  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat).Equals(HuajiTech.QQ.Chat)
+  name: Equals(IChattable)
+  nameWithType: IEquatable<IChattable>.Equals(IChattable)
+  fullName: System.IEquatable<HuajiTech.QQ.IChattable>.Equals(HuajiTech.QQ.IChattable)
+  nameWithType.vb: IEquatable(Of IChattable).Equals(IChattable)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IChattable).Equals(HuajiTech.QQ.IChattable)
   spec.csharp:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
-    nameWithType: IEquatable<Chat>.Equals
-    fullName: System.IEquatable<HuajiTech.QQ.Chat>.Equals
+    nameWithType: IEquatable<IChattable>.Equals
+    fullName: System.IEquatable<HuajiTech.QQ.IChattable>.Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
-    nameWithType: IEquatable(Of Chat).Equals
-    fullName: System.IEquatable(Of HuajiTech.QQ.Chat).Equals
+    nameWithType: IEquatable(Of IChattable).Equals
+    fullName: System.IEquatable(Of HuajiTech.QQ.IChattable).Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )

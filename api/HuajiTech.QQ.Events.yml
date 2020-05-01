@@ -15,17 +15,14 @@ items:
   - HuajiTech.QQ.Events.GroupMuteEventArgs
   - HuajiTech.QQ.Events.IBotEventSource
   - HuajiTech.QQ.Events.IContactEventSource
-  - HuajiTech.QQ.Events.ICurrentUserEventSource
-  - HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  - HuajiTech.QQ.Events.IEntranceInviteEventSource
   - HuajiTech.QQ.Events.IEntranceRequestEventSource
   - HuajiTech.QQ.Events.IFileEventSource
   - HuajiTech.QQ.Events.IGroupAdministratorEventSource
-  - HuajiTech.QQ.Events.IGroupEventSource
   - HuajiTech.QQ.Events.IGroupMemberEventSource
   - HuajiTech.QQ.Events.IGroupMuteEventSource
   - HuajiTech.QQ.Events.IMemberMuteEventSource
   - HuajiTech.QQ.Events.IMessageEventSource
-  - HuajiTech.QQ.Events.IMuteEventSource
   - HuajiTech.QQ.Events.MemberMutedEventArgs
   - HuajiTech.QQ.Events.MessageReceivedEventArgs
   - HuajiTech.QQ.Events.RoutedEventArgs
@@ -93,73 +90,49 @@ references:
   fullName: HuajiTech.QQ.Events.IBotEventSource
 - uid: HuajiTech.QQ.Events.IContactEventSource
   commentId: T:HuajiTech.QQ.Events.IContactEventSource
-  parent: HuajiTech.QQ.Events
   name: IContactEventSource
   nameWithType: IContactEventSource
   fullName: HuajiTech.QQ.Events.IContactEventSource
-- uid: HuajiTech.QQ.Events.ICurrentUserEventSource
-  commentId: T:HuajiTech.QQ.Events.ICurrentUserEventSource
-  name: ICurrentUserEventSource
-  nameWithType: ICurrentUserEventSource
-  fullName: HuajiTech.QQ.Events.ICurrentUserEventSource
-- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  commentId: T:HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  parent: HuajiTech.QQ.Events
-  name: IEntranceInvitationEventSource
-  nameWithType: IEntranceInvitationEventSource
-  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+- uid: HuajiTech.QQ.Events.IEntranceInviteEventSource
+  commentId: T:HuajiTech.QQ.Events.IEntranceInviteEventSource
+  name: IEntranceInviteEventSource
+  nameWithType: IEntranceInviteEventSource
+  fullName: HuajiTech.QQ.Events.IEntranceInviteEventSource
 - uid: HuajiTech.QQ.Events.IEntranceRequestEventSource
   commentId: T:HuajiTech.QQ.Events.IEntranceRequestEventSource
-  parent: HuajiTech.QQ.Events
   name: IEntranceRequestEventSource
   nameWithType: IEntranceRequestEventSource
   fullName: HuajiTech.QQ.Events.IEntranceRequestEventSource
 - uid: HuajiTech.QQ.Events.IFileEventSource
   commentId: T:HuajiTech.QQ.Events.IFileEventSource
-  parent: HuajiTech.QQ.Events
   name: IFileEventSource
   nameWithType: IFileEventSource
   fullName: HuajiTech.QQ.Events.IFileEventSource
 - uid: HuajiTech.QQ.Events.IGroupAdministratorEventSource
   commentId: T:HuajiTech.QQ.Events.IGroupAdministratorEventSource
-  parent: HuajiTech.QQ.Events
   name: IGroupAdministratorEventSource
   nameWithType: IGroupAdministratorEventSource
   fullName: HuajiTech.QQ.Events.IGroupAdministratorEventSource
-- uid: HuajiTech.QQ.Events.IGroupEventSource
-  commentId: T:HuajiTech.QQ.Events.IGroupEventSource
-  name: IGroupEventSource
-  nameWithType: IGroupEventSource
-  fullName: HuajiTech.QQ.Events.IGroupEventSource
 - uid: HuajiTech.QQ.Events.IGroupMemberEventSource
   commentId: T:HuajiTech.QQ.Events.IGroupMemberEventSource
-  parent: HuajiTech.QQ.Events
   name: IGroupMemberEventSource
   nameWithType: IGroupMemberEventSource
   fullName: HuajiTech.QQ.Events.IGroupMemberEventSource
 - uid: HuajiTech.QQ.Events.IGroupMuteEventSource
   commentId: T:HuajiTech.QQ.Events.IGroupMuteEventSource
-  parent: HuajiTech.QQ.Events
   name: IGroupMuteEventSource
   nameWithType: IGroupMuteEventSource
   fullName: HuajiTech.QQ.Events.IGroupMuteEventSource
 - uid: HuajiTech.QQ.Events.IMemberMuteEventSource
   commentId: T:HuajiTech.QQ.Events.IMemberMuteEventSource
-  parent: HuajiTech.QQ.Events
   name: IMemberMuteEventSource
   nameWithType: IMemberMuteEventSource
   fullName: HuajiTech.QQ.Events.IMemberMuteEventSource
 - uid: HuajiTech.QQ.Events.IMessageEventSource
   commentId: T:HuajiTech.QQ.Events.IMessageEventSource
-  parent: HuajiTech.QQ.Events
   name: IMessageEventSource
   nameWithType: IMessageEventSource
   fullName: HuajiTech.QQ.Events.IMessageEventSource
-- uid: HuajiTech.QQ.Events.IMuteEventSource
-  commentId: T:HuajiTech.QQ.Events.IMuteEventSource
-  name: IMuteEventSource
-  nameWithType: IMuteEventSource
-  fullName: HuajiTech.QQ.Events.IMuteEventSource
 - uid: HuajiTech.QQ.Events.MemberMutedEventArgs
   commentId: T:HuajiTech.QQ.Events.MemberMutedEventArgs
   name: MemberMutedEventArgs

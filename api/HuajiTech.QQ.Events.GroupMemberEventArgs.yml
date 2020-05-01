@@ -139,16 +139,10 @@ items:
 references:
 - uid: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined
   commentId: E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined
-  parent: HuajiTech.QQ.Events.IGroupMemberEventSource
-  name: MemberJoined
-  nameWithType: IGroupMemberEventSource.MemberJoined
-  fullName: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined
+  isExternal: true
 - uid: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
   commentId: E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
-  parent: HuajiTech.QQ.Events.IGroupMemberEventSource
-  name: MemberLeft
-  nameWithType: IGroupMemberEventSource.MemberLeft
-  fullName: HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -502,12 +496,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IGroupMemberEventSource
-  commentId: T:HuajiTech.QQ.Events.IGroupMemberEventSource
-  parent: HuajiTech.QQ.Events
-  name: IGroupMemberEventSource
-  nameWithType: IGroupMemberEventSource
-  fullName: HuajiTech.QQ.Events.IGroupMemberEventSource
 - uid: System
   commentId: N:System
   isExternal: true

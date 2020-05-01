@@ -209,10 +209,7 @@ items:
 references:
 - uid: HuajiTech.QQ.Events.IFileEventSource.FileUploaded
   commentId: E:HuajiTech.QQ.Events.IFileEventSource.FileUploaded
-  parent: HuajiTech.QQ.Events.IFileEventSource
-  name: FileUploaded
-  nameWithType: IFileEventSource.FileUploaded
-  fullName: HuajiTech.QQ.Events.IFileEventSource.FileUploaded
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -542,12 +539,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IFileEventSource
-  commentId: T:HuajiTech.QQ.Events.IFileEventSource
-  parent: HuajiTech.QQ.Events
-  name: IFileEventSource
-  nameWithType: IFileEventSource
-  fullName: HuajiTech.QQ.Events.IFileEventSource
 - uid: System
   commentId: N:System
   isExternal: true

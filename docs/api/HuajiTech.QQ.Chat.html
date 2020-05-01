@@ -96,8 +96,9 @@
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
+    <div><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -118,7 +119,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_Chat_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Chat : ISendable, IEquatable&lt;Chat&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Chat : IChattable, ISendable, IEquatable&lt;IChattable&gt;</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -127,7 +128,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat__ctor_System_Int64_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.%23ctor(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L16">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L15">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat__ctor_" data-uid="HuajiTech.QQ.Chat.#ctor*"></a>
   <h4 id="HuajiTech_QQ_Chat__ctor_System_Int64_" data-uid="HuajiTech.QQ.Chat.#ctor(System.Int64)">Chat(Int64)</h4>
@@ -163,7 +164,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_DisplayName.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.DisplayName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L21">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L20">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_DisplayName_" data-uid="HuajiTech.QQ.Chat.DisplayName*"></a>
   <h4 id="HuajiTech_QQ_Chat_DisplayName" data-uid="HuajiTech.QQ.Chat.DisplayName">DisplayName</h4>
@@ -194,7 +195,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_Number.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.Number%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L26">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L25">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_Number_" data-uid="HuajiTech.QQ.Chat.Number*"></a>
   <h4 id="HuajiTech_QQ_Chat_Number" data-uid="HuajiTech.QQ.Chat.Number">Number</h4>
@@ -224,18 +225,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_Chat_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_IChattable_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L34">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L33">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_Equals_" data-uid="HuajiTech.QQ.Chat.Equals*"></a>
-  <h4 id="HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_Chat_" data-uid="HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)">Equals(Chat)</h4>
+  <h4 id="HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_IChattable_" data-uid="HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)">Equals(IChattable)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool Equals(Chat other)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool Equals(IChattable other)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,7 +249,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
@@ -274,7 +275,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_Equals_System_Object_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L32">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L31">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_Equals_" data-uid="HuajiTech.QQ.Chat.Equals*"></a>
   <h4 id="HuajiTech_QQ_Chat_Equals_System_Object_" data-uid="HuajiTech.QQ.Chat.Equals(System.Object)">Equals(Object)</h4>
@@ -323,7 +324,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_GetHashCode.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L35">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_GetHashCode_" data-uid="HuajiTech.QQ.Chat.GetHashCode*"></a>
   <h4 id="HuajiTech_QQ_Chat_GetHashCode" data-uid="HuajiTech.QQ.Chat.GetHashCode">GetHashCode()</h4>
@@ -355,7 +356,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_Send_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.Send(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L38">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L37">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_Send_" data-uid="HuajiTech.QQ.Chat.Send*"></a>
   <h4 id="HuajiTech_QQ_Chat_Send_System_String_" data-uid="HuajiTech.QQ.Chat.Send(System.String)">Send(String)</h4>
@@ -402,7 +403,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_SendAsync_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.SendAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L40">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L39">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_SendAsync_" data-uid="HuajiTech.QQ.Chat.SendAsync*"></a>
   <h4 id="HuajiTech_QQ_Chat_SendAsync_System_String_" data-uid="HuajiTech.QQ.Chat.SendAsync(System.String)">SendAsync(String)</h4>
@@ -449,7 +450,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_ToString.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L42">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_ToString_" data-uid="HuajiTech.QQ.Chat.ToString*"></a>
   <h4 id="HuajiTech_QQ_Chat_ToString" data-uid="HuajiTech.QQ.Chat.ToString">ToString()</h4>
@@ -483,7 +484,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_op_Equality_HuajiTech_QQ_Chat_HuajiTech_QQ_Chat_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.op_Equality(HuajiTech.QQ.Chat%2CHuajiTech.QQ.Chat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L30">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L29">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_op_Equality_" data-uid="HuajiTech.QQ.Chat.op_Equality*"></a>
   <h4 id="HuajiTech_QQ_Chat_op_Equality_HuajiTech_QQ_Chat_HuajiTech_QQ_Chat_" data-uid="HuajiTech.QQ.Chat.op_Equality(HuajiTech.QQ.Chat,HuajiTech.QQ.Chat)">Equality(Chat, Chat)</h4>
@@ -535,7 +536,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat_op_Inequality_HuajiTech_QQ_Chat_HuajiTech_QQ_Chat_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat.op_Inequality(HuajiTech.QQ.Chat%2CHuajiTech.QQ.Chat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L27">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Chat_op_Inequality_" data-uid="HuajiTech.QQ.Chat.op_Inequality*"></a>
   <h4 id="HuajiTech_QQ_Chat_op_Inequality_HuajiTech_QQ_Chat_HuajiTech_QQ_Chat_" data-uid="HuajiTech.QQ.Chat.op_Inequality(HuajiTech.QQ.Chat,HuajiTech.QQ.Chat)">Inequality(Chat, Chat)</h4>
@@ -584,6 +585,9 @@
   </table>
   <h3 id="implements">&#23454;&#29616;</h3>
   <div>
+      <a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a>
+  </div>
+  <div>
       <a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a>
   </div>
   <div>
@@ -613,7 +617,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Chat.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Chat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L10" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Chat.cs/#L9" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

@@ -1,25 +1,25 @@
 ### YamlMime:ManagedReference
 items:
-- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  commentId: T:HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  id: IEntranceInvitationEventSource
+- uid: HuajiTech.QQ.Events.IEntranceInviteEventSource
+  commentId: T:HuajiTech.QQ.Events.IEntranceInviteEventSource
+  id: IEntranceInviteEventSource
   parent: HuajiTech.QQ.Events
   children:
-  - HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  - HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
   langs:
   - csharp
   - vb
-  name: IEntranceInvitationEventSource
-  nameWithType: IEntranceInvitationEventSource
-  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  name: IEntranceInviteEventSource
+  nameWithType: IEntranceInviteEventSource
+  fullName: HuajiTech.QQ.Events.IEntranceInviteEventSource
   type: Interface
   source:
     remote:
-      path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+      path: src/HuajiTech.QQ/Events/IEntranceInviteEventSource.cs
       branch: master
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
-    id: IEntranceInvitationEventSource
-    path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+    id: IEntranceInviteEventSource
+    path: src/HuajiTech.QQ/Events/IEntranceInviteEventSource.cs
     startLine: 7
   assemblies:
   - HuajiTech.QQ
@@ -27,32 +27,32 @@ items:
   summary: "\n定义入群邀请事件。\n"
   example: []
   syntax:
-    content: public interface IEntranceInvitationEventSource
-    content.vb: Public Interface IEntranceInvitationEventSource
+    content: public interface IEntranceInviteEventSource
+    content.vb: Public Interface IEntranceInviteEventSource
   modifiers.csharp:
   - public
   - interface
   modifiers.vb:
   - Public
   - Interface
-- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
-  commentId: E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+- uid: HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
+  commentId: E:HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
   id: EntranceInvited
-  parent: HuajiTech.QQ.Events.IEntranceInvitationEventSource
+  parent: HuajiTech.QQ.Events.IEntranceInviteEventSource
   langs:
   - csharp
   - vb
   name: EntranceInvited
-  nameWithType: IEntranceInvitationEventSource.EntranceInvited
-  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+  nameWithType: IEntranceInviteEventSource.EntranceInvited
+  fullName: HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
   type: Event
   source:
     remote:
-      path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+      path: src/HuajiTech.QQ/Events/IEntranceInviteEventSource.cs
       branch: master
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: EntranceInvited
-    path: src/HuajiTech.QQ/Events/IEntranceInvitationEventSource.cs
+    path: src/HuajiTech.QQ/Events/IEntranceInviteEventSource.cs
     startLine: 12
   assemblies:
   - HuajiTech.QQ

@@ -205,10 +205,7 @@ items:
 references:
 - uid: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
   commentId: E:HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
-  parent: HuajiTech.QQ.Events.IMessageEventSource
-  name: MessageReceived
-  nameWithType: IMessageEventSource.MessageReceived
-  fullName: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -526,12 +523,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IMessageEventSource
-  commentId: T:HuajiTech.QQ.Events.IMessageEventSource
-  parent: HuajiTech.QQ.Events
-  name: IMessageEventSource
-  nameWithType: IMessageEventSource
-  fullName: HuajiTech.QQ.Events.IMessageEventSource
 - uid: System
   commentId: N:System
   isExternal: true

@@ -139,10 +139,7 @@ items:
 references:
 - uid: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
   commentId: E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
-  parent: HuajiTech.QQ.Events.IMemberMuteEventSource
-  name: MemberMuted
-  nameWithType: IMemberMuteEventSource.MemberMuted
-  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberMuted
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -496,12 +493,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IMemberMuteEventSource
-  commentId: T:HuajiTech.QQ.Events.IMemberMuteEventSource
-  parent: HuajiTech.QQ.Events
-  name: IMemberMuteEventSource
-  nameWithType: IMemberMuteEventSource
-  fullName: HuajiTech.QQ.Events.IMemberMuteEventSource
 - uid: System
   commentId: N:System
   isExternal: true

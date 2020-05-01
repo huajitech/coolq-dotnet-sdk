@@ -49,18 +49,18 @@ items:
   summary: "\n表示群。\n此类为抽象类。\n"
   example: []
   syntax:
-    content: 'public abstract class Group : Chat, ISendable, IEquatable<Chat>, IGroup, IMuteable, IRequestable, IRefreshable'
+    content: 'public abstract class Group : Chat, IChattable, ISendable, IEquatable<IChattable>, IMuteable, IRequestable, IRefreshable'
     content.vb: >-
       Public MustInherit Class Group
           Inherits Chat
-          Implements ISendable, IEquatable(Of Chat), IGroup, IMuteable, IRequestable, IRefreshable
+          Implements IChattable, ISendable, IEquatable(Of IChattable), IMuteable, IRequestable, IRefreshable
   inheritance:
   - System.Object
   - HuajiTech.QQ.Chat
   implements:
+  - HuajiTech.QQ.IChattable
   - HuajiTech.QQ.ISendable
-  - System.IEquatable{HuajiTech.QQ.Chat}
-  - HuajiTech.QQ.IGroup
+  - System.IEquatable{HuajiTech.QQ.IChattable}
   - HuajiTech.QQ.IMuteable
   - HuajiTech.QQ.IRequestable
   - HuajiTech.QQ.IRefreshable
@@ -68,7 +68,7 @@ items:
   - HuajiTech.QQ.Chat.DisplayName
   - HuajiTech.QQ.Chat.Number
   - HuajiTech.QQ.Chat.Equals(System.Object)
-  - HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   - HuajiTech.QQ.Chat.GetHashCode
   - HuajiTech.QQ.Chat.Send(System.String)
   - HuajiTech.QQ.Chat.SendAsync(System.String)
@@ -194,8 +194,6 @@ items:
       type: System.Int32
     content.vb: Public MustOverride ReadOnly Property MemberCapacity As Integer
   overload: HuajiTech.QQ.Group.MemberCapacity*
-  implements:
-  - HuajiTech.QQ.IGroup.MemberCapacity
   modifiers.csharp:
   - public
   - abstract
@@ -233,8 +231,6 @@ items:
       type: System.Int32
     content.vb: Public MustOverride ReadOnly Property MemberCount As Integer
   overload: HuajiTech.QQ.Group.MemberCount*
-  implements:
-  - HuajiTech.QQ.IGroup.MemberCount
   modifiers.csharp:
   - public
   - abstract
@@ -518,8 +514,6 @@ items:
       type: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}
     content.vb: Public MustOverride Function GetMembers As IReadOnlyCollection(Of Member)
   overload: HuajiTech.QQ.Group.GetMembers*
-  implements:
-  - HuajiTech.QQ.IGroup.GetMembers
   modifiers.csharp:
   - public
   - abstract
@@ -554,8 +548,6 @@ items:
       type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}}
     content.vb: Public Overridable Function GetMembersAsync As Task(Of IReadOnlyCollection(Of Member))
   overload: HuajiTech.QQ.Group.GetMembersAsync*
-  implements:
-  - HuajiTech.QQ.IGroup.GetMembersAsync
   modifiers.csharp:
   - public
   - virtual
@@ -931,22 +923,28 @@ references:
   name: Chat
   nameWithType: Chat
   fullName: HuajiTech.QQ.Chat
+- uid: HuajiTech.QQ.IChattable
+  commentId: T:HuajiTech.QQ.IChattable
+  parent: HuajiTech.QQ
+  name: IChattable
+  nameWithType: IChattable
+  fullName: HuajiTech.QQ.IChattable
 - uid: HuajiTech.QQ.ISendable
   commentId: T:HuajiTech.QQ.ISendable
   parent: HuajiTech.QQ
   name: ISendable
   nameWithType: ISendable
   fullName: HuajiTech.QQ.ISendable
-- uid: System.IEquatable{HuajiTech.QQ.Chat}
-  commentId: T:System.IEquatable{HuajiTech.QQ.Chat}
+- uid: System.IEquatable{HuajiTech.QQ.IChattable}
+  commentId: T:System.IEquatable{HuajiTech.QQ.IChattable}
   parent: System
   definition: System.IEquatable`1
-  name: IEquatable<Chat>
-  nameWithType: IEquatable<Chat>
-  fullName: System.IEquatable<HuajiTech.QQ.Chat>
-  nameWithType.vb: IEquatable(Of Chat)
-  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat)
-  name.vb: IEquatable(Of Chat)
+  name: IEquatable<IChattable>
+  nameWithType: IEquatable<IChattable>
+  fullName: System.IEquatable<HuajiTech.QQ.IChattable>
+  nameWithType.vb: IEquatable(Of IChattable)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IChattable)
+  name.vb: IEquatable(Of IChattable)
   spec.csharp:
   - uid: System.IEquatable`1
     name: IEquatable
@@ -956,10 +954,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -972,19 +970,13 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.IGroup
-  commentId: T:HuajiTech.QQ.IGroup
-  parent: HuajiTech.QQ
-  name: IGroup
-  nameWithType: IGroup
-  fullName: HuajiTech.QQ.IGroup
 - uid: HuajiTech.QQ.IMuteable
   commentId: T:HuajiTech.QQ.IMuteable
   parent: HuajiTech.QQ
@@ -1054,39 +1046,39 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
-  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
+  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   parent: HuajiTech.QQ.Chat
-  name: Equals(Chat)
-  nameWithType: Chat.Equals(Chat)
-  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  name: Equals(IChattable)
+  nameWithType: Chat.Equals(IChattable)
+  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   spec.csharp:
-  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
     name: Equals
     nameWithType: Chat.Equals
     fullName: HuajiTech.QQ.Chat.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
     name: Equals
     nameWithType: Chat.Equals
     fullName: HuajiTech.QQ.Chat.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )
@@ -1841,12 +1833,6 @@ references:
   name: MemberCapacity
   nameWithType: Group.MemberCapacity
   fullName: HuajiTech.QQ.Group.MemberCapacity
-- uid: HuajiTech.QQ.IGroup.MemberCapacity
-  commentId: P:HuajiTech.QQ.IGroup.MemberCapacity
-  parent: HuajiTech.QQ.IGroup
-  name: MemberCapacity
-  nameWithType: IGroup.MemberCapacity
-  fullName: HuajiTech.QQ.IGroup.MemberCapacity
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -1859,12 +1845,6 @@ references:
   name: MemberCount
   nameWithType: Group.MemberCount
   fullName: HuajiTech.QQ.Group.MemberCount
-- uid: HuajiTech.QQ.IGroup.MemberCount
-  commentId: P:HuajiTech.QQ.IGroup.MemberCount
-  parent: HuajiTech.QQ.IGroup
-  name: MemberCount
-  nameWithType: IGroup.MemberCount
-  fullName: HuajiTech.QQ.IGroup.MemberCount
 - uid: HuajiTech.QQ.Group.Name*
   commentId: Overload:HuajiTech.QQ.Group.Name
   name: Name
@@ -1925,34 +1905,6 @@ references:
   name: GetMembers
   nameWithType: Group.GetMembers
   fullName: HuajiTech.QQ.Group.GetMembers
-- uid: HuajiTech.QQ.IGroup.GetMembers
-  commentId: M:HuajiTech.QQ.IGroup.GetMembers
-  parent: HuajiTech.QQ.IGroup
-  name: GetMembers()
-  nameWithType: IGroup.GetMembers()
-  fullName: HuajiTech.QQ.IGroup.GetMembers()
-  spec.csharp:
-  - uid: HuajiTech.QQ.IGroup.GetMembers
-    name: GetMembers
-    nameWithType: IGroup.GetMembers
-    fullName: HuajiTech.QQ.IGroup.GetMembers
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: HuajiTech.QQ.IGroup.GetMembers
-    name: GetMembers
-    nameWithType: IGroup.GetMembers
-    fullName: HuajiTech.QQ.IGroup.GetMembers
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}
   commentId: T:System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}
   parent: System.Collections.Generic
@@ -2045,34 +1997,6 @@ references:
   name: GetMembersAsync
   nameWithType: Group.GetMembersAsync
   fullName: HuajiTech.QQ.Group.GetMembersAsync
-- uid: HuajiTech.QQ.IGroup.GetMembersAsync
-  commentId: M:HuajiTech.QQ.IGroup.GetMembersAsync
-  parent: HuajiTech.QQ.IGroup
-  name: GetMembersAsync()
-  nameWithType: IGroup.GetMembersAsync()
-  fullName: HuajiTech.QQ.IGroup.GetMembersAsync()
-  spec.csharp:
-  - uid: HuajiTech.QQ.IGroup.GetMembersAsync
-    name: GetMembersAsync
-    nameWithType: IGroup.GetMembersAsync
-    fullName: HuajiTech.QQ.IGroup.GetMembersAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: HuajiTech.QQ.IGroup.GetMembersAsync
-    name: GetMembersAsync
-    nameWithType: IGroup.GetMembersAsync
-    fullName: HuajiTech.QQ.IGroup.GetMembersAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}}
   commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}}
   parent: System.Threading.Tasks

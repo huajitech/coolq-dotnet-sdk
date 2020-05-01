@@ -30,11 +30,11 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Plugin
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
-  summary: "\n用作插件的基类，并提供操作 <xref href=\"HuajiTech.QQ.PluginContext\" data-throw-if-not-resolved=\"false\"></xref> 的方法。\n"
+  summary: "\n用作插件的基类，并提供操作 <xref href=\"HuajiTech.QQ.PluginContext\" data-throw-if-not-resolved=\"false\"></xref> 的方法。\n此类为抽象类。\n"
   example: []
   syntax:
     content: public abstract class Plugin
@@ -75,7 +75,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: .ctor
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -111,7 +111,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: .ctor
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -143,7 +143,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Bot
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: CurrentUser
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -217,7 +217,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Logger
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -254,7 +254,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Context
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -291,7 +291,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Contact
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -329,7 +329,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Group
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -367,7 +367,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Member
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 58
+    startLine: 59
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -408,7 +408,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Member
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 65
+    startLine: 66
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -449,7 +449,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: User
     path: src/HuajiTech.QQ/Plugin.cs
-    startLine: 71
+    startLine: 72
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ

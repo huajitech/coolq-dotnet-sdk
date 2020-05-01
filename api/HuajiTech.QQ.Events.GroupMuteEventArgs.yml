@@ -169,16 +169,10 @@ items:
 references:
 - uid: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted
   commentId: E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted
-  parent: HuajiTech.QQ.Events.IGroupMuteEventSource
-  name: GroupMuted
-  nameWithType: IGroupMuteEventSource.GroupMuted
-  fullName: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted
+  isExternal: true
 - uid: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted
   commentId: E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted
-  parent: HuajiTech.QQ.Events.IGroupMuteEventSource
-  name: GroupUnmuted
-  nameWithType: IGroupMuteEventSource.GroupUnmuted
-  fullName: HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -508,12 +502,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IGroupMuteEventSource
-  commentId: T:HuajiTech.QQ.Events.IGroupMuteEventSource
-  parent: HuajiTech.QQ.Events
-  name: IGroupMuteEventSource
-  nameWithType: IGroupMuteEventSource
-  fullName: HuajiTech.QQ.Events.IGroupMuteEventSource
 - uid: System
   commentId: N:System
   isExternal: true

@@ -35,11 +35,11 @@ items:
   summary: "\n表示用户。\n此类为抽象类。\n"
   example: []
   syntax:
-    content: 'public abstract class User : Chat, ISendable, IEquatable<Chat>, IRequestable, IRefreshable'
+    content: 'public abstract class User : Chat, IChattable, ISendable, IEquatable<IChattable>, IRequestable, IRefreshable'
     content.vb: >-
       Public MustInherit Class User
           Inherits Chat
-          Implements ISendable, IEquatable(Of Chat), IRequestable, IRefreshable
+          Implements IChattable, ISendable, IEquatable(Of IChattable), IRequestable, IRefreshable
   inheritance:
   - System.Object
   - HuajiTech.QQ.Chat
@@ -48,15 +48,16 @@ items:
   - HuajiTech.QQ.CurrentUser
   - HuajiTech.QQ.Member
   implements:
+  - HuajiTech.QQ.IChattable
   - HuajiTech.QQ.ISendable
-  - System.IEquatable{HuajiTech.QQ.Chat}
+  - System.IEquatable{HuajiTech.QQ.IChattable}
   - HuajiTech.QQ.IRequestable
   - HuajiTech.QQ.IRefreshable
   inheritedMembers:
   - HuajiTech.QQ.Chat.DisplayName
   - HuajiTech.QQ.Chat.Number
   - HuajiTech.QQ.Chat.Equals(System.Object)
-  - HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   - HuajiTech.QQ.Chat.GetHashCode
   - HuajiTech.QQ.Chat.Send(System.String)
   - HuajiTech.QQ.Chat.SendAsync(System.String)
@@ -433,22 +434,28 @@ references:
   name: Chat
   nameWithType: Chat
   fullName: HuajiTech.QQ.Chat
+- uid: HuajiTech.QQ.IChattable
+  commentId: T:HuajiTech.QQ.IChattable
+  parent: HuajiTech.QQ
+  name: IChattable
+  nameWithType: IChattable
+  fullName: HuajiTech.QQ.IChattable
 - uid: HuajiTech.QQ.ISendable
   commentId: T:HuajiTech.QQ.ISendable
   parent: HuajiTech.QQ
   name: ISendable
   nameWithType: ISendable
   fullName: HuajiTech.QQ.ISendable
-- uid: System.IEquatable{HuajiTech.QQ.Chat}
-  commentId: T:System.IEquatable{HuajiTech.QQ.Chat}
+- uid: System.IEquatable{HuajiTech.QQ.IChattable}
+  commentId: T:System.IEquatable{HuajiTech.QQ.IChattable}
   parent: System
   definition: System.IEquatable`1
-  name: IEquatable<Chat>
-  nameWithType: IEquatable<Chat>
-  fullName: System.IEquatable<HuajiTech.QQ.Chat>
-  nameWithType.vb: IEquatable(Of Chat)
-  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat)
-  name.vb: IEquatable(Of Chat)
+  name: IEquatable<IChattable>
+  nameWithType: IEquatable<IChattable>
+  fullName: System.IEquatable<HuajiTech.QQ.IChattable>
+  nameWithType.vb: IEquatable(Of IChattable)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.IChattable)
+  name.vb: IEquatable(Of IChattable)
   spec.csharp:
   - uid: System.IEquatable`1
     name: IEquatable
@@ -458,10 +465,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -474,10 +481,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )
@@ -544,39 +551,39 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
-  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
+  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   parent: HuajiTech.QQ.Chat
-  name: Equals(Chat)
-  nameWithType: Chat.Equals(Chat)
-  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  name: Equals(IChattable)
+  nameWithType: Chat.Equals(IChattable)
+  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
   spec.csharp:
-  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
     name: Equals
     nameWithType: Chat.Equals
     fullName: HuajiTech.QQ.Chat.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
+  - uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
     name: Equals
     nameWithType: Chat.Equals
     fullName: HuajiTech.QQ.Chat.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: HuajiTech.QQ.Chat
-    name: Chat
-    nameWithType: Chat
-    fullName: HuajiTech.QQ.Chat
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
+    nameWithType: IChattable
+    fullName: HuajiTech.QQ.IChattable
   - name: )
     nameWithType: )
     fullName: )

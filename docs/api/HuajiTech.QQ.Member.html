@@ -96,15 +96,14 @@
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
+    <div><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a>&gt;</div>
     <div><a class="xref" href="HuajiTech.QQ.IRequestable.html">IRequestable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.IRefreshable.html">IRefreshable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a></div>
     <div><a class="xref" href="HuajiTech.QQ.ITimedMuteable.html">ITimedMuteable</a></div>
     <div><a class="xref" href="HuajiTech.QQ.IMuteable.html">IMuteable</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a>&gt;</div>
-    <div><a class="xref" href="HuajiTech.QQ.IAliased.html">IAliased</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -136,7 +135,7 @@
       <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Number">Chat.Number</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_Chat_">Chat.Equals(Chat)</a>
+      <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_IChattable_">Chat.Equals(IChattable)</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Send_System_String_">Chat.Send(String)</a>
@@ -164,7 +163,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_Member_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Member : User, ISendable, IEquatable&lt;Chat&gt;, IRequestable, IRefreshable, IMember, ITimedMuteable, IMuteable, IEquatable&lt;IMember&gt;, IAliased</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Member : User, IChattable, ISendable, IEquatable&lt;IChattable&gt;, IRequestable, IRefreshable, IMember, ITimedMuteable, IMuteable</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -447,7 +446,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_HasBadRecord.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.HasBadRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L62">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L64">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_HasBadRecord_" data-uid="HuajiTech.QQ.Member.HasBadRecord*"></a>
   <h4 id="HuajiTech_QQ_Member_HasBadRecord" data-uid="HuajiTech.QQ.Member.HasBadRecord">HasBadRecord</h4>
@@ -478,7 +477,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_IsAdministrator.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.IsAdministrator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L67">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L69">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_IsAdministrator_" data-uid="HuajiTech.QQ.Member.IsAdministrator*"></a>
   <h4 id="HuajiTech_QQ_Member_IsAdministrator" data-uid="HuajiTech.QQ.Member.IsAdministrator">IsAdministrator</h4>
@@ -509,7 +508,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_LastSpeakTime.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.LastSpeakTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L72">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L74">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_LastSpeakTime_" data-uid="HuajiTech.QQ.Member.LastSpeakTime*"></a>
   <h4 id="HuajiTech_QQ_Member_LastSpeakTime" data-uid="HuajiTech.QQ.Member.LastSpeakTime">LastSpeakTime</h4>
@@ -540,7 +539,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Level.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Level%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L77">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L79">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Level_" data-uid="HuajiTech.QQ.Member.Level*"></a>
   <h4 id="HuajiTech_QQ_Member_Level" data-uid="HuajiTech.QQ.Member.Level">Level</h4>
@@ -571,7 +570,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Location.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Location%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L82">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L84">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Location_" data-uid="HuajiTech.QQ.Member.Location*"></a>
   <h4 id="HuajiTech_QQ_Member_Location" data-uid="HuajiTech.QQ.Member.Location">Location</h4>
@@ -602,7 +601,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Role.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Role%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L87">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L89">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Role_" data-uid="HuajiTech.QQ.Member.Role*"></a>
   <h4 id="HuajiTech_QQ_Member_Role" data-uid="HuajiTech.QQ.Member.Role">Role</h4>
@@ -666,7 +665,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Equals_HuajiTech_QQ_IMember_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Equals(HuajiTech.QQ.IMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L89">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L91">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Equals_" data-uid="HuajiTech.QQ.Member.Equals*"></a>
   <h4 id="HuajiTech_QQ_Member_Equals_HuajiTech_QQ_IMember_" data-uid="HuajiTech.QQ.Member.Equals(HuajiTech.QQ.IMember)">Equals(IMember)</h4>
@@ -713,7 +712,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Equals_System_Object_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L91">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L93">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Equals_" data-uid="HuajiTech.QQ.Member.Equals*"></a>
   <h4 id="HuajiTech_QQ_Member_Equals_System_Object_" data-uid="HuajiTech.QQ.Member.Equals(System.Object)">Equals(Object)</h4>
@@ -762,7 +761,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_GetHashCode.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L93">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L95">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_GetHashCode_" data-uid="HuajiTech.QQ.Member.GetHashCode*"></a>
   <h4 id="HuajiTech_QQ_Member_GetHashCode" data-uid="HuajiTech.QQ.Member.GetHashCode">GetHashCode()</h4>
@@ -794,7 +793,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Kick_System_Boolean_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Kick(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L99">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L101">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Kick_" data-uid="HuajiTech.QQ.Member.Kick*"></a>
   <h4 id="HuajiTech_QQ_Member_Kick_System_Boolean_" data-uid="HuajiTech.QQ.Member.Kick(System.Boolean)">Kick(Boolean)</h4>
@@ -828,7 +827,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_KickAsync_System_Boolean_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.KickAsync(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L104">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L106">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_KickAsync_" data-uid="HuajiTech.QQ.Member.KickAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_KickAsync_System_Boolean_" data-uid="HuajiTech.QQ.Member.KickAsync(System.Boolean)">KickAsync(Boolean)</h4>
@@ -876,7 +875,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Mute.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Mute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L108">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L110">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Mute_" data-uid="HuajiTech.QQ.Member.Mute*"></a>
   <h4 id="HuajiTech_QQ_Member_Mute" data-uid="HuajiTech.QQ.Member.Mute">Mute()</h4>
@@ -891,7 +890,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Mute_System_TimeSpan_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Mute(System.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L106">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L108">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Mute_" data-uid="HuajiTech.QQ.Member.Mute*"></a>
   <h4 id="HuajiTech_QQ_Member_Mute_System_TimeSpan_" data-uid="HuajiTech.QQ.Member.Mute(System.TimeSpan)">Mute(TimeSpan)</h4>
@@ -923,7 +922,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_MuteAsync.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.MuteAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L112">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L114">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_MuteAsync_" data-uid="HuajiTech.QQ.Member.MuteAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_MuteAsync" data-uid="HuajiTech.QQ.Member.MuteAsync">MuteAsync()</h4>
@@ -953,7 +952,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_MuteAsync_System_TimeSpan_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.MuteAsync(System.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L110">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L112">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_MuteAsync_" data-uid="HuajiTech.QQ.Member.MuteAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_MuteAsync_System_TimeSpan_" data-uid="HuajiTech.QQ.Member.MuteAsync(System.TimeSpan)">MuteAsync(TimeSpan)</h4>
@@ -1000,7 +999,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_SetAlias_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.SetAlias(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L118">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L120">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_SetAlias_" data-uid="HuajiTech.QQ.Member.SetAlias*"></a>
   <h4 id="HuajiTech_QQ_Member_SetAlias_System_String_" data-uid="HuajiTech.QQ.Member.SetAlias(System.String)">SetAlias(String)</h4>
@@ -1034,7 +1033,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_SetAliasAsync_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.SetAliasAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L124">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L126">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_SetAliasAsync_" data-uid="HuajiTech.QQ.Member.SetAliasAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_SetAliasAsync_System_String_" data-uid="HuajiTech.QQ.Member.SetAliasAsync(System.String)">SetAliasAsync(String)</h4>
@@ -1083,7 +1082,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_SetAsAdministrator.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.SetAsAdministrator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L129">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L131">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_SetAsAdministrator_" data-uid="HuajiTech.QQ.Member.SetAsAdministrator*"></a>
   <h4 id="HuajiTech_QQ_Member_SetAsAdministrator" data-uid="HuajiTech.QQ.Member.SetAsAdministrator">SetAsAdministrator()</h4>
@@ -1099,7 +1098,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_SetAsAdministratorAsync.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.SetAsAdministratorAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L134">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L136">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_SetAsAdministratorAsync_" data-uid="HuajiTech.QQ.Member.SetAsAdministratorAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_SetAsAdministratorAsync" data-uid="HuajiTech.QQ.Member.SetAsAdministratorAsync">SetAsAdministratorAsync()</h4>
@@ -1130,7 +1129,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_SetCustomTitle_HuajiTech_QQ_CustomTitle_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.SetCustomTitle(HuajiTech.QQ.CustomTitle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L140">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L142">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_SetCustomTitle_" data-uid="HuajiTech.QQ.Member.SetCustomTitle*"></a>
   <h4 id="HuajiTech_QQ_Member_SetCustomTitle_HuajiTech_QQ_CustomTitle_" data-uid="HuajiTech.QQ.Member.SetCustomTitle(HuajiTech.QQ.CustomTitle)">SetCustomTitle(CustomTitle)</h4>
@@ -1164,7 +1163,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_SetCustomTitleAsync_HuajiTech_QQ_CustomTitle_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L146">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L148">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_SetCustomTitleAsync_" data-uid="HuajiTech.QQ.Member.SetCustomTitleAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_SetCustomTitleAsync_HuajiTech_QQ_CustomTitle_" data-uid="HuajiTech.QQ.Member.SetCustomTitleAsync(HuajiTech.QQ.CustomTitle)">SetCustomTitleAsync(CustomTitle)</h4>
@@ -1213,7 +1212,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_Unmute.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.Unmute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L148">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L150">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_Unmute_" data-uid="HuajiTech.QQ.Member.Unmute*"></a>
   <h4 id="HuajiTech_QQ_Member_Unmute" data-uid="HuajiTech.QQ.Member.Unmute">Unmute()</h4>
@@ -1228,7 +1227,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_UnmuteAsync.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.UnmuteAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L150">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L152">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_UnmuteAsync_" data-uid="HuajiTech.QQ.Member.UnmuteAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_UnmuteAsync" data-uid="HuajiTech.QQ.Member.UnmuteAsync">UnmuteAsync()</h4>
@@ -1258,7 +1257,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_UnsetAsAdministrator.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.UnsetAsAdministrator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L155">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L157">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_UnsetAsAdministrator_" data-uid="HuajiTech.QQ.Member.UnsetAsAdministrator*"></a>
   <h4 id="HuajiTech_QQ_Member_UnsetAsAdministrator" data-uid="HuajiTech.QQ.Member.UnsetAsAdministrator">UnsetAsAdministrator()</h4>
@@ -1274,7 +1273,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_UnsetAsAdministratorAsync.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.UnsetAsAdministratorAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L160">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L162">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Member_UnsetAsAdministratorAsync_" data-uid="HuajiTech.QQ.Member.UnsetAsAdministratorAsync*"></a>
   <h4 id="HuajiTech_QQ_Member_UnsetAsAdministratorAsync" data-uid="HuajiTech.QQ.Member.UnsetAsAdministratorAsync">UnsetAsAdministratorAsync()</h4>
@@ -1300,7 +1299,42 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">&#26174;&#31034;&#25509;&#21475;&#23454;&#29616;
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Member_HuajiTech_QQ_IMember_Group.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Member.HuajiTech%23QQ%23IMember%23Group%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Member.cs/#L59">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_Member_HuajiTech_QQ_IMember_Group_" data-uid="HuajiTech.QQ.Member.HuajiTech#QQ#IMember#Group*"></a>
+  <h4 id="HuajiTech_QQ_Member_HuajiTech_QQ_IMember_Group" data-uid="HuajiTech.QQ.Member.HuajiTech#QQ#IMember#Group">IMember.Group</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IChattable IMember.Group { get; }</code></pre>
+  </div>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a>
+  </div>
   <div>
       <a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a>
   </div>
@@ -1321,12 +1355,6 @@
   </div>
   <div>
       <a class="xref" href="HuajiTech.QQ.IMuteable.html">IMuteable</a>
-  </div>
-  <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
-  </div>
-  <div>
-      <a class="xref" href="HuajiTech.QQ.IAliased.html">IAliased</a>
   </div>
   <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
   <div>

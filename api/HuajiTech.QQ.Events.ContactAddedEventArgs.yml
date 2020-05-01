@@ -129,10 +129,7 @@ items:
 references:
 - uid: HuajiTech.QQ.Events.IContactEventSource.ContactAdded
   commentId: E:HuajiTech.QQ.Events.IContactEventSource.ContactAdded
-  parent: HuajiTech.QQ.Events.IContactEventSource
-  name: ContactAdded
-  nameWithType: IContactEventSource.ContactAdded
-  fullName: HuajiTech.QQ.Events.IContactEventSource.ContactAdded
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -462,12 +459,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IContactEventSource
-  commentId: T:HuajiTech.QQ.Events.IContactEventSource
-  parent: HuajiTech.QQ.Events
-  name: IContactEventSource
-  nameWithType: IContactEventSource
-  fullName: HuajiTech.QQ.Events.IContactEventSource
 - uid: System
   commentId: N:System
   isExternal: true

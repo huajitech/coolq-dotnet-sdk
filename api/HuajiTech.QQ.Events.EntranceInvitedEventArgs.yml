@@ -27,7 +27,7 @@ items:
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ.Events
-  summary: "\n为 <xref href=\"HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited\" data-throw-if-not-resolved=\"false\"></xref> 事件提供数据。\n"
+  summary: "\n为 <xref href=\"HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited\" data-throw-if-not-resolved=\"false\"></xref> 事件提供数据。\n"
   example: []
   syntax:
     content: 'public class EntranceInvitedEventArgs : TimedEventArgs'
@@ -207,12 +207,9 @@ items:
   - Public
   - ReadOnly
 references:
-- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
-  commentId: E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
-  parent: HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  name: EntranceInvited
-  nameWithType: IEntranceInvitationEventSource.EntranceInvited
-  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+- uid: HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
+  commentId: E:HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
+  isExternal: true
 - uid: HuajiTech.QQ.Events
   commentId: N:HuajiTech.QQ.Events
   name: HuajiTech.QQ.Events
@@ -542,12 +539,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  commentId: T:HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  parent: HuajiTech.QQ.Events
-  name: IEntranceInvitationEventSource
-  nameWithType: IEntranceInvitationEventSource
-  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource
 - uid: System
   commentId: N:System
   isExternal: true

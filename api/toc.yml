@@ -100,8 +100,8 @@
     name: IAliased
   - uid: HuajiTech.QQ.IBot
     name: IBot
-  - uid: HuajiTech.QQ.IGroup
-    name: IGroup
+  - uid: HuajiTech.QQ.IChattable
+    name: IChattable
   - uid: HuajiTech.QQ.IMember
     name: IMember
   - uid: HuajiTech.QQ.IMuteable
@@ -157,18 +157,14 @@
     name: IBotEventSource
   - uid: HuajiTech.QQ.Events.IContactEventSource
     name: IContactEventSource
-  - uid: HuajiTech.QQ.Events.ICurrentUserEventSource
-    name: ICurrentUserEventSource
-  - uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource
-    name: IEntranceInvitationEventSource
+  - uid: HuajiTech.QQ.Events.IEntranceInviteEventSource
+    name: IEntranceInviteEventSource
   - uid: HuajiTech.QQ.Events.IEntranceRequestEventSource
     name: IEntranceRequestEventSource
   - uid: HuajiTech.QQ.Events.IFileEventSource
     name: IFileEventSource
   - uid: HuajiTech.QQ.Events.IGroupAdministratorEventSource
     name: IGroupAdministratorEventSource
-  - uid: HuajiTech.QQ.Events.IGroupEventSource
-    name: IGroupEventSource
   - uid: HuajiTech.QQ.Events.IGroupMemberEventSource
     name: IGroupMemberEventSource
   - uid: HuajiTech.QQ.Events.IGroupMuteEventSource
@@ -177,8 +173,6 @@
     name: IMemberMuteEventSource
   - uid: HuajiTech.QQ.Events.IMessageEventSource
     name: IMessageEventSource
-  - uid: HuajiTech.QQ.Events.IMuteEventSource
-    name: IMuteEventSource
   - uid: HuajiTech.QQ.Events.MemberMutedEventArgs
     name: MemberMutedEventArgs
   - uid: HuajiTech.QQ.Events.MessageReceivedEventArgs

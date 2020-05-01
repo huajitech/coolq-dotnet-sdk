@@ -2675,6 +2675,23 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.AnonymousMember.Group
   nameWithType: AnonymousMember.Group
+- uid: HuajiTech.QQ.AnonymousMember.HuajiTech#QQ#IMember#Group
+  name: IMember.Group
+  href: api/HuajiTech.QQ.AnonymousMember.html#HuajiTech_QQ_AnonymousMember_HuajiTech_QQ_IMember_Group
+  commentId: P:HuajiTech.QQ.AnonymousMember.HuajiTech#QQ#IMember#Group
+  name.vb: HuajiTech.QQ.IMember.Group
+  fullName: HuajiTech.QQ.AnonymousMember.HuajiTech.QQ.IMember.Group
+  nameWithType: AnonymousMember.IMember.Group
+  nameWithType.vb: AnonymousMember.HuajiTech.QQ.IMember.Group
+- uid: HuajiTech.QQ.AnonymousMember.HuajiTech#QQ#IMember#Group*
+  name: IMember.Group
+  href: api/HuajiTech.QQ.AnonymousMember.html#HuajiTech_QQ_AnonymousMember_HuajiTech_QQ_IMember_Group_
+  commentId: Overload:HuajiTech.QQ.AnonymousMember.HuajiTech#QQ#IMember#Group
+  isSpec: "True"
+  name.vb: HuajiTech.QQ.IMember.Group
+  fullName: HuajiTech.QQ.AnonymousMember.HuajiTech.QQ.IMember.Group
+  nameWithType: AnonymousMember.IMember.Group
+  nameWithType.vb: AnonymousMember.HuajiTech.QQ.IMember.Group
 - uid: HuajiTech.QQ.AnonymousMember.Id
   name: Id
   href: api/HuajiTech.QQ.AnonymousMember.html#HuajiTech_QQ_AnonymousMember_Id
@@ -2836,12 +2853,12 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.Chat.DisplayName
   nameWithType: Chat.DisplayName
-- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
-  name: Equals(Chat)
-  href: api/HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_Chat_
-  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
-  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.Chat)
-  nameWithType: Chat.Equals(Chat)
+- uid: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
+  name: Equals(IChattable)
+  href: api/HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_HuajiTech_QQ_IChattable_
+  commentId: M:HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
+  fullName: HuajiTech.QQ.Chat.Equals(HuajiTech.QQ.IChattable)
+  nameWithType: Chat.Equals(IChattable)
 - uid: HuajiTech.QQ.Chat.Equals(System.Object)
   name: Equals(Object)
   href: api/HuajiTech.QQ.Chat.html#HuajiTech_QQ_Chat_Equals_System_Object_
@@ -3773,24 +3790,18 @@ references:
   commentId: E:HuajiTech.QQ.Events.IContactEventSource.ContactRequested
   fullName: HuajiTech.QQ.Events.IContactEventSource.ContactRequested
   nameWithType: IContactEventSource.ContactRequested
-- uid: HuajiTech.QQ.Events.ICurrentUserEventSource
-  name: ICurrentUserEventSource
-  href: api/HuajiTech.QQ.Events.ICurrentUserEventSource.html
-  commentId: T:HuajiTech.QQ.Events.ICurrentUserEventSource
-  fullName: HuajiTech.QQ.Events.ICurrentUserEventSource
-  nameWithType: ICurrentUserEventSource
-- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  name: IEntranceInvitationEventSource
-  href: api/HuajiTech.QQ.Events.IEntranceInvitationEventSource.html
-  commentId: T:HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource
-  nameWithType: IEntranceInvitationEventSource
-- uid: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
+- uid: HuajiTech.QQ.Events.IEntranceInviteEventSource
+  name: IEntranceInviteEventSource
+  href: api/HuajiTech.QQ.Events.IEntranceInviteEventSource.html
+  commentId: T:HuajiTech.QQ.Events.IEntranceInviteEventSource
+  fullName: HuajiTech.QQ.Events.IEntranceInviteEventSource
+  nameWithType: IEntranceInviteEventSource
+- uid: HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
   name: EntranceInvited
-  href: api/HuajiTech.QQ.Events.IEntranceInvitationEventSource.html#HuajiTech_QQ_Events_IEntranceInvitationEventSource_EntranceInvited
-  commentId: E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
-  fullName: HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited
-  nameWithType: IEntranceInvitationEventSource.EntranceInvited
+  href: api/HuajiTech.QQ.Events.IEntranceInviteEventSource.html#HuajiTech_QQ_Events_IEntranceInviteEventSource_EntranceInvited
+  commentId: E:HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
+  fullName: HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited
+  nameWithType: IEntranceInviteEventSource.EntranceInvited
 - uid: HuajiTech.QQ.Events.IEntranceRequestEventSource
   name: IEntranceRequestEventSource
   href: api/HuajiTech.QQ.Events.IEntranceRequestEventSource.html
@@ -3833,12 +3844,6 @@ references:
   commentId: E:HuajiTech.QQ.Events.IGroupAdministratorEventSource.AdministratorRemoved
   fullName: HuajiTech.QQ.Events.IGroupAdministratorEventSource.AdministratorRemoved
   nameWithType: IGroupAdministratorEventSource.AdministratorRemoved
-- uid: HuajiTech.QQ.Events.IGroupEventSource
-  name: IGroupEventSource
-  href: api/HuajiTech.QQ.Events.IGroupEventSource.html
-  commentId: T:HuajiTech.QQ.Events.IGroupEventSource
-  fullName: HuajiTech.QQ.Events.IGroupEventSource
-  nameWithType: IGroupEventSource
 - uid: HuajiTech.QQ.Events.IGroupMemberEventSource
   name: IGroupMemberEventSource
   href: api/HuajiTech.QQ.Events.IGroupMemberEventSource.html
@@ -3911,12 +3916,6 @@ references:
   commentId: E:HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
   fullName: HuajiTech.QQ.Events.IMessageEventSource.MessageReceived
   nameWithType: IMessageEventSource.MessageReceived
-- uid: HuajiTech.QQ.Events.IMuteEventSource
-  name: IMuteEventSource
-  href: api/HuajiTech.QQ.Events.IMuteEventSource.html
-  commentId: T:HuajiTech.QQ.Events.IMuteEventSource
-  fullName: HuajiTech.QQ.Events.IMuteEventSource
-  nameWithType: IMuteEventSource
 - uid: HuajiTech.QQ.Events.MemberMutedEventArgs
   name: MemberMutedEventArgs
   href: api/HuajiTech.QQ.Events.MemberMutedEventArgs.html
@@ -4613,64 +4612,38 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.IBot.RequestRecordAsync
   nameWithType: IBot.RequestRecordAsync
-- uid: HuajiTech.QQ.IGroup
-  name: IGroup
-  href: api/HuajiTech.QQ.IGroup.html
-  commentId: T:HuajiTech.QQ.IGroup
-  fullName: HuajiTech.QQ.IGroup
-  nameWithType: IGroup
-- uid: HuajiTech.QQ.IGroup.GetMembers
-  name: GetMembers()
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_GetMembers
-  commentId: M:HuajiTech.QQ.IGroup.GetMembers
-  fullName: HuajiTech.QQ.IGroup.GetMembers()
-  nameWithType: IGroup.GetMembers()
-- uid: HuajiTech.QQ.IGroup.GetMembers*
-  name: GetMembers
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_GetMembers_
-  commentId: Overload:HuajiTech.QQ.IGroup.GetMembers
+- uid: HuajiTech.QQ.IChattable
+  name: IChattable
+  href: api/HuajiTech.QQ.IChattable.html
+  commentId: T:HuajiTech.QQ.IChattable
+  fullName: HuajiTech.QQ.IChattable
+  nameWithType: IChattable
+- uid: HuajiTech.QQ.IChattable.DisplayName
+  name: DisplayName
+  href: api/HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_DisplayName
+  commentId: P:HuajiTech.QQ.IChattable.DisplayName
+  fullName: HuajiTech.QQ.IChattable.DisplayName
+  nameWithType: IChattable.DisplayName
+- uid: HuajiTech.QQ.IChattable.DisplayName*
+  name: DisplayName
+  href: api/HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_DisplayName_
+  commentId: Overload:HuajiTech.QQ.IChattable.DisplayName
   isSpec: "True"
-  fullName: HuajiTech.QQ.IGroup.GetMembers
-  nameWithType: IGroup.GetMembers
-- uid: HuajiTech.QQ.IGroup.GetMembersAsync
-  name: GetMembersAsync()
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_GetMembersAsync
-  commentId: M:HuajiTech.QQ.IGroup.GetMembersAsync
-  fullName: HuajiTech.QQ.IGroup.GetMembersAsync()
-  nameWithType: IGroup.GetMembersAsync()
-- uid: HuajiTech.QQ.IGroup.GetMembersAsync*
-  name: GetMembersAsync
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_GetMembersAsync_
-  commentId: Overload:HuajiTech.QQ.IGroup.GetMembersAsync
+  fullName: HuajiTech.QQ.IChattable.DisplayName
+  nameWithType: IChattable.DisplayName
+- uid: HuajiTech.QQ.IChattable.Number
+  name: Number
+  href: api/HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_Number
+  commentId: P:HuajiTech.QQ.IChattable.Number
+  fullName: HuajiTech.QQ.IChattable.Number
+  nameWithType: IChattable.Number
+- uid: HuajiTech.QQ.IChattable.Number*
+  name: Number
+  href: api/HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_Number_
+  commentId: Overload:HuajiTech.QQ.IChattable.Number
   isSpec: "True"
-  fullName: HuajiTech.QQ.IGroup.GetMembersAsync
-  nameWithType: IGroup.GetMembersAsync
-- uid: HuajiTech.QQ.IGroup.MemberCapacity
-  name: MemberCapacity
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_MemberCapacity
-  commentId: P:HuajiTech.QQ.IGroup.MemberCapacity
-  fullName: HuajiTech.QQ.IGroup.MemberCapacity
-  nameWithType: IGroup.MemberCapacity
-- uid: HuajiTech.QQ.IGroup.MemberCapacity*
-  name: MemberCapacity
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_MemberCapacity_
-  commentId: Overload:HuajiTech.QQ.IGroup.MemberCapacity
-  isSpec: "True"
-  fullName: HuajiTech.QQ.IGroup.MemberCapacity
-  nameWithType: IGroup.MemberCapacity
-- uid: HuajiTech.QQ.IGroup.MemberCount
-  name: MemberCount
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_MemberCount
-  commentId: P:HuajiTech.QQ.IGroup.MemberCount
-  fullName: HuajiTech.QQ.IGroup.MemberCount
-  nameWithType: IGroup.MemberCount
-- uid: HuajiTech.QQ.IGroup.MemberCount*
-  name: MemberCount
-  href: api/HuajiTech.QQ.IGroup.html#HuajiTech_QQ_IGroup_MemberCount_
-  commentId: Overload:HuajiTech.QQ.IGroup.MemberCount
-  isSpec: "True"
-  fullName: HuajiTech.QQ.IGroup.MemberCount
-  nameWithType: IGroup.MemberCount
+  fullName: HuajiTech.QQ.IChattable.Number
+  nameWithType: IChattable.Number
 - uid: HuajiTech.QQ.IMember
   name: IMember
   href: api/HuajiTech.QQ.IMember.html
@@ -5275,6 +5248,23 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.Member.HasBadRecord
   nameWithType: Member.HasBadRecord
+- uid: HuajiTech.QQ.Member.HuajiTech#QQ#IMember#Group
+  name: IMember.Group
+  href: api/HuajiTech.QQ.Member.html#HuajiTech_QQ_Member_HuajiTech_QQ_IMember_Group
+  commentId: P:HuajiTech.QQ.Member.HuajiTech#QQ#IMember#Group
+  name.vb: HuajiTech.QQ.IMember.Group
+  fullName: HuajiTech.QQ.Member.HuajiTech.QQ.IMember.Group
+  nameWithType: Member.IMember.Group
+  nameWithType.vb: Member.HuajiTech.QQ.IMember.Group
+- uid: HuajiTech.QQ.Member.HuajiTech#QQ#IMember#Group*
+  name: IMember.Group
+  href: api/HuajiTech.QQ.Member.html#HuajiTech_QQ_Member_HuajiTech_QQ_IMember_Group_
+  commentId: Overload:HuajiTech.QQ.Member.HuajiTech#QQ#IMember#Group
+  isSpec: "True"
+  name.vb: HuajiTech.QQ.IMember.Group
+  fullName: HuajiTech.QQ.Member.HuajiTech.QQ.IMember.Group
+  nameWithType: Member.IMember.Group
+  nameWithType.vb: Member.HuajiTech.QQ.IMember.Group
 - uid: HuajiTech.QQ.Member.IsAdministrator
   name: IsAdministrator
   href: api/HuajiTech.QQ.Member.html#HuajiTech_QQ_Member_IsAdministrator
