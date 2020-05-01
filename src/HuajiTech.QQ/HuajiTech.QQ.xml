@@ -297,6 +297,16 @@
             获取被操作人。
             </summary>
         </member>
+        <member name="T:HuajiTech.QQ.Events.GroupMemberEventArgs">
+            <summary>
+            为 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined"/> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft"/> 事件提供数据。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Events.GroupMemberEventArgs.IsPassive">
+            <summary>
+            获取一个值，指示成员是否被动入群/退群。
+            </summary>
+        </member>
         <member name="T:HuajiTech.QQ.Events.GroupMuteEventArgs">
             <summary>
             为 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted"/> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted"/> 事件提供数据。
@@ -460,16 +470,6 @@
         <member name="T:HuajiTech.QQ.Events.IMuteEventSource">
             <summary>
             定义禁言事件
-            </summary>
-        </member>
-        <member name="T:HuajiTech.QQ.Events.MemberEventArgs">
-            <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined"/> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft"/> 事件提供数据。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.Events.MemberEventArgs.IsPassive">
-            <summary>
-            获取一个值，指示成员是否被动入群。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.Events.MemberMutedEventArgs">
@@ -764,6 +764,21 @@
             以异步操作将当前 <see cref="T:HuajiTech.QQ.IMuteable"/> 对象解除禁言。
             </summary>
         </member>
+        <member name="T:HuajiTech.QQ.IRefreshable">
+            <summary>
+            定义可刷新的对象。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.QQ.IRefreshable.Refresh">
+            <summary>
+            刷新当前 <see cref="T:HuajiTech.QQ.IRefreshable"/> 对象。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.QQ.IRefreshable.RefreshAsync">
+            <summary>
+            以异步操作刷新当前 <see cref="T:HuajiTech.QQ.IRefreshable"/> 对象。
+            </summary>
+        </member>
         <member name="T:HuajiTech.QQ.IRequestable">
             <summary>
             定义可请求的对象。
@@ -822,7 +837,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Logger">
             <summary>
-            提供更友好的记录日志的方法。
+            提供记录日志的方法。
             此类为抽象类。
             </summary>
         </member>
@@ -991,6 +1006,7 @@
         <member name="T:HuajiTech.QQ.Member">
             <summary>
             表示成员。
+            此类为抽象类。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Member.#ctor(System.Int64,HuajiTech.QQ.Group)">
@@ -1165,6 +1181,74 @@
             <summary>
             以异步操作撤回当前 <see cref="T:HuajiTech.QQ.Message"/> 对象。
             </summary>
+        </member>
+        <member name="T:HuajiTech.QQ.Plugin">
+            <summary>
+            用作插件的基类，并提供操作 <see cref="T:HuajiTech.QQ.PluginContext"/> 的方法。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.QQ.Plugin.#ctor(HuajiTech.QQ.PluginContext)">
+            <summary>
+            以指定的 <see cref="T:HuajiTech.QQ.PluginContext"/> 初始化一个 <see cref="T:HuajiTech.QQ.Plugin"/> 类的新实例。
+            </summary>
+            <param name="context">当前 <see cref="T:HuajiTech.QQ.Plugin"/> 对象所使用的 <see cref="T:HuajiTech.QQ.PluginContext"/>。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.Plugin.#ctor">
+            <summary>
+            以 <see cref="P:HuajiTech.QQ.PluginContext.Current"/> 初始化一个 <see cref="T:HuajiTech.QQ.Plugin"/> 类的新实例。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Plugin.Bot">
+            <summary>
+            当前 <see cref="T:HuajiTech.QQ.Plugin"/> 对象的 <see cref="T:HuajiTech.QQ.IBot"/>。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Plugin.CurrentUser">
+            <summary>
+            当前 <see cref="T:HuajiTech.QQ.Plugin"/> 对象的 <see cref="P:HuajiTech.QQ.Plugin.CurrentUser"/>。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Plugin.Logger">
+            <summary>
+            当前 <see cref="T:HuajiTech.QQ.Plugin"/> 对象的 <see cref="P:HuajiTech.QQ.Plugin.Logger"/>。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Plugin.Context">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.Plugin"/> 对象的 <see cref="T:HuajiTech.QQ.PluginContext"/>。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.QQ.Plugin.Contact(System.Int64)">
+            <summary>
+            创建指定号码的联系人。
+            </summary>
+            <param name="number">号码。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.Plugin.Group(System.Int64)">
+            <summary>
+            创建指定号码的群。
+            </summary>
+            <param name="number">号码。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.Plugin.Member(System.Int64,HuajiTech.QQ.Group)">
+            <summary>
+            创建指定号码和群的成员。
+            </summary>
+            <param name="number">号码。</param>
+            <param name="group">群。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.Plugin.Member(System.Int64,System.Int64)">
+            <summary>
+            创建指定号码和群号码的成员。
+            </summary>
+            <param name="number">号码。</param>
+            <param name="groupNumber">群号码。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.Plugin.User(System.Int64)">
+            <summary>
+            创建指定号码的用户。
+            </summary>
+            <param name="number">号码。</param>
         </member>
         <member name="T:HuajiTech.QQ.PluginContext">
             <summary>
@@ -1353,6 +1437,7 @@
         <member name="T:HuajiTech.QQ.User">
             <summary>
             表示用户。
+            此类为抽象类。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.User.#ctor(System.Int64)">
@@ -1377,74 +1462,6 @@
             以异步操作给予当前 <see cref="T:HuajiTech.QQ.User"/> 对象指定数量的赞。
             </summary>
             <param name="count">赞的数量。</param>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Plugin">
-            <summary>
-            用作插件的基类，并提供操作 <see cref="T:HuajiTech.QQ.PluginContext"/> 的方法。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.#ctor(HuajiTech.QQ.PluginContext)">
-            <summary>
-            以指定的 <see cref="T:HuajiTech.QQ.PluginContext"/> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin"/> 类的新实例。
-            </summary>
-            <param name="context">当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象所使用的 <see cref="T:HuajiTech.QQ.PluginContext"/>。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.#ctor">
-            <summary>
-            以 <see cref="P:HuajiTech.QQ.PluginContext.Current"/> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin"/> 类的新实例。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Plugin.Bot">
-            <summary>
-            当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.QQ.IBot"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Plugin.CurrentUser">
-            <summary>
-            当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.CurrentUser"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Plugin.Logger">
-            <summary>
-            当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.Logger"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Plugin.Context">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.QQ.PluginContext"/>。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.Contact(System.Int64)">
-            <summary>
-            创建指定号码的联系人。
-            </summary>
-            <param name="number">号码。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.Group(System.Int64)">
-            <summary>
-            创建指定号码的群。
-            </summary>
-            <param name="number">号码。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.Member(System.Int64,HuajiTech.QQ.Group)">
-            <summary>
-            创建指定号码和群的成员。
-            </summary>
-            <param name="number">号码。</param>
-            <param name="group">群。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.Member(System.Int64,System.Int64)">
-            <summary>
-            创建指定号码和群号码的成员。
-            </summary>
-            <param name="number">号码。</param>
-            <param name="groupNumber">群号码。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.User(System.Int64)">
-            <summary>
-            创建指定号码的用户。
-            </summary>
-            <param name="number">号码。</param>
         </member>
     </members>
 </doc>

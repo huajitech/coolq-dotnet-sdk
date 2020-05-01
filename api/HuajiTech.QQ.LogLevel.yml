@@ -34,8 +34,8 @@ items:
   summary: "\n指定日志级别。\n"
   example: []
   syntax:
-    content: 'public enum LogLevel : int'
-    content.vb: Public Enum LogLevel As Integer
+    content: public enum LogLevel
+    content.vb: Public Enum LogLevel
   modifiers.csharp:
   - public
   - enum
@@ -67,10 +67,9 @@ items:
   summary: "\n调试。\n"
   example: []
   syntax:
-    content: Debug = null
+    content: Debug = 0
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Debug = Nothing
   modifiers.csharp:
   - public
   - const
@@ -102,10 +101,9 @@ items:
   summary: "\n信息。\n"
   example: []
   syntax:
-    content: Info = null
+    content: Info = 10
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Info = Nothing
   modifiers.csharp:
   - public
   - const
@@ -137,10 +135,9 @@ items:
   summary: "\n成功。\n"
   example: []
   syntax:
-    content: Success = null
+    content: Success = 11
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Success = Nothing
   modifiers.csharp:
   - public
   - const
@@ -172,10 +169,9 @@ items:
   summary: "\n接收。\n"
   example: []
   syntax:
-    content: Receiving = null
+    content: Receiving = 12
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Receiving = Nothing
   modifiers.csharp:
   - public
   - const
@@ -207,10 +203,9 @@ items:
   summary: "\n发送。\n"
   example: []
   syntax:
-    content: Sending = null
+    content: Sending = 13
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Sending = Nothing
   modifiers.csharp:
   - public
   - const
@@ -242,10 +237,9 @@ items:
   summary: "\n警告。\n"
   example: []
   syntax:
-    content: Warning = null
+    content: Warning = 20
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Warning = Nothing
   modifiers.csharp:
   - public
   - const
@@ -277,10 +271,9 @@ items:
   summary: "\n错误。\n"
   example: []
   syntax:
-    content: Error = null
+    content: Error = 30
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Error = Nothing
   modifiers.csharp:
   - public
   - const
@@ -312,10 +305,9 @@ items:
   summary: "\n致命错误。\n"
   example: []
   syntax:
-    content: Fatal = null
+    content: Fatal = 40
     return:
       type: HuajiTech.QQ.LogLevel
-    content.vb: Fatal = Nothing
   modifiers.csharp:
   - public
   - const

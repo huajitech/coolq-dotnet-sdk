@@ -33,8 +33,8 @@ items:
   summary: "\n指定状态颜色。\n"
   example: []
   syntax:
-    content: 'public enum StatusColor : int'
-    content.vb: Public Enum StatusColor As Integer
+    content: public enum StatusColor
+    content.vb: Public Enum StatusColor
   modifiers.csharp:
   - public
   - enum

@@ -29,8 +29,8 @@ items:
   summary: "\n指定性别。\n"
   example: []
   syntax:
-    content: 'public enum Gender : int'
-    content.vb: Public Enum Gender As Integer
+    content: public enum Gender
+    content.vb: Public Enum Gender
   modifiers.csharp:
   - public
   - enum
@@ -130,10 +130,9 @@ items:
   summary: "\n未知。\n"
   example: []
   syntax:
-    content: Unknown = null
+    content: Unknown = 255
     return:
       type: HuajiTech.QQ.Gender
-    content.vb: Unknown = Nothing
   modifiers.csharp:
   - public
   - const

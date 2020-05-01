@@ -127,7 +127,7 @@ items:
   syntax:
     content: Task RequestAsync()
     return:
-      type: Task
+      type: System.Threading.Tasks.Task
     content.vb: Function RequestAsync As Task
   overload: HuajiTech.QQ.IRequestable.RequestAsync*
 references:
@@ -148,10 +148,18 @@ references:
   nameWithType: IRequestable.HasRequested
   fullName: HuajiTech.QQ.IRequestable.HasRequested
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: HuajiTech.QQ.IRequestable.Request*
   commentId: Overload:HuajiTech.QQ.IRequestable.Request
   name: Request
@@ -162,8 +170,16 @@ references:
   name: RequestAsync
   nameWithType: IRequestable.RequestAsync
   fullName: HuajiTech.QQ.IRequestable.RequestAsync
-- uid: Task
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

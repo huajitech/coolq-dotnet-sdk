@@ -29,8 +29,8 @@ items:
   summary: "\n指定音乐提供商。\n"
   example: []
   syntax:
-    content: 'public enum MusicProvider : int'
-    content.vb: Public Enum MusicProvider As Integer
+    content: public enum MusicProvider
+    content.vb: Public Enum MusicProvider
   modifiers.csharp:
   - public
   - enum

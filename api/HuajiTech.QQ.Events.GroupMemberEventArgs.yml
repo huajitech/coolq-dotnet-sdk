@@ -5,7 +5,7 @@ items:
   id: GroupMemberEventArgs
   parent: HuajiTech.QQ.Events
   children:
-  - HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor(System.Boolean,DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)
+  - HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor(System.Boolean,System.DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)
   - HuajiTech.QQ.Events.GroupMemberEventArgs.IsPassive
   langs:
   - csharp
@@ -31,10 +31,10 @@ items:
     content: 'public class GroupMemberEventArgs : GroupEventArgs'
     content.vb: >-
       Public Class GroupMemberEventArgs
-
           Inherits GroupEventArgs
   inheritance:
   - System.Object
+  - System.EventArgs
   - HuajiTech.QQ.Events.RoutedEventArgs
   - HuajiTech.QQ.Events.TimedEventArgs
   - HuajiTech.QQ.Events.GroupEventArgs
@@ -44,22 +44,30 @@ items:
   - HuajiTech.QQ.Events.GroupEventArgs.Operatee
   - HuajiTech.QQ.Events.TimedEventArgs.Time
   - HuajiTech.QQ.Events.RoutedEventArgs.Handled
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor(System.Boolean,DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)
-  commentId: M:HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor(System.Boolean,DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)
-  id: '#ctor(System.Boolean,DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)'
+- uid: HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor(System.Boolean,System.DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)
+  commentId: M:HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor(System.Boolean,System.DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)
+  id: '#ctor(System.Boolean,System.DateTime,HuajiTech.QQ.Group,HuajiTech.QQ.Member,HuajiTech.QQ.Member)'
   parent: HuajiTech.QQ.Events.GroupMemberEventArgs
   langs:
   - csharp
   - vb
   name: GroupMemberEventArgs(Boolean, DateTime, Group, Member, Member)
   nameWithType: GroupMemberEventArgs.GroupMemberEventArgs(Boolean, DateTime, Group, Member, Member)
-  fullName: HuajiTech.QQ.Events.GroupMemberEventArgs.GroupMemberEventArgs(System.Boolean, DateTime, HuajiTech.QQ.Group, HuajiTech.QQ.Member, HuajiTech.QQ.Member)
+  fullName: HuajiTech.QQ.Events.GroupMemberEventArgs.GroupMemberEventArgs(System.Boolean, System.DateTime, HuajiTech.QQ.Group, HuajiTech.QQ.Member, HuajiTech.QQ.Member)
   type: Constructor
   source:
     remote:
@@ -78,14 +86,14 @@ items:
     - id: isPassive
       type: System.Boolean
     - id: time
-      type: DateTime
+      type: System.DateTime
     - id: source
       type: HuajiTech.QQ.Group
     - id: operator
       type: HuajiTech.QQ.Member
     - id: operatee
       type: HuajiTech.QQ.Member
-    content.vb: Public Sub New(isPassive As Boolean, time As DateTime, source As Group, operator As Member, operatee As Member)
+    content.vb: Public Sub New(isPassive As Boolean, time As Date, source As Group, operator As Member, operatee As Member)
   overload: HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor*
   modifiers.csharp:
   - public
@@ -147,10 +155,19 @@ references:
   nameWithType: HuajiTech.QQ.Events
   fullName: HuajiTech.QQ.Events
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
 - uid: HuajiTech.QQ.Events.RoutedEventArgs
   commentId: T:HuajiTech.QQ.Events.RoutedEventArgs
   parent: HuajiTech.QQ.Events
@@ -199,27 +216,323 @@ references:
   name: Handled
   nameWithType: RoutedEventArgs.Handled
   fullName: HuajiTech.QQ.Events.RoutedEventArgs.Handled
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: HuajiTech.QQ.Events.IGroupMemberEventSource
   commentId: T:HuajiTech.QQ.Events.IGroupMemberEventSource
   parent: HuajiTech.QQ.Events
   name: IGroupMemberEventSource
   nameWithType: IGroupMemberEventSource
   fullName: HuajiTech.QQ.Events.IGroupMemberEventSource
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor*
   commentId: Overload:HuajiTech.QQ.Events.GroupMemberEventArgs.#ctor
   name: GroupMemberEventArgs
   nameWithType: GroupMemberEventArgs.GroupMemberEventArgs
   fullName: HuajiTech.QQ.Events.GroupMemberEventArgs.GroupMemberEventArgs
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: DateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
   isExternal: true
   name: DateTime
   nameWithType: DateTime
-  fullName: DateTime
+  fullName: System.DateTime
 - uid: HuajiTech.QQ.Group
   commentId: T:HuajiTech.QQ.Group
   parent: HuajiTech.QQ

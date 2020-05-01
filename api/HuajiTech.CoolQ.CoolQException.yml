@@ -6,9 +6,9 @@ items:
   parent: HuajiTech.CoolQ
   children:
   - HuajiTech.CoolQ.CoolQException.#ctor
-  - HuajiTech.CoolQ.CoolQException.#ctor(SerializationInfo,StreamingContext)
+  - HuajiTech.CoolQ.CoolQException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   - HuajiTech.CoolQ.CoolQException.#ctor(System.String)
-  - HuajiTech.CoolQ.CoolQException.#ctor(System.String,Exception)
+  - HuajiTech.CoolQ.CoolQException.#ctor(System.String,System.Exception)
   - HuajiTech.CoolQ.CoolQException.#ctor(System.String,System.Int32)
   - HuajiTech.CoolQ.CoolQException.ReturnValue
   langs:
@@ -32,13 +32,47 @@ items:
   summary: "\n在酷Q返回了意料之外的值时引发的异常。\n"
   example: []
   syntax:
-    content: 'public class CoolQException : Exception'
-    content.vb: >-
-      Public Class CoolQException
+    content: >-
+      [Serializable]
 
+      public class CoolQException : Exception, ISerializable
+    content.vb: >-
+      <Serializable>
+
+      Public Class CoolQException
           Inherits Exception
+          Implements ISerializable
   inheritance:
   - System.Object
+  - System.Exception
+  implements:
+  - System.Runtime.Serialization.ISerializable
+  inheritedMembers:
+  - System.Exception.GetBaseException
+  - System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - System.Exception.GetType
+  - System.Exception.ToString
+  - System.Exception.Data
+  - System.Exception.HelpLink
+  - System.Exception.HResult
+  - System.Exception.InnerException
+  - System.Exception.Message
+  - System.Exception.Source
+  - System.Exception.StackTrace
+  - System.Exception.TargetSite
+  - System.Exception.SerializeObjectState
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - System.Exception.HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+  - System.Exception.HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -113,16 +147,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: HuajiTech.CoolQ.CoolQException.#ctor(System.String,Exception)
-  commentId: M:HuajiTech.CoolQ.CoolQException.#ctor(System.String,Exception)
-  id: '#ctor(System.String,Exception)'
+- uid: HuajiTech.CoolQ.CoolQException.#ctor(System.String,System.Exception)
+  commentId: M:HuajiTech.CoolQ.CoolQException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
   parent: HuajiTech.CoolQ.CoolQException
   langs:
   - csharp
   - vb
   name: CoolQException(String, Exception)
   nameWithType: CoolQException.CoolQException(String, Exception)
-  fullName: HuajiTech.CoolQ.CoolQException.CoolQException(System.String, Exception)
+  fullName: HuajiTech.CoolQ.CoolQException.CoolQException(System.String, System.Exception)
   type: Constructor
   source:
     remote:
@@ -141,7 +175,7 @@ items:
     - id: message
       type: System.String
     - id: innerException
-      type: Exception
+      type: System.Exception
     content.vb: Public Sub New(message As String, innerException As Exception)
   overload: HuajiTech.CoolQ.CoolQException.#ctor*
   modifiers.csharp:
@@ -178,16 +212,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: HuajiTech.CoolQ.CoolQException.#ctor(SerializationInfo,StreamingContext)
-  commentId: M:HuajiTech.CoolQ.CoolQException.#ctor(SerializationInfo,StreamingContext)
-  id: '#ctor(SerializationInfo,StreamingContext)'
+- uid: HuajiTech.CoolQ.CoolQException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:HuajiTech.CoolQ.CoolQException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: '#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
   parent: HuajiTech.CoolQ.CoolQException
   langs:
   - csharp
   - vb
   name: CoolQException(SerializationInfo, StreamingContext)
   nameWithType: CoolQException.CoolQException(SerializationInfo, StreamingContext)
-  fullName: HuajiTech.CoolQ.CoolQException.CoolQException(SerializationInfo, StreamingContext)
+  fullName: HuajiTech.CoolQ.CoolQException.CoolQException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   type: Constructor
   source:
     remote:
@@ -204,9 +238,9 @@ items:
     content: protected CoolQException(SerializationInfo info, StreamingContext context)
     parameters:
     - id: info
-      type: SerializationInfo
+      type: System.Runtime.Serialization.SerializationInfo
     - id: context
-      type: StreamingContext
+      type: System.Runtime.Serialization.StreamingContext
     content.vb: Protected Sub New(info As SerializationInfo, context As StreamingContext)
   overload: HuajiTech.CoolQ.CoolQException.#ctor*
   modifiers.csharp:
@@ -255,49 +289,654 @@ references:
   nameWithType: HuajiTech.CoolQ
   fullName: HuajiTech.CoolQ
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
+  parent: System.Exception
+  isExternal: true
+  name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
+  fullName: System.Exception.GetBaseException()
+  spec.csharp:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Exception
+  isExternal: true
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetType
+  commentId: M:System.Exception.GetType
+  parent: System.Exception
+  isExternal: true
+  name: GetType()
+  nameWithType: Exception.GetType()
+  fullName: System.Exception.GetType()
+  spec.csharp:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.ToString
+  commentId: M:System.Exception.ToString
+  parent: System.Exception
+  isExternal: true
+  name: ToString()
+  nameWithType: Exception.ToString()
+  fullName: System.Exception.ToString()
+  spec.csharp:
+  - uid: System.Exception.ToString
+    name: ToString
+    nameWithType: Exception.ToString
+    fullName: System.Exception.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.ToString
+    name: ToString
+    nameWithType: Exception.ToString
+    fullName: System.Exception.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.Data
+  commentId: P:System.Exception.Data
+  parent: System.Exception
+  isExternal: true
+  name: Data
+  nameWithType: Exception.Data
+  fullName: System.Exception.Data
+- uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
+  parent: System.Exception
+  isExternal: true
+  name: HelpLink
+  nameWithType: Exception.HelpLink
+  fullName: System.Exception.HelpLink
+- uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
+  parent: System.Exception
+  isExternal: true
+  name: HResult
+  nameWithType: Exception.HResult
+  fullName: System.Exception.HResult
+- uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
+  parent: System.Exception
+  isExternal: true
+  name: InnerException
+  nameWithType: Exception.InnerException
+  fullName: System.Exception.InnerException
+- uid: System.Exception.Message
+  commentId: P:System.Exception.Message
+  parent: System.Exception
+  isExternal: true
+  name: Message
+  nameWithType: Exception.Message
+  fullName: System.Exception.Message
+- uid: System.Exception.Source
+  commentId: P:System.Exception.Source
+  parent: System.Exception
+  isExternal: true
+  name: Source
+  nameWithType: Exception.Source
+  fullName: System.Exception.Source
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
+- uid: System.Exception.TargetSite
+  commentId: P:System.Exception.TargetSite
+  parent: System.Exception
+  isExternal: true
+  name: TargetSite
+  nameWithType: Exception.TargetSite
+  fullName: System.Exception.TargetSite
+- uid: System.Exception.SerializeObjectState
+  commentId: E:System.Exception.SerializeObjectState
+  parent: System.Exception
+  isExternal: true
+  name: SerializeObjectState
+  nameWithType: Exception.SerializeObjectState
+  fullName: System.Exception.SerializeObjectState
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  definition: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  name: LogAsWarning()
+  nameWithType: CurrentPluginContextExtensions.LogAsWarning()
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning()
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+    name: LogAsWarning
+    nameWithType: CurrentPluginContextExtensions.LogAsWarning
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+    name: LogAsWarning
+    nameWithType: CurrentPluginContextExtensions.LogAsWarning
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  parent: HuajiTech.QQ.CurrentPluginContextExtensions
+  definition: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  name: LogAsError()
+  nameWithType: CurrentPluginContextExtensions.LogAsError()
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError()
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+    name: LogAsError
+    nameWithType: CurrentPluginContextExtensions.LogAsError
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+    name: LogAsError
+    nameWithType: CurrentPluginContextExtensions.LogAsError
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  isExternal: true
+  name: LogAsWarning(Exception)
+  nameWithType: CurrentPluginContextExtensions.LogAsWarning(Exception)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+    name: LogAsWarning
+    nameWithType: CurrentPluginContextExtensions.LogAsWarning
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning(System.Exception)
+    name: LogAsWarning
+    nameWithType: CurrentPluginContextExtensions.LogAsWarning
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions
+  commentId: T:HuajiTech.QQ.CurrentPluginContextExtensions
+  parent: HuajiTech.QQ
+  name: CurrentPluginContextExtensions
+  nameWithType: CurrentPluginContextExtensions
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions
+- uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  commentId: M:HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  isExternal: true
+  name: LogAsError(Exception)
+  nameWithType: CurrentPluginContextExtensions.LogAsError(Exception)
+  fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+  spec.csharp:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+    name: LogAsError
+    nameWithType: CurrentPluginContextExtensions.LogAsError
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError(System.Exception)
+    name: LogAsError
+    nameWithType: CurrentPluginContextExtensions.LogAsError
+    fullName: HuajiTech.QQ.CurrentPluginContextExtensions.LogAsError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HuajiTech.QQ
+  commentId: N:HuajiTech.QQ
+  name: HuajiTech.QQ
+  nameWithType: HuajiTech.QQ
+  fullName: HuajiTech.QQ
 - uid: HuajiTech.CoolQ.CoolQException.#ctor*
   commentId: Overload:HuajiTech.CoolQ.CoolQException.#ctor
   name: CoolQException
   nameWithType: CoolQException.CoolQException
   fullName: HuajiTech.CoolQ.CoolQException.CoolQException
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Exception
-  isExternal: true
-  name: Exception
-  nameWithType: Exception
-  fullName: Exception
-- uid: SerializationInfo
-  commentId: '!:SerializationInfo'
+- uid: System.Runtime.Serialization.SerializationInfo
+  commentId: T:System.Runtime.Serialization.SerializationInfo
+  parent: System.Runtime.Serialization
   isExternal: true
   name: SerializationInfo
   nameWithType: SerializationInfo
-  fullName: SerializationInfo
-- uid: StreamingContext
-  commentId: '!:StreamingContext'
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  commentId: T:System.Runtime.Serialization.StreamingContext
+  parent: System.Runtime.Serialization
   isExternal: true
   name: StreamingContext
   nameWithType: StreamingContext
-  fullName: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext
 - uid: HuajiTech.CoolQ.CoolQException.ReturnValue*
   commentId: Overload:HuajiTech.CoolQ.CoolQException.ReturnValue
   name: ReturnValue
   nameWithType: CoolQException.ReturnValue
   fullName: HuajiTech.CoolQ.CoolQException.ReturnValue
 - uid: System.Nullable{System.Int32}
-  commentId: '!:System.Nullable{System.Int32}'
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
   definition: System.Nullable`1
   name: Nullable<Int32>
   nameWithType: Nullable<Int32>
@@ -340,13 +979,14 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.Nullable`1
+  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<>
-  nameWithType: Nullable<>
-  fullName: System.Nullable<>
-  nameWithType.vb: Nullable(Of )
-  fullName.vb: System.Nullable(Of )
-  name.vb: Nullable(Of )
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -356,9 +996,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -371,9 +1011,9 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )

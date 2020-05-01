@@ -65,7 +65,7 @@ items:
   syntax:
     content: event EventHandler AppDisabling
     return:
-      type: EventHandler
+      type: System.EventHandler
     content.vb: Event AppDisabling As EventHandler
 - uid: HuajiTech.QQ.Events.IBotEventSource.AppEnabled
   commentId: E:HuajiTech.QQ.Events.IBotEventSource.AppEnabled
@@ -94,7 +94,7 @@ items:
   syntax:
     content: event EventHandler AppEnabled
     return:
-      type: EventHandler
+      type: System.EventHandler
     content.vb: Event AppEnabled As EventHandler
 - uid: HuajiTech.QQ.Events.IBotEventSource.BotStarted
   commentId: E:HuajiTech.QQ.Events.IBotEventSource.BotStarted
@@ -123,7 +123,7 @@ items:
   syntax:
     content: event EventHandler BotStarted
     return:
-      type: EventHandler
+      type: System.EventHandler
     content.vb: Event BotStarted As EventHandler
 - uid: HuajiTech.QQ.Events.IBotEventSource.BotStopping
   commentId: E:HuajiTech.QQ.Events.IBotEventSource.BotStopping
@@ -152,7 +152,7 @@ items:
   syntax:
     content: event EventHandler BotStopping
     return:
-      type: EventHandler
+      type: System.EventHandler
     content.vb: Event BotStopping As EventHandler
 references:
 - uid: HuajiTech.QQ.Events
@@ -160,8 +160,16 @@ references:
   name: HuajiTech.QQ.Events
   nameWithType: HuajiTech.QQ.Events
   fullName: HuajiTech.QQ.Events
-- uid: EventHandler
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
   isExternal: true
   name: EventHandler
   nameWithType: EventHandler
-  fullName: EventHandler
+  fullName: System.EventHandler
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

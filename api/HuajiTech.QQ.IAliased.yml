@@ -124,10 +124,18 @@ references:
   nameWithType: IAliased.Alias
   fullName: HuajiTech.QQ.IAliased.Alias
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: HuajiTech.QQ.IAliased.DisplayName*
   commentId: Overload:HuajiTech.QQ.IAliased.DisplayName
   name: DisplayName

@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.AppIdAttribute.html",
-          "hash": "/5tWGtqIt3Z4dLB9KhDhuA=="
+          "hash": "SokF5Egus5Dfxs9pKVllYQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.CoolQException.html",
-          "hash": "ytBh8fOweSKoqX9NKAb/jg=="
+          "hash": "wgLITKN7jIYXvO6z+2AYyw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Extensions.html",
-          "hash": "7+z/eozjlbOt/zx0U2F/Cg=="
+          "hash": "eejBDnoOxmolJ87QNrmDnQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Anonymous.html",
-          "hash": "qBwbFSWPm/G9CLp7b1ItmQ=="
+          "hash": "y+4y3e5E3/ENY4IkhCDSrQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.At.html",
-          "hash": "A+pVBn2r0rBhvjlOre6q/g=="
+          "hash": "uoEuEUGPzghAl+ByPfW14g=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.AtAll.html",
-          "hash": "hn64ZtuEH4iTFNLOHCYh7Q=="
+          "hash": "q7Ce1udnCZaMnaJcAPccjQ=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CQCode.html",
-          "hash": "ogxH7XT09EXqVEXblbbzug=="
+          "hash": "i2vDCOTFtOwk3rIz0Sn2IQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CQCodeFactory.html",
-          "hash": "jQBQorIaJBrdq9V+7I8reQ=="
+          "hash": "l5zeFRLgO9xhxrjA8/nkzw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ChatShare.html",
-          "hash": "GZ25vWAz6A0D2l36UqwUYw=="
+          "hash": "Zi3Dndn9dDWzAGpDompoDA=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ClockingIn.html",
-          "hash": "tE4Gl3GqszdsuBsXIW5eCg=="
+          "hash": "zBaSdiWIa84lqrsFS8Skow=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ComplexMessage.html",
-          "hash": "H5uL5Xsc6FtMlP/4M2sjAw=="
+          "hash": "k262XbwSyLVW+wVqt/gnbA=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.html",
-          "hash": "K6DiLCwOL+hEajzPEs7dsA=="
+          "hash": "65Eawf7NIuQwd2sjQeASFQ=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CustomEmoticon.html",
-          "hash": "xj8G+6U6Egw5n0rTz95x5A=="
+          "hash": "+/Et50FVmbONcAeDtSk6AQ=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CustomMusic.html",
-          "hash": "MvS0YxiF+ZBN3rQuouWf9Q=="
+          "hash": "avwPJNUwVAhRpsJl+e555w=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Dice.html",
-          "hash": "CdufEVtJVsFBNbFBJMGYwQ=="
+          "hash": "DxKlnM6VXdATY6erN/EL4A=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Emoji.html",
-          "hash": "pxXlVzmXzd+WgnJj2lKzvA=="
+          "hash": "gCtZx2qLY3ufJlHFtpC9sA=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Emoticon.html",
-          "hash": "hMjlhIW9OtHpIk6mj9nwgg=="
+          "hash": "fEzej3DfM0Qd4kYSuxbVBw=="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Extensions.html",
-          "hash": "3q/AR2hxIJ/jvCR9cSbrbg=="
+          "hash": "3yw7krveAczhxsvIV5W0qA=="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Image.html",
-          "hash": "QPb6LVCbCpU43mdOjtTrRQ=="
+          "hash": "OsXnjLbBQrH9fKfj45T6LA=="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Location.html",
-          "hash": "sm/2Vxn+9BqPqGFf9gALVQ=="
+          "hash": "jA0JuxB9uCkuCjpcuZj6SA=="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.MessageElement.html",
-          "hash": "mYA7YFWS002X+S7OgT7jPA=="
+          "hash": "45ky4tNZ1DMKF1PaDGaK6w=="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Music.html",
-          "hash": "MV2QpmBBU1Ti6wlXYajiOw=="
+          "hash": "kJcCCQHW1PYywpeVUOpNcg=="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.MusicProvider.html",
-          "hash": "X7xUY8Ff1dCRZvfjZsQ1gA=="
+          "hash": "xbgM+mbv0QBF06kv2YL9AA=="
         }
       },
       "is_incremental": false,
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.PlainText.html",
-          "hash": "6MT6YTcfdKoPQy5LbW7lDA=="
+          "hash": "F7bvvrz5wvlMZnzqFGXZOQ=="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Record.html",
-          "hash": "1lcQ9jbSnSciZJDDcdHisw=="
+          "hash": "/0l6nfsI1V07gk2fSNTkUg=="
         }
       },
       "is_incremental": false,
@@ -330,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.RichText.html",
-          "hash": "2ceLPfOCxn9eIKUBR7x+fg=="
+          "hash": "HdFscZ2EXKlUCi3tHTyL8A=="
         }
       },
       "is_incremental": false,
@@ -342,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.RockPaperScissors.html",
-          "hash": "ls7NUD+Va2mqA1Z06pHdnA=="
+          "hash": "OdAeQFvMRg5UW1YmPxbBUQ=="
         }
       },
       "is_incremental": false,
@@ -354,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.html",
-          "hash": "mSsxZRDvQTR+FwVJADjArQ=="
+          "hash": "+SHxZIT+xEaJOcrSEhGuyg=="
         }
       },
       "is_incremental": false,
@@ -366,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Shake.html",
-          "hash": "fWM6Ane27nqmZmUtpjDPpA=="
+          "hash": "bnyLYzHtT1sceb5pv8FN7w=="
         }
       },
       "is_incremental": false,
@@ -378,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Share.html",
-          "hash": "S1BQECAwZgLJybbZE1F9qQ=="
+          "hash": "OmJTyLjAF/URAf4cqXCsiA=="
         }
       },
       "is_incremental": false,
@@ -390,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.SmallEmoticon.html",
-          "hash": "E5Fzl5oZPHhfCPjNpM8GWQ=="
+          "hash": "QD65NA76IkY2KOug0c2Yog=="
         }
       },
       "is_incremental": false,
@@ -414,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Status.html",
-          "hash": "koRR0OpP33HyjLdXzb8x2w=="
+          "hash": "47l/d4LL5eSLNNSVdgNVfw=="
         }
       },
       "is_incremental": false,
@@ -426,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.StatusColor.html",
-          "hash": "rnXk9IEqn3lPgLHn6Co7OQ=="
+          "hash": "EW24xsmxxwaBS3Fm9RFkYw=="
         }
       },
       "is_incremental": false,
@@ -450,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.AnonymousMember.html",
-          "hash": "q6qfI9kEC0ssIDPksiIYww=="
+          "hash": "lubi9HOgJ/E5j+lyumUoFg=="
         }
       },
       "is_incremental": false,
@@ -462,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Chat.html",
-          "hash": "WjrNh4JgxTBNvMD9HY1vAQ=="
+          "hash": "W3rcc72XN18pwpIfwmkETg=="
         }
       },
       "is_incremental": false,
@@ -474,7 +474,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Contact.html",
-          "hash": "fWcxvIGvmPU0CxT7mWaPVQ=="
+          "hash": "sImYPYJJQaOKJh9ghOQ6HQ=="
         }
       },
       "is_incremental": false,
@@ -486,7 +486,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.ContactRequest.html",
-          "hash": "cB8aFkooy7iynxT3EwytZA=="
+          "hash": "A0xaGp9AzEHKafzpeHyEJw=="
         }
       },
       "is_incremental": false,
@@ -498,7 +498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.CurrentPluginContextExtensions.html",
-          "hash": "QsCBDUU1alHGS9sNRciGlw=="
+          "hash": "lRdcl6OT6fTn4NGRy6ICvw=="
         }
       },
       "is_incremental": false,
@@ -510,7 +510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.CurrentUser.html",
-          "hash": "uIgo8zoT132APALc1bI3Ig=="
+          "hash": "Ushc7NElb9RffvpWflsqxg=="
         }
       },
       "is_incremental": false,
@@ -522,7 +522,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.CustomTitle.html",
-          "hash": "TCGGp5N/YIP/mm7wDiva+Q=="
+          "hash": "01hNJHmsRkK5t5Fp6VVWbw=="
         }
       },
       "is_incremental": false,
@@ -534,7 +534,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.EntranceRequest.html",
-          "hash": "adKjrfnAprhaGWQDZ0UMfA=="
+          "hash": "V5ocPdqUfTNFU7ajHgYhEw=="
         }
       },
       "is_incremental": false,
@@ -546,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.html",
-          "hash": "QAXuRmZp3LKF1Do4JYCqUA=="
+          "hash": "cDdZ/aWP+tKO3/dW1kJMYA=="
         }
       },
       "is_incremental": false,
@@ -558,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.ContactAddedEventArgs.html",
-          "hash": "CYJ+EGFM8pDd5d5RnG7dxA=="
+          "hash": "AsN9W981oGl8Vwjh7FYjmg=="
         }
       },
       "is_incremental": false,
@@ -570,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.ContactRequestedEventArgs.html",
-          "hash": "QwVyKv1xf03yVgYWYw0dWQ=="
+          "hash": "629y2LD0+m0SgJf6lPvqbA=="
         }
       },
       "is_incremental": false,
@@ -582,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.EntranceInvitedEventArgs.html",
-          "hash": "4jkAWYx31Nx/5fxd0oTN6A=="
+          "hash": "ArUvAN59cubuFrkLPHd7iQ=="
         }
       },
       "is_incremental": false,
@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.EntranceRequestedEventArgs.html",
-          "hash": "ot0uyQYVpRXj5ot2bHThag=="
+          "hash": "39Ukw0R/lhGDMa+RximOzQ=="
         }
       },
       "is_incremental": false,
@@ -606,7 +606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.FileUploadedEventArgs.html",
-          "hash": "X1MB0Ofnhba7wcs9ingezA=="
+          "hash": "VNB9uhQtpsNshXA7EeOCcg=="
         }
       },
       "is_incremental": false,
@@ -618,7 +618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.GroupEventArgs.html",
-          "hash": "dGLzRutBR8UyHwLTgDKkuA=="
+          "hash": "bq2hyi0UslG7DUwHJTNiEw=="
         }
       },
       "is_incremental": false,
@@ -630,7 +630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.GroupMemberEventArgs.html",
-          "hash": "K6XMzL87jt7obBOOWagoiA=="
+          "hash": "DwD4sKLW9uejHDenhseKvw=="
         }
       },
       "is_incremental": false,
@@ -642,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.GroupMuteEventArgs.html",
-          "hash": "zDKYzqlVSMOY71CF2NJU0w=="
+          "hash": "FOsoyO9H3j/FjBedV3F3Hg=="
         }
       },
       "is_incremental": false,
@@ -654,7 +654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IBotEventSource.html",
-          "hash": "uE3OLGDbIztDm3xxgk5O1A=="
+          "hash": "/behtCe0SnrExapB0pYcyg=="
         }
       },
       "is_incremental": false,
@@ -666,7 +666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IContactEventSource.html",
-          "hash": "hZxuVIeLr6NyknkQEkPrUQ=="
+          "hash": "c2a/jYxtluBY6h514Xd07w=="
         }
       },
       "is_incremental": false,
@@ -690,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IEntranceInvitationEventSource.html",
-          "hash": "w+H7/xD2KfLEBYZQM5yYVg=="
+          "hash": "lvSP9+1jjIzZkTEvNkeF/Q=="
         }
       },
       "is_incremental": false,
@@ -702,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IEntranceRequestEventSource.html",
-          "hash": "01RckT6NQ71iMZ0AhHsswA=="
+          "hash": "yrGmz6YceK3sU3zfc/gj8A=="
         }
       },
       "is_incremental": false,
@@ -714,7 +714,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IFileEventSource.html",
-          "hash": "jWcghZ7iiljIRN4u1mllcg=="
+          "hash": "mGqff3cmBrTIsK3iYMdpCQ=="
         }
       },
       "is_incremental": false,
@@ -726,7 +726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IGroupAdministratorEventSource.html",
-          "hash": "tw2V8YPPPC3+4Sw4SpbPRg=="
+          "hash": "qd5MG8AUc5Q/Xr1ThFHtcw=="
         }
       },
       "is_incremental": false,
@@ -750,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IGroupMemberEventSource.html",
-          "hash": "4ZO5ZBpQ26mUt9o79/t+JQ=="
+          "hash": "7T8NrBLNJgaD1YW8KFQXDQ=="
         }
       },
       "is_incremental": false,
@@ -762,7 +762,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IGroupMuteEventSource.html",
-          "hash": "yoTwTgHahNokKt8EBsV3ig=="
+          "hash": "LjqQKOpcwBgRbnAsdkB0PA=="
         }
       },
       "is_incremental": false,
@@ -774,7 +774,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IMemberMuteEventSource.html",
-          "hash": "Q8elwYiEL3WtijNhDN071w=="
+          "hash": "H+z4dHBNRSe6k2DXGeFaaA=="
         }
       },
       "is_incremental": false,
@@ -786,7 +786,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.IMessageEventSource.html",
-          "hash": "iLZr5mg0JhbbyWzsHhjw3w=="
+          "hash": "TjKL1Dp5pLICvTaDqT1z1g=="
         }
       },
       "is_incremental": false,
@@ -810,7 +810,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.MemberMutedEventArgs.html",
-          "hash": "2Wc/EcvT7iS8v+d6gaYn2g=="
+          "hash": "CkiS71wOvVVdOYxgLTFyUg=="
         }
       },
       "is_incremental": false,
@@ -822,7 +822,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.MessageReceivedEventArgs.html",
-          "hash": "r9Ze6mhi5faOxZWRksdKKg=="
+          "hash": "TIJo11n+0nzxyvlr2Kz/vA=="
         }
       },
       "is_incremental": false,
@@ -834,7 +834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.RoutedEventArgs.html",
-          "hash": "XtPecn8hwaIGIM5xs6K6PQ=="
+          "hash": "I90/2S7Od7GjG4G8xdGD2w=="
         }
       },
       "is_incremental": false,
@@ -846,7 +846,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Events.TimedEventArgs.html",
-          "hash": "lRCPJQDSjxOfQZwZX7BOIQ=="
+          "hash": "26Q3BD4ttbc22Q29iiiYRA=="
         }
       },
       "is_incremental": false,
@@ -870,7 +870,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.File.html",
-          "hash": "id59rXnoFdQ+a+XqKYtfsQ=="
+          "hash": "1wSc5j4nV6RqoIbvJh3fTQ=="
         }
       },
       "is_incremental": false,
@@ -882,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Gender.html",
-          "hash": "Dzy7OeV1YjtUlHbUdoqNBQ=="
+          "hash": "zpzb+CzaleZNHeVlhZBB9w=="
         }
       },
       "is_incremental": false,
@@ -894,7 +894,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Group.html",
-          "hash": "XelQwXe4pIpqOFBsnkyBhg=="
+          "hash": "U2nZXlf8jqmYTlMmj4+tDA=="
         }
       },
       "is_incremental": false,
@@ -918,7 +918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.IBot.html",
-          "hash": "feRb0OTR0/skNdy4z5n/1g=="
+          "hash": "55dNZimBT0wQHF6yuThIvQ=="
         }
       },
       "is_incremental": false,
@@ -930,7 +930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.IGroup.html",
-          "hash": "pGGBU87PIaP6tIwkcAeEkQ=="
+          "hash": "PoAzA+dIU71uKneEtEEJQg=="
         }
       },
       "is_incremental": false,
@@ -942,7 +942,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.IMember.html",
-          "hash": "Ry9rLTNZaPPX/YmqPak+/A=="
+          "hash": "OmngMn1s4aMI0sYVGLjKaQ=="
         }
       },
       "is_incremental": false,
@@ -954,7 +954,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.IMuteable.html",
-          "hash": "0GM0r8xtsr9gkYI9MRjQ/A=="
+          "hash": "h6sgPR277PO/acv9AgIYBA=="
         }
       },
       "is_incremental": false,
@@ -966,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.IRefreshable.html",
-          "hash": "FEhLr1Ly9DD5xVO7TpztnA=="
+          "hash": "t9AbfXqLugQTJSncTIjxcw=="
         }
       },
       "is_incremental": false,
@@ -978,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.IRequestable.html",
-          "hash": "8PREyok26bJ5uDmHcAOz2A=="
+          "hash": "ze6Rm4UIAtv+ZScR0Zq9gw=="
         }
       },
       "is_incremental": false,
@@ -990,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.ISendable.html",
-          "hash": "rdK0YjVHUZpxmpGxnxWwFA=="
+          "hash": "oNseJTqnL0O4kMHj87+b8A=="
         }
       },
       "is_incremental": false,
@@ -1002,7 +1002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.ITimedMuteable.html",
-          "hash": "TQyBeBB+3BjVC/vTNXF7Jw=="
+          "hash": "1qPl7KbYrtNFIT6ncF9/qw=="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.LogLevel.html",
-          "hash": "rwczO3FHz3OXrnWXjzJCog=="
+          "hash": "+me4S6bm6eR0aXwNMMC7yQ=="
         }
       },
       "is_incremental": false,
@@ -1026,7 +1026,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Logger.html",
-          "hash": "ESekDjpn/02Sp38w/YYh3w=="
+          "hash": "iJ9GPGPwT07YT8dxCYSvmQ=="
         }
       },
       "is_incremental": false,
@@ -1038,7 +1038,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Member.html",
-          "hash": "Xu5CHIIHdiXEsq4T5mVtHA=="
+          "hash": "OLHOzqRIGA0Rkt0MxE01hg=="
         }
       },
       "is_incremental": false,
@@ -1050,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.MemberRole.html",
-          "hash": "87G6krSxmNkOUz74kG//bw=="
+          "hash": "EerNwkcf7FoBPMP//0cf0Q=="
         }
       },
       "is_incremental": false,
@@ -1062,7 +1062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Message.html",
-          "hash": "VZsei9/iTXon3EAti6hVtg=="
+          "hash": "jQnrVIYYU3MiQq5FLIYHyQ=="
         }
       },
       "is_incremental": false,
@@ -1074,7 +1074,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Plugin.html",
-          "hash": "Xw15ICCniYSKOmgiZMUdmQ=="
+          "hash": "2SX2HWigWF8kviztQJGz0w=="
         }
       },
       "is_incremental": false,
@@ -1086,7 +1086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.PluginContext.html",
-          "hash": "rDdBvN0efxhwjLJhZSGfNw=="
+          "hash": "zK0/BsZqfwlfYj2CxBJbDg=="
         }
       },
       "is_incremental": false,
@@ -1098,7 +1098,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Request.html",
-          "hash": "3vfz2rWuIMXFzX3yslR9Kg=="
+          "hash": "CA+J39OiV2kOS3d//ZaTmg=="
         }
       },
       "is_incremental": false,
@@ -1110,7 +1110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.User.html",
-          "hash": "L8cXs8+cqmK5pD/+decgiQ=="
+          "hash": "2skQgngcUAM7rO4a/41ekQ=="
         }
       },
       "is_incremental": false,
@@ -1297,13 +1297,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 10,
-          "skipped_file_count": 7
+          "skipped_file_count": 10
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 92,
-          "skipped_file_count": 92
+          "skipped_file_count": 4
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -27,7 +27,6 @@ items:
     content: 'public interface IGroupEventSource : IGroupMemberEventSource, IEntranceRequestEventSource, IMuteEventSource, IGroupMuteEventSource, IMemberMuteEventSource, IGroupAdministratorEventSource, IFileEventSource'
     content.vb: >-
       Public Interface IGroupEventSource
-
           Inherits IGroupMemberEventSource, IEntranceRequestEventSource, IMuteEventSource, IGroupAdministratorEventSource, IFileEventSource
   inheritedMembers:
   - HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined

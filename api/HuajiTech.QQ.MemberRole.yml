@@ -30,8 +30,8 @@ items:
   summary: "\n指定成员角色。\n"
   example: []
   syntax:
-    content: 'public enum MemberRole : int'
-    content.vb: Public Enum MemberRole As Integer
+    content: public enum MemberRole
+    content.vb: Public Enum MemberRole
   modifiers.csharp:
   - public
   - enum

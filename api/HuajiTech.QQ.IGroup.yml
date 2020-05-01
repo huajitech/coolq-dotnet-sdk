@@ -135,7 +135,7 @@ items:
   syntax:
     content: IReadOnlyCollection<Member> GetMembers()
     return:
-      type: IReadOnlyCollection{HuajiTech.QQ.Member}
+      type: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}
     content.vb: Function GetMembers As IReadOnlyCollection(Of Member)
   overload: HuajiTech.QQ.IGroup.GetMembers*
 - uid: HuajiTech.QQ.IGroup.GetMembersAsync
@@ -165,7 +165,7 @@ items:
   syntax:
     content: Task<IReadOnlyCollection<Member>> GetMembersAsync()
     return:
-      type: Task{IReadOnlyCollection{HuajiTech.QQ.Member}}
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}}
     content.vb: Function GetMembersAsync As Task(Of IReadOnlyCollection(Of Member))
   overload: HuajiTech.QQ.IGroup.GetMembersAsync*
 references:
@@ -186,10 +186,18 @@ references:
   nameWithType: IGroup.MemberCapacity
   fullName: HuajiTech.QQ.IGroup.MemberCapacity
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: HuajiTech.QQ.IGroup.MemberCount*
   commentId: Overload:HuajiTech.QQ.IGroup.MemberCount
   name: MemberCount
@@ -200,20 +208,21 @@ references:
   name: GetMembers
   nameWithType: IGroup.GetMembers
   fullName: HuajiTech.QQ.IGroup.GetMembers
-- uid: IReadOnlyCollection{HuajiTech.QQ.Member}
-  commentId: '!:IReadOnlyCollection{HuajiTech.QQ.Member}'
-  definition: IReadOnlyCollection`1
+- uid: System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
   name: IReadOnlyCollection<Member>
   nameWithType: IReadOnlyCollection<Member>
-  fullName: IReadOnlyCollection<HuajiTech.QQ.Member>
+  fullName: System.Collections.Generic.IReadOnlyCollection<HuajiTech.QQ.Member>
   nameWithType.vb: IReadOnlyCollection(Of Member)
-  fullName.vb: IReadOnlyCollection(Of HuajiTech.QQ.Member)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of HuajiTech.QQ.Member)
   name.vb: IReadOnlyCollection(Of Member)
   spec.csharp:
-  - uid: IReadOnlyCollection`1
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -226,10 +235,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IReadOnlyCollection`1
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -241,71 +250,79 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IReadOnlyCollection`1
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
   isExternal: true
-  name: IReadOnlyCollection<>
-  nameWithType: IReadOnlyCollection<>
-  fullName: IReadOnlyCollection<>
-  nameWithType.vb: IReadOnlyCollection(Of )
-  fullName.vb: IReadOnlyCollection(Of )
-  name.vb: IReadOnlyCollection(Of )
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
   spec.csharp:
-  - uid: IReadOnlyCollection`1
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IReadOnlyCollection`1
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: HuajiTech.QQ.IGroup.GetMembersAsync*
   commentId: Overload:HuajiTech.QQ.IGroup.GetMembersAsync
   name: GetMembersAsync
   nameWithType: IGroup.GetMembersAsync
   fullName: HuajiTech.QQ.IGroup.GetMembersAsync
-- uid: Task{IReadOnlyCollection{HuajiTech.QQ.Member}}
-  commentId: '!:Task{IReadOnlyCollection{HuajiTech.QQ.Member}}'
-  definition: Task`1
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyCollection{HuajiTech.QQ.Member}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
   name: Task<IReadOnlyCollection<Member>>
   nameWithType: Task<IReadOnlyCollection<Member>>
-  fullName: Task<IReadOnlyCollection<HuajiTech.QQ.Member>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyCollection<HuajiTech.QQ.Member>>
   nameWithType.vb: Task(Of IReadOnlyCollection(Of Member))
-  fullName.vb: Task(Of IReadOnlyCollection(Of HuajiTech.QQ.Member))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyCollection(Of HuajiTech.QQ.Member))
   name.vb: Task(Of IReadOnlyCollection(Of Member))
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: IReadOnlyCollection`1
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -321,18 +338,18 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: IReadOnlyCollection`1
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
     name: IReadOnlyCollection
     nameWithType: IReadOnlyCollection
-    fullName: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -347,41 +364,48 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task`1
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullName.vb: Task(Of )
-  name.vb: Task(Of )
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

@@ -102,7 +102,7 @@ items:
       type: System.String
       description: 要发送的字符串。
     return:
-      type: Task{HuajiTech.QQ.Message}
+      type: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
       description: 一个 <xref href="HuajiTech.QQ.Message" data-throw-if-not-resolved="false"></xref> 对象，表示已发送的消息。
     content.vb: Function SendAsync(message As String) As Task(Of Message)
   overload: HuajiTech.QQ.ISendable.SendAsync*
@@ -130,29 +130,38 @@ references:
   nameWithType: ISendable.Send
   fullName: HuajiTech.QQ.ISendable.Send
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: HuajiTech.QQ.ISendable.SendAsync*
   commentId: Overload:HuajiTech.QQ.ISendable.SendAsync
   name: SendAsync
   nameWithType: ISendable.SendAsync
   fullName: HuajiTech.QQ.ISendable.SendAsync
-- uid: Task{HuajiTech.QQ.Message}
-  commentId: '!:Task{HuajiTech.QQ.Message}'
-  definition: Task`1
+- uid: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  commentId: T:System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
   name: Task<Message>
   nameWithType: Task<Message>
-  fullName: Task<HuajiTech.QQ.Message>
+  fullName: System.Threading.Tasks.Task<HuajiTech.QQ.Message>
   nameWithType.vb: Task(Of Message)
-  fullName.vb: Task(Of HuajiTech.QQ.Message)
+  fullName.vb: System.Threading.Tasks.Task(Of HuajiTech.QQ.Message)
   name.vb: Task(Of Message)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
@@ -165,10 +174,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -180,41 +189,48 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task`1
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullName.vb: Task(Of )
-  name.vb: Task(Of )
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

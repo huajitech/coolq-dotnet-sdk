@@ -27,7 +27,6 @@ items:
     content: 'public interface ICurrentUserEventSource : IMessageEventSource, IEntranceInvitationEventSource, IContactEventSource'
     content.vb: >-
       Public Interface ICurrentUserEventSource
-
           Inherits IMessageEventSource, IEntranceInvitationEventSource, IContactEventSource
   inheritedMembers:
   - HuajiTech.QQ.Events.IMessageEventSource.MessageReceived

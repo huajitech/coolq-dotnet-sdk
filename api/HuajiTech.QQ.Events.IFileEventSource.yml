@@ -62,7 +62,7 @@ items:
   syntax:
     content: event EventHandler<FileUploadedEventArgs> FileUploaded
     return:
-      type: EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
+      type: System.EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
     content.vb: Event FileUploaded As EventHandler(Of FileUploadedEventArgs)
 references:
 - uid: HuajiTech.QQ.Events
@@ -70,20 +70,21 @@ references:
   name: HuajiTech.QQ.Events
   nameWithType: HuajiTech.QQ.Events
   fullName: HuajiTech.QQ.Events
-- uid: EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
-  commentId: '!:EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}'
-  definition: EventHandler`1
+- uid: System.EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.FileUploadedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
   name: EventHandler<FileUploadedEventArgs>
   nameWithType: EventHandler<FileUploadedEventArgs>
-  fullName: EventHandler<HuajiTech.QQ.Events.FileUploadedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.FileUploadedEventArgs>
   nameWithType.vb: EventHandler(Of FileUploadedEventArgs)
-  fullName.vb: EventHandler(Of HuajiTech.QQ.Events.FileUploadedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.FileUploadedEventArgs)
   name.vb: EventHandler(Of FileUploadedEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
@@ -96,10 +97,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -111,41 +112,48 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EventHandler`1
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
   isExternal: true
-  name: EventHandler<>
-  nameWithType: EventHandler<>
-  fullName: EventHandler<>
-  nameWithType.vb: EventHandler(Of )
-  fullName.vb: EventHandler(Of )
-  name.vb: EventHandler(Of )
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
     nameWithType: )
     fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -63,7 +63,7 @@ items:
   syntax:
     content: event EventHandler<MemberMutedEventArgs> MemberMuted
     return:
-      type: EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
+      type: System.EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
     content.vb: Event MemberMuted As EventHandler(Of MemberMutedEventArgs)
 - uid: HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
   commentId: E:HuajiTech.QQ.Events.IMemberMuteEventSource.MemberUnmuted
@@ -92,7 +92,7 @@ items:
   syntax:
     content: event EventHandler<GroupEventArgs> MemberUnmuted
     return:
-      type: EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
+      type: System.EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
     content.vb: Event MemberUnmuted As EventHandler(Of GroupEventArgs)
 references:
 - uid: HuajiTech.QQ.Events
@@ -100,20 +100,21 @@ references:
   name: HuajiTech.QQ.Events
   nameWithType: HuajiTech.QQ.Events
   fullName: HuajiTech.QQ.Events
-- uid: EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
-  commentId: '!:EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}'
-  definition: EventHandler`1
+- uid: System.EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.MemberMutedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
   name: EventHandler<MemberMutedEventArgs>
   nameWithType: EventHandler<MemberMutedEventArgs>
-  fullName: EventHandler<HuajiTech.QQ.Events.MemberMutedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.MemberMutedEventArgs>
   nameWithType.vb: EventHandler(Of MemberMutedEventArgs)
-  fullName.vb: EventHandler(Of HuajiTech.QQ.Events.MemberMutedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.MemberMutedEventArgs)
   name.vb: EventHandler(Of MemberMutedEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
@@ -126,10 +127,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -141,58 +142,66 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EventHandler`1
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
   isExternal: true
-  name: EventHandler<>
-  nameWithType: EventHandler<>
-  fullName: EventHandler<>
-  nameWithType.vb: EventHandler(Of )
-  fullName.vb: EventHandler(Of )
-  name.vb: EventHandler(Of )
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
     nameWithType: )
     fullName: )
-- uid: EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
-  commentId: '!:EventHandler{HuajiTech.QQ.Events.GroupEventArgs}'
-  definition: EventHandler`1
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.GroupEventArgs}
+  parent: System
+  definition: System.EventHandler`1
   name: EventHandler<GroupEventArgs>
   nameWithType: EventHandler<GroupEventArgs>
-  fullName: EventHandler<HuajiTech.QQ.Events.GroupEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.GroupEventArgs>
   nameWithType.vb: EventHandler(Of GroupEventArgs)
-  fullName.vb: EventHandler(Of HuajiTech.QQ.Events.GroupEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.GroupEventArgs)
   name.vb: EventHandler(Of GroupEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
@@ -205,10 +214,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

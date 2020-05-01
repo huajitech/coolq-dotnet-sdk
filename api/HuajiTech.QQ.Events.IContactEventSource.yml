@@ -63,7 +63,7 @@ items:
   syntax:
     content: event EventHandler<ContactAddedEventArgs> ContactAdded
     return:
-      type: EventHandler{HuajiTech.QQ.Events.ContactAddedEventArgs}
+      type: System.EventHandler{HuajiTech.QQ.Events.ContactAddedEventArgs}
     content.vb: Event ContactAdded As EventHandler(Of ContactAddedEventArgs)
 - uid: HuajiTech.QQ.Events.IContactEventSource.ContactRequested
   commentId: E:HuajiTech.QQ.Events.IContactEventSource.ContactRequested
@@ -92,7 +92,7 @@ items:
   syntax:
     content: event EventHandler<ContactRequestedEventArgs> ContactRequested
     return:
-      type: EventHandler{HuajiTech.QQ.Events.ContactRequestedEventArgs}
+      type: System.EventHandler{HuajiTech.QQ.Events.ContactRequestedEventArgs}
     content.vb: Event ContactRequested As EventHandler(Of ContactRequestedEventArgs)
 references:
 - uid: HuajiTech.QQ.Events
@@ -100,20 +100,21 @@ references:
   name: HuajiTech.QQ.Events
   nameWithType: HuajiTech.QQ.Events
   fullName: HuajiTech.QQ.Events
-- uid: EventHandler{HuajiTech.QQ.Events.ContactAddedEventArgs}
-  commentId: '!:EventHandler{HuajiTech.QQ.Events.ContactAddedEventArgs}'
-  definition: EventHandler`1
+- uid: System.EventHandler{HuajiTech.QQ.Events.ContactAddedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.ContactAddedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
   name: EventHandler<ContactAddedEventArgs>
   nameWithType: EventHandler<ContactAddedEventArgs>
-  fullName: EventHandler<HuajiTech.QQ.Events.ContactAddedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.ContactAddedEventArgs>
   nameWithType.vb: EventHandler(Of ContactAddedEventArgs)
-  fullName.vb: EventHandler(Of HuajiTech.QQ.Events.ContactAddedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.ContactAddedEventArgs)
   name.vb: EventHandler(Of ContactAddedEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
@@ -126,10 +127,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -141,58 +142,66 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EventHandler`1
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
   isExternal: true
-  name: EventHandler<>
-  nameWithType: EventHandler<>
-  fullName: EventHandler<>
-  nameWithType.vb: EventHandler(Of )
-  fullName.vb: EventHandler(Of )
-  name.vb: EventHandler(Of )
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
   - name: )
     nameWithType: )
     fullName: )
-- uid: EventHandler{HuajiTech.QQ.Events.ContactRequestedEventArgs}
-  commentId: '!:EventHandler{HuajiTech.QQ.Events.ContactRequestedEventArgs}'
-  definition: EventHandler`1
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{HuajiTech.QQ.Events.ContactRequestedEventArgs}
+  commentId: T:System.EventHandler{HuajiTech.QQ.Events.ContactRequestedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
   name: EventHandler<ContactRequestedEventArgs>
   nameWithType: EventHandler<ContactRequestedEventArgs>
-  fullName: EventHandler<HuajiTech.QQ.Events.ContactRequestedEventArgs>
+  fullName: System.EventHandler<HuajiTech.QQ.Events.ContactRequestedEventArgs>
   nameWithType.vb: EventHandler(Of ContactRequestedEventArgs)
-  fullName.vb: EventHandler(Of HuajiTech.QQ.Events.ContactRequestedEventArgs)
+  fullName.vb: System.EventHandler(Of HuajiTech.QQ.Events.ContactRequestedEventArgs)
   name.vb: EventHandler(Of ContactRequestedEventArgs)
   spec.csharp:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: <
     nameWithType: <
@@ -205,10 +214,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EventHandler`1
+  - uid: System.EventHandler`1
     name: EventHandler
     nameWithType: EventHandler
-    fullName: EventHandler
+    fullName: System.EventHandler
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

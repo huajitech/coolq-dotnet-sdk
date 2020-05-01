@@ -29,7 +29,6 @@ items:
     content: 'public interface IMuteEventSource : IGroupMuteEventSource, IMemberMuteEventSource'
     content.vb: >-
       Public Interface IMuteEventSource
-
           Inherits IGroupMuteEventSource, IMemberMuteEventSource
   inheritedMembers:
   - HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted

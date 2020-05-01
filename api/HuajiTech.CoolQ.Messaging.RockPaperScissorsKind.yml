@@ -30,8 +30,8 @@ items:
   summary: "\n指定猜拳的类别。\n"
   example: []
   syntax:
-    content: 'public enum RockPaperScissorsKind : int'
-    content.vb: Public Enum RockPaperScissorsKind As Integer
+    content: public enum RockPaperScissorsKind
+    content.vb: Public Enum RockPaperScissorsKind
   modifiers.csharp:
   - public
   - enum

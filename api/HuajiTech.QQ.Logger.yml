@@ -8,7 +8,7 @@ items:
   - HuajiTech.QQ.Logger.Log(HuajiTech.QQ.LogLevel,System.String,System.String)
   - HuajiTech.QQ.Logger.LogDebug(System.String)
   - HuajiTech.QQ.Logger.LogDebug(System.String,System.String)
-  - HuajiTech.QQ.Logger.LogError(Exception)
+  - HuajiTech.QQ.Logger.LogError(System.Exception)
   - HuajiTech.QQ.Logger.LogError(System.String)
   - HuajiTech.QQ.Logger.LogError(System.String,System.String)
   - HuajiTech.QQ.Logger.LogFatal(System.String)
@@ -20,7 +20,7 @@ items:
   - HuajiTech.QQ.Logger.LogSending(System.String,System.String)
   - HuajiTech.QQ.Logger.LogSuccess(System.String)
   - HuajiTech.QQ.Logger.LogSuccess(System.String,System.String)
-  - HuajiTech.QQ.Logger.LogWarning(Exception)
+  - HuajiTech.QQ.Logger.LogWarning(System.Exception)
   - HuajiTech.QQ.Logger.LogWarning(System.String)
   - HuajiTech.QQ.Logger.LogWarning(System.String,System.String)
   langs:
@@ -44,13 +44,18 @@ items:
   summary: "\n提供记录日志的方法。\n此类为抽象类。\n"
   example: []
   syntax:
-    content: 'public abstract class Logger : object'
-    content.vb: >-
-      Public MustInherit Class Logger
-
-          Inherits Object
+    content: public abstract class Logger
+    content.vb: Public MustInherit Class Logger
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - abstract
@@ -577,16 +582,16 @@ items:
   modifiers.vb:
   - Public
   - Overridable
-- uid: HuajiTech.QQ.Logger.LogWarning(Exception)
-  commentId: M:HuajiTech.QQ.Logger.LogWarning(Exception)
-  id: LogWarning(Exception)
+- uid: HuajiTech.QQ.Logger.LogWarning(System.Exception)
+  commentId: M:HuajiTech.QQ.Logger.LogWarning(System.Exception)
+  id: LogWarning(System.Exception)
   parent: HuajiTech.QQ.Logger
   langs:
   - csharp
   - vb
   name: LogWarning(Exception)
   nameWithType: Logger.LogWarning(Exception)
-  fullName: HuajiTech.QQ.Logger.LogWarning(Exception)
+  fullName: HuajiTech.QQ.Logger.LogWarning(System.Exception)
   type: Method
   source:
     remote:
@@ -605,7 +610,7 @@ items:
     content: public virtual void LogWarning(Exception exception)
     parameters:
     - id: exception
-      type: Exception
+      type: System.Exception
       description: 要记录的异常。
     content.vb: Public Overridable Sub LogWarning(exception As Exception)
   overload: HuajiTech.QQ.Logger.LogWarning*
@@ -694,16 +699,16 @@ items:
   modifiers.vb:
   - Public
   - Overridable
-- uid: HuajiTech.QQ.Logger.LogError(Exception)
-  commentId: M:HuajiTech.QQ.Logger.LogError(Exception)
-  id: LogError(Exception)
+- uid: HuajiTech.QQ.Logger.LogError(System.Exception)
+  commentId: M:HuajiTech.QQ.Logger.LogError(System.Exception)
+  id: LogError(System.Exception)
   parent: HuajiTech.QQ.Logger
   langs:
   - csharp
   - vb
   name: LogError(Exception)
   nameWithType: Logger.LogError(Exception)
-  fullName: HuajiTech.QQ.Logger.LogError(Exception)
+  fullName: HuajiTech.QQ.Logger.LogError(System.Exception)
   type: Method
   source:
     remote:
@@ -722,7 +727,7 @@ items:
     content: public virtual void LogError(Exception exception)
     parameters:
     - id: exception
-      type: Exception
+      type: System.Exception
       description: 要记录的异常。
     content.vb: Public Overridable Sub LogError(exception As Exception)
   overload: HuajiTech.QQ.Logger.LogError*
@@ -777,10 +782,297 @@ references:
   nameWithType: HuajiTech.QQ
   fullName: HuajiTech.QQ
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: HuajiTech.QQ.Logger.Log*
   commentId: Overload:HuajiTech.QQ.Logger.Log
   name: Log
@@ -793,6 +1085,8 @@ references:
   nameWithType: LogLevel
   fullName: HuajiTech.QQ.LogLevel
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -827,11 +1121,13 @@ references:
   name: LogWarning
   nameWithType: Logger.LogWarning
   fullName: HuajiTech.QQ.Logger.LogWarning
-- uid: Exception
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
   isExternal: true
   name: Exception
   nameWithType: Exception
-  fullName: Exception
+  fullName: System.Exception
 - uid: HuajiTech.QQ.Logger.LogError*
   commentId: Overload:HuajiTech.QQ.Logger.LogError
   name: LogError

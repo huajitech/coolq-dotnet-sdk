@@ -1,5 +1,6 @@
 using Autofac;
 using HuajiTech.CoolQ.Events;
+using HuajiTech.QQ;
 using HuajiTech.UnmanagedExports;
 using System;
 using System.Collections.Generic;

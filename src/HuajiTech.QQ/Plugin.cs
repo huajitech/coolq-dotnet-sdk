@@ -9,10 +9,7 @@
         /// 以指定的 <see cref="PluginContext"/> 初始化一个 <see cref="Plugin"/> 类的新实例。
         /// </summary>
         /// <param name="context">当前 <see cref="Plugin"/> 对象所使用的 <see cref="PluginContext"/>。</param>
-        protected Plugin(PluginContext context)
-        {
-            Context = context;
-        }
+        protected Plugin(PluginContext context) => Context = context;
 
         /// <summary>
         /// 以 <see cref="PluginContext.Current"/> 初始化一个 <see cref="Plugin"/> 类的新实例。

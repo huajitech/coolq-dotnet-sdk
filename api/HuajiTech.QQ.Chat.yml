@@ -37,12 +37,9 @@ items:
   summary: "\n表示聊天。\n此类为抽象类。\n"
   example: []
   syntax:
-    content: 'public abstract class Chat : object, ISendable, IEquatable<Chat>'
+    content: 'public abstract class Chat : ISendable, IEquatable<Chat>'
     content.vb: >-
       Public MustInherit Class Chat
-
-          Inherits Object
-
           Implements ISendable, IEquatable(Of Chat)
   inheritance:
   - System.Object
@@ -51,7 +48,12 @@ items:
   - HuajiTech.QQ.User
   implements:
   - HuajiTech.QQ.ISendable
-  - IEquatable{HuajiTech.QQ.Chat}
+  - System.IEquatable{HuajiTech.QQ.Chat}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
   extensionMethods:
   - HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.CoolQ.Messaging.ComplexMessage)
   - HuajiTech.QQ.Chat.HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.CoolQ.Messaging.ComplexMessage)
@@ -119,7 +121,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: DisplayName
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 23
+    startLine: 20
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -158,7 +160,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Number
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 28
+    startLine: 25
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -195,7 +197,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: op_Inequality
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 30
+    startLine: 27
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -234,7 +236,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: op_Equality
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 35
+    startLine: 29
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -273,7 +275,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Equals
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 40
+    startLine: 31
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -285,6 +287,7 @@ items:
     return:
       type: System.Boolean
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
   overload: HuajiTech.QQ.Chat.Equals*
   modifiers.csharp:
   - public
@@ -310,7 +313,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Equals
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 45
+    startLine: 33
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -323,6 +326,8 @@ items:
       type: System.Boolean
     content.vb: Public Overridable Function Equals(other As Chat) As Boolean
   overload: HuajiTech.QQ.Chat.Equals*
+  implements:
+  - System.IEquatable{HuajiTech.QQ.Chat}.Equals(HuajiTech.QQ.Chat)
   modifiers.csharp:
   - public
   - virtual
@@ -347,7 +352,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: GetHashCode
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 50
+    startLine: 35
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -356,6 +361,7 @@ items:
     return:
       type: System.Int32
     content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
   overload: HuajiTech.QQ.Chat.GetHashCode*
   modifiers.csharp:
   - public
@@ -381,7 +387,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: Send
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 55
+    startLine: 37
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -420,7 +426,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: SendAsync
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 57
+    startLine: 39
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -430,7 +436,7 @@ items:
     - id: message
       type: System.String
     return:
-      type: Task{HuajiTech.QQ.Message}
+      type: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
     content.vb: Public Overridable Function SendAsync(message As String) As Task(Of Message)
   overload: HuajiTech.QQ.Chat.SendAsync*
   implements:
@@ -459,7 +465,7 @@ items:
       repo: https://github.com/huajitech/coolq-dotnet-sdk.git
     id: ToString
     path: src/HuajiTech.QQ/Chat.cs
-    startLine: 62
+    startLine: 41
   assemblies:
   - HuajiTech.QQ
   namespace: HuajiTech.QQ
@@ -468,6 +474,7 @@ items:
     return:
       type: System.String
     content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
   overload: HuajiTech.QQ.Chat.ToString*
   modifiers.csharp:
   - public
@@ -482,6 +489,8 @@ references:
   nameWithType: HuajiTech.QQ
   fullName: HuajiTech.QQ
 - uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
   name: Object
   nameWithType: Object
@@ -492,20 +501,21 @@ references:
   name: ISendable
   nameWithType: ISendable
   fullName: HuajiTech.QQ.ISendable
-- uid: IEquatable{HuajiTech.QQ.Chat}
-  commentId: '!:IEquatable{HuajiTech.QQ.Chat}'
-  definition: IEquatable`1
+- uid: System.IEquatable{HuajiTech.QQ.Chat}
+  commentId: T:System.IEquatable{HuajiTech.QQ.Chat}
+  parent: System
+  definition: System.IEquatable`1
   name: IEquatable<Chat>
   nameWithType: IEquatable<Chat>
-  fullName: IEquatable<HuajiTech.QQ.Chat>
+  fullName: System.IEquatable<HuajiTech.QQ.Chat>
   nameWithType.vb: IEquatable(Of Chat)
-  fullName.vb: IEquatable(Of HuajiTech.QQ.Chat)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat)
   name.vb: IEquatable(Of Chat)
   spec.csharp:
-  - uid: IEquatable`1
+  - uid: System.IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: IEquatable
+    fullName: System.IEquatable
     isExternal: true
   - name: <
     nameWithType: <
@@ -518,10 +528,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEquatable`1
+  - uid: System.IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: IEquatable
+    fullName: System.IEquatable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -530,6 +540,182 @@ references:
     name: Chat
     nameWithType: Chat
     fullName: HuajiTech.QQ.Chat
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -681,41 +867,48 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEquatable`1
+- uid: System
+  commentId: N:System
   isExternal: true
-  name: IEquatable<>
-  nameWithType: IEquatable<>
-  fullName: IEquatable<>
-  nameWithType.vb: IEquatable(Of )
-  fullName.vb: IEquatable(Of )
-  name.vb: IEquatable(Of )
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
   spec.csharp:
-  - uid: IEquatable`1
+  - uid: System.IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: IEquatable
+    fullName: System.IEquatable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEquatable`1
+  - uid: System.IEquatable`1
     name: IEquatable
     nameWithType: IEquatable
-    fullName: IEquatable
+    fullName: System.IEquatable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
@@ -938,6 +1131,8 @@ references:
   nameWithType: Chat.Chat
   fullName: HuajiTech.QQ.Chat.Chat
 - uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
   isExternal: true
   name: Int64
   nameWithType: Int64
@@ -948,6 +1143,8 @@ references:
   nameWithType: Chat.DisplayName
   fullName: HuajiTech.QQ.Chat.DisplayName
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -963,6 +1160,8 @@ references:
   nameWithType: Chat.Inequality
   fullName: HuajiTech.QQ.Chat.Inequality
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
@@ -972,17 +1171,170 @@ references:
   name: Equality
   nameWithType: Chat.Equality
   fullName: HuajiTech.QQ.Chat.Equality
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: HuajiTech.QQ.Chat.Equals*
   commentId: Overload:HuajiTech.QQ.Chat.Equals
   name: Equals
   nameWithType: Chat.Equals
   fullName: HuajiTech.QQ.Chat.Equals
+- uid: System.IEquatable{HuajiTech.QQ.Chat}.Equals(HuajiTech.QQ.Chat)
+  commentId: M:System.IEquatable{HuajiTech.QQ.Chat}.Equals(HuajiTech.QQ.Chat)
+  parent: System.IEquatable{HuajiTech.QQ.Chat}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Chat)
+  nameWithType: IEquatable<Chat>.Equals(Chat)
+  fullName: System.IEquatable<HuajiTech.QQ.Chat>.Equals(HuajiTech.QQ.Chat)
+  nameWithType.vb: IEquatable(Of Chat).Equals(Chat)
+  fullName.vb: System.IEquatable(Of HuajiTech.QQ.Chat).Equals(HuajiTech.QQ.Chat)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Chat>.Equals
+    fullName: System.IEquatable<HuajiTech.QQ.Chat>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Chat).Equals
+    fullName: System.IEquatable(Of HuajiTech.QQ.Chat).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HuajiTech.QQ.Chat
+    name: Chat
+    nameWithType: Chat
+    fullName: HuajiTech.QQ.Chat
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: HuajiTech.QQ.Chat.GetHashCode*
   commentId: Overload:HuajiTech.QQ.Chat.GetHashCode
   name: GetHashCode
   nameWithType: Chat.GetHashCode
   fullName: HuajiTech.QQ.Chat.GetHashCode
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
@@ -1081,20 +1433,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task{HuajiTech.QQ.Message}
-  commentId: '!:Task{HuajiTech.QQ.Message}'
-  definition: Task`1
+- uid: System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  commentId: T:System.Threading.Tasks.Task{HuajiTech.QQ.Message}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
   name: Task<Message>
   nameWithType: Task<Message>
-  fullName: Task<HuajiTech.QQ.Message>
+  fullName: System.Threading.Tasks.Task<HuajiTech.QQ.Message>
   nameWithType.vb: Task(Of Message)
-  fullName.vb: Task(Of HuajiTech.QQ.Message)
+  fullName.vb: System.Threading.Tasks.Task(Of HuajiTech.QQ.Message)
   name.vb: Task(Of Message)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
@@ -1107,10 +1460,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1122,41 +1475,79 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task`1
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullName.vb: Task(Of )
-  name.vb: Task(Of )
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
   spec.csharp:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
+  - uid: System.Threading.Tasks.Task`1
     name: Task
     nameWithType: Task
-    fullName: Task
+    fullName: System.Threading.Tasks.Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
   - name: )
     nameWithType: )
     fullName: )

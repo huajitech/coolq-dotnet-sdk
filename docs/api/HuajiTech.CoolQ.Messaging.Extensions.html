@@ -91,11 +91,35 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Extensions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.Messaging.html">HuajiTech.CoolQ.Messaging</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
   <h5 id="HuajiTech_CoolQ_Messaging_Extensions_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Extensions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Extensions</code></pre>
   </div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
@@ -271,6 +295,21 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 不包含任何元素，或其等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
         <td><p>酷Q返回了指示操作失败的值。</p>
 </td>
@@ -343,6 +382,21 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 的等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
         <td><p>酷Q返回了指示发送失败的值。</p>
 </td>
@@ -399,7 +453,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="HuajiTech.QQ.Message.html">Message</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.QQ.Message.html">Message</a>&gt;</td>
         <td><p>一个 <span class="xref">HuajiTech.CoolQ.Message</span> 对象，表示已发送的消息。</p>
 </td>
       </tr>
@@ -414,6 +468,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> 不包含任何元素，或其等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
         <td><p>酷Q返回了指示发送失败的值。</p>
@@ -471,7 +540,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="HuajiTech.QQ.Message.html">Message</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="HuajiTech.QQ.Message.html">Message</a>&gt;</td>
         <td><p>一个 <span class="xref">HuajiTech.CoolQ.Message</span> 对象，表示已发送的消息。</p>
 </td>
       </tr>
@@ -487,6 +556,21 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">element</code> 的等效字符串表示形式为 <span class="xref">System.String.Empty</span>。</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></td>
         <td><p>酷Q返回了指示发送失败的值。</p>
 </td>
@@ -495,14 +579,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_ToComplexMessage_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(IEnumerable%7BHuajiTech.CoolQ.Messaging.MessageElement%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_ToComplexMessage_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable%7BHuajiTech.CoolQ.Messaging.MessageElement%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Messaging/Extensions.cs/#L43">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Extensions_ToComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_ToComplexMessage_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__" data-uid="HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">ToComplexMessage(IEnumerable&lt;MessageElement&gt;)</h4>
-  <div class="markdown level1 summary"><p>从 <see cref="!:IEnumerable&lt;T>"></see> 创建 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_ToComplexMessage_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__" data-uid="HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">ToComplexMessage(IEnumerable&lt;MessageElement&gt;)</h4>
+  <div class="markdown level1 summary"><p>从 <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> 创建 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -520,7 +604,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</td>
         <td><span class="parametername">elements</span></td>
         <td><p>要用于创建 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 的消息元素集合。</p>
 </td>
@@ -539,6 +623,22 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
         <td><p>一个 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>，其中包含输入序列中的元素。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">elements</code> 为 <code>null</code>。</p>
 </td>
       </tr>
     </tbody>
