@@ -13,7 +13,7 @@ namespace HuajiTech.CoolQ.Events
         "CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Style", "IDE0060:删除未使用的参数", Justification = "<挂起>")]
-    internal class CurrentUserEventSource : ICurrentUserEventSource
+    internal class CurrentUserEventSource : IMessageEventSource, IContactEventSource, IEntranceInviteEventSource
     {
         public static readonly CurrentUserEventSource Instance = new CurrentUserEventSource();
 

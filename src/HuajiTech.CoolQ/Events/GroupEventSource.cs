@@ -15,7 +15,11 @@ namespace HuajiTech.CoolQ.Events
         "CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Style", "IDE0060:删除未使用的参数", Justification = "<挂起>")]
-    internal class GroupEventSource : IGroupEventSource
+    internal class GroupEventSource :
+        IGroupMemberEventSource,
+        IEntranceRequestEventSource,
+        IGroupMuteEventSource,
+        IMemberMuteEventSource
     {
         public static readonly GroupEventSource Instance = new GroupEventSource();
 

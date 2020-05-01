@@ -219,7 +219,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.EntranceInvitedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited"/> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.EntranceInvitedEventArgs.Target">
@@ -362,12 +362,12 @@
             在收到联系人请求时引发。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.IEntranceInvitationEventSource">
+        <member name="T:HuajiTech.QQ.Events.IEntranceInviteEventSource">
             <summary>
             定义入群邀请事件。
             </summary>
         </member>
-        <member name="E:HuajiTech.QQ.Events.IEntranceInvitationEventSource.EntranceInvited">
+        <member name="E:HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited">
             <summary>
             在被邀请加群时引发。
             </summary>
@@ -465,11 +465,6 @@
         <member name="E:HuajiTech.QQ.Events.IMessageEventSource.AnonymousMessageReceived">
             <summary>
             在收到匿名消息时引发。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.QQ.Events.IMuteEventSource">
-            <summary>
-            定义禁言事件
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.Events.MemberMutedEventArgs">
@@ -703,41 +698,6 @@
             </summary>
             <param name="fileName">请求获取的录音的文件名。</param>
             <param name="fileFormat">请求获取的录音的格式。</param>
-        </member>
-        <member name="T:HuajiTech.QQ.IGroup">
-            <summary>
-            定义群。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IGroup.MemberCapacity">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的成员容量。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IGroup.MemberCount">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的成员数。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.QQ.IGroup.GetMembers">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的所有成员。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.QQ.IGroup.GetMembersAsync">
-            <summary>
-            以异步操作获取当前 <see cref="T:HuajiTech.QQ.IGroup"/> 对象的所有成员。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.QQ.IMember">
-            <summary>
-            定义成员。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IMember.Group">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IMember"/> 对象的所在群。
-            </summary>
         </member>
         <member name="T:HuajiTech.QQ.IMuteable">
             <summary>
@@ -1185,6 +1145,7 @@
         <member name="T:HuajiTech.QQ.Plugin">
             <summary>
             用作插件的基类，并提供操作 <see cref="T:HuajiTech.QQ.PluginContext"/> 的方法。
+            此类为抽象类。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.Plugin.#ctor(HuajiTech.QQ.PluginContext)">

@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 
 namespace HuajiTech.QQ
@@ -7,7 +6,7 @@ namespace HuajiTech.QQ
     /// 表示聊天。
     /// 此类为抽象类。
     /// </summary>
-    public abstract class Chat : ISendable, IEquatable<Chat>
+    public abstract class Chat : IChattable
     {
         /// <summary>
         /// 以指定的号码初始化一个 <see cref="Chat"/> 类的新实例。
@@ -29,9 +28,9 @@ namespace HuajiTech.QQ
 
         public static bool operator ==(Chat left, Chat right) => left?.Equals(right) ?? right is null;
 
-        public override bool Equals(object obj) => Equals(obj as Chat);
+        public override bool Equals(object obj) => Equals(obj as IChattable);
 
-        public virtual bool Equals(Chat other) => base.Equals(other) || other?.Number == Number;
+        public virtual bool Equals(IChattable other) => base.Equals(other) || other?.Number == Number;
 
         public override int GetHashCode() => (int)Number;
 

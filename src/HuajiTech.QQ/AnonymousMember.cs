@@ -26,6 +26,8 @@ namespace HuajiTech.QQ
         /// </summary>
         public Group Group { get; }
 
+        IChattable IMember.Group => Group;
+
         /// <summary>
         /// 获取当前 <see cref="AnonymousMember"/> 对象的名称。
         /// </summary>

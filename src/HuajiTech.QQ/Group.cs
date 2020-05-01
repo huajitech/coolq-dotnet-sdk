@@ -7,7 +7,7 @@ namespace HuajiTech.QQ
     /// 表示群。
     /// 此类为抽象类。
     /// </summary>
-    public abstract class Group : Chat, IGroup, IMuteable, IRequestable, IRefreshable
+    public abstract class Group : Chat, IMuteable, IRequestable, IRefreshable
     {
         /// <summary>
         /// 以指定的号码初始化一个 <see cref="Group"/> 类的新实例。

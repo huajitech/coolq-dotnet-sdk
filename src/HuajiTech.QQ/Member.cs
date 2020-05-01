@@ -7,7 +7,7 @@ namespace HuajiTech.QQ
     /// 表示成员。
     /// 此类为抽象类。
     /// </summary>
-    public abstract class Member : User, IMember, IAliased
+    public abstract class Member : User, IMember, ITimedMuteable
     {
         /// <summary>
         /// 以指定的号码和群初始化一个 <see cref="Member"/> 类的新实例。
@@ -55,6 +55,8 @@ namespace HuajiTech.QQ
         /// 获取当前 <see cref="Member"/> 对象的所属 <see cref="QQ.Group"/> 对象。
         /// </summary>
         public Group Group { get; }
+
+        IChattable IMember.Group => Group;
 
         /// <summary>
         /// 获取一个值，指示当前 <see cref="Member"/> 对象是否有不良记录。
