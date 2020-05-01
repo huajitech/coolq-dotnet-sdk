@@ -27,10 +27,8 @@ namespace HuajiTech.CoolQ
 
         public override string DisplayName => Alias ?? Nickname;
 
-        public override void GiveThumbsUp(int count)
-        {
+        public override void GiveThumbsUp(int count) =>
             NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
-        }
 
         public override void Refresh() => Request();
 

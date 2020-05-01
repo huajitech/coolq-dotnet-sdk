@@ -20,17 +20,11 @@ namespace HuajiTech.CoolQ
         {
         }
 
-        public void CleanUpNativeData(IntPtr pNativeData)
-        {
-            Marshal.FreeHGlobal(pNativeData);
-        }
+        public void CleanUpNativeData(IntPtr pNativeData) => Marshal.FreeHGlobal(pNativeData);
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Design", "CA1024:在适用处使用属性", Justification = "<挂起>")]
-        public int GetNativeDataSize()
-        {
-            return -1;
-        }
+        public int GetNativeDataSize() => -1;
 
         public IntPtr MarshalManagedToNative(object ManagedObj)
         {

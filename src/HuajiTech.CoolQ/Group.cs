@@ -31,17 +31,13 @@ namespace HuajiTech.CoolQ
 
         public override string Name => _name ?? GetInfo().Name;
 
-        public override void DisableAnonymous()
-        {
+        public override void DisableAnonymous() =>
             NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
-        }
 
         public override void Disband() => Leave(true);
 
-        public override void EnableAnonymous()
-        {
+        public override void EnableAnonymous() =>
             NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, true).CheckError();
-        }
 
         public override IReadOnlyCollection<QQ.Member> GetMembers()
         {
@@ -54,10 +50,8 @@ namespace HuajiTech.CoolQ
 
         public override void Leave() => Leave(false);
 
-        public override void Mute()
-        {
+        public override void Mute() =>
             NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
-        }
 
         public override void Refresh() => GetInfo(true, true);
 
@@ -79,10 +73,8 @@ namespace HuajiTech.CoolQ
             return new Message(id, message);
         }
 
-        public override void Unmute()
-        {
+        public override void Unmute() =>
             NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, false).CheckError();
-        }
 
         private GroupInfo GetInfo(bool throwException = false, bool refresh = false)
         {
@@ -103,9 +95,7 @@ namespace HuajiTech.CoolQ
             return _info;
         }
 
-        private void Leave(bool disband)
-        {
+        private void Leave(bool disband) =>
             NativeMethods.LeaveGroup(Bot.Instance.AuthCode, Number, disband).CheckError();
-        }
     }
 }

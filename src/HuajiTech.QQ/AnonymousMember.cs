@@ -14,10 +14,7 @@ namespace HuajiTech.QQ
         /// </summary>
         /// <param name="group">所属群。</param>
         /// <exception cref="ArgumentNullException"><paramref name="group"/> 为 <c>null</c>。</exception>
-        protected AnonymousMember(Group group)
-        {
-            Group = group ?? throw new ArgumentNullException(nameof(group));
-        }
+        protected AnonymousMember(Group group) => Group = group ?? throw new ArgumentNullException(nameof(group));
 
         /// <summary>
         /// 获取当前 <see cref="AnonymousMember"/> 对象的标识符。
@@ -55,14 +52,8 @@ namespace HuajiTech.QQ
 
         public override string ToString() => GetType().Name + $"({Id},{Group})";
 
-        public static bool operator !=(AnonymousMember left, AnonymousMember right)
-        {
-            return !(left == right);
-        }
+        public static bool operator !=(AnonymousMember left, AnonymousMember right) => !(left == right);
 
-        public static bool operator ==(AnonymousMember left, AnonymousMember right)
-        {
-            return left?.Equals(right) ?? right is null;
-        }
+        public static bool operator ==(AnonymousMember left, AnonymousMember right) => left?.Equals(right) ?? right is null;
     }
 }

@@ -62,10 +62,8 @@ namespace HuajiTech.CoolQ
                 .ToList();
         }
 
-        public override void GiveThumbsUp(int count)
-        {
-            throw new InvalidOperationException(Resources.CannotGiveThumbsUpToCurrentUser);
-        }
+        public override void GiveThumbsUp(int count) =>
+            throw new NotSupportedException(Resources.CannotGiveThumbsUpToCurrentUser);
 
         public override void Refresh()
         {
@@ -73,10 +71,7 @@ namespace HuajiTech.CoolQ
             Request();
         }
 
-        public override void Request()
-        {
-            _nickname ??= NativeMethods.GetCurrentUserNickname(Bot.Instance.AuthCode);
-        }
+        public override void Request() => _nickname ??= NativeMethods.GetCurrentUserNickname(Bot.Instance.AuthCode);
 
         public override QQ.Message Send(string message)
         {

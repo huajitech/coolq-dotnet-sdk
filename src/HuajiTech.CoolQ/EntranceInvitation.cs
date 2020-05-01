@@ -16,10 +16,8 @@ namespace HuajiTech.CoolQ
 
         public override void Reject() => Respond(Response.Reject);
 
-        private void Respond(Response response)
-        {
+        private void Respond(Response response) =>
             NativeMethods.RespondEntranceRequest(
                 Bot.Instance.AuthCode, _token, EntranceEventType.Invite, response, null).CheckError();
-        }
     }
 }

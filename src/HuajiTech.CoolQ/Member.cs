@@ -48,21 +48,14 @@ namespace HuajiTech.CoolQ
 
         public override DateTime TimeEntered => GetInfo().TimeEntered;
 
-        public override int GetHashCode()
-        {
-            return base.GetHashCode() ^ Group.GetHashCode();
-        }
+        public override int GetHashCode() => base.GetHashCode() ^ Group.GetHashCode();
 
-        public override void GiveThumbsUp(int count)
-        {
+        public override void GiveThumbsUp(int count) =>
             NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
-        }
 
-        public override void Kick(bool disallowRejoin = false)
-        {
+        public override void Kick(bool disallowRejoin = false) =>
             NativeMethods.KickMember(
                 Bot.Instance.AuthCode, Group.Number, Number, disallowRejoin).CheckError();
-        }
 
         public override void Mute(TimeSpan duration)
         {
@@ -75,15 +68,9 @@ namespace HuajiTech.CoolQ
                 Bot.Instance.AuthCode, Group.Number, Number, (long)duration.TotalSeconds).CheckError();
         }
 
-        public override void Mute()
-        {
-            Mute(MaxMuteDuration);
-        }
+        public override void Mute() => Mute(MaxMuteDuration);
 
-        public override void Refresh()
-        {
-            GetInfo(true, true);
-        }
+        public override void Refresh() => GetInfo(true, true);
 
         public override void Request()
         {
@@ -116,15 +103,9 @@ namespace HuajiTech.CoolQ
             _info.Alias = card;
         }
 
-        public override void SetAsAdministrator()
-        {
-            SetIsAdministrator(true);
-        }
+        public override void SetAsAdministrator() => SetIsAdministrator(true);
 
-        public override Task SetAsAdministratorAsync()
-        {
-            return Task.Run(SetAsAdministrator);
-        }
+        public override Task SetAsAdministratorAsync() => Task.Run(SetAsAdministrator);
 
         public override void SetCustomTitle(CustomTitle title)
         {
@@ -141,21 +122,13 @@ namespace HuajiTech.CoolQ
             _info.CustomTitle = title;
         }
 
-        public override string ToString()
-        {
-            return GetType().Name + $"({Number},{Group})";
-        }
+        public override string ToString() => GetType().Name + $"({Number},{Group})";
 
-        public override void Unmute()
-        {
+        public override void Unmute() =>
             NativeMethods.MuteMember(
                 Bot.Instance.AuthCode, Group.Number, Number, 0).CheckError();
-        }
 
-        public override void UnsetAsAdministrator()
-        {
-            SetIsAdministrator(false);
-        }
+        public override void UnsetAsAdministrator() => SetIsAdministrator(false);
 
         private MemberInfo GetInfo(bool throwException = false, bool refresh = false)
         {
@@ -176,12 +149,8 @@ namespace HuajiTech.CoolQ
             return _info;
         }
 
-        private void SetIsAdministrator(bool isAdministrator)
-        {
+        private void SetIsAdministrator(bool isAdministrator) =>
             NativeMethods.SetMemberIsAdministrator(
                     Bot.Instance.AuthCode, Group.Number, Number, isAdministrator).CheckError();
-
-            _info.Role = MemberRole.Administrator;
-        }
     }
 }

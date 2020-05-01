@@ -13,10 +13,7 @@ namespace HuajiTech.CoolQ
         /// 以指定的 ID 初始化一个 <see cref="AppIdAttribute"/> 类的新实例。
         /// </summary>
         /// <param name="id">应用的 AppID。</param>
-        public AppIdAttribute(string id)
-        {
-            Id = id;
-        }
+        public AppIdAttribute(string id) => Id = id;
 
         /// <summary>
         /// 获取当前 <see cref="AppIdAttribute"/> 对象的 ID。

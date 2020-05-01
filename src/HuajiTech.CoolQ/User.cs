@@ -24,10 +24,8 @@ namespace HuajiTech.CoolQ
 
         public override string Nickname => GetInfo().Nickname;
 
-        public override void GiveThumbsUp(int count)
-        {
+        public override void GiveThumbsUp(int count) =>
             NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
-        }
 
         public override void Request()
         {
@@ -35,10 +33,7 @@ namespace HuajiTech.CoolQ
             GetInfo(true);
         }
 
-        public override void Refresh()
-        {
-            GetInfo(true, true);
-        }
+        public override void Refresh() => GetInfo(true, true);
 
         public override QQ.Message Send(string message)
         {

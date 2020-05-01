@@ -13,10 +13,7 @@ namespace HuajiTech.QQ
         /// 以指定的标识符和内容初始化一个 <see cref="Message"/> 类的新实例。
         /// </summary>
         /// <param name="content">内容。</param>
-        protected Message(string content)
-        {
-            Content = content ?? throw new ArgumentNullException(nameof(content));
-        }
+        protected Message(string content) => Content = content ?? throw new ArgumentNullException(nameof(content));
 
         /// <summary>
         /// 获取当前 <see cref="Message"/> 对象的内容。

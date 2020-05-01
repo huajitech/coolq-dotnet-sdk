@@ -13,9 +13,7 @@ namespace HuajiTech.CoolQ
         public override bool Equals(QQ.Message other) =>
             base.Equals(other) && other is Message message && message.Id == Id;
 
-        public override void Recall()
-        {
+        public override void Recall() =>
             NativeMethods.RecallMessage(Bot.Instance.AuthCode, Id).CheckError();
-        }
     }
 }

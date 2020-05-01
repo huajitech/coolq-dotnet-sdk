@@ -13,10 +13,7 @@ namespace HuajiTech.QQ
         /// 以指定的号码初始化一个 <see cref="Chat"/> 类的新实例。
         /// </summary>
         /// <param name="number">号码。</param>
-        protected Chat(long number)
-        {
-            Number = number;
-        }
+        protected Chat(long number) => Number = number;
 
         /// <summary>
         /// 获取当前 <see cref="Chat"/> 对象的显示名称。
@@ -28,41 +25,20 @@ namespace HuajiTech.QQ
         /// </summary>
         public long Number { get; }
 
-        public static bool operator !=(Chat left, Chat right)
-        {
-            return !(left == right);
-        }
+        public static bool operator !=(Chat left, Chat right) => !(left == right);
 
-        public static bool operator ==(Chat left, Chat right)
-        {
-            return left?.Equals(right) ?? right is null;
-        }
+        public static bool operator ==(Chat left, Chat right) => left?.Equals(right) ?? right is null;
 
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as Chat);
-        }
+        public override bool Equals(object obj) => Equals(obj as Chat);
 
-        public virtual bool Equals(Chat other)
-        {
-            return base.Equals(other) || other?.Number == Number;
-        }
+        public virtual bool Equals(Chat other) => base.Equals(other) || other?.Number == Number;
 
-        public override int GetHashCode()
-        {
-            return (int)Number;
-        }
+        public override int GetHashCode() => (int)Number;
 
         public abstract Message Send(string message);
 
-        public virtual Task<Message> SendAsync(string message)
-        {
-            return Task.Run(() => Send(message));
-        }
+        public virtual Task<Message> SendAsync(string message) => Task.Run(() => Send(message));
 
-        public override string ToString()
-        {
-            return $"{GetType().Name}({Number})";
-        }
+        public override string ToString() => $"{GetType().Name}({Number})";
     }
 }
