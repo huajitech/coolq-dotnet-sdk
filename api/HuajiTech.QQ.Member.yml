@@ -64,7 +64,9 @@ items:
     content: 'public abstract class Member : User, IChattable, ISendable, IEquatable<IChattable>, IRequestable, IRefreshable, IMember, ITimedMuteable, IMuteable'
     content.vb: >-
       Public MustInherit Class Member
+
           Inherits User
+
           Implements IChattable, ISendable, IEquatable(Of IChattable), IRequestable, IRefreshable, IMember, ITimedMuteable, IMuteable
   inheritance:
   - System.Object

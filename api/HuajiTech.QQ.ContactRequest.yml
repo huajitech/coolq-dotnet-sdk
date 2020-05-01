@@ -33,6 +33,7 @@ items:
     content: 'public abstract class ContactRequest : Request'
     content.vb: >-
       Public MustInherit Class ContactRequest
+
           Inherits Request
   inheritance:
   - System.Object

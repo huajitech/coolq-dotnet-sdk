@@ -40,6 +40,7 @@ items:
     content: 'public abstract class Chat : IChattable, ISendable, IEquatable<IChattable>'
     content.vb: >-
       Public MustInherit Class Chat
+
           Implements IChattable, ISendable, IEquatable(Of IChattable)
   inheritance:
   - System.Object

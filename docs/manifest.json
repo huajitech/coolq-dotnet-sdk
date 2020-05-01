@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Extensions.html",
-          "hash": "3yw7krveAczhxsvIV5W0qA=="
+          "hash": "4HTyq0IpaeBJiMJAVZR+5w=="
         }
       },
       "is_incremental": false,
@@ -462,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Chat.html",
-          "hash": "nTzb0UdFYgqc/eXA3w1mGA=="
+          "hash": "c1/oJ7Y38Hvpoy16cN54bA=="
         }
       },
       "is_incremental": false,
@@ -474,7 +474,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Contact.html",
-          "hash": "lPh6VoeVvxUv9GIca9li5w=="
+          "hash": "ZOpTCwZnH/lj3t/xd36ZPw=="
         }
       },
       "is_incremental": false,
@@ -510,7 +510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.CurrentUser.html",
-          "hash": "zXvO5SRA7ZaPpuZgEofgGA=="
+          "hash": "UbaFMJIF3HbPgiWGAHDGbQ=="
         }
       },
       "is_incremental": false,
@@ -858,7 +858,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Group.html",
-          "hash": "pZ5yeMaOXB7MSzE3XuEmmA=="
+          "hash": "LmzVJiysvpfOG9ItjEqbiQ=="
         }
       },
       "is_incremental": false,
@@ -1002,7 +1002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.Member.html",
-          "hash": "aCv26RndIbyi4IVGutAEAQ=="
+          "hash": "M0h9s2flGU2Lu50sRDWEUw=="
         }
       },
       "is_incremental": false,
@@ -1074,7 +1074,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.User.html",
-          "hash": "U763fiaFJbpbFFw2P4B1Sg=="
+          "hash": "kkwwX8yUcsthjlycJVNf8w=="
         }
       },
       "is_incremental": false,
@@ -1261,13 +1261,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 10,
-          "skipped_file_count": 8
+          "skipped_file_count": 10
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 89,
-          "skipped_file_count": 89
+          "skipped_file_count": 63
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

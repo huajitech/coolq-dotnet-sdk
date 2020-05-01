@@ -31,6 +31,7 @@ items:
     content: 'public interface ITimedMuteable : IMuteable'
     content.vb: >-
       Public Interface ITimedMuteable
+
           Inherits IMuteable
   inheritedMembers:
   - HuajiTech.QQ.IMuteable.Mute

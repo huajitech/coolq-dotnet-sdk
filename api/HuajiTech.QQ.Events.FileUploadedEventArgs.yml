@@ -33,6 +33,7 @@ items:
     content: 'public class FileUploadedEventArgs : TimedEventArgs'
     content.vb: >-
       Public Class FileUploadedEventArgs
+
           Inherits TimedEventArgs
   inheritance:
   - System.Object

@@ -40,6 +40,7 @@ items:
     content: 'public abstract class Message : IEquatable<Message>'
     content.vb: >-
       Public MustInherit Class Message
+
           Implements IEquatable(Of Message)
   inheritance:
   - System.Object

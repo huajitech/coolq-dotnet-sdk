@@ -48,18 +48,18 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 向指定聊天发送 <see cref="ComplexMessage"/>。
         /// </summary>
-        /// <param name="chat">目标聊天。</param>
+        /// <param name="sendable">目标可发送对象。</param>
         /// <param name="message">要发送的 <see cref="ComplexMessage"/> 对象。</param>
         /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public static QQ.Message Send(this Chat chat, ComplexMessage message)
+        public static QQ.Message Send(this ISendable sendable, ComplexMessage message)
         {
-            if (chat is null)
+            if (sendable is null)
             {
-                throw new ArgumentNullException(nameof(chat));
+                throw new ArgumentNullException(nameof(sendable));
             }
 
             if (message is null)
@@ -67,24 +67,24 @@ namespace HuajiTech.CoolQ.Messaging
                 throw new ArgumentNullException(nameof(message));
             }
 
-            return chat.Send(message.ToString());
+            return sendable.Send(message.ToString());
         }
 
         /// <summary>
         /// 以异步操作向指定聊天发送 <see cref="ComplexMessage"/>。
         /// </summary>
-        /// <param name="chat">目标聊天。</param>
+        /// <param name="sendable">目标可发送对象。</param>
         /// <param name="message">要发送的 <see cref="ComplexMessage"/> 对象。</param>
         /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static Task<QQ.Message> SendAsync(this Chat chat, ComplexMessage message)
+        public static Task<QQ.Message> SendAsync(this ISendable sendable, ComplexMessage message)
         {
-            if (chat is null)
+            if (sendable is null)
             {
-                throw new ArgumentNullException(nameof(chat));
+                throw new ArgumentNullException(nameof(sendable));
             }
 
             if (message is null)
@@ -92,24 +92,24 @@ namespace HuajiTech.CoolQ.Messaging
                 throw new ArgumentNullException(nameof(message));
             }
 
-            return chat.SendAsync(message.ToString());
+            return sendable.SendAsync(message.ToString());
         }
 
         /// <summary>
         /// 向指定聊天发送 <see cref="MessageElement"/>。
         /// </summary>
-        /// <param name="chat">目标聊天。</param>
+        /// <param name="sendable">目标可发送对象。</param>
         /// <param name="element">要发送的 <see cref="MessageElement"/> 对象。</param>
         /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static QQ.Message Send(this Chat chat, MessageElement element)
+        public static QQ.Message Send(this ISendable sendable, MessageElement element)
         {
-            if (chat is null)
+            if (sendable is null)
             {
-                throw new ArgumentNullException(nameof(chat));
+                throw new ArgumentNullException(nameof(sendable));
             }
 
             if (element is null)
@@ -117,24 +117,24 @@ namespace HuajiTech.CoolQ.Messaging
                 throw new ArgumentNullException(nameof(element));
             }
 
-            return chat.Send(element.ToString());
+            return sendable.Send(element.ToString());
         }
 
         /// <summary>
         /// 以异步操作向指定聊天发送 <see cref="MessageElement"/>。
         /// </summary>
-        /// <param name="chat">目标聊天。</param>
+        /// <param name="sendable">目标可发送对象。</param>
         /// <param name="element">要发送的 <see cref="MessageElement"/> 对象。</param>
         /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="chat"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static Task<QQ.Message> SendAsync(this Chat chat, MessageElement element)
+        public static Task<QQ.Message> SendAsync(this ISendable sendable, MessageElement element)
         {
-            if (chat is null)
+            if (sendable is null)
             {
-                throw new ArgumentNullException(nameof(chat));
+                throw new ArgumentNullException(nameof(sendable));
             }
 
             if (element is null)
@@ -142,7 +142,7 @@ namespace HuajiTech.CoolQ.Messaging
                 throw new ArgumentNullException(nameof(element));
             }
 
-            return chat.SendAsync(element.ToString());
+            return sendable.SendAsync(element.ToString());
         }
     }
 }

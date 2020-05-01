@@ -1561,18 +1561,18 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse
   nameWithType: Extensions.Parse
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  name: Send(Chat, ComplexMessage)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
-  nameWithType: Extensions.Send(Chat, ComplexMessage)
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  name: Send(Chat, MessageElement)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
-  nameWithType: Extensions.Send(Chat, MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Send(ISendable, ComplexMessage)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  nameWithType: Extensions.Send(ISendable, ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Send(ISendable, MessageElement)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.MessageElement)
+  nameWithType: Extensions.Send(ISendable, MessageElement)
 - uid: HuajiTech.CoolQ.Messaging.Extensions.Send*
   name: Send
   href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_
@@ -1580,18 +1580,18 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
   nameWithType: Extensions.Send
-- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  name: SendAsync(Chat, ComplexMessage)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
-  nameWithType: Extensions.SendAsync(Chat, ComplexMessage)
-- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  name: SendAsync(Chat, MessageElement)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
-  nameWithType: Extensions.SendAsync(Chat, MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: SendAsync(ISendable, ComplexMessage)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  nameWithType: Extensions.SendAsync(ISendable, ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: SendAsync(ISendable, MessageElement)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.MessageElement)
+  nameWithType: Extensions.SendAsync(ISendable, MessageElement)
 - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync*
   name: SendAsync
   href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_SendAsync_

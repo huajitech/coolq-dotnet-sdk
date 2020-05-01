@@ -36,7 +36,9 @@ items:
     content: 'public abstract class CurrentUser : User, IChattable, ISendable, IEquatable<IChattable>, IRequestable, IRefreshable'
     content.vb: >-
       Public MustInherit Class CurrentUser
+
           Inherits User
+
           Implements IChattable, ISendable, IEquatable(Of IChattable), IRequestable, IRefreshable
   inheritance:
   - System.Object

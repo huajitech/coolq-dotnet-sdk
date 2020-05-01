@@ -46,6 +46,7 @@ items:
     content: 'public abstract class AnonymousMember : IMember'
     content.vb: >-
       Public MustInherit Class AnonymousMember
+
           Implements IMember
   inheritance:
   - System.Object

@@ -32,6 +32,7 @@ items:
     content: 'public class ContactRequestedEventArgs : TimedEventArgs'
     content.vb: >-
       Public Class ContactRequestedEventArgs
+
           Inherits TimedEventArgs
   inheritance:
   - System.Object

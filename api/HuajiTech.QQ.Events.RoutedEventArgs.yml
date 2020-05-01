@@ -30,6 +30,7 @@ items:
     content: 'public class RoutedEventArgs : EventArgs'
     content.vb: >-
       Public Class RoutedEventArgs
+
           Inherits EventArgs
   inheritance:
   - System.Object

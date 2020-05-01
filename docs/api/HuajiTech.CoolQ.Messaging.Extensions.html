@@ -231,19 +231,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Messaging/Extensions.cs/#L58">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Send_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)">Send(Chat, ComplexMessage)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)">Send(ISendable, ComplexMessage)</h4>
   <div class="markdown level1 summary"><p>向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Message Send(this Chat chat, ComplexMessage message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Message Send(this ISendable sendable, ComplexMessage message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,9 +256,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a></td>
-        <td><span class="parametername">chat</span></td>
-        <td><p>目标聊天。</p>
+        <td><a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a></td>
+        <td><span class="parametername">sendable</span></td>
+        <td><p>目标可发送对象。</p>
 </td>
       </tr>
       <tr>
@@ -296,7 +296,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。</p>
 </td>
       </tr>
       <tr>
@@ -318,19 +318,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Messaging/Extensions.cs/#L108">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Extensions_Send_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)">Send(Chat, MessageElement)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)">Send(ISendable, MessageElement)</h4>
   <div class="markdown level1 summary"><p>向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Message Send(this Chat chat, MessageElement element)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Message Send(this ISendable sendable, MessageElement element)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,9 +343,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a></td>
-        <td><span class="parametername">chat</span></td>
-        <td><p>目标聊天。</p>
+        <td><a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a></td>
+        <td><span class="parametername">sendable</span></td>
+        <td><p>目标可发送对象。</p>
 </td>
       </tr>
       <tr>
@@ -383,7 +383,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。</p>
 </td>
       </tr>
       <tr>
@@ -405,19 +405,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Messaging/Extensions.cs/#L83">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)">SendAsync(Chat, ComplexMessage)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)">SendAsync(ISendable, ComplexMessage)</h4>
   <div class="markdown level1 summary"><p>以异步操作向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;Message&gt; SendAsync(this Chat chat, ComplexMessage message)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;Message&gt; SendAsync(this ISendable sendable, ComplexMessage message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -430,9 +430,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a></td>
-        <td><span class="parametername">chat</span></td>
-        <td><p>目标聊天。</p>
+        <td><a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a></td>
+        <td><span class="parametername">sendable</span></td>
+        <td><p>目标可发送对象。</p>
 </td>
       </tr>
       <tr>
@@ -470,7 +470,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。</p>
 </td>
       </tr>
       <tr>
@@ -492,19 +492,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Messaging/Extensions.cs/#L133">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_Chat_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)">SendAsync(Chat, MessageElement)</h4>
+  <h4 id="HuajiTech_CoolQ_Messaging_Extensions_SendAsync_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)">SendAsync(ISendable, MessageElement)</h4>
   <div class="markdown level1 summary"><p>以异步操作向指定聊天发送 <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task&lt;Message&gt; SendAsync(this Chat chat, MessageElement element)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;Message&gt; SendAsync(this ISendable sendable, MessageElement element)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -517,9 +517,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.QQ.Chat.html">Chat</a></td>
-        <td><span class="parametername">chat</span></td>
-        <td><p>目标聊天。</p>
+        <td><a class="xref" href="HuajiTech.QQ.ISendable.html">ISendable</a></td>
+        <td><span class="parametername">sendable</span></td>
+        <td><p>目标可发送对象。</p>
 </td>
       </tr>
       <tr>
@@ -557,7 +557,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。</p>
 </td>
       </tr>
       <tr>

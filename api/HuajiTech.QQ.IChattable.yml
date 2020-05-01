@@ -31,6 +31,7 @@ items:
     content: 'public interface IChattable : ISendable, IEquatable<IChattable>'
     content.vb: >-
       Public Interface IChattable
+
           Inherits ISendable, IEquatable(Of IChattable)
   inheritedMembers:
   - HuajiTech.QQ.ISendable.Send(System.String)

@@ -31,7 +31,9 @@ items:
     content: 'public abstract class Contact : User, IChattable, ISendable, IEquatable<IChattable>, IRequestable, IRefreshable, IAliased'
     content.vb: >-
       Public MustInherit Class Contact
+
           Inherits User
+
           Implements IChattable, ISendable, IEquatable(Of IChattable), IRequestable, IRefreshable, IAliased
   inheritance:
   - System.Object

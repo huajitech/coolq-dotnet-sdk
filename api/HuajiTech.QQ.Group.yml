@@ -52,7 +52,9 @@ items:
     content: 'public abstract class Group : Chat, IChattable, ISendable, IEquatable<IChattable>, IMuteable, IRequestable, IRefreshable'
     content.vb: >-
       Public MustInherit Class Group
+
           Inherits Chat
+
           Implements IChattable, ISendable, IEquatable(Of IChattable), IMuteable, IRequestable, IRefreshable
   inheritance:
   - System.Object

@@ -32,6 +32,7 @@ items:
     content: 'public class GroupMuteEventArgs : TimedEventArgs'
     content.vb: >-
       Public Class GroupMuteEventArgs
+
           Inherits TimedEventArgs
   inheritance:
   - System.Object

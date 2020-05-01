@@ -7,10 +7,10 @@ items:
   children:
   - HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)
   - HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message,System.Boolean)
-  - HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  - HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  - HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  - HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+  - HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  - HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  - HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  - HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
   - HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})
   langs:
   - csharp
@@ -197,17 +197,17 @@ items:
   - Shared
   fullName.vb: HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable(Of HuajiTech.CoolQ.Messaging.MessageElement))
   name.vb: ToComplexMessage(IEnumerable(Of MessageElement))
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  id: Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  id: Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
   isExtensionMethod: true
   parent: HuajiTech.CoolQ.Messaging.Extensions
   langs:
   - csharp
   - vb
-  name: Send(Chat, ComplexMessage)
-  nameWithType: Extensions.Send(Chat, ComplexMessage)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Send(ISendable, ComplexMessage)
+  nameWithType: Extensions.Send(ISendable, ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.ComplexMessage)
   type: Method
   source:
     remote:
@@ -223,11 +223,11 @@ items:
   summary: "\n向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.ComplexMessage\" data-throw-if-not-resolved=\"false\"></xref>。\n"
   example: []
   syntax:
-    content: public static Message Send(this Chat chat, ComplexMessage message)
+    content: public static Message Send(this ISendable sendable, ComplexMessage message)
     parameters:
-    - id: chat
-      type: HuajiTech.QQ.Chat
-      description: 目标聊天。
+    - id: sendable
+      type: HuajiTech.QQ.ISendable
+      description: 目标可发送对象。
     - id: message
       type: HuajiTech.CoolQ.Messaging.ComplexMessage
       description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 对象。
@@ -237,12 +237,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function Send(chat As Chat, message As ComplexMessage) As Message
+      Public Shared Function Send(sendable As ISendable, message As ComplexMessage) As Message
   overload: HuajiTech.CoolQ.Messaging.Extensions.Send*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+    description: <code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: <code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。
@@ -258,17 +258,17 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  id: SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  id: SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
   isExtensionMethod: true
   parent: HuajiTech.CoolQ.Messaging.Extensions
   langs:
   - csharp
   - vb
-  name: SendAsync(Chat, ComplexMessage)
-  nameWithType: Extensions.SendAsync(Chat, ComplexMessage)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: SendAsync(ISendable, ComplexMessage)
+  nameWithType: Extensions.SendAsync(ISendable, ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.ComplexMessage)
   type: Method
   source:
     remote:
@@ -284,11 +284,11 @@ items:
   summary: "\n以异步操作向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.ComplexMessage\" data-throw-if-not-resolved=\"false\"></xref>。\n"
   example: []
   syntax:
-    content: public static Task<Message> SendAsync(this Chat chat, ComplexMessage message)
+    content: public static Task<Message> SendAsync(this ISendable sendable, ComplexMessage message)
     parameters:
-    - id: chat
-      type: HuajiTech.QQ.Chat
-      description: 目标聊天。
+    - id: sendable
+      type: HuajiTech.QQ.ISendable
+      description: 目标可发送对象。
     - id: message
       type: HuajiTech.CoolQ.Messaging.ComplexMessage
       description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.ComplexMessage" data-throw-if-not-resolved="false"></xref> 对象。
@@ -298,12 +298,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function SendAsync(chat As Chat, message As ComplexMessage) As Task(Of Message)
+      Public Shared Function SendAsync(sendable As ISendable, message As ComplexMessage) As Task(Of Message)
   overload: HuajiTech.CoolQ.Messaging.Extensions.SendAsync*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+    description: <code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: <code data-dev-comment-type="paramref" class="paramref">message</code> 为 <code>null</code>。
@@ -319,17 +319,17 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  id: Send(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  id: Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
   isExtensionMethod: true
   parent: HuajiTech.CoolQ.Messaging.Extensions
   langs:
   - csharp
   - vb
-  name: Send(Chat, MessageElement)
-  nameWithType: Extensions.Send(Chat, MessageElement)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Send(ISendable, MessageElement)
+  nameWithType: Extensions.Send(ISendable, MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.MessageElement)
   type: Method
   source:
     remote:
@@ -345,11 +345,11 @@ items:
   summary: "\n向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.MessageElement\" data-throw-if-not-resolved=\"false\"></xref>。\n"
   example: []
   syntax:
-    content: public static Message Send(this Chat chat, MessageElement element)
+    content: public static Message Send(this ISendable sendable, MessageElement element)
     parameters:
-    - id: chat
-      type: HuajiTech.QQ.Chat
-      description: 目标聊天。
+    - id: sendable
+      type: HuajiTech.QQ.ISendable
+      description: 目标可发送对象。
     - id: element
       type: HuajiTech.CoolQ.Messaging.MessageElement
       description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.MessageElement" data-throw-if-not-resolved="false"></xref> 对象。
@@ -359,12 +359,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function Send(chat As Chat, element As MessageElement) As Message
+      Public Shared Function Send(sendable As ISendable, element As MessageElement) As Message
   overload: HuajiTech.CoolQ.Messaging.Extensions.Send*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+    description: <code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: <code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。
@@ -380,17 +380,17 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
-  id: SendAsync(HuajiTech.QQ.Chat,HuajiTech.CoolQ.Messaging.MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
+  id: SendAsync(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
   isExtensionMethod: true
   parent: HuajiTech.CoolQ.Messaging.Extensions
   langs:
   - csharp
   - vb
-  name: SendAsync(Chat, MessageElement)
-  nameWithType: Extensions.SendAsync(Chat, MessageElement)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.Chat, HuajiTech.CoolQ.Messaging.MessageElement)
+  name: SendAsync(ISendable, MessageElement)
+  nameWithType: Extensions.SendAsync(ISendable, MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.SendAsync(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.MessageElement)
   type: Method
   source:
     remote:
@@ -406,11 +406,11 @@ items:
   summary: "\n以异步操作向指定聊天发送 <xref href=\"HuajiTech.CoolQ.Messaging.MessageElement\" data-throw-if-not-resolved=\"false\"></xref>。\n"
   example: []
   syntax:
-    content: public static Task<Message> SendAsync(this Chat chat, MessageElement element)
+    content: public static Task<Message> SendAsync(this ISendable sendable, MessageElement element)
     parameters:
-    - id: chat
-      type: HuajiTech.QQ.Chat
-      description: 目标聊天。
+    - id: sendable
+      type: HuajiTech.QQ.ISendable
+      description: 目标可发送对象。
     - id: element
       type: HuajiTech.CoolQ.Messaging.MessageElement
       description: 要发送的 <xref href="HuajiTech.CoolQ.Messaging.MessageElement" data-throw-if-not-resolved="false"></xref> 对象。
@@ -420,12 +420,12 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function SendAsync(chat As Chat, element As MessageElement) As Task(Of Message)
+      Public Shared Function SendAsync(sendable As ISendable, element As MessageElement) As Task(Of Message)
   overload: HuajiTech.CoolQ.Messaging.Extensions.SendAsync*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: <code data-dev-comment-type="paramref" class="paramref">chat</code> 为 <code>null</code>。
+    description: <code data-dev-comment-type="paramref" class="paramref">sendable</code> 为 <code>null</code>。
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: <code data-dev-comment-type="paramref" class="paramref">element</code> 为 <code>null</code>。
@@ -907,12 +907,12 @@ references:
   name: Send
   nameWithType: Extensions.Send
   fullName: HuajiTech.CoolQ.Messaging.Extensions.Send
-- uid: HuajiTech.QQ.Chat
-  commentId: T:HuajiTech.QQ.Chat
+- uid: HuajiTech.QQ.ISendable
+  commentId: T:HuajiTech.QQ.ISendable
   parent: HuajiTech.QQ
-  name: Chat
-  nameWithType: Chat
-  fullName: HuajiTech.QQ.Chat
+  name: ISendable
+  nameWithType: ISendable
+  fullName: HuajiTech.QQ.ISendable
 - uid: HuajiTech.CoolQ.Messaging.Extensions.SendAsync*
   commentId: Overload:HuajiTech.CoolQ.Messaging.Extensions.SendAsync
   name: SendAsync
