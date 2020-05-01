@@ -4,6 +4,7 @@ using HuajiTech.QQ;
 using HuajiTech.QQ.Events;
 using HuajiTech.UnmanagedExports;
 using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 
@@ -66,7 +67,7 @@ namespace HuajiTech.CoolQ.Events
             {
                 AdministratorEventType.Add => Instance.AdministratorAdded,
                 AdministratorEventType.Remove => Instance.AdministratorRemoved,
-                _ => throw new ArgumentOutOfRangeException(nameof(type))
+                _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(AdministratorEventType))
             };
 
             ev?.Invoke(Instance, e);
@@ -146,7 +147,7 @@ namespace HuajiTech.CoolQ.Events
             {
                 MuteEventType.Mute => Instance.GroupMuted,
                 MuteEventType.Unmute => Instance.GroupUnmuted,
-                _ => throw new ArgumentOutOfRangeException(nameof(type))
+                _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(MuteEventType))
             };
 
             ev?.Invoke(Instance, e);
@@ -237,7 +238,7 @@ namespace HuajiTech.CoolQ.Events
                     return eUnmute.Handled;
 
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(type));
+                    throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(MuteEventType));
             }
         }
     }

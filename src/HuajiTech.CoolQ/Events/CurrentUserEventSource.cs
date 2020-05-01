@@ -3,6 +3,7 @@ using HuajiTech.QQ;
 using HuajiTech.QQ.Events;
 using HuajiTech.UnmanagedExports;
 using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace HuajiTech.CoolQ.Events
@@ -67,7 +68,7 @@ namespace HuajiTech.CoolQ.Events
                 PrivateMessageSender.User => new User(senderNumber),
                 PrivateMessageSender.Group => new Member(senderNumber, new Group(0)),
                 PrivateMessageSender.Contact => new Contact(senderNumber),
-                _ => throw new ArgumentOutOfRangeException(nameof(type))
+                _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(PrivateMessageSender))
             };
 
             return OnMessageReceived(messageId, sender, sender, message);

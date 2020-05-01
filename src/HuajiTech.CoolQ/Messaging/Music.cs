@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace HuajiTech.CoolQ.Messaging
 {
@@ -30,7 +31,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Music"/> 对象的提供商。
         /// </summary>
-        /// <exception cref="ArgumentOutOfRangeException"><paramref name="value" /> 不是有效的 <see cref="MusicProvider"/> 值。</exception>
+        /// <exception cref="InvalidEnumArgumentException"><paramref name="value" /> 不是有效的 <see cref="MusicProvider"/> 值。</exception>
         public MusicProvider Provider
         {
             get => this["type"] switch
@@ -44,7 +45,7 @@ namespace HuajiTech.CoolQ.Messaging
             {
                 MusicProvider.QQ => "qq",
                 MusicProvider.Netease => "163",
-                _ => throw new ArgumentOutOfRangeException(nameof(value))
+                _ => throw new InvalidEnumArgumentException(nameof(value), (int)value, typeof(MusicProvider))
             };
         }
     }
