@@ -7,7 +7,7 @@ namespace HuajiTech.QQ.Events
     /// </summary>
     public class ContactAddedEventArgs : TimedEventArgs
     {
-        public ContactAddedEventArgs(DateTime time, Contact contact)
+        public ContactAddedEventArgs(DateTime time, IContact contact)
             : base(time)
         {
             Contact = contact;
@@ -16,6 +16,6 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取添加的联系人。
         /// </summary>
-        public Contact Contact { get; }
+        public IContact Contact { get; }
     }
 }

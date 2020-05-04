@@ -43,20 +43,9 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="format">返回的文件的格式。</param>
         /// <returns>当前 <see cref="Record"/> 对象表示的文件。</returns>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public FileInfo RequestFile(string format)
+        public FileInfo GetFile(string format)
         {
-            return QQ.PluginContext.Current.Bot.RequestRecord(FileName, format);
-        }
-
-        /// <summary>
-        /// 以异步操作请求当前 <see cref="Record"/> 对象表示的文件。
-        /// </summary>
-        /// <param name="format">返回的文件的格式。</param>
-        /// <returns>当前 <see cref="Record"/> 对象表示的文件。</returns>
-        /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public Task<FileInfo> RequestFileAsync(string format)
-        {
-            return Task.Run(() => RequestFile(format));
+            return QQ.PluginContext.CurrentContext.Bot.GetRecord(FileName, format);
         }
     }
 }

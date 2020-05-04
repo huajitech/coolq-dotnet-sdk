@@ -1,9 +1,10 @@
 using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.QQ;
 using System;
 
 namespace HuajiTech.CoolQ
 {
-    internal class User : QQ.User
+    internal class User : Chat, IUser
     {
         private UserInfo _info;
 
@@ -18,24 +19,24 @@ namespace HuajiTech.CoolQ
             _info = info;
         }
 
-        public override bool HasRequested => !(_info is null);
+        public virtual bool HasRequested => !(_info is null);
 
         public override string DisplayName => Nickname;
 
-        public override string Nickname => GetInfo().Nickname;
+        public virtual string Nickname => GetInfo().Nickname;
 
-        public override void GiveThumbsUp(int count) =>
-            NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
+        public void GiveThumbsUp(int count)
+            => NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
 
-        public override void Request()
+        public virtual void Request()
         {
             _info = null;
             GetInfo(true);
         }
 
-        public override void Refresh() => GetInfo(true, true);
+        public virtual void Refresh() => GetInfo(true, true);
 
-        public override QQ.Message Send(string message)
+        public override IMessage Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {

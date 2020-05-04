@@ -83,14 +83,17 @@
   
   <h1 id="HuajiTech_QQ_Logger" data-uid="HuajiTech.QQ.Logger" class="text-break">Logger 类
   </h1>
-  <div class="markdown level0 summary"><p>提供记录日志的方法。
-此类为抽象类。</p>
+  <div class="markdown level0 summary"><p>提供记录日志的方法。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Logger</span></div>
+  </div>
+  <div classs="implements">
+    <h5>&#23454;&#29616;</h5>
+    <div><a class="xref" href="HuajiTech.QQ.ILogger.html">ILogger</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -120,7 +123,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_Logger_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Logger</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Logger : ILogger</code></pre>
   </div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
@@ -129,12 +132,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_Log_HuajiTech_QQ_LogLevel_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.Log(HuajiTech.QQ.LogLevel%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L17">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L10">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_Log_" data-uid="HuajiTech.QQ.Logger.Log*"></a>
   <h4 id="HuajiTech_QQ_Logger_Log_HuajiTech_QQ_LogLevel_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.Log(HuajiTech.QQ.LogLevel,System.String,System.String)">Log(LogLevel, String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一条日志。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -153,20 +155,17 @@
       <tr>
         <td><a class="xref" href="HuajiTech.QQ.LogLevel.html">LogLevel</a></td>
         <td><span class="parametername">level</span></td>
-        <td><p>日志的等级。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -175,12 +174,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogDebug_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogDebug(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L30">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L14">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogDebug_" data-uid="HuajiTech.QQ.Logger.LogDebug*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogDebug_System_String_" data-uid="HuajiTech.QQ.Logger.LogDebug(System.String)">LogDebug(String)</h4>
-  <div class="markdown level1 summary"><p>记录一条调试信息。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -199,8 +197,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -209,12 +206,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogDebug_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogDebug(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L24">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L12">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogDebug_" data-uid="HuajiTech.QQ.Logger.LogDebug*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogDebug_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.LogDebug(System.String,System.String)">LogDebug(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一条调试信息。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -233,14 +229,12 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -249,12 +243,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogError_System_Exception_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogError(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L120">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L42">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogError_" data-uid="HuajiTech.QQ.Logger.LogError*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogError_System_Exception_" data-uid="HuajiTech.QQ.Logger.LogError(System.Exception)">LogError(Exception)</h4>
-  <div class="markdown level1 summary"><p>将异常记录为一个错误。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -273,8 +266,7 @@
       <tr>
         <td><span class="xref">System.Exception</span></td>
         <td><span class="parametername">exception</span></td>
-        <td><p>要记录的异常。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -283,12 +275,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogError_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogError(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L114">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L40">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogError_" data-uid="HuajiTech.QQ.Logger.LogError*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogError_System_String_" data-uid="HuajiTech.QQ.Logger.LogError(System.String)">LogError(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个错误。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -307,8 +298,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -317,12 +307,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogError_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogError(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L108">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L38">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogError_" data-uid="HuajiTech.QQ.Logger.LogError*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogError_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.LogError(System.String,System.String)">LogError(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个错误。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -341,14 +330,12 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -357,12 +344,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogFatal_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogFatal(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L126">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L44">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogFatal_" data-uid="HuajiTech.QQ.Logger.LogFatal*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogFatal_System_String_" data-uid="HuajiTech.QQ.Logger.LogFatal(System.String)">LogFatal(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个致命错误。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -381,8 +367,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>致命错误的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -391,12 +376,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogInfo_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogInfo(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L43">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogInfo_" data-uid="HuajiTech.QQ.Logger.LogInfo*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogInfo_System_String_" data-uid="HuajiTech.QQ.Logger.LogInfo(System.String)">LogInfo(String)</h4>
-  <div class="markdown level1 summary"><p>记录一条信息。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -415,8 +399,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -425,12 +408,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogInfo_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogInfo(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L37">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L16">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogInfo_" data-uid="HuajiTech.QQ.Logger.LogInfo*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogInfo_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.LogInfo(System.String,System.String)">LogInfo(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一条信息。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -449,14 +431,12 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -465,12 +445,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogReceiving_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogReceiving(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L69">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L26">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogReceiving_" data-uid="HuajiTech.QQ.Logger.LogReceiving*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogReceiving_System_String_" data-uid="HuajiTech.QQ.Logger.LogReceiving(System.String)">LogReceiving(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个接收。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -489,8 +468,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -499,12 +477,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogReceiving_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogReceiving(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L63">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L24">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogReceiving_" data-uid="HuajiTech.QQ.Logger.LogReceiving*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogReceiving_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.LogReceiving(System.String,System.String)">LogReceiving(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个接收。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -523,14 +500,12 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -539,12 +514,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogSending_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogSending(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L82">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L30">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogSending_" data-uid="HuajiTech.QQ.Logger.LogSending*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogSending_System_String_" data-uid="HuajiTech.QQ.Logger.LogSending(System.String)">LogSending(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个发送。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -563,8 +537,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -573,12 +546,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogSending_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogSending(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L76">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogSending_" data-uid="HuajiTech.QQ.Logger.LogSending*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogSending_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.LogSending(System.String,System.String)">LogSending(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个发送。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -597,14 +569,12 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -613,12 +583,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogSuccess_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogSuccess(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L56">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L22">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogSuccess_" data-uid="HuajiTech.QQ.Logger.LogSuccess*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogSuccess_System_String_" data-uid="HuajiTech.QQ.Logger.LogSuccess(System.String)">LogSuccess(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个成功。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -637,8 +606,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -647,12 +615,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogSuccess_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogSuccess(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L50">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L20">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogSuccess_" data-uid="HuajiTech.QQ.Logger.LogSuccess*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogSuccess_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.LogSuccess(System.String,System.String)">LogSuccess(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个成功。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -671,14 +638,12 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -687,12 +652,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogWarning_System_Exception_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogWarning(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L101">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogWarning_" data-uid="HuajiTech.QQ.Logger.LogWarning*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogWarning_System_Exception_" data-uid="HuajiTech.QQ.Logger.LogWarning(System.Exception)">LogWarning(Exception)</h4>
-  <div class="markdown level1 summary"><p>将异常记录为一个警告。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -711,8 +675,7 @@
       <tr>
         <td><span class="xref">System.Exception</span></td>
         <td><span class="parametername">exception</span></td>
-        <td><p>要记录的异常。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -721,12 +684,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogWarning_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogWarning(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L95">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L34">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogWarning_" data-uid="HuajiTech.QQ.Logger.LogWarning*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogWarning_System_String_" data-uid="HuajiTech.QQ.Logger.LogWarning(System.String)">LogWarning(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个警告。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -745,8 +707,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -755,12 +716,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger_LogWarning_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger.LogWarning(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L89">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L32">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_Logger_LogWarning_" data-uid="HuajiTech.QQ.Logger.LogWarning*"></a>
   <h4 id="HuajiTech_QQ_Logger_LogWarning_System_String_System_String_" data-uid="HuajiTech.QQ.Logger.LogWarning(System.String,System.String)">LogWarning(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个警告。</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
@@ -779,17 +739,19 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td><p>日志的类型。</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.ILogger.html">ILogger</a>
+  </div>
 </article>
           </div>
           
@@ -801,7 +763,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Logger.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L9" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Logger.cs/#L8" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

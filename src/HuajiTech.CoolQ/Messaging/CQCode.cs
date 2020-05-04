@@ -110,7 +110,7 @@ namespace HuajiTech.CoolQ.Messaging
 
         protected bool GetParameterAsBoolean(string key)
         {
-            return this[key] == "true";
+            return this[key] is "true";
         }
 
         protected int GetParameterAsInt32(string key)

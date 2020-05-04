@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ICurrentUserEventSource 接口
+    <title>IUserInfo 接口
    | HuajiTech.CoolQ &#25991;&#26723; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="ICurrentUserEventSource 接口
+    <meta name="title" content="IUserInfo 接口
    | HuajiTech.CoolQ &#25991;&#26723; ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -78,37 +78,53 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="HuajiTech.QQ.Events.ICurrentUserEventSource">
+            <article class="content wrap" id="_content" data-uid="HuajiTech.QQ.IUserInfo">
   
   
-  <h1 id="HuajiTech_QQ_Events_ICurrentUserEventSource" data-uid="HuajiTech.QQ.Events.ICurrentUserEventSource" class="text-break">ICurrentUserEventSource 接口
+  <h1 id="HuajiTech_QQ_IUserInfo" data-uid="HuajiTech.QQ.IUserInfo" class="text-break">IUserInfo 接口
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>定义用户信息。</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>&#32487;&#25215;&#25104;&#21592;</h5>
-    <div>
-      <a class="xref" href="HuajiTech.QQ.Events.IMessageEventSource.html#HuajiTech_QQ_Events_IMessageEventSource_MessageReceived">IMessageEventSource.MessageReceived</a>
-    </div>
-    <div>
-      <a class="xref" href="HuajiTech.QQ.Events.IMessageEventSource.html#HuajiTech_QQ_Events_IMessageEventSource_AnonymousMessageReceived">IMessageEventSource.AnonymousMessageReceived</a>
-    </div>
-    <div>
-      <a class="xref" href="HuajiTech.QQ.Events.IEntranceInvitationEventSource.html#HuajiTech_QQ_Events_IEntranceInvitationEventSource_EntranceInvited">IEntranceInvitationEventSource.EntranceInvited</a>
-    </div>
-    <div>
-      <a class="xref" href="HuajiTech.QQ.Events.IContactEventSource.html#HuajiTech_QQ_Events_IContactEventSource_ContactAdded">IContactEventSource.ContactAdded</a>
-    </div>
-    <div>
-      <a class="xref" href="HuajiTech.QQ.Events.IContactEventSource.html#HuajiTech_QQ_Events_IContactEventSource_ContactRequested">IContactEventSource.ContactRequested</a>
-    </div>
-  </div>
-  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.QQ.Events.html">HuajiTech.QQ.Events</a></h6>
+  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.QQ.html">HuajiTech.QQ</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
-  <h5 id="HuajiTech_QQ_Events_ICurrentUserEventSource_syntax">&#35821;&#27861;</h5>
+  <h5 id="HuajiTech_QQ_IUserInfo_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ICurrentUserEventSource : IMessageEventSource, IEntranceInvitationEventSource, IContactEventSource</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IUserInfo</code></pre>
   </div>
+  <h3 id="properties">&#23646;&#24615;
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IUserInfo_Nickname.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IUserInfo.Nickname%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IUserInfo.cs/#L11">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IUserInfo_Nickname_" data-uid="HuajiTech.QQ.IUserInfo.Nickname*"></a>
+  <h4 id="HuajiTech_QQ_IUserInfo_Nickname" data-uid="HuajiTech.QQ.IUserInfo.Nickname">Nickname</h4>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.QQ.IUser.html">IUser</a> 对象的昵称。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Nickname { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -117,10 +133,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_ICurrentUserEventSource.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.ICurrentUserEventSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IUserInfo.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IUserInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/ICurrentUserEventSource.cs/#L3" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IUserInfo.cs/#L6" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

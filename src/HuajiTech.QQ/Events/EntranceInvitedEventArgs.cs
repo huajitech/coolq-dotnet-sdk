@@ -8,7 +8,7 @@ namespace HuajiTech.QQ.Events
     public class EntranceInvitedEventArgs : TimedEventArgs
     {
         public EntranceInvitedEventArgs(
-            DateTime time, Group target, User inviter, Request invitation)
+            DateTime time, IGroup target, IUser inviter, IRequest invitation)
             : base(time)
         {
             Target = target;
@@ -19,16 +19,16 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取目标群。
         /// </summary>
-        public Group Target { get; }
+        public IGroup Target { get; }
 
         /// <summary>
         /// 获取邀请用户。
         /// </summary>
-        public User Inviter { get; }
+        public IUser Inviter { get; }
 
         /// <summary>
         /// 获取邀请。
         /// </summary>
-        public Request Invitation { get; }
+        public IRequest Invitation { get; }
     }
 }

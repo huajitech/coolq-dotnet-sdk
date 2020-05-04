@@ -20,9 +20,9 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="At"/> 对象的目标。
         /// </summary>
-        public QQ.User Target
+        public QQ.IUser Target
         {
-            get => QQ.PluginContext.Current.GetUser(GetParameterAsInt64("qq"));
+            get => QQ.PluginContext.CurrentContext.GetUser(GetParameterAsInt64("qq"));
             set => SetParameter("qq", value?.Number ?? default);
         }
     }

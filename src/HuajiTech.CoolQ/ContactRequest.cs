@@ -1,23 +1,27 @@
+using HuajiTech.QQ;
+
 namespace HuajiTech.CoolQ
 {
-    internal class ContactRequest : QQ.ContactRequest
+    internal class ContactRequest : IContactRequest
     {
         private readonly string _token;
 
-        internal ContactRequest(string token, string message)
+        public ContactRequest(string token, string message)
         {
             _token = token;
             Message = message;
         }
 
-        public override string Message { get; }
+        public string Message { get; }
 
-        public override void Accept(string alias) => Respond(Response.Accept, alias);
+        public void Accept(string alias) => Respond(Response.Accept, alias);
 
-        public override void Reject() => Respond(Response.Reject, null);
+        public void Accept() => Accept(null);
 
-        private void Respond(Response response, string alias) =>
-            NativeMethods.RespondContactRequest(
+        public void Reject() => Respond(Response.Reject, null);
+
+        private void Respond(Response response, string alias)
+            => NativeMethods.RespondContactRequest(
                 Bot.Instance.AuthCode, _token, response, alias).CheckError();
     }
 }

@@ -90,7 +90,10 @@
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Exception</span></div>
-    <div class="level2"><span class="xref">CoolQException</span></div>
+    <div class="level2"><span class="xref">System.SystemException</span></div>
+    <div class="level3"><span class="xref">System.InvalidOperationException</span></div>
+    <div class="level4"><a class="xref" href="HuajiTech.QQ.ApiException.html">ApiException</a></div>
+    <div class="level5"><span class="xref">CoolQException</span></div>
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
@@ -98,6 +101,9 @@
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.ApiException.html#HuajiTech_QQ_ApiException_ErrorValue">ApiException.ErrorValue</a>
+    </div>
     <div>
       <span class="xref">System.Exception.GetBaseException()</span>
     </div>
@@ -158,7 +164,7 @@
   <h5 id="HuajiTech_CoolQ_CoolQException_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class CoolQException : Exception, ISerializable</code></pre>
+public class CoolQException : ApiException, ISerializable</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -167,7 +173,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_CoolQException__ctor.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.CoolQException.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Exceptions/CoolQException.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/CoolQException.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_CoolQException__ctor_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_CoolQException__ctor" data-uid="HuajiTech.CoolQ.CoolQException.#ctor">CoolQException()</h4>
@@ -182,7 +188,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_CoolQException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.CoolQException.%23ctor(System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Exceptions/CoolQException.cs/#L32">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/CoolQException.cs/#L32">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_CoolQException__ctor_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_CoolQException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">CoolQException(SerializationInfo, StreamingContext)</h4>
@@ -219,7 +225,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_CoolQException__ctor_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.CoolQException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Exceptions/CoolQException.cs/#L12">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/CoolQException.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_CoolQException__ctor_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_CoolQException__ctor_System_String_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor(System.String)">CoolQException(String)</h4>
@@ -251,7 +257,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_CoolQException__ctor_System_String_System_Exception_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.CoolQException.%23ctor(System.String%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Exceptions/CoolQException.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/CoolQException.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_CoolQException__ctor_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_CoolQException__ctor_System_String_System_Exception_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor(System.String,System.Exception)">CoolQException(String, Exception)</h4>
@@ -288,7 +294,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_CoolQException__ctor_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.CoolQException.%23ctor(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Exceptions/CoolQException.cs/#L17">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/CoolQException.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_CoolQException__ctor_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_CoolQException__ctor_System_String_System_Int32_" data-uid="HuajiTech.CoolQ.CoolQException.#ctor(System.String,System.Int32)">CoolQException(String, Int32)</h4>
@@ -296,7 +302,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CoolQException(string message, int returnValue)</code></pre>
+    <pre><code class="lang-csharp hljs">public CoolQException(string message, int errorValue)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,39 +321,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">returnValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">&#23646;&#24615;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_CoolQException_ReturnValue.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.CoolQException.ReturnValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Exceptions/CoolQException.cs/#L37">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_CoolQException_ReturnValue_" data-uid="HuajiTech.CoolQ.CoolQException.ReturnValue*"></a>
-  <h4 id="HuajiTech_CoolQ_CoolQException_ReturnValue" data-uid="HuajiTech.CoolQ.CoolQException.ReturnValue">ReturnValue</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? ReturnValue { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">errorValue</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -358,10 +332,22 @@ public class CoolQException : Exception, ISerializable</code></pre>
   </div>
   <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
   <div>
-      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsWarning_System_Exception_">CurrentPluginContextExtensions.LogAsWarning(Exception)</a>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsWarning__1___0_HuajiTech_QQ_ILogger_">CurrentPluginContextExtensions.LogAsWarning&lt;TException&gt;(TException, ILogger)</a>
   </div>
   <div>
-      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsError_System_Exception_">CurrentPluginContextExtensions.LogAsError(Exception)</a>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsWarning__1___0_HuajiTech_QQ_PluginContext_">CurrentPluginContextExtensions.LogAsWarning&lt;TException&gt;(TException, PluginContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsWarning__1___0_">CurrentPluginContextExtensions.LogAsWarning&lt;TException&gt;(TException)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsError__1___0_HuajiTech_QQ_ILogger_">CurrentPluginContextExtensions.LogAsError&lt;TException&gt;(TException, ILogger)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsError__1___0_HuajiTech_QQ_PluginContext_">CurrentPluginContextExtensions.LogAsError&lt;TException&gt;(TException, PluginContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_LogAsError__1___0_">CurrentPluginContextExtensions.LogAsError&lt;TException&gt;(TException)</a>
   </div>
 </article>
           </div>
@@ -374,7 +360,7 @@ public class CoolQException : Exception, ISerializable</code></pre>
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_CoolQException.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.CoolQException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Exceptions/CoolQException.cs/#L9" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/CoolQException.cs/#L10" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

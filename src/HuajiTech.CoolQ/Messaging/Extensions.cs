@@ -1,7 +1,6 @@
 using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace HuajiTech.CoolQ.Messaging
 {
@@ -15,7 +14,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="target">At (@) 的目标。</param>
         /// <returns>目标为指定用户的 <see cref="Messaging.At"/> 类的新实例。</returns>
-        public static At At(this QQ.User target)
+        public static At At(this IUser target)
         {
             return new At
             {
@@ -26,10 +25,10 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 将 <see cref="Message"/> 对象解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
-        /// <param name="message">一个 <see cref="Message"/>对象，该 <see cref="Message"/> 对象的 <see cref="QQ.Message.Content"/> 属性的值为要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
+        /// <param name="message">一个 <see cref="Message"/>对象，该 <see cref="Message"/> 对象的 <see cref="QQ.IMessage.Content"/> 属性的值为要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
         /// <param name="useEmojiCQCode">如果要在返回的 <see cref="ComplexMessage"/> 对象中包含 <see cref="Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
-        /// <returns>与 <see cref="QQ.Message.Content"/> 等效的 <see cref="ComplexMessage"/> 对象。</returns>
-        public static ComplexMessage Parse(this QQ.Message message, bool useEmojiCQCode = false)
+        /// <returns>与 <see cref="QQ.IMessage.Content"/> 等效的 <see cref="ComplexMessage"/> 对象。</returns>
+        public static ComplexMessage Parse(this IMessage message, bool useEmojiCQCode = false)
         {
             return ComplexMessage.Parse(message?.Content, useEmojiCQCode);
         }
@@ -55,7 +54,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public static QQ.Message Send(this ISendable sendable, ComplexMessage message)
+        public static IMessage Send(this ISendable sendable, ComplexMessage message)
         {
             if (sendable is null)
             {
@@ -71,31 +70,6 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 以异步操作向指定聊天发送 <see cref="ComplexMessage"/>。
-        /// </summary>
-        /// <param name="sendable">目标可发送对象。</param>
-        /// <param name="message">要发送的 <see cref="ComplexMessage"/> 对象。</param>
-        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
-        /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static Task<QQ.Message> SendAsync(this ISendable sendable, ComplexMessage message)
-        {
-            if (sendable is null)
-            {
-                throw new ArgumentNullException(nameof(sendable));
-            }
-
-            if (message is null)
-            {
-                throw new ArgumentNullException(nameof(message));
-            }
-
-            return sendable.SendAsync(message.ToString());
-        }
-
-        /// <summary>
         /// 向指定聊天发送 <see cref="MessageElement"/>。
         /// </summary>
         /// <param name="sendable">目标可发送对象。</param>
@@ -105,7 +79,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
         /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static QQ.Message Send(this ISendable sendable, MessageElement element)
+        public static IMessage Send(this ISendable sendable, MessageElement element)
         {
             if (sendable is null)
             {
@@ -118,31 +92,6 @@ namespace HuajiTech.CoolQ.Messaging
             }
 
             return sendable.Send(element.ToString());
-        }
-
-        /// <summary>
-        /// 以异步操作向指定聊天发送 <see cref="MessageElement"/>。
-        /// </summary>
-        /// <param name="sendable">目标可发送对象。</param>
-        /// <param name="element">要发送的 <see cref="MessageElement"/> 对象。</param>
-        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
-        /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
-        /// <exception cref="CoolQException">酷Q返回了指示发送失败的值。</exception>
-        public static Task<QQ.Message> SendAsync(this ISendable sendable, MessageElement element)
-        {
-            if (sendable is null)
-            {
-                throw new ArgumentNullException(nameof(sendable));
-            }
-
-            if (element is null)
-            {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            return sendable.SendAsync(element.ToString());
         }
     }
 }

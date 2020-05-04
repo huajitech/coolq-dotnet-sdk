@@ -142,7 +142,7 @@ namespace HuajiTech.CoolQ.Messaging
                 return new ComplexMessage();
             }
 
-            if (messages.Count() == 1)
+            if (messages.Count() is 1)
             {
                 return messages.First();
             }

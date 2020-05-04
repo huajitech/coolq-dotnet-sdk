@@ -7,7 +7,7 @@ namespace HuajiTech.QQ.Events
     /// </summary>
     public class GroupMuteEventArgs : TimedEventArgs
     {
-        public GroupMuteEventArgs(DateTime time, Group source, Member @operator)
+        public GroupMuteEventArgs(DateTime time, IGroup source, IMember @operator)
             : base(time)
         {
             Source = source;
@@ -17,11 +17,11 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取来源群。
         /// </summary>
-        public Group Source { get; }
+        public IGroup Source { get; }
 
         /// <summary>
         /// 获取操作者。
         /// </summary>
-        public Member Operator { get; }
+        public IMember Operator { get; }
     }
 }

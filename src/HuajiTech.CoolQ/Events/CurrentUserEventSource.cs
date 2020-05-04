@@ -33,7 +33,7 @@ namespace HuajiTech.CoolQ.Events
         public event EventHandler<ContactRequestedEventArgs> ContactRequested;
 
         private static bool OnMessageReceived(
-            int messageId, Chat source, QQ.User sender, string message)
+            int messageId, Chat source, IUser sender, string message)
         {
             var e = new MessageReceivedEventArgs(
                 new Message(messageId, message), source, sender);
@@ -44,7 +44,7 @@ namespace HuajiTech.CoolQ.Events
         }
 
         private static bool OnAnonymousMessageReceived(
-            int messageId, QQ.Group source, QQ.AnonymousMember sender, string message)
+            int messageId, IGroup source, IAnonymousMember sender, string message)
         {
             var e = new AnonymousMessageReceivedEventArgs(
                 new Message(messageId, message), source, sender);
@@ -63,7 +63,7 @@ namespace HuajiTech.CoolQ.Events
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             int font)
         {
-            QQ.User sender = type switch
+            var sender = type switch
             {
                 PrivateMessageSender.User => new User(senderNumber),
                 PrivateMessageSender.Group => new Member(senderNumber, new Group(0)),
@@ -87,7 +87,7 @@ namespace HuajiTech.CoolQ.Events
         {
             var group = new Group(sourceNumber);
 
-            if (senderAnonymousInfo.Length == 0)
+            if (senderAnonymousInfo.Length is 0)
             {
                 return OnMessageReceived(
                     messageId, group, new Member(senderNumber, group), message);

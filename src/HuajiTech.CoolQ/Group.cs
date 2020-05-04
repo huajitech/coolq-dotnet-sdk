@@ -1,11 +1,12 @@
 using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace HuajiTech.CoolQ
 {
-    internal partial class Group : QQ.Group
+    internal partial class Group : Chat, IGroup
     {
         private readonly string _name;
         private GroupInfo _info;
@@ -23,23 +24,23 @@ namespace HuajiTech.CoolQ
 
         public override string DisplayName => Name;
 
-        public override bool HasRequested => !(_info is null);
+        public bool HasRequested => !(_info is null);
 
-        public override int MemberCapacity => GetInfo().MemberCapacity;
+        public int MemberCapacity => GetInfo().MemberCapacity;
 
-        public override int MemberCount => GetInfo().MemberCount;
+        public int MemberCount => GetInfo().MemberCount;
 
-        public override string Name => _name ?? GetInfo().Name;
+        public string Name => _name ?? GetInfo().Name;
 
-        public override void DisableAnonymous() =>
-            NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
+        public void DisableAnonymous()
+            => NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
 
-        public override void Disband() => Leave(true);
+        public void Disband() => Leave(true);
 
-        public override void EnableAnonymous() =>
-            NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, true).CheckError();
+        public void EnableAnonymous()
+            => NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, true).CheckError();
 
-        public override IReadOnlyCollection<QQ.Member> GetMembers()
+        public IReadOnlyCollection<IMember> GetMembers()
         {
             using var reader = new MemberInfoReader(
                 NativeMethods.GetGroupMembersBase64(Bot.Instance.AuthCode, Number));
@@ -48,20 +49,20 @@ namespace HuajiTech.CoolQ
                 .ToList();
         }
 
-        public override void Leave() => Leave(false);
+        public void Leave() => Leave(false);
 
-        public override void Mute() =>
-            NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
+        public void Mute()
+            => NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
 
-        public override void Refresh() => GetInfo(true, true);
+        public void Refresh() => GetInfo(true, true);
 
-        public override void Request()
+        public void Request()
         {
             _info = null;
             GetInfo(true);
         }
 
-        public override QQ.Message Send(string message)
+        public override IMessage Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -73,8 +74,8 @@ namespace HuajiTech.CoolQ
             return new Message(id, message);
         }
 
-        public override void Unmute() =>
-            NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, false).CheckError();
+        public void Unmute()
+            => NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, false).CheckError();
 
         private GroupInfo GetInfo(bool throwException = false, bool refresh = false)
         {
@@ -95,7 +96,7 @@ namespace HuajiTech.CoolQ
             return _info;
         }
 
-        private void Leave(bool disband) =>
-            NativeMethods.LeaveGroup(Bot.Instance.AuthCode, Number, disband).CheckError();
+        private void Leave(bool disband)
+            => NativeMethods.LeaveGroup(Bot.Instance.AuthCode, Number, disband).CheckError();
     }
 }

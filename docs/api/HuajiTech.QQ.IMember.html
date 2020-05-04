@@ -86,11 +86,89 @@
   <div class="markdown level0 summary"><p>定义成员。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IUser.html#HuajiTech_QQ_IUser_GiveThumbsUp_System_Int32_">IUser.GiveThumbsUp(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_DisplayName">IChattable.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_Number">IChattable.Number</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.ISendable.html#HuajiTech_QQ_ISendable_Send_System_String_">ISendable.Send(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.IEquatable&lt;HuajiTech.QQ.IChattable&gt;.Equals(HuajiTech.QQ.IChattable)</span>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_HasRequested">IRequestable.HasRequested</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_Request">IRequestable.Request()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRefreshable.html#HuajiTech_QQ_IRefreshable_Refresh">IRefreshable.Refresh()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_Age">IMemberInfo.Age</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_CanEditAlias">IMemberInfo.CanEditAlias</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_CustomTitle">IMemberInfo.CustomTitle</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_TimeEntered">IMemberInfo.TimeEntered</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_Gender">IMemberInfo.Gender</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_HasBadRecord">IMemberInfo.HasBadRecord</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_IsAdministrator">IMemberInfo.IsAdministrator</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_LastSpeakTime">IMemberInfo.LastSpeakTime</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_Level">IMemberInfo.Level</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_Location">IMemberInfo.Location</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMemberInfo.html#HuajiTech_QQ_IMemberInfo_Role">IMemberInfo.Role</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IUserInfo.html#HuajiTech_QQ_IUserInfo_Nickname">IUserInfo.Nickname</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IAliased.html#HuajiTech_QQ_IAliased_Alias">IAliased.Alias</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.ITimedMuteable.html#HuajiTech_QQ_ITimedMuteable_Mute_System_TimeSpan_">ITimedMuteable.Mute(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMuteable.html#HuajiTech_QQ_IMuteable_Mute">IMuteable.Mute()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMuteable.html#HuajiTech_QQ_IMuteable_Unmute">IMuteable.Unmute()</a>
+    </div>
+    <div>
+      <span class="xref">System.IEquatable&lt;HuajiTech.QQ.IMember&gt;.Equals(HuajiTech.QQ.IMember)</span>
+    </div>
+  </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.QQ.html">HuajiTech.QQ</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_IMember_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IMember</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IMember : IUser, IChattable, ISendable, IEquatable&lt;IChattable&gt;, IRequestable, IRefreshable, IMemberInfo, IUserInfo, IAliased, ITimedMuteable, IMuteable, IEquatable&lt;IMember&gt;</code></pre>
   </div>
   <h3 id="properties">&#23646;&#24615;
   </h3>
@@ -99,16 +177,16 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IMember_Group.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IMember.Group%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L11">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_IMember_Group_" data-uid="HuajiTech.QQ.IMember.Group*"></a>
   <h4 id="HuajiTech_QQ_IMember_Group" data-uid="HuajiTech.QQ.IMember.Group">Group</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象的所在群。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象的所属 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IChattable Group { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IGroup Group { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,11 +198,175 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="HuajiTech.QQ.IChattable.html">IChattable</a></td>
+        <td><a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">&#26041;&#27861;
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IMember_Kick_System_Boolean_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IMember.Kick(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L19">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IMember_Kick_" data-uid="HuajiTech.QQ.IMember.Kick*"></a>
+  <h4 id="HuajiTech_QQ_IMember_Kick_System_Boolean_" data-uid="HuajiTech.QQ.IMember.Kick(System.Boolean)">Kick(Boolean)</h4>
+  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象踢出所在群。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Kick(bool disallowRejoin = false)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disallowRejoin</span></td>
+        <td><p>如果不再接收当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象的 <a class="xref" href="HuajiTech.QQ.IEntranceRequest.html">IEntranceRequest</a>，则为 <code>true</code>；否则为 <code>false</code>。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IMember_SetAlias_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IMember.SetAlias(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L25">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IMember_SetAlias_" data-uid="HuajiTech.QQ.IMember.SetAlias*"></a>
+  <h4 id="HuajiTech_QQ_IMember_SetAlias_System_String_" data-uid="HuajiTech.QQ.IMember.SetAlias(System.String)">SetAlias(String)</h4>
+  <div class="markdown level1 summary"><p>设置当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象的 <a class="xref" href="HuajiTech.QQ.IAliased.html#HuajiTech_QQ_IAliased_Alias">Alias</a>。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetAlias(string alias)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>要设置的 <a class="xref" href="HuajiTech.QQ.IAliased.html#HuajiTech_QQ_IAliased_Alias">Alias</a> 的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IMember_SetAsAdministrator.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IMember.SetAsAdministrator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L30">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IMember_SetAsAdministrator_" data-uid="HuajiTech.QQ.IMember.SetAsAdministrator*"></a>
+  <h4 id="HuajiTech_QQ_IMember_SetAsAdministrator" data-uid="HuajiTech.QQ.IMember.SetAsAdministrator">SetAsAdministrator()</h4>
+  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象设为 <a class="xref" href="HuajiTech.QQ.IMember.html#HuajiTech_QQ_IMember_Group">Group</a> 的管理员。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetAsAdministrator()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IMember_SetCustomTitle_HuajiTech_QQ_CustomTitle_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IMember.SetCustomTitle(HuajiTech.QQ.CustomTitle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IMember_SetCustomTitle_" data-uid="HuajiTech.QQ.IMember.SetCustomTitle*"></a>
+  <h4 id="HuajiTech_QQ_IMember_SetCustomTitle_HuajiTech_QQ_CustomTitle_" data-uid="HuajiTech.QQ.IMember.SetCustomTitle(HuajiTech.QQ.CustomTitle)">SetCustomTitle(CustomTitle)</h4>
+  <div class="markdown level1 summary"><p>设置当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象的 <a class="xref" href="HuajiTech.QQ.CustomTitle.html">CustomTitle</a>。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetCustomTitle(CustomTitle title)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.QQ.CustomTitle.html">CustomTitle</a></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>要设置的 <a class="xref" href="HuajiTech.QQ.CustomTitle.html">CustomTitle</a> 的值。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IMember_UnsetAsAdministrator.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IMember.UnsetAsAdministrator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IMember_UnsetAsAdministrator_" data-uid="HuajiTech.QQ.IMember.UnsetAsAdministrator*"></a>
+  <h4 id="HuajiTech_QQ_IMember_UnsetAsAdministrator" data-uid="HuajiTech.QQ.IMember.UnsetAsAdministrator">UnsetAsAdministrator()</h4>
+  <div class="markdown level1 summary"><p>解除当前 <a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a> 对象在 <a class="xref" href="HuajiTech.QQ.IMember.html#HuajiTech_QQ_IMember_Group">Group</a> 的管理员身份。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UnsetAsAdministrator()</code></pre>
+  </div>
+  <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_QQ_IUser_">Extensions.At(IUser)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_">Extensions.Send(ISendable, ComplexMessage)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_">Extensions.Send(ISendable, MessageElement)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_AsUser_HuajiTech_QQ_IUser_HuajiTech_QQ_PluginContext_">CurrentPluginContextExtensions.AsUser(IUser, PluginContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_AsUser_HuajiTech_QQ_IUser_">CurrentPluginContextExtensions.AsUser(IUser)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_AsMemberOf_HuajiTech_QQ_IUser_HuajiTech_QQ_IGroup_HuajiTech_QQ_PluginContext_">CurrentPluginContextExtensions.AsMemberOf(IUser, IGroup, PluginContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_AsMemberOf_HuajiTech_QQ_IUser_HuajiTech_QQ_IGroup_">CurrentPluginContextExtensions.AsMemberOf(IUser, IGroup)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_AsMemberOf_HuajiTech_QQ_IUser_System_Int64_HuajiTech_QQ_PluginContext_">CurrentPluginContextExtensions.AsMemberOf(IUser, Int64, PluginContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.QQ.CurrentPluginContextExtensions.html#HuajiTech_QQ_CurrentPluginContextExtensions_AsMemberOf_HuajiTech_QQ_IUser_System_Int64_">CurrentPluginContextExtensions.AsMemberOf(IUser, Int64)</a>
+  </div>
 </article>
           </div>
           
@@ -136,7 +378,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IMember.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IMember%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L6" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IMember.cs/#L8" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

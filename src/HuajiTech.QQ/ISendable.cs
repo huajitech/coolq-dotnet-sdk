@@ -11,14 +11,7 @@ namespace HuajiTech.QQ
         /// 向当前 <see cref="ISendable"/> 对象发送指定的字符串。
         /// </summary>
         /// <param name="message">要发送的字符串。</param>
-        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        Message Send(string message);
-
-        /// <summary>
-        /// 以异步操作向当前 <see cref="ISendable"/> 对象发送指定的字符串。
-        /// </summary>
-        /// <param name="message">要发送的字符串。</param>
-        /// <returns>一个 <see cref="Message"/> 对象，表示已发送的消息。</returns>
-        Task<Message> SendAsync(string message);
+        /// <returns>一个 <see cref="IMessage"/> 对象，表示已发送的消息。</returns>
+        IMessage Send(string message);
     }
 }

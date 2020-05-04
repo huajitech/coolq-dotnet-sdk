@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace HuajiTech.CoolQ
 {
@@ -48,11 +47,11 @@ namespace HuajiTech.CoolQ
 
         public DirectoryInfo DataDirectory => _dataDirectory.Value;
 
-        public QQ.CurrentUser CurrentUser => _currentUser.Value;
+        public ICurrentUser CurrentUser => _currentUser.Value;
 
-        public QQ.Logger Logger { get; }
+        public ILogger Logger { get; }
 
-        internal ICollection<Plugin> Apps { get; private set; }
+        internal List<IPlugin> Plugins { get; } = new List<IPlugin>();
 
         private static string GetAppId()
         {
@@ -60,28 +59,23 @@ namespace HuajiTech.CoolQ
 
             if (attr is null)
             {
-                throw new EntryPointNotFoundException(Resources.AppIdNotFound);
+                throw new InvalidOperationException(Resources.AppIdNotFound);
             }
 
             return attr.Id;
         }
 
-        public FileInfo RequestImage(string fileName)
+        public FileInfo GetImage(string fileName)
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileName));
             }
 
-            return new FileInfo(NativeMethods.RequestImage(AuthCode, fileName).CheckError());
+            return new FileInfo(NativeMethods.GetImage(AuthCode, fileName).CheckError());
         }
 
-        public Task<FileInfo> RequestImageAsync(string fileName)
-        {
-            return Task.Run(() => RequestImage(fileName));
-        }
-
-        public FileInfo RequestRecord(string fileName, string fileFormat)
+        public FileInfo GetRecord(string fileName, string fileFormat)
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
@@ -93,12 +87,7 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileFormat));
             }
 
-            return new FileInfo(NativeMethods.RequestRecord(AuthCode, fileName, fileFormat).CheckError());
-        }
-
-        public Task<FileInfo> RequestRecordAsync(string fileName, string fileFormat)
-        {
-            return Task.Run(() => RequestRecord(fileName, fileFormat));
+            return new FileInfo(NativeMethods.GetRecord(AuthCode, fileName, fileFormat).CheckError());
         }
     }
 }

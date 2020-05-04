@@ -8,7 +8,7 @@ namespace HuajiTech.QQ.Events
     public class ContactRequestedEventArgs : TimedEventArgs
     {
         public ContactRequestedEventArgs(
-            DateTime time, User requester, ContactRequest request)
+            DateTime time, IUser requester, IContactRequest request)
             : base(time)
         {
             Requester = requester;
@@ -18,11 +18,11 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取请求用户。
         /// </summary>
-        public User Requester { get; }
+        public IUser Requester { get; }
 
         /// <summary>
         /// 获取请求。
         /// </summary>
-        public ContactRequest Request { get; }
+        public IContactRequest Request { get; }
     }
 }

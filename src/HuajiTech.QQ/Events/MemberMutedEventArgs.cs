@@ -8,7 +8,7 @@ namespace HuajiTech.QQ.Events
     public class MemberMutedEventArgs : GroupEventArgs
     {
         public MemberMutedEventArgs(
-            DateTime time, Group source, Member @operator, Member operatee, TimeSpan duration)
+            DateTime time, IGroup source, IMember @operator, IMember operatee, TimeSpan duration)
             : base(time, source, @operator, operatee)
         {
             Duration = duration;

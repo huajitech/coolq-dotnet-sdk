@@ -1,26 +1,31 @@
 using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.QQ;
 using System;
 
 namespace HuajiTech.CoolQ
 {
-    internal class AnonymousMember : QQ.AnonymousMember
+    internal class AnonymousMember : IAnonymousMember
     {
         public static readonly TimeSpan MaxMuteDuration = TimeSpan.FromDays(30);
 
         private readonly string _rawInfo;
         private AnonymousMemberInfo _info;
 
-        internal AnonymousMember(string rawInfo, QQ.Group group)
-            : base(group)
+        public AnonymousMember(string rawInfo, QQ.IGroup group)
         {
             _rawInfo = rawInfo;
+            Group = group;
         }
 
-        public override long Id => GetInfo().Id;
+        public long Id => GetInfo().Id;
 
-        public override string Name => GetInfo().Name;
+        public string Name => GetInfo().Name;
 
-        public override void Mute(TimeSpan duration)
+        public IGroup Group { get; }
+
+        public bool Equals(IAnonymousMember other) => other?.Id == Id && Group.Equals(other?.Group);
+
+        public void Mute(TimeSpan duration)
         {
             if (duration <= TimeSpan.Zero)
             {
@@ -31,9 +36,11 @@ namespace HuajiTech.CoolQ
                 Bot.Instance.AuthCode, Group.Number, _rawInfo, (long)duration.TotalSeconds).CheckError();
         }
 
-        public override void Mute() => Mute(MaxMuteDuration);
+        public void Mute() => Mute(MaxMuteDuration);
 
-        public override void Unmute() => Mute(TimeSpan.Zero);
+        public void Unmute()
+            => NativeMethods.MuteAnonymousMember(
+                Bot.Instance.AuthCode, Group.Number, _rawInfo, 0).CheckError();
 
         private AnonymousMemberInfo GetInfo()
         {

@@ -60,7 +60,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new GroupEventArgs(
                 Timestamp.ToDateTime(timestampChanged),
                 source,
-                source.GetMembers().Single(member => member.Role == MemberRole.Owner),
+                source.GetMembers().Single(member => member.Role is MemberRole.Owner),
                 new Member(affecteeNumber, source));
 
             var ev = type switch
@@ -85,7 +85,7 @@ namespace HuajiTech.CoolQ.Events
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            if (type != EntranceEventType.Request)
+            if (!(type is EntranceEventType.Request))
             {
                 return false;
             }
@@ -165,10 +165,10 @@ namespace HuajiTech.CoolQ.Events
             long affecteeNumber)
         {
             var source = new Group(sourceNumber);
-            var isPassive = type == MemberEventType.Passive;
+            var isPassive = type is MemberEventType.Passive;
 
             var e = new GroupMemberEventArgs(
-                type == MemberEventType.Passive,
+                type is MemberEventType.Passive,
                 Timestamp.ToDateTime(timestampJoined),
                 source,
                 isPassive ? null : new Member(operatorNumber, source),
@@ -189,7 +189,7 @@ namespace HuajiTech.CoolQ.Events
             long affecteeNumber)
         {
             var source = new Group(sourceNumber);
-            var isPassive = type == MemberEventType.Passive;
+            var isPassive = type is MemberEventType.Passive;
 
             var e = new GroupMemberEventArgs(
                 isPassive,
@@ -213,7 +213,7 @@ namespace HuajiTech.CoolQ.Events
             long affecteeNumber,
             long secondsMuted)
         {
-            if (affecteeNumber == default)
+            if (affecteeNumber is 0)
             {
                 return false;
             }

@@ -8,7 +8,7 @@ namespace HuajiTech.QQ.Events
     public class GroupMemberEventArgs : GroupEventArgs
     {
         public GroupMemberEventArgs(
-            bool isPassive, DateTime time, Group source, Member @operator, Member operatee)
+            bool isPassive, DateTime time, IGroup source, IMember @operator, IMember operatee)
             : base(time, source, @operator, operatee)
         {
             IsPassive = isPassive;

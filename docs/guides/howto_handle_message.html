@@ -86,7 +86,7 @@ if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 Group(0
 if (e.Source is Contact) { } // 好友消息。
 </code></pre>
 <h2 id="使用-复合消息">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>（复合消息）</h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_QQ_Message_System_Boolean_">Parse(Message, Boolean)</a> 扩展方法解析消息。</p>
+<p>通过 @&quot;HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message,System.Boolean)&quot; 扩展方法解析消息。</p>
 <pre><code class="lang-csharp">var message = e.Message.Parse();
 </code></pre>
 <p>获取消息中的所有纯文本拼接成的字符串。</p>
@@ -98,7 +98,7 @@ if (e.Source is Contact) { } // 好友消息。
     [...]
 }
 </code></pre>
-<p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_QQ_User_">At(User)</a> @ 消息的发送者。</p>
+<p>使用 @&quot;HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)&quot; @ 消息的发送者。</p>
 <pre><code class="lang-csharp">e.Source.Send(e.Sender.At() + [...])
 </code></pre>
 <p>解构复合消息。</p>
@@ -112,7 +112,7 @@ if (e.Source is Contact) { } // 好友消息。
 }
 </code></pre>
 <h2 id="使用正则消息">使用正则消息</h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_QQ_Message_">RegexDecode(Message)</a> 扩展方法解码正则消息。</p>
+<p>通过 @&quot;HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.Message)&quot; 扩展方法解码正则消息。</p>
 <pre><code class="lang-csharp">var args = e.Message.RegexDecode();
 </code></pre>
 <p>获取 <code>Name</code> 键的值。</p>

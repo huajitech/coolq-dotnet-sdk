@@ -19,20 +19,11 @@ namespace HuajiTech.CoolQ.DataExchange
 
         protected MemoryStream MemoryStream { get; }
 
-        protected static short ToBigEndian(short littleEndian)
-        {
-            return IPAddress.HostToNetworkOrder(littleEndian);
-        }
+        protected static short ToBigEndian(short littleEndian) => IPAddress.HostToNetworkOrder(littleEndian);
 
-        protected static int ToBigEndian(int littleEndian)
-        {
-            return IPAddress.HostToNetworkOrder(littleEndian);
-        }
+        protected static int ToBigEndian(int littleEndian) => IPAddress.HostToNetworkOrder(littleEndian);
 
-        protected static long ToBigEndian(long littleEndian)
-        {
-            return IPAddress.HostToNetworkOrder(littleEndian);
-        }
+        protected static long ToBigEndian(long littleEndian) => IPAddress.HostToNetworkOrder(littleEndian);
 
         public void Dispose()
         {
@@ -40,10 +31,7 @@ namespace HuajiTech.CoolQ.DataExchange
             BinaryWriter.Dispose();
         }
 
-        public string GetBase64()
-        {
-            return Convert.ToBase64String(MemoryStream.ToArray());
-        }
+        public string GetBase64() => Convert.ToBase64String(MemoryStream.ToArray());
 
         public abstract void Write(T value);
 
@@ -54,19 +42,10 @@ namespace HuajiTech.CoolQ.DataExchange
             BinaryWriter.Write(bytes);
         }
 
-        protected void Write(string str)
-        {
-            Write(Encoding.GetBytes(str));
-        }
+        protected void Write(string str) => Write(Encoding.GetBytes(str));
 
-        protected void Write(short value)
-        {
-            BinaryWriter.Write(ToBigEndian(value));
-        }
+        protected void Write(short value) => BinaryWriter.Write(ToBigEndian(value));
 
-        protected void Write(int value)
-        {
-            BinaryWriter.Write(ToBigEndian(value));
-        }
+        protected void Write(int value) => BinaryWriter.Write(ToBigEndian(value));
     }
 }

@@ -86,84 +86,107 @@
   <div class="markdown level0 summary"><p>定义群。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_DisplayName">IChattable.DisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_Number">IChattable.Number</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.ISendable.html#HuajiTech_QQ_ISendable_Send_System_String_">ISendable.Send(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.IEquatable&lt;HuajiTech.QQ.IChattable&gt;.Equals(HuajiTech.QQ.IChattable)</span>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IGroupInfo.html#HuajiTech_QQ_IGroupInfo_MemberCapacity">IGroupInfo.MemberCapacity</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IGroupInfo.html#HuajiTech_QQ_IGroupInfo_MemberCount">IGroupInfo.MemberCount</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IGroupInfo.html#HuajiTech_QQ_IGroupInfo_Name">IGroupInfo.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMuteable.html#HuajiTech_QQ_IMuteable_Mute">IMuteable.Mute()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IMuteable.html#HuajiTech_QQ_IMuteable_Unmute">IMuteable.Unmute()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_HasRequested">IRequestable.HasRequested</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_Request">IRequestable.Request()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRefreshable.html#HuajiTech_QQ_IRefreshable_Refresh">IRefreshable.Refresh()</a>
+    </div>
+  </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.QQ.html">HuajiTech.QQ</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_IGroup_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IGroup</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGroup : IChattable, ISendable, IEquatable&lt;IChattable&gt;, IGroupInfo, IMuteable, IRequestable, IRefreshable</code></pre>
   </div>
-  <h3 id="properties">&#23646;&#24615;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_MemberCapacity.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.MemberCapacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L14">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_QQ_IGroup_MemberCapacity_" data-uid="HuajiTech.QQ.IGroup.MemberCapacity*"></a>
-  <h4 id="HuajiTech_QQ_IGroup_MemberCapacity" data-uid="HuajiTech.QQ.IGroup.MemberCapacity">MemberCapacity</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象的成员容量。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int MemberCapacity { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_MemberCount.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.MemberCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L19">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_QQ_IGroup_MemberCount_" data-uid="HuajiTech.QQ.IGroup.MemberCount*"></a>
-  <h4 id="HuajiTech_QQ_IGroup_MemberCount" data-uid="HuajiTech.QQ.IGroup.MemberCount">MemberCount</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象的成员数。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int MemberCount { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">&#26041;&#27861;
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_DisableAnonymous.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.DisableAnonymous%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IGroup_DisableAnonymous_" data-uid="HuajiTech.QQ.IGroup.DisableAnonymous*"></a>
+  <h4 id="HuajiTech_QQ_IGroup_DisableAnonymous" data-uid="HuajiTech.QQ.IGroup.DisableAnonymous">DisableAnonymous()</h4>
+  <div class="markdown level1 summary"><p>禁用当前 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象的匿名功能。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DisableAnonymous()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_Disband.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.Disband%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IGroup_Disband_" data-uid="HuajiTech.QQ.IGroup.Disband*"></a>
+  <h4 id="HuajiTech_QQ_IGroup_Disband" data-uid="HuajiTech.QQ.IGroup.Disband">Disband()</h4>
+  <div class="markdown level1 summary"><p>解散当前 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Disband()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_EnableAnonymous.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.EnableAnonymous%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IGroup_EnableAnonymous_" data-uid="HuajiTech.QQ.IGroup.EnableAnonymous*"></a>
+  <h4 id="HuajiTech_QQ_IGroup_EnableAnonymous" data-uid="HuajiTech.QQ.IGroup.EnableAnonymous">EnableAnonymous()</h4>
+  <div class="markdown level1 summary"><p>启用当前 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象的匿名功能。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void EnableAnonymous()</code></pre>
+  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_GetMembers.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.GetMembers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L24">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_QQ_IGroup_GetMembers_" data-uid="HuajiTech.QQ.IGroup.GetMembers*"></a>
   <h4 id="HuajiTech_QQ_IGroup_GetMembers" data-uid="HuajiTech.QQ.IGroup.GetMembers">GetMembers()</h4>
@@ -172,7 +195,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;Member&gt; GetMembers()</code></pre>
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;IMember&gt; GetMembers()</code></pre>
   </div>
   <h5 class="returns">&#36820;&#22238;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,42 +207,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="HuajiTech.QQ.Member.html">Member</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="HuajiTech.QQ.IMember.html">IMember</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_GetMembersAsync.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.GetMembersAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup_Leave.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup.Leave%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L29">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L33">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
-  <a id="HuajiTech_QQ_IGroup_GetMembersAsync_" data-uid="HuajiTech.QQ.IGroup.GetMembersAsync*"></a>
-  <h4 id="HuajiTech_QQ_IGroup_GetMembersAsync" data-uid="HuajiTech.QQ.IGroup.GetMembersAsync">GetMembersAsync()</h4>
-  <div class="markdown level1 summary"><p>以异步操作获取当前 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象的所有成员。</p>
+  <a id="HuajiTech_QQ_IGroup_Leave_" data-uid="HuajiTech.QQ.IGroup.Leave*"></a>
+  <h4 id="HuajiTech_QQ_IGroup_Leave" data-uid="HuajiTech.QQ.IGroup.Leave">Leave()</h4>
+  <div class="markdown level1 summary"><p>离开当前 <a class="xref" href="HuajiTech.QQ.IGroup.html">IGroup</a> 对象。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;Member&gt;&gt; GetMembersAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">void Leave()</code></pre>
   </div>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="HuajiTech.QQ.Member.html">Member</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_">Extensions.Send(ISendable, ComplexMessage)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_">Extensions.Send(ISendable, MessageElement)</a>
+  </div>
 </article>
           </div>
           
@@ -231,7 +246,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IGroup.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IGroup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L9" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IGroup.cs/#L8" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

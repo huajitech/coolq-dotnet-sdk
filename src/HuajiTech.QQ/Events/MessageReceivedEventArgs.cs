@@ -5,7 +5,7 @@ namespace HuajiTech.QQ.Events
     /// </summary>
     public class MessageReceivedEventArgs : RoutedEventArgs
     {
-        public MessageReceivedEventArgs(Message message, Chat source, User sender)
+        public MessageReceivedEventArgs(IMessage message, IChattable source, IUser sender)
         {
             Message = message;
             Source = source;
@@ -15,16 +15,16 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取消息。
         /// </summary>
-        public Message Message { get; }
+        public IMessage Message { get; }
 
         /// <summary>
         /// 获取发送者。
         /// </summary>
-        public User Sender { get; }
+        public IUser Sender { get; }
 
         /// <summary>
         /// 获取来源聊天。
         /// </summary>
-        public Chat Source { get; }
+        public IChattable Source { get; }
     }
 }

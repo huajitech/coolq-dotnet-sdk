@@ -19,25 +19,13 @@ namespace HuajiTech.CoolQ.DataExchange
 
         protected BinaryReader BinaryReader { get; }
 
-        protected static short FromBigEndian(short bigEndian)
-        {
-            return IPAddress.NetworkToHostOrder(bigEndian);
-        }
+        protected static short FromBigEndian(short bigEndian) => IPAddress.NetworkToHostOrder(bigEndian);
 
-        protected static int FromBigEndian(int bigEndian)
-        {
-            return IPAddress.NetworkToHostOrder(bigEndian);
-        }
+        protected static int FromBigEndian(int bigEndian) => IPAddress.NetworkToHostOrder(bigEndian);
 
-        protected static long FromBigEndian(long bigEndian)
-        {
-            return IPAddress.NetworkToHostOrder(bigEndian);
-        }
+        protected static long FromBigEndian(long bigEndian) => IPAddress.NetworkToHostOrder(bigEndian);
 
-        public void Dispose()
-        {
-            BinaryReader.Dispose();
-        }
+        public void Dispose() => BinaryReader.Dispose();
 
         public abstract T Read();
 
@@ -58,35 +46,21 @@ namespace HuajiTech.CoolQ.DataExchange
             return BinaryReader.ReadBytes(length);
         }
 
-        protected short ReadInt16()
-        {
-            return FromBigEndian(BinaryReader.ReadInt16());
-        }
+        protected short ReadInt16() => FromBigEndian(BinaryReader.ReadInt16());
 
-        protected int ReadInt32()
-        {
-            return FromBigEndian(BinaryReader.ReadInt32());
-        }
+        protected int ReadInt32() => FromBigEndian(BinaryReader.ReadInt32());
 
-        protected bool ReadBoolean()
-        {
-            return ReadInt32() > 0;
-        }
+        protected bool ReadBoolean() => ReadInt32() > 0;
 
-        protected DateTime ReadDateTime()
-        {
-            return Timestamp.ToDateTime(ReadInt32());
-        }
+        protected DateTime ReadDateTime() => Timestamp.ToDateTime(ReadInt32());
 
-        protected long ReadInt64()
-        {
-            return FromBigEndian(BinaryReader.ReadInt64());
-        }
+        protected long ReadInt64() => FromBigEndian(BinaryReader.ReadInt64());
 
         protected string ReadString()
         {
             var bytes = ReadBytes();
-            if (bytes.Length == 0)
+
+            if (bytes.Length is 0)
             {
                 return null;
             }

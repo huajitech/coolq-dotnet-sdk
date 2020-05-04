@@ -9,12 +9,12 @@ namespace HuajiTech.CoolQ
 
         public override IBot Bot { get; }
 
-        public override QQ.Contact GetContact(long number) => new Contact(number);
+        public override IContact GetContact(long number) => new Contact(number);
 
-        public override QQ.Group GetGroup(long number) => new Group(number);
+        public override IGroup GetGroup(long number) => new Group(number);
 
-        public override QQ.Member GetMember(long number, QQ.Group group) => new Member(number, group);
+        public override IMember GetMember(long number, QQ.IGroup group) => new Member(number, group);
 
-        public override QQ.User GetUser(long number) => new User(number);
+        public override IUser GetUser(long number) => new User(number);
     }
 }

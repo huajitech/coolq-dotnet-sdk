@@ -14,7 +14,7 @@ namespace HuajiTech.QQ
         /// 获取或设置当前插件的插件上下文。
         /// </summary>
         /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
-        public static PluginContext Current
+        public static PluginContext CurrentContext
         {
             get => _current;
             set => _current = value ?? throw new ArgumentNullException(nameof(value));
@@ -29,13 +29,13 @@ namespace HuajiTech.QQ
         /// 获取指定号码的用户。
         /// </summary>
         /// <param name="number">号码。</param>
-        public abstract User GetUser(long number);
+        public abstract IUser GetUser(long number);
 
         /// <summary>
-        /// 获取号码为指定用户的号码的 <see cref="User"/> 对象。
+        /// 获取号码为指定用户的号码的 <see cref="IUser"/> 对象。
         /// </summary>
         /// <param name="user">用户。</param>
-        public virtual User GetUser(User user)
+        public virtual IUser GetUser(IUser user)
         {
             if (user is null)
             {
@@ -49,13 +49,13 @@ namespace HuajiTech.QQ
         /// 获取指定号码的联系人。
         /// </summary>
         /// <param name="number">号码。</param>
-        public abstract Contact GetContact(long number);
+        public abstract IContact GetContact(long number);
 
         /// <summary>
-        /// 获取号码为指定联系人的号码的 <see cref="Contact"/> 对象。
+        /// 获取号码为指定联系人的号码的 <see cref="IContact"/> 对象。
         /// </summary>
         /// <param name="contact">联系人。</param>
-        public virtual Contact GetContact(Contact contact)
+        public virtual IContact GetContact(IContact contact)
         {
             if (contact is null)
             {
@@ -69,13 +69,13 @@ namespace HuajiTech.QQ
         /// 获取指定号码的群。
         /// </summary>
         /// <param name="number">号码。</param>
-        public abstract Group GetGroup(long number);
+        public abstract IGroup GetGroup(long number);
 
         /// <summary>
-        /// 获取号码为指定群的号码的 <see cref="Group"/> 对象。
+        /// 获取号码为指定群的号码的 <see cref="IGroup"/> 对象。
         /// </summary>
         /// <param name="group">群。</param>
-        public virtual Group GetGroup(Group group)
+        public virtual IGroup GetGroup(IGroup group)
         {
             if (group is null)
             {
@@ -90,13 +90,13 @@ namespace HuajiTech.QQ
         /// </summary>
         /// <param name="number">号码。</param>
         /// <param name="group">群。</param>
-        public abstract Member GetMember(long number, Group group);
+        public abstract IMember GetMember(long number, IGroup group);
 
         /// <summary>
-        /// 获取号码和群为指定成员的号码和群的 <see cref="Member"/> 对象。
+        /// 获取号码和群为指定成员的号码和群的 <see cref="IMember"/> 对象。
         /// </summary>
         /// <param name="member">成员。</param>
-        public virtual Member GetMember(Member member)
+        public virtual IMember GetMember(IMember member)
         {
             if (member is null)
             {
@@ -111,14 +111,14 @@ namespace HuajiTech.QQ
         /// </summary>
         /// <param name="number">号码。</param>
         /// <param name="groupNumber">群号码。</param>
-        public virtual Member GetMember(long number, long groupNumber) => GetMember(number, GetGroup(groupNumber));
+        public virtual IMember GetMember(long number, long groupNumber) => GetMember(number, GetGroup(groupNumber));
 
         /// <summary>
-        /// 获取号码为指定用户的号码，群为指定群的 <see cref="Member"/> 对象。
+        /// 获取号码为指定用户的号码，群为指定群的 <see cref="IMember"/> 对象。
         /// </summary>
         /// <param name="user">用户。</param>
         /// <param name="group">群。</param>
-        public virtual Member GetMember(User user, Group group)
+        public virtual IMember GetMember(IUser user, IGroup group)
         {
             if (user is null)
             {
@@ -129,10 +129,10 @@ namespace HuajiTech.QQ
         }
 
         /// <summary>
-        /// 获取号码为指定用户的号码，群为指定群号码的群的 <see cref="Member"/> 对象。
+        /// 获取号码为指定用户的号码，群为指定群号码的群的 <see cref="IMember"/> 对象。
         /// </summary>
         /// <param name="user">用户。</param>
         /// <param name="groupNumber">群号码。</param>
-        public virtual Member GetMember(User user, long groupNumber) => GetMember(user, GetGroup(groupNumber));
+        public virtual IMember GetMember(IUser user, long groupNumber) => GetMember(user, GetGroup(groupNumber));
     }
 }

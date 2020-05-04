@@ -57,7 +57,7 @@ namespace HuajiTech.CoolQ
             var ptr = (sbyte*)pNativeData.ToPointer();
             var length = 0;
 
-            while (*(ptr + length) != '\0')
+            while (!(*(ptr + length) is 0))
             {
                 length++;
             }

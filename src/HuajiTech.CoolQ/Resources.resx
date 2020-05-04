@@ -120,9 +120,6 @@
   <data name="AppIdNotFound" xml:space="preserve">
     <value>未在此程序集找到 AppIdAttribute 特性。</value>
   </data>
-  <data name="CannotGiveThumbsUpToCurrentUser" xml:space="preserve">
-    <value>不能为当前用户点赞。</value>
-  </data>
   <data name="ContactNotExist" xml:space="preserve">
     <value>该联系人不存在。</value>
   </data>
@@ -138,6 +135,9 @@
   <data name="FailedToDecodeRegexMessage" xml:space="preserve">
     <value>解码正则消息失败。</value>
   </data>
+  <data name="FailedToLoadPlugin" xml:space="preserve">
+    <value>插件加载失败。</value>
+  </data>
   <data name="FieldCannotBeEmpty" xml:space="preserve">
     <value>该字段不能为空。</value>
   </data>
@@ -147,14 +147,11 @@
   <data name="Info" xml:space="preserve">
     <value>信息</value>
   </data>
-  <data name="InitializationFailed" xml:space="preserve">
-    <value>初始化失败。</value>
-  </data>
   <data name="NullReturnValue" xml:space="preserve">
     <value>酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。</value>
   </data>
   <data name="PluginLoadMessage" xml:space="preserve">
-    <value>已加载类型 '{0}'。</value>
+    <value>已注册类型 '{1}'，于 {0} 阶段加载。</value>
   </data>
   <data name="PluginLoadTitle" xml:space="preserve">
     <value>插件加载</value>

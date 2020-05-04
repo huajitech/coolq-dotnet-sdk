@@ -6,7 +6,7 @@ namespace HuajiTech.QQ.Events
     public class AnonymousMessageReceivedEventArgs : RoutedEventArgs
     {
         public AnonymousMessageReceivedEventArgs(
-            Message message, Group source, AnonymousMember sender)
+            IMessage message, IGroup source, IAnonymousMember sender)
         {
             Message = message;
             Source = source;
@@ -16,16 +16,16 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取消息。
         /// </summary>
-        public Message Message { get; }
+        public IMessage Message { get; }
 
         /// <summary>
         /// 获取发送者。
         /// </summary>
-        public AnonymousMember Sender { get; }
+        public IAnonymousMember Sender { get; }
 
         /// <summary>
         /// 获取来源群。
         /// </summary>
-        public Group Source { get; }
+        public IGroup Source { get; }
     }
 }

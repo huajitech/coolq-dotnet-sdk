@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace HuajiTech.QQ
+﻿namespace HuajiTech.QQ
 {
     /// <summary>
     /// 定义可请求的对象。
@@ -16,10 +14,5 @@ namespace HuajiTech.QQ
         /// 请求当前 <see cref="IRequestable"/> 对象。
         /// </summary>
         void Request();
-
-        /// <summary>
-        /// 以异步操作请求当前 <see cref="IRequestable"/> 对象。
-        /// </summary>
-        Task RequestAsync();
     }
 }

@@ -13,11 +13,5 @@ namespace HuajiTech.QQ
         /// </summary>
         /// <param name="duration">要禁言的时长。</param>
         void Mute(TimeSpan duration);
-
-        /// <summary>
-        /// 以异步操作将当前 <see cref="ITimedMuteable"/> 对象禁言指定时长。
-        /// </summary>
-        /// <param name="duration">要禁言的时长。</param>
-        Task MuteAsync(TimeSpan duration);
     }
 }

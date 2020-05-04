@@ -1,11 +1,11 @@
 // 用于使用 HuajiTech.CoolQ 开发的酷Q应用配置文件。
-// 版本 0.1.2-alpha.20.2
+// 版本 0.2.1-alpha.1
 // *这是一个测试版本，不建议用于生产环境。
 //
 // 酷Q的 Json 文件支持以 // 开头的注释。
-// 开发模式下，应用的 app.dll 及 app.json 文件须放在 dev/[appid]/ 目录下，且必须向 AppAttribute 传入正确的 AppId。
+// 开发模式下，应用的 app.dll 及 app.json 文件须放在 dev/[appid]/ 目录下，且必须向 AppIdAttribute 传入正确的 AppId。
 // 如 appid=com.example.demo, 则dll及json文件需分别放在 dev/com.example.demo/app.dll、dev/com.example.demo/app.json，
-// 并在应用类上应用 [App("com.example.demo")]。
+// 并在程序集上应用 [assembly: AppId("com.example.demo")]。
 // [重要] appid 规则见 https://cqp.im/v9/appid
 {
   "$schema": "https://raw.githubusercontent.com/cqmoe/awesome-coolq/master/schema/app/v9/app-schema.json",

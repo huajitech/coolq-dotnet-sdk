@@ -70,15 +70,6 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 不能为当前用户点赞。 的本地化字符串。
-        /// </summary>
-        internal static string CannotGiveThumbsUpToCurrentUser {
-            get {
-                return ResourceManager.GetString("CannotGiveThumbsUpToCurrentUser", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 该联系人不存在。 的本地化字符串。
         /// </summary>
         internal static string ContactNotExist {
@@ -124,6 +115,15 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 插件加载失败。 的本地化字符串。
+        /// </summary>
+        internal static string FailedToLoadPlugin {
+            get {
+                return ResourceManager.GetString("FailedToLoadPlugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 该字段不能为空。 的本地化字符串。
         /// </summary>
         internal static string FieldCannotBeEmpty {
@@ -151,15 +151,6 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 初始化失败。 的本地化字符串。
-        /// </summary>
-        internal static string InitializationFailed {
-            get {
-                return ResourceManager.GetString("InitializationFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。 的本地化字符串。
         /// </summary>
         internal static string NullReturnValue {
@@ -169,7 +160,7 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 已加载类型 &apos;{0}&apos;。 的本地化字符串。
+        ///   查找类似 已注册类型 &apos;{1}&apos;，于 {0} 阶段加载。 的本地化字符串。
         /// </summary>
         internal static string PluginLoadMessage {
             get {

@@ -207,14 +207,14 @@ namespace HuajiTech.CoolQ
 
         [DllImport(DllName, EntryPoint = "CQ_getRecordV2")]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]
-        public static extern string RequestRecord(
+        public static extern string GetRecord(
             int authCode,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string fileName,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string fileFormat);
 
         [DllImport(DllName, EntryPoint = "CQ_getImage")]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]
-        public static extern string RequestImage(
+        public static extern string GetImage(
             int authCode,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string fileName);
 

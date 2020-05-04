@@ -37,26 +37,6 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         private static int OnAppEnabled()
         {
-            if (!(Bot.Instance is null))
-            {
-                Bot.Instance.Logger.LogInfo(
-                    Resources.TestingNotificationTitle,
-                    string.Format(
-                        CultureInfo.InvariantCulture,
-                        Resources.TestingNotificationContent,
-                        Bot.AppId));
-
-                foreach (var app in Bot.Instance.Apps)
-                {
-                    Bot.Instance.Logger.LogDebug(
-                        Resources.PluginLoadTitle,
-                        string.Format(
-                            CultureInfo.InvariantCulture,
-                            Resources.PluginLoadMessage,
-                            app.GetType().FullName));
-                }
-            }
-
             Instance.AppEnabled?.Invoke(Instance, EventArgs.Empty);
             return 0;
         }
