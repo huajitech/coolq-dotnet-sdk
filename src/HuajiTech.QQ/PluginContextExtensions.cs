@@ -3,9 +3,9 @@
 namespace HuajiTech.QQ
 {
     /// <summary>
-    /// 定义用于操作 <see cref="PluginContext.CurrentContext"/> 的扩展方法。
+    /// 定义用于操作 <see cref="PluginContext"/> 的扩展方法。
     /// </summary>
-    public static class CurrentPluginContextExtensions
+    public static class PluginContextExtensions
     {
         public static IUser AsUser(this IUser user, PluginContext context) => context?.GetUser(user);
 
