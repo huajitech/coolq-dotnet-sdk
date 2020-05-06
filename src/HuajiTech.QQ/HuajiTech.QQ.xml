@@ -472,16 +472,6 @@
             定义机器人。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.IBot.CanSendImage">
-            <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象是否可以发送图片。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IBot.CanSendRecord">
-            <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象是否可以发送录音。
-            </summary>
-        </member>
         <member name="P:HuajiTech.QQ.IBot.CurrentUser">
             <summary>
             获取当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象的当前用户。
@@ -509,6 +499,21 @@
             </summary>
             <param name="fileName">请求获取的录音的文件名。</param>
             <param name="fileFormat">请求获取的录音的格式。</param>
+        </member>
+        <member name="T:HuajiTech.QQ.IBotInfo">
+            <summary>
+            定义机器人信息。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBotInfo.CanSendImage">
+            <summary>
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBotInfo"/> 对象是否可以发送图片。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBotInfo.CanSendRecord">
+            <summary>
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBotInfo"/> 对象是否可以发送录音。
+            </summary>
         </member>
         <member name="T:HuajiTech.QQ.IChattable">
             <summary>
@@ -960,7 +965,6 @@
         <member name="T:HuajiTech.QQ.IUser">
             <summary>
             定义用户。
-            此类为抽象类。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IUser.GiveThumbsUp(System.Int32)">

@@ -63,14 +63,12 @@ namespace HuajiTech.CoolQ
                 .As<QQ.PluginContext>();
         }
 
-        private static Dictionary<AppLifecycle, Type> RegisterPlugins(ContainerBuilder builder)
+        private static void RegisterPlugins(ContainerBuilder builder)
         {
             var executingAssembly = Assembly.GetExecutingAssembly();
 
             var defaultLoadStage = ((AppLifecycle?)executingAssembly
                 .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? AppLifecycle.Enabled;
-
-            var infos = new Dictionary<AppLifecycle, Type>();
 
             var types = executingAssembly.GetTypes().Where(type => !type.IsInterface && !type.IsAbstract && type.IsAssignableTo<IPlugin>());
 
@@ -79,15 +77,11 @@ namespace HuajiTech.CoolQ
                 var loadStage = ((AppLifecycle?)type
                     .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? defaultLoadStage;
 
-                infos.Add(loadStage, type);
-
                 builder
                     .RegisterType(type)
                     .SingleInstance()
                     .Named<IPlugin>(loadStage.ToString());
             }
-
-            return infos;
         }
 
         private static void LoadPlugins(IContainer container, AppLifecycle loadStage, bool logInfo = false)
@@ -131,7 +125,7 @@ namespace HuajiTech.CoolQ
             var builder = new ContainerBuilder();
 
             RegisterSdk(builder);
-            var pluginInfos = RegisterPlugins(builder);
+            RegisterPlugins(builder);
 
             var container = builder.Build();
 
