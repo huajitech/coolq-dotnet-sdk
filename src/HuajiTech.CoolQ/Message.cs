@@ -20,10 +20,10 @@ namespace HuajiTech.CoolQ
 
         public override string ToString() => Content;
 
-        public bool Equals(IMessage other)
-            => base.Equals(other) || (other.Id == Id && other.Content == Content);
+        public bool Equals(IMessage other) =>
+            base.Equals(other) || (other.Id == Id && other.Content == Content);
 
-        public void Recall()
-            => NativeMethods.RecallMessage(Bot.Instance.AuthCode, Id).CheckError();
+        public void Recall() =>
+            NativeMethods.RecallMessage(Bot.Instance.AuthCode, Id).CheckError();
     }
 }

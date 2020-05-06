@@ -7,14 +7,13 @@ namespace HuajiTech.CoolQ.DataExchange
         {
         }
 
-        public override AnonymousMemberInfo Read()
-        {
-            return new AnonymousMemberInfo
+        public override AnonymousMemberInfo Read() =>
+            new AnonymousMemberInfo
             {
                 Id = ReadInt64(),
                 Name = ReadString(),
                 Token = ReadBytes()
             };
-        }
     }
+}
 }

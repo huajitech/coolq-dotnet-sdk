@@ -20,8 +20,8 @@ namespace HuajiTech.CoolQ
 
         public void Reject() => Respond(Response.Reject, null);
 
-        private void Respond(Response response, string alias)
-            => NativeMethods.RespondContactRequest(
+        private void Respond(Response response, string alias) =>
+            NativeMethods.RespondContactRequest(
                 Bot.Instance.AuthCode, _token, response, alias).CheckError();
     }
 }

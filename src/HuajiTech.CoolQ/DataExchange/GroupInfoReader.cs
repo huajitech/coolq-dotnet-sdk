@@ -7,15 +7,13 @@ namespace HuajiTech.CoolQ.DataExchange
         {
         }
 
-        public override GroupInfo Read()
-        {
-            return new GroupInfo
+        public override GroupInfo Read() =>
+            new GroupInfo
             {
                 Number = ReadInt64(),
                 Name = ReadString(),
                 MemberCount = ReadInt32(),
                 MemberCapacity = ReadInt32()
             };
-        }
     }
 }

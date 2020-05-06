@@ -82,36 +82,25 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string Escape(string str)
-        {
-            return PlainText.Escape(str).Replace(",", "&#44");
-        }
+        public static string Escape(string str) => PlainText.Escape(str).Replace(",", "&#44");
 
         /// <summary>
         /// 将字符串中的转义字符转换为具有特殊意义的酷Q字符。
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string Unescape(string str)
-        {
-            return PlainText.Unescape(str).Replace("&#44", ",");
-        }
+        public static string Unescape(string str) => PlainText.Unescape(str).Replace("&#44", ",");
 
         /// <summary>
         /// 将当前 <see cref="CQCode"/> 对象的值转换为它的等效字符串表示形式。
         /// </summary>
         /// <returns>当前 <see cref="CQCode"/> 对象的值的字符串表示形式。</returns>
-        public override string ToString()
-        {
-            return Parameters.Any() ?
+        public override string ToString() =>
+            Parameters.Any() ?
                 $"[CQ:{Type},{string.Join(",", Parameters.Select(para => $"{para.Key}={Escape(para.Value)}"))}]" :
                 $"[CQ:{Type}]";
-        }
 
-        protected bool GetParameterAsBoolean(string key)
-        {
-            return this[key] is "true";
-        }
+        protected bool GetParameterAsBoolean(string key) => this[key] is "true";
 
         protected int GetParameterAsInt32(string key)
         {
@@ -155,29 +144,14 @@ namespace HuajiTech.CoolQ.Messaging
             }
         }
 
-        protected void SetParameter(string key, bool value)
-        {
-            this[key] = value ? "true" : "false";
-        }
+        protected void SetParameter(string key, bool value) => this[key] = value ? "true" : "false";
 
-        protected void SetParameter(string key, int value)
-        {
-            this[key] = value.ToString(CultureInfo.InvariantCulture);
-        }
+        protected void SetParameter(string key, int value) => this[key] = value.ToString(CultureInfo.InvariantCulture);
 
-        protected void SetParameter(string key, long value)
-        {
-            this[key] = value.ToString(CultureInfo.InvariantCulture);
-        }
+        protected void SetParameter(string key, long value) => this[key] = value.ToString(CultureInfo.InvariantCulture);
 
-        protected void SetParameter(string key, float value)
-        {
-            this[key] = value.ToString(CultureInfo.InvariantCulture);
-        }
+        protected void SetParameter(string key, float value) => this[key] = value.ToString(CultureInfo.InvariantCulture);
 
-        protected void SetParameter(string key, Uri value)
-        {
-            this[key] = value?.ToString();
-        }
+        protected void SetParameter(string key, Uri value) => this[key] = value?.ToString();
     }
 }

@@ -33,9 +33,6 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <returns>当前 <see cref="Image"/> 对象表示的文件。</returns>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public FileInfo GetFile()
-        {
-            return QQ.PluginContext.CurrentContext.Bot.GetImage(FileName);
-        }
+        public FileInfo GetFile() => QQ.PluginContext.CurrentContext.Bot.GetImage(FileName);
     }
 }

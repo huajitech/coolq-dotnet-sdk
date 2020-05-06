@@ -78,14 +78,14 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnEntranceRequested(
-            EntranceEventType type,
+            MemberEventType type,
             int timestampRequested,
             long sourceNumber,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            if (!(type is EntranceEventType.Request))
+            if (!(type is MemberEventType.Active))
             {
                 return false;
             }
@@ -132,7 +132,7 @@ namespace HuajiTech.CoolQ.Events
             long affecteeNumber,
             long secondsMuted)
         {
-            if (affecteeNumber != default)
+            if (!(affecteeNumber is 0))
             {
                 return false;
             }

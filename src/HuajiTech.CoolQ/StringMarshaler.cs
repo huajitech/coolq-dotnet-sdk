@@ -11,10 +11,7 @@ namespace HuajiTech.CoolQ
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Usage", "CA1801:检查未使用的参数", Justification = "<挂起>")]
-        public static ICustomMarshaler GetInstance(string cookie)
-        {
-            return Instance;
-        }
+        public static ICustomMarshaler GetInstance(string cookie) => Instance;
 
         public void CleanUpManagedData(object ManagedObj)
         {

@@ -32,13 +32,13 @@ namespace HuajiTech.CoolQ
 
         public string Name => _name ?? GetInfo().Name;
 
-        public void DisableAnonymous()
-            => NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
+        public void DisableAnonymous() =>
+            NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
 
         public void Disband() => Leave(true);
 
-        public void EnableAnonymous()
-            => NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, true).CheckError();
+        public void EnableAnonymous() =>
+            NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, true).CheckError();
 
         public IReadOnlyCollection<IMember> GetMembers()
         {
@@ -51,8 +51,8 @@ namespace HuajiTech.CoolQ
 
         public void Leave() => Leave(false);
 
-        public void Mute()
-            => NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
+        public void Mute() =>
+            NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
 
         public void Refresh() => GetInfo(true, true);
 
@@ -74,8 +74,10 @@ namespace HuajiTech.CoolQ
             return new Message(id, message);
         }
 
-        public void Unmute()
-            => NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, false).CheckError();
+        public void Unmute() =>
+            NativeMethods.SetGroupIsMuted(Bot.Instance.AuthCode, Number, false).CheckError();
+
+        public override bool Equals(IChattable other) => base.Equals(other) && other is Group;
 
         private GroupInfo GetInfo(bool throwException = false, bool refresh = false)
         {
@@ -96,7 +98,7 @@ namespace HuajiTech.CoolQ
             return _info;
         }
 
-        private void Leave(bool disband)
-            => NativeMethods.LeaveGroup(Bot.Instance.AuthCode, Number, disband).CheckError();
+        private void Leave(bool disband) =>
+            NativeMethods.LeaveGroup(Bot.Instance.AuthCode, Number, disband).CheckError();
     }
 }

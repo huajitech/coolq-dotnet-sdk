@@ -9,13 +9,11 @@ namespace HuajiTech.CoolQ.DataExchange
         {
         }
 
-        public override File Read()
-        {
-            return new File(
+        public override File Read() =>
+            new File(
                 id: ReadString(),
                 name: ReadString(),
                 length: ReadInt64(),
                 busId: ReadInt64());
-        }
     }
 }

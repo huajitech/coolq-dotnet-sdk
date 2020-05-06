@@ -9,11 +9,6 @@
             在调用 API 发生错误时引发的异常。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.CurrentPluginContextExtensions">
-            <summary>
-            定义用于操作 <see cref="P:HuajiTech.QQ.PluginContext.CurrentContext"/> 的扩展方法。
-            </summary>
-        </member>
         <member name="T:HuajiTech.QQ.CustomTitle">
             <summary>
             表示自定义头衔。
@@ -1209,6 +1204,11 @@
             </summary>
             <param name="user">用户。</param>
             <param name="groupNumber">群号码。</param>
+        </member>
+        <member name="T:HuajiTech.QQ.PluginContextExtensions">
+            <summary>
+            定义用于操作 <see cref="T:HuajiTech.QQ.PluginContext"/> 的扩展方法。
+            </summary>
         </member>
         <member name="T:HuajiTech.QQ.Resources">
             <summary>

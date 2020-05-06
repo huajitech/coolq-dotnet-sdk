@@ -23,30 +23,21 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 初始化一个空的 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
-        public ComplexMessage()
-        {
-            _elements = new List<MessageElement>();
-        }
+        public ComplexMessage() => _elements = new List<MessageElement>();
 
         /// <summary>
         /// 以指定的 <see cref="MessageElement"/> 对象初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         /// <param name="element">消息元素。</param>
         public ComplexMessage(MessageElement element)
-            : this()
-        {
-            Add(element);
-        }
+            : this() => Add(element);
 
         /// <summary>
         /// 以指定的 <see cref="MessageElement"/> 集合初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         /// <param name="elements"><see cref="MessageElement"/> 集合。</param>
         /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
-        public ComplexMessage(IEnumerable<MessageElement> elements)
-        {
-            _elements = new List<MessageElement>(elements);
-        }
+        public ComplexMessage(IEnumerable<MessageElement> elements) => _elements = new List<MessageElement>(elements);
 
         /// <summary>
         /// 获取或设置指定索引处的 <see cref="MessageElement"/> 对象。
@@ -121,10 +112,7 @@ namespace HuajiTech.CoolQ.Messaging
             return new ComplexMessage(GetMessageElements());
         }
 
-        public static ComplexMessage FromString(string str)
-        {
-            return new ComplexMessage(str);
-        }
+        public static ComplexMessage FromString(string str) => new ComplexMessage(str);
 
         /// <summary>
         /// 使用指定的分隔符串联 <see cref="ComplexMessage"/> 集合中的所有成员。
@@ -199,15 +187,9 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将当前 <see cref="ComplexMessage"/> 对象中的所有连续的 <see cref="PlainText"/> 对象拼接为单个 <see cref="PlainText"/> 对象。
         /// </summary>
         /// <returns>一个新的 <see cref="ComplexMessage"/> 对象，包含已被拼接的 <see cref="PlainText"/> 对象。</returns>
-        public ComplexMessage CombinePlainText()
-        {
-            return new ComplexMessage(GetPlainTextCombinedMessageElements(this));
-        }
+        public ComplexMessage CombinePlainText() => new ComplexMessage(GetPlainTextCombinedMessageElements(this));
 
-        public string GetPlainText()
-        {
-            return string.Join(string.Empty, this.OfType<PlainText>());
-        }
+        public string GetPlainText() => string.Join(string.Empty, this.OfType<PlainText>());
 
         /// <summary>
         /// 将 <see cref="MessageElement"/> 对象添加到 <see cref="ComplexMessage"/> 的结尾处。
@@ -270,10 +252,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 如果成功移除了 <paramref name="item"/>，则为 <c>true</c>；否则为 <c>false</c>。
         /// 如果在 <see cref="ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <c>false</c>。
         /// </returns>
-        public bool TryRemove(MessageElement item)
-        {
-            return _elements.Remove(item);
-        }
+        public bool TryRemove(MessageElement item) => _elements.Remove(item);
 
         /// <summary>
         /// 从 <see cref="ComplexMessage"/> 中移除特定 <see cref="MessageElement"/> 的所有匹配项。
@@ -309,66 +288,36 @@ namespace HuajiTech.CoolQ.Messaging
             return this;
         }
 
+        public ComplexMessage Slice(int start, int count) => new ComplexMessage(this.Skip(start).Take(count));
+
         /// <summary>
         /// 将当前 <see cref="ComplexMessage"/> 对象的值转换为它的等效字符串表示形式。
         /// </summary>
         /// <returns>当前 <see cref="ComplexMessage"/> 对象的值的字符串表示形式。</returns>
-        public override string ToString()
-        {
-            return string.Join(string.Empty, _elements);
-        }
+        public override string ToString() => string.Join(string.Empty, _elements);
 
-        public bool Equals(ComplexMessage other)
-        {
-            return base.Equals(other) || other?.ToString() == ToString();
-        }
+        public bool Equals(ComplexMessage other) => base.Equals(other) || other?.ToString() == ToString();
 
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as ComplexMessage);
-        }
+        public override bool Equals(object obj) => Equals(obj as ComplexMessage);
 
-        public override int GetHashCode()
-        {
-            return ToString().GetHashCode();
-        }
+        public override int GetHashCode() => ToString().GetHashCode();
 
-        public static bool operator ==(ComplexMessage left, ComplexMessage right)
-        {
-            return left?.Equals(right) ?? right is null;
-        }
+        public static bool operator ==(ComplexMessage left, ComplexMessage right) => left?.Equals(right) ?? right is null;
 
-        public static bool operator !=(ComplexMessage left, ComplexMessage right)
-        {
-            return !(left == right);
-        }
+        public static bool operator !=(ComplexMessage left, ComplexMessage right) => !(left == right);
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Usage", "CA2225:运算符重载具有命名的备用项", Justification = "<挂起>")]
-        public static ComplexMessage operator -(ComplexMessage left, MessageElement right)
-        {
-            return left?.Remove(right);
-        }
+        public static ComplexMessage operator -(ComplexMessage left, MessageElement right) => left?.Remove(right);
 
-        public static ComplexMessage operator +(ComplexMessage left, MessageElement right)
-        {
-            return left?.Add(right);
-        }
+        public static ComplexMessage operator +(ComplexMessage left, MessageElement right) => left?.Add(right);
 
-        public static ComplexMessage operator +(MessageElement left, ComplexMessage right)
-        {
-            return left?.ToComplexMessage()?.Add(right);
-        }
+        public static ComplexMessage operator +(MessageElement left, ComplexMessage right) =>
+            left?.ToComplexMessage()?.Add(right);
 
-        public static ComplexMessage operator +(ComplexMessage left, ComplexMessage right)
-        {
-            return left?.Add(right);
-        }
+        public static ComplexMessage operator +(ComplexMessage left, ComplexMessage right) => left?.Add(right);
 
-        public static implicit operator ComplexMessage(string str)
-        {
-            return FromString(str);
-        }
+        public static implicit operator ComplexMessage(string str) => FromString(str);
     }
 
     /// <summary>
@@ -380,54 +329,24 @@ namespace HuajiTech.CoolQ.Messaging
 
         public bool IsReadOnly => ((IList<MessageElement>)_elements).IsReadOnly;
 
-        void ICollection<MessageElement>.Add(MessageElement item)
-        {
-            _elements.Add(item);
-        }
+        void ICollection<MessageElement>.Add(MessageElement item) => _elements.Add(item);
 
-        public void Clear()
-        {
-            _elements.Clear();
-        }
+        public void Clear() => _elements.Clear();
 
-        public bool Contains(MessageElement item)
-        {
-            return _elements.Contains(item);
-        }
+        public bool Contains(MessageElement item) => _elements.Contains(item);
 
-        public void CopyTo(MessageElement[] array, int arrayIndex)
-        {
-            _elements.CopyTo(array, arrayIndex);
-        }
+        public void CopyTo(MessageElement[] array, int arrayIndex) => _elements.CopyTo(array, arrayIndex);
 
-        public IEnumerator<MessageElement> GetEnumerator()
-        {
-            return ((IList<MessageElement>)_elements).GetEnumerator();
-        }
+        public IEnumerator<MessageElement> GetEnumerator() => ((IList<MessageElement>)_elements).GetEnumerator();
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return ((IList<MessageElement>)_elements).GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => ((IList<MessageElement>)_elements).GetEnumerator();
 
-        public int IndexOf(MessageElement item)
-        {
-            return _elements.IndexOf(item);
-        }
+        public int IndexOf(MessageElement item) => _elements.IndexOf(item);
 
-        void IList<MessageElement>.Insert(int index, MessageElement item)
-        {
-            _elements.Insert(index, item);
-        }
+        void IList<MessageElement>.Insert(int index, MessageElement item) => _elements.Insert(index, item);
 
-        bool ICollection<MessageElement>.Remove(MessageElement item)
-        {
-            return _elements.Remove(item);
-        }
+        bool ICollection<MessageElement>.Remove(MessageElement item) => _elements.Remove(item);
 
-        void IList<MessageElement>.RemoveAt(int index)
-        {
-            _elements.RemoveAt(index);
-        }
+        void IList<MessageElement>.RemoveAt(int index) => _elements.RemoveAt(index);
     }
 }

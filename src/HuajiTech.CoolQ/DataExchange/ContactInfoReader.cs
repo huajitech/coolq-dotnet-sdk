@@ -7,14 +7,12 @@ namespace HuajiTech.CoolQ.DataExchange
         {
         }
 
-        public override ContactInfo Read()
-        {
-            return new ContactInfo
+        public override ContactInfo Read() =>
+            new ContactInfo
             {
                 Number = ReadInt64(),
                 Nickname = ReadString(),
                 Alias = ReadString()
             };
-        }
     }
 }

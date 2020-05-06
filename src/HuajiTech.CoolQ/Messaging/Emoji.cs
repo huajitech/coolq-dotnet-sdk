@@ -26,9 +26,6 @@ namespace HuajiTech.CoolQ.Messaging
             set => SetParameter("id", value);
         }
 
-        public string ConvertToString()
-        {
-            return char.ConvertFromUtf32(Id);
-        }
+        public string ConvertToString() => char.ConvertFromUtf32(Id);
     }
 }

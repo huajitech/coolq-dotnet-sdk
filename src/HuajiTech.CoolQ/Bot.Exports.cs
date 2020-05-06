@@ -103,8 +103,8 @@ namespace HuajiTech.CoolQ
             }
         }
 
-        private static void LogTestingNotification()
-            => Instance.Logger.LogInfo(
+        private static void LogTestingNotification() =>
+            Instance.Logger.LogInfo(
                 Resources.TestingNotificationTitle,
                 string.Format(
                     CultureInfo.InvariantCulture,

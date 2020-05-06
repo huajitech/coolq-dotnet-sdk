@@ -8,61 +8,28 @@ namespace HuajiTech.CoolQ.Messaging
     /// </summary>
     public abstract class MessageElement : IEquatable<MessageElement>
     {
-        public static MessageElement FromString(string str)
-        {
-            return new PlainText(str);
-        }
+        public static MessageElement FromString(string str) => new PlainText(str);
 
-        public ComplexMessage Add(MessageElement element)
-        {
-            return ToComplexMessage().Add(element);
-        }
+        public ComplexMessage Add(MessageElement element) => ToComplexMessage().Add(element);
 
-        public ComplexMessage ToComplexMessage()
-        {
-            return new ComplexMessage(this);
-        }
+        public ComplexMessage ToComplexMessage() => new ComplexMessage(this);
 
         public abstract override string ToString();
 
-        public override int GetHashCode()
-        {
-            return ToString().GetHashCode();
-        }
+        public override int GetHashCode() => ToString().GetHashCode();
 
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as MessageElement);
-        }
+        public override bool Equals(object obj) => Equals(obj as MessageElement);
 
-        public bool Equals(MessageElement other)
-        {
-            return base.Equals(other) || other?.ToString() == ToString();
-        }
+        public bool Equals(MessageElement other) => base.Equals(other) || other?.ToString() == ToString();
 
-        public static bool operator !=(MessageElement left, MessageElement right)
-        {
-            return !(left == right);
-        }
+        public static bool operator !=(MessageElement left, MessageElement right) => !(left == right);
 
-        public static bool operator ==(MessageElement left, MessageElement right)
-        {
-            return left?.Equals(right) ?? right is null;
-        }
+        public static bool operator ==(MessageElement left, MessageElement right) => left?.Equals(right) ?? right is null;
 
-        public static ComplexMessage operator +(MessageElement left, MessageElement right)
-        {
-            return left?.Add(right);
-        }
+        public static ComplexMessage operator +(MessageElement left, MessageElement right) => left?.Add(right);
 
-        public static implicit operator MessageElement(string str)
-        {
-            return FromString(str);
-        }
+        public static implicit operator MessageElement(string str) => FromString(str);
 
-        public static implicit operator ComplexMessage(MessageElement element)
-        {
-            return element?.ToComplexMessage();
-        }
+        public static implicit operator ComplexMessage(MessageElement element) => element?.ToComplexMessage();
     }
 }

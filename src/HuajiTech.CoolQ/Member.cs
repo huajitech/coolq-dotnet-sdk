@@ -52,12 +52,14 @@ namespace HuajiTech.CoolQ
 
         public bool IsAdministrator => Role is MemberRole.Administrator || Role is MemberRole.Owner;
 
-        public bool Equals(IMember other) => base.Equals(other) && Group.Equals(other.Group);
+        public bool Equals(IMember other) => base.Equals(other) && other is Member && Group.Equals(other.Group);
+
+        public override bool Equals(IChattable other) => Equals(other as IMember);
 
         public override int GetHashCode() => base.GetHashCode() ^ Group.GetHashCode();
 
-        public void Kick(bool disallowRejoin = false)
-            => NativeMethods.KickMember(
+        public void Kick(bool disallowRejoin = false) =>
+            NativeMethods.KickMember(
                 Bot.Instance.AuthCode, Group.Number, Number, disallowRejoin).CheckError();
 
         public void Mute(TimeSpan duration)
@@ -113,8 +115,8 @@ namespace HuajiTech.CoolQ
 
         public override string ToString() => GetType().Name + $"({Number},{Group})";
 
-        public void Unmute()
-            => NativeMethods.MuteMember(
+        public void Unmute() =>
+            NativeMethods.MuteMember(
                 Bot.Instance.AuthCode, Group.Number, Number, 0).CheckError();
 
         public void UnsetAsAdministrator() => SetIsAdministrator(false);

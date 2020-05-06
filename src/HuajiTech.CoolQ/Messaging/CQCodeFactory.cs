@@ -59,9 +59,6 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="type">要创建的 <see cref="CQCode"/> 对象的类型。</param>
         /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
         /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
-        public static CQCode Create(string type)
-        {
-            return Create(type, new Dictionary<string, string>());
-        }
+        public static CQCode Create(string type) => Create(type, new Dictionary<string, string>());
     }
 }

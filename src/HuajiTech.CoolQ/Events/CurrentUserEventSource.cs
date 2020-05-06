@@ -136,14 +136,14 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnEntranceInvited(
-            EntranceEventType type,
+            MemberEventType type,
             int timestampRequested,
             long targetNumber,
             long inviterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            if (type != EntranceEventType.Invite)
+            if (!(type is MemberEventType.Passive))
             {
                 return false;
             }

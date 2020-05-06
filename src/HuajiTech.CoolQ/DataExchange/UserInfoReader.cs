@@ -9,15 +9,13 @@ namespace HuajiTech.CoolQ.DataExchange
         {
         }
 
-        public override UserInfo Read()
-        {
-            return new UserInfo
+        public override UserInfo Read() =>
+            new UserInfo
             {
                 Number = ReadInt64(),
                 Nickname = ReadString(),
                 Gender = (Gender)ReadInt32(),
                 Age = ReadInt32()
             };
-        }
     }
 }

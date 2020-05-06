@@ -25,8 +25,8 @@ namespace HuajiTech.CoolQ
 
         public virtual string Nickname => GetInfo().Nickname;
 
-        public void GiveThumbsUp(int count)
-            => NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
+        public void GiveThumbsUp(int count) =>
+            NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
 
         public virtual void Request()
         {
@@ -47,6 +47,8 @@ namespace HuajiTech.CoolQ
 
             return new Message(id, message);
         }
+
+        public override bool Equals(IChattable other) => base.Equals(other) && other is User;
 
         private UserInfo GetInfo(bool throwException = false, bool refresh = false)
         {

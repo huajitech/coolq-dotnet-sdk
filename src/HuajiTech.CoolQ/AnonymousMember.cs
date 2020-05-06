@@ -38,8 +38,8 @@ namespace HuajiTech.CoolQ
 
         public void Mute() => Mute(MaxMuteDuration);
 
-        public void Unmute()
-            => NativeMethods.MuteAnonymousMember(
+        public void Unmute() =>
+            NativeMethods.MuteAnonymousMember(
                 Bot.Instance.AuthCode, Group.Number, _rawInfo, 0).CheckError();
 
         private AnonymousMemberInfo GetInfo()
