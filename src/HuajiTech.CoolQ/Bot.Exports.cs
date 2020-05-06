@@ -143,14 +143,11 @@ namespace HuajiTech.CoolQ
 
             source.AppEnabled += (sender, e) =>
             {
-                if (!isFirstTimeEnabled)
+                if (isFirstTimeEnabled)
                 {
-                    return;
+                    LoadPlugins(container, AppLifecycle.Enabled, true);
+                    isFirstTimeEnabled = false;
                 }
-
-                LoadPlugins(container, AppLifecycle.Enabled, true);
-
-                isFirstTimeEnabled = false;
             };
 
             source.BotStarted += (sender, e) => LoadPlugins(container, AppLifecycle.BotStarted);
