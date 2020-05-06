@@ -160,7 +160,7 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 已注册类型 &apos;{1}&apos;，于 {0} 阶段加载。 的本地化字符串。
+        ///   查找类似 已加载类型 &apos;{0}&apos;。 的本地化字符串。
         /// </summary>
         internal static string PluginLoadMessage {
             get {
@@ -201,24 +201,6 @@ namespace HuajiTech.CoolQ {
         internal static string Success {
             get {
                 return ResourceManager.GetString("Success", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ 开发，不建议在生产环境使用。 的本地化字符串。
-        /// </summary>
-        internal static string TestingNotificationContent {
-            get {
-                return ResourceManager.GetString("TestingNotificationContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 HuajiTech.CoolQ 测试提示 的本地化字符串。
-        /// </summary>
-        internal static string TestingNotificationTitle {
-            get {
-                return ResourceManager.GetString("TestingNotificationTitle", resourceCulture);
             }
         }
         

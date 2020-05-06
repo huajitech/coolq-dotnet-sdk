@@ -151,7 +151,7 @@
     <value>酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。</value>
   </data>
   <data name="PluginLoadMessage" xml:space="preserve">
-    <value>已注册类型 '{1}'，于 {0} 阶段加载。</value>
+    <value>已加载类型 '{0}'。</value>
   </data>
   <data name="PluginLoadTitle" xml:space="preserve">
     <value>插件加载</value>
@@ -164,12 +164,6 @@
   </data>
   <data name="Success" xml:space="preserve">
     <value>成功</value>
-  </data>
-  <data name="TestingNotificationContent" xml:space="preserve">
-    <value>此应用 ({0}) 使用测试版本的 HuajiTech.CoolQ 开发，不建议在生产环境使用。</value>
-  </data>
-  <data name="TestingNotificationTitle" xml:space="preserve">
-    <value>HuajiTech.CoolQ 测试提示</value>
   </data>
   <data name="UnexpectedReturnValue" xml:space="preserve">
     <value>酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。</value>

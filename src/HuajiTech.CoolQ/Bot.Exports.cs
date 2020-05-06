@@ -90,38 +90,30 @@ namespace HuajiTech.CoolQ
             return infos;
         }
 
-        private static void LoadPlugins(IContainer container, AppLifecycle loadStage)
+        private static void LoadPlugins(IContainer container, AppLifecycle loadStage, bool logInfo = false)
         {
             try
             {
-                Instance.Plugins.AddRange(
-                    container.ResolveNamed<IEnumerable<IPlugin>>(loadStage.ToString()));
+                var plugins = container.ResolveNamed<IEnumerable<IPlugin>>(loadStage.ToString());
+
+                if (!logInfo)
+                {
+                    return;
+                }
+
+                foreach (var plugin in plugins)
+                {
+                    Instance.Logger.LogDebug(
+                        Resources.PluginLoadTitle,
+                        string.Format(
+                            CultureInfo.InvariantCulture,
+                            Resources.PluginLoadMessage,
+                            plugin.GetType().FullName));
+                }
             }
             catch (Exception ex)
             {
                 throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
-            }
-        }
-
-        private static void LogTestingNotification() =>
-            Instance.Logger.LogInfo(
-                Resources.TestingNotificationTitle,
-                string.Format(
-                    CultureInfo.InvariantCulture,
-                    Resources.TestingNotificationContent,
-                    AppId));
-
-        private static void LogPluginInfos(Dictionary<AppLifecycle, Type> infos)
-        {
-            foreach (var info in infos)
-            {
-                Instance.Logger.LogDebug(
-                    Resources.PluginLoadTitle,
-                    string.Format(
-                        CultureInfo.InvariantCulture,
-                        Resources.PluginLoadMessage,
-                        info.Key,
-                        info.Value.FullName));
             }
         }
 
@@ -147,11 +139,21 @@ namespace HuajiTech.CoolQ
 
             var source = BotEventSource.Instance;
 
-            source.AppEnabled += (sender, e) => LogTestingNotification();
-            source.AppEnabled += (sender, e) => LogPluginInfos(pluginInfos);
+            var isFirstTimeEnabled = true;
+
+            source.AppEnabled += (sender, e) =>
+            {
+                if (!isFirstTimeEnabled)
+                {
+                    return;
+                }
+
+                LoadPlugins(container, AppLifecycle.Enabled, true);
+
+                isFirstTimeEnabled = false;
+            };
 
             source.BotStarted += (sender, e) => LoadPlugins(container, AppLifecycle.BotStarted);
-            source.AppEnabled += (sender, e) => LoadPlugins(container, AppLifecycle.Enabled);
             source.AppDisabling += (sender, e) => LoadPlugins(container, AppLifecycle.Disabling);
             source.BotStopping += (sender, e) => LoadPlugins(container, AppLifecycle.BotStopping);
 

@@ -2,7 +2,6 @@
 {
     /// <summary>
     /// 定义用户。
-    /// 此类为抽象类。
     /// </summary>
     public interface IUser : IChattable, IUserInfo, IRequestable, IRefreshable
     {
