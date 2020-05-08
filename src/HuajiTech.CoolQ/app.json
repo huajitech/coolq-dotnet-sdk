@@ -1,5 +1,5 @@
 // 用于使用 HuajiTech.CoolQ 开发的酷Q应用配置文件。
-// 版本 0.2.1-alpha.1
+// 版本 0.2.1-alpha.2
 // *这是一个测试版本，不建议用于生产环境。
 //
 // 酷Q的 Json 文件支持以 // 开头的注释。
@@ -77,14 +77,14 @@
       "id": 9,
       "type": 201,
       "name": "好友已添加事件处理",
-      "function": "OnContactAdded",
+      "function": "OnFriendAdded",
       "priority": 30000
     },
     {
       "id": 10,
       "type": 301,
       "name": "好友添加请求处理",
-      "function": "OnContactRequested",
+      "function": "OnFriendshipRequested",
       "priority": 30000
     },
     {

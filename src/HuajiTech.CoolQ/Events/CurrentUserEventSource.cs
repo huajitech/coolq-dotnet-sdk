@@ -14,7 +14,7 @@ namespace HuajiTech.CoolQ.Events
         "CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Style", "IDE0060:删除未使用的参数", Justification = "<挂起>")]
-    internal class CurrentUserEventSource : IMessageEventSource, IContactEventSource, IEntranceInviteEventSource
+    internal class CurrentUserEventSource : IMessageEventSource, IFriendEventSource, IEntranceInviteEventSource
     {
         public static readonly CurrentUserEventSource Instance = new CurrentUserEventSource();
 
@@ -28,9 +28,9 @@ namespace HuajiTech.CoolQ.Events
 
         public event EventHandler<EntranceInvitedEventArgs> EntranceInvited;
 
-        public event EventHandler<ContactAddedEventArgs> ContactAdded;
+        public event EventHandler<FriendAddedEventArgs> FriendAdded;
 
-        public event EventHandler<ContactRequestedEventArgs> ContactRequested;
+        public event EventHandler<FriendshipRequestedEventArgs> FriendRequested;
 
         private static bool OnMessageReceived(
             int messageId, Chat source, IUser sender, string message)
@@ -67,7 +67,7 @@ namespace HuajiTech.CoolQ.Events
             {
                 PrivateMessageSender.User => new User(senderNumber),
                 PrivateMessageSender.Group => new Member(senderNumber, new Group(0)),
-                PrivateMessageSender.Contact => new Contact(senderNumber),
+                PrivateMessageSender.Friend => new Friend(senderNumber),
                 _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(PrivateMessageSender))
             };
 
@@ -101,34 +101,34 @@ namespace HuajiTech.CoolQ.Events
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnContactAdded(
+        private static bool OnFriendAdded(
             int type,
             int timestampAdded,
             long requesterNumber)
         {
-            var e = new ContactAddedEventArgs(
-                Timestamp.ToDateTime(timestampAdded), new Contact(requesterNumber));
+            var e = new FriendAddedEventArgs(
+                Timestamp.ToDateTime(timestampAdded), new Friend(requesterNumber));
 
-            Instance.ContactAdded?.Invoke(Instance, e);
+            Instance.FriendAdded?.Invoke(Instance, e);
 
             return e.Handled;
         }
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnContactRequested(
+        private static bool OnFriendRequested(
             int type,
             int timestampRequested,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            var e = new ContactRequestedEventArgs(
+            var e = new FriendshipRequestedEventArgs(
                 Timestamp.ToDateTime(timestampRequested),
                 new User(requesterNumber),
-                new ContactRequest(requestToken, message));
+                new FriendshipRequest(requestToken, message));
 
-            Instance.ContactRequested?.Invoke(Instance, e);
+            Instance.FriendRequested?.Invoke(Instance, e);
 
             return e.Handled;
         }

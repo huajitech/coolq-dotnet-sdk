@@ -9,10 +9,5 @@
         /// 获取当前 <see cref="IAliased"/> 对象的别名。
         /// </summary>
         string Alias { get; }
-
-        /// <summary>
-        /// 获取当前 <see cref="IAliased"/> 对象的显示名称。
-        /// </summary>
-        string DisplayName { get; }
     }
 }

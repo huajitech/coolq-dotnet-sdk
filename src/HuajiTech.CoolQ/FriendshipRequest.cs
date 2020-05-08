@@ -2,11 +2,11 @@ using HuajiTech.QQ;
 
 namespace HuajiTech.CoolQ
 {
-    internal class ContactRequest : IContactRequest
+    internal class FriendshipRequest : IFriendshipRequest
     {
         private readonly string _token;
 
-        public ContactRequest(string token, string message)
+        public FriendshipRequest(string token, string message)
         {
             _token = token;
             Message = message;
@@ -21,7 +21,7 @@ namespace HuajiTech.CoolQ
         public void Reject() => Respond(Response.Reject, null);
 
         private void Respond(Response response, string alias) =>
-            NativeMethods.RespondContactRequest(
+            NativeMethods.RespondFriendshipRequest(
                 Bot.Instance.AuthCode, _token, response, alias).CheckError();
     }
 }

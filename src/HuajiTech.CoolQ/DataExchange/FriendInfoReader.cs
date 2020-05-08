@@ -1,14 +1,14 @@
 namespace HuajiTech.CoolQ.DataExchange
 {
-    internal sealed class ContactInfoReader : Reader<ContactInfo>
+    internal sealed class FriendInfoReader : Reader<FriendInfo>
     {
-        public ContactInfoReader(string base64String)
+        public FriendInfoReader(string base64String)
             : base(base64String)
         {
         }
 
-        public override ContactInfo Read() =>
-            new ContactInfo
+        public override FriendInfo Read() =>
+            new FriendInfo
             {
                 Number = ReadInt64(),
                 Nickname = ReadString(),

@@ -5,6 +5,6 @@ namespace HuajiTech.CoolQ
         None,
         User,
         Group,
-        Contact = 11
+        Friend = 11
     }
 }

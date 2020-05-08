@@ -58,7 +58,7 @@ namespace HuajiTech.CoolQ
 
         [DllImport(DllName, EntryPoint = "CQ_getFriendList")]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]
-        public static extern string GetContactsBase64(
+        public static extern string GetFriendsBase64(
             int authCode,
             [MarshalAs(UnmanagedType.U1)] bool reservedParameter /* 总是 false */);
 
@@ -73,7 +73,7 @@ namespace HuajiTech.CoolQ
             int count);
 
         [DllImport(DllName, EntryPoint = "CQ_setFriendAddRequest")]
-        public static extern int RespondContactRequest(
+        public static extern int RespondFriendshipRequest(
             int authCode,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string token,
             Response response,

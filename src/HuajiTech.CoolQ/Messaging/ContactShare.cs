@@ -7,27 +7,27 @@ namespace HuajiTech.CoolQ.Messaging
     /// <summary>
     /// 表示名片分享的 <see cref="CQCode"/>。
     /// </summary>
-    public class ChatShare : CQCode
+    public class ContactShare : CQCode
     {
-        public ChatShare()
+        public ContactShare()
             : base("contact")
         {
         }
 
-        public ChatShare(IDictionary<string, string> parameters)
+        public ContactShare(IDictionary<string, string> parameters)
             : base("contact", parameters)
         {
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="ChatShare"/> 对象的内容。
+        /// 获取或设置当前 <see cref="ContactShare"/> 对象的内容。
         /// </summary>
         public IChattable Content
         {
             get => this["type"] switch
             {
-                "qq" => PluginContext.CurrentContext.GetUser(GetParameterAsInt64("id")),
-                "group" => PluginContext.CurrentContext.GetGroup(GetParameterAsInt64("id")),
+                "qq" => QQ.PluginContext.CurrentContext.GetUser(GetParameterAsInt64("id")),
+                "group" => QQ.PluginContext.CurrentContext.GetGroup(GetParameterAsInt64("id")),
                 _ => null
             };
 

@@ -46,23 +46,23 @@ namespace HuajiTech.QQ
         }
 
         /// <summary>
-        /// 获取指定号码的联系人。
+        /// 获取指定号码的好友。
         /// </summary>
         /// <param name="number">号码。</param>
-        public abstract IContact GetContact(long number);
+        public abstract IFriend GetFriend(long number);
 
         /// <summary>
-        /// 获取号码为指定联系人的号码的 <see cref="IContact"/> 对象。
+        /// 获取号码为指定好友的号码的 <see cref="IFriend"/> 对象。
         /// </summary>
-        /// <param name="contact">联系人。</param>
-        public virtual IContact GetContact(IContact contact)
+        /// <param name="friend">好友。</param>
+        public virtual IFriend GetFriend(IFriend friend)
         {
-            if (contact is null)
+            if (friend is null)
             {
-                throw new ArgumentNullException(nameof(contact));
+                throw new ArgumentNullException(nameof(friend));
             }
 
-            return GetContact(contact.Number);
+            return GetFriend(friend.Number);
         }
 
         /// <summary>

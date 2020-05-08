@@ -3,12 +3,12 @@ using System;
 namespace HuajiTech.QQ.Events
 {
     /// <summary>
-    /// 为 <see cref="IContactEventSource.ContactRequested"/> 事件提供数据。
+    /// 为 <see cref="IFriendEventSource.FriendRequested"/> 事件提供数据。
     /// </summary>
-    public class ContactRequestedEventArgs : TimedEventArgs
+    public class FriendshipRequestedEventArgs : TimedEventArgs
     {
-        public ContactRequestedEventArgs(
-            DateTime time, IUser requester, IContactRequest request)
+        public FriendshipRequestedEventArgs(
+            DateTime time, IUser requester, IFriendshipRequest request)
             : base(time)
         {
             Requester = requester;
@@ -23,6 +23,6 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取请求。
         /// </summary>
-        public IContactRequest Request { get; }
+        public IFriendshipRequest Request { get; }
     }
 }

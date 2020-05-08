@@ -5,16 +5,16 @@ using System.Linq;
 
 namespace HuajiTech.CoolQ
 {
-    internal class Contact : User, IContact
+    internal class Friend : User, IFriend
     {
-        private ContactInfo _info;
+        private FriendInfo _info;
 
-        public Contact(long number)
+        public Friend(long number)
             : base(number)
         {
         }
 
-        internal Contact(ContactInfo info)
+        internal Friend(FriendInfo info)
             : base(info.Number)
         {
             _info = info;
@@ -36,25 +36,25 @@ namespace HuajiTech.CoolQ
             GetInfo(true);
         }
 
-        private ContactInfo GetInfo(bool throwException = false)
+        private FriendInfo GetInfo(bool throwException = false)
         {
             try
             {
-                return _info ??= CurrentUser.GetContactInfos()
+                return _info ??= CurrentUser.GetFriendInfos()
                     .First(info => info.Number == Number);
             }
             catch (CoolQException) when (!throwException)
             {
-                return new ContactInfo();
+                return new FriendInfo();
             }
             catch (InvalidOperationException)
             {
                 if (throwException)
                 {
-                    throw new InvalidOperationException(Resources.ContactNotExist);
+                    throw new InvalidOperationException(Resources.FriendNotExist);
                 }
 
-                return new ContactInfo();
+                return new FriendInfo();
             }
         }
     }

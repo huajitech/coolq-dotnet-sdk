@@ -1,9 +1,9 @@
 ﻿namespace HuajiTech.QQ
 {
     /// <summary>
-    /// 定义联系人。
+    /// 定义好友。
     /// </summary>
-    public interface IContact : IUser, IAliased
+    public interface IFriend : IUser, IAliased
     {
     }
 }

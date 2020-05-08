@@ -9,9 +9,9 @@ namespace HuajiTech.QQ
     public interface ICurrentUser : IUser
     {
         /// <summary>
-        /// 获取当前 <see cref="ICurrentUser"/> 对象的所有联系人。
+        /// 获取当前 <see cref="ICurrentUser"/> 对象的所有好友。
         /// </summary>
-        IReadOnlyCollection<IContact> GetContacts();
+        IReadOnlyCollection<IFriend> GetFriends();
 
         /// <summary>
         /// 获取当前 <see cref="ICurrentUser"/> 对象在指定域下的 Cookies。

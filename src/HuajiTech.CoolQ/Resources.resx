@@ -120,8 +120,8 @@
   <data name="AppIdNotFound" xml:space="preserve">
     <value>未在此程序集找到 AppIdAttribute 特性。</value>
   </data>
-  <data name="ContactNotExist" xml:space="preserve">
-    <value>该联系人不存在。</value>
+  <data name="FriendNotExist" xml:space="preserve">
+    <value>该好友不存在。</value>
   </data>
   <data name="Debug" xml:space="preserve">
     <value>调试</value>

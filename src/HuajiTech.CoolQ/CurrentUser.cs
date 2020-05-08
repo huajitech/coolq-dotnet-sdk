@@ -14,18 +14,18 @@ namespace HuajiTech.CoolQ
 
         public override string Nickname => NativeMethods.GetCurrentUserNickname(Bot.Instance.AuthCode);
 
-        internal static IReadOnlyCollection<ContactInfo> GetContactInfos()
+        internal static IReadOnlyCollection<FriendInfo> GetFriendInfos()
         {
-            using var reader = new ContactInfoReader(
-                NativeMethods.GetContactsBase64(Bot.Instance.AuthCode, false).CheckError());
+            using var reader = new FriendInfoReader(
+                NativeMethods.GetFriendsBase64(Bot.Instance.AuthCode, false).CheckError());
 
             return reader.ReadAll().ToList();
         }
 
-        public IReadOnlyCollection<QQ.IContact> GetContacts()
+        public IReadOnlyCollection<QQ.IFriend> GetFriends()
         {
-            return GetContactInfos()
-                .Select(info => new Contact(info))
+            return GetFriendInfos()
+                .Select(info => new Friend(info))
                 .ToList();
         }
 

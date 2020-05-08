@@ -53,31 +53,6 @@
             获取来源群。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.ContactAddedEventArgs">
-            <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IContactEventSource.ContactAdded"/> 事件提供数据。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.Events.ContactAddedEventArgs.Contact">
-            <summary>
-            获取添加的联系人。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.QQ.Events.ContactRequestedEventArgs">
-            <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IContactEventSource.ContactRequested"/> 事件提供数据。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.Events.ContactRequestedEventArgs.Requester">
-            <summary>
-            获取请求用户。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.Events.ContactRequestedEventArgs.Request">
-            <summary>
-            获取请求。
-            </summary>
-        </member>
         <member name="T:HuajiTech.QQ.Events.EntranceInvitedEventArgs">
             <summary>
             为 <see cref="E:HuajiTech.QQ.Events.IEntranceInviteEventSource.EntranceInvited"/> 事件提供数据。
@@ -136,6 +111,31 @@
         <member name="P:HuajiTech.QQ.Events.FileUploadedEventArgs.File">
             <summary>
             获取上传的文件。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.QQ.Events.FriendAddedEventArgs">
+            <summary>
+            为 <see cref="E:HuajiTech.QQ.Events.IFriendEventSource.FriendAdded"/> 事件提供数据。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Events.FriendAddedEventArgs.Operatee">
+            <summary>
+            获取添加的好友。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.QQ.Events.FriendshipRequestedEventArgs">
+            <summary>
+            为 <see cref="E:HuajiTech.QQ.Events.IFriendEventSource.FriendRequested"/> 事件提供数据。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Events.FriendshipRequestedEventArgs.Requester">
+            <summary>
+            获取请求用户。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Events.FriendshipRequestedEventArgs.Request">
+            <summary>
+            获取请求。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.Events.GroupEventArgs">
@@ -208,21 +208,6 @@
             在机器人停止时引发。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.IContactEventSource">
-            <summary>
-            定义联系人事件。
-            </summary>
-        </member>
-        <member name="E:HuajiTech.QQ.Events.IContactEventSource.ContactAdded">
-            <summary>
-            在联系人已添加时引发。
-            </summary>
-        </member>
-        <member name="E:HuajiTech.QQ.Events.IContactEventSource.ContactRequested">
-            <summary>
-            在收到联系人请求时引发。
-            </summary>
-        </member>
         <member name="T:HuajiTech.QQ.Events.IEntranceInviteEventSource">
             <summary>
             定义入群邀请事件。
@@ -251,6 +236,21 @@
         <member name="E:HuajiTech.QQ.Events.IFileEventSource.FileUploaded">
             <summary>
             在上传文件时引发。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.QQ.Events.IFriendEventSource">
+            <summary>
+            定义好友事件。
+            </summary>
+        </member>
+        <member name="E:HuajiTech.QQ.Events.IFriendEventSource.FriendAdded">
+            <summary>
+            在好友已添加时引发。
+            </summary>
+        </member>
+        <member name="E:HuajiTech.QQ.Events.IFriendEventSource.FriendRequested">
+            <summary>
+            在收到好友请求时引发。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.Events.IGroupAdministratorEventSource">
@@ -442,11 +442,6 @@
             获取当前 <see cref="T:HuajiTech.QQ.IAliased"/> 对象的别名。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.IAliased.DisplayName">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IAliased"/> 对象的显示名称。
-            </summary>
-        </member>
         <member name="T:HuajiTech.QQ.IAnonymousMember">
             <summary>
             定义匿名成员。
@@ -530,32 +525,15 @@
             获取当前 <see cref="T:HuajiTech.QQ.IChattable"/> 对象的号码。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.IContact">
-            <summary>
-            定义联系人。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.QQ.IContactRequest">
-            <summary>
-            表示联系人请求。
-            此类为抽象类。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.QQ.IContactRequest.Accept(System.String)">
-            <summary>
-            同意当前请求，并为联系人设置别名。
-            </summary>
-            <param name="alias">要设置的别名。</param>
-        </member>
         <member name="T:HuajiTech.QQ.ICurrentUser">
             <summary>
             表示当前用户。
             此类为抽象类。
             </summary>
         </member>
-        <member name="M:HuajiTech.QQ.ICurrentUser.GetContacts">
+        <member name="M:HuajiTech.QQ.ICurrentUser.GetFriends">
             <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.ICurrentUser"/> 对象的所有联系人。
+            获取当前 <see cref="T:HuajiTech.QQ.ICurrentUser"/> 对象的所有好友。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.ICurrentUser.GetCookies(System.String)">
@@ -583,6 +561,23 @@
             拒绝当前请求，并指定拒绝的原因。
             </summary>
             <param name="reason">原因。</param>
+        </member>
+        <member name="T:HuajiTech.QQ.IFriend">
+            <summary>
+            定义好友。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.QQ.IFriendshipRequest">
+            <summary>
+            表示好友请求。
+            此类为抽象类。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.QQ.IFriendshipRequest.Accept(System.String)">
+            <summary>
+            同意当前请求，并为好友设置别名。
+            </summary>
+            <param name="alias">要设置的别名。</param>
         </member>
         <member name="T:HuajiTech.QQ.IGroup">
             <summary>
@@ -1090,9 +1085,9 @@
             获取当前 <see cref="T:HuajiTech.QQ.Plugin"/> 对象的 <see cref="T:HuajiTech.QQ.PluginContext"/>。
             </summary>
         </member>
-        <member name="M:HuajiTech.QQ.Plugin.Contact(System.Int64)">
+        <member name="M:HuajiTech.QQ.Plugin.Friend(System.Int64)">
             <summary>
-            创建指定号码的联系人。
+            创建指定号码的好友。
             </summary>
             <param name="number">号码。</param>
         </member>
@@ -1151,17 +1146,17 @@
             </summary>
             <param name="user">用户。</param>
         </member>
-        <member name="M:HuajiTech.QQ.PluginContext.GetContact(System.Int64)">
+        <member name="M:HuajiTech.QQ.PluginContext.GetFriend(System.Int64)">
             <summary>
-            获取指定号码的联系人。
+            获取指定号码的好友。
             </summary>
             <param name="number">号码。</param>
         </member>
-        <member name="M:HuajiTech.QQ.PluginContext.GetContact(HuajiTech.QQ.IContact)">
+        <member name="M:HuajiTech.QQ.PluginContext.GetFriend(HuajiTech.QQ.IFriend)">
             <summary>
-            获取号码为指定联系人的号码的 <see cref="T:HuajiTech.QQ.IContact"/> 对象。
+            获取号码为指定好友的号码的 <see cref="T:HuajiTech.QQ.IFriend"/> 对象。
             </summary>
-            <param name="contact">联系人。</param>
+            <param name="friend">好友。</param>
         </member>
         <member name="M:HuajiTech.QQ.PluginContext.GetGroup(System.Int64)">
             <summary>

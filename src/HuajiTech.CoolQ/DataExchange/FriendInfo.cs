@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ.DataExchange
 {
-    internal class ContactInfo
+    internal class FriendInfo
     {
         public string Alias { get; set; }
 

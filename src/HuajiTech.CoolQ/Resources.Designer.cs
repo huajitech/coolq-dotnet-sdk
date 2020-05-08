@@ -70,15 +70,6 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 该联系人不存在。 的本地化字符串。
-        /// </summary>
-        internal static string ContactNotExist {
-            get {
-                return ResourceManager.GetString("ContactNotExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 调试 的本地化字符串。
         /// </summary>
         internal static string Debug {
@@ -138,6 +129,15 @@ namespace HuajiTech.CoolQ {
         internal static string FieldCannotBeEmptyOrWhiteSpace {
             get {
                 return ResourceManager.GetString("FieldCannotBeEmptyOrWhiteSpace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 该好友不存在。 的本地化字符串。
+        /// </summary>
+        internal static string FriendNotExist {
+            get {
+                return ResourceManager.GetString("FriendNotExist", resourceCulture);
             }
         }
         

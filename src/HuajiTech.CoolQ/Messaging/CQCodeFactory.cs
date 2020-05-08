@@ -48,7 +48,7 @@ namespace HuajiTech.CoolQ.Messaging
                 "music" => new Music(parameters),
                 "share" => new Share(parameters),
                 "rich" => new RichText(parameters),
-                "contact" => new ChatShare(parameters),
+                "contact" => new ContactShare(parameters),
                 _ => new CQCode(type, parameters)
             };
         }

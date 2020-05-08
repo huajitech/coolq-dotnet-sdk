@@ -139,16 +139,6 @@
             表示 At (@) 全体成员的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.ChatShare">
-            <summary>
-            表示名片分享的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.ChatShare.Content">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.ChatShare"/> 对象的内容。
-            </summary>
-        </member>
         <member name="T:HuajiTech.CoolQ.Messaging.ClockingIn">
             <summary>
             表示签到的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
@@ -418,6 +408,16 @@
             如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
             </summary>
             <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Messaging.ContactShare">
+            <summary>
+            表示名片分享的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Messaging.ContactShare.Content">
+            <summary>
+            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象的内容。
+            </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Messaging.CQCode">
             <summary>
@@ -882,11 +882,6 @@
               查找类似 未在此程序集找到 AppIdAttribute 特性。 的本地化字符串。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Resources.ContactNotExist">
-            <summary>
-              查找类似 该联系人不存在。 的本地化字符串。
-            </summary>
-        </member>
         <member name="P:HuajiTech.CoolQ.Resources.Debug">
             <summary>
               查找类似 调试 的本地化字符串。
@@ -920,6 +915,11 @@
         <member name="P:HuajiTech.CoolQ.Resources.FieldCannotBeEmptyOrWhiteSpace">
             <summary>
               查找类似 该字段不能为空或空白字符。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Resources.FriendNotExist">
+            <summary>
+              查找类似 该好友不存在。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.Info">

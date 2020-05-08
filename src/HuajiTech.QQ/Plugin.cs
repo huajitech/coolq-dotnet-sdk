@@ -41,10 +41,10 @@
         protected PluginContext Context { get; }
 
         /// <summary>
-        /// 创建指定号码的联系人。
+        /// 创建指定号码的好友。
         /// </summary>
         /// <param name="number">号码。</param>
-        protected IContact Contact(long number) => Context.GetContact(number);
+        protected IFriend Friend(long number) => Context.GetFriend(number);
 
         /// <summary>
         /// 创建指定号码的群。
