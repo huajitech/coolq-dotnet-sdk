@@ -7,7 +7,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.pfx</AssemblyOriginatorKeyFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>0.2.1-alpha.2005.1</Version>
+    <Version>0.2.1-alpha.2005.2</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>用于酷Q应用的 .NET SDK。</Description>
@@ -64,7 +64,7 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="5.1.4" />
-    <PackageReference Include="HuajiTech.UnmanagedExports.Metadata" Version="1.0.1" />
+    <PackageReference Include="HuajiTech.UnmanagedExports.Metadata" Version="1.0.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0-beta3.final">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
