@@ -3,7 +3,7 @@ using System;
 namespace HuajiTech.QQ.Events
 {
     /// <summary>
-    /// 为 <see cref="IFriendEventSource.FriendRequested"/> 事件提供数据。
+    /// 为 <see cref="IFriendEventSource.FriendshipRequested"/> 事件提供数据。
     /// </summary>
     public class FriendshipRequestedEventArgs : TimedEventArgs
     {

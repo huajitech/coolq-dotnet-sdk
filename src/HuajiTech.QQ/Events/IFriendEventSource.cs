@@ -15,6 +15,6 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 在收到好友请求时引发。
         /// </summary>
-        event EventHandler<FriendshipRequestedEventArgs> FriendRequested;
+        event EventHandler<FriendshipRequestedEventArgs> FriendshipRequested;
     }
 }

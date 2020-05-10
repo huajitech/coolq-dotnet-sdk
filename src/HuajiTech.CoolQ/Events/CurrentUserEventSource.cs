@@ -30,7 +30,7 @@ namespace HuajiTech.CoolQ.Events
 
         public event EventHandler<FriendAddedEventArgs> FriendAdded;
 
-        public event EventHandler<FriendshipRequestedEventArgs> FriendRequested;
+        public event EventHandler<FriendshipRequestedEventArgs> FriendshipRequested;
 
         private static bool OnMessageReceived(
             int messageId, Chat source, IUser sender, string message)
@@ -116,7 +116,7 @@ namespace HuajiTech.CoolQ.Events
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnFriendRequested(
+        private static bool OnFriendshipRequested(
             int type,
             int timestampRequested,
             long requesterNumber,
@@ -128,7 +128,7 @@ namespace HuajiTech.CoolQ.Events
                 new User(requesterNumber),
                 new FriendshipRequest(requestToken, message));
 
-            Instance.FriendRequested?.Invoke(Instance, e);
+            Instance.FriendshipRequested?.Invoke(Instance, e);
 
             return e.Handled;
         }
