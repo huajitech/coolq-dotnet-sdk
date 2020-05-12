@@ -2,7 +2,7 @@ using HuajiTech.QQ;
 
 namespace HuajiTech.CoolQ
 {
-    public abstract class Chat : IChattable
+    internal abstract class Chat : IChattable
     {
         protected Chat(long number) => Number = number;
 

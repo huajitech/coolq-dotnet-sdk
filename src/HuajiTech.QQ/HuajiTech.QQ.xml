@@ -125,7 +125,7 @@
         </member>
         <member name="T:HuajiTech.QQ.Events.FriendshipRequestedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IFriendEventSource.FriendRequested"/> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.IFriendEventSource.FriendshipRequested"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Events.FriendshipRequestedEventArgs.Requester">
@@ -248,7 +248,7 @@
             在好友已添加时引发。
             </summary>
         </member>
-        <member name="E:HuajiTech.QQ.Events.IFriendEventSource.FriendRequested">
+        <member name="E:HuajiTech.QQ.Events.IFriendEventSource.FriendshipRequested">
             <summary>
             在收到好友请求时引发。
             </summary>

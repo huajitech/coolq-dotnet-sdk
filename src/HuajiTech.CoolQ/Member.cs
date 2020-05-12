@@ -54,7 +54,7 @@ namespace HuajiTech.CoolQ
 
         public bool Equals(IMember other) => base.Equals(other) && other is Member && Group.Equals(other.Group);
 
-        public override bool Equals(IChattable other) => Equals(other as IMember);
+        public override bool Equals(IChattable other) => other is IMember member ? Equals(member) : base.Equals(other);
 
         public override int GetHashCode() => base.GetHashCode() ^ Group.GetHashCode();
 

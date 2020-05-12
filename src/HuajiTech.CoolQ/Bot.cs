@@ -39,8 +39,6 @@ namespace HuajiTech.CoolQ
 
         public static Bot Instance { get; private set; }
 
-        public int AuthCode { get; }
-
         public bool CanSendImage => _canSendImage.Value;
 
         public bool CanSendRecord => _canSendRecord.Value;
@@ -52,6 +50,8 @@ namespace HuajiTech.CoolQ
         public ILogger Logger { get; }
 
         internal List<IPlugin> Plugins { get; } = new List<IPlugin>();
+
+        internal int AuthCode { get; }
 
         private static string GetAppId()
         {
