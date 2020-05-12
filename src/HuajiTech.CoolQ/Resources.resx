@@ -118,19 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppIdNotFound" xml:space="preserve">
-    <value>未在此程序集找到 AppIdAttribute 特性。</value>
+    <value>未在当前程序集找到 AppIdAttribute 特性。</value>
   </data>
   <data name="FriendNotExist" xml:space="preserve">
     <value>该好友不存在。</value>
-  </data>
-  <data name="Debug" xml:space="preserve">
-    <value>调试</value>
-  </data>
-  <data name="Error" xml:space="preserve">
-    <value>错误</value>
-  </data>
-  <data name="Exception" xml:space="preserve">
-    <value>异常</value>
   </data>
   <data name="FailedToDecodeRegexMessage" xml:space="preserve">
     <value>解码正则消息失败。</value>
@@ -144,9 +135,6 @@
   <data name="FieldCannotBeEmptyOrWhiteSpace" xml:space="preserve">
     <value>该字段不能为空或空白字符。</value>
   </data>
-  <data name="Info" xml:space="preserve">
-    <value>信息</value>
-  </data>
   <data name="NullReturnValue" xml:space="preserve">
     <value>酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。</value>
   </data>
@@ -156,19 +144,10 @@
   <data name="PluginLoadTitle" xml:space="preserve">
     <value>插件加载</value>
   </data>
-  <data name="Receiving" xml:space="preserve">
-    <value>接收</value>
-  </data>
-  <data name="Sending" xml:space="preserve">
-    <value>发送</value>
-  </data>
-  <data name="Success" xml:space="preserve">
-    <value>成功</value>
-  </data>
   <data name="UnexpectedReturnValue" xml:space="preserve">
     <value>酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。</value>
   </data>
-  <data name="Warning" xml:space="preserve">
-    <value>警告</value>
+  <data name="BotNotInitialized" xml:space="preserve">
+    <value>Bot 尚未初始化。</value>
   </data>
 </root>

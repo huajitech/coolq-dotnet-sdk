@@ -19,13 +19,13 @@ namespace HuajiTech.CoolQ.Events
         {
         }
 
-        public event EventHandler AppDisabling;
+        public event EventHandler? AppDisabling;
 
-        public event EventHandler AppEnabled;
+        public event EventHandler? AppEnabled;
 
-        public event EventHandler BotStarted;
+        public event EventHandler? BotStarted;
 
-        public event EventHandler BotStopping;
+        public event EventHandler? BotStopping;
 
         [DllExport]
         private static int OnAppDisabling()

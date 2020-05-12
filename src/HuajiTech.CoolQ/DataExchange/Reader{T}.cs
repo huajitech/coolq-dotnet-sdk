@@ -56,7 +56,7 @@ namespace HuajiTech.CoolQ.DataExchange
 
         protected long ReadInt64() => FromBigEndian(BinaryReader.ReadInt64());
 
-        protected string ReadString()
+        protected string? ReadString()
         {
             var bytes = ReadBytes();
 

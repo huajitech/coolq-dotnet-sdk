@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;net461</TargetFrameworks>
     <LangVersion>8</LangVersion>
-    <CodeAnalysisRuleSet>HuajiTech.QQ.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.QQ.pfx</AssemblyOriginatorKeyFile>
     <Version>0.2.1-alpha.2005.2</Version>
@@ -36,10 +36,6 @@
 
   <ItemGroup>
     <AdditionalFiles Include="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <CodeAnalysisDictionary Include="HuajiTech.QQ.ruleset" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,6 +10,6 @@ namespace HuajiTech.CoolQ.DataExchange
         }
 
         public override KeyValuePair<string, string> Read() =>
-            new KeyValuePair<string, string>(ReadString(), ReadString());
+            new KeyValuePair<string, string>(ReadString()!, ReadString()!);
     }
 }

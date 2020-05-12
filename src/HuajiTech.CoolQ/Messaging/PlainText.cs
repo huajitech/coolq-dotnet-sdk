@@ -1,18 +1,21 @@
+using System.Diagnostics;
+
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
     /// 表示纯文本。
     /// 此类不能被继承。
     /// </summary>
+    [DebuggerDisplay("Content = {Content}")]
     public sealed class PlainText : MessageElement
     {
         /// <summary>
         /// 以指定内容初始化一个 <see cref="PlainText"/> 类的新实例。
         /// </summary>
         /// <param name="content">要被 <see cref="PlainText"/> 包装的字符串。</param>
-        public PlainText(string content)
+        public PlainText(string? content)
         {
-            Content = content ?? throw new System.ArgumentNullException(nameof(content));
+            Content = content ?? string.Empty;
         }
 
         /// <summary>
@@ -25,7 +28,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string Escape(string str) => str
+        public static string? Escape(string? str) => str
             ?.Replace("&", "&amp;")
             ?.Replace("[", "&#91;")
             ?.Replace("]", "&#93;");
@@ -35,7 +38,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string Unescape(string str) => str
+        public static string? Unescape(string? str) => str
             ?.Replace("&#91;", "[")
             ?.Replace("&#93;", "]")
             ?.Replace("&amp;", "&");
@@ -44,8 +47,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// 返回经过 <see cref="Escape(string)"/> 后的 <see cref="Content"/>。
         /// </summary>
         /// <returns>经过 <see cref="Escape(string)"/> 后的 <see cref="Content"/>。</returns>
-        public override string ToString() => Escape(Content);
+        public override string ToString() => Escape(Content)!;
 
-        public static implicit operator string(PlainText text) => text?.Content;
+        public static implicit operator string?(PlainText? text) => text?.Content;
     }
 }

@@ -7,7 +7,6 @@ namespace HuajiTech.CoolQ
         "Globalization", "CA2101:指定对 P/Invoke 字符串参数进行封送处理", Justification = "<挂起>")]
     internal static class NativeMethods
     {
-        internal const UnmanagedType UnmanagedStringType = UnmanagedType.AnsiBStr;
         private const string DllName = "CQP.dll";
 
         #region 环境
@@ -77,7 +76,7 @@ namespace HuajiTech.CoolQ
             int authCode,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string token,
             Response response,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string alias);
+            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string? alias);
 
         [DllImport(DllName, EntryPoint = "CQ_getStrangerInfo")]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]
@@ -174,7 +173,7 @@ namespace HuajiTech.CoolQ
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string token,
             MemberEventType requestType,
             Response response,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string rejectReason);
+            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string? rejectReason);
 
         [DllImport(DllName, EntryPoint = "CQ_getGroupMemberInfoV2")]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]

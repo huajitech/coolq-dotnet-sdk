@@ -9,9 +9,9 @@ namespace HuajiTech.CoolQ
         public static readonly TimeSpan MaxMuteDuration = TimeSpan.FromDays(30);
 
         private readonly string _rawInfo;
-        private AnonymousMemberInfo _info;
+        private AnonymousMemberInfo? _info;
 
-        public AnonymousMember(string rawInfo, QQ.IGroup group)
+        public AnonymousMember(string rawInfo, IGroup group)
         {
             _rawInfo = rawInfo;
             Group = group;
@@ -19,7 +19,7 @@ namespace HuajiTech.CoolQ
 
         public long Id => GetInfo().Id;
 
-        public string Name => GetInfo().Name;
+        public string? Name => GetInfo().Name;
 
         public IGroup Group { get; }
 

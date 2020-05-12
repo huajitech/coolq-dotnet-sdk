@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace HuajiTech.CoolQ.Messaging
 {
@@ -22,7 +21,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Image"/> 对象的文件名。
         /// </summary>
-        public string FileName
+        public string? FileName
         {
             get => this["file"];
             set => this["file"] = value;

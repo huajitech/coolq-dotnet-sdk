@@ -20,7 +20,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Location"/> 对象的地址。
         /// </summary>
-        public string Address
+        public string? Address
         {
             get => this["content"];
             set => this["content"] = value;
@@ -47,7 +47,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Location"/> 对象的名称。
         /// </summary>
-        public string Name
+        public string? Name
         {
             get => this["title"];
             set => this["title"] = value;

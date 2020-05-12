@@ -8,27 +8,27 @@ namespace HuajiTech.CoolQ
     {
         public static readonly TimeSpan MaxMuteDuration = TimeSpan.FromDays(30);
 
-        private MemberInfo _info;
+        private MemberInfo? _info;
 
         public Member(long number, IGroup group)
             : base(number)
         {
-            Group = group;
+            Group = group ?? throw new ArgumentNullException(nameof(group));
         }
 
         internal Member(MemberInfo info)
-            : this(info.Number, info.Group)
+            : this(info.Number, info.Group!)
         {
             _info = info;
         }
 
         public int Age => GetInfo().Age;
 
-        public string Alias => GetInfo().Alias;
+        public string? Alias => GetInfo().Alias;
 
         public bool CanEditAlias => GetInfo().CanEditAlias;
 
-        public CustomTitle CustomTitle => GetInfo().CustomTitle;
+        public CustomTitle? CustomTitle => GetInfo().CustomTitle;
 
         public Gender Gender => GetInfo().Gender;
 
@@ -40,11 +40,11 @@ namespace HuajiTech.CoolQ
 
         public DateTime LastSpeakTime => GetInfo().LastSpeakTime;
 
-        public string Level => GetInfo().Level;
+        public string? Level => GetInfo().Level;
 
-        public string Location => GetInfo().Location;
+        public string? Location => GetInfo().Location;
 
-        public override string Nickname => GetInfo().Nickname;
+        public override string? Nickname => GetInfo().Nickname;
 
         public MemberRole Role => GetInfo().Role;
 
@@ -92,8 +92,6 @@ namespace HuajiTech.CoolQ
 
             NativeMethods.SetMemberAlias(
                 Bot.Instance.AuthCode, Group.Number, Number, alias).CheckError();
-
-            _info.Alias = alias;
         }
 
         public void SetAsAdministrator() => SetIsAdministrator(true);
@@ -109,8 +107,6 @@ namespace HuajiTech.CoolQ
 
             NativeMethods.SetMemberCustomTitle(
                 Bot.Instance.AuthCode, Group.Number, Number, title.Text, expirationSeconds).CheckError();
-
-            _info.CustomTitle = title;
         }
 
         public override string ToString() => GetType().Name + $"({Number},{Group})";

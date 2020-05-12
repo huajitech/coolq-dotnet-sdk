@@ -55,6 +55,8 @@ namespace HuajiTech.QQ
         /// 获取号码为指定好友的号码的 <see cref="IFriend"/> 对象。
         /// </summary>
         /// <param name="friend">好友。</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Naming", "CA1716:标识符不应与关键字匹配", Justification = "<挂起>")]
         public virtual IFriend GetFriend(IFriend friend)
         {
             if (friend is null)

@@ -23,7 +23,7 @@ namespace HuajiTech.CoolQ
             "Design", "CA1024:在适用处使用属性", Justification = "<挂起>")]
         public int GetNativeDataSize() => -1;
 
-        public IntPtr MarshalManagedToNative(object ManagedObj)
+        public IntPtr MarshalManagedToNative(object? ManagedObj)
         {
             if (ManagedObj is null)
             {
@@ -44,7 +44,7 @@ namespace HuajiTech.CoolQ
             throw new MarshalDirectiveException();
         }
 
-        public unsafe object MarshalNativeToManaged(IntPtr pNativeData)
+        public unsafe object? MarshalNativeToManaged(IntPtr pNativeData)
         {
             if (pNativeData == IntPtr.Zero)
             {

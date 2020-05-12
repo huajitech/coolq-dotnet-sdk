@@ -52,7 +52,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 指定 <paramref name="key"/> 处的参数的值。
         /// 如果指定键不存在，则为 <c>null</c>。
         /// </value>
-        public string this[string key]
+        public string? this[string key]
         {
             get
             {
@@ -64,7 +64,15 @@ namespace HuajiTech.CoolQ.Messaging
                 return Parameters[key];
             }
 
-            set => Parameters[key] = value;
+            set
+            {
+                if (value is null)
+                {
+                    return;
+                }
+
+                Parameters[key] = value;
+            }
         }
 
         /// <summary>
@@ -82,14 +90,14 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string Escape(string str) => PlainText.Escape(str).Replace(",", "&#44");
+        public static string? Escape(string? str) => PlainText.Escape(str)?.Replace(",", "&#44");
 
         /// <summary>
         /// 将字符串中的转义字符转换为具有特殊意义的酷Q字符。
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string Unescape(string str) => PlainText.Unescape(str).Replace("&#44", ",");
+        public static string? Unescape(string? str) => PlainText.Unescape(str)?.Replace("&#44", ",");
 
         /// <summary>
         /// 将当前 <see cref="CQCode"/> 对象的值转换为它的等效字符串表示形式。
@@ -132,7 +140,7 @@ namespace HuajiTech.CoolQ.Messaging
             return default;
         }
 
-        protected Uri GetParameterAsUri(string key)
+        protected Uri? GetParameterAsUri(string key)
         {
             try
             {
@@ -152,6 +160,6 @@ namespace HuajiTech.CoolQ.Messaging
 
         protected void SetParameter(string key, float value) => this[key] = value.ToString(CultureInfo.InvariantCulture);
 
-        protected void SetParameter(string key, Uri value) => this[key] = value?.ToString();
+        protected void SetParameter(string key, Uri? value) => this[key] = value?.ToString();
     }
 }

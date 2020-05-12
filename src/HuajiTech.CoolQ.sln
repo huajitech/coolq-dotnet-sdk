@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.QQ", "HuajiTech.QQ\HuajiTech.QQ.csproj", "{6173CC55-BEF8-4A90-A8E6-50D61EF05629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuajiTech.CoolQ", "HuajiTech.CoolQ\HuajiTech.CoolQ.csproj", "{D2BF62FE-C064-48F9-BC11-5F3A92479C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ", "HuajiTech.CoolQ\HuajiTech.CoolQ.csproj", "{D2BF62FE-C064-48F9-BC11-5F3A92479C5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2DA7FEA-02DF-4654-BE5C-226A6DA1D429}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

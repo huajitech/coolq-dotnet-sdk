@@ -28,25 +28,25 @@ namespace HuajiTech.CoolQ.Events
         {
         }
 
-        public event EventHandler<GroupMemberEventArgs> MemberJoined;
+        public event EventHandler<GroupMemberEventArgs>? MemberJoined;
 
-        public event EventHandler<GroupMemberEventArgs> MemberLeft;
+        public event EventHandler<GroupMemberEventArgs>? MemberLeft;
 
-        public event EventHandler<EntranceRequestedEventArgs> EntranceRequested;
+        public event EventHandler<EntranceRequestedEventArgs>? EntranceRequested;
 
-        public event EventHandler<GroupMuteEventArgs> GroupMuted;
+        public event EventHandler<GroupMuteEventArgs>? GroupMuted;
 
-        public event EventHandler<GroupMuteEventArgs> GroupUnmuted;
+        public event EventHandler<GroupMuteEventArgs>? GroupUnmuted;
 
-        public event EventHandler<MemberMutedEventArgs> MemberMuted;
+        public event EventHandler<MemberMutedEventArgs>? MemberMuted;
 
-        public event EventHandler<GroupEventArgs> MemberUnmuted;
+        public event EventHandler<GroupEventArgs>? MemberUnmuted;
 
-        public event EventHandler<GroupEventArgs> AdministratorAdded;
+        public event EventHandler<GroupEventArgs>? AdministratorAdded;
 
-        public event EventHandler<GroupEventArgs> AdministratorRemoved;
+        public event EventHandler<GroupEventArgs>? AdministratorRemoved;
 
-        public event EventHandler<FileUploadedEventArgs> FileUploaded;
+        public event EventHandler<FileUploadedEventArgs>? FileUploaded;
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]

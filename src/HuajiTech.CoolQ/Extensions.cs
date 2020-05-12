@@ -1,6 +1,7 @@
 using HuajiTech.CoolQ.DataExchange;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace HuajiTech.CoolQ
@@ -15,8 +16,8 @@ namespace HuajiTech.CoolQ
         /// </summary>
         /// <param name="message">要解析为只读字典的 <see cref="Message"/> 对象。</param>
         /// <returns>与 <see cref="QQ.IMessage.Content"/> 等效的只读字典。</returns>
-        /// <exception cref="InvalidOperationException"><paramref name="message"/> 的值不合法。</exception>
-        public static IReadOnlyDictionary<string, string> RegexDecode(this QQ.IMessage message)
+        /// <exception cref="InvalidDataException"><paramref name="message"/> 不合法。</exception>
+        public static IReadOnlyDictionary<string, string>? RegexDecode(this QQ.IMessage message)
         {
             if (message is null)
             {
@@ -31,7 +32,7 @@ namespace HuajiTech.CoolQ
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException(Resources.FailedToDecodeRegexMessage, ex);
+                throw new InvalidDataException(Resources.FailedToDecodeRegexMessage, ex);
             }
         }
 

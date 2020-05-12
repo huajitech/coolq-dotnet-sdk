@@ -14,13 +14,13 @@ namespace HuajiTech.CoolQ
 
         public string Message { get; }
 
-        public void Accept(string alias) => Respond(Response.Accept, alias);
+        public void Accept(string? alias) => Respond(Response.Accept, alias);
 
         public void Accept() => Accept(null);
 
         public void Reject() => Respond(Response.Reject, null);
 
-        private void Respond(Response response, string alias) =>
+        private void Respond(Response response, string? alias) =>
             NativeMethods.RespondFriendshipRequest(
                 Bot.Instance.AuthCode, _token, response, alias).CheckError();
     }

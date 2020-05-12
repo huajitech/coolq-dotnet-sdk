@@ -22,15 +22,15 @@ namespace HuajiTech.CoolQ.Events
         {
         }
 
-        public event EventHandler<MessageReceivedEventArgs> MessageReceived;
+        public event EventHandler<MessageReceivedEventArgs>? MessageReceived;
 
-        public event EventHandler<AnonymousMessageReceivedEventArgs> AnonymousMessageReceived;
+        public event EventHandler<AnonymousMessageReceivedEventArgs>? AnonymousMessageReceived;
 
-        public event EventHandler<EntranceInvitedEventArgs> EntranceInvited;
+        public event EventHandler<EntranceInvitedEventArgs>? EntranceInvited;
 
-        public event EventHandler<FriendAddedEventArgs> FriendAdded;
+        public event EventHandler<FriendAddedEventArgs>? FriendAdded;
 
-        public event EventHandler<FriendshipRequestedEventArgs> FriendshipRequested;
+        public event EventHandler<FriendshipRequestedEventArgs>? FriendshipRequested;
 
         private static bool OnMessageReceived(
             int messageId, Chat source, IUser sender, string message)

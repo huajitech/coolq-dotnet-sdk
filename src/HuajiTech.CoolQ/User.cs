@@ -6,7 +6,7 @@ namespace HuajiTech.CoolQ
 {
     internal class User : Chat, IUser
     {
-        private UserInfo _info;
+        private UserInfo? _info;
 
         public User(long number)
             : base(number)
@@ -21,9 +21,9 @@ namespace HuajiTech.CoolQ
 
         public virtual bool HasRequested => !(_info is null);
 
-        public override string DisplayName => Nickname;
+        public override string? DisplayName => Nickname;
 
-        public virtual string Nickname => GetInfo().Nickname;
+        public virtual string? Nickname => GetInfo().Nickname;
 
         public void GiveThumbsUp(int count) =>
             NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();

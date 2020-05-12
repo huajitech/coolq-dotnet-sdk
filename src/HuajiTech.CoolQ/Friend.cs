@@ -7,7 +7,7 @@ namespace HuajiTech.CoolQ
 {
     internal class Friend : User, IFriend
     {
-        private FriendInfo _info;
+        private FriendInfo? _info;
 
         public Friend(long number)
             : base(number)
@@ -22,11 +22,11 @@ namespace HuajiTech.CoolQ
 
         public override bool HasRequested => !(_info is null);
 
-        public string Alias => GetInfo().Alias;
+        public string? Alias => GetInfo().Alias;
 
-        public override string Nickname => GetInfo().Nickname;
+        public override string? Nickname => GetInfo().Nickname;
 
-        public override string DisplayName => Alias ?? Nickname;
+        public override string? DisplayName => Alias ?? Nickname;
 
         public override void Refresh() => Request();
 

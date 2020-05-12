@@ -8,21 +8,21 @@ namespace HuajiTech.CoolQ
 {
     internal partial class Group : Chat, IGroup
     {
-        private readonly string _name;
-        private GroupInfo _info;
+        private readonly string? _name;
+        private GroupInfo? _info;
 
         public Group(long number)
             : base(number)
         {
         }
 
-        internal Group(long number, string name)
+        internal Group(long number, string? name)
             : this(number)
         {
             _name = name;
         }
 
-        public override string DisplayName => Name;
+        public override string? DisplayName => Name;
 
         public bool HasRequested => !(_info is null);
 
@@ -30,7 +30,7 @@ namespace HuajiTech.CoolQ
 
         public int MemberCount => GetInfo().MemberCount;
 
-        public string Name => _name ?? GetInfo().Name;
+        public string? Name => _name ?? GetInfo().Name;
 
         public void DisableAnonymous() =>
             NativeMethods.SetGroupIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();

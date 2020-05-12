@@ -21,7 +21,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Share"/> 对象的描述。
         /// </summary>
-        public string Description
+        public string? Description
         {
             get => this["content"];
             set => this["content"] = value;
@@ -30,7 +30,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Share"/> 对象的图片 URL。
         /// </summary>
-        public Uri ImageUrl
+        public Uri? ImageUrl
         {
             get => GetParameterAsUri("image");
             set => SetParameter("image", value);
@@ -39,7 +39,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Share"/> 对象的标题。
         /// </summary>
-        public string Title
+        public string? Title
         {
             get => this["title"];
             set => this["title"] = value;
@@ -48,7 +48,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Share"/> 对象的 URL。
         /// </summary>
-        public Uri Url
+        public Uri? Url
         {
             get => GetParameterAsUri("url");
             set => SetParameter("url", value);

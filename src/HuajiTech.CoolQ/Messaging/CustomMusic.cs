@@ -22,7 +22,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="CustomMusic"/> 对象的音频 URL。
         /// </summary>
-        public Uri AudioUrl
+        public Uri? AudioUrl
         {
             get => GetParameterAsUri("audio");
             set => SetParameter("audio", value);
@@ -31,7 +31,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="CustomMusic"/> 对象的内容 URL。
         /// </summary>
-        public Uri ContentUrl
+        public Uri? ContentUrl
         {
             get => GetParameterAsUri("url");
             set => SetParameter("url", value);
@@ -40,7 +40,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="CustomMusic"/> 对象的描述。
         /// </summary>
-        public string Description
+        public string? Description
         {
             get => this["content"];
             set => this["content"] = value;
@@ -49,7 +49,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="CustomMusic"/> 对象的图片URL。
         /// </summary>
-        public Uri ImageUrl
+        public Uri? ImageUrl
         {
             get => GetParameterAsUri("image");
             set => SetParameter("image", value);
@@ -58,7 +58,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="CustomMusic"/> 对象的标题。
         /// </summary>
-        public string Title
+        public string? Title
         {
             get => this["title"];
             set => this["title"] = value;

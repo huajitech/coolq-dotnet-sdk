@@ -22,7 +22,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="ContactShare"/> 对象的内容。
         /// </summary>
-        public IChattable Content
+        public IChattable? Content
         {
             get => this["type"] switch
             {

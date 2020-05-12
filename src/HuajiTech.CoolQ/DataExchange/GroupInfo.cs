@@ -6,7 +6,7 @@ namespace HuajiTech.CoolQ.DataExchange
 
         public int MemberCount { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         public long Number { get; set; }
     }

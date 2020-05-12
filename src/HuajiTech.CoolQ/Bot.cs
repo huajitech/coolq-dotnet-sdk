@@ -1,6 +1,7 @@
 using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
 
@@ -11,9 +12,9 @@ namespace HuajiTech.CoolQ
         internal const string ApiVersion = "9";
 
         public static readonly string AppId = GetAppId();
+        private static Bot? _instance;
 
         private readonly Lazy<CurrentUser> _currentUser = new Lazy<CurrentUser>(() => new CurrentUser());
-
         private readonly Lazy<bool> _canSendImage;
         private readonly Lazy<bool> _canSendRecord;
         private readonly Lazy<DirectoryInfo> _dataDirectory;
@@ -37,7 +38,11 @@ namespace HuajiTech.CoolQ
                 NativeMethods.GetDataDirectory(AuthCode).CheckError()));
         }
 
-        public static Bot Instance { get; private set; }
+        public static Bot Instance
+        {
+            get => _instance ?? throw new InvalidOperationException(Resources.BotNotInitialized);
+            private set => _instance = value;
+        }
 
         public bool CanSendImage => _canSendImage.Value;
 

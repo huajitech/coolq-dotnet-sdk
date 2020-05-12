@@ -22,7 +22,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Record"/> 对象的文件名。
         /// </summary>
-        public string FileName
+        public string? FileName
         {
             get => this["file"];
             set => this["file"] = value;

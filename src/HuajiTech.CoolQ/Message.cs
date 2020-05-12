@@ -14,14 +14,14 @@ namespace HuajiTech.CoolQ
 
         public string Content { get; }
 
-        public override bool Equals(object obj) => Equals(obj as IMessage);
+        public override bool Equals(object? obj) => Equals(obj as IMessage);
 
         public override int GetHashCode() => Id.GetHashCode() ^ Content.GetHashCode();
 
         public override string ToString() => Content;
 
-        public bool Equals(IMessage other) =>
-            base.Equals(other) || (other.Id == Id && other.Content == Content);
+        public bool Equals(IMessage? other) =>
+            base.Equals(other) || (other?.Id == Id && other.Content == Content);
 
         public void Recall() =>
             NativeMethods.RecallMessage(Bot.Instance.AuthCode, Id).CheckError();

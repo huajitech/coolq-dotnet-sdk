@@ -61,7 +61,7 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 未在此程序集找到 AppIdAttribute 特性。 的本地化字符串。
+        ///   查找类似 未在当前程序集找到 AppIdAttribute 特性。 的本地化字符串。
         /// </summary>
         internal static string AppIdNotFound {
             get {
@@ -70,29 +70,11 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 调试 的本地化字符串。
+        ///   查找类似 Bot 尚未初始化。 的本地化字符串。
         /// </summary>
-        internal static string Debug {
+        internal static string BotNotInitialized {
             get {
-                return ResourceManager.GetString("Debug", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 错误 的本地化字符串。
-        /// </summary>
-        internal static string Error {
-            get {
-                return ResourceManager.GetString("Error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 异常 的本地化字符串。
-        /// </summary>
-        internal static string Exception {
-            get {
-                return ResourceManager.GetString("Exception", resourceCulture);
+                return ResourceManager.GetString("BotNotInitialized", resourceCulture);
             }
         }
         
@@ -142,15 +124,6 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 信息 的本地化字符串。
-        /// </summary>
-        internal static string Info {
-            get {
-                return ResourceManager.GetString("Info", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。 的本地化字符串。
         /// </summary>
         internal static string NullReturnValue {
@@ -178,47 +151,11 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 接收 的本地化字符串。
-        /// </summary>
-        internal static string Receiving {
-            get {
-                return ResourceManager.GetString("Receiving", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 发送 的本地化字符串。
-        /// </summary>
-        internal static string Sending {
-            get {
-                return ResourceManager.GetString("Sending", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 成功 的本地化字符串。
-        /// </summary>
-        internal static string Success {
-            get {
-                return ResourceManager.GetString("Success", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。 的本地化字符串。
         /// </summary>
         internal static string UnexpectedReturnValue {
             get {
                 return ResourceManager.GetString("UnexpectedReturnValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 警告 的本地化字符串。
-        /// </summary>
-        internal static string Warning {
-            get {
-                return ResourceManager.GetString("Warning", resourceCulture);
             }
         }
     }

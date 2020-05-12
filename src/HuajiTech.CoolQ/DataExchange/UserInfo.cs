@@ -8,7 +8,7 @@ namespace HuajiTech.CoolQ.DataExchange
 
         public Gender Gender { get; set; }
 
-        public string Nickname { get; set; }
+        public string? Nickname { get; set; }
 
         public long Number { get; set; }
     }

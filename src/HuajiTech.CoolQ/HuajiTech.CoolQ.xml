@@ -112,7 +112,7 @@
             </summary>
             <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 对象。</param>
             <returns>与 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 等效的只读字典。</returns>
-            <exception cref="T:System.InvalidOperationException"><paramref name="message"/> 的值不合法。</exception>
+            <exception cref="T:System.IO.InvalidDataException"><paramref name="message"/> 不合法。</exception>
         </member>
         <member name="T:HuajiTech.CoolQ.Messaging.Anonymous">
             <summary>
@@ -619,7 +619,7 @@
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Message"/> 对象解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
             </summary>
-            <param name="message">一个 <see cref="T:HuajiTech.CoolQ.Message"/>对象，该 <see cref="T:HuajiTech.CoolQ.Message"/> 对象的 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 属性的值为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
+            <param name="message">一个 <see cref="T:HuajiTech.QQ.IMessage"/>对象，该 <see cref="T:HuajiTech.QQ.IMessage"/> 对象的 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
             <param name="useEmojiCQCode">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
             <returns>与 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
         </member>
@@ -909,22 +909,12 @@
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.AppIdNotFound">
             <summary>
-              查找类似 未在此程序集找到 AppIdAttribute 特性。 的本地化字符串。
+              查找类似 未在当前程序集找到 AppIdAttribute 特性。 的本地化字符串。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Debug">
+        <member name="P:HuajiTech.CoolQ.Resources.BotNotInitialized">
             <summary>
-              查找类似 调试 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Error">
-            <summary>
-              查找类似 错误 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Exception">
-            <summary>
-              查找类似 异常 的本地化字符串。
+              查找类似 Bot 尚未初始化。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.FailedToDecodeRegexMessage">
@@ -952,11 +942,6 @@
               查找类似 该好友不存在。 的本地化字符串。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Info">
-            <summary>
-              查找类似 信息 的本地化字符串。
-            </summary>
-        </member>
         <member name="P:HuajiTech.CoolQ.Resources.NullReturnValue">
             <summary>
               查找类似 酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。 的本地化字符串。
@@ -972,29 +957,9 @@
               查找类似 插件加载 的本地化字符串。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Receiving">
-            <summary>
-              查找类似 接收 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Sending">
-            <summary>
-              查找类似 发送 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Success">
-            <summary>
-              查找类似 成功 的本地化字符串。
-            </summary>
-        </member>
         <member name="P:HuajiTech.CoolQ.Resources.UnexpectedReturnValue">
             <summary>
               查找类似 酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Warning">
-            <summary>
-              查找类似 警告 的本地化字符串。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Status">

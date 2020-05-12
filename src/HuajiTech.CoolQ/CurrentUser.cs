@@ -33,13 +33,13 @@ namespace HuajiTech.CoolQ
 
         public int GetCsrfToken() => NativeMethods.GetCsrfToken(Bot.Instance.AuthCode).CheckError();
 
-        public IReadOnlyCollection<QQ.IGroup> GetGroups()
+        public IReadOnlyCollection<IGroup> GetGroups()
         {
             using var reader = new BasicGroupInfoReader(
                 NativeMethods.GetGroupsBase64(Bot.Instance.AuthCode).CheckError());
 
             return reader.ReadAll()
-                .Select(info => new Group(info.Number, info.Name))
+                .Select(info => new Group(info.Number, info.Name!))
                 .ToList();
         }
     }

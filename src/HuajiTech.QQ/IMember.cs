@@ -22,6 +22,8 @@ namespace HuajiTech.QQ
         /// 设置当前 <see cref="IMember"/> 对象的 <see cref="IAliased.Alias"/>。
         /// </summary>
         /// <param name="alias">要设置的 <see cref="IAliased.Alias"/> 的值。</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Naming", "CA1716:标识符不应与关键字匹配", Justification = "<挂起>")]
         void SetAlias(string alias);
 
         /// <summary>

@@ -49,9 +49,9 @@ namespace HuajiTech.CoolQ
             return writer.GetBase64();
         }
 
-        public bool Equals(Status other) => other?.Value == Value && other?.Unit == Unit && other?.Color == Color;
+        public bool Equals(Status? other) => other?.Value == Value && other?.Unit == Unit && other?.Color == Color;
 
-        public override bool Equals(object obj) => base.Equals(obj) || Equals(obj as Status);
+        public override bool Equals(object? obj) => base.Equals(obj) || Equals(obj as Status);
 
         public override int GetHashCode() => (int)Color ^ Value.GetHashCode() ^ Unit.GetHashCode();
 
