@@ -9,6 +9,12 @@
             在调用 API 发生错误时引发的异常。
             </summary>
         </member>
+        <member name="T:HuajiTech.QQ.Chat">
+            <summary>
+            表示聊天。
+            此类为抽象类。
+            </summary>
+        </member>
         <member name="T:HuajiTech.QQ.CustomTitle">
             <summary>
             表示自定义头衔。
