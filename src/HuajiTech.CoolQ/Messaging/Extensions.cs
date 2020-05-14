@@ -21,11 +21,11 @@ namespace HuajiTech.CoolQ.Messaging
             };
 
         /// <summary>
-        /// 将 <see cref="Message"/> 对象解析为 <see cref="ComplexMessage"/> 对象。
+        /// 将 <see cref="IMessage"/> 对象解析为 <see cref="ComplexMessage"/> 对象。
         /// </summary>
         /// <param name="message">一个 <see cref="IMessage"/>对象，该 <see cref="IMessage"/> 对象的 <see cref="QQ.IMessage.Content"/> 属性为要解析的 <see cref="ComplexMessage"/> 对象的字符串表示形式。</param>
         /// <param name="useEmojiCQCode">如果要在返回的 <see cref="ComplexMessage"/> 对象中包含 <see cref="Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
-        /// <returns>与 <see cref="QQ.IMessage.Content"/> 等效的 <see cref="ComplexMessage"/> 对象。</returns>
+        /// <returns>与 <see cref="IMessage.Content"/> 等效的 <see cref="ComplexMessage"/> 对象。</returns>
         public static ComplexMessage Parse(this IMessage? message, bool useEmojiCQCode = false) =>
             ComplexMessage.Parse(message?.Content, useEmojiCQCode);
 

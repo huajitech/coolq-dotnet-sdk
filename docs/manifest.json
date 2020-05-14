@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.Extensions.html",
-          "hash": "7y46VOCccyRamTnBcT513Q=="
+          "hash": "jjZWNttTQO0mmHhAw2qKKg=="
         }
       },
       "is_incremental": false,
@@ -1158,7 +1158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.PluginContextExtensions.html",
-          "hash": "CfPnTZR/HiIq3WuwFJ7mFw=="
+          "hash": "nXF8fu6nEL1Tca1ZmTY4BA=="
         }
       },
       "is_incremental": false,
@@ -1230,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/howto_handle_message.html",
-          "hash": "W9/3V/FRNKIgPQG5s8j6Qg=="
+          "hash": "8V4uhwbH0nryRNcqkTpgXQ=="
         }
       },
       "is_incremental": false,
@@ -1333,7 +1333,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 9,
-          "skipped_file_count": 8
+          "skipped_file_count": 9
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

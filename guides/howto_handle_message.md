@@ -3,9 +3,9 @@
 ## 判断消息来源类型
 
 ```csharp
-if (e.Source is IGroup) { }   // 群消息。
-if (e.Source is IUser) { }    // 私聊消息（包括临时会话和好友消息）。
-if (e.Source is IMember) { }  // 群临时会话消息（Member.Group 为 Group(0)）。
+if (e.Source is IGroup) { }  // 群消息。
+if (e.Source is IUser) { }   // 私聊消息（包括临时会话和好友消息）。
+if (e.Source is IMember) { } // 群临时会话消息（Member.Group 为 Group(0)）。
 if (e.Source is IFriend) { } // 好友消息。
 ```
 
