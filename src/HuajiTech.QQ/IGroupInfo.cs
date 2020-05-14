@@ -18,6 +18,6 @@
         /// <summary>
         /// 获取当前 <see cref="IGroupInfo"/> 对象的名称。
         /// </summary>
-        public abstract string? Name { get; }
+        string? Name { get; }
     }
 }

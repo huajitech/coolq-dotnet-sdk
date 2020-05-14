@@ -1,5 +1,3 @@
-using System;
-
 namespace HuajiTech.CoolQ.DataExchange
 {
     internal class AnonymousMemberInfo

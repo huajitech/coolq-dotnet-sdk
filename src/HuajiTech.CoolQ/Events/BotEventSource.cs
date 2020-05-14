@@ -1,7 +1,6 @@
 ﻿using HuajiTech.QQ.Events;
 using HuajiTech.UnmanagedExports;
 using System;
-using System.Globalization;
 
 namespace HuajiTech.CoolQ.Events
 {

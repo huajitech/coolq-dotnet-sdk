@@ -713,23 +713,23 @@
             获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Music"/> 对象的 ID。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Music.Provider">
+        <member name="P:HuajiTech.CoolQ.Messaging.Music.Platform">
             <summary>
             获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Music"/> 对象的提供商。
             </summary>
-            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value" /> 不是有效的 <see cref="T:HuajiTech.CoolQ.Messaging.MusicProvider"/> 值。</exception>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value" /> 不是有效的 <see cref="T:HuajiTech.CoolQ.Messaging.MusicPlatform"/> 值。</exception>
         </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.MusicProvider">
+        <member name="T:HuajiTech.CoolQ.Messaging.MusicPlatform">
             <summary>
             指定音乐提供商。
             </summary>
         </member>
-        <member name="F:HuajiTech.CoolQ.Messaging.MusicProvider.QQ">
+        <member name="F:HuajiTech.CoolQ.Messaging.MusicPlatform.QQ">
             <summary>
             QQ音乐。
             </summary>
         </member>
-        <member name="F:HuajiTech.CoolQ.Messaging.MusicProvider.Netease">
+        <member name="F:HuajiTech.CoolQ.Messaging.MusicPlatform.Netease">
             <summary>
             网易云音乐。
             </summary>

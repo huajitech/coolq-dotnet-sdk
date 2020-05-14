@@ -22,7 +22,7 @@ namespace HuajiTech.CoolQ
             return reader.ReadAll().ToList();
         }
 
-        public IReadOnlyCollection<QQ.IFriend> GetFriends()
+        public IReadOnlyCollection<IFriend> GetFriends()
         {
             return GetFriendInfos()
                 .Select(info => new Friend(info))

@@ -6,7 +6,7 @@ namespace HuajiTech.CoolQ
     /// 指定插件加载阶段。
     /// 此类不能被继承。
     /// </summary>
-    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class, Inherited = false)]
     public sealed class PluginLoadStageAttribute : Attribute
     {
         /// <summary>

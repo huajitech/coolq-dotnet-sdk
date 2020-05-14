@@ -44,8 +44,6 @@ namespace HuajiTech.CoolQ
             private set => _instance = value;
         }
 
-        internal static List<IPlugin> Plugins { get; } = new List<IPlugin>();
-
         public bool CanSendImage => _canSendImage.Value;
 
         public bool CanSendRecord => _canSendRecord.Value;

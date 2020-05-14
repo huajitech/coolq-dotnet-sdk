@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
 namespace HuajiTech.CoolQ.DataExchange
 {
     internal sealed class BasicGroupInfoReader : Reader<BasicGroupInfo>
