@@ -494,18 +494,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HuajiTech.QQ.Chat.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HuajiTech.QQ.Chat.html",
-          "hash": "jgXkdnY0OvWnKyiwp+O14w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/HuajiTech.QQ.CustomTitle.yml",
       "output": {
         ".html": {
@@ -1170,7 +1158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.PluginContextExtensions.html",
-          "hash": "nXF8fu6nEL1Tca1ZmTY4BA=="
+          "hash": "CfPnTZR/HiIq3WuwFJ7mFw=="
         }
       },
       "is_incremental": false,
@@ -1182,7 +1170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.QQ.html",
-          "hash": "Xx13ZSdwqISo36lt8ne6GA=="
+          "hash": "eqyxIgjuVq4thGdBysFiog=="
         }
       },
       "is_incremental": false,
@@ -1206,7 +1194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "4NtZs41Tfeog5PJi65ElNQ=="
+          "hash": "ToSIYL3NFYUaggBPX3RNrw=="
         }
       },
       "is_incremental": false,
@@ -1266,7 +1254,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/menus_and_statuses.html",
-          "hash": "vIKWK7jCWse0DlstXncb5g=="
+          "hash": "Hj/TjAgB43JXC4gjmnPBQA=="
         }
       },
       "is_incremental": false,
@@ -1350,8 +1338,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 97,
-          "skipped_file_count": 97
+          "total_file_count": 96,
+          "skipped_file_count": 67
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

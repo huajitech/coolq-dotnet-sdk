@@ -92,10 +92,10 @@
 <p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html">Status</a> 类和 <a class="xref" href="../api/HuajiTech.CoolQ.Status.html#HuajiTech_CoolQ_Status_Encode">Encode()</a> 方法可以方便地创建状态数据并进行编码。</p>
 <pre><code class="lang-csharp">static string OnStatusUpdating()
 {
-  return new HuajiTech.CoolQ.Status(
-    value: &quot;值&quot;,
-    unit: &quot;单位&quot;,
-    color: HuajiTech.CoolQ.StatusColor.Green
+    return new HuajiTech.CoolQ.Status(
+      value: &quot;值&quot;,
+      unit: &quot;单位&quot;,
+      color: HuajiTech.CoolQ.StatusColor.Green
     ).Encode();
 }
 </code></pre>
