@@ -7,49 +7,79 @@ namespace HuajiTech.QQ
     /// </summary>
     public static class PluginContextExtensions
     {
-        public static IUser AsUser(this IUser user, PluginContext context) => context?.GetUser(user);
+        public static IUser? AsUser(this IUser user, PluginContext context) =>
+            context?.GetUser(user) ?? throw new ArgumentNullException(nameof(context));
 
-        public static IUser AsUser(this IUser user) => user?.AsUser(PluginContext.CurrentContext);
+        public static IUser? AsUser(this IUser user) => user?.AsUser(PluginContext.CurrentContext);
 
-        public static IMember AsMemberOf(this IUser user, IGroup group, PluginContext context) =>
+        public static IMember? AsMemberOf(this IUser user, IGroup group, PluginContext context) =>
             context?.GetMember(user, group);
 
-        public static IMember AsMemberOf(this IUser user, IGroup group) =>
+        public static IMember? AsMemberOf(this IUser user, IGroup group) =>
             AsMemberOf(user, group, PluginContext.CurrentContext);
 
-        public static IMember AsMemberOf(this IUser user, long groupNumber, PluginContext context) =>
+        public static IMember? AsMemberOf(this IUser user, long groupNumber, PluginContext context) =>
             context?.GetMember(user, groupNumber);
 
-        public static IMember AsMemberOf(this IUser user, long groupNumber) =>
+        public static IMember? AsMemberOf(this IUser user, long groupNumber) =>
             AsMemberOf(user, groupNumber, PluginContext.CurrentContext);
 
-        public static TException LogAsWarning<TException>(this TException exception, ILogger logger)
-            where TException : Exception
+        public static TException? LogAsWarning<TException>(this TException exception, ILogger logger)
+            where TException : notnull, Exception
         {
+            if (exception is null)
+            {
+                return null;
+            }
+
             logger?.LogWarning(exception);
             return exception;
         }
 
-        public static TException LogAsWarning<TException>(this TException exception, PluginContext context)
-            where TException : Exception =>
-            LogAsWarning(exception, context?.Bot?.Logger);
+        public static TException? LogAsWarning<TException>(this TException exception, PluginContext context)
+            where TException : Exception
+        {
+            if (context is null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
 
-        public static TException LogAsWarning<TException>(this TException exception)
+            return exception.LogAsWarning(context.Bot.Logger);
+        }
+
+        public static TException? LogAsWarning<TException>(this TException exception)
             where TException : Exception =>
             LogAsWarning(exception, PluginContext.CurrentContext);
 
-        public static TException LogAsError<TException>(this TException exception, ILogger logger)
+        public static TException? LogAsError<TException>(this TException exception, ILogger logger)
              where TException : Exception
         {
+            if (exception is null)
+            {
+                return null;
+            }
+
             logger?.LogError(exception);
             return exception;
         }
 
-        public static TException LogAsError<TException>(this TException exception, PluginContext context)
-            where TException : Exception =>
-            LogAsError(exception, context?.Bot?.Logger);
+        public static TException? LogAsError<TException>(this TException exception, PluginContext context)
+            where TException : Exception
+        {
+            if (exception is null)
+            {
+                return null;
+            }
 
-        public static TException LogAsError<TException>(this TException exception)
+            if (context is null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
+
+            return LogAsError(exception, context.Bot.Logger);
+        }
+
+        public static TException? LogAsError<TException>(this TException exception)
             where TException : Exception =>
             LogAsError(exception, PluginContext.CurrentContext);
     }

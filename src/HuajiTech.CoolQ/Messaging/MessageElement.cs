@@ -6,7 +6,7 @@ namespace HuajiTech.CoolQ.Messaging
     /// 表示消息元素。
     /// 此类为抽象类。
     /// </summary>
-    public abstract class MessageElement : IEquatable<MessageElement>
+    public abstract class MessageElement : IEquatable<MessageElement?>
     {
         public static MessageElement? FromString(string? str) => new PlainText(str);
 

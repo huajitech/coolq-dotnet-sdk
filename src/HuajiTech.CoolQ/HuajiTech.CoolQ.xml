@@ -119,7 +119,7 @@
             表示匿名消息的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Anonymous.DoesFallback">
+        <member name="P:HuajiTech.CoolQ.Messaging.Anonymous.Fallback">
             <summary>
             获取或设置一个值，指示是否在不能发送匿名消息时回退到普通消息。
             </summary>
@@ -667,7 +667,7 @@
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.Image.GetFile">
             <summary>
-            以异步操作请求当前 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。
             </summary>
             <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。</returns>
             <exception cref="T:HuajiTech.CoolQ.CoolQException">酷Q返回了指示操作失败的值。</exception>
@@ -788,7 +788,7 @@
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.Record.GetFile(System.String)">
             <summary>
-            请求当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。
             </summary>
             <param name="format">返回的文件的格式。</param>
             <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。</returns>

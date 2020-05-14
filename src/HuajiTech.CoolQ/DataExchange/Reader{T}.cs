@@ -14,7 +14,7 @@ namespace HuajiTech.CoolQ.DataExchange
         protected Reader(string base64String)
         {
             BinaryReader = new BinaryReader(
-                new MemoryStream(Convert.FromBase64String(base64String.CheckError())));
+                new MemoryStream(Convert.FromBase64String(base64String)));
         }
 
         protected BinaryReader BinaryReader { get; }

@@ -52,14 +52,15 @@ namespace HuajiTech.CoolQ
 
         public bool IsAdministrator => Role is MemberRole.Administrator || Role is MemberRole.Owner;
 
-        public bool Equals(IMember other) => base.Equals(other) && other is Member && Group.Equals(other.Group);
+        public bool Equals(IMember? other) => base.Equals(other) && other is Member && Group.Equals(other.Group);
 
-        public override bool Equals(IChattable other) => other is IMember member ? Equals(member) : base.Equals(other);
+        public override bool Equals(IChattable? other) =>
+            other is IMember member ? Equals(member) : base.Equals(other);
 
         public override int GetHashCode() => base.GetHashCode() ^ Group.GetHashCode();
 
         public void Kick(bool disallowRejoin = false) =>
-            NativeMethods.KickMember(
+            NativeMethods.Member_Kick(
                 Bot.Instance.AuthCode, Group.Number, Number, disallowRejoin).CheckError();
 
         public void Mute(TimeSpan duration)
@@ -69,7 +70,7 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentOutOfRangeException(nameof(duration));
             }
 
-            NativeMethods.MuteMember(
+            NativeMethods.Member_Mute(
                 Bot.Instance.AuthCode, Group.Number, Number, (long)duration.TotalSeconds).CheckError();
         }
 
@@ -90,7 +91,7 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace);
             }
 
-            NativeMethods.SetMemberAlias(
+            NativeMethods.Member_SetAlias(
                 Bot.Instance.AuthCode, Group.Number, Number, alias).CheckError();
         }
 
@@ -105,14 +106,14 @@ namespace HuajiTech.CoolQ
 
             var expirationSeconds = (long)((title.ExpirationTime - DateTime.Now)?.TotalSeconds ?? -1);
 
-            NativeMethods.SetMemberCustomTitle(
+            NativeMethods.Member_SetCustomTitle(
                 Bot.Instance.AuthCode, Group.Number, Number, title.Text, expirationSeconds).CheckError();
         }
 
         public override string ToString() => GetType().Name + $"({Number},{Group})";
 
         public void Unmute() =>
-            NativeMethods.MuteMember(
+            NativeMethods.Member_Mute(
                 Bot.Instance.AuthCode, Group.Number, Number, 0).CheckError();
 
         public void UnsetAsAdministrator() => SetIsAdministrator(false);
@@ -124,7 +125,7 @@ namespace HuajiTech.CoolQ
                 try
                 {
                     using var reader = new MemberInfoReader(
-                        NativeMethods.GetMemberInfoBase64(Bot.Instance.AuthCode, Group.Number, Number, refresh));
+                        NativeMethods.Member_GetInfo(Bot.Instance.AuthCode, Group.Number, Number, refresh).CheckError());
                     _info = reader.Read();
                 }
                 catch (CoolQException) when (!throwException)
@@ -137,7 +138,7 @@ namespace HuajiTech.CoolQ
         }
 
         private void SetIsAdministrator(bool isAdministrator) =>
-            NativeMethods.SetMemberIsAdministrator(
+            NativeMethods.Member_SetIsAdministrator(
                     Bot.Instance.AuthCode, Group.Number, Number, isAdministrator).CheckError();
     }
 }

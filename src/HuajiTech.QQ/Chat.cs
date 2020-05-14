@@ -12,9 +12,9 @@ namespace HuajiTech.QQ
 
         public long Number { get; }
 
-        public override bool Equals(object obj) => Equals(obj as IChattable);
+        public override bool Equals(object? obj) => Equals(obj as IChattable);
 
-        public virtual bool Equals(IChattable other) => base.Equals(other) || (other is Chat && other?.Number == Number);
+        public virtual bool Equals(IChattable? other) => base.Equals(other) || (other is Chat && other?.Number == Number);
 
         public override int GetHashCode() => (int)Number;
 

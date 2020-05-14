@@ -24,6 +24,6 @@ namespace HuajiTech.CoolQ
             base.Equals(other) || (other?.Id == Id && other.Content == Content);
 
         public void Recall() =>
-            NativeMethods.RecallMessage(Bot.Instance.AuthCode, Id).CheckError();
+            NativeMethods.Message_Recall(Bot.Instance.AuthCode, Id).CheckError();
     }
 }

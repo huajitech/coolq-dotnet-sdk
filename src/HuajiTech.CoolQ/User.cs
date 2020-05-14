@@ -21,12 +21,12 @@ namespace HuajiTech.CoolQ
 
         public virtual bool HasRequested => !(_info is null);
 
-        public override string? DisplayName => Nickname;
+        public override string DisplayName => Nickname ?? ToString();
 
         public virtual string? Nickname => GetInfo().Nickname;
 
         public void GiveThumbsUp(int count) =>
-            NativeMethods.GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
+            NativeMethods.User_GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
 
         public virtual void Request()
         {
@@ -43,12 +43,12 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentException(Resources.FieldCannotBeEmpty, nameof(message));
             }
 
-            var id = NativeMethods.SendPrivateMessage(Bot.Instance.AuthCode, Number, message).CheckError();
+            var id = NativeMethods.User_Send(Bot.Instance.AuthCode, Number, message).CheckError();
 
             return new Message(id, message);
         }
 
-        public override bool Equals(IChattable other) => base.Equals(other) && other is User;
+        public override bool Equals(IChattable? other) => base.Equals(other) && other is User;
 
         private UserInfo GetInfo(bool throwException = false, bool refresh = false)
         {
@@ -57,7 +57,7 @@ namespace HuajiTech.CoolQ
                 try
                 {
                     using var reader = new UserInfoReader(
-                        NativeMethods.GetUserInfoBase64(Bot.Instance.AuthCode, Number, refresh));
+                        NativeMethods.User_GetInfo(Bot.Instance.AuthCode, Number, refresh).CheckError());
                     _info = reader.Read();
                 }
                 catch (CoolQException) when (!throwException)

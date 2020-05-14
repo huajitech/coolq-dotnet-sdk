@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace HuajiTech.CoolQ.Messaging
 {
@@ -38,11 +37,19 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 请求当前 <see cref="Record"/> 对象表示的文件。
+        /// 获取当前 <see cref="Record"/> 对象表示的文件。
         /// </summary>
         /// <param name="format">返回的文件的格式。</param>
         /// <returns>当前 <see cref="Record"/> 对象表示的文件。</returns>
         /// <exception cref="CoolQException">酷Q返回了指示操作失败的值。</exception>
-        public FileInfo GetFile(string format) => QQ.PluginContext.CurrentContext.Bot.GetRecord(FileName, format);
+        public FileInfo? GetFile(string format)
+        {
+            if (FileName is null)
+            {
+                return null;
+            }
+
+            return QQ.PluginContext.CurrentContext.Bot.GetRecord(FileName, format);
+        }
     }
 }

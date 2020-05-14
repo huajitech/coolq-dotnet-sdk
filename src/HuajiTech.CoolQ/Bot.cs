@@ -1,7 +1,6 @@
 using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
 
@@ -12,11 +11,13 @@ namespace HuajiTech.CoolQ
         internal const string ApiVersion = "9";
 
         public static readonly string AppId = GetAppId();
+
         private static Bot? _instance;
 
         private readonly Lazy<CurrentUser> _currentUser = new Lazy<CurrentUser>(() => new CurrentUser());
         private readonly Lazy<bool> _canSendImage;
         private readonly Lazy<bool> _canSendRecord;
+
         private readonly Lazy<DirectoryInfo> _dataDirectory;
 
         static Bot()
@@ -31,11 +32,10 @@ namespace HuajiTech.CoolQ
         public Bot(int authCode)
         {
             AuthCode = authCode;
-            Logger = new Logger();
-            _canSendImage = new Lazy<bool>(() => NativeMethods.GetCanSendImage(AuthCode));
-            _canSendRecord = new Lazy<bool>(() => NativeMethods.GetCanSendRecord(AuthCode));
+            _canSendImage = new Lazy<bool>(() => NativeMethods.Bot_GetCanSendImage(AuthCode));
+            _canSendRecord = new Lazy<bool>(() => NativeMethods.Bot_GetCanSendRecord(AuthCode));
             _dataDirectory = new Lazy<DirectoryInfo>(() => new DirectoryInfo(
-                NativeMethods.GetDataDirectory(AuthCode).CheckError()));
+                NativeMethods.Bot_GetDataDirectory(AuthCode).CheckError()));
         }
 
         public static Bot Instance
@@ -43,6 +43,8 @@ namespace HuajiTech.CoolQ
             get => _instance ?? throw new InvalidOperationException(Resources.BotNotInitialized);
             private set => _instance = value;
         }
+
+        internal static List<IPlugin> Plugins { get; } = new List<IPlugin>();
 
         public bool CanSendImage => _canSendImage.Value;
 
@@ -52,9 +54,7 @@ namespace HuajiTech.CoolQ
 
         public ICurrentUser CurrentUser => _currentUser.Value;
 
-        public ILogger Logger { get; }
-
-        internal List<IPlugin> Plugins { get; } = new List<IPlugin>();
+        public ILogger Logger { get; } = new Logger();
 
         internal int AuthCode { get; }
 
@@ -77,7 +77,7 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileName));
             }
 
-            return new FileInfo(NativeMethods.GetImage(AuthCode, fileName).CheckError());
+            return new FileInfo(NativeMethods.Bot_GetImage(AuthCode, fileName).CheckError());
         }
 
         public FileInfo GetRecord(string fileName, string fileFormat)
@@ -92,7 +92,7 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileFormat));
             }
 
-            return new FileInfo(NativeMethods.GetRecord(AuthCode, fileName, fileFormat).CheckError());
+            return new FileInfo(NativeMethods.Bot_GetRecord(AuthCode, fileName, fileFormat).CheckError());
         }
     }
 }

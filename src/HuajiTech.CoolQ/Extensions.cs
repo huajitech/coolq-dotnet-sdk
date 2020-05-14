@@ -49,7 +49,8 @@ namespace HuajiTech.CoolQ
             return returnValue;
         }
 
-        internal static T CheckError<T>(this T returnValue)
+        internal static T CheckError<T>(this T? returnValue)
+            where T : class
         {
             if (returnValue is null)
             {

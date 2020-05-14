@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -31,21 +30,21 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置当前 <see cref="Music"/> 对象的提供商。
         /// </summary>
-        /// <exception cref="InvalidEnumArgumentException"><paramref name="value" /> 不是有效的 <see cref="MusicProvider"/> 值。</exception>
-        public MusicProvider Provider
+        /// <exception cref="InvalidEnumArgumentException"><paramref name="value" /> 不是有效的 <see cref="MusicPlatform"/> 值。</exception>
+        public MusicPlatform Platform
         {
             get => this["type"] switch
             {
-                "qq" => MusicProvider.QQ,
-                "163" => MusicProvider.Netease,
-                _ => MusicProvider.None
+                "qq" => MusicPlatform.QQ,
+                "163" => MusicPlatform.Netease,
+                _ => MusicPlatform.None
             };
 
             set => this["type"] = value switch
             {
-                MusicProvider.QQ => "qq",
-                MusicProvider.Netease => "163",
-                _ => throw new InvalidEnumArgumentException(nameof(value), (int)value, typeof(MusicProvider))
+                MusicPlatform.QQ => "qq",
+                MusicPlatform.Netease => "163",
+                _ => throw new InvalidEnumArgumentException(nameof(value), (int)value, typeof(MusicPlatform))
             };
         }
     }

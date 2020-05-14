@@ -8,7 +8,7 @@ namespace HuajiTech.QQ
     /// </summary>
     public abstract class PluginContext
     {
-        private static PluginContext _current;
+        private static PluginContext? _currentContext;
 
         /// <summary>
         /// 获取或设置当前插件的插件上下文。
@@ -16,8 +16,8 @@ namespace HuajiTech.QQ
         /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
         public static PluginContext CurrentContext
         {
-            get => _current;
-            set => _current = value ?? throw new ArgumentNullException(nameof(value));
+            get => _currentContext ?? throw new InvalidOperationException(Resources.CurrentContextNotInitialized);
+            set => _currentContext = value ?? throw new ArgumentNullException(nameof(value));
         }
 
         /// <summary>
@@ -35,11 +35,11 @@ namespace HuajiTech.QQ
         /// 获取号码为指定用户的号码的 <see cref="IUser"/> 对象。
         /// </summary>
         /// <param name="user">用户。</param>
-        public virtual IUser GetUser(IUser user)
+        public virtual IUser? GetUser(IUser user)
         {
             if (user is null)
             {
-                throw new ArgumentNullException(nameof(user));
+                return null;
             }
 
             return GetUser(user.Number);
@@ -57,11 +57,11 @@ namespace HuajiTech.QQ
         /// <param name="friend">好友。</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Naming", "CA1716:标识符不应与关键字匹配", Justification = "<挂起>")]
-        public virtual IFriend GetFriend(IFriend friend)
+        public virtual IFriend? GetFriend(IFriend friend)
         {
             if (friend is null)
             {
-                throw new ArgumentNullException(nameof(friend));
+                return null;
             }
 
             return GetFriend(friend.Number);
@@ -77,11 +77,11 @@ namespace HuajiTech.QQ
         /// 获取号码为指定群的号码的 <see cref="IGroup"/> 对象。
         /// </summary>
         /// <param name="group">群。</param>
-        public virtual IGroup GetGroup(IGroup group)
+        public virtual IGroup? GetGroup(IGroup group)
         {
             if (group is null)
             {
-                throw new ArgumentNullException(nameof(group));
+                return null;
             }
 
             return GetGroup(group.Number);
@@ -98,11 +98,11 @@ namespace HuajiTech.QQ
         /// 获取号码和群为指定成员的号码和群的 <see cref="IMember"/> 对象。
         /// </summary>
         /// <param name="member">成员。</param>
-        public virtual IMember GetMember(IMember member)
+        public virtual IMember? GetMember(IMember member)
         {
             if (member is null)
             {
-                throw new ArgumentNullException(nameof(member));
+                return null;
             }
 
             return GetMember(member.Number, member.Group);
@@ -120,11 +120,11 @@ namespace HuajiTech.QQ
         /// </summary>
         /// <param name="user">用户。</param>
         /// <param name="group">群。</param>
-        public virtual IMember GetMember(IUser user, IGroup group)
+        public virtual IMember? GetMember(IUser user, IGroup group)
         {
             if (user is null)
             {
-                throw new ArgumentNullException(nameof(user));
+                return null;
             }
 
             return GetMember(user.Number, group);
@@ -135,6 +135,6 @@ namespace HuajiTech.QQ
         /// </summary>
         /// <param name="user">用户。</param>
         /// <param name="groupNumber">群号码。</param>
-        public virtual IMember GetMember(IUser user, long groupNumber) => GetMember(user, GetGroup(groupNumber));
+        public virtual IMember? GetMember(IUser user, long groupNumber) => GetMember(user, GetGroup(groupNumber));
     }
 }

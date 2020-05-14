@@ -6,7 +6,7 @@ namespace HuajiTech.CoolQ
     /// <summary>
     /// 表示状态。
     /// </summary>
-    public class Status : IEquatable<Status>
+    public class Status : IEquatable<Status?>
     {
         /// <summary>
         /// 以指定的值，单位和颜色初始化一个 <see cref="Status"/> 类的新实例。

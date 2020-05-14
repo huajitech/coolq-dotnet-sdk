@@ -28,9 +28,9 @@ namespace HuajiTech.CoolQ.Events
         {
         }
 
-        public event EventHandler<GroupMemberEventArgs>? MemberJoined;
+        public event EventHandler<GroupEventArgs>? MemberJoined;
 
-        public event EventHandler<GroupMemberEventArgs>? MemberLeft;
+        public event EventHandler<GroupEventArgs>? MemberLeft;
 
         public event EventHandler<EntranceRequestedEventArgs>? EntranceRequested;
 
@@ -78,14 +78,14 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnEntranceRequested(
-            MemberEventType type,
+            EntranceType type,
             int timestampRequested,
             long sourceNumber,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            if (!(type is MemberEventType.Active))
+            if (!(type is EntranceType.Active))
             {
                 return false;
             }
@@ -158,21 +158,20 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberJoined(
-            MemberEventType type,
+            EntranceType type,
             int timestampJoined,
             long sourceNumber,
             long operatorNumber,
-            long affecteeNumber)
+            long operateeNumber)
         {
             var source = new Group(sourceNumber);
-            var isPassive = type is MemberEventType.Passive;
+            var operatee = new Member(operateeNumber, source);
 
-            var e = new GroupMemberEventArgs(
-                type is MemberEventType.Passive,
+            var e = new GroupEventArgs(
                 Timestamp.ToDateTime(timestampJoined),
                 source,
-                isPassive ? null : new Member(operatorNumber, source),
-                new Member(affecteeNumber, source));
+                type is EntranceType.Passive ? operatee : new Member(operatorNumber, source),
+                operatee);
 
             Instance.MemberJoined?.Invoke(Instance, e);
 
@@ -182,21 +181,20 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberLeft(
-            MemberEventType type,
+            EntranceType type,
             int timestampLeft,
             long sourceNumber,
             long operatorNumber,
-            long affecteeNumber)
+            long operateeNumber)
         {
             var source = new Group(sourceNumber);
-            var isPassive = type is MemberEventType.Passive;
+            var operatee = new Member(operateeNumber, source);
 
-            var e = new GroupMemberEventArgs(
-                isPassive,
+            var e = new GroupEventArgs(
                 Timestamp.ToDateTime(timestampLeft),
                 source,
-                isPassive ? new Member(operatorNumber, source) : null,
-                new Member(affecteeNumber, source));
+                type is EntranceType.Passive ? new Member(operatorNumber, source) : operatee,
+                operatee);
 
             Instance.MemberLeft?.Invoke(Instance, e);
 

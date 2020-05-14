@@ -20,7 +20,7 @@ namespace HuajiTech.QQ
         /// <summary>
         /// 获取当前 <see cref="IMemberInfo"/> 对象的自定义头衔。
         /// </summary>
-        CustomTitle CustomTitle { get; }
+        CustomTitle? CustomTitle { get; }
 
         /// <summary>
         /// 获取当前 <see cref="IMemberInfo"/> 对象加入 <see cref="IGroup"/> 的时间。
@@ -50,12 +50,12 @@ namespace HuajiTech.QQ
         /// <summary>
         /// 获取当前 <see cref="IMemberInfo"/> 对象的等级。
         /// </summary>
-        string Level { get; }
+        string? Level { get; }
 
         /// <summary>
         /// 获取当前 <see cref="IMemberInfo"/> 对象的位置。
         /// </summary>
-        string Location { get; }
+        string? Location { get; }
 
         /// <summary>
         /// 获取当前 <see cref="IMemberInfo"/> 对象的角色。

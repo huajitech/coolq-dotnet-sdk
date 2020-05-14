@@ -5,10 +5,10 @@ namespace HuajiTech.QQ
     /// <summary>
     /// 定义成员。
     /// </summary>
-    public interface IMember : IUser, IMemberInfo, ITimedMuteable, IEquatable<IMember>
+    public interface IMember : IUser, IMemberInfo, ITimedMuteable, IEquatable<IMember?>
     {
         /// <summary>
-        /// 获取当前 <see cref="IMember"/> 对象的所属 <see cref="QQ.IGroup"/> 对象。
+        /// 获取当前 <see cref="IMember"/> 对象的所属 <see cref="IGroup"/> 对象。
         /// </summary>
         IGroup Group { get; }
 

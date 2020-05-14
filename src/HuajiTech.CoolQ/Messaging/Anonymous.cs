@@ -20,7 +20,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <summary>
         /// 获取或设置一个值，指示是否在不能发送匿名消息时回退到普通消息。
         /// </summary>
-        public bool DoesFallback
+        public bool Fallback
         {
             get => GetParameterAsBoolean("ignore");
             set => SetParameter("ignore", value);

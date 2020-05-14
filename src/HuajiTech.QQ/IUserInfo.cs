@@ -8,6 +8,6 @@
         /// <summary>
         /// 获取当前 <see cref="IUser"/> 对象的昵称。
         /// </summary>
-        string Nickname { get; }
+        string? Nickname { get; }
     }
 }

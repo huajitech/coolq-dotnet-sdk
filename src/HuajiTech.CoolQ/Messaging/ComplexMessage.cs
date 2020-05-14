@@ -12,7 +12,7 @@ namespace HuajiTech.CoolQ.Messaging
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Naming", "CA1710:标识符应具有正确的后缀", Justification = "<挂起>")]
-    public partial class ComplexMessage : IEquatable<ComplexMessage>
+    public partial class ComplexMessage : IEquatable<ComplexMessage?>
     {
         private static readonly Regex CQCodeRegex = new Regex(
             @"\[CQ:(?<Type>[a-zA-Z\-_\.]+)(,(?<Key>[a-zA-Z\-_\.]+)=(?<Value>[^,\]]+))*\]",

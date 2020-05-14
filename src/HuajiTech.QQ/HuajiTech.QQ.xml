@@ -164,16 +164,6 @@
             获取被操作人。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.GroupMemberEventArgs">
-            <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberJoined"/> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMemberEventSource.MemberLeft"/> 事件提供数据。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.Events.GroupMemberEventArgs.IsPassive">
-            <summary>
-            获取一个值，指示成员是否被动入群/退群。
-            </summary>
-        </member>
         <member name="T:HuajiTech.QQ.Events.GroupMuteEventArgs">
             <summary>
             为 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted"/> 和 <see cref="E:HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted"/> 事件提供数据。
@@ -1229,6 +1219,11 @@
             <summary>
               重写当前线程的 CurrentUICulture 属性
               重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.Resources.CurrentContextNotInitialized">
+            <summary>
+              查找类似 未初始化 CurrentContext 属性。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.Resources.Debug">

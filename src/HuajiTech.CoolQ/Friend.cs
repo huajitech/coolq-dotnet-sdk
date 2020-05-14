@@ -26,7 +26,7 @@ namespace HuajiTech.CoolQ
 
         public override string? Nickname => GetInfo().Nickname;
 
-        public override string? DisplayName => Alias ?? Nickname;
+        public override string DisplayName => Alias ?? base.DisplayName;
 
         public override void Refresh() => Request();
 

@@ -10,6 +10,6 @@
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Naming", "CA1716:标识符不应与关键字匹配", Justification = "<挂起>")]
-        string Alias { get; }
+        string? Alias { get; }
     }
 }
