@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "ZzX09q2fijla5Y/HSp1NoQ=="
+          "hash": "4VlED3iYWfie/m4mKH9n5g=="
         }
       },
       "is_incremental": false,
@@ -1278,7 +1278,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/your_first_app.html",
-          "hash": "Md6A12dUgtevtISLoS8aTQ=="
+          "hash": "1kK4KpMAryPXMTACW+2oiQ=="
         }
       },
       "is_incremental": false,
@@ -1333,13 +1333,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 9,
-          "skipped_file_count": 9
+          "skipped_file_count": 7
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 96,
-          "skipped_file_count": 67
+          "skipped_file_count": 96
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

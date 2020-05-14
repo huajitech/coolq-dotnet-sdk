@@ -13,6 +13,7 @@
 ## 复读机示例
 
 ```csharp
+using HuajiTech.QQ;
 using HuajiTech.QQ.Events;
 
 [assembly: HuajiTech.CoolQ.AppId("com.example.repeater")]
