@@ -61,11 +61,11 @@ namespace HuajiTech.QQ {
         }
         
         /// <summary>
-        ///   查找类似 未初始化 CurrentContext 属性。 的本地化字符串。
+        ///   查找类似 上下文未初始化。 的本地化字符串。
         /// </summary>
-        internal static string CurrentContextNotInitialized {
+        internal static string ContextNotInitialized {
             get {
-                return ResourceManager.GetString("CurrentContextNotInitialized", resourceCulture);
+                return ResourceManager.GetString("ContextNotInitialized", resourceCulture);
             }
         }
         

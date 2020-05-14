@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CurrentContextNotInitialized" xml:space="preserve">
-    <value>未初始化 CurrentContext 属性。</value>
+  <data name="ContextNotInitialized" xml:space="preserve">
+    <value>上下文未初始化。</value>
   </data>
   <data name="Debug" xml:space="preserve">
     <value>调试</value>

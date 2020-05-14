@@ -59,7 +59,7 @@ namespace HuajiTech.CoolQ
                 .AsImplementedInterfaces();
 
             builder
-                .Register(context => QQ.PluginContext.CurrentContext)
+                .Register(context => QQ.PluginContext.Context)
                 .As<QQ.PluginContext>();
         }
 
@@ -118,7 +118,7 @@ namespace HuajiTech.CoolQ
         private static int Initialize(int authCode)
         {
             Instance = new Bot(authCode);
-            QQ.PluginContext.CurrentContext = new PluginContext(Instance);
+            QQ.PluginContext.Context = new PluginContext(Instance);
 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 

@@ -22,7 +22,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public QQ.IUser Target
         {
-            get => QQ.PluginContext.CurrentContext.GetUser(GetParameterAsInt64("qq"));
+            get => QQ.PluginContext.Context.GetUser(GetParameterAsInt64("qq"));
             set => SetParameter("qq", value?.Number ?? default);
         }
     }

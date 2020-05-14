@@ -21,6 +21,12 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.AppIdAttribute"/> 对象的 ID。
             </summary>
         </member>
+        <member name="T:HuajiTech.CoolQ.Chat">
+            <summary>
+            表示聊天。
+            此类为抽象类。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.CoolQException">
             <summary>
             在酷Q返回了意料之外的值时引发的异常。

@@ -3,15 +3,15 @@
 ## 判断消息来源类型
 
 ```csharp
-if (e.Source is Group) { }   // 群消息。
-if (e.Source is User) { }    // 私聊消息（包括临时会话和好友消息）。
-if (e.Source is Member) { }  // 群临时会话消息（Member.Group 为 Group(0)）。
-if (e.Source is Contact) { } // 好友消息。
+if (e.Source is IGroup) { }   // 群消息。
+if (e.Source is IUser) { }    // 私聊消息（包括临时会话和好友消息）。
+if (e.Source is IMember) { }  // 群临时会话消息（Member.Group 为 Group(0)）。
+if (e.Source is IFriend) { } // 好友消息。
 ```
 
-## 使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage"（复合消息）
+## 使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage"
 
-通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.Message,System.Boolean)" 扩展方法解析消息。
+通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage,System.Boolean)" 扩展方法解析消息。
 
 ```csharp
 var message = e.Message.Parse();
@@ -32,7 +32,7 @@ if (message.Contains(CurrentUser.At()))
 }
 ```
 
-使用 @"HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.User)" @ 消息的发送者。
+使用 @"HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.IUser)" @ 消息的发送者。
 
 ```csharp
 e.Source.Send(e.Sender.At() + [...])
@@ -56,7 +56,7 @@ if (message is (At at, Image image))
 
 ## 使用正则消息
 
-通过 @"HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.Message)" 扩展方法解码正则消息。
+通过 @"HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)" 扩展方法解码正则消息。
 
 ```csharp
 var args = e.Message.RegexDecode();

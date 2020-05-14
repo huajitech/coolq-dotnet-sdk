@@ -83,10 +83,18 @@
 <p>通过在程序集上应用 <a class="xref" href="../api/HuajiTech.CoolQ.AppIdAttribute.html">AppIdAttribute</a>，可以指定 <a href="https://docs.cqp.im/dev/v9/appid/">AppID</a>。
 在同一个应用中，不允许多个 <a class="xref" href="../api/HuajiTech.CoolQ.AppIdAttribute.html">AppIdAttribute</a>。</p>
 <h2 id="插件类">插件类</h2>
-<p>如果一个<strong>可被实例化</strong>的类派生自 <a class="xref" href="../api/HuajiTech.QQ.Plugin.html">Plugin</a>，则它是一个插件类。
-在同一个应用中，可以有多个插件类。</p>
-<p>在 <code>Initialize</code> 函数被调用时，将会创建所有插件类的实例。
-根据<a href="https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96">酷Q文库</a>所描述的内容，应遵循以下原则：</p>
+<p>如果一个<strong>可被实例化</strong>的类实现了 <a class="xref" href="../api/HuajiTech.QQ.IPlugin.html">IPlugin</a> 接口，则它是一个插件类。
+在同一个应用中，可以定义多个插件类。插件类只会被实例化一次。</p>
+<p>通常情况下，插件类应以 <a class="xref" href="../api/HuajiTech.QQ.Plugin.html">Plugin</a> 类作为基类。该类实现了 <a class="xref" href="../api/HuajiTech.QQ.IPlugin.html">IPlugin</a> 接口，并且提供了更易用的 API。</p>
+<p>可通过 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性指定插件类的加载时机。若应用于程序集，则指定该项的缺省值。</p>
+<pre><code class="lang-csharp">[PluginLoadStage((int)AppLifecycle.Initializing)]
+class MyPlugin : Plugin
+{
+}
+</code></pre>
+<p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，允许在构造函数内<strong>调用 API</strong>或<strong>长时间阻塞线程</strong>，并且抛出的异常不会导致应用模块崩溃。<strong>必须</strong>在 <code>app.json</code> 中向酷Q<strong>注册应用启用事件</strong>才能在 Enabled 阶段加载。</p>
+<p>通过将加载阶段设置为 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_NotLoaded">NotLoaded</a> (<code>0</code>)，可以禁止插件类的加载。</p>
+<p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Initializing">Initializing</a>  及其他非 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，应遵循以下原则：</p>
 <ul>
 <li>✔ 在插件类构造函数内对<strong>类</strong>进行初始化。</li>
 <li>✔ 在 <a class="xref" href="../api/HuajiTech.QQ.Events.IBotEventSource.html#HuajiTech_QQ_Events_IBotEventSource_AppEnabled">AppEnabled</a> 事件中初始化<strong>应用</strong>。</li>
@@ -94,9 +102,10 @@
 <li>✘ 插件类构造函数不应长时间阻塞线程。</li>
 <li>✘ 插件类构造函数不应抛出异常。</li>
 </ul>
+<p>有关详细信息，请参见<a href="https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96">酷Q文库</a>。</p>
 <div class="WARNING">
 <h5>警告</h5>
-<p>@&quot;HuajiTech.QQ.CurrentUser&quot; 类的实例化需要调用酷Q API。如果类需要使用 @&quot;HuajiTech.QQ.CurrentUser&quot; 对象，请考虑使用 <code>Lazy&lt;CurrentUser&gt;</code> 类型、 <a class="xref" href="../api/HuajiTech.QQ.IBot.html#HuajiTech_QQ_IBot_CurrentUser">CurrentUser</a> 属性或 <a class="xref" href="../api/HuajiTech.QQ.Plugin.html#HuajiTech_QQ_Plugin_CurrentUser">CurrentUser</a> 属性。</p>
+<p>获取 <a class="xref" href="../api/HuajiTech.QQ.ICurrentUser.html">ICurrentUser</a> 对象需要调用酷Q API。</p>
 </div>
 <h2 id="事件">事件</h2>
 <p>酷Q事件都被封装为了 .NET 事件。
@@ -130,7 +139,7 @@
     e.Source.Send(&quot;欢迎 &quot; + e.Operatee.DisplayName);
 }
 </code></pre>
-<p>插件上下文（<a class="xref" href="../api/HuajiTech.QQ.PluginContext.html">PluginContext</a>）提供了主动调用酷Q API 的能力。</p>
+<p><a class="xref" href="../api/HuajiTech.QQ.PluginContext.html">PluginContext</a> 类提供了主动调用酷Q API 的能力。</p>
 <pre><code class="lang-csharp">PluginContext.Current.GetUser(114514).Send(&quot;Hello!&quot;);
 </code></pre>
 <p>对于在插件类中的使用，<a class="xref" href="../api/HuajiTech.QQ.Plugin.html">Plugin</a> 类提供了更便捷的方法。</p>
@@ -141,13 +150,12 @@
     [...]
 }
 </code></pre>
-<p><a class="xref" href="../api/HuajiTech.QQ.CurrentPluginContextExtensions.html">CurrentPluginContextExtensions</a> 类提供了一些常用的扩展方法。</p>
+<p><a class="xref" href="../api/HuajiTech.QQ.PluginContextExtensions.html">PluginContextExtensions</a> 类提供了一些常用的扩展方法。</p>
 <pre><code class="lang-csharp">try
 {
-    if (_administrators.Contains(e.Sender.AsUser()))
-    {
-        [...]
-    }
+    [...]
+    user.AsMemberOf(group);
+    [...]
 }
 catch (Exception ex)
 {
@@ -155,11 +163,13 @@ catch (Exception ex)
 }
 </code></pre>
 <p><a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Image.html">Image</a> 和 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Record.html">Record</a> 类也提供了调用酷Q API 的方法。</p>
-<pre><code class="lang-csharp">image.RequestFile();
+<pre><code class="lang-csharp">image.GetFile();
 </code></pre>
 <h2 id="cq码">CQ码</h2>
 <p>可以使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 类处理CQ码。</p>
-<p>有关详细信息，请参见<a href="howto_handle_message.html">如何：处理消息</a>中的<code>使用复合消息</code>部分。</p>
+<p>有关详细信息，请参见<a href="howto_handle_message.html">如何：处理消息</a>中的<code>使用 ComplexMessage</code>部分。</p>
+<h2 id="net-core">.NET Core</h2>
+<p>目前，HuajiTech.CoolQ 暂不支持在 .NET Core 上运行。有计划在未来的版本添加对 .NET Core 的支持。</p>
 </article>
           </div>
           

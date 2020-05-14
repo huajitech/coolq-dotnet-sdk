@@ -8,16 +8,16 @@ namespace HuajiTech.QQ
     /// </summary>
     public abstract class PluginContext
     {
-        private static PluginContext? _currentContext;
+        private static PluginContext? _context;
 
         /// <summary>
         /// 获取或设置当前插件的插件上下文。
         /// </summary>
         /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
-        public static PluginContext CurrentContext
+        public static PluginContext Context
         {
-            get => _currentContext ?? throw new InvalidOperationException(Resources.CurrentContextNotInitialized);
-            set => _currentContext = value ?? throw new ArgumentNullException(nameof(value));
+            get => _context ?? throw new InvalidOperationException(Resources.ContextNotInitialized);
+            set => _context = value ?? throw new ArgumentNullException(nameof(value));
         }
 
         /// <summary>

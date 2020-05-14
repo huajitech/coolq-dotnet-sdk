@@ -26,8 +26,8 @@ namespace HuajiTech.CoolQ.Messaging
         {
             get => this["type"] switch
             {
-                "qq" => QQ.PluginContext.CurrentContext.GetUser(GetParameterAsInt64("id")),
-                "group" => QQ.PluginContext.CurrentContext.GetGroup(GetParameterAsInt64("id")),
+                "qq" => QQ.PluginContext.Context.GetUser(GetParameterAsInt64("id")),
+                "group" => QQ.PluginContext.Context.GetGroup(GetParameterAsInt64("id")),
                 _ => null
             };
 

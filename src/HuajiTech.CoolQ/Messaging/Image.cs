@@ -39,7 +39,7 @@ namespace HuajiTech.CoolQ.Messaging
                 return null;
             }
 
-            return QQ.PluginContext.CurrentContext.Bot.GetImage(FileName);
+            return QQ.PluginContext.Context.Bot.GetImage(FileName);
         }
     }
 }

@@ -8,20 +8,18 @@
 
 - 通过 StdCall 导出。
 - 以 [NuGet 包](https://www.nuget.org/packages/HuajiTech.CoolQ/)发布。
-- **不使用易语言的开发模式。**
+- **高度封装。**
 
 ## 复读机示例
 
 ```csharp
-using HuajiTech.CoolQ;
-using HuajiTech.QQ;
 using HuajiTech.QQ.Events;
 
-[assembly: AppId("com.example.repeater")]
+[assembly: HuajiTech.CoolQ.AppId("com.example.repeater")]
 
-public class Repeater : Plugin
+public class RepeaterPlugin : Plugin
 {
-    public Repeater(IMessageEventSource source)
+    public RepeaterPlugin(IMessageEventSource source)
     {
         source.MessageReceived += (sender, e) => e.Source.Send(e.Message.Content);
     }

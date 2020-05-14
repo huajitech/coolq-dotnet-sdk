@@ -80,22 +80,12 @@
 <h1 id="你的第一个应用">你的第一个应用</h1>
 
 <ol>
-<li><p>创建一个新的 C# 类库项目，并选择 <strong>.NET Framework 4.5</strong> 及以上版本作为目标框架。</p>
+<li><p>创建一个新的 C# 类库项目，并选择 <strong>.NET Framework 4.6.1</strong> 及以上版本作为目标框架。</p>
 </li>
 <li><p>安装 HuajiTech.CoolQ NuGet 包。</p>
 </li>
-<li><p>在 <code>Properties\AssemblyInfo.cs</code> 中添加以下代码。</p>
-<pre><code class="lang-csharp">[assembly: System.Resources.NeutralResourcesLanguage(&quot;zh-CN&quot;)]
-[assembly: HuajiTech.CoolQ.AppId(&quot;com.example.myfirstapp&quot;)]
-</code></pre>
-<div class="IMPORTANT">
-<h5>重要事项</h5>
-<p>必须在程序集上应用 <code>[assembly: System.Resources.NeutralResourcesLanguage(&quot;zh-CN&quot;)]</code>，否则会发生致命错误。</p>
-</div>
-</li>
 <li><p>将以下代码粘贴到 <code>MyPlugin.cs</code>。</p>
-<pre><code class="lang-csharp">using HuajiTech.QQ;
-using HuajiTech.QQ.Events;
+<pre><code class="lang-csharp">using HuajiTech.QQ.Events;
 
 public class MyPlugin : Plugin
 {
@@ -104,7 +94,7 @@ public class MyPlugin : Plugin
        source.MessageReceived += (sender, e) =&gt;
        {
            // 向消息来源聊天发送消息的内容，即复读。
-           e.Source.Send(e.Message);
+           e.Source.Send(e.Message.Content);
        }
    }
 }
@@ -112,11 +102,13 @@ public class MyPlugin : Plugin
 </li>
 <li><p>编译。</p>
 </li>
-<li><p>将 <code>{输出目录}\app.publish\</code> 中的文件复制到酷Q的 <code>dev\com.example.myfirstapp\</code> 目录。</p>
+<li><p>将 <code>{输出目录}\app.publish\</code> 中的文件复制到酷Q的 <code>dev\com.example.app\</code> 目录。</p>
 </li>
 <li><p>重载应用并启用。</p>
 </li>
 </ol>
+<h2 id="接下来">接下来</h2>
+<p><a href="getting_started.html">入门</a></p>
 </article>
           </div>
           

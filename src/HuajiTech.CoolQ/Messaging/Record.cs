@@ -49,7 +49,7 @@ namespace HuajiTech.CoolQ.Messaging
                 return null;
             }
 
-            return QQ.PluginContext.CurrentContext.Bot.GetRecord(FileName, format);
+            return QQ.PluginContext.Context.Bot.GetRecord(FileName, format);
         }
     }
 }

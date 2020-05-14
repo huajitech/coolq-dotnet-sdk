@@ -10,19 +10,19 @@ namespace HuajiTech.QQ
         public static IUser? AsUser(this IUser user, PluginContext context) =>
             context?.GetUser(user) ?? throw new ArgumentNullException(nameof(context));
 
-        public static IUser? AsUser(this IUser user) => user?.AsUser(PluginContext.CurrentContext);
+        public static IUser? AsUser(this IUser user) => user?.AsUser(PluginContext.Context);
 
         public static IMember? AsMemberOf(this IUser user, IGroup group, PluginContext context) =>
             context?.GetMember(user, group);
 
         public static IMember? AsMemberOf(this IUser user, IGroup group) =>
-            AsMemberOf(user, group, PluginContext.CurrentContext);
+            AsMemberOf(user, group, PluginContext.Context);
 
         public static IMember? AsMemberOf(this IUser user, long groupNumber, PluginContext context) =>
             context?.GetMember(user, groupNumber);
 
         public static IMember? AsMemberOf(this IUser user, long groupNumber) =>
-            AsMemberOf(user, groupNumber, PluginContext.CurrentContext);
+            AsMemberOf(user, groupNumber, PluginContext.Context);
 
         public static TException? LogAsWarning<TException>(this TException exception, ILogger logger)
             where TException : notnull, Exception
@@ -49,7 +49,7 @@ namespace HuajiTech.QQ
 
         public static TException? LogAsWarning<TException>(this TException exception)
             where TException : Exception =>
-            LogAsWarning(exception, PluginContext.CurrentContext);
+            LogAsWarning(exception, PluginContext.Context);
 
         public static TException? LogAsError<TException>(this TException exception, ILogger logger)
              where TException : Exception
@@ -81,6 +81,6 @@ namespace HuajiTech.QQ
 
         public static TException? LogAsError<TException>(this TException exception)
             where TException : Exception =>
-            LogAsError(exception, PluginContext.CurrentContext);
+            LogAsError(exception, PluginContext.Context);
     }
 }

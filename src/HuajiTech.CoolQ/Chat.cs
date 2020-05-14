@@ -1,4 +1,6 @@
-namespace HuajiTech.QQ
+using HuajiTech.QQ;
+
+namespace HuajiTech.CoolQ
 {
     /// <summary>
     /// ±íÊ¾ÁÄÌì¡£

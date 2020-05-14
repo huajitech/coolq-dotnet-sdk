@@ -13,10 +13,10 @@
         protected Plugin(PluginContext context) => Context = context;
 
         /// <summary>
-        /// 以 <see cref="PluginContext.CurrentContext"/> 初始化一个 <see cref="Plugin"/> 类的新实例。
+        /// 以 <see cref="PluginContext.Context"/> 初始化一个 <see cref="Plugin"/> 类的新实例。
         /// </summary>
         protected Plugin()
-            : this(PluginContext.CurrentContext)
+            : this(PluginContext.Context)
         {
         }
 

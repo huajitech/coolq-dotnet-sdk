@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MusicProvider 枚举
+    <title>IFriendshipRequest 接口
    | HuajiTech.CoolQ &#25991;&#26723; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="MusicProvider 枚举
+    <meta name="title" content="IFriendshipRequest 接口
    | HuajiTech.CoolQ &#25991;&#26723; ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -78,46 +78,69 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="HuajiTech.CoolQ.Messaging.MusicProvider">
+            <article class="content wrap" id="_content" data-uid="HuajiTech.QQ.IFriendshipRequest">
   
   
-  <h1 id="HuajiTech_CoolQ_Messaging_MusicProvider" data-uid="HuajiTech.CoolQ.Messaging.MusicProvider" class="text-break">MusicProvider 枚举
+  <h1 id="HuajiTech_QQ_IFriendshipRequest" data-uid="HuajiTech.QQ.IFriendshipRequest" class="text-break">IFriendshipRequest 接口
   </h1>
-  <div class="markdown level0 summary"><p>指定音乐提供商。</p>
+  <div class="markdown level0 summary"><p>表示好友请求。
+此类为抽象类。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.Messaging.html">HuajiTech.CoolQ.Messaging</a></h6>
-  <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.dll</h6>
-  <h5 id="HuajiTech_CoolQ_Messaging_MusicProvider_syntax">&#35821;&#27861;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum MusicProvider</code></pre>
+  <div class="inheritedMembers">
+    <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRequest.html#HuajiTech_QQ_IRequest_Message">IRequest.Message</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRequest.html#HuajiTech_QQ_IRequest_Accept">IRequest.Accept()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.IRequest.html#HuajiTech_QQ_IRequest_Reject">IRequest.Reject()</a>
+    </div>
   </div>
-  <h3 id="fields">&#23383;&#27573;
+  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.QQ.html">HuajiTech.QQ</a></h6>
+  <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
+  <h5 id="HuajiTech_QQ_IFriendshipRequest_syntax">&#35821;&#27861;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFriendshipRequest : IRequest</code></pre>
+  </div>
+  <h3 id="methods">&#26041;&#27861;
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IFriendshipRequest_Accept_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IFriendshipRequest.Accept(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IFriendshipRequest.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_QQ_IFriendshipRequest_Accept_" data-uid="HuajiTech.QQ.IFriendshipRequest.Accept*"></a>
+  <h4 id="HuajiTech_QQ_IFriendshipRequest_Accept_System_String_" data-uid="HuajiTech.QQ.IFriendshipRequest.Accept(System.String)">Accept(String)</h4>
+  <div class="markdown level1 summary"><p>同意当前请求，并为好友设置别名。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Accept(string alias)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>&#31867;&#22411;</th>
         <th>&#21517;&#31216;</th>
         <th>&#25551;&#36848;</th>
       </tr>
-    <thead>
+    </thead>
     <tbody>
       <tr>
-        <td id="HuajiTech_CoolQ_Messaging_MusicProvider_Netease">Netease</td>
-        <td><p>网易云音乐。</p>
-</td>
-      </tr>
-      <tr>
-        <td id="HuajiTech_CoolQ_Messaging_MusicProvider_None">None</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="HuajiTech_CoolQ_Messaging_MusicProvider_QQ">QQ</td>
-        <td><p>QQ音乐。</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>要设置的别名。</p>
 </td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 </article>
           </div>
           
@@ -126,10 +149,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_MusicProvider.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.MusicProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_IFriendshipRequest.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.IFriendshipRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ/Messaging/MusicProvider.cs/#L6" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/IFriendshipRequest.cs/#L7" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

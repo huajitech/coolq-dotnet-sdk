@@ -7,11 +7,25 @@
 
 ## 插件类
 
-如果一个**可被实例化**的类派生自 @"HuajiTech.QQ.Plugin"，则它是一个插件类。
-在同一个应用中，可以有多个插件类。
+如果一个**可被实例化**的类实现了 @"HuajiTech.QQ.IPlugin" 接口，则它是一个插件类。
+在同一个应用中，可以定义多个插件类。插件类只会被实例化一次。
 
-在 `Initialize` 函数被调用时，将会创建所有插件类的实例。
-根据[酷Q文库](https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96)所描述的内容，应遵循以下原则：
+通常情况下，插件类应以 @"HuajiTech.QQ.Plugin" 类作为基类。该类实现了 @"HuajiTech.QQ.IPlugin" 接口，并且提供了更易用的 API。
+
+可通过 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性指定插件类的加载时机。若应用于程序集，则指定该项的缺省值。
+
+```csharp
+[PluginLoadStage((int)AppLifecycle.Initializing)]
+class MyPlugin : Plugin
+{
+}
+```
+
+若在 @"HuajiTech.CoolQ.AppLifecycle.Enabled" 阶段加载，允许在构造函数内**调用 API**或**长时间阻塞线程**，并且抛出的异常不会导致应用模块崩溃。**必须**在 `app.json` 中向酷Q**注册应用启用事件**才能在 Enabled 阶段加载。
+
+通过将加载阶段设置为 @"HuajiTech.CoolQ.AppLifecycle.NotLoaded" (`0`)，可以禁止插件类的加载。
+
+若在 @"HuajiTech.CoolQ.AppLifecycle.Initializing"  及其他非 @"HuajiTech.CoolQ.AppLifecycle.Enabled" 阶段加载，应遵循以下原则：
 
 - ✔ 在插件类构造函数内对**类**进行初始化。
 - ✔ 在 @"HuajiTech.QQ.Events.IBotEventSource.AppEnabled" 事件中初始化**应用**。
@@ -19,8 +33,10 @@
 - ✘ 插件类构造函数不应长时间阻塞线程。
 - ✘ 插件类构造函数不应抛出异常。
 
+有关详细信息，请参见[酷Q文库](https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96)。
+
 > [!WARNING]
-> @"HuajiTech.QQ.CurrentUser" 类的实例化需要调用酷Q API。如果类需要使用 @"HuajiTech.QQ.CurrentUser" 对象，请考虑使用 `Lazy<CurrentUser>` 类型、 @"HuajiTech.QQ.IBot.CurrentUser" 属性或 @"HuajiTech.QQ.Plugin.CurrentUser" 属性。
+> 获取 @"HuajiTech.QQ.ICurrentUser" 对象需要调用酷Q API。
 
 ## 事件
 
@@ -73,7 +89,7 @@ private void OnMemberJoined(object sender, GroupMemberEventArgs e)
 }
 ```
 
-插件上下文（@"HuajiTech.QQ.PluginContext"）提供了主动调用酷Q API 的能力。
+@"HuajiTech.QQ.PluginContext" 类提供了主动调用酷Q API 的能力。
 
 ```csharp
 PluginContext.Current.GetUser(114514).Send("Hello!");
@@ -90,15 +106,14 @@ public class MyPlugin : Plugin
 }
 ```
 
-@"HuajiTech.QQ.CurrentPluginContextExtensions" 类提供了一些常用的扩展方法。
+@"HuajiTech.QQ.PluginContextExtensions" 类提供了一些常用的扩展方法。
 
 ```csharp
 try
 {
-    if (_administrators.Contains(e.Sender.AsUser()))
-    {
-        [...]
-    }
+    [...]
+    user.AsMemberOf(group);
+    [...]
 }
 catch (Exception ex)
 {
@@ -109,11 +124,15 @@ catch (Exception ex)
 @"HuajiTech.CoolQ.Messaging.Image" 和 @"HuajiTech.CoolQ.Messaging.Record" 类也提供了调用酷Q API 的方法。
 
 ```csharp
-image.RequestFile();
+image.GetFile();
 ```
 
 ## CQ码
 
 可以使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage" 类处理CQ码。
 
-有关详细信息，请参见[如何：处理消息](howto_handle_message.md)中的`使用复合消息`部分。
+有关详细信息，请参见[如何：处理消息](howto_handle_message.md)中的`使用 ComplexMessage`部分。
+
+## .NET Core
+
+目前，HuajiTech.CoolQ 暂不支持在 .NET Core 上运行。有计划在未来的版本添加对 .NET Core 的支持。
