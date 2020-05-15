@@ -14,7 +14,7 @@ namespace HuajiTech.CoolQ.Events
         "CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Style", "IDE0060:删除未使用的参数", Justification = "<挂起>")]
-    internal class CurrentUserEventSource : IMessageEventSource, IFriendEventSource, IEntranceInviteEventSource
+    internal class CurrentUserEventSource : ICurrentUserEventSource
     {
         public static readonly CurrentUserEventSource Instance = new CurrentUserEventSource();
 
@@ -28,9 +28,9 @@ namespace HuajiTech.CoolQ.Events
 
         public event EventHandler<EntranceInvitedEventArgs>? EntranceInvited;
 
-        public event EventHandler<FriendAddedEventArgs>? FriendAdded;
+        public event EventHandler<FriendedEventArgs>? Friended;
 
-        public event EventHandler<FriendshipRequestedEventArgs>? FriendshipRequested;
+        public event EventHandler<FriendingEventArgs>? Friending;
 
         private static bool OnMessageReceived(
             int messageId, Chat source, IUser sender, string message)
@@ -101,34 +101,34 @@ namespace HuajiTech.CoolQ.Events
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnFriendAdded(
+        private static bool OnFriending(
             int type,
             int timestampAdded,
             long requesterNumber)
         {
-            var e = new FriendAddedEventArgs(
+            var e = new FriendedEventArgs(
                 Timestamp.ToDateTime(timestampAdded), new Friend(requesterNumber));
 
-            Instance.FriendAdded?.Invoke(Instance, e);
+            Instance.Friended?.Invoke(Instance, e);
 
             return e.Handled;
         }
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnFriendshipRequested(
+        private static bool OnFriended(
             int type,
             int timestampRequested,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            var e = new FriendshipRequestedEventArgs(
+            var e = new FriendingEventArgs(
                 Timestamp.ToDateTime(timestampRequested),
                 new User(requesterNumber),
                 new FriendshipRequest(requestToken, message));
 
-            Instance.FriendshipRequested?.Invoke(Instance, e);
+            Instance.Friending?.Invoke(Instance, e);
 
             return e.Handled;
         }

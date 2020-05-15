@@ -89,7 +89,7 @@
 <p>可通过 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性指定插件类的加载时机。若应用于程序集，则指定该项的缺省值。</p>
 <pre><code class="lang-csharp">[PluginLoadStage((int)AppLifecycle.Initializing)]
 class MyPlugin : Plugin
-{
+{v
 }
 </code></pre>
 <p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，允许在构造函数内<strong>调用 API</strong>或<strong>长时间阻塞线程</strong>，并且抛出的异常不会导致应用模块崩溃。<strong>必须</strong>在 <code>app.json</code> 中向酷Q<strong>注册应用启用事件</strong>才能在 Enabled 阶段加载。</p>
@@ -97,7 +97,7 @@ class MyPlugin : Plugin
 <p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Initializing">Initializing</a>  及其他非 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，应遵循以下原则：</p>
 <ul>
 <li>✔ 在插件类构造函数内对<strong>类</strong>进行初始化。</li>
-<li>✔ 在 <a class="xref" href="../api/HuajiTech.QQ.Events.IBotEventSource.html#HuajiTech_QQ_Events_IBotEventSource_AppEnabled">AppEnabled</a> 事件中初始化<strong>应用</strong>。</li>
+<li>✔ 在 @&quot;HuajiTech.QQ.Events.IBotEventSource.AppEnabled&quot; 事件中初始化<strong>应用</strong>。</li>
 <li>✘ 不应在插件类构造函数内调用酷Q API。</li>
 <li>✘ 插件类构造函数不应长时间阻塞线程。</li>
 <li>✘ 插件类构造函数不应抛出异常。</li>
@@ -113,58 +113,77 @@ class MyPlugin : Plugin
 <p>✘ 不允许更改 <code>app.json</code> 中预定义的事件函数名。</p>
 <p>部分酷Q事件被合并为一个或拆分为多个事件。若要获取详细信息，请参见<a href="events.html">事件</a>。</p>
 <h3 id="事件源">事件源</h3>
-<p>事件源定义了一组相关的事件。事件源是接口类型，可以实现自定义事件源。</p>
+<p>事件源定义了一个或一组相关的事件。
+事件源是接口类型。
+定义了单个事件的事件源以 <code>Notify</code> 开头，如 <a class="xref" href="../api/HuajiTech.QQ.Events.INotifyMessageReceived.html">INotifyMessageReceived</a> 接口。
+定义了多个事件的事件源以 <code>EventSource</code> 结尾，如 <a class="xref" href="../api/HuajiTech.QQ.Events.IBotEventSource.html">IBotEventSource</a> 接口。</p>
 <h3 id="处理事件">处理事件</h3>
-<p>通过在插件类构造函数中添加事件源类型的参数并向事件源附加事件处理程序可处理事件。
-在插件类被实例化时，事件源的实现将会通过<strong>依赖注入</strong>提供为参数。</p>
+<p>在插件类构造函数中添加参数以获取事件源。通过向事件源对象附加事件处理程序来处理事件。</p>
 <pre><code class="lang-csharp">public MyPlugin(
-    IMessageEventSource messageEventSource,
+    INotifyMessageReceived notifyMessageReceived,
     IBotEventSource botEventSource)
 {
-    messageEventSource.MessageReceived += [...]
-    botEventSource.AppEnabled += [...]
+    notifyMessageReceived.MessageReceived += ...
+    botEventSource.AppEnabled += ...
 }
 </code></pre>
+<div class="NOTE">
+<h5>注意</h5>
+<p>尽可能使用定义事件最少的事件源。例如，若插件只需处理消息接收事件，则应使用 <a class="xref" href="../api/HuajiTech.QQ.Events.INotifyMessageReceived.html">INotifyMessageReceived</a>，而不是 <a class="xref" href="../api/HuajiTech.QQ.Events.ICurrentUserEventSource.html">ICurrentUserEventSource</a>。</p>
+</div>
 <h3 id="路由">路由</h3>
 <p>酷Q的所有事件数据类均派生自 <a class="xref" href="../api/HuajiTech.QQ.Events.RoutedEventArgs.html">RoutedEventArgs</a> 类。
-通过设置 <a class="xref" href="../api/HuajiTech.QQ.Events.RoutedEventArgs.html#HuajiTech_QQ_Events_RoutedEventArgs_Handled">Handled</a> 属性，可阻断事件。</p>
+将 <a class="xref" href="../api/HuajiTech.QQ.Events.RoutedEventArgs.html#HuajiTech_QQ_Events_RoutedEventArgs_Handled">Handled</a> 属性设置为 <code>true</code> 以阻断事件。</p>
 <h3 id="菜单和悬浮窗状态">菜单和悬浮窗状态</h3>
-<p>菜单项被点击和悬浮窗状态更新均被视为事件。由于事件的数量无法确定，需要手动将事件处理程序导出。</p>
+<p>菜单项被点击和悬浮窗状态更新均被视为事件。由于事件的数量无法确定，需要手动导出事件处理程序。</p>
 <p>有关详细信息，请参见<a href="menus_and_statuses.html">菜单和悬浮窗状态</a>。</p>
-<h2 id="酷q-api">酷Q API</h2>
-<p>可以通过事件数据中提供的对象被动地调用酷Q API。</p>
-<pre><code class="lang-csharp">private void OnMemberJoined(object sender, GroupMemberEventArgs e)
+<h2 id="调用酷q-api">调用酷Q API</h2>
+<ul>
+<li><p>通过事件数据。</p>
+<pre><code class="lang-csharp">private void OnMemberJoined(object sender, GroupEventArgs e)
 {
     e.Operatee.Mute(TimeSpan.FromMinutes(5));
     e.Source.Send(&quot;欢迎 &quot; + e.Operatee.DisplayName);
 }
 </code></pre>
-<p><a class="xref" href="../api/HuajiTech.QQ.PluginContext.html">PluginContext</a> 类提供了主动调用酷Q API 的能力。</p>
+</li>
+<li><p>通过 <a class="xref" href="../api/HuajiTech.QQ.PluginContext.html">PluginContext</a> 类。对于 <a class="xref" href="../api/HuajiTech.QQ.PluginContext.html#HuajiTech_QQ_PluginContext_Current">Current</a>，建议使用 <a class="xref" href="../api/HuajiTech.QQ.CurrentPluginContext.html">CurrentPluginContext</a> 类。</p>
 <pre><code class="lang-csharp">PluginContext.Current.GetUser(114514).Send(&quot;Hello!&quot;);
 </code></pre>
-<p>对于在插件类中的使用，<a class="xref" href="../api/HuajiTech.QQ.Plugin.html">Plugin</a> 类提供了更便捷的方法。</p>
+</li>
+<li><p>通过 <a class="xref" href="../api/HuajiTech.QQ.Plugin.html">Plugin</a> 类的 <code>protected</code> 实例方法。通常在插件类中使用此方法。</p>
 <pre><code class="lang-csharp">public class MyPlugin : Plugin
 {
-    [...]
+    ...
     foreach (var member in Group(1919810).GetMembers())
-    [...]
+    ...
 }
 </code></pre>
-<p><a class="xref" href="../api/HuajiTech.QQ.PluginContextExtensions.html">PluginContextExtensions</a> 类提供了一些常用的扩展方法。</p>
+</li>
+<li><p>通过 <a class="xref" href="../api/HuajiTech.QQ.CurrentPluginContext.html">CurrentPluginContext</a> 类提供的静态方法。通常在非插件类中使用此方法。</p>
+<pre><code class="lang-csharp">using static HuajiTech.QQ.CurrentPluginContext;
+
+User(114514).Send(&quot;Hello!&quot;);
+</code></pre>
+</li>
+<li><p>通过 <a class="xref" href="../api/HuajiTech.QQ.PluginContextExtensions.html">PluginContextExtensions</a> 类提供的常用扩展方法。</p>
 <pre><code class="lang-csharp">try
 {
-    [...]
+    ...
     user.AsMemberOf(group);
-    [...]
+    ...
 }
 catch (Exception ex)
 {
     ex.LogAsError();
 }
 </code></pre>
-<p><a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Image.html">Image</a> 和 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Record.html">Record</a> 类也提供了调用酷Q API 的方法。</p>
+</li>
+<li><p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Image.html">Image</a> 和 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Record.html">Record</a> 类。</p>
 <pre><code class="lang-csharp">image.GetFile();
 </code></pre>
+</li>
+</ul>
 <h2 id="cq码">CQ码</h2>
 <p>可以使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 类处理CQ码。</p>
 <p>有关详细信息，请参见<a href="howto_handle_message.html">如何：处理消息</a>中的<code>使用 ComplexMessage</code>部分。</p>

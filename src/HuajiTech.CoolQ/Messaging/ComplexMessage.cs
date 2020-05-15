@@ -128,8 +128,14 @@ namespace HuajiTech.CoolQ.Messaging
         /// 一个包含 <paramref name="messages"/> 中所有成员的 <see cref="ComplexMessage"/> 对象，这些成员以 <paramref name="separator"/> 分隔。
         /// 如果 <paramref name="messages"/> 没有成员，则该方法返回一个空的 <see cref="ComplexMessage"/> 对象。
         /// </returns>
+        /// <exception cref="ArgumentNullException"><paramref name="messages"/> 为 <c>null</c>。</exception>
         public static ComplexMessage Join(MessageElement separator, IEnumerable<ComplexMessage> messages)
         {
+            if (messages is null)
+            {
+                throw new ArgumentNullException(nameof(messages));
+            }
+
             if (!messages.Any())
             {
                 return new ComplexMessage();
@@ -208,14 +214,14 @@ namespace HuajiTech.CoolQ.Messaging
         /// 基于数组中的字符串将当前 <see cref="ComplexMessage"/> 对象中的所有 <see cref="PlainText"/> 对象拆分为多个 <see cref="PlainText"/> 对象。
         /// 可以指定子 <see cref="PlainText"/> 对象是否包含空数组元素。
         /// </summary>
+        /// <param name="separator">分隔此 <see cref="ComplexMessage"/> 对象中 <see cref="PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
         /// <param name="options">
         /// 要省略返回的数组中的空数组元素，则为 <see cref="StringSplitOptions.RemoveEmptyEntries"/>；
         /// 要包含返回的数组中的空数组元素，则为 <see cref="StringSplitOptions.None"/>。
         /// </param>
-        /// <param name="separator">分隔此 <see cref="ComplexMessage"/> 对象中 <see cref="PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
-        /// <returns>一个 <see cref="ComplexMessage"/> 对象，其元素包含此 <see cref="ComplexMessage"/> 对象中的子 <see cref="PlainText"/> 对象，这些子子 <see cref="PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
+        /// <returns>一个 <see cref="ComplexMessage"/> 对象，其元素包含此 <see cref="ComplexMessage"/> 对象中的子 <see cref="PlainText"/> 对象，这些子 <see cref="PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
         /// <exception cref="ArgumentException"><paramref name="options"/> 不是 <see cref="StringSplitOptions"/> 值之一。</exception>
-        public ComplexMessage SplitPlainText(StringSplitOptions options, params string[] separator)
+        public ComplexMessage SplitPlainText(string[] separator, StringSplitOptions options)
         {
             IEnumerable<MessageElement> GetMessageElements()
             {
@@ -244,7 +250,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="separator">分隔此 <see cref="ComplexMessage"/> 对象中 <see cref="PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
         /// <returns>一个 <see cref="ComplexMessage"/> 对象，其元素包含此 <see cref="ComplexMessage"/> 对象中的子 <see cref="PlainText"/> 对象，这些子子 <see cref="PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
         public ComplexMessage SplitPlainText(params string[] separator) =>
-            SplitPlainText(StringSplitOptions.RemoveEmptyEntries, separator);
+            SplitPlainText(separator, StringSplitOptions.RemoveEmptyEntries);
 
         /// <summary>
         /// 将 <see cref="MessageElement"/> 对象添加到 <see cref="ComplexMessage"/> 的结尾处。

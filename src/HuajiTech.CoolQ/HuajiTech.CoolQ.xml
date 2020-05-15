@@ -216,6 +216,7 @@
             一个包含 <paramref name="messages"/> 中所有成员的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，这些成员以 <paramref name="separator"/> 分隔。
             如果 <paramref name="messages"/> 没有成员，则该方法返回一个空的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
             </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="messages"/> 为 <c>null</c>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText">
             <summary>
@@ -233,17 +234,17 @@
             如果当前  <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象不包含任何 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象，则该方法返回 <see cref="F:System.String.Empty"/>。
             </returns>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.StringSplitOptions,System.String[])">
+        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String[],System.StringSplitOptions)">
             <summary>
             基于数组中的字符串将当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的所有 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象拆分为多个 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象。
             可以指定子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象是否包含空数组元素。
             </summary>
+            <param name="separator">分隔此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
             <param name="options">
             要省略返回的数组中的空数组元素，则为 <see cref="F:System.StringSplitOptions.RemoveEmptyEntries"/>；
             要包含返回的数组中的空数组元素，则为 <see cref="F:System.StringSplitOptions.None"/>。
             </param>
-            <param name="separator">分隔此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，其元素包含此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象，这些子子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
+            <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，其元素包含此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象，这些子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
             <exception cref="T:System.ArgumentException"><paramref name="options"/> 不是 <see cref="T:System.StringSplitOptions"/> 值之一。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String[])">
@@ -623,7 +624,7 @@
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage,System.Boolean)">
             <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Message"/> 对象解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
+            将 <see cref="T:HuajiTech.QQ.IMessage"/> 对象解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
             </summary>
             <param name="message">一个 <see cref="T:HuajiTech.QQ.IMessage"/>对象，该 <see cref="T:HuajiTech.QQ.IMessage"/> 对象的 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
             <param name="useEmojiCQCode">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
@@ -635,6 +636,18 @@
             </summary>
             <param name="elements">要用于创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的消息元素集合。</param>
             <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>，其中包含输入序列中的元素。</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement},HuajiTech.CoolQ.Messaging.MessageElement)">
+            <summary>
+            使用指定的分隔符从 <see cref="T:System.Collections.Generic.IEnumerable`1"/> 创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>。
+            </summary>
+            <param name="elements">要用于创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的消息元素集合。</param>
+            <param name="separator">要用作分隔符的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。</param>
+            <returns>
+            一个包含 <paramref name="elements"/> 中所有成员的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，这些成员以 <paramref name="separator"/> 分隔。
+            如果 <paramref name="elements"/> 没有成员，则该方法返回一个空的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
+            </returns>
             <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)">
@@ -920,7 +933,7 @@
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.BotNotInitialized">
             <summary>
-              查找类似 Bot 尚未初始化。 的本地化字符串。
+              查找类似 机器人尚未初始化。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.FailedToDecodeRegexMessage">
@@ -961,6 +974,11 @@
         <member name="P:HuajiTech.CoolQ.Resources.PluginLoadTitle">
             <summary>
               查找类似 插件加载 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Resources.TypeIsNotPlugin">
+            <summary>
+              查找类似 指定的类型不是插件类型。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.UnexpectedReturnValue">

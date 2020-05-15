@@ -17,7 +17,7 @@
 ```csharp
 [PluginLoadStage((int)AppLifecycle.Initializing)]
 class MyPlugin : Plugin
-{
+{v
 }
 ```
 
@@ -49,83 +49,96 @@ class MyPlugin : Plugin
 
 ### 事件源
 
-事件源定义了一组相关的事件。事件源是接口类型，可以实现自定义事件源。
+事件源定义了一个或一组相关的事件。
+事件源是接口类型。
+定义了单个事件的事件源以 `Notify` 开头，如 @"HuajiTech.QQ.Events.INotifyMessageReceived" 接口。
+定义了多个事件的事件源以 `EventSource` 结尾，如 @"HuajiTech.QQ.Events.IBotEventSource" 接口。
 
 ### 处理事件
 
-通过在插件类构造函数中添加事件源类型的参数并向事件源附加事件处理程序可处理事件。
-在插件类被实例化时，事件源的实现将会通过**依赖注入**提供为参数。
+在插件类构造函数中添加参数以获取事件源。通过向事件源对象附加事件处理程序来处理事件。
 
 ```csharp
 public MyPlugin(
-    IMessageEventSource messageEventSource,
+    INotifyMessageReceived notifyMessageReceived,
     IBotEventSource botEventSource)
 {
-    messageEventSource.MessageReceived += [...]
-    botEventSource.AppEnabled += [...]
+    notifyMessageReceived.MessageReceived += ...
+    botEventSource.AppEnabled += ...
 }
 ```
+
+> [!NOTE]
+> 尽可能使用定义事件最少的事件源。例如，若插件只需处理消息接收事件，则应使用 @"HuajiTech.QQ.Events.INotifyMessageReceived"，而不是 @"HuajiTech.QQ.Events.ICurrentUserEventSource"。
 
 ### 路由
 
 酷Q的所有事件数据类均派生自 @"HuajiTech.QQ.Events.RoutedEventArgs" 类。
-通过设置 @"HuajiTech.QQ.Events.RoutedEventArgs.Handled" 属性，可阻断事件。
+将 @"HuajiTech.QQ.Events.RoutedEventArgs.Handled" 属性设置为 `true` 以阻断事件。
 
 ### 菜单和悬浮窗状态
 
-菜单项被点击和悬浮窗状态更新均被视为事件。由于事件的数量无法确定，需要手动将事件处理程序导出。
+菜单项被点击和悬浮窗状态更新均被视为事件。由于事件的数量无法确定，需要手动导出事件处理程序。
 
 有关详细信息，请参见[菜单和悬浮窗状态](menus_and_statuses.md)。
 
-## 酷Q API
+## 调用酷Q API
 
-可以通过事件数据中提供的对象被动地调用酷Q API。
+- 通过事件数据。
 
-```csharp
-private void OnMemberJoined(object sender, GroupMemberEventArgs e)
-{
-    e.Operatee.Mute(TimeSpan.FromMinutes(5));
-    e.Source.Send("欢迎 " + e.Operatee.DisplayName);
-}
-```
+  ```csharp
+  private void OnMemberJoined(object sender, GroupEventArgs e)
+  {
+      e.Operatee.Mute(TimeSpan.FromMinutes(5));
+      e.Source.Send("欢迎 " + e.Operatee.DisplayName);
+  }
+  ```
 
-@"HuajiTech.QQ.PluginContext" 类提供了主动调用酷Q API 的能力。
+- 通过 @"HuajiTech.QQ.PluginContext" 类。对于 @"HuajiTech.QQ.PluginContext.Current"，建议使用 @"HuajiTech.QQ.CurrentPluginContext" 类。
 
-```csharp
-PluginContext.Current.GetUser(114514).Send("Hello!");
-```
+  ```csharp
+  PluginContext.Current.GetUser(114514).Send("Hello!");
+  ```
 
-对于在插件类中的使用，@"HuajiTech.QQ.Plugin" 类提供了更便捷的方法。
+- 通过 @"HuajiTech.QQ.Plugin" 类的 `protected` 实例方法。通常在插件类中使用此方法。
 
-```csharp
-public class MyPlugin : Plugin
-{
-    [...]
-    foreach (var member in Group(1919810).GetMembers())
-    [...]
-}
-```
+  ```csharp
+  public class MyPlugin : Plugin
+  {
+      ...
+      foreach (var member in Group(1919810).GetMembers())
+      ...
+  }
+  ```
 
-@"HuajiTech.QQ.PluginContextExtensions" 类提供了一些常用的扩展方法。
+- 通过 @"HuajiTech.QQ.CurrentPluginContext" 类提供的静态方法。通常在非插件类中使用此方法。
+  
+  ```csharp
+  using static HuajiTech.QQ.CurrentPluginContext;
 
-```csharp
-try
-{
-    [...]
-    user.AsMemberOf(group);
-    [...]
-}
-catch (Exception ex)
-{
-    ex.LogAsError();
-}
-```
+  User(114514).Send("Hello!");
+  ```
 
-@"HuajiTech.CoolQ.Messaging.Image" 和 @"HuajiTech.CoolQ.Messaging.Record" 类也提供了调用酷Q API 的方法。
+- 通过 @"HuajiTech.QQ.PluginContextExtensions" 类提供的常用扩展方法。
 
-```csharp
-image.GetFile();
-```
+  ```csharp
+  try
+  {
+      ...
+      user.AsMemberOf(group);
+      ...
+  }
+  catch (Exception ex)
+  {
+      ex.LogAsError();
+  }
+  ```
+
+- 通过 @"HuajiTech.CoolQ.Messaging.Image" 和 @"HuajiTech.CoolQ.Messaging.Record" 类。
+
+  ```csharp
+  image.GetFile();
+  ```
 
 ## CQ码
 

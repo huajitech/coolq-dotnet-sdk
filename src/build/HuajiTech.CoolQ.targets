@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="CoolQPublish" AfterTargets="Build">
-    <PropertyGroup>
-      <SdkAssembly>$(OutputPath)HuajiTech.CoolQ.dll</SdkAssembly>
-    </PropertyGroup>
-
     <MakeDir Directories="$(PublishDir)" Condition="!Exists('$(PublishDir)')" />
-    
+
     <ItemGroup>
       <InputAssemblies Include="$(OutputPath)$(TargetFileName)" />
       <InputAssemblies Include="$(OutputPath)*.dll" Exclude="$(OutputPath)$(TargetFileName)" />
@@ -20,11 +16,10 @@
       InputAssemblies="@(InputAssemblies)"
       TargetKind="Dll"
       KeyFile="$(KeyFile)"
-      OutputFile="$(PublishDir)$(TargetFileName)"
-    />
+      OutputFile="$(PublishDir)$(TargetFileName)" />
 
     <UnmanagedExport File="$(PublishDir)$(TargetFileName)" />
-    
+
     <Move SourceFiles="$(PublishDir)$(TargetFileName)" DestinationFiles="$(PublishDir)app.dll" />
     <Copy SourceFiles="$(ProjectDir)app.json" DestinationFolder="$(PublishDir)" />
   </Target>

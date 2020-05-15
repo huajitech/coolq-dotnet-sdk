@@ -7,22 +7,48 @@ namespace HuajiTech.QQ
     /// </summary>
     public static class PluginContextExtensions
     {
-        public static IUser? AsUser(this IUser user, PluginContext context) =>
-            context?.GetUser(user) ?? throw new ArgumentNullException(nameof(context));
+        public static IUser? AsUser(this IUser user, PluginContext context)
+        {
+            if (user is null)
+            {
+                return null;
+            }
 
-        public static IUser? AsUser(this IUser user) => user?.AsUser(PluginContext.Context);
+            if (context is null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
 
-        public static IMember? AsMemberOf(this IUser user, IGroup group, PluginContext context) =>
-            context?.GetMember(user, group);
+            return context.GetUser(user.Number);
+        }
+
+        public static IUser? AsUser(this IUser user) => AsUser(user, PluginContext.Current);
+
+        public static IMember? AsMemberOf(this IUser user, IGroup group, PluginContext context)
+        {
+            if (context is null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
+
+            return context.GetMember(user, group);
+        }
 
         public static IMember? AsMemberOf(this IUser user, IGroup group) =>
-            AsMemberOf(user, group, PluginContext.Context);
+            AsMemberOf(user, group, PluginContext.Current);
 
-        public static IMember? AsMemberOf(this IUser user, long groupNumber, PluginContext context) =>
-            context?.GetMember(user, groupNumber);
+        public static IMember? AsMemberOf(this IUser user, long groupNumber, PluginContext context)
+        {
+            if (context is null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
+
+            return context.GetMember(user, groupNumber);
+        }
 
         public static IMember? AsMemberOf(this IUser user, long groupNumber) =>
-            AsMemberOf(user, groupNumber, PluginContext.Context);
+            AsMemberOf(user, groupNumber, PluginContext.Current);
 
         public static TException? LogAsWarning<TException>(this TException exception, ILogger logger)
             where TException : notnull, Exception
@@ -49,7 +75,7 @@ namespace HuajiTech.QQ
 
         public static TException? LogAsWarning<TException>(this TException exception)
             where TException : Exception =>
-            LogAsWarning(exception, PluginContext.Context);
+            LogAsWarning(exception, PluginContext.Current);
 
         public static TException? LogAsError<TException>(this TException exception, ILogger logger)
              where TException : Exception
@@ -81,6 +107,6 @@ namespace HuajiTech.QQ
 
         public static TException? LogAsError<TException>(this TException exception)
             where TException : Exception =>
-            LogAsError(exception, PluginContext.Context);
+            LogAsError(exception, PluginContext.Current);
     }
 }

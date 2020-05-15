@@ -3,9 +3,7 @@ using HuajiTech.CoolQ.Events;
 using HuajiTech.QQ;
 using HuajiTech.UnmanagedExports;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
@@ -17,97 +15,40 @@ namespace HuajiTech.CoolQ
         "CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Style", "IDE0060:删除未使用的参数", Justification = "<挂起>")]
-    internal partial class Bot
+    public partial class Bot
     {
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             if (e.ExceptionObject is Exception ex)
             {
-                var frames = new StackTrace(ex)
+                if (new StackTrace(ex)
                     .GetFrames()
-                    .Where(frame => frame.GetMethod().Module.Assembly == Assembly.GetExecutingAssembly());
-
-                if (frames.Any())
+                    .Any(frame => frame.GetMethod().Module.Assembly == Assembly.GetExecutingAssembly()))
                 {
                     Instance.Logger.LogFatal(ex.ToString());
                 }
             }
         }
 
-        private static void RegisterSdk(ContainerBuilder builder)
-        {
-            builder
-                .RegisterInstance(Instance)
-                .AsImplementedInterfaces();
-
-            builder
-                .RegisterInstance(Instance.Logger)
-                .As<ILogger>();
-
-            builder
-                .Register(context => Instance.CurrentUser)
-                .As<ICurrentUser>();
-
-            builder
-                .RegisterInstance(CurrentUserEventSource.Instance)
-                .AsImplementedInterfaces();
-            builder
-                .RegisterInstance(GroupEventSource.Instance)
-                .AsImplementedInterfaces();
-            builder
-                .RegisterInstance(BotEventSource.Instance)
-                .AsImplementedInterfaces();
-
-            builder
-                .Register(context => QQ.PluginContext.Context)
-                .As<QQ.PluginContext>();
-        }
-
-        private static void RegisterPlugins(ContainerBuilder builder)
+        private static void RegisterPlugins()
         {
             var executingAssembly = Assembly.GetExecutingAssembly();
 
             var defaultLoadStage = ((AppLifecycle?)executingAssembly
                 .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? AppLifecycle.Enabled;
 
-            var types = executingAssembly.GetTypes().Where(type => !type.IsInterface && !type.IsAbstract && type.IsAssignableTo<IPlugin>());
+            var types = executingAssembly.GetTypes()
+                .Where(type => !type.IsInterface && !type.IsAbstract && typeof(IPlugin).IsAssignableFrom(type));
 
             foreach (var type in types)
             {
                 var loadStage = ((AppLifecycle?)type
                     .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? defaultLoadStage;
 
-                builder
+                _builder
                     .RegisterType(type)
                     .SingleInstance()
                     .Named<IPlugin>(loadStage.ToString());
-            }
-        }
-
-        private static void LoadPlugins(IContainer container, AppLifecycle loadStage, bool logInfo = false)
-        {
-            try
-            {
-                var plugins = container.ResolveNamed<IEnumerable<IPlugin>>(loadStage.ToString());
-
-                if (!logInfo)
-                {
-                    return;
-                }
-
-                foreach (var plugin in plugins)
-                {
-                    Instance.Logger.LogDebug(
-                        Resources.PluginLoadTitle,
-                        string.Format(
-                            CultureInfo.InvariantCulture,
-                            Resources.PluginLoadMessage,
-                            plugin.GetType().FullName));
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
             }
         }
 
@@ -118,35 +59,25 @@ namespace HuajiTech.CoolQ
         private static int Initialize(int authCode)
         {
             Instance = new Bot(authCode);
-            QQ.PluginContext.Context = new PluginContext(Instance);
+            PluginContext.Current = new CoolQPluginContext(Instance);
 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
-            var builder = new ContainerBuilder();
+            RegisterPlugins();
 
-            RegisterSdk(builder);
-            RegisterPlugins(builder);
+            lock (_containerLock)
+            {
+                _container = _builder.Build();
+            }
 
-            var container = builder.Build();
-
-            LoadPlugins(container, AppLifecycle.Initializing);
+            LoadPlugins(AppLifecycle.Initializing);
 
             var source = BotEventSource.Instance;
 
-            var isFirstTimeEnabled = true;
-
-            source.AppEnabled += (sender, e) =>
-            {
-                if (isFirstTimeEnabled)
-                {
-                    LoadPlugins(container, AppLifecycle.Enabled, true);
-                    isFirstTimeEnabled = false;
-                }
-            };
-
-            source.BotStarted += (sender, e) => LoadPlugins(container, AppLifecycle.BotStarted);
-            source.AppDisabling += (sender, e) => LoadPlugins(container, AppLifecycle.Disabling);
-            source.BotStopping += (sender, e) => LoadPlugins(container, AppLifecycle.BotStopping);
+            source.AppEnabled += (sender, e) => LogPluginInfos(LoadPlugins(AppLifecycle.Enabled));
+            source.BotStarted += (sender, e) => LoadPlugins(AppLifecycle.BotStarted);
+            source.AppDisabling += (sender, e) => LoadPlugins(AppLifecycle.Disabling);
+            source.BotStopping += (sender, e) => LoadPlugins(AppLifecycle.BotStopping);
 
             return 0;
         }

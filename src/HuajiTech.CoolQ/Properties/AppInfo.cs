@@ -1,5 +1,5 @@
 ﻿// 用于 HuajiTech.CoolQ 的应用信息配置文件。
-// 版本 0.2.1-alpha.2。
+// 版本 0.2.2-alpha.1。
 
 using HuajiTech.CoolQ;
 
@@ -8,6 +8,7 @@ using HuajiTech.CoolQ;
 
 // 指定插件的默认加载阶段。可通过在插件类上应用 PluginLoadStageAttribute 重写此项。
 // 若插件于 Enabled 阶段加载，允许在构造函数内调用 API。
+// 注意：若在非 Initializing 阶段加载，删除 app.json 中的对应事件将会导致插件不被加载。
 [assembly: PluginLoadStage((int)AppLifecycle.Enabled)]
 
 // 指定应用的 AppID。必须更改此项。

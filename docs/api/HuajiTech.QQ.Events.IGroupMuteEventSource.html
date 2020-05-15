@@ -86,74 +86,21 @@
   <div class="markdown level0 summary"><p>定义群禁言事件。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.Events.INotifyGroupMuted.html#HuajiTech_QQ_Events_INotifyGroupMuted_GroupMuted">INotifyGroupMuted.GroupMuted</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.Events.INotifyGroupUnmuted.html#HuajiTech_QQ_Events_INotifyGroupUnmuted_GroupUnmuted">INotifyGroupUnmuted.GroupUnmuted</a>
+    </div>
+  </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.QQ.Events.html">HuajiTech.QQ.Events</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_Events_IGroupMuteEventSource_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IGroupMuteEventSource</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGroupMuteEventSource : INotifyGroupMuted, INotifyGroupUnmuted</code></pre>
   </div>
-  <h3 id="events">&#20107;&#20214;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IGroupMuteEventSource_GroupMuted.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IGroupMuteEventSource.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_QQ_Events_IGroupMuteEventSource_GroupMuted" data-uid="HuajiTech.QQ.Events.IGroupMuteEventSource.GroupMuted">GroupMuted</h4>
-  <div class="markdown level1 summary"><p>在禁言时引发。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler&lt;GroupMuteEventArgs&gt; GroupMuted</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.QQ.Events.GroupMuteEventArgs.html">GroupMuteEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IGroupMuteEventSource_GroupUnmuted.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IGroupMuteEventSource.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_QQ_Events_IGroupMuteEventSource_GroupUnmuted" data-uid="HuajiTech.QQ.Events.IGroupMuteEventSource.GroupUnmuted">GroupUnmuted</h4>
-  <div class="markdown level1 summary"><p>在解除禁言时引发。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler&lt;GroupMuteEventArgs&gt; GroupUnmuted</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.QQ.Events.GroupMuteEventArgs.html">GroupMuteEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
@@ -165,7 +112,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IGroupMuteEventSource.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IGroupMuteEventSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IGroupMuteEventSource.cs/#L8" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/EventSources/IGroupMuteEventSource.cs/#L6" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

@@ -28,14 +28,14 @@ message.GetPlainText();
 ```csharp
 if (message.Contains(CurrentUser.At()))
 {
-    [...]
+    ...
 }
 ```
 
 使用 @"HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.IUser)" @ 消息的发送者。
 
 ```csharp
-e.Source.Send(e.Sender.At() + [...])
+e.Source.Send(e.Sender.At() + " How are you?")
 ```
 
 解构复合消息。

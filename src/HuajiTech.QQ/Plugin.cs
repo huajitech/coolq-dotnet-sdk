@@ -1,7 +1,7 @@
 ﻿namespace HuajiTech.QQ
 {
     /// <summary>
-    /// 用作插件的基类，并提供操作 <see cref="PluginContext"/> 的方法。
+    /// 用作插件的基类，并提供操作 <see cref="PluginContext"/> 的实例方法。
     /// 此类为抽象类。
     /// </summary>
     public abstract class Plugin : IPlugin
@@ -13,10 +13,10 @@
         protected Plugin(PluginContext context) => Context = context;
 
         /// <summary>
-        /// 以 <see cref="PluginContext.Context"/> 初始化一个 <see cref="Plugin"/> 类的新实例。
+        /// 以 <see cref="PluginContext.Current"/> 初始化一个 <see cref="Plugin"/> 类的新实例。
         /// </summary>
         protected Plugin()
-            : this(PluginContext.Context)
+            : this(PluginContext.Current)
         {
         }
 

@@ -86,134 +86,27 @@
   <div class="markdown level0 summary"><p>定义机器人事件。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>&#32487;&#25215;&#25104;&#21592;</h5>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.Events.INotifyAppDisabling.html#HuajiTech_QQ_Events_INotifyAppDisabling_AppDisabling">INotifyAppDisabling.AppDisabling</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.Events.INotifyAppEnabled.html#HuajiTech_QQ_Events_INotifyAppEnabled_AppEnabled">INotifyAppEnabled.AppEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.Events.INotifyBotStarted.html#HuajiTech_QQ_Events_INotifyBotStarted_BotStarted">INotifyBotStarted.BotStarted</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.Events.INotifyBotStopping.html#HuajiTech_QQ_Events_INotifyBotStopping_BotStopping">INotifyBotStopping.BotStopping</a>
+    </div>
+  </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.QQ.Events.html">HuajiTech.QQ.Events</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_Events_IBotEventSource_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IBotEventSource</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IBotEventSource : INotifyAppDisabling, INotifyAppEnabled, INotifyBotStarted, INotifyBotStopping</code></pre>
   </div>
-  <h3 id="events">&#20107;&#20214;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IBotEventSource_AppDisabling.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IBotEventSource.AppDisabling%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IBotEventSource.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_QQ_Events_IBotEventSource_AppDisabling" data-uid="HuajiTech.QQ.Events.IBotEventSource.AppDisabling">AppDisabling</h4>
-  <div class="markdown level1 summary"><p>在应用被禁用时引发。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler AppDisabling</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IBotEventSource_AppEnabled.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IBotEventSource.AppEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IBotEventSource.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_QQ_Events_IBotEventSource_AppEnabled" data-uid="HuajiTech.QQ.Events.IBotEventSource.AppEnabled">AppEnabled</h4>
-  <div class="markdown level1 summary"><p>在应用被启用时引发。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler AppEnabled</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IBotEventSource_BotStarted.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IBotEventSource.BotStarted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IBotEventSource.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_QQ_Events_IBotEventSource_BotStarted" data-uid="HuajiTech.QQ.Events.IBotEventSource.BotStarted">BotStarted</h4>
-  <div class="markdown level1 summary"><p>在机器人启动时引发。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler BotStarted</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IBotEventSource_BotStopping.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IBotEventSource.BotStopping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IBotEventSource.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_QQ_Events_IBotEventSource_BotStopping" data-uid="HuajiTech.QQ.Events.IBotEventSource.BotStopping">BotStopping</h4>
-  <div class="markdown level1 summary"><p>在机器人停止时引发。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler BotStopping</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
@@ -225,7 +118,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_QQ_Events_IBotEventSource.md&amp;value=---%0Auid%3A%20HuajiTech.QQ.Events.IBotEventSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/IBotEventSource.cs/#L8" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.QQ/Events/EventSources/IBotEventSource.cs/#L6" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

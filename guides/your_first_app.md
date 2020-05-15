@@ -10,9 +10,9 @@
 
    public class MyPlugin : Plugin
    {
-      public MyPlugin(IMessageEventSource source)
+      public MyPlugin(INotifyMessageReceived eventSource)
       {
-          source.MessageReceived += (sender, e) =>
+          eventSource.MessageReceived += (sender, e) =>
           {
               // 向消息来源聊天发送消息的内容，即复读。
               e.Source.Send(e.Message.Content);

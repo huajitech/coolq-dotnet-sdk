@@ -95,11 +95,11 @@ if (e.Source is IFriend) { } // 好友消息。
 <p>判断机器人是否被 @。</p>
 <pre><code class="lang-csharp">if (message.Contains(CurrentUser.At()))
 {
-    [...]
+    ...
 }
 </code></pre>
 <p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_QQ_IUser_">At(IUser)</a> @ 消息的发送者。</p>
-<pre><code class="lang-csharp">e.Source.Send(e.Sender.At() + [...])
+<pre><code class="lang-csharp">e.Source.Send(e.Sender.At() + &quot; How are you?&quot;)
 </code></pre>
 <p>解构复合消息。</p>
 <pre><code class="lang-csharp">var (a, b, c) = message;

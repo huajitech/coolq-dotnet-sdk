@@ -70,7 +70,7 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 Bot 尚未初始化。 的本地化字符串。
+        ///   查找类似 机器人尚未初始化。 的本地化字符串。
         /// </summary>
         internal static string BotNotInitialized {
             get {
@@ -147,6 +147,15 @@ namespace HuajiTech.CoolQ {
         internal static string PluginLoadTitle {
             get {
                 return ResourceManager.GetString("PluginLoadTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 指定的类型不是插件类型。 的本地化字符串。
+        /// </summary>
+        internal static string TypeIsNotPlugin {
+            get {
+                return ResourceManager.GetString("TypeIsNotPlugin", resourceCulture);
             }
         }
         

@@ -1,3 +1,4 @@
+using HuajiTech.QQ;
 using System.Collections.Generic;
 using System.IO;
 
@@ -49,7 +50,7 @@ namespace HuajiTech.CoolQ.Messaging
                 return null;
             }
 
-            return QQ.PluginContext.Context.Bot.GetRecord(FileName, format);
+            return PluginContext.Current.Bot.GetRecord(FileName, format);
         }
     }
 }

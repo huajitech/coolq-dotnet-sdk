@@ -20,9 +20,9 @@ using HuajiTech.QQ.Events;
 
 public class RepeaterPlugin : Plugin
 {
-    public RepeaterPlugin(IMessageEventSource source)
+    public RepeaterPlugin(INotifyMessageReceived eventSource)
     {
-        source.MessageReceived += (sender, e) => e.Source.Send(e.Message.Content);
+        eventSource.MessageReceived += (sender, e) => e.Source.Send(e.Message.Content);
     }
 }
 ```

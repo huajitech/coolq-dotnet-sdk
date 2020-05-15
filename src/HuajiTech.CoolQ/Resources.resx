@@ -148,6 +148,9 @@
     <value>酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。</value>
   </data>
   <data name="BotNotInitialized" xml:space="preserve">
-    <value>Bot 尚未初始化。</value>
+    <value>机器人尚未初始化。</value>
+  </data>
+  <data name="TypeIsNotPlugin" xml:space="preserve">
+    <value>指定的类型不是插件类型。</value>
   </data>
 </root>

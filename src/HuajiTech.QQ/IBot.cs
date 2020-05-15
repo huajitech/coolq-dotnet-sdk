@@ -5,7 +5,7 @@ namespace HuajiTech.QQ
     /// <summary>
     /// 定义机器人。
     /// </summary>
-    public interface IBot
+    public interface IBot : IBotInfo
     {
         /// <summary>
         /// 获取当前 <see cref="IBot"/> 对象的当前用户。
