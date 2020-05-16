@@ -3,8 +3,6 @@ using HuajiTech.CoolQ.Events;
 using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -74,6 +72,11 @@ namespace HuajiTech.CoolQ
 
             try
             {
+                if (!_container.IsRegistered<TPlugin>())
+                {
+                    RegisterPlugin<TPlugin>();
+                }
+
                 return _container.Resolve<TPlugin>();
             }
             catch (Exception ex)
@@ -96,6 +99,11 @@ namespace HuajiTech.CoolQ
 
             try
             {
+                if (!_container.IsRegistered(pluginType))
+                {
+                    RegisterPlugin(pluginType);
+                }
+
                 return (IPlugin)_container.Resolve(pluginType);
             }
             catch (Exception ex)
@@ -104,64 +112,7 @@ namespace HuajiTech.CoolQ
             }
         }
 
-        public static TPlugin LoadPlugin<TPlugin>()
-            where TPlugin : notnull, IPlugin
-        {
-            _builder
-                .RegisterType<TPlugin>()
-                .AsSelf()
-                .As<IPlugin>()
-                .SingleInstance();
-
-            lock (_containerLock)
-            {
-                _container = _builder.Build();
-            }
-
-            return GetPlugin<TPlugin>();
-        }
-
-        public static IPlugin LoadPlugin(Type pluginType)
-        {
-            if (!typeof(IPlugin).IsAssignableFrom(pluginType))
-            {
-                throw new ArgumentException(Resources.TypeIsNotPlugin, nameof(pluginType));
-            }
-
-            _builder
-                .RegisterType(pluginType)
-                .AsSelf()
-                .As<IPlugin>()
-                .SingleInstance();
-
-            lock (_containerLock)
-            {
-                _container = _builder.Build();
-            }
-
-            return GetPlugin(pluginType);
-        }
-
-        [Conditional("DEBUG")]
-        public static void LogPluginInfos(IEnumerable<IPlugin> plugins)
-        {
-            if (plugins is null)
-            {
-                throw new ArgumentNullException(nameof(plugins));
-            }
-
-            foreach (var plugin in plugins)
-            {
-                Instance.Logger.LogDebug(
-                    Resources.PluginLoadTitle,
-                    string.Format(
-                        CultureInfo.InvariantCulture,
-                        Resources.PluginLoadMessage,
-                        plugin.GetType().FullName));
-            }
-        }
-
-        public static ICollection<IPlugin> LoadPlugins(AppLifecycle loadStage)
+        public static ICollection<IPlugin> GetPlugins(AppLifecycle loadStage)
         {
             if (_container is null)
             {
@@ -175,6 +126,75 @@ namespace HuajiTech.CoolQ
             catch (Exception ex)
             {
                 throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
+            }
+        }
+
+        public static ICollection<TPlugin> GetPlugins<TPlugin>()
+            where TPlugin : notnull, IPlugin
+        {
+            if (_container is null)
+            {
+                throw new InvalidOperationException(Resources.BotNotInitialized);
+            }
+
+            try
+            {
+                return _container.Resolve<ICollection<TPlugin>>();
+            }
+            catch (Exception ex)
+            {
+                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
+            }
+        }
+
+        public static ICollection<IPlugin> GetPlugins(Type pluginType)
+        {
+            if (_container is null)
+            {
+                throw new InvalidOperationException(Resources.BotNotInitialized);
+            }
+
+            if (!typeof(IPlugin).IsAssignableFrom(pluginType))
+            {
+                throw new ArgumentException(Resources.TypeIsNotPlugin, nameof(pluginType));
+            }
+
+            try
+            {
+                return (ICollection<IPlugin>)_container.Resolve(typeof(ICollection<>).MakeGenericType(pluginType));
+            }
+            catch (Exception ex)
+            {
+                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
+            }
+        }
+
+        private static void RegisterPlugin<TPlugin>()
+            where TPlugin : notnull, IPlugin
+        {
+            _builder
+                .RegisterType<TPlugin>()
+                .AsSelf()
+                .As<IPlugin>()
+                .SingleInstance();
+
+            lock (_containerLock)
+            {
+                _container = _builder.Build();
+            }
+        }
+
+        private static void RegisterPlugin(Type pluginType)
+        {
+            _builder
+                .RegisterType(pluginType)
+                .AsSelf()
+                .As<IPlugin>()
+                .SingleInstance();
+
+            lock (_containerLock)
+            {
+                _container = _builder.Build();
             }
         }
 

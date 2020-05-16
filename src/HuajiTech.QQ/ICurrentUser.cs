@@ -3,8 +3,7 @@
 namespace HuajiTech.QQ
 {
     /// <summary>
-    /// 表示当前用户。
-    /// 此类为抽象类。
+    /// 定义当前用户。
     /// </summary>
     public interface ICurrentUser : IUser
     {

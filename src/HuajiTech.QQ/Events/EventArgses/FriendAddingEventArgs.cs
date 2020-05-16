@@ -3,11 +3,11 @@ using System;
 namespace HuajiTech.QQ.Events
 {
     /// <summary>
-    /// 为 <see cref="INotifyFriending.Friending"/> 事件提供数据。
+    /// 为 <see cref="INotifyFriendAdding.FriendAdding"/> 事件提供数据。
     /// </summary>
-    public class FriendingEventArgs : TimedEventArgs
+    public class FriendAddingEventArgs : TimedEventArgs
     {
-        public FriendingEventArgs(
+        public FriendAddingEventArgs(
             DateTime time, IUser requester, IFriendshipRequest request)
             : base(time)
         {

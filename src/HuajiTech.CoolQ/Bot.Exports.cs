@@ -3,7 +3,9 @@ using HuajiTech.CoolQ.Events;
 using HuajiTech.QQ;
 using HuajiTech.UnmanagedExports;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
@@ -27,6 +29,25 @@ namespace HuajiTech.CoolQ
                 {
                     Instance.Logger.LogFatal(ex.ToString());
                 }
+            }
+        }
+
+        [Conditional("DEBUG")]
+        private static void LogPluginInfos(IEnumerable<IPlugin> plugins)
+        {
+            if (plugins is null)
+            {
+                throw new ArgumentNullException(nameof(plugins));
+            }
+
+            foreach (var plugin in plugins)
+            {
+                Instance.Logger.LogDebug(
+                    Resources.PluginLoadTitle,
+                    string.Format(
+                        CultureInfo.InvariantCulture,
+                        Resources.PluginLoadMessage,
+                        plugin.GetType().FullName));
             }
         }
 
@@ -70,14 +91,14 @@ namespace HuajiTech.CoolQ
                 _container = _builder.Build();
             }
 
-            LoadPlugins(AppLifecycle.Initializing);
+            GetPlugins(AppLifecycle.Initializing);
 
             var source = BotEventSource.Instance;
 
-            source.AppEnabled += (sender, e) => LogPluginInfos(LoadPlugins(AppLifecycle.Enabled));
-            source.BotStarted += (sender, e) => LoadPlugins(AppLifecycle.BotStarted);
-            source.AppDisabling += (sender, e) => LoadPlugins(AppLifecycle.Disabling);
-            source.BotStopping += (sender, e) => LoadPlugins(AppLifecycle.BotStopping);
+            source.AppEnabled += (sender, e) => LogPluginInfos(GetPlugins(AppLifecycle.Enabled));
+            source.BotStarted += (sender, e) => GetPlugins(AppLifecycle.BotStarted);
+            source.AppDisabling += (sender, e) => GetPlugins(AppLifecycle.Disabling);
+            source.BotStopping += (sender, e) => GetPlugins(AppLifecycle.BotStopping);
 
             return 0;
         }

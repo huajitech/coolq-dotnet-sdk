@@ -28,9 +28,9 @@ namespace HuajiTech.CoolQ.Events
 
         public event EventHandler<EntranceInvitedEventArgs>? EntranceInvited;
 
-        public event EventHandler<FriendedEventArgs>? Friended;
+        public event EventHandler<FriendAddedEventArgs>? FriendAdded;
 
-        public event EventHandler<FriendingEventArgs>? Friending;
+        public event EventHandler<FriendAddingEventArgs>? FriendAdding;
 
         private static bool OnMessageReceived(
             int messageId, Chat source, IUser sender, string message)
@@ -101,34 +101,34 @@ namespace HuajiTech.CoolQ.Events
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnFriending(
+        private static bool OnFriendAdded(
             int type,
             int timestampAdded,
             long requesterNumber)
         {
-            var e = new FriendedEventArgs(
+            var e = new FriendAddedEventArgs(
                 Timestamp.ToDateTime(timestampAdded), new Friend(requesterNumber));
 
-            Instance.Friended?.Invoke(Instance, e);
+            Instance.FriendAdded?.Invoke(Instance, e);
 
             return e.Handled;
         }
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnFriended(
+        private static bool OnFriendAdding(
             int type,
             int timestampRequested,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            var e = new FriendingEventArgs(
+            var e = new FriendAddingEventArgs(
                 Timestamp.ToDateTime(timestampRequested),
                 new User(requesterNumber),
                 new FriendshipRequest(requestToken, message));
 
-            Instance.Friending?.Invoke(Instance, e);
+            Instance.FriendAdding?.Invoke(Instance, e);
 
             return e.Handled;
         }

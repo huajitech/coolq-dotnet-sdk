@@ -97,7 +97,7 @@ class MyPlugin : Plugin
 <p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Initializing">Initializing</a>  及其他非 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，应遵循以下原则：</p>
 <ul>
 <li>✔ 在插件类构造函数内对<strong>类</strong>进行初始化。</li>
-<li>✔ 在 @&quot;HuajiTech.QQ.Events.IBotEventSource.AppEnabled&quot; 事件中初始化<strong>应用</strong>。</li>
+<li>✔ 在 <a class="xref" href="../api/HuajiTech.QQ.Events.INotifyAppEnabled.html#HuajiTech_QQ_Events_INotifyAppEnabled_AppEnabled">AppEnabled</a> 事件中初始化<strong>应用</strong>。</li>
 <li>✘ 不应在插件类构造函数内调用酷Q API。</li>
 <li>✘ 插件类构造函数不应长时间阻塞线程。</li>
 <li>✘ 插件类构造函数不应抛出异常。</li>

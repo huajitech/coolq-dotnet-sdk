@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ
 {
-    internal enum AdministratorEventType
+    internal enum AdministratorAdjustment
     {
         None,
         Remove,

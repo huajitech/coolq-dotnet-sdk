@@ -1,8 +1,7 @@
 ﻿namespace HuajiTech.QQ
 {
     /// <summary>
-    /// 表示好友请求。
-    /// 此类为抽象类。
+    /// 定义好友请求。
     /// </summary>
     public interface IFriendshipRequest : IRequest
     {

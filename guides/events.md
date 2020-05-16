@@ -9,8 +9,8 @@
 | 102 | 群成员减少事件处理 | @"HuajiTech.QQ.Events.INotifyMemberLeft.MemberLeft" |
 | 103 | 群成员增加事件处理 | @"HuajiTech.QQ.Events.INotifyMemberJoined.MemberJoined" |
 | 104 | 群禁言事件处理 | @"HuajiTech.QQ.Events.INotifyMemberMuted.MemberMuted"、@"HuajiTech.QQ.Events.INotifyMemberUnmuted.MemberUnmuted"、@"HuajiTech.QQ.Events.INotifyGroupMuted.GroupMuted"、@"HuajiTech.QQ.Events.INotifyGroupUnmuted.GroupUnmuted" |
-| 201 | 好友已添加事件处理 | @"HuajiTech.QQ.Events.INotifyFriended.Friended" |
-| 301 | 好友添加请求处理 | @"HuajiTech.QQ.Events.INotifyFriending.Friending" |
+| 201 | 好友已添加事件处理 | @"HuajiTech.QQ.Events.INotifyFriendAdded.FriendAdded" |
+| 301 | 好友添加请求处理 | @"HuajiTech.QQ.Events.INotifyFriendAdding.FriendAdding" |
 | 302 | 群添加请求处理 | @"HuajiTech.QQ.Events.INotifyEntranceInvited.EntranceInvited"、@"HuajiTech.QQ.Events.INotifyEntranceRequested.EntranceRequested" |
 | 1001 | 酷Q启动事件 | @"HuajiTech.QQ.Events.INotifyBotStarted.BotStarted" |
 | 1002 | 酷Q关闭事件 | @"HuajiTech.QQ.Events.INotifyBotStopping.BotStopping" |

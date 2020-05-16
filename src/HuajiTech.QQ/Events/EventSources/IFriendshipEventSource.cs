@@ -3,7 +3,7 @@
     /// <summary>
     /// 定义好友事件。
     /// </summary>
-    public interface IFriendshipEventSource : INotifyFriended, INotifyFriending
+    public interface IFriendshipEventSource : INotifyFriendAdded, INotifyFriendAdding
     {
     }
 }

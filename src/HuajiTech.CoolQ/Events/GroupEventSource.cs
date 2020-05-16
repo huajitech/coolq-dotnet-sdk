@@ -46,8 +46,8 @@ namespace HuajiTech.CoolQ.Events
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnAdministratorsChanged(
-            AdministratorEventType type,
+        private static bool OnAdministratorsAdjusted(
+            AdministratorAdjustment adjustment,
             int timestampChanged,
             long sourceNumber,
             long affecteeNumber)
@@ -59,11 +59,11 @@ namespace HuajiTech.CoolQ.Events
                 source.GetMembers().Single(member => member.Role is MemberRole.Owner),
                 new Member(affecteeNumber, source));
 
-            var ev = type switch
+            var ev = adjustment switch
             {
-                AdministratorEventType.Add => Instance.AdministratorAdded,
-                AdministratorEventType.Remove => Instance.AdministratorRemoved,
-                _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(AdministratorEventType))
+                AdministratorAdjustment.Add => Instance.AdministratorAdded,
+                AdministratorAdjustment.Remove => Instance.AdministratorRemoved,
+                _ => throw new InvalidEnumArgumentException(nameof(adjustment), (int)adjustment, typeof(AdministratorAdjustment))
             };
 
             ev?.Invoke(Instance, e);

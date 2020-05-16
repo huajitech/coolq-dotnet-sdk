@@ -5,11 +5,11 @@ namespace HuajiTech.QQ.Events
     /// <summary>
     /// 定义好友正在添加事件。
     /// </summary>
-    public interface INotifyFriending
+    public interface INotifyFriendAdding
     {
         /// <summary>
         /// 在收到好友请求时引发。
         /// </summary>
-        event EventHandler<FriendingEventArgs> Friending;
+        event EventHandler<FriendAddingEventArgs> FriendAdding;
     }
 }

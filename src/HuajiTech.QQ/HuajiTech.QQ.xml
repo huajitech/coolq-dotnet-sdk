@@ -165,27 +165,27 @@
             获取上传的文件。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.FriendedEventArgs">
+        <member name="T:HuajiTech.QQ.Events.FriendAddedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.INotifyFriended.Friended"/> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.INotifyFriendAdded.FriendAdded"/> 事件提供数据。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.Events.FriendedEventArgs.Operatee">
+        <member name="P:HuajiTech.QQ.Events.FriendAddedEventArgs.Operatee">
             <summary>
             获取添加的好友。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.FriendingEventArgs">
+        <member name="T:HuajiTech.QQ.Events.FriendAddingEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.QQ.Events.INotifyFriending.Friending"/> 事件提供数据。
+            为 <see cref="E:HuajiTech.QQ.Events.INotifyFriendAdding.FriendAdding"/> 事件提供数据。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.Events.FriendingEventArgs.Requester">
+        <member name="P:HuajiTech.QQ.Events.FriendAddingEventArgs.Requester">
             <summary>
             获取请求用户。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.Events.FriendingEventArgs.Request">
+        <member name="P:HuajiTech.QQ.Events.FriendAddingEventArgs.Request">
             <summary>
             获取请求。
             </summary>
@@ -425,22 +425,22 @@
             在上传文件时引发。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.INotifyFriended">
+        <member name="T:HuajiTech.QQ.Events.INotifyFriendAdded">
             <summary>
             定义好友已添加事件。
             </summary>
         </member>
-        <member name="E:HuajiTech.QQ.Events.INotifyFriended.Friended">
+        <member name="E:HuajiTech.QQ.Events.INotifyFriendAdded.FriendAdded">
             <summary>
             在好友已添加时引发。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.Events.INotifyFriending">
+        <member name="T:HuajiTech.QQ.Events.INotifyFriendAdding">
             <summary>
             定义好友正在添加事件。
             </summary>
         </member>
-        <member name="E:HuajiTech.QQ.Events.INotifyFriending.Friending">
+        <member name="E:HuajiTech.QQ.Events.INotifyFriendAdding.FriendAdding">
             <summary>
             在收到好友请求时引发。
             </summary>
@@ -664,8 +664,7 @@
         </member>
         <member name="T:HuajiTech.QQ.ICurrentUser">
             <summary>
-            表示当前用户。
-            此类为抽象类。
+            定义当前用户。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.ICurrentUser.GetFriends">
@@ -706,8 +705,7 @@
         </member>
         <member name="T:HuajiTech.QQ.IFriendshipRequest">
             <summary>
-            表示好友请求。
-            此类为抽象类。
+            定义好友请求。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IFriendshipRequest.Accept(System.String)">
