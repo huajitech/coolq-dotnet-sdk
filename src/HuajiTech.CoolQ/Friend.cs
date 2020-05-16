@@ -20,42 +20,45 @@ namespace HuajiTech.CoolQ
             _info = info;
         }
 
-        public override bool HasRequested => !(_info is null);
+        public override bool IsRequestedSuccessfully => !(_info is null);
 
         public string? Alias => GetInfo().Alias;
 
-        public override string? Nickname => GetInfo().Nickname;
+        public override string? Nickname => _info?.Nickname ?? base.Nickname;
 
-        public override string DisplayName => Alias ?? base.DisplayName;
+        public override string Name => Alias ?? base.Name;
 
         public override void Refresh() => Request();
 
-        public override void Request()
-        {
-            _info = null;
-            GetInfo(true);
-        }
+        public override void Request() => GetInfo(true);
 
-        private FriendInfo GetInfo(bool throwException = false)
+        private FriendInfo GetInfo(bool requesting = false)
         {
-            try
-            {
-                return _info ??= CurrentUser.GetFriendInfos()
-                    .First(info => info.Number == Number);
-            }
-            catch (CoolQException) when (!throwException)
+            if (IsRequested && !requesting)
             {
                 return new FriendInfo();
+            }
+
+            IsRequested = true;
+
+            try
+            {
+                _info = CurrentUser.GetFriendInfos().First(info => info.Number == Number);
+
+                return _info;
+            }
+            catch (CoolQException) when (!requesting)
+            {
             }
             catch (InvalidOperationException)
             {
-                if (throwException)
+                if (requesting)
                 {
                     throw new InvalidOperationException(Resources.FriendNotExist);
                 }
-
-                return new FriendInfo();
             }
+
+            return new FriendInfo();
         }
     }
 }

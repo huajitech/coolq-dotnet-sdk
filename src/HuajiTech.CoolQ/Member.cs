@@ -36,13 +36,15 @@ namespace HuajiTech.CoolQ
 
         public bool HasBadRecord => GetInfo().HasBadRecord;
 
-        public override bool HasRequested => !(_info is null);
+        public override bool IsRequested => !(_info is null);
 
         public DateTime LastSpeakTime => GetInfo().LastSpeakTime;
 
         public string? Level => GetInfo().Level;
 
         public string? Location => GetInfo().Location;
+
+        public override string Name => Alias ?? base.Name;
 
         public override string? Nickname => GetInfo().Nickname;
 
@@ -78,11 +80,7 @@ namespace HuajiTech.CoolQ
 
         public override void Refresh() => GetInfo(true, true);
 
-        public override void Request()
-        {
-            _info = null;
-            GetInfo(true);
-        }
+        public override void Request() => GetInfo(true);
 
         public void SetAlias(string alias)
         {
@@ -118,23 +116,26 @@ namespace HuajiTech.CoolQ
 
         public void UnsetAsAdministrator() => SetIsAdministrator(false);
 
-        private MemberInfo GetInfo(bool throwException = false, bool refresh = false)
+        private MemberInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (refresh || _info is null)
+            if (IsRequested && !requesting)
             {
-                try
-                {
-                    using var reader = new MemberInfoReader(
-                        NativeMethods.Member_GetInfo(Bot.Instance.AuthCode, Group.Number, Number, refresh).CheckError());
-                    _info = reader.Read();
-                }
-                catch (CoolQException) when (!throwException)
-                {
-                    return new MemberInfo();
-                }
+                return new MemberInfo();
             }
 
-            return _info;
+            IsRequested = true;
+
+            try
+            {
+                using var reader = new MemberInfoReader(
+                    NativeMethods.Member_GetInfo(Bot.Instance.AuthCode, Group.Number, Number, refresh).CheckError());
+                _info = reader.Read();
+                return _info;
+            }
+            catch (CoolQException) when (!requesting)
+            {
+                return new MemberInfo();
+            }
         }
 
         private void SetIsAdministrator(bool isAdministrator) =>

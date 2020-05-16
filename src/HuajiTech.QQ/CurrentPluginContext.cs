@@ -51,5 +51,11 @@
         /// </summary>
         /// <param name="number">号码。</param>
         public static IUser User(long number) => PluginContext.Current.GetUser(number);
+
+        /// <summary>
+        /// 创建指定 ID 的消息。
+        /// </summary>
+        /// <param name="id">ID。</param>
+        public static IMessage Message(long id) => PluginContext.Current.GetMessage(id);
     }
 }

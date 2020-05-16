@@ -86,13 +86,19 @@
 <p>如果一个<strong>可被实例化</strong>的类实现了 <a class="xref" href="../api/HuajiTech.QQ.IPlugin.html">IPlugin</a> 接口，则它是一个插件类。
 在同一个应用中，可以定义多个插件类。插件类只会被实例化一次。</p>
 <p>通常情况下，插件类应以 <a class="xref" href="../api/HuajiTech.QQ.Plugin.html">Plugin</a> 类作为基类。该类实现了 <a class="xref" href="../api/HuajiTech.QQ.IPlugin.html">IPlugin</a> 接口，并且提供了更易用的 API。</p>
-<p>可通过 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性指定插件类的加载时机。若应用于程序集，则指定该项的缺省值。</p>
-<pre><code class="lang-csharp">[PluginLoadStage((int)AppLifecycle.Initializing)]
-class MyPlugin : Plugin
-{v
-}
+<p>可通过 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性指定插件类的加载阶段。</p>
+<pre><code class="lang-csharp">[assembly: PluginLoadStage(typeof(MyPlugin), (int)AppLifecycle.Initializing)]
 </code></pre>
-<p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，允许在构造函数内<strong>调用 API</strong>或<strong>长时间阻塞线程</strong>，并且可以显示引发的异常的详细信息。<strong>必须</strong>在 <code>app.json</code> 中向酷Q<strong>注册应用启用事件</strong>才能在 Enabled 阶段加载。</p>
+<p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html">DefaultPluginLoadStageAttribute</a> 特性指定在未指定 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性时的缺省值。
+<a class="xref" href="../api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html">DefaultPluginLoadStageAttribute</a> 特性不可重复。</p>
+<pre><code class="lang-csharp">[assembly: DefaultPluginLoadStage((int)AppLifecycle.Enabled)]
+</code></pre>
+<div class="NOTE">
+<h5>注意</h5>
+<p>建议将 AppID 和插件加载阶段的设置项放置在 <code>Properties\AppInfo.cs</code> 内，但这不是强制的。</p>
+</div>
+<p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，允许在构造函数内<strong>调用 API</strong>或<strong>长时间阻塞线程</strong>，并且可以显示引发的异常的详细信息。
+<strong>必须</strong>在 <code>app.json</code> 中向酷Q<strong>注册应用启用事件</strong>才能在 Enabled 阶段加载。</p>
 <p>通过将加载阶段设置为 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_NotLoaded">NotLoaded</a> (<code>0</code>)，可以禁止插件类的加载。</p>
 <p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Initializing">Initializing</a>  及其他非 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，应遵循以下原则：</p>
 <ul>

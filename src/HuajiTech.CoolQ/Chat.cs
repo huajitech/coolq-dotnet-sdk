@@ -6,7 +6,7 @@ namespace HuajiTech.CoolQ
     {
         protected Chat(long number) => Number = number;
 
-        public abstract string DisplayName { get; }
+        public abstract string Name { get; }
 
         public long Number { get; }
 
@@ -16,7 +16,7 @@ namespace HuajiTech.CoolQ
 
         public override int GetHashCode() => (int)Number;
 
-        public abstract IMessage Send(string message);
+        public abstract IContentfulMessage Send(string message);
 
         public override string ToString() => $"{GetType().Name}({Number})";
     }

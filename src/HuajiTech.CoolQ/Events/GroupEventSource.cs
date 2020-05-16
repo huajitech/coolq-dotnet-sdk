@@ -56,7 +56,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new GroupEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 source,
-                source.GetMembers().Single(member => member.Role is MemberRole.Owner),
+                source.GetMembers().First(member => member.Role is MemberRole.Owner),
                 new Member(operateeNumber, source));
 
             var ev = adjustment switch

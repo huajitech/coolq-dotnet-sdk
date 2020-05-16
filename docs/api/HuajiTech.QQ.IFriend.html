@@ -89,25 +89,28 @@
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
     <div>
-      <a class="xref" href="HuajiTech.QQ.IUser.html#HuajiTech_QQ_IUser_GiveThumbsUp_System_Int32_">IUser.GiveThumbsUp(Int32)</a>
+      <a class="xref" href="HuajiTech.QQ.IUser.html#HuajiTech_QQ_IUser_Nickname">IUser.Nickname</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_DisplayName">IChattable.DisplayName</a>
+      <a class="xref" href="HuajiTech.QQ.IUser.html#HuajiTech_QQ_IUser_GiveThumbsUp_System_Int32_">IUser.GiveThumbsUp(Int32)</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_Number">IChattable.Number</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.QQ.ISendable.html#HuajiTech_QQ_ISendable_Send_System_String_">ISendable.Send(String)</a>
+      <a class="xref" href="HuajiTech.QQ.ISendee.html#HuajiTech_QQ_ISendee_Send_System_String_">ISendee.Send(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.QQ.INamed.html#HuajiTech_QQ_INamed_Name">INamed.Name</a>
     </div>
     <div>
       <span class="xref">System.IEquatable&lt;HuajiTech.QQ.IChattable&gt;.Equals(HuajiTech.QQ.IChattable)</span>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.QQ.IUserInfo.html#HuajiTech_QQ_IUserInfo_Nickname">IUserInfo.Nickname</a>
+      <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_IsRequested">IRequestable.IsRequested</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_HasRequested">IRequestable.HasRequested</a>
+      <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_IsRequestedSuccessfully">IRequestable.IsRequestedSuccessfully</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_Request">IRequestable.Request()</a>
@@ -123,17 +126,17 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.QQ.dll</h6>
   <h5 id="HuajiTech_QQ_IFriend_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IFriend : IUser, IChattable, ISendable, IEquatable&lt;IChattable&gt;, IUserInfo, IRequestable, IRefreshable, IAliased</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IFriend : IUser, IChattable, ISendee, INamed, IEquatable&lt;IChattable&gt;, IRequestable, IRefreshable, IAliased</code></pre>
   </div>
   <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
   <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_QQ_IUser_">Extensions.At(IUser)</a>
   </div>
   <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_">Extensions.Send(ISendable, ComplexMessage)</a>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendee_HuajiTech_CoolQ_Messaging_ComplexMessage_">Extensions.Send(ISendee, ComplexMessage)</a>
   </div>
   <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_">Extensions.Send(ISendable, MessageElement)</a>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendee_HuajiTech_CoolQ_Messaging_MessageElement_">Extensions.Send(ISendee, MessageElement)</a>
   </div>
   <div>
       <a class="xref" href="HuajiTech.QQ.PluginContextExtensions.html#HuajiTech_QQ_PluginContextExtensions_AsUser_HuajiTech_QQ_IUser_HuajiTech_QQ_PluginContext_">PluginContextExtensions.AsUser(IUser, PluginContext)</a>

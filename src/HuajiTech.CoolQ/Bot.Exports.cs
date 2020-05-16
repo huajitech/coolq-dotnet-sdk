@@ -1,4 +1,5 @@
 using Autofac;
+using Autofac.Util;
 using HuajiTech.CoolQ.Events;
 using HuajiTech.QQ;
 using HuajiTech.UnmanagedExports;
@@ -81,18 +82,20 @@ namespace HuajiTech.CoolQ
 
         private static void RegisterPlugins(ContainerBuilder builder)
         {
-            var executingAssembly = Assembly.GetExecutingAssembly();
+            var assembly = Assembly.GetExecutingAssembly();
 
-            var defaultLoadStage = ((AppLifecycle?)executingAssembly
-                .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? AppLifecycle.Enabled;
+            var defaultLoadStage = ((AppLifecycle?)assembly
+                .GetCustomAttribute<DefaultPluginLoadStageAttribute>()?.LoadStage) ?? AppLifecycle.Enabled;
 
-            var types = executingAssembly.GetTypes()
+            var attributes = assembly.GetCustomAttributes<PluginLoadStageAttribute>();
+
+            var types = assembly.GetLoadableTypes()
                 .Where(type => !type.IsInterface && !type.IsAbstract && typeof(IPlugin).IsAssignableFrom(type));
 
             foreach (var type in types)
             {
-                var loadStage = ((AppLifecycle?)type
-                    .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? defaultLoadStage;
+                var loadStage = ((AppLifecycle?)attributes
+                    .FirstOrDefault(attr => attr.Type == type)?.LoadStage) ?? defaultLoadStage;
 
                 builder
                     .RegisterType(type)

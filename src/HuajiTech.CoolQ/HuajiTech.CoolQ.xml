@@ -26,6 +26,23 @@
             在酷Q返回了意料之外的值时引发的异常。
             </summary>
         </member>
+        <member name="T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute">
+            <summary>
+            指定缺省插件加载阶段。
+            此类不能被继承。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.#ctor(System.Int32)">
+            <summary>
+            以指定的加载阶段初始化一个 <see cref="T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute"/> 类的新实例。
+            </summary>
+            <param name="loadStage">插件加载阶段，与 <see cref="T:HuajiTech.CoolQ.AppLifecycle"/> 枚举对应。</param>
+        </member>
+        <member name="P:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute"/> 对象的插件加载阶段。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.AppLifecycle">
             <summary>
             指定应用生命周期。
@@ -106,12 +123,12 @@
             定义扩展方法。
             </summary>
         </member>
-        <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)">
+        <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IContentfulMessage)">
             <summary>
-            将 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.QQ.IMessage"/> 对象解码为只读字典。
+            将 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象解码为只读字典。
             </summary>
             <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 对象。</param>
-            <returns>与 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 等效的只读字典。</returns>
+            <returns>与 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 等效的只读字典。</returns>
             <exception cref="T:System.IO.InvalidDataException"><paramref name="message"/> 不合法。</exception>
         </member>
         <member name="T:HuajiTech.CoolQ.Messaging.Anonymous">
@@ -616,13 +633,13 @@
             <param name="target">At (@) 的目标。</param>
             <returns>目标为指定用户的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 类的新实例。</returns>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage,System.Boolean)">
+        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IContentfulMessage,System.Boolean)">
             <summary>
-            将 <see cref="T:HuajiTech.QQ.IMessage"/> 对象解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
+            将 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
             </summary>
-            <param name="message">一个 <see cref="T:HuajiTech.QQ.IMessage"/>对象，该 <see cref="T:HuajiTech.QQ.IMessage"/> 对象的 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
+            <param name="message">一个 <see cref="T:HuajiTech.QQ.IContentfulMessage"/>对象，该 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象的 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
             <param name="useEmojiCQCode">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
-            <returns>与 <see cref="P:HuajiTech.QQ.IMessage.Content"/> 等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
+            <returns>与 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">
             <summary>
@@ -644,26 +661,26 @@
             </returns>
             <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)">
+        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.ComplexMessage)">
             <summary>
             向指定聊天发送 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>。
             </summary>
-            <param name="sendable">目标可发送对象。</param>
+            <param name="sendee">目标可被发送对象。</param>
             <param name="message">要发送的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</param>
             <returns>一个 <see cref="T:HuajiTech.CoolQ.Message"/> 对象，表示已发送的消息。</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="sendee"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="F:System.String.Empty"/>。</exception>
             <exception cref="T:HuajiTech.CoolQ.CoolQException">酷Q返回了指示操作失败的值。</exception>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)">
+        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.MessageElement)">
             <summary>
             向指定聊天发送 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/>。
             </summary>
-            <param name="sendable">目标可发送对象。</param>
+            <param name="sendee">目标可发送对象。</param>
             <param name="element">要发送的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。</param>
             <returns>一个 <see cref="T:HuajiTech.CoolQ.Message"/> 对象，表示已发送的消息。</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="sendable"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="sendee"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="F:System.String.Empty"/>。</exception>
             <exception cref="T:HuajiTech.CoolQ.CoolQException">酷Q返回了指示发送失败的值。</exception>
@@ -893,17 +910,6 @@
             此类不能被继承。
             </summary>
         </member>
-        <member name="M:HuajiTech.CoolQ.PluginLoadStageAttribute.#ctor(System.Int32)">
-            <summary>
-            以指定的加载阶段初始化一个 <see cref="T:HuajiTech.CoolQ.PluginLoadStageAttribute"/> 类的新实例。
-            </summary>
-            <param name="loadStage">插件加载阶段，与 <see cref="T:HuajiTech.CoolQ.AppLifecycle"/> 枚举对应。</param>
-        </member>
-        <member name="P:HuajiTech.CoolQ.PluginLoadStageAttribute.LoadStage">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.PluginLoadStageAttribute"/> 对象的插件加载时机。
-            </summary>
-        </member>
         <member name="T:HuajiTech.CoolQ.Resources">
             <summary>
               一个强类型的资源类，用于查找本地化的字符串等。
@@ -957,7 +963,7 @@
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.NullReturnValue">
             <summary>
-              查找类似 酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。 的本地化字符串。
+              查找类似 酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing）。查看酷Q中的日志以获取详细信息。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Resources.PluginLoadMessage">

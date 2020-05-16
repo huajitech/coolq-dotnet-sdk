@@ -12,16 +12,24 @@
 
 通常情况下，插件类应以 @"HuajiTech.QQ.Plugin" 类作为基类。该类实现了 @"HuajiTech.QQ.IPlugin" 接口，并且提供了更易用的 API。
 
-可通过 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性指定插件类的加载时机。若应用于程序集，则指定该项的缺省值。
+可通过 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性指定插件类的加载阶段。
 
 ```csharp
-[PluginLoadStage((int)AppLifecycle.Initializing)]
-class MyPlugin : Plugin
-{v
-}
+[assembly: PluginLoadStage(typeof(MyPlugin), (int)AppLifecycle.Initializing)]
 ```
 
-若在 @"HuajiTech.CoolQ.AppLifecycle.Enabled" 阶段加载，允许在构造函数内**调用 API**或**长时间阻塞线程**，并且可以显示引发的异常的详细信息。**必须**在 `app.json` 中向酷Q**注册应用启用事件**才能在 Enabled 阶段加载。
+使用 @"HuajiTech.CoolQ.DefaultPluginLoadStageAttribute" 特性指定在未指定 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性时的缺省值。
+@"HuajiTech.CoolQ.DefaultPluginLoadStageAttribute" 特性不可重复。
+
+```csharp
+[assembly: DefaultPluginLoadStage((int)AppLifecycle.Enabled)]
+```
+
+> [!NOTE]
+> 建议将 AppID 和插件加载阶段的设置项放置在 `Properties\AppInfo.cs` 内，但这不是强制的。
+
+若在 @"HuajiTech.CoolQ.AppLifecycle.Enabled" 阶段加载，允许在构造函数内**调用 API**或**长时间阻塞线程**，并且可以显示引发的异常的详细信息。
+**必须**在 `app.json` 中向酷Q**注册应用启用事件**才能在 Enabled 阶段加载。
 
 通过将加载阶段设置为 @"HuajiTech.CoolQ.AppLifecycle.NotLoaded" (`0`)，可以禁止插件类的加载。
 

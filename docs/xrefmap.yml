@@ -274,18 +274,50 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.CoolQException.CoolQException
   nameWithType: CoolQException.CoolQException
+- uid: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute
+  name: DefaultPluginLoadStageAttribute
+  href: api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html
+  commentId: T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute
+  fullName: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute
+  nameWithType: DefaultPluginLoadStageAttribute
+- uid: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.#ctor(System.Int32)
+  name: DefaultPluginLoadStageAttribute(Int32)
+  href: api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html#HuajiTech_CoolQ_DefaultPluginLoadStageAttribute__ctor_System_Int32_
+  commentId: M:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.#ctor(System.Int32)
+  fullName: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.DefaultPluginLoadStageAttribute(System.Int32)
+  nameWithType: DefaultPluginLoadStageAttribute.DefaultPluginLoadStageAttribute(Int32)
+- uid: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.#ctor*
+  name: DefaultPluginLoadStageAttribute
+  href: api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html#HuajiTech_CoolQ_DefaultPluginLoadStageAttribute__ctor_
+  commentId: Overload:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.DefaultPluginLoadStageAttribute
+  nameWithType: DefaultPluginLoadStageAttribute.DefaultPluginLoadStageAttribute
+- uid: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage
+  name: LoadStage
+  href: api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html#HuajiTech_CoolQ_DefaultPluginLoadStageAttribute_LoadStage
+  commentId: P:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage
+  fullName: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage
+  nameWithType: DefaultPluginLoadStageAttribute.LoadStage
+- uid: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage*
+  name: LoadStage
+  href: api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html#HuajiTech_CoolQ_DefaultPluginLoadStageAttribute_LoadStage_
+  commentId: Overload:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage
+  nameWithType: DefaultPluginLoadStageAttribute.LoadStage
 - uid: HuajiTech.CoolQ.Extensions
   name: Extensions
   href: api/HuajiTech.CoolQ.Extensions.html
   commentId: T:HuajiTech.CoolQ.Extensions
   fullName: HuajiTech.CoolQ.Extensions
   nameWithType: Extensions
-- uid: HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)
-  name: RegexDecode(IMessage)
-  href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_QQ_IMessage_
-  commentId: M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)
-  fullName: HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)
-  nameWithType: Extensions.RegexDecode(IMessage)
+- uid: HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IContentfulMessage)
+  name: RegexDecode(IContentfulMessage)
+  href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_QQ_IContentfulMessage_
+  commentId: M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IContentfulMessage)
+  fullName: HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IContentfulMessage)
+  nameWithType: Extensions.RegexDecode(IContentfulMessage)
 - uid: HuajiTech.CoolQ.Extensions.RegexDecode*
   name: RegexDecode
   href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_
@@ -1765,12 +1797,12 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Extensions.At
   nameWithType: Extensions.At
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage,System.Boolean)
-  name: Parse(IMessage, Boolean)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_QQ_IMessage_System_Boolean_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage,System.Boolean)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage, System.Boolean)
-  nameWithType: Extensions.Parse(IMessage, Boolean)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IContentfulMessage,System.Boolean)
+  name: Parse(IContentfulMessage, Boolean)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_QQ_IContentfulMessage_System_Boolean_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IContentfulMessage,System.Boolean)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IContentfulMessage, System.Boolean)
+  nameWithType: Extensions.Parse(IContentfulMessage, Boolean)
 - uid: HuajiTech.CoolQ.Messaging.Extensions.Parse*
   name: Parse
   href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_
@@ -1778,18 +1810,18 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Extensions.Parse
   nameWithType: Extensions.Parse
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  name: Send(ISendable, ComplexMessage)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_ComplexMessage_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.ComplexMessage)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.ComplexMessage)
-  nameWithType: Extensions.Send(ISendable, ComplexMessage)
-- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
-  name: Send(ISendable, MessageElement)
-  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendable_HuajiTech_CoolQ_Messaging_MessageElement_
-  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable,HuajiTech.CoolQ.Messaging.MessageElement)
-  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendable, HuajiTech.CoolQ.Messaging.MessageElement)
-  nameWithType: Extensions.Send(ISendable, MessageElement)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  name: Send(ISendee, ComplexMessage)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendee_HuajiTech_CoolQ_Messaging_ComplexMessage_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.ComplexMessage)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee, HuajiTech.CoolQ.Messaging.ComplexMessage)
+  nameWithType: Extensions.Send(ISendee, ComplexMessage)
+- uid: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.MessageElement)
+  name: Send(ISendee, MessageElement)
+  href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_HuajiTech_QQ_ISendee_HuajiTech_CoolQ_Messaging_MessageElement_
+  commentId: M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.MessageElement)
+  fullName: HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee, HuajiTech.CoolQ.Messaging.MessageElement)
+  nameWithType: Extensions.Send(ISendee, MessageElement)
 - uid: HuajiTech.CoolQ.Messaging.Extensions.Send*
   name: Send
   href: api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Send_
@@ -2615,12 +2647,12 @@ references:
   commentId: T:HuajiTech.CoolQ.PluginLoadStageAttribute
   fullName: HuajiTech.CoolQ.PluginLoadStageAttribute
   nameWithType: PluginLoadStageAttribute
-- uid: HuajiTech.CoolQ.PluginLoadStageAttribute.#ctor(System.Int32)
-  name: PluginLoadStageAttribute(Int32)
-  href: api/HuajiTech.CoolQ.PluginLoadStageAttribute.html#HuajiTech_CoolQ_PluginLoadStageAttribute__ctor_System_Int32_
-  commentId: M:HuajiTech.CoolQ.PluginLoadStageAttribute.#ctor(System.Int32)
-  fullName: HuajiTech.CoolQ.PluginLoadStageAttribute.PluginLoadStageAttribute(System.Int32)
-  nameWithType: PluginLoadStageAttribute.PluginLoadStageAttribute(Int32)
+- uid: HuajiTech.CoolQ.PluginLoadStageAttribute.#ctor(System.Type,System.Int32)
+  name: PluginLoadStageAttribute(Type, Int32)
+  href: api/HuajiTech.CoolQ.PluginLoadStageAttribute.html#HuajiTech_CoolQ_PluginLoadStageAttribute__ctor_System_Type_System_Int32_
+  commentId: M:HuajiTech.CoolQ.PluginLoadStageAttribute.#ctor(System.Type,System.Int32)
+  fullName: HuajiTech.CoolQ.PluginLoadStageAttribute.PluginLoadStageAttribute(System.Type, System.Int32)
+  nameWithType: PluginLoadStageAttribute.PluginLoadStageAttribute(Type, Int32)
 - uid: HuajiTech.CoolQ.PluginLoadStageAttribute.#ctor*
   name: PluginLoadStageAttribute
   href: api/HuajiTech.CoolQ.PluginLoadStageAttribute.html#HuajiTech_CoolQ_PluginLoadStageAttribute__ctor_
@@ -2641,6 +2673,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.PluginLoadStageAttribute.LoadStage
   nameWithType: PluginLoadStageAttribute.LoadStage
+- uid: HuajiTech.CoolQ.PluginLoadStageAttribute.Type
+  name: Type
+  href: api/HuajiTech.CoolQ.PluginLoadStageAttribute.html#HuajiTech_CoolQ_PluginLoadStageAttribute_Type
+  commentId: P:HuajiTech.CoolQ.PluginLoadStageAttribute.Type
+  fullName: HuajiTech.CoolQ.PluginLoadStageAttribute.Type
+  nameWithType: PluginLoadStageAttribute.Type
+- uid: HuajiTech.CoolQ.PluginLoadStageAttribute.Type*
+  name: Type
+  href: api/HuajiTech.CoolQ.PluginLoadStageAttribute.html#HuajiTech_CoolQ_PluginLoadStageAttribute_Type_
+  commentId: Overload:HuajiTech.CoolQ.PluginLoadStageAttribute.Type
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.PluginLoadStageAttribute.Type
+  nameWithType: PluginLoadStageAttribute.Type
 - uid: HuajiTech.CoolQ.Status
   name: Status
   href: api/HuajiTech.CoolQ.Status.html
@@ -2973,6 +3018,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.CurrentPluginContext.Member
   nameWithType: CurrentPluginContext.Member
+- uid: HuajiTech.QQ.CurrentPluginContext.Message(System.Int64)
+  name: Message(Int64)
+  href: api/HuajiTech.QQ.CurrentPluginContext.html#HuajiTech_QQ_CurrentPluginContext_Message_System_Int64_
+  commentId: M:HuajiTech.QQ.CurrentPluginContext.Message(System.Int64)
+  fullName: HuajiTech.QQ.CurrentPluginContext.Message(System.Int64)
+  nameWithType: CurrentPluginContext.Message(Int64)
+- uid: HuajiTech.QQ.CurrentPluginContext.Message*
+  name: Message
+  href: api/HuajiTech.QQ.CurrentPluginContext.html#HuajiTech_QQ_CurrentPluginContext_Message_
+  commentId: Overload:HuajiTech.QQ.CurrentPluginContext.Message
+  isSpec: "True"
+  fullName: HuajiTech.QQ.CurrentPluginContext.Message
+  nameWithType: CurrentPluginContext.Message
 - uid: HuajiTech.QQ.CurrentPluginContext.User(System.Int64)
   name: User(Int64)
   href: api/HuajiTech.QQ.CurrentPluginContext.html#HuajiTech_QQ_CurrentPluginContext_User_System_Int64_
@@ -3046,12 +3104,12 @@ references:
   commentId: T:HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs
   fullName: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs
   nameWithType: AnonymousMessageReceivedEventArgs
-- uid: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.#ctor(HuajiTech.QQ.IMessage,HuajiTech.QQ.IGroup,HuajiTech.QQ.IAnonymousMember)
-  name: AnonymousMessageReceivedEventArgs(IMessage, IGroup, IAnonymousMember)
-  href: api/HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.html#HuajiTech_QQ_Events_AnonymousMessageReceivedEventArgs__ctor_HuajiTech_QQ_IMessage_HuajiTech_QQ_IGroup_HuajiTech_QQ_IAnonymousMember_
-  commentId: M:HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.#ctor(HuajiTech.QQ.IMessage,HuajiTech.QQ.IGroup,HuajiTech.QQ.IAnonymousMember)
-  fullName: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.AnonymousMessageReceivedEventArgs(HuajiTech.QQ.IMessage, HuajiTech.QQ.IGroup, HuajiTech.QQ.IAnonymousMember)
-  nameWithType: AnonymousMessageReceivedEventArgs.AnonymousMessageReceivedEventArgs(IMessage, IGroup, IAnonymousMember)
+- uid: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.#ctor(HuajiTech.QQ.IContentfulMessage,HuajiTech.QQ.IGroup,HuajiTech.QQ.IAnonymousMember)
+  name: AnonymousMessageReceivedEventArgs(IContentfulMessage, IGroup, IAnonymousMember)
+  href: api/HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.html#HuajiTech_QQ_Events_AnonymousMessageReceivedEventArgs__ctor_HuajiTech_QQ_IContentfulMessage_HuajiTech_QQ_IGroup_HuajiTech_QQ_IAnonymousMember_
+  commentId: M:HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.#ctor(HuajiTech.QQ.IContentfulMessage,HuajiTech.QQ.IGroup,HuajiTech.QQ.IAnonymousMember)
+  fullName: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.AnonymousMessageReceivedEventArgs(HuajiTech.QQ.IContentfulMessage, HuajiTech.QQ.IGroup, HuajiTech.QQ.IAnonymousMember)
+  nameWithType: AnonymousMessageReceivedEventArgs.AnonymousMessageReceivedEventArgs(IContentfulMessage, IGroup, IAnonymousMember)
 - uid: HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.#ctor*
   name: AnonymousMessageReceivedEventArgs
   href: api/HuajiTech.QQ.Events.AnonymousMessageReceivedEventArgs.html#HuajiTech_QQ_Events_AnonymousMessageReceivedEventArgs__ctor_
@@ -3778,12 +3836,12 @@ references:
   commentId: T:HuajiTech.QQ.Events.MessageReceivedEventArgs
   fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs
   nameWithType: MessageReceivedEventArgs
-- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor(HuajiTech.QQ.IMessage,HuajiTech.QQ.IChattable,HuajiTech.QQ.IUser)
-  name: MessageReceivedEventArgs(IMessage, IChattable, IUser)
-  href: api/HuajiTech.QQ.Events.MessageReceivedEventArgs.html#HuajiTech_QQ_Events_MessageReceivedEventArgs__ctor_HuajiTech_QQ_IMessage_HuajiTech_QQ_IChattable_HuajiTech_QQ_IUser_
-  commentId: M:HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor(HuajiTech.QQ.IMessage,HuajiTech.QQ.IChattable,HuajiTech.QQ.IUser)
-  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.MessageReceivedEventArgs(HuajiTech.QQ.IMessage, HuajiTech.QQ.IChattable, HuajiTech.QQ.IUser)
-  nameWithType: MessageReceivedEventArgs.MessageReceivedEventArgs(IMessage, IChattable, IUser)
+- uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor(HuajiTech.QQ.IContentfulMessage,HuajiTech.QQ.IChattable,HuajiTech.QQ.IUser)
+  name: MessageReceivedEventArgs(IContentfulMessage, IChattable, IUser)
+  href: api/HuajiTech.QQ.Events.MessageReceivedEventArgs.html#HuajiTech_QQ_Events_MessageReceivedEventArgs__ctor_HuajiTech_QQ_IContentfulMessage_HuajiTech_QQ_IChattable_HuajiTech_QQ_IUser_
+  commentId: M:HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor(HuajiTech.QQ.IContentfulMessage,HuajiTech.QQ.IChattable,HuajiTech.QQ.IUser)
+  fullName: HuajiTech.QQ.Events.MessageReceivedEventArgs.MessageReceivedEventArgs(HuajiTech.QQ.IContentfulMessage, HuajiTech.QQ.IChattable, HuajiTech.QQ.IUser)
+  nameWithType: MessageReceivedEventArgs.MessageReceivedEventArgs(IContentfulMessage, IChattable, IUser)
 - uid: HuajiTech.QQ.Events.MessageReceivedEventArgs.#ctor*
   name: MessageReceivedEventArgs
   href: api/HuajiTech.QQ.Events.MessageReceivedEventArgs.html#HuajiTech_QQ_Events_MessageReceivedEventArgs__ctor_
@@ -4027,25 +4085,38 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.IAnonymousMember.Id
   nameWithType: IAnonymousMember.Id
-- uid: HuajiTech.QQ.IAnonymousMember.Name
-  name: Name
-  href: api/HuajiTech.QQ.IAnonymousMember.html#HuajiTech_QQ_IAnonymousMember_Name
-  commentId: P:HuajiTech.QQ.IAnonymousMember.Name
-  fullName: HuajiTech.QQ.IAnonymousMember.Name
-  nameWithType: IAnonymousMember.Name
-- uid: HuajiTech.QQ.IAnonymousMember.Name*
-  name: Name
-  href: api/HuajiTech.QQ.IAnonymousMember.html#HuajiTech_QQ_IAnonymousMember_Name_
-  commentId: Overload:HuajiTech.QQ.IAnonymousMember.Name
-  isSpec: "True"
-  fullName: HuajiTech.QQ.IAnonymousMember.Name
-  nameWithType: IAnonymousMember.Name
 - uid: HuajiTech.QQ.IBot
   name: IBot
   href: api/HuajiTech.QQ.IBot.html
   commentId: T:HuajiTech.QQ.IBot
   fullName: HuajiTech.QQ.IBot
   nameWithType: IBot
+- uid: HuajiTech.QQ.IBot.CanSendImage
+  name: CanSendImage
+  href: api/HuajiTech.QQ.IBot.html#HuajiTech_QQ_IBot_CanSendImage
+  commentId: P:HuajiTech.QQ.IBot.CanSendImage
+  fullName: HuajiTech.QQ.IBot.CanSendImage
+  nameWithType: IBot.CanSendImage
+- uid: HuajiTech.QQ.IBot.CanSendImage*
+  name: CanSendImage
+  href: api/HuajiTech.QQ.IBot.html#HuajiTech_QQ_IBot_CanSendImage_
+  commentId: Overload:HuajiTech.QQ.IBot.CanSendImage
+  isSpec: "True"
+  fullName: HuajiTech.QQ.IBot.CanSendImage
+  nameWithType: IBot.CanSendImage
+- uid: HuajiTech.QQ.IBot.CanSendRecord
+  name: CanSendRecord
+  href: api/HuajiTech.QQ.IBot.html#HuajiTech_QQ_IBot_CanSendRecord
+  commentId: P:HuajiTech.QQ.IBot.CanSendRecord
+  fullName: HuajiTech.QQ.IBot.CanSendRecord
+  nameWithType: IBot.CanSendRecord
+- uid: HuajiTech.QQ.IBot.CanSendRecord*
+  name: CanSendRecord
+  href: api/HuajiTech.QQ.IBot.html#HuajiTech_QQ_IBot_CanSendRecord_
+  commentId: Overload:HuajiTech.QQ.IBot.CanSendRecord
+  isSpec: "True"
+  fullName: HuajiTech.QQ.IBot.CanSendRecord
+  nameWithType: IBot.CanSendRecord
 - uid: HuajiTech.QQ.IBot.CurrentUser
   name: CurrentUser
   href: api/HuajiTech.QQ.IBot.html#HuajiTech_QQ_IBot_CurrentUser
@@ -4111,57 +4182,12 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.IBot.Logger
   nameWithType: IBot.Logger
-- uid: HuajiTech.QQ.IBotInfo
-  name: IBotInfo
-  href: api/HuajiTech.QQ.IBotInfo.html
-  commentId: T:HuajiTech.QQ.IBotInfo
-  fullName: HuajiTech.QQ.IBotInfo
-  nameWithType: IBotInfo
-- uid: HuajiTech.QQ.IBotInfo.CanSendImage
-  name: CanSendImage
-  href: api/HuajiTech.QQ.IBotInfo.html#HuajiTech_QQ_IBotInfo_CanSendImage
-  commentId: P:HuajiTech.QQ.IBotInfo.CanSendImage
-  fullName: HuajiTech.QQ.IBotInfo.CanSendImage
-  nameWithType: IBotInfo.CanSendImage
-- uid: HuajiTech.QQ.IBotInfo.CanSendImage*
-  name: CanSendImage
-  href: api/HuajiTech.QQ.IBotInfo.html#HuajiTech_QQ_IBotInfo_CanSendImage_
-  commentId: Overload:HuajiTech.QQ.IBotInfo.CanSendImage
-  isSpec: "True"
-  fullName: HuajiTech.QQ.IBotInfo.CanSendImage
-  nameWithType: IBotInfo.CanSendImage
-- uid: HuajiTech.QQ.IBotInfo.CanSendRecord
-  name: CanSendRecord
-  href: api/HuajiTech.QQ.IBotInfo.html#HuajiTech_QQ_IBotInfo_CanSendRecord
-  commentId: P:HuajiTech.QQ.IBotInfo.CanSendRecord
-  fullName: HuajiTech.QQ.IBotInfo.CanSendRecord
-  nameWithType: IBotInfo.CanSendRecord
-- uid: HuajiTech.QQ.IBotInfo.CanSendRecord*
-  name: CanSendRecord
-  href: api/HuajiTech.QQ.IBotInfo.html#HuajiTech_QQ_IBotInfo_CanSendRecord_
-  commentId: Overload:HuajiTech.QQ.IBotInfo.CanSendRecord
-  isSpec: "True"
-  fullName: HuajiTech.QQ.IBotInfo.CanSendRecord
-  nameWithType: IBotInfo.CanSendRecord
 - uid: HuajiTech.QQ.IChattable
   name: IChattable
   href: api/HuajiTech.QQ.IChattable.html
   commentId: T:HuajiTech.QQ.IChattable
   fullName: HuajiTech.QQ.IChattable
   nameWithType: IChattable
-- uid: HuajiTech.QQ.IChattable.DisplayName
-  name: DisplayName
-  href: api/HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_DisplayName
-  commentId: P:HuajiTech.QQ.IChattable.DisplayName
-  fullName: HuajiTech.QQ.IChattable.DisplayName
-  nameWithType: IChattable.DisplayName
-- uid: HuajiTech.QQ.IChattable.DisplayName*
-  name: DisplayName
-  href: api/HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_DisplayName_
-  commentId: Overload:HuajiTech.QQ.IChattable.DisplayName
-  isSpec: "True"
-  fullName: HuajiTech.QQ.IChattable.DisplayName
-  nameWithType: IChattable.DisplayName
 - uid: HuajiTech.QQ.IChattable.Number
   name: Number
   href: api/HuajiTech.QQ.IChattable.html#HuajiTech_QQ_IChattable_Number
@@ -4175,6 +4201,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.IChattable.Number
   nameWithType: IChattable.Number
+- uid: HuajiTech.QQ.IContentfulMessage
+  name: IContentfulMessage
+  href: api/HuajiTech.QQ.IContentfulMessage.html
+  commentId: T:HuajiTech.QQ.IContentfulMessage
+  fullName: HuajiTech.QQ.IContentfulMessage
+  nameWithType: IContentfulMessage
+- uid: HuajiTech.QQ.IContentfulMessage.Content
+  name: Content
+  href: api/HuajiTech.QQ.IContentfulMessage.html#HuajiTech_QQ_IContentfulMessage_Content
+  commentId: P:HuajiTech.QQ.IContentfulMessage.Content
+  fullName: HuajiTech.QQ.IContentfulMessage.Content
+  nameWithType: IContentfulMessage.Content
+- uid: HuajiTech.QQ.IContentfulMessage.Content*
+  name: Content
+  href: api/HuajiTech.QQ.IContentfulMessage.html#HuajiTech_QQ_IContentfulMessage_Content_
+  commentId: Overload:HuajiTech.QQ.IContentfulMessage.Content
+  isSpec: "True"
+  fullName: HuajiTech.QQ.IContentfulMessage.Content
+  nameWithType: IContentfulMessage.Content
 - uid: HuajiTech.QQ.ICurrentUser
   name: ICurrentUser
   href: api/HuajiTech.QQ.ICurrentUser.html
@@ -4809,19 +4854,6 @@ references:
   commentId: T:HuajiTech.QQ.IMessage
   fullName: HuajiTech.QQ.IMessage
   nameWithType: IMessage
-- uid: HuajiTech.QQ.IMessage.Content
-  name: Content
-  href: api/HuajiTech.QQ.IMessage.html#HuajiTech_QQ_IMessage_Content
-  commentId: P:HuajiTech.QQ.IMessage.Content
-  fullName: HuajiTech.QQ.IMessage.Content
-  nameWithType: IMessage.Content
-- uid: HuajiTech.QQ.IMessage.Content*
-  name: Content
-  href: api/HuajiTech.QQ.IMessage.html#HuajiTech_QQ_IMessage_Content_
-  commentId: Overload:HuajiTech.QQ.IMessage.Content
-  isSpec: "True"
-  fullName: HuajiTech.QQ.IMessage.Content
-  nameWithType: IMessage.Content
 - uid: HuajiTech.QQ.IMessage.Id
   name: Id
   href: api/HuajiTech.QQ.IMessage.html#HuajiTech_QQ_IMessage_Id
@@ -4880,6 +4912,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.IMuteable.Unmute
   nameWithType: IMuteable.Unmute
+- uid: HuajiTech.QQ.INamed
+  name: INamed
+  href: api/HuajiTech.QQ.INamed.html
+  commentId: T:HuajiTech.QQ.INamed
+  fullName: HuajiTech.QQ.INamed
+  nameWithType: INamed
+- uid: HuajiTech.QQ.INamed.Name
+  name: Name
+  href: api/HuajiTech.QQ.INamed.html#HuajiTech_QQ_INamed_Name
+  commentId: P:HuajiTech.QQ.INamed.Name
+  fullName: HuajiTech.QQ.INamed.Name
+  nameWithType: INamed.Name
+- uid: HuajiTech.QQ.INamed.Name*
+  name: Name
+  href: api/HuajiTech.QQ.INamed.html#HuajiTech_QQ_INamed_Name_
+  commentId: Overload:HuajiTech.QQ.INamed.Name
+  isSpec: "True"
+  fullName: HuajiTech.QQ.INamed.Name
+  nameWithType: INamed.Name
 - uid: HuajiTech.QQ.IPlugin
   name: IPlugin
   href: api/HuajiTech.QQ.IPlugin.html
@@ -4956,19 +5007,32 @@ references:
   commentId: T:HuajiTech.QQ.IRequestable
   fullName: HuajiTech.QQ.IRequestable
   nameWithType: IRequestable
-- uid: HuajiTech.QQ.IRequestable.HasRequested
-  name: HasRequested
-  href: api/HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_HasRequested
-  commentId: P:HuajiTech.QQ.IRequestable.HasRequested
-  fullName: HuajiTech.QQ.IRequestable.HasRequested
-  nameWithType: IRequestable.HasRequested
-- uid: HuajiTech.QQ.IRequestable.HasRequested*
-  name: HasRequested
-  href: api/HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_HasRequested_
-  commentId: Overload:HuajiTech.QQ.IRequestable.HasRequested
+- uid: HuajiTech.QQ.IRequestable.IsRequested
+  name: IsRequested
+  href: api/HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_IsRequested
+  commentId: P:HuajiTech.QQ.IRequestable.IsRequested
+  fullName: HuajiTech.QQ.IRequestable.IsRequested
+  nameWithType: IRequestable.IsRequested
+- uid: HuajiTech.QQ.IRequestable.IsRequested*
+  name: IsRequested
+  href: api/HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_IsRequested_
+  commentId: Overload:HuajiTech.QQ.IRequestable.IsRequested
   isSpec: "True"
-  fullName: HuajiTech.QQ.IRequestable.HasRequested
-  nameWithType: IRequestable.HasRequested
+  fullName: HuajiTech.QQ.IRequestable.IsRequested
+  nameWithType: IRequestable.IsRequested
+- uid: HuajiTech.QQ.IRequestable.IsRequestedSuccessfully
+  name: IsRequestedSuccessfully
+  href: api/HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_IsRequestedSuccessfully
+  commentId: P:HuajiTech.QQ.IRequestable.IsRequestedSuccessfully
+  fullName: HuajiTech.QQ.IRequestable.IsRequestedSuccessfully
+  nameWithType: IRequestable.IsRequestedSuccessfully
+- uid: HuajiTech.QQ.IRequestable.IsRequestedSuccessfully*
+  name: IsRequestedSuccessfully
+  href: api/HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_IsRequestedSuccessfully_
+  commentId: Overload:HuajiTech.QQ.IRequestable.IsRequestedSuccessfully
+  isSpec: "True"
+  fullName: HuajiTech.QQ.IRequestable.IsRequestedSuccessfully
+  nameWithType: IRequestable.IsRequestedSuccessfully
 - uid: HuajiTech.QQ.IRequestable.Request
   name: Request()
   href: api/HuajiTech.QQ.IRequestable.html#HuajiTech_QQ_IRequestable_Request
@@ -4982,25 +5046,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.IRequestable.Request
   nameWithType: IRequestable.Request
-- uid: HuajiTech.QQ.ISendable
-  name: ISendable
-  href: api/HuajiTech.QQ.ISendable.html
-  commentId: T:HuajiTech.QQ.ISendable
-  fullName: HuajiTech.QQ.ISendable
-  nameWithType: ISendable
-- uid: HuajiTech.QQ.ISendable.Send(System.String)
+- uid: HuajiTech.QQ.ISendee
+  name: ISendee
+  href: api/HuajiTech.QQ.ISendee.html
+  commentId: T:HuajiTech.QQ.ISendee
+  fullName: HuajiTech.QQ.ISendee
+  nameWithType: ISendee
+- uid: HuajiTech.QQ.ISendee.Send(System.String)
   name: Send(String)
-  href: api/HuajiTech.QQ.ISendable.html#HuajiTech_QQ_ISendable_Send_System_String_
-  commentId: M:HuajiTech.QQ.ISendable.Send(System.String)
-  fullName: HuajiTech.QQ.ISendable.Send(System.String)
-  nameWithType: ISendable.Send(String)
-- uid: HuajiTech.QQ.ISendable.Send*
+  href: api/HuajiTech.QQ.ISendee.html#HuajiTech_QQ_ISendee_Send_System_String_
+  commentId: M:HuajiTech.QQ.ISendee.Send(System.String)
+  fullName: HuajiTech.QQ.ISendee.Send(System.String)
+  nameWithType: ISendee.Send(String)
+- uid: HuajiTech.QQ.ISendee.Send*
   name: Send
-  href: api/HuajiTech.QQ.ISendable.html#HuajiTech_QQ_ISendable_Send_
-  commentId: Overload:HuajiTech.QQ.ISendable.Send
+  href: api/HuajiTech.QQ.ISendee.html#HuajiTech_QQ_ISendee_Send_
+  commentId: Overload:HuajiTech.QQ.ISendee.Send
   isSpec: "True"
-  fullName: HuajiTech.QQ.ISendable.Send
-  nameWithType: ISendable.Send
+  fullName: HuajiTech.QQ.ISendee.Send
+  nameWithType: ISendee.Send
 - uid: HuajiTech.QQ.ITimedMuteable
   name: ITimedMuteable
   href: api/HuajiTech.QQ.ITimedMuteable.html
@@ -5039,25 +5103,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.IUser.GiveThumbsUp
   nameWithType: IUser.GiveThumbsUp
-- uid: HuajiTech.QQ.IUserInfo
-  name: IUserInfo
-  href: api/HuajiTech.QQ.IUserInfo.html
-  commentId: T:HuajiTech.QQ.IUserInfo
-  fullName: HuajiTech.QQ.IUserInfo
-  nameWithType: IUserInfo
-- uid: HuajiTech.QQ.IUserInfo.Nickname
+- uid: HuajiTech.QQ.IUser.Nickname
   name: Nickname
-  href: api/HuajiTech.QQ.IUserInfo.html#HuajiTech_QQ_IUserInfo_Nickname
-  commentId: P:HuajiTech.QQ.IUserInfo.Nickname
-  fullName: HuajiTech.QQ.IUserInfo.Nickname
-  nameWithType: IUserInfo.Nickname
-- uid: HuajiTech.QQ.IUserInfo.Nickname*
+  href: api/HuajiTech.QQ.IUser.html#HuajiTech_QQ_IUser_Nickname
+  commentId: P:HuajiTech.QQ.IUser.Nickname
+  fullName: HuajiTech.QQ.IUser.Nickname
+  nameWithType: IUser.Nickname
+- uid: HuajiTech.QQ.IUser.Nickname*
   name: Nickname
-  href: api/HuajiTech.QQ.IUserInfo.html#HuajiTech_QQ_IUserInfo_Nickname_
-  commentId: Overload:HuajiTech.QQ.IUserInfo.Nickname
+  href: api/HuajiTech.QQ.IUser.html#HuajiTech_QQ_IUser_Nickname_
+  commentId: Overload:HuajiTech.QQ.IUser.Nickname
   isSpec: "True"
-  fullName: HuajiTech.QQ.IUserInfo.Nickname
-  nameWithType: IUserInfo.Nickname
+  fullName: HuajiTech.QQ.IUser.Nickname
+  nameWithType: IUser.Nickname
 - uid: HuajiTech.QQ.Logger
   name: Logger
   href: api/HuajiTech.QQ.Logger.html
@@ -5441,6 +5499,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.Plugin.Member
   nameWithType: Plugin.Member
+- uid: HuajiTech.QQ.Plugin.Message(System.Int64)
+  name: Message(Int64)
+  href: api/HuajiTech.QQ.Plugin.html#HuajiTech_QQ_Plugin_Message_System_Int64_
+  commentId: M:HuajiTech.QQ.Plugin.Message(System.Int64)
+  fullName: HuajiTech.QQ.Plugin.Message(System.Int64)
+  nameWithType: Plugin.Message(Int64)
+- uid: HuajiTech.QQ.Plugin.Message*
+  name: Message
+  href: api/HuajiTech.QQ.Plugin.html#HuajiTech_QQ_Plugin_Message_
+  commentId: Overload:HuajiTech.QQ.Plugin.Message
+  isSpec: "True"
+  fullName: HuajiTech.QQ.Plugin.Message
+  nameWithType: Plugin.Message
 - uid: HuajiTech.QQ.Plugin.User(System.Int64)
   name: User(Int64)
   href: api/HuajiTech.QQ.Plugin.html#HuajiTech_QQ_Plugin_User_System_Int64_
@@ -5543,6 +5614,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.QQ.PluginContext.GetMember
   nameWithType: PluginContext.GetMember
+- uid: HuajiTech.QQ.PluginContext.GetMessage(System.Int64)
+  name: GetMessage(Int64)
+  href: api/HuajiTech.QQ.PluginContext.html#HuajiTech_QQ_PluginContext_GetMessage_System_Int64_
+  commentId: M:HuajiTech.QQ.PluginContext.GetMessage(System.Int64)
+  fullName: HuajiTech.QQ.PluginContext.GetMessage(System.Int64)
+  nameWithType: PluginContext.GetMessage(Int64)
+- uid: HuajiTech.QQ.PluginContext.GetMessage*
+  name: GetMessage
+  href: api/HuajiTech.QQ.PluginContext.html#HuajiTech_QQ_PluginContext_GetMessage_
+  commentId: Overload:HuajiTech.QQ.PluginContext.GetMessage
+  isSpec: "True"
+  fullName: HuajiTech.QQ.PluginContext.GetMessage
+  nameWithType: PluginContext.GetMessage
 - uid: HuajiTech.QQ.PluginContext.GetUser(System.Int64)
   name: GetUser(Int64)
   href: api/HuajiTech.QQ.PluginContext.html#HuajiTech_QQ_PluginContext_GetUser_System_Int64_

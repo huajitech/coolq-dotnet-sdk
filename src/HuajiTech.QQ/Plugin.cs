@@ -71,5 +71,11 @@
         /// </summary>
         /// <param name="number">号码。</param>
         protected IUser User(long number) => Context.GetUser(number);
+
+        /// <summary>
+        /// 创建指定 ID 的消息。
+        /// </summary>
+        /// <param name="id">ID。</param>
+        protected IMessage Message(long id) => Context.GetMessage(id);
     }
 }

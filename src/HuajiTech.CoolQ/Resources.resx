@@ -136,7 +136,7 @@
     <value>该字段不能为空或空白字符。</value>
   </data>
   <data name="NullReturnValue" xml:space="preserve">
-    <value>酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。</value>
+    <value>酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing）。查看酷Q中的日志以获取详细信息。</value>
   </data>
   <data name="PluginLoadMessage" xml:space="preserve">
     <value>已加载类型 '{0}'。</value>

@@ -11,7 +11,7 @@ if (e.Source is IFriend) { } // 好友消息。
 
 ## 使用 @"HuajiTech.CoolQ.Messaging.ComplexMessage"
 
-通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IMessage,System.Boolean)" 扩展方法解析消息。
+通过 @"HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IContentfulMessage,System.Boolean)" 扩展方法解析消息。
 
 ```csharp
 var message = e.Message.Parse();
@@ -56,7 +56,7 @@ if (message is (At at, Image image))
 
 ## 使用正则消息
 
-通过 @"HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IMessage)" 扩展方法解码正则消息。
+通过 @"HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IContentfulMessage)" 扩展方法解码正则消息。
 
 ```csharp
 var args = e.Message.RegexDecode();

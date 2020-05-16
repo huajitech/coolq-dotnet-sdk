@@ -78,5 +78,11 @@ namespace HuajiTech.QQ
         /// <param name="user">用户。</param>
         /// <param name="groupNumber">群号码。</param>
         public virtual IMember? GetMember(IUser user, long groupNumber) => GetMember(user, GetGroup(groupNumber));
+
+        /// <summary>
+        /// 获取指定 ID 的 <see cref="IMessage"/> 对象。
+        /// </summary>
+        /// <param name="id">消息 ID。</param>
+        public abstract IMessage GetMessage(long id);
     }
 }

@@ -4,24 +4,21 @@ namespace HuajiTech.CoolQ
 {
     internal class Message : IMessage
     {
-        public Message(long id, string content)
+        public Message(long id)
         {
             Id = id;
-            Content = content;
         }
 
         public long Id { get; }
 
-        public string Content { get; }
-
         public override bool Equals(object? obj) => Equals(obj as IMessage);
 
-        public override int GetHashCode() => Id.GetHashCode() ^ Content.GetHashCode();
+        public override int GetHashCode() => Id.GetHashCode();
 
-        public override string ToString() => Content;
+        public override string ToString() => $"Message({Id})";
 
         public bool Equals(IMessage? other) =>
-            base.Equals(other) || (other?.Id == Id && other.Content == Content);
+            base.Equals(other) || other?.Id == Id;
 
         public void Recall() =>
             NativeMethods.Message_Recall(Bot.Instance.AuthCode, Id).CheckError();

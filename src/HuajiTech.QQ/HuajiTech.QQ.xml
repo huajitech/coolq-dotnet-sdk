@@ -61,6 +61,12 @@
             </summary>
             <param name="number">号码。</param>
         </member>
+        <member name="M:HuajiTech.QQ.CurrentPluginContext.Message(System.Int64)">
+            <summary>
+            创建指定 ID 的消息。
+            </summary>
+            <param name="id">ID。</param>
+        </member>
         <member name="T:HuajiTech.QQ.CustomTitle">
             <summary>
             表示自定义头衔。
@@ -594,14 +600,19 @@
             获取当前 <see cref="T:HuajiTech.QQ.IAnonymousMember"/> 对象的所属群。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.IAnonymousMember.Name">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IAnonymousMember"/> 对象的名称。
-            </summary>
-        </member>
         <member name="T:HuajiTech.QQ.IBot">
             <summary>
             定义机器人。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBot.CanSendImage">
+            <summary>
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象是否可以发送图片。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IBot.CanSendRecord">
+            <summary>
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBot"/> 对象是否可以发送录音。
             </summary>
         </member>
         <member name="P:HuajiTech.QQ.IBot.CurrentUser">
@@ -632,34 +643,24 @@
             <param name="fileName">请求获取的录音的文件名。</param>
             <param name="fileFormat">请求获取的录音的格式。</param>
         </member>
-        <member name="T:HuajiTech.QQ.IBotInfo">
-            <summary>
-            定义机器人信息。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IBotInfo.CanSendImage">
-            <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBotInfo"/> 对象是否可以发送图片。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IBotInfo.CanSendRecord">
-            <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IBotInfo"/> 对象是否可以发送录音。
-            </summary>
-        </member>
         <member name="T:HuajiTech.QQ.IChattable">
             <summary>
             定义可聊天的对象。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.IChattable.DisplayName">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IChattable"/> 对象的显示名称。
-            </summary>
-        </member>
         <member name="P:HuajiTech.QQ.IChattable.Number">
             <summary>
             获取当前 <see cref="T:HuajiTech.QQ.IChattable"/> 对象的号码。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.QQ.IContentfulMessage">
+            <summary>
+            定义消息。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IContentfulMessage.Content">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象的内容。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.ICurrentUser">
@@ -984,19 +985,9 @@
             获取当前 <see cref="T:HuajiTech.QQ.IMemberInfo"/> 对象的角色。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.IMessage">
-            <summary>
-            定义消息。
-            </summary>
-        </member>
         <member name="P:HuajiTech.QQ.IMessage.Id">
             <summary>
             获取当前 <see cref="T:HuajiTech.QQ.IMessage"/> 对象的标识符。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IMessage.Content">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IMessage"/> 对象的内容。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IMessage.Recall">
@@ -1017,6 +1008,11 @@
         <member name="M:HuajiTech.QQ.IMuteable.Unmute">
             <summary>
             将当前 <see cref="T:HuajiTech.QQ.IMuteable"/> 对象解除禁言。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.INamed.Name">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.INamed"/> 对象的名称。
             </summary>
         </member>
         <member name="T:HuajiTech.QQ.IPlugin">
@@ -1059,9 +1055,14 @@
             定义可请求的对象。
             </summary>
         </member>
-        <member name="P:HuajiTech.QQ.IRequestable.HasRequested">
+        <member name="P:HuajiTech.QQ.IRequestable.IsRequested">
             <summary>
             获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IRequestable"/> 对象是否已请求。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.QQ.IRequestable.IsRequestedSuccessfully">
+            <summary>
+            获取一个值，指示当前 <see cref="T:HuajiTech.QQ.IRequestable"/> 对象是否已成功请求。
             </summary>
         </member>
         <member name="M:HuajiTech.QQ.IRequestable.Request">
@@ -1069,17 +1070,17 @@
             请求当前 <see cref="T:HuajiTech.QQ.IRequestable"/> 对象。
             </summary>
         </member>
-        <member name="T:HuajiTech.QQ.ISendable">
+        <member name="T:HuajiTech.QQ.ISendee">
             <summary>
             定义可发送消息的对象。
             </summary>
         </member>
-        <member name="M:HuajiTech.QQ.ISendable.Send(System.String)">
+        <member name="M:HuajiTech.QQ.ISendee.Send(System.String)">
             <summary>
-            向当前 <see cref="T:HuajiTech.QQ.ISendable"/> 对象发送指定的字符串。
+            向当前 <see cref="T:HuajiTech.QQ.ISendee"/> 对象发送指定的字符串。
             </summary>
             <param name="message">要发送的字符串。</param>
-            <returns>一个 <see cref="T:HuajiTech.QQ.IMessage"/> 对象，表示已发送的消息。</returns>
+            <returns>一个 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象，表示已发送的消息。</returns>
         </member>
         <member name="T:HuajiTech.QQ.ITimedMuteable">
             <summary>
@@ -1097,21 +1098,16 @@
             定义用户。
             </summary>
         </member>
+        <member name="P:HuajiTech.QQ.IUser.Nickname">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.QQ.IUser"/> 对象的昵称。
+            </summary>
+        </member>
         <member name="M:HuajiTech.QQ.IUser.GiveThumbsUp(System.Int32)">
             <summary>
             给予当前 <see cref="T:HuajiTech.QQ.IUser"/> 对象指定数量的赞。
             </summary>
             <param name="count">赞的数量。</param>
-        </member>
-        <member name="T:HuajiTech.QQ.IUserInfo">
-            <summary>
-            定义用户信息。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.QQ.IUserInfo.Nickname">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.QQ.IUser"/> 对象的昵称。
-            </summary>
         </member>
         <member name="T:HuajiTech.QQ.Logger">
             <summary>
@@ -1252,6 +1248,12 @@
             </summary>
             <param name="number">号码。</param>
         </member>
+        <member name="M:HuajiTech.QQ.Plugin.Message(System.Int64)">
+            <summary>
+            创建指定 ID 的消息。
+            </summary>
+            <param name="id">ID。</param>
+        </member>
         <member name="T:HuajiTech.QQ.PluginContext">
             <summary>
             表示插件上下文。
@@ -1314,6 +1316,12 @@
             </summary>
             <param name="user">用户。</param>
             <param name="groupNumber">群号码。</param>
+        </member>
+        <member name="M:HuajiTech.QQ.PluginContext.GetMessage(System.Int64)">
+            <summary>
+            获取指定 ID 的 <see cref="T:HuajiTech.QQ.IMessage"/> 对象。
+            </summary>
+            <param name="id">消息 ID。</param>
         </member>
         <member name="T:HuajiTech.QQ.PluginContextExtensions">
             <summary>

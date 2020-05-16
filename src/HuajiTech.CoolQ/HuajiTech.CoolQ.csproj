@@ -8,7 +8,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.pfx</AssemblyOriginatorKeyFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>0.2.2-alpha.2005.3</Version>
+    <Version>0.2.3-alpha.1</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>用于酷Q应用的 .NET SDK。</Description>

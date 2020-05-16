@@ -22,15 +22,15 @@ namespace HuajiTech.CoolQ
             _name = name;
         }
 
-        public override string DisplayName => Name ?? ToString();
+        public override string Name => _name ?? GetInfo().Name ?? ToString();
 
-        public bool HasRequested => !(_info is null);
+        public bool IsRequestedSuccessfully => !(_info is null);
+
+        public bool IsRequested { get; protected set; }
 
         public int MemberCapacity => GetInfo().MemberCapacity;
 
         public int MemberCount => GetInfo().MemberCount;
-
-        public string? Name => _name ?? GetInfo().Name;
 
         public void DisableAnonymous() =>
             NativeMethods.Group_SetIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
@@ -62,7 +62,7 @@ namespace HuajiTech.CoolQ
             GetInfo(true);
         }
 
-        public override IMessage Send(string message)
+        public override IContentfulMessage Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -71,7 +71,7 @@ namespace HuajiTech.CoolQ
 
             var id = NativeMethods.Group_Send(Bot.Instance.AuthCode, Number, message).CheckError();
 
-            return new Message(id, message);
+            return new ContentfulMessage(id, message);
         }
 
         public void Unmute() =>
@@ -79,20 +79,24 @@ namespace HuajiTech.CoolQ
 
         public override bool Equals(IChattable? other) => base.Equals(other) && other is Group;
 
-        private GroupInfo GetInfo(bool throwException = false, bool refresh = false)
+        private GroupInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (refresh || _info is null)
+            if (IsRequested && !requesting)
             {
-                try
-                {
-                    using var reader = new GroupInfoReader(
-                        NativeMethods.Group_GetInfo(Bot.Instance.AuthCode, Number, refresh).CheckError());
-                    _info = reader.Read();
-                }
-                catch (CoolQException) when (!throwException)
-                {
-                    return new GroupInfo();
-                }
+                return new GroupInfo();
+            }
+
+            IsRequested = true;
+
+            try
+            {
+                using var reader = new GroupInfoReader(
+                    NativeMethods.Group_GetInfo(Bot.Instance.AuthCode, Number, refresh).CheckError());
+                _info = reader.Read();
+            }
+            catch (CoolQException) when (!requesting)
+            {
+                return new GroupInfo();
             }
 
             return _info;

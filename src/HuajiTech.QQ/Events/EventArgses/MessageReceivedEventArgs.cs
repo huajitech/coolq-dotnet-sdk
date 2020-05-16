@@ -5,7 +5,7 @@ namespace HuajiTech.QQ.Events
     /// </summary>
     public class MessageReceivedEventArgs : RoutedEventArgs
     {
-        public MessageReceivedEventArgs(IMessage message, IChattable source, IUser sender)
+        public MessageReceivedEventArgs(IContentfulMessage message, IChattable source, IUser sender)
         {
             Message = message ?? throw new System.ArgumentNullException(nameof(message));
             Source = source ?? throw new System.ArgumentNullException(nameof(source));
@@ -15,7 +15,7 @@ namespace HuajiTech.QQ.Events
         /// <summary>
         /// 获取消息。
         /// </summary>
-        public IMessage Message { get; }
+        public IContentfulMessage Message { get; }
 
         /// <summary>
         /// 获取发送者。

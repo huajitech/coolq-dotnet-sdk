@@ -5,7 +5,7 @@ namespace HuajiTech.QQ
     /// <summary>
     /// 定义成员信息。
     /// </summary>
-    public interface IMemberInfo : IUserInfo, IAliased
+    public interface IMemberInfo : INamed, IAliased
     {
         /// <summary>
         /// 获取当前 <see cref="IMemberInfo"/> 对象的年龄。

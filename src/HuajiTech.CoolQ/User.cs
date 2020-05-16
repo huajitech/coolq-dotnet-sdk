@@ -19,24 +19,22 @@ namespace HuajiTech.CoolQ
             _info = info;
         }
 
-        public virtual bool HasRequested => !(_info is null);
+        public virtual bool IsRequested { get; protected set; }
 
-        public override string DisplayName => Nickname ?? ToString();
+        public virtual bool IsRequestedSuccessfully => !(_info is null);
+
+        public override string Name => Nickname ?? ToString();
 
         public virtual string? Nickname => GetInfo().Nickname;
 
         public void GiveThumbsUp(int count) =>
             NativeMethods.User_GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
 
-        public virtual void Request()
-        {
-            _info = null;
-            GetInfo(true);
-        }
+        public virtual void Request() => GetInfo(true);
 
         public virtual void Refresh() => GetInfo(true, true);
 
-        public override IMessage Send(string message)
+        public override IContentfulMessage Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -45,28 +43,31 @@ namespace HuajiTech.CoolQ
 
             var id = NativeMethods.User_Send(Bot.Instance.AuthCode, Number, message).CheckError();
 
-            return new Message(id, message);
+            return new ContentfulMessage(id, message);
         }
 
         public override bool Equals(IChattable? other) => base.Equals(other) && other is User;
 
-        private UserInfo GetInfo(bool throwException = false, bool refresh = false)
+        private UserInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (refresh || _info is null)
+            if (IsRequested && !requesting)
             {
-                try
-                {
-                    using var reader = new UserInfoReader(
-                        NativeMethods.User_GetInfo(Bot.Instance.AuthCode, Number, refresh).CheckError());
-                    _info = reader.Read();
-                }
-                catch (CoolQException) when (!throwException)
-                {
-                    return new UserInfo();
-                }
+                return new UserInfo();
             }
 
-            return _info;
+            IsRequested = true;
+
+            try
+            {
+                using var reader = new UserInfoReader(
+                    NativeMethods.User_GetInfo(Bot.Instance.AuthCode, Number, refresh).CheckError());
+                _info = reader.Read();
+                return _info;
+            }
+            catch (CoolQException) when (!requesting)
+            {
+                return new UserInfo();
+            }
         }
     }
 }

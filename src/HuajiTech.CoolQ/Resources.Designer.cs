@@ -124,7 +124,7 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 酷Q返回了意料之外的 null。查看酷Q中的日志以获取详细信息。 的本地化字符串。
+        ///   查找类似 酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing）。查看酷Q中的日志以获取详细信息。 的本地化字符串。
         /// </summary>
         internal static string NullReturnValue {
             get {

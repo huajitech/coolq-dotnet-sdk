@@ -16,5 +16,7 @@ namespace HuajiTech.CoolQ
         public override IMember GetMember(long number, IGroup group) => new Member(number, group);
 
         public override IUser GetUser(long number) => new User(number);
+
+        public override IMessage GetMessage(long messageId) => new Message(messageId);
     }
 }

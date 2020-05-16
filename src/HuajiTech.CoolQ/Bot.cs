@@ -1,5 +1,4 @@
 using Autofac;
-using HuajiTech.CoolQ.Events;
 using HuajiTech.QQ;
 using System;
 using System.Collections.Generic;

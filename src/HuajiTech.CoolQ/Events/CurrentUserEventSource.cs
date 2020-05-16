@@ -36,7 +36,7 @@ namespace HuajiTech.CoolQ.Events
             int messageId, IChattable source, IUser sender, string messageContent)
         {
             var e = new MessageReceivedEventArgs(
-                new Message(messageId, messageContent), source, sender);
+                new ContentfulMessage(messageId, messageContent), source, sender);
 
             Instance.MessageReceived?.Invoke(Instance, e);
 
@@ -47,7 +47,7 @@ namespace HuajiTech.CoolQ.Events
             int messageId, IGroup source, IAnonymousMember sender, string messageContent)
         {
             var e = new AnonymousMessageReceivedEventArgs(
-                new Message(messageId, messageContent), source, sender);
+                new ContentfulMessage(messageId, messageContent), source, sender);
 
             Instance.AnonymousMessageReceived?.Invoke(Instance, e);
 

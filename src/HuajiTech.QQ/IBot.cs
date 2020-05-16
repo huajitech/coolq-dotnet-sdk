@@ -5,8 +5,18 @@ namespace HuajiTech.QQ
     /// <summary>
     /// 定义机器人。
     /// </summary>
-    public interface IBot : IBotInfo
+    public interface IBot
     {
+        /// <summary>
+        /// 获取一个值，指示当前 <see cref="IBot"/> 对象是否可以发送图片。
+        /// </summary>
+        bool CanSendImage { get; }
+
+        /// <summary>
+        /// 获取一个值，指示当前 <see cref="IBot"/> 对象是否可以发送录音。
+        /// </summary>
+        bool CanSendRecord { get; }
+
         /// <summary>
         /// 获取当前 <see cref="IBot"/> 对象的当前用户。
         /// </summary>
