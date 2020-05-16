@@ -48,16 +48,16 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnAdministratorsAdjusted(
             AdministratorAdjustment adjustment,
-            int timestampChanged,
+            int timestamp,
             long sourceNumber,
-            long affecteeNumber)
+            long operateeNumber)
         {
             var source = new Group(sourceNumber);
             var e = new GroupEventArgs(
-                Timestamp.ToDateTime(timestampChanged),
+                Timestamp.ToDateTime(timestamp),
                 source,
                 source.GetMembers().Single(member => member.Role is MemberRole.Owner),
-                new Member(affecteeNumber, source));
+                new Member(operateeNumber, source));
 
             var ev = adjustment switch
             {
@@ -75,7 +75,7 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnEntranceRequested(
             EntranceType type,
-            int timestampRequested,
+            int timestamp,
             long sourceNumber,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
@@ -87,7 +87,7 @@ namespace HuajiTech.CoolQ.Events
             }
 
             var e = new EntranceRequestedEventArgs(
-                Timestamp.ToDateTime(timestampRequested),
+                Timestamp.ToDateTime(timestamp),
                 new Group(sourceNumber),
                 new User(requesterNumber),
                 new EntranceRequest(requestToken, message));
@@ -101,7 +101,7 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnFileUploaded(
             int type,
-            int timestampUploaded,
+            int timestamp,
             long sourceNumber,
             long uploaderNumber,
             string fileInfo)
@@ -111,7 +111,7 @@ namespace HuajiTech.CoolQ.Events
 
             var source = new Group(sourceNumber);
             var e = new FileUploadedEventArgs(
-                Timestamp.ToDateTime(timestampUploaded), source, new Member(uploaderNumber, source), file);
+                Timestamp.ToDateTime(timestamp), source, new Member(uploaderNumber, source), file);
 
             Instance.FileUploaded?.Invoke(Instance, e);
 
@@ -122,20 +122,20 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnGroupMuteStateChanged(
             MuteEventType type,
-            int timestampChanged,
+            int timestamp,
             long sourceNumber,
             long operatorNumber,
-            long affecteeNumber,
+            long operateeNumber,
             long secondsMuted)
         {
-            if (!(affecteeNumber is 0))
+            if (!(operateeNumber is 0))
             {
                 return false;
             }
 
             var source = new Group(sourceNumber);
             var e = new GroupMuteEventArgs(
-                Timestamp.ToDateTime(timestampChanged),
+                Timestamp.ToDateTime(timestamp),
                 source,
                 new Member(operatorNumber, source));
 
@@ -155,7 +155,7 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberJoined(
             EntranceType type,
-            int timestampJoined,
+            int timestamp,
             long sourceNumber,
             long operatorNumber,
             long operateeNumber)
@@ -164,7 +164,7 @@ namespace HuajiTech.CoolQ.Events
             var operatee = new Member(operateeNumber, source);
 
             var e = new GroupEventArgs(
-                Timestamp.ToDateTime(timestampJoined),
+                Timestamp.ToDateTime(timestamp),
                 source,
                 type is EntranceType.Passive ? operatee : new Member(operatorNumber, source),
                 operatee);
@@ -178,7 +178,7 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberLeft(
             EntranceType type,
-            int timestampLeft,
+            int timestamp,
             long sourceNumber,
             long operatorNumber,
             long operateeNumber)
@@ -187,7 +187,7 @@ namespace HuajiTech.CoolQ.Events
             var operatee = new Member(operateeNumber, source);
 
             var e = new GroupEventArgs(
-                Timestamp.ToDateTime(timestampLeft),
+                Timestamp.ToDateTime(timestamp),
                 source,
                 type is EntranceType.Passive ? new Member(operatorNumber, source) : operatee,
                 operatee);
@@ -201,21 +201,21 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberMuteStateChanged(
             MuteEventType type,
-            int timestampChanged,
+            int timestamp,
             long sourceNumber,
             long operatorNumber,
-            long affecteeNumber,
+            long operateeNumber,
             long secondsMuted)
         {
-            if (affecteeNumber is 0)
+            if (operateeNumber is 0)
             {
                 return false;
             }
 
-            var timeChanged = Timestamp.ToDateTime(timestampChanged);
+            var timeChanged = Timestamp.ToDateTime(timestamp);
             var source = new Group(sourceNumber);
             var @operator = new Member(operatorNumber, source);
-            var affectee = new Member(affecteeNumber, source);
+            var affectee = new Member(operateeNumber, source);
 
             switch (type)
             {

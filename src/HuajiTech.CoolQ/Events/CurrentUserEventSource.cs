@@ -33,10 +33,10 @@ namespace HuajiTech.CoolQ.Events
         public event EventHandler<FriendAddingEventArgs>? FriendAdding;
 
         private static bool OnMessageReceived(
-            int messageId, Chat source, IUser sender, string message)
+            int messageId, IChattable source, IUser sender, string messageContent)
         {
             var e = new MessageReceivedEventArgs(
-                new Message(messageId, message), source, sender);
+                new Message(messageId, messageContent), source, sender);
 
             Instance.MessageReceived?.Invoke(Instance, e);
 
@@ -44,10 +44,10 @@ namespace HuajiTech.CoolQ.Events
         }
 
         private static bool OnAnonymousMessageReceived(
-            int messageId, IGroup source, IAnonymousMember sender, string message)
+            int messageId, IGroup source, IAnonymousMember sender, string messageContent)
         {
             var e = new AnonymousMessageReceivedEventArgs(
-                new Message(messageId, message), source, sender);
+                new Message(messageId, messageContent), source, sender);
 
             Instance.AnonymousMessageReceived?.Invoke(Instance, e);
 
@@ -57,21 +57,21 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnPrivateMessageReceived(
-            PrivateMessageSender type,
+            PrivateMessageSender senderType,
             int messageId,
             long senderNumber,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
+            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string messageContent,
             int font)
         {
-            var sender = type switch
+            var sender = senderType switch
             {
                 PrivateMessageSender.User => new User(senderNumber),
                 PrivateMessageSender.Group => new Member(senderNumber, new Group(0)),
                 PrivateMessageSender.Friend => new Friend(senderNumber),
-                _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(PrivateMessageSender))
+                _ => throw new InvalidEnumArgumentException(nameof(senderType), (int)senderType, typeof(PrivateMessageSender))
             };
 
-            return OnMessageReceived(messageId, sender, sender, message);
+            return OnMessageReceived(messageId, sender, sender, messageContent);
         }
 
         [DllExport]
@@ -82,7 +82,7 @@ namespace HuajiTech.CoolQ.Events
             long sourceNumber,
             long senderNumber,
             string senderAnonymousInfo,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
+            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string messageContent,
             int font)
         {
             var group = new Group(sourceNumber);
@@ -90,12 +90,12 @@ namespace HuajiTech.CoolQ.Events
             if (senderAnonymousInfo.Length is 0)
             {
                 return OnMessageReceived(
-                    messageId, group, new Member(senderNumber, group), message);
+                    messageId, group, new Member(senderNumber, group), messageContent);
             }
             else
             {
                 return OnAnonymousMessageReceived(
-                    messageId, group, new AnonymousMember(senderAnonymousInfo, group), message);
+                    messageId, group, new AnonymousMember(senderAnonymousInfo, group), messageContent);
             }
         }
 
@@ -103,11 +103,11 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnFriendAdded(
             int type,
-            int timestampAdded,
+            int timestamp,
             long requesterNumber)
         {
             var e = new FriendAddedEventArgs(
-                Timestamp.ToDateTime(timestampAdded), new Friend(requesterNumber));
+                Timestamp.ToDateTime(timestamp), new Friend(requesterNumber));
 
             Instance.FriendAdded?.Invoke(Instance, e);
 
@@ -118,13 +118,13 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnFriendAdding(
             int type,
-            int timestampRequested,
+            int timestamp,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
             var e = new FriendAddingEventArgs(
-                Timestamp.ToDateTime(timestampRequested),
+                Timestamp.ToDateTime(timestamp),
                 new User(requesterNumber),
                 new FriendshipRequest(requestToken, message));
 
@@ -137,7 +137,7 @@ namespace HuajiTech.CoolQ.Events
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnEntranceInvited(
             EntranceType type,
-            int timestampRequested,
+            int timestamp,
             long targetNumber,
             long inviterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
@@ -149,7 +149,7 @@ namespace HuajiTech.CoolQ.Events
             }
 
             var e = new EntranceInvitedEventArgs(
-                Timestamp.ToDateTime(timestampRequested),
+                Timestamp.ToDateTime(timestamp),
                 new Group(targetNumber),
                 new User(inviterNumber),
                 new EntranceInvitation(requestToken, message));
