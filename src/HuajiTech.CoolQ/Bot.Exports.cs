@@ -32,8 +32,7 @@ namespace HuajiTech.CoolQ
             }
         }
 
-        [Conditional("DEBUG")]
-        private static void LogPluginInfos(IEnumerable<IPlugin> plugins)
+        private static void LogPlugins(IEnumerable<IPlugin> plugins)
         {
             if (plugins is null)
             {
@@ -51,7 +50,36 @@ namespace HuajiTech.CoolQ
             }
         }
 
-        private static void RegisterPlugins()
+        private static void RegisterSdk(ContainerBuilder builder)
+        {
+            builder
+                .RegisterInstance(Instance)
+                .AsImplementedInterfaces();
+
+            builder
+                .RegisterInstance(Instance.Logger)
+                .As<ILogger>();
+
+            builder
+                .Register(context => Instance.CurrentUser)
+                .As<ICurrentUser>();
+
+            builder
+                .RegisterInstance(CurrentUserEventSource.Instance)
+                .AsImplementedInterfaces();
+            builder
+                .RegisterInstance(GroupEventSource.Instance)
+                .AsImplementedInterfaces();
+            builder
+                .RegisterInstance(BotEventSource.Instance)
+                .AsImplementedInterfaces();
+
+            builder
+                .Register(context => PluginContext.Current)
+                .As<PluginContext>();
+        }
+
+        private static void RegisterPlugins(ContainerBuilder builder)
         {
             var executingAssembly = Assembly.GetExecutingAssembly();
 
@@ -66,10 +94,12 @@ namespace HuajiTech.CoolQ
                 var loadStage = ((AppLifecycle?)type
                     .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? defaultLoadStage;
 
-                _builder
+                builder
                     .RegisterType(type)
                     .SingleInstance()
-                    .Named<IPlugin>(loadStage.ToString());
+                    .Named<IPlugin>(loadStage.ToString())
+                    .As<IPlugin>()
+                    .AsSelf();
             }
         }
 
@@ -84,18 +114,18 @@ namespace HuajiTech.CoolQ
 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
-            RegisterPlugins();
+            var builder = new ContainerBuilder();
 
-            lock (_containerLock)
-            {
-                _container = _builder.Build();
-            }
+            RegisterSdk(builder);
+            RegisterPlugins(builder);
+
+            _container = builder.Build();
 
             GetPlugins(AppLifecycle.Initializing);
 
             var source = BotEventSource.Instance;
 
-            source.AppEnabled += (sender, e) => LogPluginInfos(GetPlugins(AppLifecycle.Enabled));
+            source.AppEnabled += (sender, e) => LogPlugins(GetPlugins(AppLifecycle.Enabled));
             source.BotStarted += (sender, e) => GetPlugins(AppLifecycle.BotStarted);
             source.AppDisabling += (sender, e) => GetPlugins(AppLifecycle.Disabling);
             source.BotStopping += (sender, e) => GetPlugins(AppLifecycle.BotStopping);

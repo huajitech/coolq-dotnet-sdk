@@ -21,7 +21,7 @@ class MyPlugin : Plugin
 }
 ```
 
-若在 @"HuajiTech.CoolQ.AppLifecycle.Enabled" 阶段加载，允许在构造函数内**调用 API**或**长时间阻塞线程**，并且抛出的异常不会导致应用模块崩溃。**必须**在 `app.json` 中向酷Q**注册应用启用事件**才能在 Enabled 阶段加载。
+若在 @"HuajiTech.CoolQ.AppLifecycle.Enabled" 阶段加载，允许在构造函数内**调用 API**或**长时间阻塞线程**，并且可以显示引发的异常的详细信息。**必须**在 `app.json` 中向酷Q**注册应用启用事件**才能在 Enabled 阶段加载。
 
 通过将加载阶段设置为 @"HuajiTech.CoolQ.AppLifecycle.NotLoaded" (`0`)，可以禁止插件类的加载。
 

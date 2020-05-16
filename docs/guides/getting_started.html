@@ -92,7 +92,7 @@ class MyPlugin : Plugin
 {v
 }
 </code></pre>
-<p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，允许在构造函数内<strong>调用 API</strong>或<strong>长时间阻塞线程</strong>，并且抛出的异常不会导致应用模块崩溃。<strong>必须</strong>在 <code>app.json</code> 中向酷Q<strong>注册应用启用事件</strong>才能在 Enabled 阶段加载。</p>
+<p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，允许在构造函数内<strong>调用 API</strong>或<strong>长时间阻塞线程</strong>，并且可以显示引发的异常的详细信息。<strong>必须</strong>在 <code>app.json</code> 中向酷Q<strong>注册应用启用事件</strong>才能在 Enabled 阶段加载。</p>
 <p>通过将加载阶段设置为 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_NotLoaded">NotLoaded</a> (<code>0</code>)，可以禁止插件类的加载。</p>
 <p>若在 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Initializing">Initializing</a>  及其他非 <a class="xref" href="../api/HuajiTech.CoolQ.AppLifecycle.html#HuajiTech_CoolQ_AppLifecycle_Enabled">Enabled</a> 阶段加载，应遵循以下原则：</p>
 <ul>

@@ -13,8 +13,6 @@ namespace HuajiTech.CoolQ
         internal const string ApiVersion = "9";
 
         public static readonly string AppId = GetAppId();
-        private static readonly ContainerBuilder _builder = new ContainerBuilder();
-        private static readonly object _containerLock = new object();
 
         private static Bot? _instance;
         private static IContainer? _container;
@@ -31,8 +29,6 @@ namespace HuajiTech.CoolQ
 
             AppDomain.CurrentDomain.ResourceResolve +=
                 (sender, e) => Assembly.GetExecutingAssembly();
-
-            RegisterSdk(_builder);
         }
 
         private Bot(int authCode)
@@ -72,16 +68,11 @@ namespace HuajiTech.CoolQ
 
             try
             {
-                if (!_container.IsRegistered<TPlugin>())
-                {
-                    RegisterPlugin<TPlugin>();
-                }
-
                 return _container.Resolve<TPlugin>();
             }
             catch (Exception ex)
             {
-                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
+                throw new TypeLoadException(Resources.FailedToLoadPlugin, ex);
             }
         }
 
@@ -99,16 +90,11 @@ namespace HuajiTech.CoolQ
 
             try
             {
-                if (!_container.IsRegistered(pluginType))
-                {
-                    RegisterPlugin(pluginType);
-                }
-
                 return (IPlugin)_container.Resolve(pluginType);
             }
             catch (Exception ex)
             {
-                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
+                throw new TypeLoadException(Resources.FailedToLoadPlugin, ex);
             }
         }
 
@@ -125,12 +111,11 @@ namespace HuajiTech.CoolQ
             }
             catch (Exception ex)
             {
-                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
+                throw new TypeLoadException(Resources.FailedToLoadPlugin, ex);
             }
         }
 
-        public static ICollection<TPlugin> GetPlugins<TPlugin>()
-            where TPlugin : notnull, IPlugin
+        public static ICollection<IPlugin> GetPlugins()
         {
             if (_container is null)
             {
@@ -139,62 +124,11 @@ namespace HuajiTech.CoolQ
 
             try
             {
-                return _container.Resolve<ICollection<TPlugin>>();
+                return _container.Resolve<ICollection<IPlugin>>();
             }
             catch (Exception ex)
             {
-                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
-            }
-        }
-
-        public static ICollection<IPlugin> GetPlugins(Type pluginType)
-        {
-            if (_container is null)
-            {
-                throw new InvalidOperationException(Resources.BotNotInitialized);
-            }
-
-            if (!typeof(IPlugin).IsAssignableFrom(pluginType))
-            {
-                throw new ArgumentException(Resources.TypeIsNotPlugin, nameof(pluginType));
-            }
-
-            try
-            {
-                return (ICollection<IPlugin>)_container.Resolve(typeof(ICollection<>).MakeGenericType(pluginType));
-            }
-            catch (Exception ex)
-            {
-                throw new TargetInvocationException(Resources.FailedToLoadPlugin, ex);
-            }
-        }
-
-        private static void RegisterPlugin<TPlugin>()
-            where TPlugin : notnull, IPlugin
-        {
-            _builder
-                .RegisterType<TPlugin>()
-                .AsSelf()
-                .As<IPlugin>()
-                .SingleInstance();
-
-            lock (_containerLock)
-            {
-                _container = _builder.Build();
-            }
-        }
-
-        private static void RegisterPlugin(Type pluginType)
-        {
-            _builder
-                .RegisterType(pluginType)
-                .AsSelf()
-                .As<IPlugin>()
-                .SingleInstance();
-
-            lock (_containerLock)
-            {
-                _container = _builder.Build();
+                throw new TypeLoadException(Resources.FailedToLoadPlugin, ex);
             }
         }
 
@@ -208,35 +142,6 @@ namespace HuajiTech.CoolQ
             }
 
             return attr.Id;
-        }
-
-        private static void RegisterSdk(ContainerBuilder builder)
-        {
-            builder
-                .RegisterInstance(Instance)
-                .AsImplementedInterfaces();
-
-            builder
-                .RegisterInstance(Instance.Logger)
-                .As<ILogger>();
-
-            builder
-                .Register(context => Instance.CurrentUser)
-                .As<ICurrentUser>();
-
-            builder
-                .RegisterInstance(CurrentUserEventSource.Instance)
-                .AsImplementedInterfaces();
-            builder
-                .RegisterInstance(GroupEventSource.Instance)
-                .AsImplementedInterfaces();
-            builder
-                .RegisterInstance(BotEventSource.Instance)
-                .AsImplementedInterfaces();
-
-            builder
-                .Register(context => PluginContext.Current)
-                .As<PluginContext>();
         }
 
         public FileInfo GetImage(string fileName)

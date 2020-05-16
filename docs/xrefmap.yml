@@ -186,18 +186,18 @@ references:
   fullName.vb: HuajiTech.CoolQ.Bot.GetPlugin(Of TPlugin)()
   nameWithType: Bot.GetPlugin<TPlugin>()
   nameWithType.vb: Bot.GetPlugin(Of TPlugin)()
+- uid: HuajiTech.CoolQ.Bot.GetPlugins
+  name: GetPlugins()
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins
+  commentId: M:HuajiTech.CoolQ.Bot.GetPlugins
+  fullName: HuajiTech.CoolQ.Bot.GetPlugins()
+  nameWithType: Bot.GetPlugins()
 - uid: HuajiTech.CoolQ.Bot.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
   name: GetPlugins(AppLifecycle)
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins_HuajiTech_CoolQ_AppLifecycle_
   commentId: M:HuajiTech.CoolQ.Bot.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
   fullName: HuajiTech.CoolQ.Bot.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
   nameWithType: Bot.GetPlugins(AppLifecycle)
-- uid: HuajiTech.CoolQ.Bot.GetPlugins(System.Type)
-  name: GetPlugins(Type)
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins_System_Type_
-  commentId: M:HuajiTech.CoolQ.Bot.GetPlugins(System.Type)
-  fullName: HuajiTech.CoolQ.Bot.GetPlugins(System.Type)
-  nameWithType: Bot.GetPlugins(Type)
 - uid: HuajiTech.CoolQ.Bot.GetPlugins*
   name: GetPlugins
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins_
@@ -205,15 +205,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Bot.GetPlugins
   nameWithType: Bot.GetPlugins
-- uid: HuajiTech.CoolQ.Bot.GetPlugins``1
-  name: GetPlugins<TPlugin>()
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins__1
-  commentId: M:HuajiTech.CoolQ.Bot.GetPlugins``1
-  name.vb: GetPlugins(Of TPlugin)()
-  fullName: HuajiTech.CoolQ.Bot.GetPlugins<TPlugin>()
-  fullName.vb: HuajiTech.CoolQ.Bot.GetPlugins(Of TPlugin)()
-  nameWithType: Bot.GetPlugins<TPlugin>()
-  nameWithType.vb: Bot.GetPlugins(Of TPlugin)()
 - uid: HuajiTech.CoolQ.Bot.GetRecord(System.String,System.String)
   name: GetRecord(String, String)
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetRecord_System_String_System_String_
