@@ -1,5 +1,5 @@
 ﻿// 用于 HuajiTech.CoolQ 的应用信息配置文件。
-// 版本 0.2.2-alpha.2。
+// 版本 0.2-alpha.1。
 
 using HuajiTech.CoolQ;
 
