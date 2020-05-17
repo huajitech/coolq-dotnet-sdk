@@ -1,5 +1,4 @@
 using HuajiTech.CoolQ.Utilities;
-using HuajiTech.QQ;
 
 namespace HuajiTech.CoolQ.DataExchange
 {

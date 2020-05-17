@@ -1,5 +1,3 @@
-using HuajiTech.QQ;
-
 namespace HuajiTech.CoolQ.DataExchange
 {
     internal class UserInfo

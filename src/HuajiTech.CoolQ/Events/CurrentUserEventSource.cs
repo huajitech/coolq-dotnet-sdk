@@ -1,6 +1,4 @@
 ﻿using HuajiTech.CoolQ.Utilities;
-using HuajiTech.QQ;
-using HuajiTech.QQ.Events;
 using HuajiTech.UnmanagedExports;
 using System;
 using System.ComponentModel;
@@ -36,7 +34,7 @@ namespace HuajiTech.CoolQ.Events
             int messageId, IChattable source, IUser sender, string messageContent)
         {
             var e = new MessageReceivedEventArgs(
-                new ContentfulMessage(messageId, messageContent), source, sender);
+                new Message(messageId, messageContent), source, sender);
 
             Instance.MessageReceived?.Invoke(Instance, e);
 
@@ -47,7 +45,7 @@ namespace HuajiTech.CoolQ.Events
             int messageId, IGroup source, IAnonymousMember sender, string messageContent)
         {
             var e = new AnonymousMessageReceivedEventArgs(
-                new ContentfulMessage(messageId, messageContent), source, sender);
+                new Message(messageId, messageContent), source, sender);
 
             Instance.AnonymousMessageReceived?.Invoke(Instance, e);
 

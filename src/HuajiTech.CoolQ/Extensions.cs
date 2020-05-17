@@ -12,12 +12,12 @@ namespace HuajiTech.CoolQ
     public static class Extensions
     {
         /// <summary>
-        /// 将 <see cref="QQ.IContentfulMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="QQ.IContentfulMessage"/> 对象解码为只读字典。
+        /// 将 <see cref="IMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="IMessage"/> 对象解码为只读字典。
         /// </summary>
         /// <param name="message">要解析为只读字典的 <see cref="Message"/> 对象。</param>
-        /// <returns>与 <see cref="QQ.IContentfulMessage.Content"/> 等效的只读字典。</returns>
+        /// <returns>与 <see cref="IMessage.Content"/> 等效的只读字典。</returns>
         /// <exception cref="InvalidDataException"><paramref name="message"/> 不合法。</exception>
-        public static IReadOnlyDictionary<string, string>? RegexDecode(this QQ.IContentfulMessage message)
+        public static IReadOnlyDictionary<string, string>? RegexDecode(this IMessage message)
         {
             if (message is null)
             {
@@ -40,7 +40,7 @@ namespace HuajiTech.CoolQ
         {
             if (returnValue < 0)
             {
-                throw new CoolQException(string.Format(
+                throw new ApiException(string.Format(
                     System.Globalization.CultureInfo.CurrentCulture,
                     Resources.UnexpectedReturnValue,
                     returnValue));
@@ -54,7 +54,7 @@ namespace HuajiTech.CoolQ
         {
             if (returnValue is null)
             {
-                throw new CoolQException(Resources.NullReturnValue);
+                throw new ApiException(Resources.NullReturnValue);
             }
 
             return returnValue;

@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ
 {
-    internal class EntranceInvitation : QQ.IRequest
+    internal class EntranceInvitation : IRequest
     {
         private readonly string _token;
 

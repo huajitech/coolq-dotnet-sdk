@@ -1,5 +1,5 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
+
 using System;
 
 namespace HuajiTech.CoolQ
@@ -51,7 +51,7 @@ namespace HuajiTech.CoolQ
                     using var reader = new AnonymousMemberInfoReader(_rawInfo);
                     _info = reader.Read();
                 }
-                catch (CoolQException)
+                catch (ApiException)
                 {
                     return new AnonymousMemberInfo();
                 }

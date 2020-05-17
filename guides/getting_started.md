@@ -7,10 +7,10 @@
 
 ## 插件类
 
-如果一个**可被实例化**的类实现了 @"HuajiTech.QQ.IPlugin" 接口，则它是一个插件类。
+如果一个**可被实例化**的类实现了 @"HuajiTech.CoolQ.IPlugin" 接口，则它是一个插件类。
 在同一个应用中，可以定义多个插件类。插件类只会被实例化一次。
 
-通常情况下，插件类应以 @"HuajiTech.QQ.Plugin" 类作为基类。该类实现了 @"HuajiTech.QQ.IPlugin" 接口，并且提供了更易用的 API。
+通常情况下，插件类应以 @"HuajiTech.CoolQ.Plugin" 类作为基类。该类实现了 @"HuajiTech.CoolQ.IPlugin" 接口，并且提供了更易用的 API。
 
 可通过 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性指定插件类的加载阶段。
 
@@ -36,7 +36,7 @@
 若在 @"HuajiTech.CoolQ.AppLifecycle.Initializing"  及其他非 @"HuajiTech.CoolQ.AppLifecycle.Enabled" 阶段加载，应遵循以下原则：
 
 - ✔ 在插件类构造函数内对**类**进行初始化。
-- ✔ 在 @"HuajiTech.QQ.Events.INotifyAppEnabled.AppEnabled" 事件中初始化**应用**。
+- ✔ 在 @"HuajiTech.CoolQ.Events.INotifyAppEnabled.AppEnabled" 事件中初始化**应用**。
 - ✘ 不应在插件类构造函数内调用酷Q API。
 - ✘ 插件类构造函数不应长时间阻塞线程。
 - ✘ 插件类构造函数不应抛出异常。
@@ -44,7 +44,7 @@
 有关详细信息，请参见[酷Q文库](https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96)。
 
 > [!WARNING]
-> 获取 @"HuajiTech.QQ.ICurrentUser" 对象需要调用酷Q API。
+> 获取 @"HuajiTech.CoolQ.ICurrentUser" 对象需要调用酷Q API。
 
 ## 事件
 
@@ -59,8 +59,8 @@
 
 事件源定义了一个或一组相关的事件。
 事件源是接口类型。
-定义了单个事件的事件源以 `Notify` 开头，如 @"HuajiTech.QQ.Events.INotifyMessageReceived" 接口。
-定义了多个事件的事件源以 `EventSource` 结尾，如 @"HuajiTech.QQ.Events.IBotEventSource" 接口。
+定义了单个事件的事件源以 `Notify` 开头，如 @"HuajiTech.CoolQ.Events.INotifyMessageReceived" 接口。
+定义了多个事件的事件源以 `EventSource` 结尾，如 @"HuajiTech.CoolQ.Events.IBotEventSource" 接口。
 
 ### 处理事件
 
@@ -77,12 +77,12 @@ public MyPlugin(
 ```
 
 > [!NOTE]
-> 尽可能使用定义事件最少的事件源。例如，若插件只需处理消息接收事件，则应使用 @"HuajiTech.QQ.Events.INotifyMessageReceived"，而不是 @"HuajiTech.QQ.Events.ICurrentUserEventSource"。
+> 尽可能使用定义事件最少的事件源。例如，若插件只需处理消息接收事件，则应使用 @"HuajiTech.CoolQ.Events.INotifyMessageReceived"，而不是 @"HuajiTech.CoolQ.Events.ICurrentUserEventSource"。
 
 ### 路由
 
-酷Q的所有事件数据类均派生自 @"HuajiTech.QQ.Events.RoutedEventArgs" 类。
-将 @"HuajiTech.QQ.Events.RoutedEventArgs.Handled" 属性设置为 `true` 以阻断事件。
+酷Q的所有事件数据类均派生自 @"HuajiTech.CoolQ.Events.RoutedEventArgs" 类。
+将 @"HuajiTech.CoolQ.Events.RoutedEventArgs.Handled" 属性设置为 `true` 以阻断事件。
 
 ### 菜单和悬浮窗状态
 
@@ -102,13 +102,13 @@ public MyPlugin(
   }
   ```
 
-- 通过 @"HuajiTech.QQ.PluginContext" 类。对于 @"HuajiTech.QQ.PluginContext.Current"，建议使用 @"HuajiTech.QQ.CurrentPluginContext" 类。
+- 通过 @"HuajiTech.CoolQ.PluginContext" 类。对于 @"HuajiTech.CoolQ.PluginContext.Current"，建议使用 @"HuajiTech.CoolQ.CurrentPluginContext" 类。
 
   ```csharp
   PluginContext.Current.GetUser(114514).Send("Hello!");
   ```
 
-- 通过 @"HuajiTech.QQ.Plugin" 类的 `protected` 实例方法。通常在插件类中使用此方法。
+- 通过 @"HuajiTech.CoolQ.Plugin" 类的 `protected` 实例方法。通常在插件类中使用此方法。
 
   ```csharp
   public class MyPlugin : Plugin
@@ -119,15 +119,15 @@ public MyPlugin(
   }
   ```
 
-- 通过 @"HuajiTech.QQ.CurrentPluginContext" 类提供的静态方法。通常在非插件类中使用此方法。
+- 通过 @"HuajiTech.CoolQ.CurrentPluginContext" 类提供的静态方法。通常在非插件类中使用此方法。
   
   ```csharp
-  using static HuajiTech.QQ.CurrentPluginContext;
+  using static HuajiTech.CoolQ.CurrentPluginContext;
 
   User(114514).Send("Hello!");
   ```
 
-- 通过 @"HuajiTech.QQ.PluginContextExtensions" 类提供的常用扩展方法。
+- 通过 @"HuajiTech.CoolQ.PluginContextExtensions" 类提供的常用扩展方法。
 
   ```csharp
   try

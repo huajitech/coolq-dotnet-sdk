@@ -13,10 +13,10 @@
 ## 复读机示例
 
 ```csharp
-using HuajiTech.QQ;
-using HuajiTech.QQ.Events;
+using HuajiTech.CoolQ;
+using HuajiTech.CoolQ.Events;
 
-[assembly: HuajiTech.CoolQ.AppId("com.example.repeater")]
+[assembly: AppId("com.example.repeater")]
 
 public class RepeaterPlugin : Plugin
 {

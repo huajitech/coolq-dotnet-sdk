@@ -1,5 +1,5 @@
 using Autofac;
-using HuajiTech.QQ;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -53,7 +53,7 @@ namespace HuajiTech.CoolQ
 
         public ICurrentUser CurrentUser => _currentUser.Value;
 
-        public ILogger Logger { get; } = new Logger();
+        public ILogger Logger { get; } = new CoolQLogger();
 
         internal int AuthCode { get; }
 
@@ -143,17 +143,17 @@ namespace HuajiTech.CoolQ
             return attr.Id;
         }
 
-        public FileInfo GetImage(string fileName)
+        public System.IO.FileInfo GetImage(string fileName)
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileName));
             }
 
-            return new FileInfo(NativeMethods.Bot_GetImage(AuthCode, fileName).CheckError());
+            return new System.IO.FileInfo(NativeMethods.Bot_GetImage(AuthCode, fileName).CheckError());
         }
 
-        public FileInfo GetRecord(string fileName, string fileFormat)
+        public System.IO.FileInfo GetRecord(string fileName, string fileFormat)
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
@@ -165,7 +165,7 @@ namespace HuajiTech.CoolQ
                 throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(fileFormat));
             }
 
-            return new FileInfo(NativeMethods.Bot_GetRecord(AuthCode, fileName, fileFormat).CheckError());
+            return new System.IO.FileInfo(NativeMethods.Bot_GetRecord(AuthCode, fileName, fileFormat).CheckError());
         }
     }
 }

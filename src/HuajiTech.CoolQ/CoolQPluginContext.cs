@@ -1,5 +1,4 @@
-﻿using HuajiTech.QQ;
-using System;
+﻿using System;
 
 namespace HuajiTech.CoolQ
 {
@@ -17,6 +16,6 @@ namespace HuajiTech.CoolQ
 
         public override IUser GetUser(long number) => new User(number);
 
-        public override IMessage GetMessage(long messageId) => new Message(messageId);
+        public override IMessage GetMessage(long id) => new Message(id);
     }
 }

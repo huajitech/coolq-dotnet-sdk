@@ -1,5 +1,5 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
+
 using System;
 
 namespace HuajiTech.CoolQ
@@ -132,7 +132,7 @@ namespace HuajiTech.CoolQ
                 _info = reader.Read();
                 return _info;
             }
-            catch (CoolQException) when (!requesting)
+            catch (ApiException) when (!requesting)
             {
                 return new MemberInfo();
             }

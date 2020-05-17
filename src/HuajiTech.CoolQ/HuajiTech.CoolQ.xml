@@ -21,11 +21,6 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.AppIdAttribute"/> 对象的 ID。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.CoolQException">
-            <summary>
-            在酷Q返回了意料之外的值时引发的异常。
-            </summary>
-        </member>
         <member name="T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute">
             <summary>
             指定缺省插件加载阶段。
@@ -123,545 +118,105 @@
             定义扩展方法。
             </summary>
         </member>
-        <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.QQ.IContentfulMessage)">
+        <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.IMessage)">
             <summary>
-            将 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象解码为只读字典。
+            将 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象解码为只读字典。
             </summary>
             <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 对象。</param>
-            <returns>与 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 等效的只读字典。</returns>
+            <returns>与 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 等效的只读字典。</returns>
             <exception cref="T:System.IO.InvalidDataException"><paramref name="message"/> 不合法。</exception>
         </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Anonymous">
+        <member name="T:HuajiTech.CoolQ.Messaging.AbstractionExtensions">
             <summary>
-            表示匿名消息的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
+            定义用于 HuajiTech.CoolQ.Abstraction 中的类型的扩展方法。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Anonymous.Fallback">
-            <summary>
-            获取或设置一个值，指示是否在不能发送匿名消息时回退到普通消息。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.At">
-            <summary>
-            表示 At (@) 的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.At.Target">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象的目标。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.AtAll">
-            <summary>
-            表示 At (@) 全体成员的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.ClockingIn">
-            <summary>
-            表示签到的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.ClockingIn.ImageUrl">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.ClockingIn"/> 对象的图片 URL。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.ClockingIn.Location">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.ClockingIn"/> 对象的发布位置。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.ClockingIn.Title">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.ClockingIn"/> 对象的标题。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.ComplexMessage">
-            <summary>
-            表示复合消息。
-            </summary>
-            <summary>
-            <see cref="T:System.Collections.Generic.IList`1"/> 和 <see cref="T:System.Collections.Generic.IReadOnlyList`1"/> 的实现。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.#ctor">
-            <summary>
-            初始化一个空的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 类的新实例。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.#ctor(HuajiTech.CoolQ.Messaging.MessageElement)">
-            <summary>
-            以指定的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象初始化一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 类的新实例。
-            </summary>
-            <param name="element">消息元素。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.#ctor(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">
-            <summary>
-            以指定的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 集合初始化一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 类的新实例。
-            </summary>
-            <param name="elements"><see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 集合。</param>
-            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.ComplexMessage.Item(System.Int32)">
-            <summary>
-            获取或设置指定索引处的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            </summary>
-            <param name="index">要获取或设置的<see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象从 0 开始的索引。</param>
-            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> 小于 0。 或 <paramref name="index"/> 等于或大于 <see cref="P:HuajiTech.CoolQ.Messaging.ComplexMessage.Count"/>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String,System.Boolean)">
-            <summary>
-            将字符串解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
-            </summary>
-            <param name="str">要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
-            <param name="useEmojiCQCode">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
-            <returns>与字符串等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Join(HuajiTech.CoolQ.Messaging.MessageElement,System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.ComplexMessage})">
-            <summary>
-            使用指定的分隔符串联 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 集合中的所有成员。
-            </summary>
-            <param name="separator">要用作分隔符的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。</param>
-            <param name="messages">一个包含要串联的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的集合。</param>
-            <returns>
-            一个包含 <paramref name="messages"/> 中所有成员的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，这些成员以 <paramref name="separator"/> 分隔。
-            如果 <paramref name="messages"/> 没有成员，则该方法返回一个空的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
-            </returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="messages"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText">
-            <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的所有连续的 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象拼接为单个 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象。
-            </summary>
-            <returns>一个新的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，包含已被拼接的 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.GetPlainText(System.String)">
-            <summary>
-            使用指定的分隔符将当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的所有 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象拼接为字符串。
-            </summary>
-            <param name="separator">要用作分隔符的字符串。</param>
-            <returns>
-            一个由当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中所有 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象组成的字符串，这些字符串以 <paramref name="separator"/> 分隔。
-            如果当前  <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象不包含任何 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象，则该方法返回 <see cref="F:System.String.Empty"/>。
-            </returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String[],System.StringSplitOptions)">
-            <summary>
-            基于数组中的字符串将当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的所有 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象拆分为多个 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象。
-            可以指定子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象是否包含空数组元素。
-            </summary>
-            <param name="separator">分隔此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
-            <param name="options">
-            要省略返回的数组中的空数组元素，则为 <see cref="F:System.StringSplitOptions.RemoveEmptyEntries"/>；
-            要包含返回的数组中的空数组元素，则为 <see cref="F:System.StringSplitOptions.None"/>。
-            </param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，其元素包含此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象，这些子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
-            <exception cref="T:System.ArgumentException"><paramref name="options"/> 不是 <see cref="T:System.StringSplitOptions"/> 值之一。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String[])">
-            <summary>
-            基于数组中的字符串将当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的所有 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象拆分为多个 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象。
-            </summary>
-            <param name="separator">分隔此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象的字符串数组、不包含分隔符的空数组或 null。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，其元素包含此 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中的子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象，这些子子 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 对象由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Add(HuajiTech.CoolQ.Messaging.MessageElement)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象添加到 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的结尾处。
-            </summary>
-            <param name="item">要添加到 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 末尾的对象。</param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Add(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">
-            <summary>
-            将指定 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 集合添加到 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的末尾。
-            </summary>
-            <param name="collection">
-            应将其元素添加到 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的末尾的集合。
-            集合自身不能为 <c>null</c>。
-            </param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Insert(System.Int32,HuajiTech.CoolQ.Messaging.MessageElement)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 插入到 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的指定索引处。
-            </summary>
-            <param name="index">应插入 <paramref name="item"/> 的从零开始的索引。</param>
-            <param name="item">要插入的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。</param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">
-            <paramref name="index"/> 小于 0。
-            或 <paramref name="index"/> 大于 <see cref="P:HuajiTech.CoolQ.Messaging.ComplexMessage.Count"/>。
-            </exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Remove(HuajiTech.CoolQ.Messaging.MessageElement)">
-            <summary>
-            从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中移除特定 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 的第一个匹配项。
-            </summary>
-            <param name="item">要从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中删除的对象。</param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.TryRemove(HuajiTech.CoolQ.Messaging.MessageElement)">
-            <summary>
-            尝试从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中移除特定 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 的第一个匹配项。
-            </summary>
-            <param name="item">要从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中删除的对象。</param>
-            <returns>
-            如果成功移除了 <paramref name="item"/>，则为 <c>true</c>；否则为 <c>false</c>。
-            如果在 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <c>false</c>。
-            </returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.Messaging.MessageElement)">
-            <summary>
-            从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中移除特定 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 的所有匹配项。
-            </summary>
-            <param name="item">要从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中删除的对象。</param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAt(System.Int32)">
-            <summary>
-            移除 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的指定索引处的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/>。
-            </summary>
-            <param name="index">要移除的元素的从零开始的索引。</param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveRange(System.Int32,System.Int32)">
-            <summary>
-            从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中移除一定范围的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/>。
-            </summary>
-            <param name="index">要移除的元素范围的从零开始的起始索引。</param>
-            <param name="count">要移除的元素数。</param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.ToString">
-            <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的值转换为它的等效字符串表示形式。
-            </summary>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的值的字符串表示形式。</returns>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions">
-            <summary>
-            定义 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 类的扩展方法。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 1 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 2 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 3 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 4 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 5 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 6 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 7 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 8 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 9 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 10 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 11 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 12 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 13 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 14 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 15 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
-            <summary>
-            将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象解构为 16 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
-            </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.ContactShare">
-            <summary>
-            表示名片分享的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.ContactShare.Content">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象的内容。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.CQCode">
-            <summary>
-            表示CQ码。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String)">
-            <summary>
-            以指定的类型初始化一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。
-            </summary>
-            <param name="type">CQ码的类型。</param>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
-            <summary>
-            以指定的类型和参数初始化一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。
-            </summary>
-            <param name="type">CQ码的类型。</param>
-            <param name="parameters">一个字典，包含 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 的所有参数。</param>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CQCode.Item(System.String)">
-            <summary>
-            获取或设置指定键处的参数的值。
-            </summary>
-            <param name="key">要获取或设置的参数的键。</param>
-            <value>
-            指定 <paramref name="key"/> 处的参数的值。
-            如果指定键不存在，则为 <c>null</c>。
-            </value>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CQCode.Parameters">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的参数。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CQCode.Type">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的类型。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)">
-            <summary>
-            将指定的字符串转换为可以让酷Q按原义解释字符的语法。
-            </summary>
-            <param name="str">要转换的字符串。</param>
-            <returns>指定字符串的已转换值。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.CQCode.Unescape(System.String)">
-            <summary>
-            将字符串中的转义字符转换为具有特殊意义的酷Q字符。
-            </summary>
-            <param name="str">要转换的字符串。</param>
-            <returns>指定字符串的已转换值。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.CQCode.ToString">
-            <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的值转换为它的等效字符串表示形式。
-            </summary>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的值的字符串表示形式。</returns>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.CQCodeFactory">
-            <summary>
-            提供用于创建 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的方法的静态类。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.CQCodeFactory.Create(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
-            <summary>
-            以指定的类型和参数创建一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。
-            </summary>
-            <param name="type">要创建的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的类型。</param>
-            <param name="parameters">要创建的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的参数。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。</returns>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.CQCodeFactory.Create(System.String)">
-            <summary>
-            以指定的类型创建一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。
-            </summary>
-            <param name="type">要创建的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 对象的类型。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。</returns>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.CustomEmoticon">
-            <summary>
-            表示自定义表情的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CustomEmoticon.Id">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.CustomEmoticon"/> 对象的 ID。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.CustomMusic">
-            <summary>
-            表示自定义音乐的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CustomMusic.AudioUrl">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.CustomMusic"/> 对象的音频 URL。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CustomMusic.ContentUrl">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.CustomMusic"/> 对象的内容 URL。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CustomMusic.Description">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.CustomMusic"/> 对象的描述。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CustomMusic.ImageUrl">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.CustomMusic"/> 对象的图片URL。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.CustomMusic.Title">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.CustomMusic"/> 对象的标题。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Dice">
-            <summary>
-            表示骰子的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Dice.Point">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Dice"/> 对象的点数。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Emoji">
-            <summary>
-            表示 Emoji 的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Emoji.Id">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 对象的 ID。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Emoticon">
-            <summary>
-            表示表情的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Emoticon.Id">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Emoticon"/> 对象的 ID。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Extensions">
-            <summary>
-            定义扩展方法。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.At(HuajiTech.QQ.IUser)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.At(HuajiTech.CoolQ.IUser)">
             <summary>
             创建目标为指定用户的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 类的新实例。
             </summary>
             <param name="target">At (@) 的目标。</param>
             <returns>目标为指定用户的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 类的新实例。</returns>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Parse(HuajiTech.QQ.IContentfulMessage,System.Boolean)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Parse(HuajiTech.CoolQ.IMessage,System.Boolean)">
             <summary>
-            将 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
+            将 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
             </summary>
-            <param name="message">一个 <see cref="T:HuajiTech.QQ.IContentfulMessage"/>对象，该 <see cref="T:HuajiTech.QQ.IContentfulMessage"/> 对象的 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
+            <param name="message">一个 <see cref="T:HuajiTech.CoolQ.IMessage"/>对象，该 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象的 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象的字符串表示形式。</param>
             <param name="useEmojiCQCode">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 对象，则为 <c>true</c>；否则为 <c>false</c>。</param>
-            <returns>与 <see cref="P:HuajiTech.QQ.IContentfulMessage.Content"/> 等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
+            <returns>与 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。</returns>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetTarget(HuajiTech.CoolQ.Messaging.At,HuajiTech.CoolQ.PluginContext)">
             <summary>
-            从 <see cref="T:System.Collections.Generic.IEnumerable`1"/> 创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>。
+            获取 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象的目标。
             </summary>
-            <param name="elements">要用于创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的消息元素集合。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>，其中包含输入序列中的元素。</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+            <param name="at">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象</param>
+            <param name="context">要使用的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement},HuajiTech.CoolQ.Messaging.MessageElement)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetTarget(HuajiTech.CoolQ.Messaging.At)">
             <summary>
-            使用指定的分隔符从 <see cref="T:System.Collections.Generic.IEnumerable`1"/> 创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>。
+            使用 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 获取 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象的目标。
             </summary>
-            <param name="elements">要用于创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的消息元素集合。</param>
-            <param name="separator">要用作分隔符的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 对象。</param>
-            <returns>
-            一个包含 <paramref name="elements"/> 中所有成员的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象，这些成员以 <paramref name="separator"/> 分隔。
-            如果 <paramref name="elements"/> 没有成员，则该方法返回一个空的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 对象。
-            </returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+            <param name="at">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.ComplexMessage)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.SetTarget(HuajiTech.CoolQ.Messaging.At,HuajiTech.CoolQ.IUser)">
+            <summary>
+            设置 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象的目标。
+            </summary>
+            <param name="at">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象</param>
+            <param name="target"><see cref="T:HuajiTech.CoolQ.Messaging.At"/> 对象的目标。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetContent(HuajiTech.CoolQ.Messaging.ContactShare,HuajiTech.CoolQ.PluginContext)">
+            <summary>
+            获取 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象的内容。
+            </summary>
+            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象</param>
+            <param name="context">要使用的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetContent(HuajiTech.CoolQ.Messaging.ContactShare)">
+            <summary>
+            使用 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 获取 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象的内容。
+            </summary>
+            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.SetContent(HuajiTech.CoolQ.Messaging.ContactShare,HuajiTech.CoolQ.IChattable)">
+            <summary>
+            设置 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象的内容。
+            </summary>
+            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象</param>
+            <param name="content"><see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 对象的内容</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetFile(HuajiTech.CoolQ.Messaging.Image,HuajiTech.CoolQ.PluginContext)">
+            <summary>
+            获取指定 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。
+            </summary>
+            <param name="image">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象。</param>
+            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。</returns>
+            <param name="context">要使用的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetFile(HuajiTech.CoolQ.Messaging.Image)">
+            <summary>
+            使用 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 获取指定 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。
+            </summary>
+            <param name="image">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetFile(HuajiTech.CoolQ.Messaging.Record,System.String,HuajiTech.CoolQ.PluginContext)">
+            <summary>
+            获取指定 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。
+            </summary>
+            <param name="record">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象。</param>
+            <param name="format">返回的文件的格式。</param>
+            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。</returns>
+            <param name="context">要使用的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetFile(HuajiTech.CoolQ.Messaging.Record,System.String)">
+            <summary>
+            使用 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 获取指定 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。
+            </summary>
+            <param name="record">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象。</param>
+            <param name="format">返回的文件的格式。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Send(HuajiTech.CoolQ.ISendee,HuajiTech.CoolQ.Messaging.ComplexMessage)">
             <summary>
             向指定聊天发送 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>。
             </summary>
@@ -671,9 +226,9 @@
             <exception cref="T:System.ArgumentNullException"><paramref name="sendee"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="F:System.String.Empty"/>。</exception>
-            <exception cref="T:HuajiTech.CoolQ.CoolQException">酷Q返回了指示操作失败的值。</exception>
+            <exception cref="T:HuajiTech.CoolQ.ApiException">酷Q返回了指示操作失败的值。</exception>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Extensions.Send(HuajiTech.QQ.ISendee,HuajiTech.CoolQ.Messaging.MessageElement)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Send(HuajiTech.CoolQ.ISendee,HuajiTech.CoolQ.Messaging.MessageElement)">
             <summary>
             向指定聊天发送 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/>。
             </summary>
@@ -683,226 +238,7 @@
             <exception cref="T:System.ArgumentNullException"><paramref name="sendee"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
             <exception cref="T:System.ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="F:System.String.Empty"/>。</exception>
-            <exception cref="T:HuajiTech.CoolQ.CoolQException">酷Q返回了指示发送失败的值。</exception>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Image">
-            <summary>
-            表示图片的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Image.FileName">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象的文件名。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Image.GetFile">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。
-            </summary>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.Image"/> 对象表示的文件。</returns>
-            <exception cref="T:HuajiTech.CoolQ.CoolQException">酷Q返回了指示操作失败的值。</exception>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Location">
-            <summary>
-            表示位置的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Location.Address">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Location"/> 对象的地址。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Location.Latitude">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Location"/> 对象的纬度。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Location.Longitude">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Location"/> 对象的经度。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Location.Name">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Location"/> 对象的名称。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.MessageElement">
-            <summary>
-            表示消息元素。
-            此类为抽象类。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Music">
-            <summary>
-            表示音乐的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Music.Id">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Music"/> 对象的 ID。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Music.Platform">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Music"/> 对象的提供商。
-            </summary>
-            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"><paramref name="value" /> 不是有效的 <see cref="T:HuajiTech.CoolQ.Messaging.MusicPlatform"/> 值。</exception>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.MusicPlatform">
-            <summary>
-            指定音乐提供商。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.Messaging.MusicPlatform.QQ">
-            <summary>
-            QQ音乐。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.Messaging.MusicPlatform.Netease">
-            <summary>
-            网易云音乐。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.PlainText">
-            <summary>
-            表示纯文本。
-            此类不能被继承。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.PlainText.#ctor(System.String)">
-            <summary>
-            以指定内容初始化一个 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 类的新实例。
-            </summary>
-            <param name="content">要被 <see cref="T:HuajiTech.CoolQ.Messaging.PlainText"/> 包装的字符串。</param>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.PlainText.Content">
-            <summary>
-            获取未经转义的原始内容。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.PlainText.Escape(System.String)">
-            <summary>
-            将指定的字符串转换为可以让酷Q按原义解释字符的语法。
-            </summary>
-            <param name="str">要转换的字符串。</param>
-            <returns>指定字符串的已转换值。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.PlainText.Unescape(System.String)">
-            <summary>
-            将字符串中的转义字符转换为具有特殊意义的酷Q字符。
-            </summary>
-            <param name="str">要转换的字符串。</param>
-            <returns>指定字符串的已转换值。</returns>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.PlainText.ToString">
-            <summary>
-            返回经过 <see cref="M:HuajiTech.CoolQ.Messaging.PlainText.Escape(System.String)"/> 后的 <see cref="P:HuajiTech.CoolQ.Messaging.PlainText.Content"/>。
-            </summary>
-            <returns>经过 <see cref="M:HuajiTech.CoolQ.Messaging.PlainText.Escape(System.String)"/> 后的 <see cref="P:HuajiTech.CoolQ.Messaging.PlainText.Content"/>。</returns>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Record">
-            <summary>
-            表示录音的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Record.FileName">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象的文件名。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Record.IsVoiceChanged">
-            <summary>
-            获取或设置一个值，指示当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象是否经过变声。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.Record.GetFile(System.String)">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。
-            </summary>
-            <param name="format">返回的文件的格式。</param>
-            <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 对象表示的文件。</returns>
-            <exception cref="T:HuajiTech.CoolQ.CoolQException">酷Q返回了指示操作失败的值。</exception>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.RichText">
-            <summary>
-            表示富文本的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.RockPaperScissors">
-            <summary>
-            表示猜拳的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.RockPaperScissors.Kind">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.RockPaperScissors"/> 对象的类别。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind">
-            <summary>
-            指定猜拳的类别。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Rock">
-            <summary>
-            石头。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Scissors">
-            <summary>
-            剪刀。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.Messaging.RockPaperScissorsKind.Paper">
-            <summary>
-            布。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Shake">
-            <summary>
-            表示抖动的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Shake.Id">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Shake"/> 对象的ID。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.Share">
-            <summary>
-            表示分享的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Share.Description">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Share"/> 对象的描述。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Share.ImageUrl">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Share"/> 对象的图片 URL。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Share.Title">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Share"/> 对象的标题。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.Share.Url">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Share"/> 对象的 URL。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.SmallEmoticon">
-            <summary>
-            表示小表情的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.SmallEmoticon.Id">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.SmallEmoticon"/> 对象的 ID。
-            </summary>
+            <exception cref="T:HuajiTech.CoolQ.ApiException">酷Q返回了指示发送失败的值。</exception>
         </member>
         <member name="T:HuajiTech.CoolQ.PluginLoadStageAttribute">
             <summary>

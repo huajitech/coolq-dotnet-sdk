@@ -1,5 +1,5 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
+
 using System;
 
 namespace HuajiTech.CoolQ
@@ -34,7 +34,7 @@ namespace HuajiTech.CoolQ
 
         public virtual void Refresh() => GetInfo(true, true);
 
-        public override IContentfulMessage Send(string message)
+        public override IMessage Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -43,7 +43,7 @@ namespace HuajiTech.CoolQ
 
             var id = NativeMethods.User_Send(Bot.Instance.AuthCode, Number, message).CheckError();
 
-            return new ContentfulMessage(id, message);
+            return new Message(id, message);
         }
 
         public override bool Equals(IChattable? other) => base.Equals(other) && other is User;
@@ -64,7 +64,7 @@ namespace HuajiTech.CoolQ
                 _info = reader.Read();
                 return _info;
             }
-            catch (CoolQException) when (!requesting)
+            catch (ApiException) when (!requesting)
             {
                 return new UserInfo();
             }

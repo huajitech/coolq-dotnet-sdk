@@ -5,8 +5,8 @@
 3. 将以下代码粘贴到 `MyPlugin.cs`。
 
    ```csharp
-   using HuajiTech.QQ;
-   using HuajiTech.QQ.Events;
+   using HuajiTech.CoolQ;
+   using HuajiTech.CoolQ.Events;
 
    public class MyPlugin : Plugin
    {

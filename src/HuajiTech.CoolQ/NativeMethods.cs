@@ -1,4 +1,3 @@
-using HuajiTech.QQ;
 using System.Runtime.InteropServices;
 
 namespace HuajiTech.CoolQ

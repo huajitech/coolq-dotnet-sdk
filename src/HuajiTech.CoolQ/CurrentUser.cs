@@ -1,5 +1,5 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
+
 using System.Collections.Generic;
 using System.Linq;
 

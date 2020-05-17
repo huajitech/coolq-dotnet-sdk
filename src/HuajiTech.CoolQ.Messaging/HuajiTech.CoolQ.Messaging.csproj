@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <LangVersion>8</LangVersion>
+    <Nullable>enable</Nullable>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.Messaging.pfx</AssemblyOriginatorKeyFile>
+    <Version>0.2.3-alpha.1</Version>
+    <Authors>SYC</Authors>
+    <Company>HuajiTech</Company>
+    <Description>
+      用于处理酷Q消息。
+      常用类型：
+      HuajiTech.CoolQ.Messaging.ComplexMessage
+      HuajiTech.CoolQ.Messaging.CQCode
+    </Description>
+    <Copyright>Copyright (C) 2020 HuajiTech</Copyright>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/huajitech/coolq-dotnet-sdk</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/huajitech/coolq-dotnet-sdk</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>HuajiTech, CoolQ, 酷Q, QQ, Bot, Robot, 机器人, Message, Messaging, 消息, CQCode, CQ码</PackageTags>
+    <PackageReleaseNotes>这是一个测试版本，不建议用于生产环境。</PackageReleaseNotes>
+    <NeutralLanguage>zh-CN</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

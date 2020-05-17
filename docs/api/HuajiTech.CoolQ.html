@@ -87,14 +87,20 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">&#31867;
   </h3>
+      <h4><a class="xref" href="HuajiTech.CoolQ.ApiException.html">ApiException</a></h4>
+      <section><p>在调用 API 发生错误时引发的异常。</p>
+</section>
       <h4><a class="xref" href="HuajiTech.CoolQ.AppIdAttribute.html">AppIdAttribute</a></h4>
       <section><p>指定当前程序集的 AppID。
 此类不能被继承。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.Bot.html">Bot</a></h4>
       <section></section>
-      <h4><a class="xref" href="HuajiTech.CoolQ.CoolQException.html">CoolQException</a></h4>
-      <section><p>在酷Q返回了意料之外的值时引发的异常。</p>
+      <h4><a class="xref" href="HuajiTech.CoolQ.CurrentPluginContext.html">CurrentPluginContext</a></h4>
+      <section><p>提供操作 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html#HuajiTech_CoolQ_PluginContext_Current">Current</a> 的静态方法。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.CustomTitle.html">CustomTitle</a></h4>
+      <section><p>表示自定义头衔。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html">DefaultPluginLoadStageAttribute</a></h4>
       <section><p>指定缺省插件加载阶段。
@@ -103,6 +109,23 @@
       <h4><a class="xref" href="HuajiTech.CoolQ.Extensions.html">Extensions</a></h4>
       <section><p>定义扩展方法。</p>
 </section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.File.html">File</a></h4>
+      <section><p>表示文件。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.Logger.html">Logger</a></h4>
+      <section><p>提供记录日志的方法。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a></h4>
+      <section><p>用作插件的基类，并提供操作 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a> 的实例方法。
+此类为抽象类。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a></h4>
+      <section><p>表示插件上下文。
+此类为抽象类。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.PluginContextExtensions.html">PluginContextExtensions</a></h4>
+      <section><p>定义用于操作 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a> 的扩展方法。</p>
+</section>
       <h4><a class="xref" href="HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a></h4>
       <section><p>指定插件加载阶段。
 此类不能被继承。</p>
@@ -110,10 +133,86 @@
       <h4><a class="xref" href="HuajiTech.CoolQ.Status.html">Status</a></h4>
       <section><p>表示状态。</p>
 </section>
+    <h3 id="interfaces">&#25509;&#21475;
+  </h3>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IAliased.html">IAliased</a></h4>
+      <section><p>定义有别名的对象。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IAnonymousMember.html">IAnonymousMember</a></h4>
+      <section><p>定义匿名成员。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IBot.html">IBot</a></h4>
+      <section><p>定义机器人。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IChattable.html">IChattable</a></h4>
+      <section><p>定义可聊天的对象。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.ICurrentUser.html">ICurrentUser</a></h4>
+      <section><p>定义当前用户。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IEntranceRequest.html">IEntranceRequest</a></h4>
+      <section><p>定义加入请求。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IFriend.html">IFriend</a></h4>
+      <section><p>定义好友。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IFriendshipRequest.html">IFriendshipRequest</a></h4>
+      <section><p>定义好友请求。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IGroup.html">IGroup</a></h4>
+      <section><p>定义群。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.ILogger.html">ILogger</a></h4>
+      <section><p>定义记录日志的方法。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IMember.html">IMember</a></h4>
+      <section><p>定义成员。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IMemberInfo.html">IMemberInfo</a></h4>
+      <section><p>定义成员信息。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IMessage.html">IMessage</a></h4>
+      <section><p>定义消息。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IMuteable.html">IMuteable</a></h4>
+      <section><p>定义可禁言对象。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.INamed.html">INamed</a></h4>
+      <section></section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IPlugin.html">IPlugin</a></h4>
+      <section><p>用于标记插件类。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IRefreshable.html">IRefreshable</a></h4>
+      <section><p>定义可刷新的对象。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IRequest.html">IRequest</a></h4>
+      <section><p>定义请求。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IRequestable.html">IRequestable</a></h4>
+      <section><p>定义可请求的对象。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.ISendee.html">ISendee</a></h4>
+      <section><p>定义可发送消息的对象。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.ITimedMuteable.html">ITimedMuteable</a></h4>
+      <section><p>定义可以指定时间的可禁言对象。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.IUser.html">IUser</a></h4>
+      <section><p>定义用户。</p>
+</section>
     <h3 id="enums">&#26522;&#20030;
   </h3>
       <h4><a class="xref" href="HuajiTech.CoolQ.AppLifecycle.html">AppLifecycle</a></h4>
       <section><p>指定应用生命周期。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.Gender.html">Gender</a></h4>
+      <section><p>指定性别。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.LogLevel.html">LogLevel</a></h4>
+      <section><p>指定日志级别。</p>
+</section>
+      <h4><a class="xref" href="HuajiTech.CoolQ.MemberRole.html">MemberRole</a></h4>
+      <section><p>指定成员角色。</p>
 </section>
       <h4><a class="xref" href="HuajiTech.CoolQ.StatusColor.html">StatusColor</a></h4>
       <section><p>指定状态颜色。</p>

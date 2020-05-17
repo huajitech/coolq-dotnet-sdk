@@ -86,7 +86,7 @@ if (e.Source is IMember) { } // 群临时会话消息（注意：由于酷Q限�
 if (e.Source is IFriend) { } // 好友消息。
 </code></pre>
 <h2 id="使用-">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_Parse_HuajiTech_QQ_IContentfulMessage_System_Boolean_">Parse(IContentfulMessage, Boolean)</a> 扩展方法解析消息。</p>
+<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.AbstractionExtensions.html#HuajiTech_CoolQ_Messaging_AbstractionExtensions_Parse_HuajiTech_CoolQ_IMessage_System_Boolean_">Parse(IMessage, Boolean)</a> 扩展方法解析消息。</p>
 <pre><code class="lang-csharp">var message = e.Message.Parse();
 </code></pre>
 <p>获取消息中的所有纯文本拼接成的字符串。</p>
@@ -98,7 +98,7 @@ if (e.Source is IFriend) { } // 好友消息。
     ...
 }
 </code></pre>
-<p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.Extensions.html#HuajiTech_CoolQ_Messaging_Extensions_At_HuajiTech_QQ_IUser_">At(IUser)</a> @ 消息的发送者。</p>
+<p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.AbstractionExtensions.html#HuajiTech_CoolQ_Messaging_AbstractionExtensions_At_HuajiTech_CoolQ_IUser_">At(IUser)</a> @ 消息的发送者。</p>
 <pre><code class="lang-csharp">e.Source.Send(e.Sender.At() + &quot; How are you?&quot;)
 </code></pre>
 <p>解构复合消息。</p>
@@ -112,7 +112,7 @@ if (e.Source is IFriend) { } // 好友消息。
 }
 </code></pre>
 <h2 id="使用正则消息">使用正则消息</h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_QQ_IContentfulMessage_">RegexDecode(IContentfulMessage)</a> 扩展方法解码正则消息。</p>
+<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_IMessage_">RegexDecode(IMessage)</a> 扩展方法解码正则消息。</p>
 <pre><code class="lang-csharp">var args = e.Message.RegexDecode();
 </code></pre>
 <p>获取 <code>Name</code> 键的值。</p>

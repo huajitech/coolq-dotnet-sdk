@@ -18,7 +18,7 @@
     <PackageIcon>Icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/huajitech/coolq-dotnet-sdk</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>CoolQ, 酷Q, QQ, Bot, Robot, 机器人</PackageTags>
+    <PackageTags>HuajiTech, CoolQ, 酷Q, QQ, Bot, Robot, 机器人</PackageTags>
     <PackageReleaseNotes>这是一个测试版本，不建议用于生产环境。</PackageReleaseNotes>
     <NeutralLanguage>zh-CN</NeutralLanguage>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -83,7 +83,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HuajiTech.QQ\HuajiTech.QQ.csproj" />
+    <ProjectReference Include="..\HuajiTech.CoolQ.Abstractions\HuajiTech.CoolQ.Abstractions.csproj" />
+    <ProjectReference Include="..\HuajiTech.CoolQ.Messaging\HuajiTech.CoolQ.Messaging.csproj" />
   </ItemGroup>
 
   <ItemGroup>

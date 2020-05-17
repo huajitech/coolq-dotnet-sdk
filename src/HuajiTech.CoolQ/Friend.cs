@@ -1,5 +1,4 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
 using System;
 using System.Linq;
 
@@ -47,7 +46,7 @@ namespace HuajiTech.CoolQ
 
                 return _info;
             }
-            catch (CoolQException) when (!requesting)
+            catch (ApiException) when (!requesting)
             {
             }
             catch (InvalidOperationException)

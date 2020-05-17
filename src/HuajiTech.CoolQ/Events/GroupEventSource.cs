@@ -1,7 +1,5 @@
 ﻿using HuajiTech.CoolQ.DataExchange;
 using HuajiTech.CoolQ.Utilities;
-using HuajiTech.QQ;
-using HuajiTech.QQ.Events;
 using HuajiTech.UnmanagedExports;
 using System;
 using System.ComponentModel;

@@ -1,5 +1,4 @@
-﻿using HuajiTech.QQ;
-using System;
+﻿using System;
 
 namespace HuajiTech.CoolQ
 {

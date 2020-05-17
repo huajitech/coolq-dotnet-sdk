@@ -1,5 +1,5 @@
 using HuajiTech.CoolQ.DataExchange;
-using HuajiTech.QQ;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +62,7 @@ namespace HuajiTech.CoolQ
             GetInfo(true);
         }
 
-        public override IContentfulMessage Send(string message)
+        public override IMessage Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -71,7 +71,7 @@ namespace HuajiTech.CoolQ
 
             var id = NativeMethods.Group_Send(Bot.Instance.AuthCode, Number, message).CheckError();
 
-            return new ContentfulMessage(id, message);
+            return new Message(id, message);
         }
 
         public void Unmute() =>
@@ -94,7 +94,7 @@ namespace HuajiTech.CoolQ
                     NativeMethods.Group_GetInfo(Bot.Instance.AuthCode, Number, refresh).CheckError());
                 _info = reader.Read();
             }
-            catch (CoolQException) when (!requesting)
+            catch (ApiException) when (!requesting)
             {
                 return new GroupInfo();
             }
