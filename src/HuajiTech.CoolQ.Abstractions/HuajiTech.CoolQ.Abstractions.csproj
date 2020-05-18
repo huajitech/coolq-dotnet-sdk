@@ -2,18 +2,19 @@
 
   <PropertyGroup>
     <RootNamespace>HuajiTech.CoolQ</RootNamespace>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net461;net45</TargetFrameworks>
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.Abstractions.pfx</AssemblyOriginatorKeyFile>
-    <Version>0.2.3-alpha.1</Version>
+    <Version>0.3.0-alpha.1</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>对于 HuajiTech.CoolQ 的抽象。</Description>
     <Copyright>Copyright (C) 2020 HuajiTech</Copyright>
     <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/huajitech/coolq-dotnet-sdk</PackageProjectUrl>
+    <PackageIcon>Icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/huajitech/coolq-dotnet-sdk</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>HuajiTech, CoolQ, 酷Q, QQ, Bot, Robot, 机器人</PackageTags>
@@ -21,16 +22,22 @@
     <NeutralLanguage>zh-CN</NeutralLanguage>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <DocumentationFile>C:\Users\SYC\source\repos\HuajiTech.CoolQ\src\HuajiTech.CoolQ.Abstractions\HuajiTech.CoolQ.Abstractions.xml</DocumentationFile>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\SYC\source\repos\HuajiTech.CoolQ\src\HuajiTech.CoolQ\HuajiTech.CoolQ.xml</DocumentationFile>
-  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <NoWarn>1701;1702</NoWarn>
-  </PropertyGroup>
-
+  <ItemGroup>
+    <None Include="..\..\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <None Remove="stylecop.json" />
   </ItemGroup>
@@ -51,16 +58,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources.Designer.cs">
-      <DependentUpon>Resources.resx</DependentUpon>
+    <Compile Update="AbstractionAbstractionResources.Designer.cs">
+      <DependentUpon>AbstractionAbstractionResources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources.resx">
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="AbstractionAbstractionResources.resx">
+      <LastGenOutput>AbstractionAbstractionResources.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>HuajiTech.CoolQ.Loaders</RootNamespace>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <LangVersion>8</LangVersion>
+    <Nullable>enable</Nullable>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.Loaders.Autofac.pfx</AssemblyOriginatorKeyFile>
+    <Version>0.3.0-alpha.1</Version>
+    <Authors>SYC</Authors>
+    <Company>HuajiTech</Company>
+    <Description>使用 Autofac 加载 HuajiTech.CoolQ 应用。</Description>
+    <Copyright>Copyright (C) 2020 HuajiTech</Copyright>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/huajitech/coolq-dotnet-sdk</PackageProjectUrl>
+    <PackageIcon>Icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/huajitech/coolq-dotnet-sdk</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>HuajiTech, CoolQ, 酷Q, QQ, Bot, Robot, 机器人, Loaders, Autofac</PackageTags>
+    <PackageReleaseNotes>这是一个测试版本，不建议用于生产环境。</PackageReleaseNotes>
+    <NeutralLanguage>zh-CN</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HuajiTech.CoolQ.Core\HuajiTech.CoolQ.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AutofacLoaderResources.Designer.cs">
+      <DependentUpon>AutofacLoaderResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AutofacLoaderResources.resx">
+      <LastGenOutput>AutofacLoaderResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

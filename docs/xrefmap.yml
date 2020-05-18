@@ -220,47 +220,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Bot.GetImage
   nameWithType: Bot.GetImage
-- uid: HuajiTech.CoolQ.Bot.GetPlugin(System.Type)
-  name: GetPlugin(Type)
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugin_System_Type_
-  commentId: M:HuajiTech.CoolQ.Bot.GetPlugin(System.Type)
-  fullName: HuajiTech.CoolQ.Bot.GetPlugin(System.Type)
-  nameWithType: Bot.GetPlugin(Type)
-- uid: HuajiTech.CoolQ.Bot.GetPlugin*
-  name: GetPlugin
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugin_
-  commentId: Overload:HuajiTech.CoolQ.Bot.GetPlugin
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Bot.GetPlugin
-  nameWithType: Bot.GetPlugin
-- uid: HuajiTech.CoolQ.Bot.GetPlugin``1
-  name: GetPlugin<TPlugin>()
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugin__1
-  commentId: M:HuajiTech.CoolQ.Bot.GetPlugin``1
-  name.vb: GetPlugin(Of TPlugin)()
-  fullName: HuajiTech.CoolQ.Bot.GetPlugin<TPlugin>()
-  fullName.vb: HuajiTech.CoolQ.Bot.GetPlugin(Of TPlugin)()
-  nameWithType: Bot.GetPlugin<TPlugin>()
-  nameWithType.vb: Bot.GetPlugin(Of TPlugin)()
-- uid: HuajiTech.CoolQ.Bot.GetPlugins
-  name: GetPlugins()
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins
-  commentId: M:HuajiTech.CoolQ.Bot.GetPlugins
-  fullName: HuajiTech.CoolQ.Bot.GetPlugins()
-  nameWithType: Bot.GetPlugins()
-- uid: HuajiTech.CoolQ.Bot.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
-  name: GetPlugins(AppLifecycle)
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins_HuajiTech_CoolQ_AppLifecycle_
-  commentId: M:HuajiTech.CoolQ.Bot.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
-  fullName: HuajiTech.CoolQ.Bot.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
-  nameWithType: Bot.GetPlugins(AppLifecycle)
-- uid: HuajiTech.CoolQ.Bot.GetPlugins*
-  name: GetPlugins
-  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetPlugins_
-  commentId: Overload:HuajiTech.CoolQ.Bot.GetPlugins
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Bot.GetPlugins
-  nameWithType: Bot.GetPlugins
 - uid: HuajiTech.CoolQ.Bot.GetRecord(System.String,System.String)
   name: GetRecord(String, String)
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_GetRecord_System_String_System_String_
@@ -274,6 +233,32 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Bot.GetRecord
   nameWithType: Bot.GetRecord
+- uid: HuajiTech.CoolQ.Bot.Instance
+  name: Instance
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Instance
+  commentId: P:HuajiTech.CoolQ.Bot.Instance
+  fullName: HuajiTech.CoolQ.Bot.Instance
+  nameWithType: Bot.Instance
+- uid: HuajiTech.CoolQ.Bot.Instance*
+  name: Instance
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Instance_
+  commentId: Overload:HuajiTech.CoolQ.Bot.Instance
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Bot.Instance
+  nameWithType: Bot.Instance
+- uid: HuajiTech.CoolQ.Bot.Loader
+  name: Loader
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Loader
+  commentId: P:HuajiTech.CoolQ.Bot.Loader
+  fullName: HuajiTech.CoolQ.Bot.Loader
+  nameWithType: Bot.Loader
+- uid: HuajiTech.CoolQ.Bot.Loader*
+  name: Loader
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Loader_
+  commentId: Overload:HuajiTech.CoolQ.Bot.Loader
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Bot.Loader
+  nameWithType: Bot.Loader
 - uid: HuajiTech.CoolQ.Bot.Logger
   name: Logger
   href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Logger
@@ -287,6 +272,19 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Bot.Logger
   nameWithType: Bot.Logger
+- uid: HuajiTech.CoolQ.Bot.Packer
+  name: Packer
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Packer
+  commentId: P:HuajiTech.CoolQ.Bot.Packer
+  fullName: HuajiTech.CoolQ.Bot.Packer
+  nameWithType: Bot.Packer
+- uid: HuajiTech.CoolQ.Bot.Packer*
+  name: Packer
+  href: api/HuajiTech.CoolQ.Bot.html#HuajiTech_CoolQ_Bot_Packer_
+  commentId: Overload:HuajiTech.CoolQ.Bot.Packer
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Bot.Packer
+  nameWithType: Bot.Packer
 - uid: HuajiTech.CoolQ.CurrentPluginContext
   name: CurrentPluginContext
   href: api/HuajiTech.CoolQ.CurrentPluginContext.html
@@ -547,6 +545,84 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Events.AnonymousMessageReceivedEventArgs.Source
   nameWithType: AnonymousMessageReceivedEventArgs.Source
+- uid: HuajiTech.CoolQ.Events.BotEventSource
+  name: BotEventSource
+  href: api/HuajiTech.CoolQ.Events.BotEventSource.html
+  commentId: T:HuajiTech.CoolQ.Events.BotEventSource
+  fullName: HuajiTech.CoolQ.Events.BotEventSource
+  nameWithType: BotEventSource
+- uid: HuajiTech.CoolQ.Events.BotEventSource.AppDisabling
+  name: AppDisabling
+  href: api/HuajiTech.CoolQ.Events.BotEventSource.html#HuajiTech_CoolQ_Events_BotEventSource_AppDisabling
+  commentId: E:HuajiTech.CoolQ.Events.BotEventSource.AppDisabling
+  fullName: HuajiTech.CoolQ.Events.BotEventSource.AppDisabling
+  nameWithType: BotEventSource.AppDisabling
+- uid: HuajiTech.CoolQ.Events.BotEventSource.AppEnabled
+  name: AppEnabled
+  href: api/HuajiTech.CoolQ.Events.BotEventSource.html#HuajiTech_CoolQ_Events_BotEventSource_AppEnabled
+  commentId: E:HuajiTech.CoolQ.Events.BotEventSource.AppEnabled
+  fullName: HuajiTech.CoolQ.Events.BotEventSource.AppEnabled
+  nameWithType: BotEventSource.AppEnabled
+- uid: HuajiTech.CoolQ.Events.BotEventSource.BotStarted
+  name: BotStarted
+  href: api/HuajiTech.CoolQ.Events.BotEventSource.html#HuajiTech_CoolQ_Events_BotEventSource_BotStarted
+  commentId: E:HuajiTech.CoolQ.Events.BotEventSource.BotStarted
+  fullName: HuajiTech.CoolQ.Events.BotEventSource.BotStarted
+  nameWithType: BotEventSource.BotStarted
+- uid: HuajiTech.CoolQ.Events.BotEventSource.BotStopping
+  name: BotStopping
+  href: api/HuajiTech.CoolQ.Events.BotEventSource.html#HuajiTech_CoolQ_Events_BotEventSource_BotStopping
+  commentId: E:HuajiTech.CoolQ.Events.BotEventSource.BotStopping
+  fullName: HuajiTech.CoolQ.Events.BotEventSource.BotStopping
+  nameWithType: BotEventSource.BotStopping
+- uid: HuajiTech.CoolQ.Events.BotEventSource.Instance
+  name: Instance
+  href: api/HuajiTech.CoolQ.Events.BotEventSource.html#HuajiTech_CoolQ_Events_BotEventSource_Instance
+  commentId: F:HuajiTech.CoolQ.Events.BotEventSource.Instance
+  fullName: HuajiTech.CoolQ.Events.BotEventSource.Instance
+  nameWithType: BotEventSource.Instance
+- uid: HuajiTech.CoolQ.Events.CurrentUserEventSource
+  name: CurrentUserEventSource
+  href: api/HuajiTech.CoolQ.Events.CurrentUserEventSource.html
+  commentId: T:HuajiTech.CoolQ.Events.CurrentUserEventSource
+  fullName: HuajiTech.CoolQ.Events.CurrentUserEventSource
+  nameWithType: CurrentUserEventSource
+- uid: HuajiTech.CoolQ.Events.CurrentUserEventSource.AnonymousMessageReceived
+  name: AnonymousMessageReceived
+  href: api/HuajiTech.CoolQ.Events.CurrentUserEventSource.html#HuajiTech_CoolQ_Events_CurrentUserEventSource_AnonymousMessageReceived
+  commentId: E:HuajiTech.CoolQ.Events.CurrentUserEventSource.AnonymousMessageReceived
+  fullName: HuajiTech.CoolQ.Events.CurrentUserEventSource.AnonymousMessageReceived
+  nameWithType: CurrentUserEventSource.AnonymousMessageReceived
+- uid: HuajiTech.CoolQ.Events.CurrentUserEventSource.EntranceInvited
+  name: EntranceInvited
+  href: api/HuajiTech.CoolQ.Events.CurrentUserEventSource.html#HuajiTech_CoolQ_Events_CurrentUserEventSource_EntranceInvited
+  commentId: E:HuajiTech.CoolQ.Events.CurrentUserEventSource.EntranceInvited
+  fullName: HuajiTech.CoolQ.Events.CurrentUserEventSource.EntranceInvited
+  nameWithType: CurrentUserEventSource.EntranceInvited
+- uid: HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdded
+  name: FriendAdded
+  href: api/HuajiTech.CoolQ.Events.CurrentUserEventSource.html#HuajiTech_CoolQ_Events_CurrentUserEventSource_FriendAdded
+  commentId: E:HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdded
+  fullName: HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdded
+  nameWithType: CurrentUserEventSource.FriendAdded
+- uid: HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdding
+  name: FriendAdding
+  href: api/HuajiTech.CoolQ.Events.CurrentUserEventSource.html#HuajiTech_CoolQ_Events_CurrentUserEventSource_FriendAdding
+  commentId: E:HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdding
+  fullName: HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdding
+  nameWithType: CurrentUserEventSource.FriendAdding
+- uid: HuajiTech.CoolQ.Events.CurrentUserEventSource.Instance
+  name: Instance
+  href: api/HuajiTech.CoolQ.Events.CurrentUserEventSource.html#HuajiTech_CoolQ_Events_CurrentUserEventSource_Instance
+  commentId: F:HuajiTech.CoolQ.Events.CurrentUserEventSource.Instance
+  fullName: HuajiTech.CoolQ.Events.CurrentUserEventSource.Instance
+  nameWithType: CurrentUserEventSource.Instance
+- uid: HuajiTech.CoolQ.Events.CurrentUserEventSource.MessageReceived
+  name: MessageReceived
+  href: api/HuajiTech.CoolQ.Events.CurrentUserEventSource.html#HuajiTech_CoolQ_Events_CurrentUserEventSource_MessageReceived
+  commentId: E:HuajiTech.CoolQ.Events.CurrentUserEventSource.MessageReceived
+  fullName: HuajiTech.CoolQ.Events.CurrentUserEventSource.MessageReceived
+  nameWithType: CurrentUserEventSource.MessageReceived
 - uid: HuajiTech.CoolQ.Events.EntranceInvitedEventArgs
   name: EntranceInvitedEventArgs
   href: api/HuajiTech.CoolQ.Events.EntranceInvitedEventArgs.html
@@ -856,6 +932,78 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Events.GroupEventArgs.Source
   nameWithType: GroupEventArgs.Source
+- uid: HuajiTech.CoolQ.Events.GroupEventSource
+  name: GroupEventSource
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html
+  commentId: T:HuajiTech.CoolQ.Events.GroupEventSource
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource
+  nameWithType: GroupEventSource
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.AdministratorAdded
+  name: AdministratorAdded
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_AdministratorAdded
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.AdministratorAdded
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.AdministratorAdded
+  nameWithType: GroupEventSource.AdministratorAdded
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.AdministratorRemoved
+  name: AdministratorRemoved
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_AdministratorRemoved
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.AdministratorRemoved
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.AdministratorRemoved
+  nameWithType: GroupEventSource.AdministratorRemoved
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.EntranceRequested
+  name: EntranceRequested
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_EntranceRequested
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.EntranceRequested
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.EntranceRequested
+  nameWithType: GroupEventSource.EntranceRequested
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.FileUploaded
+  name: FileUploaded
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_FileUploaded
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.FileUploaded
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.FileUploaded
+  nameWithType: GroupEventSource.FileUploaded
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.GroupMuted
+  name: GroupMuted
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_GroupMuted
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.GroupMuted
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.GroupMuted
+  nameWithType: GroupEventSource.GroupMuted
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.GroupUnmuted
+  name: GroupUnmuted
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_GroupUnmuted
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.GroupUnmuted
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.GroupUnmuted
+  nameWithType: GroupEventSource.GroupUnmuted
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.Instance
+  name: Instance
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_Instance
+  commentId: F:HuajiTech.CoolQ.Events.GroupEventSource.Instance
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.Instance
+  nameWithType: GroupEventSource.Instance
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.MemberJoined
+  name: MemberJoined
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_MemberJoined
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.MemberJoined
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.MemberJoined
+  nameWithType: GroupEventSource.MemberJoined
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.MemberLeft
+  name: MemberLeft
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_MemberLeft
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.MemberLeft
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.MemberLeft
+  nameWithType: GroupEventSource.MemberLeft
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.MemberMuted
+  name: MemberMuted
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_MemberMuted
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.MemberMuted
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.MemberMuted
+  nameWithType: GroupEventSource.MemberMuted
+- uid: HuajiTech.CoolQ.Events.GroupEventSource.MemberUnmuted
+  name: MemberUnmuted
+  href: api/HuajiTech.CoolQ.Events.GroupEventSource.html#HuajiTech_CoolQ_Events_GroupEventSource_MemberUnmuted
+  commentId: E:HuajiTech.CoolQ.Events.GroupEventSource.MemberUnmuted
+  fullName: HuajiTech.CoolQ.Events.GroupEventSource.MemberUnmuted
+  nameWithType: GroupEventSource.MemberUnmuted
 - uid: HuajiTech.CoolQ.Events.GroupMuteEventArgs
   name: GroupMuteEventArgs
   href: api/HuajiTech.CoolQ.Events.GroupMuteEventArgs.html
@@ -1810,6 +1958,53 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.IGroup.MemberCount
   nameWithType: IGroup.MemberCount
+- uid: HuajiTech.CoolQ.ILoader
+  name: ILoader
+  href: api/HuajiTech.CoolQ.ILoader.html
+  commentId: T:HuajiTech.CoolQ.ILoader
+  fullName: HuajiTech.CoolQ.ILoader
+  nameWithType: ILoader
+- uid: HuajiTech.CoolQ.ILoader.GetPlugin(System.Type)
+  name: GetPlugin(Type)
+  href: api/HuajiTech.CoolQ.ILoader.html#HuajiTech_CoolQ_ILoader_GetPlugin_System_Type_
+  commentId: M:HuajiTech.CoolQ.ILoader.GetPlugin(System.Type)
+  fullName: HuajiTech.CoolQ.ILoader.GetPlugin(System.Type)
+  nameWithType: ILoader.GetPlugin(Type)
+- uid: HuajiTech.CoolQ.ILoader.GetPlugin*
+  name: GetPlugin
+  href: api/HuajiTech.CoolQ.ILoader.html#HuajiTech_CoolQ_ILoader_GetPlugin_
+  commentId: Overload:HuajiTech.CoolQ.ILoader.GetPlugin
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.ILoader.GetPlugin
+  nameWithType: ILoader.GetPlugin
+- uid: HuajiTech.CoolQ.ILoader.GetPlugin``1
+  name: GetPlugin<TPlugin>()
+  href: api/HuajiTech.CoolQ.ILoader.html#HuajiTech_CoolQ_ILoader_GetPlugin__1
+  commentId: M:HuajiTech.CoolQ.ILoader.GetPlugin``1
+  name.vb: GetPlugin(Of TPlugin)()
+  fullName: HuajiTech.CoolQ.ILoader.GetPlugin<TPlugin>()
+  fullName.vb: HuajiTech.CoolQ.ILoader.GetPlugin(Of TPlugin)()
+  nameWithType: ILoader.GetPlugin<TPlugin>()
+  nameWithType.vb: ILoader.GetPlugin(Of TPlugin)()
+- uid: HuajiTech.CoolQ.ILoader.GetPlugins
+  name: GetPlugins()
+  href: api/HuajiTech.CoolQ.ILoader.html#HuajiTech_CoolQ_ILoader_GetPlugins
+  commentId: M:HuajiTech.CoolQ.ILoader.GetPlugins
+  fullName: HuajiTech.CoolQ.ILoader.GetPlugins()
+  nameWithType: ILoader.GetPlugins()
+- uid: HuajiTech.CoolQ.ILoader.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
+  name: GetPlugins(AppLifecycle)
+  href: api/HuajiTech.CoolQ.ILoader.html#HuajiTech_CoolQ_ILoader_GetPlugins_HuajiTech_CoolQ_AppLifecycle_
+  commentId: M:HuajiTech.CoolQ.ILoader.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
+  fullName: HuajiTech.CoolQ.ILoader.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
+  nameWithType: ILoader.GetPlugins(AppLifecycle)
+- uid: HuajiTech.CoolQ.ILoader.GetPlugins*
+  name: GetPlugins
+  href: api/HuajiTech.CoolQ.ILoader.html#HuajiTech_CoolQ_ILoader_GetPlugins_
+  commentId: Overload:HuajiTech.CoolQ.ILoader.GetPlugins
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.ILoader.GetPlugins
+  nameWithType: ILoader.GetPlugins
 - uid: HuajiTech.CoolQ.ILogger
   name: ILogger
   href: api/HuajiTech.CoolQ.ILogger.html
@@ -2316,6 +2511,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.INamed.Name
   nameWithType: INamed.Name
+- uid: HuajiTech.CoolQ.IPacker
+  name: IPacker
+  href: api/HuajiTech.CoolQ.IPacker.html
+  commentId: T:HuajiTech.CoolQ.IPacker
+  fullName: HuajiTech.CoolQ.IPacker
+  nameWithType: IPacker
+- uid: HuajiTech.CoolQ.IPacker.GetPackedAssemblies
+  name: GetPackedAssemblies()
+  href: api/HuajiTech.CoolQ.IPacker.html#HuajiTech_CoolQ_IPacker_GetPackedAssemblies
+  commentId: M:HuajiTech.CoolQ.IPacker.GetPackedAssemblies
+  fullName: HuajiTech.CoolQ.IPacker.GetPackedAssemblies()
+  nameWithType: IPacker.GetPackedAssemblies()
+- uid: HuajiTech.CoolQ.IPacker.GetPackedAssemblies*
+  name: GetPackedAssemblies
+  href: api/HuajiTech.CoolQ.IPacker.html#HuajiTech_CoolQ_IPacker_GetPackedAssemblies_
+  commentId: Overload:HuajiTech.CoolQ.IPacker.GetPackedAssemblies
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.IPacker.GetPackedAssemblies
+  nameWithType: IPacker.GetPackedAssemblies
 - uid: HuajiTech.CoolQ.IPlugin
   name: IPlugin
   href: api/HuajiTech.CoolQ.IPlugin.html
@@ -2501,6 +2715,72 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.IUser.Nickname
   nameWithType: IUser.Nickname
+- uid: HuajiTech.CoolQ.Loaders
+  name: HuajiTech.CoolQ.Loaders
+  href: api/HuajiTech.CoolQ.Loaders.html
+  commentId: N:HuajiTech.CoolQ.Loaders
+  fullName: HuajiTech.CoolQ.Loaders
+  nameWithType: HuajiTech.CoolQ.Loaders
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader
+  name: AutofacLoader
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html
+  commentId: T:HuajiTech.CoolQ.Loaders.AutofacLoader
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader
+  nameWithType: AutofacLoader
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.#ctor
+  name: AutofacLoader()
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader__ctor
+  commentId: M:HuajiTech.CoolQ.Loaders.AutofacLoader.#ctor
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.AutofacLoader()
+  nameWithType: AutofacLoader.AutofacLoader()
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.#ctor*
+  name: AutofacLoader
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader__ctor_
+  commentId: Overload:HuajiTech.CoolQ.Loaders.AutofacLoader.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.AutofacLoader
+  nameWithType: AutofacLoader.AutofacLoader
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin(System.Type)
+  name: GetPlugin(Type)
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader_GetPlugin_System_Type_
+  commentId: M:HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin(System.Type)
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin(System.Type)
+  nameWithType: AutofacLoader.GetPlugin(Type)
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin*
+  name: GetPlugin
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader_GetPlugin_
+  commentId: Overload:HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin
+  nameWithType: AutofacLoader.GetPlugin
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin``1
+  name: GetPlugin<TPlugin>()
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader_GetPlugin__1
+  commentId: M:HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin``1
+  name.vb: GetPlugin(Of TPlugin)()
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin<TPlugin>()
+  fullName.vb: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugin(Of TPlugin)()
+  nameWithType: AutofacLoader.GetPlugin<TPlugin>()
+  nameWithType.vb: AutofacLoader.GetPlugin(Of TPlugin)()
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins
+  name: GetPlugins()
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader_GetPlugins
+  commentId: M:HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins()
+  nameWithType: AutofacLoader.GetPlugins()
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
+  name: GetPlugins(AppLifecycle)
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader_GetPlugins_HuajiTech_CoolQ_AppLifecycle_
+  commentId: M:HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins(HuajiTech.CoolQ.AppLifecycle)
+  nameWithType: AutofacLoader.GetPlugins(AppLifecycle)
+- uid: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins*
+  name: GetPlugins
+  href: api/HuajiTech.CoolQ.Loaders.AutofacLoader.html#HuajiTech_CoolQ_Loaders_AutofacLoader_GetPlugins_
+  commentId: Overload:HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Loaders.AutofacLoader.GetPlugins
+  nameWithType: AutofacLoader.GetPlugins
 - uid: HuajiTech.CoolQ.Logger
   name: Logger
   href: api/HuajiTech.CoolQ.Logger.html
@@ -5166,6 +5446,31 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.SmallEmoticon.Id
   nameWithType: SmallEmoticon.Id
+- uid: HuajiTech.CoolQ.Packing
+  name: HuajiTech.CoolQ.Packing
+  href: api/HuajiTech.CoolQ.Packing.html
+  commentId: N:HuajiTech.CoolQ.Packing
+  fullName: HuajiTech.CoolQ.Packing
+  nameWithType: HuajiTech.CoolQ.Packing
+- uid: HuajiTech.CoolQ.Packing.ILRepacker
+  name: ILRepacker
+  href: api/HuajiTech.CoolQ.Packing.ILRepacker.html
+  commentId: T:HuajiTech.CoolQ.Packing.ILRepacker
+  fullName: HuajiTech.CoolQ.Packing.ILRepacker
+  nameWithType: ILRepacker
+- uid: HuajiTech.CoolQ.Packing.ILRepacker.GetPackedAssemblies
+  name: GetPackedAssemblies()
+  href: api/HuajiTech.CoolQ.Packing.ILRepacker.html#HuajiTech_CoolQ_Packing_ILRepacker_GetPackedAssemblies
+  commentId: M:HuajiTech.CoolQ.Packing.ILRepacker.GetPackedAssemblies
+  fullName: HuajiTech.CoolQ.Packing.ILRepacker.GetPackedAssemblies()
+  nameWithType: ILRepacker.GetPackedAssemblies()
+- uid: HuajiTech.CoolQ.Packing.ILRepacker.GetPackedAssemblies*
+  name: GetPackedAssemblies
+  href: api/HuajiTech.CoolQ.Packing.ILRepacker.html#HuajiTech_CoolQ_Packing_ILRepacker_GetPackedAssemblies_
+  commentId: Overload:HuajiTech.CoolQ.Packing.ILRepacker.GetPackedAssemblies
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.Packing.ILRepacker.GetPackedAssemblies
+  nameWithType: ILRepacker.GetPackedAssemblies
 - uid: HuajiTech.CoolQ.Plugin
   name: Plugin
   href: api/HuajiTech.CoolQ.Plugin.html
@@ -5320,6 +5625,19 @@ references:
   commentId: T:HuajiTech.CoolQ.PluginContext
   fullName: HuajiTech.CoolQ.PluginContext
   nameWithType: PluginContext
+- uid: HuajiTech.CoolQ.PluginContext.#ctor(HuajiTech.CoolQ.IBot)
+  name: PluginContext(IBot)
+  href: api/HuajiTech.CoolQ.PluginContext.html#HuajiTech_CoolQ_PluginContext__ctor_HuajiTech_CoolQ_IBot_
+  commentId: M:HuajiTech.CoolQ.PluginContext.#ctor(HuajiTech.CoolQ.IBot)
+  fullName: HuajiTech.CoolQ.PluginContext.PluginContext(HuajiTech.CoolQ.IBot)
+  nameWithType: PluginContext.PluginContext(IBot)
+- uid: HuajiTech.CoolQ.PluginContext.#ctor*
+  name: PluginContext
+  href: api/HuajiTech.CoolQ.PluginContext.html#HuajiTech_CoolQ_PluginContext__ctor_
+  commentId: Overload:HuajiTech.CoolQ.PluginContext.#ctor
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.PluginContext.PluginContext
+  nameWithType: PluginContext.PluginContext
 - uid: HuajiTech.CoolQ.PluginContext.Bot
   name: Bot
   href: api/HuajiTech.CoolQ.PluginContext.html#HuajiTech_CoolQ_PluginContext_Bot

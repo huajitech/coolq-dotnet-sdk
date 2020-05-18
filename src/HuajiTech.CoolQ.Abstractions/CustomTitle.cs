@@ -17,7 +17,7 @@ namespace HuajiTech.CoolQ
         {
             if (string.IsNullOrWhiteSpace(text))
             {
-                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(text));
+                throw new ArgumentException(AbstractionResources.FieldCannotBeEmptyOrWhiteSpace, nameof(text));
             }
 
             Text = text;

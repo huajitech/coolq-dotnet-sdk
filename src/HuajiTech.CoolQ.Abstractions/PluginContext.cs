@@ -11,19 +11,28 @@ namespace HuajiTech.CoolQ
         private static PluginContext? _current;
 
         /// <summary>
+        /// 以指定的机器人初始化一个 <see cref="PluginContext"/> 类的新实例。
+        /// </summary>
+        /// <param name="bot">机器人。</param>
+        protected PluginContext(IBot bot)
+        {
+            Bot = bot ?? throw new ArgumentNullException(nameof(bot));
+        }
+
+        /// <summary>
         /// 获取或设置当前插件上下文。
         /// </summary>
         /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
         public static PluginContext Current
         {
-            get => _current ?? throw new InvalidOperationException(Resources.ContextNotInitialized);
+            get => _current ?? throw new InvalidOperationException(AbstractionResources.ContextNotInitialized);
             set => _current = value ?? throw new ArgumentNullException(nameof(value));
         }
 
         /// <summary>
         /// 获取当前 <see cref="PluginContext"/> 对象的 <see cref="IBot"/>。
         /// </summary>
-        public abstract IBot Bot { get; }
+        public IBot Bot { get; }
 
         /// <summary>
         /// 获取指定号码的用户。

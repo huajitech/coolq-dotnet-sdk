@@ -26,12 +26,12 @@
         protected IBot Bot => Context.Bot;
 
         /// <summary>
-        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="CurrentUser"/>。
+        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="ICurrentUser"/>。
         /// </summary>
         protected ICurrentUser CurrentUser => Bot.CurrentUser;
 
         /// <summary>
-        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="Logger"/>。
+        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="ILogger"/>。
         /// </summary>
         protected ILogger Logger => Bot.Logger;
 

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ", "HuajiTech.CoolQ\HuajiTech.CoolQ.csproj", "{D2BF62FE-C064-48F9-BC11-5F3A92479C5E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2DA7FEA-02DF-4654-BE5C-226A6DA1D429}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -12,7 +10,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Abstractions", "HuajiTech.CoolQ.Abstractions\HuajiTech.CoolQ.Abstractions.csproj", "{4E8B373F-5453-45FC-98C2-C1572B280057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuajiTech.CoolQ.Messaging", "HuajiTech.CoolQ.Messaging\HuajiTech.CoolQ.Messaging.csproj", "{D4B1BF88-9F4F-40E1-836B-1ABB4AA381C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Messaging", "HuajiTech.CoolQ.Messaging\HuajiTech.CoolQ.Messaging.csproj", "{D4B1BF88-9F4F-40E1-836B-1ABB4AA381C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Core", "HuajiTech.CoolQ.Core\HuajiTech.CoolQ.Core.csproj", "{C2E3024C-B14B-4FAD-B9EA-09A57B69FFA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Packing.ILRepack", "HuajiTech.CoolQ.Packing.ILRepack\HuajiTech.CoolQ.Packing.ILRepack.csproj", "{FA66149F-A8BD-44F2-8C5B-97E5FDC68DC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Loaders.Autofac", "HuajiTech.CoolQ.Loaders.Autofac\HuajiTech.CoolQ.Loaders.Autofac.csproj", "{FC710009-2797-4F39-87E7-8D6319080427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuajiTech.CoolQ", "HuajiTech.CoolQ\HuajiTech.CoolQ.csproj", "{794BA126-B482-4A10-A4D9-AEA394EA1C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +26,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D2BF62FE-C064-48F9-BC11-5F3A92479C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2BF62FE-C064-48F9-BC11-5F3A92479C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2BF62FE-C064-48F9-BC11-5F3A92479C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2BF62FE-C064-48F9-BC11-5F3A92479C5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E8B373F-5453-45FC-98C2-C1572B280057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E8B373F-5453-45FC-98C2-C1572B280057}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E8B373F-5453-45FC-98C2-C1572B280057}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,6 +34,22 @@ Global
 		{D4B1BF88-9F4F-40E1-836B-1ABB4AA381C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B1BF88-9F4F-40E1-836B-1ABB4AA381C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B1BF88-9F4F-40E1-836B-1ABB4AA381C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E3024C-B14B-4FAD-B9EA-09A57B69FFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E3024C-B14B-4FAD-B9EA-09A57B69FFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E3024C-B14B-4FAD-B9EA-09A57B69FFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E3024C-B14B-4FAD-B9EA-09A57B69FFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA66149F-A8BD-44F2-8C5B-97E5FDC68DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA66149F-A8BD-44F2-8C5B-97E5FDC68DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA66149F-A8BD-44F2-8C5B-97E5FDC68DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA66149F-A8BD-44F2-8C5B-97E5FDC68DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC710009-2797-4F39-87E7-8D6319080427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC710009-2797-4F39-87E7-8D6319080427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC710009-2797-4F39-87E7-8D6319080427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC710009-2797-4F39-87E7-8D6319080427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794BA126-B482-4A10-A4D9-AEA394EA1C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794BA126-B482-4A10-A4D9-AEA394EA1C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794BA126-B482-4A10-A4D9-AEA394EA1C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794BA126-B482-4A10-A4D9-AEA394EA1C90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

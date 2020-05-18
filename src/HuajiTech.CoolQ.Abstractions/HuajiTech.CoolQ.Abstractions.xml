@@ -1,32 +1,143 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>HuajiTech.CoolQ</name>
+        <name>HuajiTech.CoolQ.Abstractions</name>
     </assembly>
     <members>
+        <member name="T:HuajiTech.CoolQ.AbstractionResources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Culture">
+            <summary>
+              重写当前线程的 CurrentUICulture 属性
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.ContextNotInitialized">
+            <summary>
+              查找类似 上下文未初始化。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Debug">
+            <summary>
+              查找类似 调试 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Error">
+            <summary>
+              查找类似 错误 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Exception">
+            <summary>
+              查找类似 异常 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.FieldCannotBeEmpty">
+            <summary>
+              查找类似 该字段不能为空。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.FieldCannotBeEmptyOrWhiteSpace">
+            <summary>
+              查找类似 该字段不能为空或空白字符。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Info">
+            <summary>
+              查找类似 信息 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Receiving">
+            <summary>
+              查找类似 接收 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Sending">
+            <summary>
+              查找类似 发送 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Success">
+            <summary>
+              查找类似 成功 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.Warning">
+            <summary>
+              查找类似 警告 的本地化字符串。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.ApiException">
             <summary>
             在调用 API 发生错误时引发的异常。
             </summary>
         </member>
+        <member name="T:HuajiTech.CoolQ.AppLifecycle">
+            <summary>
+            指定应用生命周期。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.AppLifecycle.NotLoaded">
+            <summary>
+            应用未被加载。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.AppLifecycle.Loaded">
+            <summary>
+            应用已被加载。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.AppLifecycle.Initializing">
+            <summary>
+            应用正在初始化。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.AppLifecycle.BotStarted">
+            <summary>
+            机器人已启动。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.AppLifecycle.Enabled">
+            <summary>
+            应用已被启用。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.AppLifecycle.Disabling">
+            <summary>
+            应用正在停用。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.AppLifecycle.BotStopping">
+            <summary>
+            机器人正在关闭。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.CurrentPluginContext">
             <summary>
-            提供操作 <see cref="P:HuajiTech.CoolQ.PluginContext.Current" /> 的静态方法。
+            提供操作 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 的静态方法。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.CurrentPluginContext.Bot">
             <summary>
-            获取 <see cref="P:HuajiTech.CoolQ.PluginContext.Current" /> 的 <see cref="P:HuajiTech.CoolQ.PluginContext.Bot" />。
+            获取 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 的 <see cref="P:HuajiTech.CoolQ.PluginContext.Bot"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.CurrentPluginContext.CurrentUser">
             <summary>
-            获取 <see cref="P:HuajiTech.CoolQ.CurrentPluginContext.Bot" /> 的 <see cref="P:HuajiTech.CoolQ.IBot.CurrentUser" />。
+            获取 <see cref="P:HuajiTech.CoolQ.CurrentPluginContext.Bot"/> 的 <see cref="P:HuajiTech.CoolQ.IBot.CurrentUser"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.CurrentPluginContext.Logger">
             <summary>
-            获取 <see cref="P:HuajiTech.CoolQ.CurrentPluginContext.Bot" /> 的 <see cref="P:HuajiTech.CoolQ.IBot.Logger" />。
+            获取 <see cref="P:HuajiTech.CoolQ.CurrentPluginContext.Bot"/> 的 <see cref="P:HuajiTech.CoolQ.IBot.Logger"/>。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.CurrentPluginContext.Friend(System.Int64)">
@@ -74,26 +185,26 @@
         </member>
         <member name="M:HuajiTech.CoolQ.CustomTitle.#ctor(System.String,System.Nullable{System.DateTime})">
             <summary>
-            以指定的文本和过期时间初始化一个 <see cref="T:HuajiTech.CoolQ.CustomTitle" /> 类的新实例。
+            以指定的文本和过期时间初始化一个 <see cref="T:HuajiTech.CoolQ.CustomTitle"/> 类的新实例。
             </summary>
             <param name="text">文本。</param>
             <param name="expirationTime">过期时间。</param>
-            <exception cref="T:System.ArgumentException"><paramref name="text" /> 为 <c>null</c>、<see cref="F:System.String.Empty" /> 或仅由空白字符组成。</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="text"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
         </member>
         <member name="P:HuajiTech.CoolQ.CustomTitle.ExpirationTime">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.CustomTitle" /> 对象的过期时间。
+            获取当前 <see cref="T:HuajiTech.CoolQ.CustomTitle"/> 对象的过期时间。
             如果没有过期时间，则为 <c>null</c>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.CustomTitle.Text">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.CustomTitle" /> 的文本。
+            获取当前 <see cref="T:HuajiTech.CoolQ.CustomTitle"/> 的文本。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.AnonymousMessageReceivedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyAnonymousMessageReceived.AnonymousMessageReceived" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyAnonymousMessageReceived.AnonymousMessageReceived"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.AnonymousMessageReceivedEventArgs.Message">
@@ -113,7 +224,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.EntranceInvitedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyEntranceInvited.EntranceInvited" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyEntranceInvited.EntranceInvited"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.EntranceInvitedEventArgs.Target">
@@ -133,7 +244,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.EntranceRequestedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyEntranceRequested.EntranceRequested" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyEntranceRequested.EntranceRequested"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.EntranceRequestedEventArgs.Source">
@@ -153,7 +264,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.FileUploadedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFileUploaded.FileUploaded" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFileUploaded.FileUploaded"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.FileUploadedEventArgs.Source">
@@ -173,7 +284,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.FriendAddedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFriendAdded.FriendAdded" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFriendAdded.FriendAdded"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.FriendAddedEventArgs.Operatee">
@@ -183,7 +294,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.FriendAddingEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFriendAdding.FriendAdding" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFriendAdding.FriendAdding"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.FriendAddingEventArgs.Requester">
@@ -218,7 +329,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.GroupMuteEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyGroupMuted.GroupMuted" /> 和 <see cref="E:HuajiTech.CoolQ.Events.INotifyGroupUnmuted.GroupUnmuted" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyGroupMuted.GroupMuted"/> 和 <see cref="E:HuajiTech.CoolQ.Events.INotifyGroupUnmuted.GroupUnmuted"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.GroupMuteEventArgs.Source">
@@ -233,7 +344,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.MemberMutedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyMemberMuted.MemberMuted" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyMemberMuted.MemberMuted"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.MemberMutedEventArgs.Duration">
@@ -243,7 +354,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.MessageReceivedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyMessageReceived.MessageReceived" /> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyMessageReceived.MessageReceived"/> 事件提供数据。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.MessageReceivedEventArgs.Message">
@@ -281,9 +392,9 @@
             获取事件发生的时间。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Events.IAdministratorAdjustmentEventSource">
+        <member name="T:HuajiTech.CoolQ.Events.IAdministratorshipEventSource">
             <summary>
-            定义群管理员调整事件。
+            定义管理员事件。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.IBotEventSource">
@@ -528,7 +639,7 @@
         </member>
         <member name="M:HuajiTech.CoolQ.File.#ctor(System.String,System.String,System.Int64,System.Int64)">
             <summary>
-            以指定的 ID、名称、长度和 BusID 初始化一个 <see cref="T:HuajiTech.CoolQ.File" /> 类的新实例。
+            以指定的 ID、名称、长度和 BusID 初始化一个 <see cref="T:HuajiTech.CoolQ.File"/> 类的新实例。
             </summary>
             <param name="id">ID。</param>
             <param name="name">名称。</param>
@@ -537,22 +648,22 @@
         </member>
         <member name="P:HuajiTech.CoolQ.File.BusId">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.File" /> 对象的 BusID。
+            获取当前 <see cref="T:HuajiTech.CoolQ.File"/> 对象的 BusID。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.File.Id">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.File" /> 对象的 ID。
+            获取当前 <see cref="T:HuajiTech.CoolQ.File"/> 对象的 ID。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.File.Length">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.File" /> 对象的长度。
+            获取当前 <see cref="T:HuajiTech.CoolQ.File"/> 对象的长度。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.File.Name">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.File" /> 对象的名称。
+            获取当前 <see cref="T:HuajiTech.CoolQ.File"/> 对象的名称。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Gender">
@@ -582,7 +693,7 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IAliased.Alias">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IAliased" /> 对象的别名。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IAliased"/> 对象的别名。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IAnonymousMember">
@@ -592,12 +703,12 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IAnonymousMember.Id">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IAnonymousMember" /> 对象的标识符。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IAnonymousMember"/> 对象的标识符。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IAnonymousMember.Group">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IAnonymousMember" /> 对象的所属群。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IAnonymousMember"/> 对象的所属群。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IBot">
@@ -607,27 +718,27 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IBot.CanSendImage">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IBot" /> 对象是否可以发送图片。
+            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 对象是否可以发送图片。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IBot.CanSendRecord">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IBot" /> 对象是否可以发送录音。
+            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 对象是否可以发送录音。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IBot.CurrentUser">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IBot" /> 对象的当前用户。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 对象的当前用户。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IBot.Logger">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IBot" /> 对象的日志记录器。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 对象的日志记录器。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IBot.DataDirectory">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IBot" /> 对象的数据目录。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 对象的数据目录。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IBot.GetImage(System.String)">
@@ -650,17 +761,7 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IChattable.Number">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IChattable" /> 对象的号码。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.IContentfulMessage">
-            <summary>
-            定义消息。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IContentfulMessage.Content">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IContentfulMessage" /> 对象的内容。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IChattable"/> 对象的号码。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.ICurrentUser">
@@ -670,22 +771,22 @@
         </member>
         <member name="M:HuajiTech.CoolQ.ICurrentUser.GetFriends">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser" /> 对象的所有好友。
+            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser"/> 对象的所有好友。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.ICurrentUser.GetCookies(System.String)">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser" /> 对象在指定域下的 Cookies。
+            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser"/> 对象在指定域下的 Cookies。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.ICurrentUser.GetCsrfToken">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser" /> 对象的 CSRF 令牌。
+            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser"/> 对象的 CSRF 令牌。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.ICurrentUser.GetGroups">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser" /> 对象的所有群。
+            获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser"/> 对象的所有群。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IEntranceRequest">
@@ -720,49 +821,44 @@
             定义群。
             </summary>
         </member>
+        <member name="P:HuajiTech.CoolQ.IGroup.MemberCapacity">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象的成员容量。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.IGroup.MemberCount">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象的成员数。
+            </summary>
+        </member>
         <member name="M:HuajiTech.CoolQ.IGroup.DisableAnonymous">
             <summary>
-            禁用当前 <see cref="T:HuajiTech.CoolQ.IGroup" /> 对象的匿名功能。
+            禁用当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象的匿名功能。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IGroup.Disband">
             <summary>
-            解散当前 <see cref="T:HuajiTech.CoolQ.IGroup" /> 对象。
+            解散当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IGroup.EnableAnonymous">
             <summary>
-            启用当前 <see cref="T:HuajiTech.CoolQ.IGroup" /> 对象的匿名功能。
+            启用当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象的匿名功能。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IGroup.GetMembers">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IGroup" /> 对象的所有成员。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象的所有成员。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IGroup.Leave">
             <summary>
-            离开当前 <see cref="T:HuajiTech.CoolQ.IGroup" /> 对象。
+            离开当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.IGroupInfo">
+        <member name="T:HuajiTech.CoolQ.ILoader">
             <summary>
-            定义群信息。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IGroupInfo.MemberCapacity">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IGroupInfo" /> 对象的成员容量。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IGroupInfo.MemberCount">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IGroupInfo" /> 对象的成员数。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IGroupInfo.Name">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IGroupInfo" /> 对象的名称。
+            定义加载器。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.ILogger">
@@ -894,35 +990,35 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IMember.Group">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象的所属 <see cref="T:HuajiTech.CoolQ.IGroup" /> 对象。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象的所属 <see cref="T:HuajiTech.CoolQ.IGroup"/> 对象。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IMember.Kick(System.Boolean)">
             <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象踢出所在群。
+            将当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象踢出所在群。
             </summary>
-            <param name="disallowRejoin">如果不再接收当前 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象的 <see cref="T:HuajiTech.CoolQ.IEntranceRequest" />，则为 <c>true</c>；否则为 <c>false</c>。</param>
+            <param name="disallowRejoin">如果不再接收当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象的 <see cref="T:HuajiTech.CoolQ.IEntranceRequest"/>，则为 <c>true</c>；否则为 <c>false</c>。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.IMember.SetAlias(System.String)">
             <summary>
-            设置当前 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象的 <see cref="P:HuajiTech.CoolQ.IAliased.Alias" />。
+            设置当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象的 <see cref="P:HuajiTech.CoolQ.IAliased.Alias"/>。
             </summary>
-            <param name="alias">要设置的 <see cref="P:HuajiTech.CoolQ.IAliased.Alias" /> 的值。</param>
+            <param name="alias">要设置的 <see cref="P:HuajiTech.CoolQ.IAliased.Alias"/> 的值。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.IMember.SetAsAdministrator">
             <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象设为 <see cref="P:HuajiTech.CoolQ.IMember.Group" /> 的管理员。
+            将当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象设为 <see cref="P:HuajiTech.CoolQ.IMember.Group"/> 的管理员。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IMember.SetCustomTitle(HuajiTech.CoolQ.CustomTitle)">
             <summary>
-            设置当前 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象的 <see cref="T:HuajiTech.CoolQ.CustomTitle" />。
+            设置当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象的 <see cref="T:HuajiTech.CoolQ.CustomTitle"/>。
             </summary>
-            <param name="title">要设置的 <see cref="T:HuajiTech.CoolQ.CustomTitle" /> 的值。</param>
+            <param name="title">要设置的 <see cref="T:HuajiTech.CoolQ.CustomTitle"/> 的值。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.IMember.UnsetAsAdministrator">
             <summary>
-            解除当前 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象在 <see cref="P:HuajiTech.CoolQ.IMember.Group" /> 的管理员身份。
+            解除当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象在 <see cref="P:HuajiTech.CoolQ.IMember.Group"/> 的管理员身份。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IMemberInfo">
@@ -932,67 +1028,77 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.Age">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象的年龄。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象的年龄。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.CanEditAlias">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象是否可以编辑 <see cref="P:HuajiTech.CoolQ.IAliased.Alias" />。
+            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象是否可以编辑 <see cref="P:HuajiTech.CoolQ.IAliased.Alias"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.CustomTitle">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象的自定义头衔。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象的自定义头衔。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.TimeEntered">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象加入 <see cref="T:HuajiTech.CoolQ.IGroup" /> 的时间。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象加入 <see cref="T:HuajiTech.CoolQ.IGroup"/> 的时间。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.Gender">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象的性别。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象的性别。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.HasBadRecord">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象是否有不良记录。
+            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象是否有不良记录。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.IsAdministrator">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象是否为管理员或群主。
+            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象是否为管理员或群主。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.LastSpeakTime">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象的最后发言时间。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象的最后发言时间。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.Level">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象的等级。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象的等级。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.Location">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象的位置。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象的位置。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMemberInfo.Role">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo" /> 对象的角色。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMemberInfo"/> 对象的角色。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.IMessage">
+            <summary>
+            定义消息。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMessage.Id">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMessage" /> 对象的标识符。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象的 ID。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.IMessage.Content">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象的内容。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IMessage.Recall">
             <summary>
-            撤回当前 <see cref="T:HuajiTech.CoolQ.IMessage" /> 对象。
+            撤回当前 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IMuteable">
@@ -1002,17 +1108,22 @@
         </member>
         <member name="M:HuajiTech.CoolQ.IMuteable.Mute">
             <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.IMuteable" /> 对象禁言。
+            将当前 <see cref="T:HuajiTech.CoolQ.IMuteable"/> 对象禁言。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IMuteable.Unmute">
             <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.IMuteable" /> 对象解除禁言。
+            将当前 <see cref="T:HuajiTech.CoolQ.IMuteable"/> 对象解除禁言。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.INamed.Name">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.INamed" /> 对象的名称。
+            获取当前 <see cref="T:HuajiTech.CoolQ.INamed"/> 对象的名称。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.IPacker">
+            <summary>
+            定义打包器。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IPlugin">
@@ -1027,7 +1138,7 @@
         </member>
         <member name="M:HuajiTech.CoolQ.IRefreshable.Refresh">
             <summary>
-            刷新当前 <see cref="T:HuajiTech.CoolQ.IRefreshable" /> 对象。
+            刷新当前 <see cref="T:HuajiTech.CoolQ.IRefreshable"/> 对象。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IRequest">
@@ -1037,7 +1148,7 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IRequest.Message">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IRequest" /> 对象的消息。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IRequest"/> 对象的消息。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IRequest.Accept">
@@ -1057,17 +1168,17 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IRequestable.IsRequested">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IRequestable" /> 对象是否已请求。
+            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IRequestable"/> 对象是否已请求。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IRequestable.IsRequestedSuccessfully">
             <summary>
-            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IRequestable" /> 对象是否已成功请求。
+            获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IRequestable"/> 对象是否已成功请求。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IRequestable.Request">
             <summary>
-            请求当前 <see cref="T:HuajiTech.CoolQ.IRequestable" /> 对象。
+            请求当前 <see cref="T:HuajiTech.CoolQ.IRequestable"/> 对象。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.ISendee">
@@ -1077,10 +1188,10 @@
         </member>
         <member name="M:HuajiTech.CoolQ.ISendee.Send(System.String)">
             <summary>
-            向当前 <see cref="T:HuajiTech.CoolQ.ISendee" /> 对象发送指定的字符串。
+            向当前 <see cref="T:HuajiTech.CoolQ.ISendee"/> 对象发送指定的字符串。
             </summary>
             <param name="message">要发送的字符串。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.IContentfulMessage" /> 对象，表示已发送的消息。</returns>
+            <returns>一个 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象，表示已发送的消息。</returns>
         </member>
         <member name="T:HuajiTech.CoolQ.ITimedMuteable">
             <summary>
@@ -1089,7 +1200,7 @@
         </member>
         <member name="M:HuajiTech.CoolQ.ITimedMuteable.Mute(System.TimeSpan)">
             <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.ITimedMuteable" /> 对象禁言指定时长。
+            将当前 <see cref="T:HuajiTech.CoolQ.ITimedMuteable"/> 对象禁言指定时长。
             </summary>
             <param name="duration">要禁言的时长。</param>
         </member>
@@ -1100,12 +1211,12 @@
         </member>
         <member name="P:HuajiTech.CoolQ.IUser.Nickname">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IUser" /> 对象的昵称。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IUser"/> 对象的昵称。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IUser.GiveThumbsUp(System.Int32)">
             <summary>
-            给予当前 <see cref="T:HuajiTech.CoolQ.IUser" /> 对象指定数量的赞。
+            给予当前 <see cref="T:HuajiTech.CoolQ.IUser"/> 对象指定数量的赞。
             </summary>
             <param name="count">赞的数量。</param>
         </member>
@@ -1181,39 +1292,39 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Plugin">
             <summary>
-            用作插件的基类，并提供操作 <see cref="T:HuajiTech.CoolQ.PluginContext" /> 的实例方法。
+            用作插件的基类，并提供操作 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 的实例方法。
             此类为抽象类。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.Plugin.#ctor(HuajiTech.CoolQ.PluginContext)">
             <summary>
-            以指定的 <see cref="T:HuajiTech.CoolQ.PluginContext" /> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin" /> 类的新实例。
+            以指定的 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin"/> 类的新实例。
             </summary>
-            <param name="context">当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象所使用的 <see cref="T:HuajiTech.CoolQ.PluginContext" />。</param>
+            <param name="context">当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象所使用的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.Plugin.#ctor">
             <summary>
-            以 <see cref="P:HuajiTech.CoolQ.PluginContext.Current" /> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin" /> 类的新实例。
+            以 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 初始化一个 <see cref="T:HuajiTech.CoolQ.Plugin"/> 类的新实例。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.Bot">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="T:HuajiTech.CoolQ.IBot" />。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.CoolQ.IBot"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.CurrentUser">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.CurrentUser" />。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.CoolQ.ICurrentUser"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.Logger">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="P:HuajiTech.CoolQ.Plugin.Logger" />。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.CoolQ.ILogger"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Plugin.Context">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin" /> 对象的 <see cref="T:HuajiTech.CoolQ.PluginContext" />。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Plugin"/> 对象的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.Plugin.Friend(System.Int64)">
@@ -1260,15 +1371,21 @@
             此类为抽象类。
             </summary>
         </member>
+        <member name="M:HuajiTech.CoolQ.PluginContext.#ctor(HuajiTech.CoolQ.IBot)">
+            <summary>
+            以指定的机器人初始化一个 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 类的新实例。
+            </summary>
+            <param name="bot">机器人。</param>
+        </member>
         <member name="P:HuajiTech.CoolQ.PluginContext.Current">
             <summary>
-            获取或设置当前插件的插件上下文。
+            获取或设置当前插件上下文。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="value" /> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
         </member>
         <member name="P:HuajiTech.CoolQ.PluginContext.Bot">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.PluginContext" /> 对象的 <see cref="T:HuajiTech.CoolQ.IBot" />。
+            获取当前 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 对象的 <see cref="T:HuajiTech.CoolQ.IBot"/>。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.PluginContext.GetUser(System.Int64)">
@@ -1305,98 +1422,27 @@
         </member>
         <member name="M:HuajiTech.CoolQ.PluginContext.GetMember(HuajiTech.CoolQ.IUser,HuajiTech.CoolQ.IGroup)">
             <summary>
-            获取号码为指定用户的号码，群为指定群的 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象。
+            获取号码为指定用户的号码，群为指定群的 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象。
             </summary>
             <param name="user">用户。</param>
             <param name="group">群。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.PluginContext.GetMember(HuajiTech.CoolQ.IUser,System.Int64)">
             <summary>
-            获取号码为指定用户的号码，群为指定群号码的群的 <see cref="T:HuajiTech.CoolQ.IMember" /> 对象。
+            获取号码为指定用户的号码，群为指定群号码的群的 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象。
             </summary>
             <param name="user">用户。</param>
             <param name="groupNumber">群号码。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.PluginContext.GetMessage(System.Int64)">
             <summary>
-            获取指定 ID 的 <see cref="T:HuajiTech.CoolQ.IMessage" /> 对象。
+            获取指定 ID 的 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象。
             </summary>
             <param name="id">消息 ID。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.PluginContextExtensions">
             <summary>
-            定义用于操作 <see cref="T:HuajiTech.CoolQ.PluginContext" /> 的扩展方法。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Resources">
-            <summary>
-              一个强类型的资源类，用于查找本地化的字符串等。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.ResourceManager">
-            <summary>
-              返回此类使用的缓存的 ResourceManager 实例。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Culture">
-            <summary>
-              重写当前线程的 CurrentUICulture 属性
-              重写当前线程的 CurrentUICulture 属性。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.ContextNotInitialized">
-            <summary>
-              查找类似 上下文未初始化。 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Debug">
-            <summary>
-              查找类似 调试 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Error">
-            <summary>
-              查找类似 错误 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Exception">
-            <summary>
-              查找类似 异常 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.FieldCannotBeEmpty">
-            <summary>
-              查找类似 该字段不能为空。 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.FieldCannotBeEmptyOrWhiteSpace">
-            <summary>
-              查找类似 该字段不能为空或空白字符。 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Info">
-            <summary>
-              查找类似 信息 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Receiving">
-            <summary>
-              查找类似 接收 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Sending">
-            <summary>
-              查找类似 发送 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Success">
-            <summary>
-              查找类似 成功 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Resources.Warning">
-            <summary>
-              查找类似 警告 的本地化字符串。
+            定义用于操作 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 的扩展方法。
             </summary>
         </member>
     </members>

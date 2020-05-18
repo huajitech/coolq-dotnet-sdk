@@ -4,11 +4,10 @@
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
-    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.pfx</AssemblyOriginatorKeyFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>0.2.3-alpha.1</Version>
+    <Version>0.3.0-alpha.1</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>用于酷Q应用的 .NET SDK。</Description>
@@ -23,82 +22,21 @@
     <NeutralLanguage>zh-CN</NeutralLanguage>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <ILRepackTargetsFile>..\build\HuajiTech.CoolQ.ILRepackPlaceholder.targets</ILRepackTargetsFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>C:\Users\SYC\source\repos\HuajiTech.CoolQ\src\HuajiTech.CoolQ\HuajiTech.CoolQ.xml</DocumentationFile>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <NoWarn>1701;1702</NoWarn>
-  </PropertyGroup>
-
   <ItemGroup>
-    <None Remove="app.json" />
-    <None Remove="stylecop.json" />
     <None Include="..\..\Icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="..\build\*">
-      <Pack>True</Pack>
-      <PackagePath>build</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Properties\AppInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="app.json" />
-    <Content Include="Properties\AppInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Autofac" Version="5.2.0" />
-    <PackageReference Include="HuajiTech.UnmanagedExports.Metadata" Version="1.0.2" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.18.1">
-      <IncludeAssets>build</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="HuajiTech.UnmanagedExports.MSBuild" Version="1.0.0-rc2">
-      <IncludeAssets>build</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HuajiTech.CoolQ.Abstractions\HuajiTech.CoolQ.Abstractions.csproj" />
+    <ProjectReference Include="..\HuajiTech.CoolQ.Core\HuajiTech.CoolQ.Core.csproj" />
+    <ProjectReference Include="..\HuajiTech.CoolQ.Loaders.Autofac\HuajiTech.CoolQ.Loaders.Autofac.csproj" />
     <ProjectReference Include="..\HuajiTech.CoolQ.Messaging\HuajiTech.CoolQ.Messaging.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\HuajiTech.CoolQ.Packing.ILRepack\HuajiTech.CoolQ.Packing.ILRepack.csproj" />
   </ItemGroup>
 </Project>
