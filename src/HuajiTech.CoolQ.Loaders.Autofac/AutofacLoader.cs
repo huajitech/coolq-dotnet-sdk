@@ -23,7 +23,7 @@ namespace HuajiTech.CoolQ.Loaders
         }
 
         public TPlugin GetPlugin<TPlugin>()
-          where TPlugin : notnull, IPlugin
+            where TPlugin : notnull, IPlugin
         {
             try
             {

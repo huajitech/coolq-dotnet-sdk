@@ -9,7 +9,7 @@ namespace HuajiTech.CoolQ
     public interface ILoader
     {
         TPlugin GetPlugin<TPlugin>()
-          where TPlugin : notnull, IPlugin;
+            where TPlugin : notnull, IPlugin;
 
         IPlugin GetPlugin(Type pluginType);
 

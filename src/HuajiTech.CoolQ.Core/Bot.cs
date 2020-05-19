@@ -72,18 +72,8 @@ namespace HuajiTech.CoolQ
         {
             Instance = new Bot(authCode);
 
-            var packers = from type in Assembly.GetExecutingAssembly().GetTypes()
-                          where type.IsClass && !type.IsAbstract && typeof(IPacker).IsAssignableFrom(type)
-                          select (IPacker)Activator.CreateInstance(type);
-
-            Instance.Packer = packers.Single();
-
-            var loaders = from asm in AppDomain.CurrentDomain.GetAssemblies()
-                          from type in asm.GetTypes()
-                          where type.IsClass && !type.IsAbstract && typeof(ILoader).IsAssignableFrom(type)
-                          select (ILoader)Activator.CreateInstance(type);
-
-            Instance.Loader = loaders.Single();
+            Instance.Packer = GetInstance<IPacker>();
+            Instance.Loader = GetInstance<ILoader>();
 
             PluginContext.Current = new CoolQPluginContext(Instance);
 
@@ -120,6 +110,13 @@ namespace HuajiTech.CoolQ
             }
 
             return attr.Id;
+        }
+
+        private static T GetInstance<T>()
+        {
+            return (from type in Assembly.GetExecutingAssembly().GetTypes()
+                    where type.IsClass && !type.IsAbstract && typeof(T).IsAssignableFrom(type)
+                    select (T)Activator.CreateInstance(type)).Single();
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

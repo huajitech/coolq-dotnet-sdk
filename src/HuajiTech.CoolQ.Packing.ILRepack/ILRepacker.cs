@@ -17,7 +17,8 @@ namespace HuajiTech.CoolQ.Packing
 
         public IReadOnlyCollection<AssemblyName> GetPackedAssemblies()
         {
-            throw new NotImplementedException();
+            // TODO: 读取并解析 ILRepack.List。
+            return new AssemblyName[] { Assembly.GetExecutingAssembly().GetName() };
         }
     }
 }

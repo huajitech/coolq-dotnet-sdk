@@ -5,9 +5,9 @@ using System.Linq;
 namespace HuajiTech.CoolQ.Messaging
 {
     /// <summary>
-    /// 定义扩展方法。
+    /// 定义从 <see cref="IEnumerable{T}"/> 创建 <see cref="ComplexMessage"/> 的扩展方法。
     /// </summary>
-    public static class Extensions
+    public static class MessageElementCollectionExtensions
     {
         /// <summary>
         /// 从 <see cref="IEnumerable{T}"/> 创建 <see cref="ComplexMessage"/>。
