@@ -114,8 +114,7 @@ namespace HuajiTech.CoolQ.Loaders
 
             var attributes = executingAssembly.GetCustomAttributes<PluginLoadStageAttribute>();
 
-            var types = from asm in AppDomain.CurrentDomain.GetAssemblies()
-                        from type in asm.GetLoadableTypes()
+            var types = from type in executingAssembly.GetLoadableTypes()
                         where type.IsClass && !type.IsAbstract && typeof(IPlugin).IsAssignableFrom(type)
                         select type;
 
