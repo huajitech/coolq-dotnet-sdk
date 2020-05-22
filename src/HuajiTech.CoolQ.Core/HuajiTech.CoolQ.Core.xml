@@ -18,7 +18,7 @@
         </member>
         <member name="P:HuajiTech.CoolQ.AppIdAttribute.Id">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.AppIdAttribute"/> 对象的 ID。
+            获取当前 <see cref="T:HuajiTech.CoolQ.AppIdAttribute"/> 实例的 ID。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.CoreResources">
@@ -92,23 +92,6 @@
               查找类似 酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。 的本地化字符串。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute">
-            <summary>
-            指定缺省插件加载阶段。
-            此类不能被继承。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.#ctor(System.Int32)">
-            <summary>
-            以指定的加载阶段初始化一个 <see cref="T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute"/> 类的新实例。
-            </summary>
-            <param name="loadStage">插件加载阶段，与 <see cref="T:HuajiTech.CoolQ.AppLifecycle"/> 枚举对应。</param>
-        </member>
-        <member name="P:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.LoadStage">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.DefaultPluginLoadStageAttribute"/> 对象的插件加载阶段。
-            </summary>
-        </member>
         <member name="T:HuajiTech.CoolQ.StatusColor">
             <summary>
             指定状态颜色。
@@ -151,17 +134,11 @@
         </member>
         <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.IMessage)">
             <summary>
-            将 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.CoolQ.IMessage"/> 对象解码为只读字典。
+            将 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例解码为只读字典。
             </summary>
-            <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 对象。</param>
+            <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例。</param>
             <returns>与 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 等效的只读字典。</returns>
             <exception cref="T:System.IO.InvalidDataException"><paramref name="message"/> 不合法。</exception>
-        </member>
-        <member name="T:HuajiTech.CoolQ.PluginLoadStageAttribute">
-            <summary>
-            指定插件加载阶段。
-            此类不能被继承。
-            </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Status">
             <summary>
@@ -180,22 +157,22 @@
         </member>
         <member name="P:HuajiTech.CoolQ.Status.Color">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Status"/> 对象的颜色。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Status"/> 实例的颜色。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Status.Unit">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Status"/> 对象的单位。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Status"/> 实例的单位。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Status.Value">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.Status"/> 对象的值。
+            获取当前 <see cref="T:HuajiTech.CoolQ.Status"/> 实例的值。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.Status.Encode">
             <summary>
-            将当前 <see cref="T:HuajiTech.CoolQ.Status"/> 对象的值编码为可被酷Q使用的 Base64 字符串。
+            将当前 <see cref="T:HuajiTech.CoolQ.Status"/> 实例的值编码为可被酷Q使用的 Base64 字符串。
             </summary>
             <returns>编码后的 Base64 字符串。</returns>
         </member>

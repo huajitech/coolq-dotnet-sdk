@@ -2,13 +2,15 @@ namespace HuajiTech.CoolQ
 {
     internal abstract class Chat : IChattable
     {
+        protected Chat()
+        {
+        }
+
         protected Chat(long number) => Number = number;
 
         public abstract string Name { get; }
 
-        public long Number { get; }
-
-        public long Id => Number;
+        public virtual long Number { get; }
 
         public override bool Equals(object? obj) => Equals(obj as IChattable);
 

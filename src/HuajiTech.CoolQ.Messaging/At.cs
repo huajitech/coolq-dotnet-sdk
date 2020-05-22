@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="At"/> 对象的目标号码。
+        /// 获取或设置当前 <see cref="At"/> 实例的目标号码。
         /// </summary>
         public long TargetNumber
         {

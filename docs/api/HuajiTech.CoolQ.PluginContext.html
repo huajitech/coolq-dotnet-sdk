@@ -122,42 +122,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class PluginContext</code></pre>
   </div>
-  <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext__ctor_HuajiTech_CoolQ_IBot_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.%23ctor(HuajiTech.CoolQ.IBot)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L17">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_PluginContext__ctor_" data-uid="HuajiTech.CoolQ.PluginContext.#ctor*"></a>
-  <h4 id="HuajiTech_CoolQ_PluginContext__ctor_HuajiTech_CoolQ_IBot_" data-uid="HuajiTech.CoolQ.PluginContext.#ctor(HuajiTech.CoolQ.IBot)">PluginContext(IBot)</h4>
-  <div class="markdown level1 summary"><p>以指定的机器人初始化一个 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a> 类的新实例。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected PluginContext(IBot bot)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.IBot.html">IBot</a></td>
-        <td><span class="parametername">bot</span></td>
-        <td><p>机器人。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">&#23646;&#24615;
   </h3>
   <span class="small pull-right mobile-hide">
@@ -165,16 +129,16 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_Bot.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.Bot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L35">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L26">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_Bot_" data-uid="HuajiTech.CoolQ.PluginContext.Bot*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_Bot" data-uid="HuajiTech.CoolQ.PluginContext.Bot">Bot</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.IBot.html">IBot</a>。</p>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取当前 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a> 实例的 <a class="xref" href="HuajiTech.CoolQ.IBot.html">IBot</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IBot Bot { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract IBot Bot { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,7 +160,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_Current.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L26">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L17">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_Current_" data-uid="HuajiTech.CoolQ.PluginContext.Current*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_Current" data-uid="HuajiTech.CoolQ.PluginContext.Current">Current</h4>
@@ -238,6 +202,68 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_Loader.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.Loader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_CoolQ_PluginContext_Loader_" data-uid="HuajiTech.CoolQ.PluginContext.Loader*"></a>
+  <h4 id="HuajiTech_CoolQ_PluginContext_Loader" data-uid="HuajiTech.CoolQ.PluginContext.Loader">Loader</h4>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取当前 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a> 实例的 <a class="xref" href="HuajiTech.CoolQ.ILoader.html">ILoader</a>。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ILoader Loader { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.ILoader.html">ILoader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_Packer.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.Packer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L31">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_CoolQ_PluginContext_Packer_" data-uid="HuajiTech.CoolQ.PluginContext.Packer*"></a>
+  <h4 id="HuajiTech_CoolQ_PluginContext_Packer" data-uid="HuajiTech.CoolQ.PluginContext.Packer">Packer</h4>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取当前 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a> 实例的 <a class="xref" href="HuajiTech.CoolQ.IPacker.html">IPacker</a>。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IPacker Packer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.IPacker.html">IPacker</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">&#26041;&#27861;
   </h3>
   <span class="small pull-right mobile-hide">
@@ -245,11 +271,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetFriend_System_Int64_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetFriend(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L47">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L48">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetFriend_" data-uid="HuajiTech.CoolQ.PluginContext.GetFriend*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetFriend_System_Int64_" data-uid="HuajiTech.CoolQ.PluginContext.GetFriend(System.Int64)">GetFriend(Int64)</h4>
-  <div class="markdown level1 summary"><p>获取指定号码的好友。</p>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取指定号码的好友。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -294,11 +320,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetGroup_System_Int64_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetGroup(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L53">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L54">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetGroup_" data-uid="HuajiTech.CoolQ.PluginContext.GetGroup*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetGroup_System_Int64_" data-uid="HuajiTech.CoolQ.PluginContext.GetGroup(System.Int64)">GetGroup(Int64)</h4>
-  <div class="markdown level1 summary"><p>获取指定号码的群。</p>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取指定号码的群。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -343,11 +369,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetMember_HuajiTech_CoolQ_IUser_HuajiTech_CoolQ_IGroup_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetMember(HuajiTech.CoolQ.IUser%2CHuajiTech.CoolQ.IGroup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L74">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L75">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetMember_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetMember_HuajiTech_CoolQ_IUser_HuajiTech_CoolQ_IGroup_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember(HuajiTech.CoolQ.IUser,HuajiTech.CoolQ.IGroup)">GetMember(IUser, IGroup)</h4>
-  <div class="markdown level1 summary"><p>获取号码为指定用户的号码，群为指定群的 <a class="xref" href="HuajiTech.CoolQ.IMember.html">IMember</a> 对象。</p>
+  <div class="markdown level1 summary"><p>获取号码为指定用户的号码，群为指定群的 <a class="xref" href="HuajiTech.CoolQ.IMember.html">IMember</a> 实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -398,11 +424,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetMember_HuajiTech_CoolQ_IUser_System_Int64_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetMember(HuajiTech.CoolQ.IUser%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L89">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L90">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetMember_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetMember_HuajiTech_CoolQ_IUser_System_Int64_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember(HuajiTech.CoolQ.IUser,System.Int64)">GetMember(IUser, Int64)</h4>
-  <div class="markdown level1 summary"><p>获取号码为指定用户的号码，群为指定群号码的群的 <a class="xref" href="HuajiTech.CoolQ.IMember.html">IMember</a> 对象。</p>
+  <div class="markdown level1 summary"><p>获取号码为指定用户的号码，群为指定群号码的群的 <a class="xref" href="HuajiTech.CoolQ.IMember.html">IMember</a> 实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -453,11 +479,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetMember_System_Int64_HuajiTech_CoolQ_IGroup_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetMember(System.Int64%2CHuajiTech.CoolQ.IGroup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L60">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L61">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetMember_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetMember_System_Int64_HuajiTech_CoolQ_IGroup_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember(System.Int64,HuajiTech.CoolQ.IGroup)">GetMember(Int64, IGroup)</h4>
-  <div class="markdown level1 summary"><p>获取指定号码和群的成员。</p>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取指定号码和群的成员。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -508,7 +534,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetMember_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetMember(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L67">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L68">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetMember_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetMember_System_Int64_System_Int64_" data-uid="HuajiTech.CoolQ.PluginContext.GetMember(System.Int64,System.Int64)">GetMember(Int64, Int64)</h4>
@@ -563,11 +589,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetMessage_System_Int64_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetMessage(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L95">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L96">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetMessage_" data-uid="HuajiTech.CoolQ.PluginContext.GetMessage*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetMessage_System_Int64_" data-uid="HuajiTech.CoolQ.PluginContext.GetMessage(System.Int64)">GetMessage(Int64)</h4>
-  <div class="markdown level1 summary"><p>获取指定 ID 的 <a class="xref" href="HuajiTech.CoolQ.IMessage.html">IMessage</a> 对象。</p>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取指定 ID 的 <a class="xref" href="HuajiTech.CoolQ.IMessage.html">IMessage</a> 实例。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -612,11 +638,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_PluginContext_GetUser_System_Int64_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.PluginContext.GetUser(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/PluginContext.cs/#L42">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_PluginContext_GetUser_" data-uid="HuajiTech.CoolQ.PluginContext.GetUser*"></a>
   <h4 id="HuajiTech_CoolQ_PluginContext_GetUser_System_Int64_" data-uid="HuajiTech.CoolQ.PluginContext.GetUser(System.Int64)">GetUser(Int64)</h4>
-  <div class="markdown level1 summary"><p>获取指定号码的用户。</p>
+  <div class="markdown level1 summary"><p>在派生类中重写时，获取指定号码的用户。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>

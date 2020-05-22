@@ -19,7 +19,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Music"/> 对象的 ID。
+        /// 获取或设置当前 <see cref="Music"/> 实例的 ID。
         /// </summary>
         public int Id
         {
@@ -28,7 +28,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Music"/> 对象的提供商。
+        /// 获取或设置当前 <see cref="Music"/> 实例的提供商。
         /// </summary>
         /// <exception cref="InvalidEnumArgumentException"><paramref name="value" /> 不是有效的 <see cref="MusicPlatform"/> 值。</exception>
         public MusicPlatform Platform

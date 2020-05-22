@@ -8,17 +8,17 @@ namespace HuajiTech.CoolQ
     public interface IMessage : IEquatable<IMessage?>
     {
         /// <summary>
-        /// 获取当前 <see cref="IMessage"/> 对象的 ID。
+        /// 获取当前 <see cref="IMessage"/> 实例的 ID。
         /// </summary>
         long Id { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="IMessage"/> 对象的内容。
+        /// 获取当前 <see cref="IMessage"/> 实例的内容。
         /// </summary>
         string Content { get; }
 
         /// <summary>
-        /// 撤回当前 <see cref="IMessage"/> 对象。
+        /// 撤回当前 <see cref="IMessage"/> 实例。
         /// </summary>
         void Recall();
     }

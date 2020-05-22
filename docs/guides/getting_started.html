@@ -87,11 +87,13 @@
 在同一个应用中，可以定义多个插件类。插件类只会被实例化一次。</p>
 <p>通常情况下，插件类应以 <a class="xref" href="../api/HuajiTech.CoolQ.Plugin.html">Plugin</a> 类作为基类。该类实现了 <a class="xref" href="../api/HuajiTech.CoolQ.IPlugin.html">IPlugin</a> 接口，并且提供了更易用的 API。</p>
 <p>可通过 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性指定插件类的加载阶段。</p>
-<pre><code class="lang-csharp">[assembly: PluginLoadStage(typeof(MyPlugin), (int)AppLifecycle.Initializing)]
+<pre><code class="lang-csharp">[PluginLoadStage((int)AppLifecycle.Initializing)]
+class MyPlugin : Plugin
+{
+}
 </code></pre>
-<p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html">DefaultPluginLoadStageAttribute</a> 特性指定在未指定 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性时的缺省值。
-<a class="xref" href="../api/HuajiTech.CoolQ.DefaultPluginLoadStageAttribute.html">DefaultPluginLoadStageAttribute</a> 特性不可重复。</p>
-<pre><code class="lang-csharp">[assembly: DefaultPluginLoadStage((int)AppLifecycle.Enabled)]
+<p>在程序集上应用 <a class="xref" href="../api/HuajiTech.CoolQ.PluginLoadStageAttribute.html">PluginLoadStageAttribute</a> 特性来指定插件的默认加载阶段。</p>
+<pre><code class="lang-csharp">[assembly: PluginLoadStage((int)AppLifecycle.Enabled)]
 </code></pre>
 <div class="NOTE">
 <h5>注意</h5>
@@ -109,10 +111,6 @@
 <li>✘ 插件类构造函数不应抛出异常。</li>
 </ul>
 <p>有关详细信息，请参见<a href="https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96">酷Q文库</a>。</p>
-<div class="WARNING">
-<h5>警告</h5>
-<p>获取 <a class="xref" href="../api/HuajiTech.CoolQ.ICurrentUser.html">ICurrentUser</a> 对象需要调用酷Q API。</p>
-</div>
 <h2 id="事件">事件</h2>
 <p>酷Q事件都被封装为了 .NET 事件。
 当酷Q使用 StdCall 调用事件对应函数时，将会对事件数据进行封装并引发相应的事件。</p>

@@ -6,7 +6,7 @@
     public interface IRequest
     {
         /// <summary>
-        /// 获取当前 <see cref="IRequest"/> 对象的消息。
+        /// 获取当前 <see cref="IRequest"/> 实例的消息。
         /// </summary>
         string Message { get; }
 

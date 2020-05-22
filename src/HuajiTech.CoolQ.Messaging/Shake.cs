@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Shake"/> 对象的ID。
+        /// 获取或设置当前 <see cref="Shake"/> 实例的ID。
         /// </summary>
         public int Id
         {

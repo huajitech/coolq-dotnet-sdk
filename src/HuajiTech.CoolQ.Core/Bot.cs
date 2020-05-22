@@ -22,9 +22,6 @@ namespace HuajiTech.CoolQ
         private readonly Lazy<bool> _canSendRecord;
         private readonly Lazy<DirectoryInfo> _dataDirectory;
 
-        private IPacker? _packer;
-        private ILoader? _loader;
-
         private Bot(int authCode)
         {
             AuthCode = authCode;
@@ -38,18 +35,6 @@ namespace HuajiTech.CoolQ
         {
             get => _instance ?? throw new InvalidOperationException(CoreResources.BotNotInitialized);
             private set => _instance = value;
-        }
-
-        public IPacker Packer
-        {
-            get => _packer ?? throw new InvalidOperationException(CoreResources.BotNotInitialized);
-            private set => _packer = value;
-        }
-
-        public ILoader Loader
-        {
-            get => _loader ?? throw new InvalidOperationException(CoreResources.BotNotInitialized);
-            private set => _loader = value;
         }
 
         public bool CanSendImage => _canSendImage.Value;
@@ -72,19 +57,19 @@ namespace HuajiTech.CoolQ
         {
             Instance = new Bot(authCode);
 
-            Instance.Packer = GetInstance<IPacker>();
-            Instance.Loader = GetInstance<ILoader>();
+            var packer = GetInstance<IPacker>();
+            var loader = GetInstance<ILoader>();
 
-            PluginContext.Current = new CoolQPluginContext(Instance);
+            PluginContext.Current = new CoolQPluginContext(Instance, packer, loader);
 
-            Instance.Loader.GetPlugins(AppLifecycle.Initializing);
+            loader.GetPlugins(AppLifecycle.Initializing);
 
             var source = BotEventSource.Instance;
 
             var isFirstLoad = true;
             source.AppEnabled += (sender, e) =>
             {
-                var plugins = Instance.Loader.GetPlugins(AppLifecycle.Enabled);
+                var plugins = loader.GetPlugins(AppLifecycle.Enabled);
 
                 if (isFirstLoad)
                 {
@@ -93,9 +78,11 @@ namespace HuajiTech.CoolQ
                 }
             };
 
-            source.BotStarted += (sender, e) => Instance.Loader.GetPlugins(AppLifecycle.BotStarted);
-            source.AppDisabling += (sender, e) => Instance.Loader.GetPlugins(AppLifecycle.Disabling);
-            source.BotStopping += (sender, e) => Instance.Loader.GetPlugins(AppLifecycle.BotStopping);
+            source.BotStarted += (sender, e) => loader.GetPlugins(AppLifecycle.BotStarted);
+
+            source.AppDisabling += (sender, e) => loader.GetPlugins(AppLifecycle.Disabling);
+
+            source.BotStopping += (sender, e) => loader.GetPlugins(AppLifecycle.BotStopping);
 
             return 0;
         }
@@ -112,12 +99,10 @@ namespace HuajiTech.CoolQ
             return attr.Id;
         }
 
-        private static T GetInstance<T>()
-        {
-            return (from type in Assembly.GetExecutingAssembly().GetTypes()
-                    where type.IsClass && !type.IsAbstract && typeof(T).IsAssignableFrom(type)
-                    select (T)Activator.CreateInstance(type)).Single();
-        }
+        private static T GetInstance<T>() =>
+            (from type in Assembly.GetExecutingAssembly().GetTypes()
+             where type.IsClass && !type.IsAbstract && typeof(T).IsAssignableFrom(type)
+             select (T)Activator.CreateInstance(type)).Single();
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {

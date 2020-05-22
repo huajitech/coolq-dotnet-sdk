@@ -79,11 +79,11 @@ namespace HuajiTech.CoolQ.Loaders
         private static void RegisterSdk(ContainerBuilder builder)
         {
             builder
-                .RegisterInstance(Bot.Instance)
+                .Register(context => Bot.Instance)
                 .AsImplementedInterfaces();
 
             builder
-                .RegisterInstance(Bot.Instance.Logger)
+                .Register(context => Bot.Instance.Logger)
                 .As<ILogger>();
 
             builder
@@ -93,9 +93,11 @@ namespace HuajiTech.CoolQ.Loaders
             builder
                 .RegisterInstance(CurrentUserEventSource.Instance)
                 .AsImplementedInterfaces();
+
             builder
                 .RegisterInstance(GroupEventSource.Instance)
                 .AsImplementedInterfaces();
+
             builder
                 .RegisterInstance(BotEventSource.Instance)
                 .AsImplementedInterfaces();
@@ -107,21 +109,21 @@ namespace HuajiTech.CoolQ.Loaders
 
         private static void RegisterPlugins(ContainerBuilder builder)
         {
-            var executingAssembly = Assembly.GetExecutingAssembly();
+            var assembly = Assembly.GetExecutingAssembly();
 
-            var defaultLoadStage = ((AppLifecycle?)executingAssembly
-                .GetCustomAttribute<DefaultPluginLoadStageAttribute>()?.LoadStage) ?? AppLifecycle.Enabled;
+            var defaultLoadStage = ((AppLifecycle?)assembly
+                    .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? AppLifecycle.Enabled;
 
-            var attributes = executingAssembly.GetCustomAttributes<PluginLoadStageAttribute>();
+            var attributes = assembly.GetCustomAttributes<PluginLoadStageAttribute>();
 
-            var types = from type in executingAssembly.GetLoadableTypes()
+            var types = from type in assembly.GetLoadableTypes()
                         where type.IsClass && !type.IsAbstract && typeof(IPlugin).IsAssignableFrom(type)
                         select type;
 
             foreach (var type in types)
             {
-                var loadStage = ((AppLifecycle?)attributes
-                    .FirstOrDefault(attr => attr.Type == type)?.LoadStage) ?? defaultLoadStage;
+                var loadStage = ((AppLifecycle?)type
+                    .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? defaultLoadStage;
 
                 builder
                     .RegisterType(type)

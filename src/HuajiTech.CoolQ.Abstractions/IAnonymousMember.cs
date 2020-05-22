@@ -8,12 +8,12 @@ namespace HuajiTech.CoolQ
     public interface IAnonymousMember : INamed, IMuteable, IEquatable<IAnonymousMember?>
     {
         /// <summary>
-        /// 获取当前 <see cref="IAnonymousMember"/> 对象的标识符。
+        /// 获取当前 <see cref="IAnonymousMember"/> 实例的标识符。
         /// </summary>
         long Id { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="IAnonymousMember"/> 对象的所属群。
+        /// 获取当前 <see cref="IAnonymousMember"/> 实例的所属群。
         /// </summary>
         public IGroup Group { get; }
     }

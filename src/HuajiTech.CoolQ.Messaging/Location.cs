@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Location"/> 对象的地址。
+        /// 获取或设置当前 <see cref="Location"/> 实例的地址。
         /// </summary>
         public string? Address
         {
@@ -27,7 +27,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Location"/> 对象的纬度。
+        /// 获取或设置当前 <see cref="Location"/> 实例的纬度。
         /// </summary>
         public float Latitude
         {
@@ -36,7 +36,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Location"/> 对象的经度。
+        /// 获取或设置当前 <see cref="Location"/> 实例的经度。
         /// </summary>
         public float Longitude
         {
@@ -45,7 +45,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Location"/> 对象的名称。
+        /// 获取或设置当前 <see cref="Location"/> 实例的名称。
         /// </summary>
         public string? Name
         {

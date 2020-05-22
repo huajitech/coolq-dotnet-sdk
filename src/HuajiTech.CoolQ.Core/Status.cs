@@ -24,22 +24,22 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取当前 <see cref="Status"/> 对象的颜色。
+        /// 获取当前 <see cref="Status"/> 实例的颜色。
         /// </summary>
         public StatusColor Color { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="Status"/> 对象的单位。
+        /// 获取当前 <see cref="Status"/> 实例的单位。
         /// </summary>
         public string Unit { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="Status"/> 对象的值。
+        /// 获取当前 <see cref="Status"/> 实例的值。
         /// </summary>
         public string Value { get; }
 
         /// <summary>
-        /// 将当前 <see cref="Status"/> 对象的值编码为可被酷Q使用的 Base64 字符串。
+        /// 将当前 <see cref="Status"/> 实例的值编码为可被酷Q使用的 Base64 字符串。
         /// </summary>
         /// <returns>编码后的 Base64 字符串。</returns>
         public string Encode()

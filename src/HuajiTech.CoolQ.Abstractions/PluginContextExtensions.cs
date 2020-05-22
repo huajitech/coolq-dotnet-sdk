@@ -7,7 +7,7 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public static class PluginContextExtensions
     {
-        public static IUser? AsUser(this IUser user, PluginContext context)
+        public static IUser? AsUser(this IUser? user, PluginContext context)
         {
             if (user is null)
             {
@@ -22,10 +22,15 @@ namespace HuajiTech.CoolQ
             return context.GetUser(user.Number);
         }
 
-        public static IUser? AsUser(this IUser user) => AsUser(user, PluginContext.Current);
+        public static IUser? AsUser(this IUser? user) => AsUser(user, PluginContext.Current);
 
-        public static IMember? AsMemberOf(this IUser user, IGroup group, PluginContext context)
+        public static IMember? AsMemberOf(this IUser? user, IGroup group, PluginContext context)
         {
+            if (user is null)
+            {
+                return null;
+            }
+
             if (context is null)
             {
                 throw new ArgumentNullException(nameof(context));
@@ -34,11 +39,16 @@ namespace HuajiTech.CoolQ
             return context.GetMember(user, group);
         }
 
-        public static IMember? AsMemberOf(this IUser user, IGroup group) =>
+        public static IMember? AsMemberOf(this IUser? user, IGroup group) =>
             AsMemberOf(user, group, PluginContext.Current);
 
-        public static IMember? AsMemberOf(this IUser user, long groupNumber, PluginContext context)
+        public static IMember? AsMemberOf(this IUser? user, long groupNumber, PluginContext context)
         {
+            if (user is null)
+            {
+                return null;
+            }
+
             if (context is null)
             {
                 throw new ArgumentNullException(nameof(context));
@@ -47,10 +57,10 @@ namespace HuajiTech.CoolQ
             return context.GetMember(user, groupNumber);
         }
 
-        public static IMember? AsMemberOf(this IUser user, long groupNumber) =>
+        public static IMember? AsMemberOf(this IUser? user, long groupNumber) =>
             AsMemberOf(user, groupNumber, PluginContext.Current);
 
-        public static TException? LogAsWarning<TException>(this TException exception, ILogger logger)
+        public static TException? LogAsWarning<TException>(this TException? exception, ILogger logger)
             where TException : notnull, Exception
         {
             if (exception is null)
@@ -62,22 +72,22 @@ namespace HuajiTech.CoolQ
             return exception;
         }
 
-        public static TException? LogAsWarning<TException>(this TException exception, PluginContext context)
+        public static TException? LogAsWarning<TException>(this TException? exception, PluginContext context)
             where TException : Exception
         {
             if (context is null)
             {
-                throw new ArgumentNullException(nameof(context));
+                return exception;
             }
 
             return exception.LogAsWarning(context.Bot.Logger);
         }
 
-        public static TException? LogAsWarning<TException>(this TException exception)
+        public static TException? LogAsWarning<TException>(this TException? exception)
             where TException : Exception =>
             LogAsWarning(exception, PluginContext.Current);
 
-        public static TException? LogAsError<TException>(this TException exception, ILogger logger)
+        public static TException? LogAsError<TException>(this TException? exception, ILogger logger)
              where TException : Exception
         {
             if (exception is null)
@@ -89,7 +99,7 @@ namespace HuajiTech.CoolQ
             return exception;
         }
 
-        public static TException? LogAsError<TException>(this TException exception, PluginContext context)
+        public static TException? LogAsError<TException>(this TException? exception, PluginContext context)
             where TException : Exception
         {
             if (exception is null)
@@ -99,13 +109,13 @@ namespace HuajiTech.CoolQ
 
             if (context is null)
             {
-                throw new ArgumentNullException(nameof(context));
+                return exception;
             }
 
             return LogAsError(exception, context.Bot.Logger);
         }
 
-        public static TException? LogAsError<TException>(this TException exception)
+        public static TException? LogAsError<TException>(this TException? exception)
             where TException : Exception =>
             LogAsError(exception, PluginContext.Current);
     }

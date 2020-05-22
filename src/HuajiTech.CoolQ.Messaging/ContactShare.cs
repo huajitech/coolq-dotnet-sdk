@@ -19,7 +19,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="ContactShare"/> 对象的内容类型。
+        /// 获取或设置当前 <see cref="ContactShare"/> 实例的内容类型。
         /// </summary>
         public string? ContentType
         {
@@ -28,7 +28,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="ContactShare"/> 对象的内容号码。
+        /// 获取或设置当前 <see cref="ContactShare"/> 实例的内容号码。
         /// </summary>
         public long ContentNumber
         {

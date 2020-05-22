@@ -15,14 +15,16 @@
 可通过 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性指定插件类的加载阶段。
 
 ```csharp
-[assembly: PluginLoadStage(typeof(MyPlugin), (int)AppLifecycle.Initializing)]
+[PluginLoadStage((int)AppLifecycle.Initializing)]
+class MyPlugin : Plugin
+{
+}
 ```
 
-使用 @"HuajiTech.CoolQ.DefaultPluginLoadStageAttribute" 特性指定在未指定 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性时的缺省值。
-@"HuajiTech.CoolQ.DefaultPluginLoadStageAttribute" 特性不可重复。
+在程序集上应用 @"HuajiTech.CoolQ.PluginLoadStageAttribute" 特性来指定插件的默认加载阶段。
 
 ```csharp
-[assembly: DefaultPluginLoadStage((int)AppLifecycle.Enabled)]
+[assembly: PluginLoadStage((int)AppLifecycle.Enabled)]
 ```
 
 > [!NOTE]
@@ -42,9 +44,6 @@
 - ✘ 插件类构造函数不应抛出异常。
 
 有关详细信息，请参见[酷Q文库](https://docs.cqp.im/dev/v9/tips/#%E5%90%AF%E5%8A%A8-%E5%88%9D%E5%A7%8B%E5%8C%96)。
-
-> [!WARNING]
-> 获取 @"HuajiTech.CoolQ.ICurrentUser" 对象需要调用酷Q API。
 
 ## 事件
 

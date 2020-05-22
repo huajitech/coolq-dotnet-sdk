@@ -4,10 +4,18 @@ namespace HuajiTech.CoolQ
 {
     internal class CoolQPluginContext : PluginContext
     {
-        public CoolQPluginContext(IBot bot)
-            : base(bot)
+        public CoolQPluginContext(IBot bot, IPacker packer, ILoader loader)
         {
+            Bot = bot ?? throw new ArgumentNullException(nameof(bot));
+            Packer = packer ?? throw new ArgumentNullException(nameof(packer));
+            Loader = loader ?? throw new ArgumentNullException(nameof(loader));
         }
+
+        public override IBot Bot { get; }
+
+        public override IPacker Packer { get; }
+
+        public override ILoader Loader { get; }
 
         public override IFriend GetFriend(long number) => new Friend(number);
 

@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="RockPaperScissors"/> 对象的类别。
+        /// 获取或设置当前 <see cref="RockPaperScissors"/> 实例的类别。
         /// </summary>
         public RockPaperScissorsKind Kind
         {

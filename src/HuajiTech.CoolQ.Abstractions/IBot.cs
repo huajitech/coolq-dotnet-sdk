@@ -8,27 +8,27 @@ namespace HuajiTech.CoolQ
     public interface IBot
     {
         /// <summary>
-        /// 获取一个值，指示当前 <see cref="IBot"/> 对象是否可以发送图片。
+        /// 获取一个值，指示当前 <see cref="IBot"/> 实例是否可以发送图片。
         /// </summary>
         bool CanSendImage { get; }
 
         /// <summary>
-        /// 获取一个值，指示当前 <see cref="IBot"/> 对象是否可以发送录音。
+        /// 获取一个值，指示当前 <see cref="IBot"/> 实例是否可以发送录音。
         /// </summary>
         bool CanSendRecord { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="IBot"/> 对象的当前用户。
+        /// 获取当前 <see cref="IBot"/> 实例的当前用户。
         /// </summary>
         ICurrentUser CurrentUser { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="IBot"/> 对象的日志记录器。
+        /// 获取当前 <see cref="IBot"/> 实例的日志记录器。
         /// </summary>
         ILogger Logger { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="IBot"/> 对象的数据目录。
+        /// 获取当前 <see cref="IBot"/> 实例的数据目录。
         /// </summary>
         DirectoryInfo DataDirectory { get; }
 

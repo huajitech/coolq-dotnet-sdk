@@ -173,7 +173,7 @@
       <tr>
         <td><a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a></td>
         <td><span class="parametername">context</span></td>
-        <td><p>当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 对象所使用的 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a>。</p>
+        <td><p>当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 实例所使用的 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a>。</p>
 </td>
       </tr>
     </tbody>
@@ -185,11 +185,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Plugin_Bot.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Plugin.Bot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L26">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L31">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Plugin_Bot_" data-uid="HuajiTech.CoolQ.Plugin.Bot*"></a>
   <h4 id="HuajiTech_CoolQ_Plugin_Bot" data-uid="HuajiTech.CoolQ.Plugin.Bot">Bot</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.IBot.html">IBot</a>。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 实例的 <a class="xref" href="HuajiTech.CoolQ.IBot.html">IBot</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -216,16 +216,16 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Plugin_Context.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Plugin.Context%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L26">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Plugin_Context_" data-uid="HuajiTech.CoolQ.Plugin.Context*"></a>
   <h4 id="HuajiTech_CoolQ_Plugin_Context" data-uid="HuajiTech.CoolQ.Plugin.Context">Context</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a>。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 实例的 <a class="xref" href="HuajiTech.CoolQ.PluginContext.html">PluginContext</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected PluginContext Context { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public PluginContext Context { get; }</code></pre>
   </div>
   <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,11 +247,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Plugin_CurrentUser.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Plugin.CurrentUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L31">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Plugin_CurrentUser_" data-uid="HuajiTech.CoolQ.Plugin.CurrentUser*"></a>
   <h4 id="HuajiTech_CoolQ_Plugin_CurrentUser" data-uid="HuajiTech.CoolQ.Plugin.CurrentUser">CurrentUser</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.ICurrentUser.html">ICurrentUser</a>。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 实例的 <a class="xref" href="HuajiTech.CoolQ.ICurrentUser.html">ICurrentUser</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -278,11 +278,11 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Plugin_Logger.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Plugin.Logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/Plugin.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Plugin_Logger_" data-uid="HuajiTech.CoolQ.Plugin.Logger*"></a>
   <h4 id="HuajiTech_CoolQ_Plugin_Logger" data-uid="HuajiTech.CoolQ.Plugin.Logger">Logger</h4>
-  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 对象的 <a class="xref" href="HuajiTech.CoolQ.ILogger.html">ILogger</a>。</p>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.Plugin.html">Plugin</a> 实例的 <a class="xref" href="HuajiTech.CoolQ.ILogger.html">ILogger</a>。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>

@@ -9,7 +9,7 @@
         /// <summary>
         /// 以指定的 <see cref="PluginContext"/> 初始化一个 <see cref="Plugin"/> 类的新实例。
         /// </summary>
-        /// <param name="context">当前 <see cref="Plugin"/> 对象所使用的 <see cref="PluginContext"/>。</param>
+        /// <param name="context">当前 <see cref="Plugin"/> 实例所使用的 <see cref="PluginContext"/>。</param>
         protected Plugin(PluginContext context) => Context = context;
 
         /// <summary>
@@ -21,24 +21,24 @@
         }
 
         /// <summary>
-        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="IBot"/>。
+        /// 获取当前 <see cref="Plugin"/> 实例的 <see cref="PluginContext"/>。
+        /// </summary>
+        public PluginContext Context { get; }
+
+        /// <summary>
+        /// 获取当前 <see cref="Plugin"/> 实例的 <see cref="IBot"/>。
         /// </summary>
         protected IBot Bot => Context.Bot;
 
         /// <summary>
-        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="ICurrentUser"/>。
+        /// 获取当前 <see cref="Plugin"/> 实例的 <see cref="ICurrentUser"/>。
         /// </summary>
         protected ICurrentUser CurrentUser => Bot.CurrentUser;
 
         /// <summary>
-        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="ILogger"/>。
+        /// 获取当前 <see cref="Plugin"/> 实例的 <see cref="ILogger"/>。
         /// </summary>
         protected ILogger Logger => Bot.Logger;
-
-        /// <summary>
-        /// 获取当前 <see cref="Plugin"/> 对象的 <see cref="PluginContext"/>。
-        /// </summary>
-        protected PluginContext Context { get; }
 
         /// <summary>
         /// 创建指定号码的好友。

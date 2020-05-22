@@ -20,7 +20,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="CustomMusic"/> 对象的音频 URL。
+        /// 获取或设置当前 <see cref="CustomMusic"/> 实例的音频 URL。
         /// </summary>
         public Uri? AudioUrl
         {
@@ -29,7 +29,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="CustomMusic"/> 对象的内容 URL。
+        /// 获取或设置当前 <see cref="CustomMusic"/> 实例的内容 URL。
         /// </summary>
         public Uri? ContentUrl
         {
@@ -38,7 +38,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="CustomMusic"/> 对象的描述。
+        /// 获取或设置当前 <see cref="CustomMusic"/> 实例的描述。
         /// </summary>
         public string? Description
         {
@@ -47,7 +47,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="CustomMusic"/> 对象的图片URL。
+        /// 获取或设置当前 <see cref="CustomMusic"/> 实例的图片URL。
         /// </summary>
         public Uri? ImageUrl
         {
@@ -56,7 +56,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="CustomMusic"/> 对象的标题。
+        /// 获取或设置当前 <see cref="CustomMusic"/> 实例的标题。
         /// </summary>
         public string? Title
         {

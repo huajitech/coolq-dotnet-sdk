@@ -19,7 +19,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="ClockingIn"/> 对象的图片 URL。
+        /// 获取或设置当前 <see cref="ClockingIn"/> 实例的图片 URL。
         /// </summary>
         public Uri? ImageUrl
         {
@@ -28,7 +28,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="ClockingIn"/> 对象的发布位置。
+        /// 获取或设置当前 <see cref="ClockingIn"/> 实例的发布位置。
         /// </summary>
         public string? Location
         {
@@ -37,7 +37,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="ClockingIn"/> 对象的标题。
+        /// 获取或设置当前 <see cref="ClockingIn"/> 实例的标题。
         /// </summary>
         public string? Title
         {

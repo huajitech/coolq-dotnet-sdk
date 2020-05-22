@@ -5,7 +5,7 @@
     <TargetFrameworks>netstandard2.0;net461;net45</TargetFrameworks>
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>0.3.0-alpha.1</Version>
+    <Version>0.3.0-alpha.2</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>使用 ILRepack 打包 HuajiTech.CoolQ 应用。</Description>

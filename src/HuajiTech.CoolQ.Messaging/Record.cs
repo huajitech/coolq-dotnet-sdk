@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Record"/> 对象的文件名。
+        /// 获取或设置当前 <see cref="Record"/> 实例的文件名。
         /// </summary>
         public string? FileName
         {
@@ -27,7 +27,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置一个值，指示当前 <see cref="Record"/> 对象是否经过变声。
+        /// 获取或设置一个值，指示当前 <see cref="Record"/> 实例是否经过变声。
         /// </summary>
         public bool IsVoiceChanged
         {

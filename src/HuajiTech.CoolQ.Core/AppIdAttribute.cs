@@ -16,7 +16,7 @@ namespace HuajiTech.CoolQ
         public AppIdAttribute(string id) => Id = id;
 
         /// <summary>
-        /// 获取当前 <see cref="AppIdAttribute"/> 对象的 ID。
+        /// 获取当前 <see cref="AppIdAttribute"/> 实例的 ID。
         /// </summary>
         public string Id { get; }
     }

@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Emoji"/> 对象的 ID。
+        /// 获取或设置当前 <see cref="Emoji"/> 实例的 ID。
         /// </summary>
         public int Id
         {

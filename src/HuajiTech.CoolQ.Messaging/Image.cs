@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Image"/> 对象的文件名。
+        /// 获取或设置当前 <see cref="Image"/> 实例的文件名。
         /// </summary>
         public string? FileName
         {

@@ -18,7 +18,7 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取或设置当前 <see cref="Dice"/> 对象的点数。
+        /// 获取或设置当前 <see cref="Dice"/> 实例的点数。
         /// </summary>
         public int Point
         {

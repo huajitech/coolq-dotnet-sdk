@@ -19,6 +19,10 @@ namespace HuajiTech.CoolQ
             _info = info;
         }
 
+        private protected User()
+        {
+        }
+
         public virtual bool IsRequested { get; protected set; }
 
         public virtual bool IsRequestedSuccessfully => !(_info is null);

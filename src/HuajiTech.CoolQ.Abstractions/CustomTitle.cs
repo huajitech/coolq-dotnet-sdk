@@ -25,7 +25,7 @@ namespace HuajiTech.CoolQ
         }
 
         /// <summary>
-        /// 获取当前 <see cref="CustomTitle"/> 对象的过期时间。
+        /// 获取当前 <see cref="CustomTitle"/> 实例的过期时间。
         /// 如果没有过期时间，则为 <c>null</c>。
         /// </summary>
         public DateTime? ExpirationTime { get; }

@@ -1,5 +1,4 @@
 using HuajiTech.CoolQ.DataExchange;
-
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,10 +6,7 @@ namespace HuajiTech.CoolQ
 {
     internal class CurrentUser : User, ICurrentUser
     {
-        internal CurrentUser()
-            : base(NativeMethods.CurrentUser_GetNumber(Bot.Instance.AuthCode))
-        {
-        }
+        public override long Number => NativeMethods.CurrentUser_GetNumber(Bot.Instance.AuthCode);
 
         public override string Nickname => NativeMethods.CurrentUser_GetNickname(Bot.Instance.AuthCode);
 

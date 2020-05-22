@@ -76,12 +76,12 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
-        /// 获取当前 <see cref="CQCode"/> 对象的参数。
+        /// 获取当前 <see cref="CQCode"/> 实例的参数。
         /// </summary>
         public IDictionary<string, string> Parameters { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="CQCode"/> 对象的类型。
+        /// 获取当前 <see cref="CQCode"/> 实例的类型。
         /// </summary>
         public string Type { get; }
 
@@ -100,9 +100,62 @@ namespace HuajiTech.CoolQ.Messaging
         public static string? Unescape(string? str) => PlainText.Unescape(str)?.Replace("&#44", ",");
 
         /// <summary>
-        /// 将当前 <see cref="CQCode"/> 对象的值转换为它的等效字符串表示形式。
+        /// 以指定的类型和参数创建一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
-        /// <returns>当前 <see cref="CQCode"/> 对象的值的字符串表示形式。</returns>
+        /// <param name="type">要创建的 <see cref="CQCode"/> 实例的类型。</param>
+        /// <param name="parameters">要创建的 <see cref="CQCode"/> 实例的参数。</param>
+        /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
+        public static CQCode Create(string type, IDictionary<string, string> parameters)
+        {
+            if (string.IsNullOrWhiteSpace(type))
+            {
+                throw new ArgumentException(Resources.FieldCannotBeEmptyOrWhiteSpace, nameof(type));
+            }
+
+            if (parameters is null)
+            {
+                throw new ArgumentNullException(nameof(parameters));
+            }
+
+            return type switch
+            {
+                "face" => new Emoticon(parameters),
+                "emoji" => new Emoji(parameters),
+                "bface" => new CustomEmoticon(parameters),
+                "sface" => new SmallEmoticon(parameters),
+                "image" => new Image(parameters),
+                "record" => new Record(parameters),
+                "at" when parameters["qq"] is "all" => new AtAll(parameters),
+                "at" => new At(parameters),
+                "rps" => new RockPaperScissors(parameters),
+                "dice" => new Dice(parameters),
+                "shake" => new Shake(parameters),
+                "anonymous" => new Anonymous(parameters),
+                "location" => new Location(parameters),
+                "sign" => new ClockingIn(parameters),
+                "music" when parameters["type"] is "custom" => new CustomMusic(parameters),
+                "music" => new Music(parameters),
+                "share" => new Share(parameters),
+                "rich" => new RichText(parameters),
+                "contact" => new ContactShare(parameters),
+                _ => new CQCode(type, parameters)
+            };
+        }
+
+        /// <summary>
+        /// 以指定的类型创建一个 <see cref="CQCode"/> 类的新实例。
+        /// </summary>
+        /// <param name="type">要创建的 <see cref="CQCode"/> 实例的类型。</param>
+        /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        public static CQCode Create(string type) => Create(type, new Dictionary<string, string>());
+
+        /// <summary>
+        /// 将当前 <see cref="CQCode"/> 实例的值转换为它的等效字符串表示形式。
+        /// </summary>
+        /// <returns>当前 <see cref="CQCode"/> 实例的值的字符串表示形式。</returns>
         public override string ToString() =>
             Parameters.Any() ?
                 $"[CQ:{Type},{string.Join(",", Parameters.Select(para => $"{para.Key}={Escape(para.Value)}"))}]" :
