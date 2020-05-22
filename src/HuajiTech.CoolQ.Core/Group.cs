@@ -81,7 +81,7 @@ namespace HuajiTech.CoolQ
 
         private GroupInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (IsRequested && !requesting)
+            if (IsRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return GroupInfo.Empty;
             }

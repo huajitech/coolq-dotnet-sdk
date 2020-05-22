@@ -54,7 +54,7 @@ namespace HuajiTech.CoolQ
 
         private UserInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (IsRequested && !requesting)
+            if (IsRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return UserInfo.Empty;
             }

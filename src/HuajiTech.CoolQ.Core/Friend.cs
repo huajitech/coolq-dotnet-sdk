@@ -33,7 +33,7 @@ namespace HuajiTech.CoolQ
 
         private FriendInfo GetInfo(bool requesting = false)
         {
-            if (IsRequested && !requesting)
+            if (IsRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return new FriendInfo();
             }

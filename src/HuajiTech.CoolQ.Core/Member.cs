@@ -36,7 +36,7 @@ namespace HuajiTech.CoolQ
 
         public bool HasBadRecord => GetInfo().HasBadRecord;
 
-        public override bool IsRequested => !(_info is null);
+        public override bool IsRequestedSuccessfully => !(_info is null);
 
         public DateTime LastSpeakTime => GetInfo().LastSpeakTime;
 
@@ -118,7 +118,7 @@ namespace HuajiTech.CoolQ
 
         private MemberInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (IsRequested && !requesting)
+            if (IsRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return MemberInfo.Empty;
             }
