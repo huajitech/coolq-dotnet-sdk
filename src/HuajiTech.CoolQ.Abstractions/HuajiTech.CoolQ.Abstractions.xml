@@ -80,6 +80,23 @@
             在调用 API 发生错误时引发的异常。
             </summary>
         </member>
+        <member name="T:HuajiTech.CoolQ.AppIdAttribute">
+            <summary>
+            指定当前程序集的 AppID。
+            此类不能被继承。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.AppIdAttribute.#ctor(System.String)">
+            <summary>
+            以指定的 ID 初始化一个 <see cref="T:HuajiTech.CoolQ.AppIdAttribute"/> 类的新实例。
+            </summary>
+            <param name="id">应用的 AppID。</param>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AppIdAttribute.Id">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.AppIdAttribute"/> 实例的 ID。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.AppLifecycle">
             <summary>
             指定应用生命周期。
