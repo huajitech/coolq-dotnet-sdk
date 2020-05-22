@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.AppIdAttribute.html",
-          "hash": "1hNulIpfLQE2WE0gpPhWIw=="
+          "hash": "cojzhhqm0OB9GeIi/aalyA=="
         }
       },
       "is_incremental": false,
@@ -1621,13 +1621,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 9,
-          "skipped_file_count": 8
+          "skipped_file_count": 9
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 120,
-          "skipped_file_count": 120
+          "skipped_file_count": 95
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
