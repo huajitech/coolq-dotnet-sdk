@@ -95,7 +95,7 @@
       <a class="xref" href="HuajiTech.CoolQ.ISendee.html#HuajiTech_CoolQ_ISendee_Send_System_String_">ISendee.Send(String)</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.CoolQ.INamed.html#HuajiTech_CoolQ_INamed_Name">INamed.Name</a>
+      <a class="xref" href="HuajiTech.CoolQ.IDisplayable.html#HuajiTech_CoolQ_IDisplayable_DisplayName">IDisplayable.DisplayName</a>
     </div>
     <div>
       <span class="xref">System.IEquatable&lt;HuajiTech.CoolQ.IChattable&gt;.Equals(HuajiTech.CoolQ.IChattable)</span>
@@ -123,7 +123,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.Abstractions.dll</h6>
   <h5 id="HuajiTech_CoolQ_IGroup_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IGroup : IChattable, ISendee, INamed, IEquatable&lt;IChattable&gt;, IMuteable, IRequestable, IRefreshable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGroup : IChattable, ISendee, IDisplayable, IEquatable&lt;IChattable&gt;, IMuteable, IRequestable, IRefreshable</code></pre>
   </div>
   <h3 id="properties">&#23646;&#24615;
   </h3>
@@ -132,7 +132,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_MemberCapacity.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.MemberCapacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_IGroup_MemberCapacity_" data-uid="HuajiTech.CoolQ.IGroup.MemberCapacity*"></a>
   <h4 id="HuajiTech_CoolQ_IGroup_MemberCapacity" data-uid="HuajiTech.CoolQ.IGroup.MemberCapacity">MemberCapacity</h4>
@@ -163,7 +163,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_MemberCount.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.MemberCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_IGroup_MemberCount_" data-uid="HuajiTech.CoolQ.IGroup.MemberCount*"></a>
   <h4 id="HuajiTech_CoolQ_IGroup_MemberCount" data-uid="HuajiTech.CoolQ.IGroup.MemberCount">MemberCount</h4>
@@ -189,6 +189,37 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_Name.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L13">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_CoolQ_IGroup_Name_" data-uid="HuajiTech.CoolQ.IGroup.Name*"></a>
+  <h4 id="HuajiTech_CoolQ_IGroup_Name" data-uid="HuajiTech.CoolQ.IGroup.Name">Name</h4>
+  <div class="markdown level1 summary"><p>获取当前 <a class="xref" href="HuajiTech.CoolQ.IGroup.html">IGroup</a> 实例的名称。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">&#26041;&#27861;
   </h3>
   <span class="small pull-right mobile-hide">
@@ -196,7 +227,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_DisableAnonymous.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.DisableAnonymous%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_IGroup_DisableAnonymous_" data-uid="HuajiTech.CoolQ.IGroup.DisableAnonymous*"></a>
   <h4 id="HuajiTech_CoolQ_IGroup_DisableAnonymous" data-uid="HuajiTech.CoolQ.IGroup.DisableAnonymous">DisableAnonymous()</h4>
@@ -212,7 +243,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_Disband.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.Disband%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L33">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_IGroup_Disband_" data-uid="HuajiTech.CoolQ.IGroup.Disband*"></a>
   <h4 id="HuajiTech_CoolQ_IGroup_Disband" data-uid="HuajiTech.CoolQ.IGroup.Disband">Disband()</h4>
@@ -228,7 +259,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_EnableAnonymous.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.EnableAnonymous%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L33">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L38">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_IGroup_EnableAnonymous_" data-uid="HuajiTech.CoolQ.IGroup.EnableAnonymous*"></a>
   <h4 id="HuajiTech_CoolQ_IGroup_EnableAnonymous" data-uid="HuajiTech.CoolQ.IGroup.EnableAnonymous">EnableAnonymous()</h4>
@@ -244,7 +275,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_GetMembers.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.GetMembers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L38">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L43">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_IGroup_GetMembers_" data-uid="HuajiTech.CoolQ.IGroup.GetMembers*"></a>
   <h4 id="HuajiTech_CoolQ_IGroup_GetMembers" data-uid="HuajiTech.CoolQ.IGroup.GetMembers">GetMembers()</h4>
@@ -275,7 +306,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_IGroup_Leave.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.IGroup.Leave%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L43">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/IGroup.cs/#L48">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_IGroup_Leave_" data-uid="HuajiTech.CoolQ.IGroup.Leave*"></a>
   <h4 id="HuajiTech_CoolQ_IGroup_Leave" data-uid="HuajiTech.CoolQ.IGroup.Leave">Leave()</h4>

@@ -79,18 +79,6 @@ namespace HuajiTech.CoolQ.Loaders
         private static void RegisterSdk(ContainerBuilder builder)
         {
             builder
-                .Register(context => Bot.Instance)
-                .AsImplementedInterfaces();
-
-            builder
-                .Register(context => Bot.Instance.Logger)
-                .As<ILogger>();
-
-            builder
-                .Register(context => Bot.Instance.CurrentUser)
-                .As<ICurrentUser>();
-
-            builder
                 .RegisterInstance(CurrentUserEventSource.Instance)
                 .AsImplementedInterfaces();
 
@@ -105,6 +93,18 @@ namespace HuajiTech.CoolQ.Loaders
             builder
                 .Register(context => PluginContext.Current)
                 .As<PluginContext>();
+
+            builder
+                .Register(context => PluginContext.Current.Bot)
+                .AsImplementedInterfaces();
+
+            builder
+                .Register(context => PluginContext.Current.Bot.Logger)
+                .As<ILogger>();
+
+            builder
+                .Register(context => PluginContext.Current.Bot.CurrentUser)
+                .As<ICurrentUser>();
         }
 
         private static void RegisterPlugins(ContainerBuilder builder)

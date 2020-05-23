@@ -19,7 +19,9 @@ namespace HuajiTech.CoolQ
 
         public long Id => GetInfo().Id;
 
-        public string Name => GetInfo().Name ?? ToString();
+        public string? Name => GetInfo().Name;
+
+        public string DisplayName => Name ?? ToString();
 
         public IGroup Group { get; }
 

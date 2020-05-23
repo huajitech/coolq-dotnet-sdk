@@ -62,18 +62,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HuajiTech.CoolQ.Bot.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HuajiTech.CoolQ.Bot.html",
-          "hash": "nZghX4pgjoEZkPRcRLPNVQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/HuajiTech.CoolQ.CurrentPluginContext.yml",
       "output": {
         ".html": {
@@ -690,7 +678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.IAnonymousMember.html",
-          "hash": "jg2WknwQuCjRlCCMkAifSg=="
+          "hash": "fgGJVGRgDMNTRyOiGxrBPQ=="
         }
       },
       "is_incremental": false,
@@ -714,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.IChattable.html",
-          "hash": "83rN+pFwS5LsjSX1K7Nw7w=="
+          "hash": "K5EB67QzBTrFsSWilxYaGw=="
         }
       },
       "is_incremental": false,
@@ -726,7 +714,19 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.ICurrentUser.html",
-          "hash": "aJvvyB7NEfVeyn4UM4p3xQ=="
+          "hash": "mWuxQmjjAST5JuRYH9vk/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HuajiTech.CoolQ.IDisplayable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HuajiTech.CoolQ.IDisplayable.html",
+          "hash": "eWuK9Hk8iz2H/sY2Bdi8Fw=="
         }
       },
       "is_incremental": false,
@@ -750,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.IFriend.html",
-          "hash": "pi9P+65ecxoRmFid7DxJ1w=="
+          "hash": "on/65CWTXTueXxK+aryz2g=="
         }
       },
       "is_incremental": false,
@@ -774,7 +774,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.IGroup.html",
-          "hash": "dCNEsSm/BDvXUMiJupIs1g=="
+          "hash": "/OD5Wd6qQ3xStVF2j3Awbg=="
         }
       },
       "is_incremental": false,
@@ -810,7 +810,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.IMember.html",
-          "hash": "anRVVM9i4DJ3AXOnfXLxeQ=="
+          "hash": "cMOA/dKqhsbpqID9Rj1R1A=="
         }
       },
       "is_incremental": false,
@@ -835,18 +835,6 @@
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.IMuteable.html",
           "hash": "pHL+VnBpRkOhyb4sst51Bg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/HuajiTech.CoolQ.INamed.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HuajiTech.CoolQ.INamed.html",
-          "hash": "itTT8wcGbtJbKEQA3ly3Mg=="
         }
       },
       "is_incremental": false,
@@ -942,7 +930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.IUser.html",
-          "hash": "SdsncA3+1rrSJJtys6i7iA=="
+          "hash": "bOiSqw0kSsYzUjP0oetbTA=="
         }
       },
       "is_incremental": false,
@@ -1086,7 +1074,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.ComplexMessage.html",
-          "hash": "WVZo8QBL9wTLc3kodAr6Cw=="
+          "hash": "IukYL0UXrI0THTX7odzgTQ=="
         }
       },
       "is_incremental": false,
@@ -1362,7 +1350,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Packing.ILRepacker.html",
-          "hash": "nwqkuAno+82AVCELo1AD0w=="
+          "hash": "HJkoNhUPAynIMNqVJwA7iw=="
         }
       },
       "is_incremental": false,
@@ -1458,7 +1446,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.html",
-          "hash": "qG6zk5+bDcaCH4Dtk68wSQ=="
+          "hash": "mkpU01XcYOgq5EMjry59Lg=="
         }
       },
       "is_incremental": false,
@@ -1482,7 +1470,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "E81pd0yFPESm2eFzebbMYA=="
+          "hash": "agR8xgzIvClwad5CGe6JDg=="
         }
       },
       "is_incremental": false,
@@ -1626,8 +1614,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 120,
-          "skipped_file_count": 95
+          "total_file_count": 119,
+          "skipped_file_count": 85
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

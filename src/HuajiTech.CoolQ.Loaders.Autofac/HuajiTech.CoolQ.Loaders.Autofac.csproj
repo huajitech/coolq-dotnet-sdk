@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.Loaders.Autofac.pfx</AssemblyOriginatorKeyFile>
-    <Version>0.3.0-alpha.2</Version>
+    <Version>0.3.1-alpha</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>使用 Autofac 加载 HuajiTech.CoolQ 应用。</Description>

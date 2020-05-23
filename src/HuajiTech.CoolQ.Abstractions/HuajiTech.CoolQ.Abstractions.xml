@@ -728,6 +728,11 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.IAnonymousMember"/> 实例的所属群。
             </summary>
         </member>
+        <member name="P:HuajiTech.CoolQ.IAnonymousMember.Name">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IAnonymousMember"/> 实例的名称。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.IBot">
             <summary>
             定义机器人。
@@ -806,6 +811,16 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.ICurrentUser"/> 实例的所有群。
             </summary>
         </member>
+        <member name="T:HuajiTech.CoolQ.IDisplayable">
+            <summary>
+            定义可显示的实例。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.IDisplayable.DisplayName">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IDisplayable"/> 实例的显示名称。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.IEntranceRequest">
             <summary>
             定义加入请求。
@@ -836,6 +851,11 @@
         <member name="T:HuajiTech.CoolQ.IGroup">
             <summary>
             定义群。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.IGroup.Name">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 实例的名称。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IGroup.MemberCapacity">
@@ -1126,11 +1146,6 @@
         <member name="M:HuajiTech.CoolQ.IMuteable.Unmute">
             <summary>
             将当前 <see cref="T:HuajiTech.CoolQ.IMuteable"/> 实例解除禁言。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.INamed.Name">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.INamed"/> 实例的名称。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IPacker">

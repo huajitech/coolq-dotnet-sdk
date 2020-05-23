@@ -49,6 +49,6 @@ namespace HuajiTech.CoolQ.Messaging
         /// <returns>经过 <see cref="Escape(string)"/> 后的 <see cref="Content"/>。</returns>
         public override string ToString() => Escape(Content)!;
 
-        public static implicit operator string?(PlainText? text) => text?.Content;
+        public static implicit operator string(PlainText? text) => text?.Content ?? string.Empty;
     }
 }

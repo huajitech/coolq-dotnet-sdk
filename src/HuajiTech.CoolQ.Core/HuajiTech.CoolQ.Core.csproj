@@ -8,7 +8,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.Core.pfx</AssemblyOriginatorKeyFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>0.3.0-alpha.2.1</Version>
+    <Version>0.3.1-alpha</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>HuajiTech.CoolQ 的实现。</Description>

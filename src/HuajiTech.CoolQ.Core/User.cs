@@ -27,7 +27,7 @@ namespace HuajiTech.CoolQ
 
         public virtual bool IsRequestedSuccessfully => !(_info is null);
 
-        public override string Name => Nickname ?? ToString();
+        public override string DisplayName => Nickname ?? ToString();
 
         public virtual string? Nickname => GetInfo().Nickname;
 

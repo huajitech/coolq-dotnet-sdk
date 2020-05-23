@@ -8,7 +8,7 @@ namespace HuajiTech.CoolQ
 
         protected Chat(long number) => Number = number;
 
-        public abstract string Name { get; }
+        public abstract string DisplayName { get; }
 
         public virtual long Number { get; }
 

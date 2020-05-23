@@ -10,7 +10,7 @@ using System.Reflection;
 
 namespace HuajiTech.CoolQ
 {
-    public partial class Bot : IBot
+    internal class Bot : IBot
     {
         internal const string ApiVersion = "9";
         public static readonly string AppId = GetAppId();

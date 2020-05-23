@@ -8,6 +8,11 @@ namespace HuajiTech.CoolQ
     public interface IGroup : IChattable, IMuteable, IRequestable, IRefreshable
     {
         /// <summary>
+        /// 获取当前 <see cref="IGroup"/> 实例的名称。
+        /// </summary>
+        public string? Name { get; }
+
+        /// <summary>
         /// 获取当前 <see cref="IGroup"/> 实例的成员容量。
         /// </summary>
         int MemberCapacity { get; }

@@ -44,7 +44,7 @@ namespace HuajiTech.CoolQ
 
         public string? Location => GetInfo().Location;
 
-        public override string Name => Alias ?? base.Name;
+        public override string DisplayName => Alias ?? base.DisplayName;
 
         public override string? Nickname => GetInfo().Nickname;
 

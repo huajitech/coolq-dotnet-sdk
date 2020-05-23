@@ -22,7 +22,9 @@ namespace HuajiTech.CoolQ
             _name = name;
         }
 
-        public override string Name => _name ?? GetInfo().Name ?? ToString();
+        public string? Name => _name ?? GetInfo().Name;
+
+        public override string DisplayName => Name ?? ToString();
 
         public bool IsRequestedSuccessfully => !(_info is null);
 
