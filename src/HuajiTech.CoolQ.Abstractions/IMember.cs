@@ -70,7 +70,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 将当前 <see cref="IMember"/> 实例踢出所在群。
         /// </summary>
-        /// <param name="disallowRejoin">如果不再接收当前 <see cref="IMember"/> 实例的 <see cref="IEntranceRequest"/>，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <param name="disallowRejoin">如果不再接收当前 <see cref="IMember"/> 实例的 <see cref="IEntranceRequest"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
         void Kick(bool disallowRejoin = false);
 
         /// <summary>

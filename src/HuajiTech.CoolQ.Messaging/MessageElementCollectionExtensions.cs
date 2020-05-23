@@ -14,7 +14,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="elements">要用于创建 <see cref="ComplexMessage"/> 的消息元素集合。</param>
         /// <returns>一个 <see cref="ComplexMessage"/>，其中包含输入序列中的元素。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
         public static ComplexMessage ToComplexMessage(this IEnumerable<MessageElement> elements) =>
             new ComplexMessage(elements);
 
@@ -27,7 +27,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 一个包含 <paramref name="elements"/> 中所有成员的 <see cref="ComplexMessage"/> 实例，这些成员以 <paramref name="separator"/> 分隔。
         /// 如果 <paramref name="elements"/> 没有成员，则该方法返回一个空的 <see cref="ComplexMessage"/> 实例。
         /// </returns>
-        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
         public static ComplexMessage ToComplexMessage(this IEnumerable<MessageElement> elements, MessageElement separator)
         {
             if (elements is null)

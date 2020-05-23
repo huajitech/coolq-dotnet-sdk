@@ -12,7 +12,7 @@ namespace HuajiTech.CoolQ
         /// </summary>
         /// <param name="text">文本。</param>
         /// <param name="expirationTime">过期时间。</param>
-        /// <exception cref="ArgumentException"><paramref name="text"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentException"><paramref name="text"/> 为 <see langword="null"/>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         public CustomTitle(string text, DateTime? expirationTime = null)
         {
             if (string.IsNullOrWhiteSpace(text))
@@ -26,7 +26,7 @@ namespace HuajiTech.CoolQ
 
         /// <summary>
         /// 获取当前 <see cref="CustomTitle"/> 实例的过期时间。
-        /// 如果没有过期时间，则为 <c>null</c>。
+        /// 如果没有过期时间，则为 <see langword="null"/>。
         /// </summary>
         public DateTime? ExpirationTime { get; }
 

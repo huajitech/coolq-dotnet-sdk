@@ -24,10 +24,10 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将 <see cref="IMessage"/> 实例解析为 <see cref="ComplexMessage"/> 实例。
         /// </summary>
         /// <param name="message">一个 <see cref="IMessage"/>实例，该 <see cref="IMessage"/> 实例的 <see cref="IMessage.Content"/> 属性为要解析的 <see cref="ComplexMessage"/> 实例的字符串表示形式。</param>
-        /// <param name="useEmojiCQCode">如果要在返回的 <see cref="ComplexMessage"/> 实例中包含 <see cref="Emoji"/> 实例，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <param name="useEmoji">如果要在返回的 <see cref="ComplexMessage"/> 实例中包含 <see cref="Emoji"/> 实例，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
         /// <returns>与 <see cref="IMessage.Content"/> 等效的 <see cref="ComplexMessage"/> 实例。</returns>
-        public static ComplexMessage Parse(this IMessage? message, bool useEmojiCQCode = false) =>
-            ComplexMessage.Parse(message?.Content, useEmojiCQCode);
+        public static ComplexMessage Parse(this IMessage? message, bool useEmoji = false) =>
+            ComplexMessage.Parse(message?.Content, useEmoji);
 
         /// <summary>
         /// 获取 <see cref="Messaging.At"/> 实例的目标。
@@ -205,8 +205,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="sendee">目标可被发送实例。</param>
         /// <param name="message">要发送的 <see cref="ComplexMessage"/> 实例。</param>
         /// <returns>一个 <see cref="Message"/> 实例，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="sendee"/> 为 <c>null</c>。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="sendee"/> 为 <see langword="null"/>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         /// <exception cref="ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="ApiException">酷Q返回了指示操作失败的值。</exception>
         public static IMessage Send(this ISendee sendee, ComplexMessage message)
@@ -230,8 +230,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="sendee">目标可发送实例。</param>
         /// <param name="element">要发送的 <see cref="MessageElement"/> 实例。</param>
         /// <returns>一个 <see cref="Message"/> 实例，表示已发送的消息。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="sendee"/> 为 <c>null</c>。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="sendee"/> 为 <see langword="null"/>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="element"/> 为 <see langword="null"/>。</exception>
         /// <exception cref="ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="string.Empty"/>。</exception>
         /// <exception cref="ApiException">酷Q返回了指示发送失败的值。</exception>
         public static IMessage Send(this ISendee sendee, MessageElement element)

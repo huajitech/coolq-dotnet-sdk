@@ -73,7 +73,7 @@
             以指定的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 集合初始化一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 类的新实例。
             </summary>
             <param name="elements"><see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 集合。</param>
-            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="P:HuajiTech.CoolQ.Messaging.ComplexMessage.Item(System.Int32)">
             <summary>
@@ -87,7 +87,7 @@
             将字符串解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。
             </summary>
             <param name="str">要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例的字符串表示形式。</param>
-            <param name="useEmojiCQCode">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 实例，则为 <c>true</c>；否则为 <c>false</c>。</param>
+            <param name="useEmoji">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 实例，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
             <returns>与字符串等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。</returns>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Join(HuajiTech.CoolQ.Messaging.MessageElement,System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.ComplexMessage})">
@@ -100,7 +100,7 @@
             一个包含 <paramref name="messages"/> 中所有成员的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例，这些成员以 <paramref name="separator"/> 分隔。
             如果 <paramref name="messages"/> 没有成员，则该方法返回一个空的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。
             </returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="messages"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="messages"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText">
             <summary>
@@ -151,10 +151,10 @@
             </summary>
             <param name="collection">
             应将其元素添加到 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的末尾的集合。
-            集合自身不能为 <c>null</c>。
+            集合自身不能为 <see langword="null"/>。
             </param>
             <returns>当前 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.Insert(System.Int32,HuajiTech.CoolQ.Messaging.MessageElement)">
             <summary>
@@ -181,8 +181,8 @@
             </summary>
             <param name="item">要从 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中删除的实例。</param>
             <returns>
-            如果成功移除了 <paramref name="item"/>，则为 <c>true</c>；否则为 <c>false</c>。
-            如果在 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <c>false</c>。
+            如果成功移除了 <paramref name="item"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。
+            如果在 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <see langword="false"/>。
             </returns>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.Messaging.MessageElement)">
@@ -221,114 +221,114 @@
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 1 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 2 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 3 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 4 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 5 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 6 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 7 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 8 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 9 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 10 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 11 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 12 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 13 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 14 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 15 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.ComplexMessageExtensions.Deconstruct(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@,HuajiTech.CoolQ.Messaging.MessageElement@)">
             <summary>
             将 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例解构为 16 个不同的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。
-            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <c>null</c>。
+            如果要求的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例数量大于 <paramref name="message"/> 的元素数量，则超出部分的值为 <see langword="null"/>。
             </summary>
-            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="message"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="T:HuajiTech.CoolQ.Messaging.ContactShare">
             <summary>
@@ -355,7 +355,7 @@
             以指定的类型初始化一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。
             </summary>
             <param name="type">CQ码的类型。</param>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.CQCode.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
             <summary>
@@ -363,8 +363,8 @@
             </summary>
             <param name="type">CQ码的类型。</param>
             <param name="parameters">一个字典，包含 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 的所有参数。</param>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="parameters"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="P:HuajiTech.CoolQ.Messaging.CQCode.Parameters">
             <summary>
@@ -383,7 +383,7 @@
             <param name="key">要获取或设置的参数的键。</param>
             <value>
             指定 <paramref name="key"/> 处的参数的值。
-            如果指定键不存在，则为 <c>null</c>。
+            如果指定键不存在，则为 <see langword="null"/>。
             </value>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.CQCode.Escape(System.String)">
@@ -407,8 +407,8 @@
             <param name="type">要创建的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 实例的类型。</param>
             <param name="parameters">要创建的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 实例的参数。</param>
             <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。</returns>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="parameters"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.CQCode.Create(System.String)">
             <summary>
@@ -416,7 +416,7 @@
             </summary>
             <param name="type">要创建的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 实例的类型。</param>
             <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/> 类的新实例。</returns>
-            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="F:System.String.Empty"/> 或仅由空白字符组成。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.CQCode.ToString">
             <summary>
@@ -546,7 +546,7 @@
             </summary>
             <param name="elements">要用于创建 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 的消息元素集合。</param>
             <returns>一个 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>，其中包含输入序列中的元素。</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.MessageElementCollectionExtensions.ToComplexMessage(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement},HuajiTech.CoolQ.Messaging.MessageElement)">
             <summary>
@@ -558,7 +558,7 @@
             一个包含 <paramref name="elements"/> 中所有成员的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例，这些成员以 <paramref name="separator"/> 分隔。
             如果 <paramref name="elements"/> 没有成员，则该方法返回一个空的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。
             </returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
         </member>
         <member name="T:HuajiTech.CoolQ.Messaging.Music">
             <summary>

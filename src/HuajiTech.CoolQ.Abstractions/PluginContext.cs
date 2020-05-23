@@ -13,7 +13,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取或设置当前插件上下文。
         /// </summary>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <see langword="null"/>。</exception>
         public static PluginContext Current
         {
             get => _current ?? throw new InvalidOperationException(AbstractionResources.ContextNotInitialized);

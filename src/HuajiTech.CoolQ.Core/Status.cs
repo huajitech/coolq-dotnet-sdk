@@ -14,8 +14,8 @@ namespace HuajiTech.CoolQ
         /// <param name="value">状态的值。</param>
         /// <param name="unit">状态的单位。</param>
         /// <param name="color">状态的颜色。</param>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <c>null</c>。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="unit"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> 为 <see langword="null"/>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="unit"/> 为 <see langword="null"/>。</exception>
         public Status(string value, string unit, StatusColor color)
         {
             Value = value ?? throw new ArgumentNullException(nameof(value));

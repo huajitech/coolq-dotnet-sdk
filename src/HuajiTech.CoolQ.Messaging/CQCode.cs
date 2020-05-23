@@ -14,7 +14,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 以指定的类型初始化一个 <see cref="CQCode"/> 类的新实例。
         /// </summary>
         /// <param name="type">CQ码的类型。</param>
-        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         public CQCode(string type)
         {
             if (string.IsNullOrWhiteSpace(type))
@@ -31,8 +31,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="type">CQ码的类型。</param>
         /// <param name="parameters">一个字典，包含 <see cref="CQCode"/> 的所有参数。</param>
-        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="parameters"/> 为 <see langword="null"/>。</exception>
         public CQCode(string type, IDictionary<string, string> parameters)
         {
             if (string.IsNullOrWhiteSpace(type))
@@ -60,7 +60,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="key">要获取或设置的参数的键。</param>
         /// <value>
         /// 指定 <paramref name="key"/> 处的参数的值。
-        /// 如果指定键不存在，则为 <c>null</c>。
+        /// 如果指定键不存在，则为 <see langword="null"/>。
         /// </value>
         public string? this[string key]
         {
@@ -105,8 +105,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="type">要创建的 <see cref="CQCode"/> 实例的类型。</param>
         /// <param name="parameters">要创建的 <see cref="CQCode"/> 实例的参数。</param>
         /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
-        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="parameters"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="parameters"/> 为 <see langword="null"/>。</exception>
         public static CQCode Create(string type, IDictionary<string, string> parameters)
         {
             if (string.IsNullOrWhiteSpace(type))
@@ -149,7 +149,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="type">要创建的 <see cref="CQCode"/> 实例的类型。</param>
         /// <returns>一个 <see cref="CQCode"/> 类的新实例。</returns>
-        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <c>null</c>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
+        /// <exception cref="ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         public static CQCode Create(string type) => Create(type, new Dictionary<string, string>());
 
         /// <summary>

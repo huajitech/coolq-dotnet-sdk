@@ -36,7 +36,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 以指定的 <see cref="MessageElement"/> 集合初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         /// <param name="elements"><see cref="MessageElement"/> 集合。</param>
-        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
         public ComplexMessage(IEnumerable<MessageElement> elements) => _elements = new List<MessageElement>(elements);
 
         /// <summary>
@@ -69,9 +69,9 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将字符串解析为 <see cref="ComplexMessage"/> 实例。
         /// </summary>
         /// <param name="str">要解析的 <see cref="ComplexMessage"/> 实例的字符串表示形式。</param>
-        /// <param name="useEmojiCQCode">如果要在返回的 <see cref="ComplexMessage"/> 实例中包含 <see cref="Emoji"/> 实例，则为 <c>true</c>；否则为 <c>false</c>。</param>
+        /// <param name="useEmoji">如果要在返回的 <see cref="ComplexMessage"/> 实例中包含 <see cref="Emoji"/> 实例，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
         /// <returns>与字符串等效的 <see cref="ComplexMessage"/> 实例。</returns>
-        public static ComplexMessage Parse(string? str, bool useEmojiCQCode = false)
+        public static ComplexMessage Parse(string? str, bool useEmoji = false)
         {
             if (str is null)
             {
@@ -122,7 +122,7 @@ namespace HuajiTech.CoolQ.Messaging
                 }
             }
 
-            if (!useEmojiCQCode)
+            if (!useEmoji)
             {
                 var convertedElements = GetMessageElements()
                     .Select(element => element is Emoji emoji ? emoji.ConvertToString() : element);
@@ -141,7 +141,7 @@ namespace HuajiTech.CoolQ.Messaging
         /// 一个包含 <paramref name="messages"/> 中所有成员的 <see cref="ComplexMessage"/> 实例，这些成员以 <paramref name="separator"/> 分隔。
         /// 如果 <paramref name="messages"/> 没有成员，则该方法返回一个空的 <see cref="ComplexMessage"/> 实例。
         /// </returns>
-        /// <exception cref="ArgumentNullException"><paramref name="messages"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="messages"/> 为 <see langword="null"/>。</exception>
         public static ComplexMessage Join(MessageElement separator, IEnumerable<ComplexMessage> messages)
         {
             if (messages is null)
@@ -289,10 +289,10 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="collection">
         /// 应将其元素添加到 <see cref="ComplexMessage"/> 的末尾的集合。
-        /// 集合自身不能为 <c>null</c>。
+        /// 集合自身不能为 <see langword="null"/>。
         /// </param>
         /// <returns>当前 <see cref="ComplexMessage"/> 实例。</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="collection"/> 为 <c>null</c>。</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="collection"/> 为 <see langword="null"/>。</exception>
         public ComplexMessage Add(IEnumerable<MessageElement> collection)
         {
             _elements.AddRange(collection);
@@ -331,8 +331,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="item">要从 <see cref="ComplexMessage"/> 中删除的实例。</param>
         /// <returns>
-        /// 如果成功移除了 <paramref name="item"/>，则为 <c>true</c>；否则为 <c>false</c>。
-        /// 如果在 <see cref="ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <c>false</c>。
+        /// 如果成功移除了 <paramref name="item"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。
+        /// 如果在 <see cref="ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <see langword="false"/>。
         /// </returns>
         public bool TryRemove(MessageElement item) => _elements.Remove(item);
 
