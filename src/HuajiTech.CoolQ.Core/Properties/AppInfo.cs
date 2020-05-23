@@ -1,5 +1,5 @@
 ﻿// 用于 HuajiTech.CoolQ 的应用信息配置文件。
-// 最后更新于 2020-5-22 19:07。
+// 最后更新于 2020-5-23 17:05。
 
 using HuajiTech.CoolQ;
 
@@ -15,9 +15,10 @@ using HuajiTech.CoolQ;
 // 注意：若在非 Initializing 阶段加载，删除 app.json 中的对应事件将会导致插件不被加载。
 [assembly: PluginLoadStage((int)AppLifecycle.Enabled)]
 
-// 可通过在插件类上应用 PluginLoadStageAttribute 指定加载阶段。
-/* [PluginLoadStage((int)AppLifecycle.Initializing)]
- * class MyPlugin : Plugin
- * {
- * }
- */
+// 可通过在插件类上应用 PluginLoadStageAttribute 重写默认加载阶段。
+#if false
+    [PluginLoadStage((int)AppLifecycle.Initializing)]
+    class MyPlugin : Plugin
+    {
+    }
+#endif
