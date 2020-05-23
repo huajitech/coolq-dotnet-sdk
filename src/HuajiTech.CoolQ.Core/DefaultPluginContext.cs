@@ -2,9 +2,9 @@
 
 namespace HuajiTech.CoolQ
 {
-    internal class CoolQPluginContext : PluginContext
+    internal class DefaultPluginContext : PluginContext
     {
-        public CoolQPluginContext(IBot bot, IPacker packer, ILoader loader)
+        public DefaultPluginContext(IBot bot, IPacker packer, ILoader loader)
         {
             Bot = bot ?? throw new ArgumentNullException(nameof(bot));
             Packer = packer ?? throw new ArgumentNullException(nameof(packer));

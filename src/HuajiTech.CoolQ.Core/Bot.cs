@@ -45,7 +45,7 @@ namespace HuajiTech.CoolQ
 
         public ICurrentUser CurrentUser => _currentUser.Value;
 
-        public ILogger Logger { get; } = new CoolQLogger();
+        public ILogger Logger { get; } = new DefaultLogger();
 
         internal int AuthCode { get; }
 
@@ -62,7 +62,7 @@ namespace HuajiTech.CoolQ
             var packer = GetInstance<IPacker>();
             var loader = GetInstance<ILoader>();
 
-            PluginContext.Current = new CoolQPluginContext(Instance, packer, loader);
+            PluginContext.Current = new DefaultPluginContext(Instance, packer, loader);
 
             loader.GetPlugins(AppLifecycle.Initializing);
 
