@@ -50,6 +50,21 @@ namespace HuajiTech.CoolQ.Messaging
             set => _elements[index] = value;
         }
 
+        public static bool operator ==(ComplexMessage? left, ComplexMessage? right) => left?.Equals(right) ?? right is null;
+
+        public static bool operator !=(ComplexMessage? left, ComplexMessage? right) => !(left == right);
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Usage", "CA2225:运算符重载具有命名的备用项", Justification = "<挂起>")]
+        public static ComplexMessage? operator -(ComplexMessage? left, MessageElement? right) => left?.Remove(right);
+
+        public static ComplexMessage? operator +(ComplexMessage? left, MessageElement? right) => left?.Add(right);
+
+        public static ComplexMessage? operator +(MessageElement? left, ComplexMessage? right) => right?.Insert(0, left);
+
+        public static ComplexMessage? operator +(ComplexMessage? left, ComplexMessage? right) =>
+            right is null ? left : left?.Add(right);
+
         /// <summary>
         /// 将字符串解析为 <see cref="ComplexMessage"/> 实例。
         /// </summary>
@@ -116,8 +131,6 @@ namespace HuajiTech.CoolQ.Messaging
 
             return new ComplexMessage(GetMessageElements());
         }
-
-        public static ComplexMessage? FromString(string? str) => new ComplexMessage(str);
 
         /// <summary>
         /// 使用指定的分隔符串联 <see cref="ComplexMessage"/> 集合中的所有成员。
@@ -370,23 +383,6 @@ namespace HuajiTech.CoolQ.Messaging
         public override bool Equals(object? obj) => Equals(obj as ComplexMessage);
 
         public override int GetHashCode() => ToString().GetHashCode();
-
-        public static bool operator ==(ComplexMessage? left, ComplexMessage? right) => left?.Equals(right) ?? right is null;
-
-        public static bool operator !=(ComplexMessage? left, ComplexMessage? right) => !(left == right);
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage(
-            "Usage", "CA2225:运算符重载具有命名的备用项", Justification = "<挂起>")]
-        public static ComplexMessage? operator -(ComplexMessage? left, MessageElement? right) => left?.Remove(right);
-
-        public static ComplexMessage? operator +(ComplexMessage? left, MessageElement? right) => left?.Add(right);
-
-        public static ComplexMessage? operator +(MessageElement? left, ComplexMessage? right) => right?.Insert(0, left);
-
-        public static ComplexMessage? operator +(ComplexMessage? left, ComplexMessage? right) =>
-            right is null ? left : left?.Add(right);
-
-        public static implicit operator ComplexMessage?(string? str) => FromString(str);
     }
 
     /// <summary>

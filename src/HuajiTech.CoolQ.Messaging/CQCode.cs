@@ -45,6 +45,16 @@ namespace HuajiTech.CoolQ.Messaging
         }
 
         /// <summary>
+        /// 获取当前 <see cref="CQCode"/> 实例的参数。
+        /// </summary>
+        public IDictionary<string, string> Parameters { get; }
+
+        /// <summary>
+        /// 获取当前 <see cref="CQCode"/> 实例的类型。
+        /// </summary>
+        public string Type { get; }
+
+        /// <summary>
         /// 获取或设置指定键处的参数的值。
         /// </summary>
         /// <param name="key">要获取或设置的参数的键。</param>
@@ -74,16 +84,6 @@ namespace HuajiTech.CoolQ.Messaging
                 Parameters[key] = value;
             }
         }
-
-        /// <summary>
-        /// 获取当前 <see cref="CQCode"/> 实例的参数。
-        /// </summary>
-        public IDictionary<string, string> Parameters { get; }
-
-        /// <summary>
-        /// 获取当前 <see cref="CQCode"/> 实例的类型。
-        /// </summary>
-        public string Type { get; }
 
         /// <summary>
         /// 将指定的字符串转换为可以让酷Q按原义解释字符的语法。

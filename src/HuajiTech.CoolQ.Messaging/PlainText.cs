@@ -23,6 +23,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         public string Content { get; }
 
+        public static implicit operator string(PlainText? text) => text?.Content ?? string.Empty;
+
         /// <summary>
         /// 将指定的字符串转换为可以让酷Q按原义解释字符的语法。
         /// </summary>
@@ -48,7 +50,5 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <returns>经过 <see cref="Escape(string)"/> 后的 <see cref="Content"/>。</returns>
         public override string ToString() => Escape(Content)!;
-
-        public static implicit operator string(PlainText? text) => text?.Content ?? string.Empty;
     }
 }

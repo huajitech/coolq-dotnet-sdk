@@ -20,9 +20,6 @@
     <NeutralLanguage>zh-CN</NeutralLanguage>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <ILRepackTargetsFile>build\HuajiTech.CoolQ.Packing.ILRepack.Placeholder.targets</ILRepackTargetsFile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HuajiTech.CoolQ.Packing.ILRepack.pfx</AssemblyOriginatorKeyFile>
@@ -33,6 +30,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="../stylecop.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +49,10 @@
     </PackageReference>
     <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.18.1">
       <IncludeAssets>build</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 

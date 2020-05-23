@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2DA7FEA-02DF-4654-BE5C-226A6DA1D429}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		stylecop.json = stylecop.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Abstractions", "HuajiTech.CoolQ.Abstractions\HuajiTech.CoolQ.Abstractions.csproj", "{4E8B373F-5453-45FC-98C2-C1572B280057}"
@@ -18,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Packing.ILR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ.Loaders.Autofac", "HuajiTech.CoolQ.Loaders.Autofac\HuajiTech.CoolQ.Loaders.Autofac.csproj", "{FC710009-2797-4F39-87E7-8D6319080427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuajiTech.CoolQ", "HuajiTech.CoolQ\HuajiTech.CoolQ.csproj", "{794BA126-B482-4A10-A4D9-AEA394EA1C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HuajiTech.CoolQ", "HuajiTech.CoolQ\HuajiTech.CoolQ.csproj", "{794BA126-B482-4A10-A4D9-AEA394EA1C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

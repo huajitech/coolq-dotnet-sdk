@@ -55,6 +55,8 @@ namespace HuajiTech.CoolQ
         [DllExport]
         private static int Initialize(int authCode)
         {
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+
             Instance = new Bot(authCode);
 
             var packer = GetInstance<IPacker>();

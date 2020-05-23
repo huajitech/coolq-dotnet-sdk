@@ -3,8 +3,8 @@ using Autofac.Util;
 using HuajiTech.CoolQ.Events;
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Linq;
+using System.Reflection;
 
 namespace HuajiTech.CoolQ.Loaders
 {
@@ -20,60 +20,6 @@ namespace HuajiTech.CoolQ.Loaders
             RegisterPlugins(builder);
 
             _container = builder.Build();
-        }
-
-        public TPlugin GetPlugin<TPlugin>()
-            where TPlugin : notnull, IPlugin
-        {
-            try
-            {
-                return _container.Resolve<TPlugin>();
-            }
-            catch (Exception ex)
-            {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
-            }
-        }
-
-        public IPlugin GetPlugin(Type pluginType)
-        {
-            if (!typeof(IPlugin).IsAssignableFrom(pluginType))
-            {
-                throw new ArgumentException(AutofacLoaderResources.TypeIsNotPlugin, nameof(pluginType));
-            }
-
-            try
-            {
-                return (IPlugin)_container.Resolve(pluginType);
-            }
-            catch (Exception ex)
-            {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
-            }
-        }
-
-        public ICollection<IPlugin> GetPlugins(AppLifecycle loadStage)
-        {
-            try
-            {
-                return _container.ResolveNamed<ICollection<IPlugin>>(loadStage.ToString());
-            }
-            catch (Exception ex)
-            {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
-            }
-        }
-
-        public ICollection<IPlugin> GetPlugins()
-        {
-            try
-            {
-                return _container.Resolve<ICollection<IPlugin>>();
-            }
-            catch (Exception ex)
-            {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
-            }
         }
 
         private static void RegisterSdk(ContainerBuilder builder)
@@ -131,6 +77,60 @@ namespace HuajiTech.CoolQ.Loaders
                     .Named<IPlugin>(loadStage.ToString())
                     .As<IPlugin>()
                     .AsSelf();
+            }
+        }
+
+        public TPlugin GetPlugin<TPlugin>()
+            where TPlugin : notnull, IPlugin
+        {
+            try
+            {
+                return _container.Resolve<TPlugin>();
+            }
+            catch (Exception ex)
+            {
+                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
+            }
+        }
+
+        public IPlugin GetPlugin(Type pluginType)
+        {
+            if (!typeof(IPlugin).IsAssignableFrom(pluginType))
+            {
+                throw new ArgumentException(AutofacLoaderResources.TypeIsNotPlugin, nameof(pluginType));
+            }
+
+            try
+            {
+                return (IPlugin)_container.Resolve(pluginType);
+            }
+            catch (Exception ex)
+            {
+                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
+            }
+        }
+
+        public ICollection<IPlugin> GetPlugins(AppLifecycle loadStage)
+        {
+            try
+            {
+                return _container.ResolveNamed<ICollection<IPlugin>>(loadStage.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
+            }
+        }
+
+        public ICollection<IPlugin> GetPlugins()
+        {
+            try
+            {
+                return _container.Resolve<ICollection<IPlugin>>();
+            }
+            catch (Exception ex)
+            {
+                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
             }
         }
     }

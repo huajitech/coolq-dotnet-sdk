@@ -38,6 +38,10 @@ namespace HuajiTech.CoolQ
         /// </summary>
         public string Value { get; }
 
+        public static bool operator ==(Status left, Status right) => left?.Equals(right) ?? right is null;
+
+        public static bool operator !=(Status left, Status right) => !(left == right);
+
         /// <summary>
         /// 将当前 <see cref="Status"/> 实例的值编码为可被酷Q使用的 Base64 字符串。
         /// </summary>
@@ -54,9 +58,5 @@ namespace HuajiTech.CoolQ
         public override bool Equals(object? obj) => base.Equals(obj) || Equals(obj as Status);
 
         public override int GetHashCode() => (int)Color ^ Value.GetHashCode() ^ Unit.GetHashCode();
-
-        public static bool operator ==(Status left, Status right) => left?.Equals(right) ?? right is null;
-
-        public static bool operator !=(Status left, Status right) => !(left == right);
     }
 }
