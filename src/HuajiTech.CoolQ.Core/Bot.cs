@@ -20,15 +20,15 @@ namespace HuajiTech.CoolQ
         private readonly Lazy<CurrentUser> _currentUser = new Lazy<CurrentUser>(() => new CurrentUser());
         private readonly Lazy<bool> _canSendImage;
         private readonly Lazy<bool> _canSendRecord;
-        private readonly Lazy<DirectoryInfo> _dataDirectory;
+        private readonly Lazy<DirectoryInfo> _appDirectory;
 
         private Bot(int authCode)
         {
             AuthCode = authCode;
             _canSendImage = new Lazy<bool>(() => NativeMethods.Bot_GetCanSendImage(AuthCode));
             _canSendRecord = new Lazy<bool>(() => NativeMethods.Bot_GetCanSendRecord(AuthCode));
-            _dataDirectory = new Lazy<DirectoryInfo>(() => new DirectoryInfo(
-                NativeMethods.Bot_GetDataDirectory(AuthCode).CheckError()));
+            _appDirectory = new Lazy<DirectoryInfo>(() => new DirectoryInfo(
+                NativeMethods.Bot_GetAppDirectory(AuthCode).CheckError()));
         }
 
         public static Bot Instance
@@ -41,7 +41,7 @@ namespace HuajiTech.CoolQ
 
         public bool CanSendRecord => _canSendRecord.Value;
 
-        public DirectoryInfo DataDirectory => _dataDirectory.Value;
+        public DirectoryInfo AppDirectory => _appDirectory.Value;
 
         public ICurrentUser CurrentUser => _currentUser.Value;
 

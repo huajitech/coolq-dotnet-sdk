@@ -28,9 +28,9 @@ namespace HuajiTech.CoolQ
         ILogger Logger { get; }
 
         /// <summary>
-        /// 获取当前 <see cref="IBot"/> 实例的数据目录。
+        /// 获取当前 <see cref="IBot"/> 实例的应用目录。
         /// </summary>
-        DirectoryInfo DataDirectory { get; }
+        DirectoryInfo AppDirectory { get; }
 
         /// <summary>
         /// 请求指定文件名的图片。

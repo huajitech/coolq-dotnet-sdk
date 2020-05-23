@@ -24,7 +24,7 @@ namespace HuajiTech.CoolQ
 
         [DllImport(DllName, EntryPoint = "CQ_getAppDirectory")]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]
-        public static extern string Bot_GetDataDirectory(int authCode);
+        public static extern string Bot_GetAppDirectory(int authCode);
 
         [DllImport(DllName, EntryPoint = "CQ_canSendImage")]
         [return: MarshalAs(UnmanagedType.Bool)]
