@@ -50,13 +50,6 @@ namespace HuajiTech.CoolQ.Events
             long sourceNumber,
             long operateeNumber)
         {
-            var source = new Group(sourceNumber);
-            var e = new GroupEventArgs(
-                Timestamp.ToDateTime(timestamp),
-                source,
-                source.GetMembers().First(member => member.Role is MemberRole.Owner),
-                new Member(operateeNumber, source));
-
             var ev = adjustment switch
             {
                 AdministratorAdjustment.Add => Instance.AdministratorAdded,
@@ -64,7 +57,19 @@ namespace HuajiTech.CoolQ.Events
                 _ => throw new InvalidEnumArgumentException(nameof(adjustment), (int)adjustment, typeof(AdministratorAdjustment))
             };
 
-            ev?.Invoke(Instance, e);
+            if (ev is null)
+            {
+                return false;
+            }
+
+            var source = new Group(sourceNumber);
+            var e = new GroupEventArgs(
+                Timestamp.ToDateTime(timestamp),
+                source,
+                source.GetMembers().First(member => member.Role is MemberRole.Owner),
+                new Member(operateeNumber, source));
+
+            ev.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -84,13 +89,18 @@ namespace HuajiTech.CoolQ.Events
                 return false;
             }
 
+            if (Instance.EntranceRequested is null)
+            {
+                return false;
+            }
+
             var e = new EntranceRequestedEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 new Group(sourceNumber),
                 new User(requesterNumber),
                 new EntranceRequest(requestToken, message));
 
-            Instance.EntranceRequested?.Invoke(Instance, e);
+            Instance.EntranceRequested.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -104,6 +114,11 @@ namespace HuajiTech.CoolQ.Events
             long uploaderNumber,
             string fileInfo)
         {
+            if (Instance.FileUploaded is null)
+            {
+                return false;
+            }
+
             using var reader = new FileReader(fileInfo);
             var file = reader.Read();
 
@@ -111,7 +126,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new FileUploadedEventArgs(
                 Timestamp.ToDateTime(timestamp), source, new Member(uploaderNumber, source), file);
 
-            Instance.FileUploaded?.Invoke(Instance, e);
+            Instance.FileUploaded.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -131,12 +146,6 @@ namespace HuajiTech.CoolQ.Events
                 return false;
             }
 
-            var source = new Group(sourceNumber);
-            var e = new GroupMuteEventArgs(
-                Timestamp.ToDateTime(timestamp),
-                source,
-                new Member(operatorNumber, source));
-
             var ev = type switch
             {
                 MuteEventType.Mute => Instance.GroupMuted,
@@ -144,7 +153,18 @@ namespace HuajiTech.CoolQ.Events
                 _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(MuteEventType))
             };
 
-            ev?.Invoke(Instance, e);
+            if (ev is null)
+            {
+                return false;
+            }
+
+            var source = new Group(sourceNumber);
+            var e = new GroupMuteEventArgs(
+                Timestamp.ToDateTime(timestamp),
+                source,
+                new Member(operatorNumber, source));
+
+            ev.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -158,6 +178,11 @@ namespace HuajiTech.CoolQ.Events
             long operatorNumber,
             long operateeNumber)
         {
+            if (Instance.MemberJoined is null)
+            {
+                return false;
+            }
+
             var source = new Group(sourceNumber);
             var operatee = new Member(operateeNumber, source);
 
@@ -167,7 +192,7 @@ namespace HuajiTech.CoolQ.Events
                 type is EntranceType.Passive ? operatee : new Member(operatorNumber, source),
                 operatee);
 
-            Instance.MemberJoined?.Invoke(Instance, e);
+            Instance.MemberJoined.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -181,6 +206,11 @@ namespace HuajiTech.CoolQ.Events
             long operatorNumber,
             long operateeNumber)
         {
+            if (Instance.MemberLeft is null)
+            {
+                return false;
+            }
+
             var source = new Group(sourceNumber);
             var operatee = new Member(operateeNumber, source);
 
@@ -190,7 +220,7 @@ namespace HuajiTech.CoolQ.Events
                 type is EntranceType.Passive ? new Member(operatorNumber, source) : operatee,
                 operatee);
 
-            Instance.MemberLeft?.Invoke(Instance, e);
+            Instance.MemberLeft.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -206,6 +236,11 @@ namespace HuajiTech.CoolQ.Events
             long secondsMuted)
         {
             if (operateeNumber is 0)
+            {
+                return false;
+            }
+
+            if (Instance.MemberMuted is null && Instance.MemberUnmuted is null)
             {
                 return false;
             }

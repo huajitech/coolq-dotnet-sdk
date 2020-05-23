@@ -44,10 +44,15 @@ namespace HuajiTech.CoolQ.Events
         private static bool OnAnonymousMessageReceived(
             int messageId, IGroup source, IAnonymousMember sender, string messageContent)
         {
+            if (Instance.AnonymousMessageReceived is null)
+            {
+                return false;
+            }
+
             var e = new AnonymousMessageReceivedEventArgs(
                 new Message(messageId, messageContent), source, sender);
 
-            Instance.AnonymousMessageReceived?.Invoke(Instance, e);
+            Instance.AnonymousMessageReceived.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -61,6 +66,11 @@ namespace HuajiTech.CoolQ.Events
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string messageContent,
             int font)
         {
+            if (Instance.MessageReceived is null)
+            {
+                return false;
+            }
+
             var sender = senderType switch
             {
                 PrivateMessageSender.User => new User(senderNumber),
@@ -83,6 +93,11 @@ namespace HuajiTech.CoolQ.Events
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string messageContent,
             int font)
         {
+            if (Instance.MessageReceived is null)
+            {
+                return false;
+            }
+
             var group = new Group(sourceNumber);
 
             if (senderAnonymousInfo.Length is 0)
@@ -104,10 +119,15 @@ namespace HuajiTech.CoolQ.Events
             int timestamp,
             long requesterNumber)
         {
+            if (Instance.FriendAdded is null)
+            {
+                return false;
+            }
+
             var e = new FriendAddedEventArgs(
                 Timestamp.ToDateTime(timestamp), new Friend(requesterNumber));
 
-            Instance.FriendAdded?.Invoke(Instance, e);
+            Instance.FriendAdded.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -121,12 +141,17 @@ namespace HuajiTech.CoolQ.Events
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
+            if (Instance.FriendAdding is null)
+            {
+                return false;
+            }
+
             var e = new FriendAddingEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 new User(requesterNumber),
                 new FriendshipRequest(requestToken, message));
 
-            Instance.FriendAdding?.Invoke(Instance, e);
+            Instance.FriendAdding.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -146,13 +171,18 @@ namespace HuajiTech.CoolQ.Events
                 return false;
             }
 
+            if (Instance.EntranceInvited is null)
+            {
+                return false;
+            }
+
             var e = new EntranceInvitedEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 new Group(targetNumber),
                 new User(inviterNumber),
                 new EntranceInvitation(requestToken, message));
 
-            Instance.EntranceInvited?.Invoke(Instance, e);
+            Instance.EntranceInvited.Invoke(Instance, e);
 
             return e.Handled;
         }
