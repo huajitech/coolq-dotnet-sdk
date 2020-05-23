@@ -1,5 +1,3 @@
-using HuajiTech.CoolQ.Events;
-using HuajiTech.UnmanagedExports;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,6 +5,8 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using HuajiTech.CoolQ.Events;
+using HuajiTech.UnmanagedExports;
 
 namespace HuajiTech.CoolQ
 {

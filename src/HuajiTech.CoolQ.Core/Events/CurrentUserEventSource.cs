@@ -1,8 +1,8 @@
-﻿using HuajiTech.CoolQ.Utilities;
-using HuajiTech.UnmanagedExports;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
+using HuajiTech.CoolQ.Utilities;
+using HuajiTech.UnmanagedExports;
 
 namespace HuajiTech.CoolQ.Events
 {

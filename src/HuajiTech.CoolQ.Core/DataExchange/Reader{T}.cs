@@ -1,9 +1,9 @@
-using HuajiTech.CoolQ.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using HuajiTech.CoolQ.Utilities;
 
 namespace HuajiTech.CoolQ.DataExchange
 {

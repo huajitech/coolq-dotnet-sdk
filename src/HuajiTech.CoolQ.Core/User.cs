@@ -1,6 +1,5 @@
-using HuajiTech.CoolQ.DataExchange;
-
 using System;
+using HuajiTech.CoolQ.DataExchange;
 
 namespace HuajiTech.CoolQ
 {

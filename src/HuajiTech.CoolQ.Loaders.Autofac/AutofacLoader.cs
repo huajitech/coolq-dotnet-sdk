@@ -1,10 +1,10 @@
-﻿using Autofac;
-using Autofac.Util;
-using HuajiTech.CoolQ.Events;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Autofac;
+using Autofac.Util;
+using HuajiTech.CoolQ.Events;
 
 namespace HuajiTech.CoolQ.Loaders
 {

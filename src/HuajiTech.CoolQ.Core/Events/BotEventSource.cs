@@ -1,5 +1,5 @@
-﻿using HuajiTech.UnmanagedExports;
-using System;
+﻿using System;
+using HuajiTech.UnmanagedExports;
 
 namespace HuajiTech.CoolQ.Events
 {

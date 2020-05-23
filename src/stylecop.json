@@ -10,7 +10,6 @@
   "settings": {
     "orderingRules": {
       "usingDirectivesPlacement": "outsideNamespace",
-      "systemUsingDirectivesFirst": false,
       "elementOrder": [
         "kind",
         "constant",
