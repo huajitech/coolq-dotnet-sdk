@@ -3,12 +3,12 @@ using System;
 namespace HuajiTech.CoolQ.Events
 {
     /// <summary>
-    /// 为 <see cref="INotifyEntranceRequested.EntranceRequested"/> 事件提供数据。
+    /// 为 <see cref="INotifyMembershipRequested.MembershipRequested"/> 事件提供数据。
     /// </summary>
-    public class EntranceRequestedEventArgs : TimedEventArgs
+    public class MembershipRequestedEventArgs : TimedEventArgs
     {
-        public EntranceRequestedEventArgs(
-            DateTime time, IGroup source, IUser requester, IEntranceRequest request)
+        public MembershipRequestedEventArgs(
+            DateTime time, IGroup source, IUser requester, IMembershipRequest request)
             : base(time)
         {
             Source = source ?? throw new ArgumentNullException(nameof(source));
@@ -29,6 +29,6 @@ namespace HuajiTech.CoolQ.Events
         /// <summary>
         /// 获取请求。
         /// </summary>
-        public IEntranceRequest Request { get; }
+        public IMembershipRequest Request { get; }
     }
 }

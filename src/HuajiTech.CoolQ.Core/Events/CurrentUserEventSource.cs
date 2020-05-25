@@ -24,7 +24,7 @@ namespace HuajiTech.CoolQ.Events
 
         public event EventHandler<AnonymousMessageReceivedEventArgs>? AnonymousMessageReceived;
 
-        public event EventHandler<EntranceInvitedEventArgs>? EntranceInvited;
+        public event EventHandler<MembershipInvitedEventArgs>? MembershipInvited;
 
         public event EventHandler<FriendAddedEventArgs>? FriendAdded;
 
@@ -74,7 +74,7 @@ namespace HuajiTech.CoolQ.Events
             var sender = senderType switch
             {
                 PrivateMessageSender.User => new User(senderNumber),
-                PrivateMessageSender.Group => new Member(senderNumber, new Group(0)),
+                PrivateMessageSender.Member => new Member(senderNumber, new Group(0)),
                 PrivateMessageSender.Friend => new Friend(senderNumber),
                 _ => throw new InvalidEnumArgumentException(nameof(senderType), (int)senderType, typeof(PrivateMessageSender))
             };
@@ -158,31 +158,31 @@ namespace HuajiTech.CoolQ.Events
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnEntranceInvited(
-            EntranceType type,
+        private static bool OnMembershipInvited(
+            Entrance type,
             int timestamp,
             long targetNumber,
             long inviterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            if (!(type is EntranceType.Passive))
+            if (!(type is Entrance.Passive))
             {
                 return false;
             }
 
-            if (Instance.EntranceInvited is null)
+            if (Instance.MembershipInvited is null)
             {
                 return false;
             }
 
-            var e = new EntranceInvitedEventArgs(
+            var e = new MembershipInvitedEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 new Group(targetNumber),
                 new User(inviterNumber),
-                new EntranceInvitation(requestToken, message));
+                new MembershipInvitation(requestToken, message));
 
-            Instance.EntranceInvited.Invoke(Instance, e);
+            Instance.MembershipInvited.Invoke(Instance, e);
 
             return e.Handled;
         }

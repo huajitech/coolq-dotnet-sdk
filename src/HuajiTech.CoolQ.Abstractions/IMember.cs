@@ -25,7 +25,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 获取当前 <see cref="IMember"/> 实例加入 <see cref="IGroup"/> 的时间。
         /// </summary>
-        DateTime TimeEntered { get; }
+        DateTime TimeJoined { get; }
 
         /// <summary>
         /// 获取当前 <see cref="IMember"/> 实例的性别。
@@ -70,7 +70,7 @@ namespace HuajiTech.CoolQ
         /// <summary>
         /// 将当前 <see cref="IMember"/> 实例踢出所在群。
         /// </summary>
-        /// <param name="disallowRejoin">如果不再接收当前 <see cref="IMember"/> 实例的 <see cref="IEntranceRequest"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
+        /// <param name="disallowRejoin">如果不再接收当前 <see cref="IMember"/> 实例的 <see cref="IMembershipRequest"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
         void Kick(bool disallowRejoin = false);
 
         /// <summary>

@@ -1,10 +1,10 @@
 namespace HuajiTech.CoolQ
 {
-    internal class EntranceInvitation : IRequest
+    internal class MembershipInvitation : IRequest
     {
         private readonly string _token;
 
-        public EntranceInvitation(string token, string message)
+        public MembershipInvitation(string token, string message)
         {
             _token = token;
             Message = message;
@@ -18,6 +18,6 @@ namespace HuajiTech.CoolQ
 
         private void Respond(Response response) =>
             NativeMethods.EntranceRequest_Respond(
-                Bot.Instance.AuthCode, _token, EntranceType.Passive, response, null).CheckError();
+                Bot.Instance.AuthCode, _token, Entrance.Passive, response, null).CheckError();
     }
 }

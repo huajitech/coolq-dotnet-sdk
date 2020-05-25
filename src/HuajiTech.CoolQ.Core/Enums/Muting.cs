@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ
 {
-    internal enum MuteEventType
+    internal enum Muting
     {
         None,
         Unmute,

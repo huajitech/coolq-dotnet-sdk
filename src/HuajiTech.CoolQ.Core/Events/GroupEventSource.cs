@@ -26,7 +26,7 @@ namespace HuajiTech.CoolQ.Events
 
         public event EventHandler<GroupEventArgs>? MemberLeft;
 
-        public event EventHandler<EntranceRequestedEventArgs>? EntranceRequested;
+        public event EventHandler<MembershipRequestedEventArgs>? MembershipRequested;
 
         public event EventHandler<GroupMuteEventArgs>? GroupMuted;
 
@@ -76,31 +76,31 @@ namespace HuajiTech.CoolQ.Events
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnEntranceRequested(
-            EntranceType type,
+        private static bool OnMembershipRequested(
+            Entrance type,
             int timestamp,
             long sourceNumber,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            if (!(type is EntranceType.Active))
+            if (!(type is Entrance.Active))
             {
                 return false;
             }
 
-            if (Instance.EntranceRequested is null)
+            if (Instance.MembershipRequested is null)
             {
                 return false;
             }
 
-            var e = new EntranceRequestedEventArgs(
+            var e = new MembershipRequestedEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 new Group(sourceNumber),
                 new User(requesterNumber),
-                new EntranceRequest(requestToken, message));
+                new MembershipRequest(requestToken, message));
 
-            Instance.EntranceRequested.Invoke(Instance, e);
+            Instance.MembershipRequested.Invoke(Instance, e);
 
             return e.Handled;
         }
@@ -134,7 +134,7 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnGroupMuteStateChanged(
-            MuteEventType type,
+            Muting type,
             int timestamp,
             long sourceNumber,
             long operatorNumber,
@@ -148,9 +148,9 @@ namespace HuajiTech.CoolQ.Events
 
             var ev = type switch
             {
-                MuteEventType.Mute => Instance.GroupMuted,
-                MuteEventType.Unmute => Instance.GroupUnmuted,
-                _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(MuteEventType))
+                Muting.Mute => Instance.GroupMuted,
+                Muting.Unmute => Instance.GroupUnmuted,
+                _ => throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(Muting))
             };
 
             if (ev is null)
@@ -172,7 +172,7 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberJoined(
-            EntranceType type,
+            Entrance type,
             int timestamp,
             long sourceNumber,
             long operatorNumber,
@@ -189,7 +189,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new GroupEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 source,
-                type is EntranceType.Passive ? operatee : new Member(operatorNumber, source),
+                type is Entrance.Passive ? operatee : new Member(operatorNumber, source),
                 operatee);
 
             Instance.MemberJoined.Invoke(Instance, e);
@@ -200,7 +200,7 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberLeft(
-            EntranceType type,
+            Entrance type,
             int timestamp,
             long sourceNumber,
             long operatorNumber,
@@ -217,7 +217,7 @@ namespace HuajiTech.CoolQ.Events
             var e = new GroupEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 source,
-                type is EntranceType.Passive ? new Member(operatorNumber, source) : operatee,
+                type is Entrance.Passive ? new Member(operatorNumber, source) : operatee,
                 operatee);
 
             Instance.MemberLeft.Invoke(Instance, e);
@@ -228,7 +228,7 @@ namespace HuajiTech.CoolQ.Events
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static bool OnMemberMuteStateChanged(
-            MuteEventType type,
+            Muting type,
             int timestamp,
             long sourceNumber,
             long operatorNumber,
@@ -252,20 +252,20 @@ namespace HuajiTech.CoolQ.Events
 
             switch (type)
             {
-                case MuteEventType.Mute:
+                case Muting.Mute:
                     var eMute = new MemberMutedEventArgs(
                         timeChanged, source, @operator, affectee, TimeSpan.FromSeconds(secondsMuted));
                     Instance.MemberMuted?.Invoke(Instance, eMute);
                     return eMute.Handled;
 
-                case MuteEventType.Unmute:
+                case Muting.Unmute:
                     var eUnmute = new GroupEventArgs(
                         timeChanged, source, @operator, affectee);
                     Instance.MemberUnmuted?.Invoke(Instance, eUnmute);
                     return eUnmute.Handled;
 
                 default:
-                    throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(MuteEventType));
+                    throw new InvalidEnumArgumentException(nameof(type), (int)type, typeof(Muting));
             }
         }
     }

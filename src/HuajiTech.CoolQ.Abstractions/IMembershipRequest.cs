@@ -1,9 +1,9 @@
 ﻿namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义加入请求。
+    /// 定义成员请求。
     /// </summary>
-    public interface IEntranceRequest : IRequest
+    public interface IMembershipRequest : IRequest
     {
         /// <summary>
         /// 拒绝当前请求，并指定拒绝的原因。

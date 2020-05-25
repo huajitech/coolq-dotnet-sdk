@@ -228,7 +228,7 @@ namespace HuajiTech.CoolQ
         public static extern int EntranceRequest_Respond(
             int authCode,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string token,
-            EntranceType entranceType,
+            Entrance entranceType,
             Response response,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string? rejectReason);
 

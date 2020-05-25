@@ -239,46 +239,6 @@
             获取来源群。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Events.EntranceInvitedEventArgs">
-            <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyEntranceInvited.EntranceInvited"/> 事件提供数据。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Events.EntranceInvitedEventArgs.Target">
-            <summary>
-            获取目标群。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Events.EntranceInvitedEventArgs.Inviter">
-            <summary>
-            获取邀请用户。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Events.EntranceInvitedEventArgs.Invitation">
-            <summary>
-            获取邀请。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Events.EntranceRequestedEventArgs">
-            <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyEntranceRequested.EntranceRequested"/> 事件提供数据。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Events.EntranceRequestedEventArgs.Source">
-            <summary>
-            获取来源群。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Events.EntranceRequestedEventArgs.Requester">
-            <summary>
-            获取请求用户。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.Events.EntranceRequestedEventArgs.Request">
-            <summary>
-            获取请求。
-            </summary>
-        </member>
         <member name="T:HuajiTech.CoolQ.Events.FileUploadedEventArgs">
             <summary>
             为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFileUploaded.FileUploaded"/> 事件提供数据。
@@ -367,6 +327,46 @@
         <member name="P:HuajiTech.CoolQ.Events.MemberMutedEventArgs.Duration">
             <summary>
             获取禁言时长。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.MembershipInvitedEventArgs">
+            <summary>
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyMembershipInvited.MembershipInvited"/> 事件提供数据。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.MembershipInvitedEventArgs.Target">
+            <summary>
+            获取目标群。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.MembershipInvitedEventArgs.Inviter">
+            <summary>
+            获取邀请用户。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.MembershipInvitedEventArgs.Invitation">
+            <summary>
+            获取邀请。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.MembershipRequestedEventArgs">
+            <summary>
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyMembershipRequested.MembershipRequested"/> 事件提供数据。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.MembershipRequestedEventArgs.Source">
+            <summary>
+            获取来源群。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.MembershipRequestedEventArgs.Requester">
+            <summary>
+            获取请求用户。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.MembershipRequestedEventArgs.Request">
+            <summary>
+            获取请求。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.MessageReceivedEventArgs">
@@ -529,26 +529,6 @@
             在机器人停止时引发。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Events.INotifyEntranceInvited">
-            <summary>
-            定义入群邀请事件。
-            </summary>
-        </member>
-        <member name="E:HuajiTech.CoolQ.Events.INotifyEntranceInvited.EntranceInvited">
-            <summary>
-            在被邀请加群时引发。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Events.INotifyEntranceRequested">
-            <summary>
-            定义入群请求事件。
-            </summary>
-        </member>
-        <member name="E:HuajiTech.CoolQ.Events.INotifyEntranceRequested.EntranceRequested">
-            <summary>
-            在收到入群请求时引发。
-            </summary>
-        </member>
         <member name="T:HuajiTech.CoolQ.Events.INotifyFileUploaded">
             <summary>
             定义文件上传事件。
@@ -627,6 +607,26 @@
         <member name="E:HuajiTech.CoolQ.Events.INotifyMemberMuted.MemberMuted">
             <summary>
             在禁言时引发。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.INotifyMembershipInvited">
+            <summary>
+            定义入群邀请事件。
+            </summary>
+        </member>
+        <member name="E:HuajiTech.CoolQ.Events.INotifyMembershipInvited.MembershipInvited">
+            <summary>
+            在被邀请加群时引发。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.INotifyMembershipRequested">
+            <summary>
+            定义入群请求事件。
+            </summary>
+        </member>
+        <member name="E:HuajiTech.CoolQ.Events.INotifyMembershipRequested.MembershipRequested">
+            <summary>
+            在收到入群请求时引发。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.INotifyMemberUnmuted">
@@ -758,9 +758,9 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 实例的日志记录器。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.IBot.DataDirectory">
+        <member name="P:HuajiTech.CoolQ.IBot.AppDirectory">
             <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 实例的数据目录。
+            获取当前 <see cref="T:HuajiTech.CoolQ.IBot"/> 实例的应用目录。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.IBot.GetImage(System.String)">
@@ -820,17 +820,6 @@
             <summary>
             获取当前 <see cref="T:HuajiTech.CoolQ.IDisplayable"/> 实例的显示名称。
             </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.IEntranceRequest">
-            <summary>
-            定义加入请求。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.IEntranceRequest.Reject(System.String)">
-            <summary>
-            拒绝当前请求，并指定拒绝的原因。
-            </summary>
-            <param name="reason">原因。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.IFriend">
             <summary>
@@ -1040,7 +1029,7 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的自定义头衔。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.IMember.TimeEntered">
+        <member name="P:HuajiTech.CoolQ.IMember.TimeJoined">
             <summary>
             获取当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例加入 <see cref="T:HuajiTech.CoolQ.IGroup"/> 的时间。
             </summary>
@@ -1089,7 +1078,7 @@
             <summary>
             将当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例踢出所在群。
             </summary>
-            <param name="disallowRejoin">如果不再接收当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的 <see cref="T:HuajiTech.CoolQ.IEntranceRequest"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
+            <param name="disallowRejoin">如果不再接收当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的 <see cref="T:HuajiTech.CoolQ.IMembershipRequest"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.IMember.SetAlias(System.String)">
             <summary>
@@ -1112,6 +1101,17 @@
             <summary>
             解除当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例在 <see cref="P:HuajiTech.CoolQ.IMember.Group"/> 的管理员身份。
             </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.IMembershipRequest">
+            <summary>
+            定义成员请求。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.IMembershipRequest.Reject(System.String)">
+            <summary>
+            拒绝当前请求，并指定拒绝的原因。
+            </summary>
+            <param name="reason">原因。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.IMessage">
             <summary>

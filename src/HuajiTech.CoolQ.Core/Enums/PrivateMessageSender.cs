@@ -4,7 +4,7 @@ namespace HuajiTech.CoolQ
     {
         None,
         User,
-        Group,
+        Member,
         Friend = 11
     }
 }

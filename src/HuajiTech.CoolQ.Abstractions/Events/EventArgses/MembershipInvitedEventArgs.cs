@@ -3,11 +3,11 @@ using System;
 namespace HuajiTech.CoolQ.Events
 {
     /// <summary>
-    /// 为 <see cref="INotifyEntranceInvited.EntranceInvited"/> 事件提供数据。
+    /// 为 <see cref="INotifyMembershipInvited.MembershipInvited"/> 事件提供数据。
     /// </summary>
-    public class EntranceInvitedEventArgs : TimedEventArgs
+    public class MembershipInvitedEventArgs : TimedEventArgs
     {
-        public EntranceInvitedEventArgs(
+        public MembershipInvitedEventArgs(
             DateTime time, IGroup target, IUser inviter, IRequest invitation)
             : base(time)
         {

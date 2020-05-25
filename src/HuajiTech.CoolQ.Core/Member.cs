@@ -49,7 +49,7 @@ namespace HuajiTech.CoolQ
 
         public MemberRole Role => GetInfo().Role;
 
-        public DateTime TimeEntered => GetInfo().TimeEntered;
+        public DateTime TimeJoined => GetInfo().TimeEntered;
 
         public bool IsAdministrator => Role is MemberRole.Administrator || Role is MemberRole.Owner;
 

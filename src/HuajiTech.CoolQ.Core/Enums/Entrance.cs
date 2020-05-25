@@ -1,6 +1,6 @@
 namespace HuajiTech.CoolQ
 {
-    internal enum EntranceType
+    internal enum Entrance
     {
         None,
         Active,
