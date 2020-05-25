@@ -40,6 +40,16 @@
               查找类似 异常 的本地化字符串。
             </summary>
         </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.ExceptionRaised">
+            <summary>
+              查找类似 在 {2} 中 ({3} 行号 {4}) 引发了类型为 {0} 的异常：{1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.AbstractionResources.FailedToSendException">
+            <summary>
+              查找类似 未能发送异常信息 的本地化字符串。
+            </summary>
+        </member>
         <member name="P:HuajiTech.CoolQ.AbstractionResources.FieldCannotBeEmpty">
             <summary>
               查找类似 该字段不能为空。 的本地化字符串。
