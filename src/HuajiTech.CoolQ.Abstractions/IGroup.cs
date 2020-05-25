@@ -5,7 +5,7 @@ namespace HuajiTech.CoolQ
     /// <summary>
     /// 定义群。
     /// </summary>
-    public interface IGroup : IChattable, IMuteable, IRequestable, IRefreshable
+    public interface IGroup : IChattable, IMuteable, IRequestable
     {
         /// <summary>
         /// 获取当前 <see cref="IGroup"/> 实例的名称。

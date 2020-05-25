@@ -33,9 +33,7 @@ namespace HuajiTech.CoolQ
         public void GiveThumbsUp(int count) =>
             NativeMethods.User_GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
 
-        public virtual void Request() => GetInfo(true);
-
-        public virtual void Refresh() => GetInfo(true, true);
+        public virtual void Request(bool refresh = false) => GetInfo(true, refresh);
 
         public override IMessage Send(string message)
         {

@@ -1,7 +1,7 @@
 ﻿namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义可请求的实例。
+    /// 提供用于请求的方法。
     /// </summary>
     public interface IRequestable
     {
@@ -18,6 +18,9 @@
         /// <summary>
         /// 请求当前 <see cref="IRequestable"/> 实例。
         /// </summary>
-        void Request();
+        /// <param name="refresh">
+        /// 如果要求刷新当前 <see cref="IRequestable"/> 实例而不允许使用缓存，则为 <see langword="true"/>；否则为 <see langword="false"/>。
+        /// </param>
+        void Request(bool refresh = false);
     }
 }

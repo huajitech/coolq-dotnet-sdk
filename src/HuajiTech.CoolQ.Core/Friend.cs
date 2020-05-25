@@ -27,15 +27,21 @@ namespace HuajiTech.CoolQ
 
         public override string DisplayName => Alias ?? base.DisplayName;
 
-        public override void Refresh() => Request();
+        public override void Request(bool refresh = false)
+        {
+            if (refresh)
+            {
+                base.Request(true);
+            }
 
-        public override void Request() => GetInfo(true);
+            GetInfo(true);
+        }
 
         private FriendInfo GetInfo(bool requesting = false)
         {
             if (IsRequested && !IsRequestedSuccessfully && !requesting)
             {
-                return new FriendInfo();
+                return FriendInfo.Empty;
             }
 
             IsRequested = true;
@@ -43,7 +49,6 @@ namespace HuajiTech.CoolQ
             try
             {
                 _info = CurrentUser.GetFriendInfos().First(info => info.Number == Number);
-
                 return _info;
             }
             catch (ApiException) when (!requesting)

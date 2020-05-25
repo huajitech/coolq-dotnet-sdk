@@ -55,13 +55,7 @@ namespace HuajiTech.CoolQ
         public void Mute() =>
             NativeMethods.Group_SetIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
 
-        public void Refresh() => GetInfo(true, true);
-
-        public void Request()
-        {
-            _info = null;
-            GetInfo(true);
-        }
+        public void Request(bool refresh = false) => GetInfo(true, refresh);
 
         public override IMessage Send(string message)
         {

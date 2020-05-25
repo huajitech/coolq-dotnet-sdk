@@ -1,7 +1,7 @@
 ﻿namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义可显示的实例。
+    /// 提供用于显示的属性。
     /// </summary>
     public interface IDisplayable
     {

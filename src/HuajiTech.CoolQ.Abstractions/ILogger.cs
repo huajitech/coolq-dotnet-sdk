@@ -3,7 +3,7 @@
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义记录日志的方法。
+    /// 提供记录日志的方法。
     /// </summary>
     public interface ILogger
     {

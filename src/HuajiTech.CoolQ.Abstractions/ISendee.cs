@@ -1,7 +1,7 @@
 ﻿namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义可发送消息的实例。
+    /// 表示消息的接收者。
     /// </summary>
     public interface ISendee
     {

@@ -3,7 +3,7 @@
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义可聊天的实例。
+    /// 定义聊天。
     /// </summary>
     public interface IChattable : ISendee, IDisplayable, IEquatable<IChattable?>
     {

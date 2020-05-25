@@ -3,7 +3,7 @@
     /// <summary>
     /// 定义用户。
     /// </summary>
-    public interface IUser : IChattable, IRequestable, IRefreshable
+    public interface IUser : IChattable, IRequestable
     {
         /// <summary>
         /// 获取当前 <see cref="IUser"/> 实例的昵称。

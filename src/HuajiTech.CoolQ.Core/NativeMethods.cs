@@ -150,7 +150,7 @@ namespace HuajiTech.CoolQ
             int authCode,
             long groupNumber,
             long userNumber,
-            [MarshalAs(UnmanagedType.U1)] bool disallowRejoin);
+            [MarshalAs(UnmanagedType.U1)] bool ignoreFurtherRequests);
 
         [DllImport(DllName, EntryPoint = "CQ_setGroupBan")]
         public static extern int Member_Mute(
@@ -171,7 +171,7 @@ namespace HuajiTech.CoolQ
             int authCode,
             long groupNumber,
             long userNumber,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string title,
+            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string? titleText,
             long expirationSeconds);
 
         [DllImport(DllName, EntryPoint = "CQ_setGroupCard")]
@@ -179,7 +179,7 @@ namespace HuajiTech.CoolQ
             int authCode,
             long groupNumber,
             long userNumber,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string alias);
+            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string? alias);
 
         [DllImport(DllName, EntryPoint = "CQ_getGroupMemberInfoV2")]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]

@@ -3,7 +3,7 @@
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义可以指定时间的可禁言实例。
+    /// 提供用于禁言指定时间的方法。
     /// </summary>
     public interface ITimedMuteable : IMuteable
     {

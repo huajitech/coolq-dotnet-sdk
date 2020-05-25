@@ -1,7 +1,7 @@
 ﻿namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义可禁言实例。
+    /// 提供用于禁言的方法。
     /// </summary>
     public interface IMuteable
     {

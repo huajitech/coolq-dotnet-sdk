@@ -1,7 +1,7 @@
 ﻿namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义有别名的实例。
+    /// 提供别名。
     /// </summary>
     public interface IAliased
     {
