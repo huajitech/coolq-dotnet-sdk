@@ -48,16 +48,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="AbstractionAbstractionResources.Designer.cs">
-      <DependentUpon>AbstractionAbstractionResources.resx</DependentUpon>
+    <Compile Update="AbstractionResources.Designer.cs">
+      <DependentUpon>AbstractionResources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="AbstractionAbstractionResources.resx">
-      <LastGenOutput>AbstractionAbstractionResources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="AbstractionResources.resx">
+      <LastGenOutput>AbstractionResources.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>

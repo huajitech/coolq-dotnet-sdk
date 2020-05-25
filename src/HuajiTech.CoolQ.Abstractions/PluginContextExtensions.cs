@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace HuajiTech.CoolQ
 {
@@ -7,60 +9,43 @@ namespace HuajiTech.CoolQ
     /// </summary>
     public static class PluginContextExtensions
     {
-        public static IUser? AsUser(this IUser? user, PluginContext context)
+        public static IUser? AsUser(this IUser? user, PluginContext? context = null)
         {
             if (user is null)
             {
                 return null;
             }
 
-            if (context is null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
+            context ??= PluginContext.Current;
 
             return context.GetUser(user.Number);
         }
 
-        public static IUser? AsUser(this IUser? user) => AsUser(user, PluginContext.Current);
-
-        public static IMember? AsMemberOf(this IUser? user, IGroup group, PluginContext context)
+        public static IMember? AsMemberOf(this IUser? user, IGroup group, PluginContext? context = null)
         {
             if (user is null)
             {
                 return null;
             }
 
-            if (context is null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
+            context ??= PluginContext.Current;
 
             return context.GetMember(user, group);
         }
 
-        public static IMember? AsMemberOf(this IUser? user, IGroup group) =>
-            AsMemberOf(user, group, PluginContext.Current);
-
-        public static IMember? AsMemberOf(this IUser? user, long groupNumber, PluginContext context)
+        public static IMember? AsMemberOf(this IUser? user, long groupNumber, PluginContext? context = null)
         {
             if (user is null)
             {
                 return null;
             }
 
-            if (context is null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
+            context ??= PluginContext.Current;
 
             return context.GetMember(user, groupNumber);
         }
 
-        public static IMember? AsMemberOf(this IUser? user, long groupNumber) =>
-            AsMemberOf(user, groupNumber, PluginContext.Current);
-
-        public static TException? LogAsWarning<TException>(this TException? exception, ILogger logger)
+        public static TException? LogAsWarning<TException>(this TException? exception, ILogger? logger = null)
             where TException : notnull, Exception
         {
             if (exception is null)
@@ -68,26 +53,13 @@ namespace HuajiTech.CoolQ
                 return null;
             }
 
-            logger?.LogWarning(exception);
+            logger ??= PluginContext.Current.Bot.Logger;
+
+            logger.LogWarning(exception);
             return exception;
         }
 
-        public static TException? LogAsWarning<TException>(this TException? exception, PluginContext context)
-            where TException : Exception
-        {
-            if (context is null)
-            {
-                return exception;
-            }
-
-            return exception.LogAsWarning(context.Bot.Logger);
-        }
-
-        public static TException? LogAsWarning<TException>(this TException? exception)
-            where TException : Exception =>
-            LogAsWarning(exception, PluginContext.Current);
-
-        public static TException? LogAsError<TException>(this TException? exception, ILogger logger)
+        public static TException? LogAsError<TException>(this TException? exception, ILogger? logger = null)
              where TException : Exception
         {
             if (exception is null)
@@ -95,28 +67,47 @@ namespace HuajiTech.CoolQ
                 return null;
             }
 
-            logger?.LogError(exception);
+            logger ??= PluginContext.Current.Bot.Logger;
+
+            logger.LogError(exception);
             return exception;
         }
 
-        public static TException? LogAsError<TException>(this TException? exception, PluginContext context)
-            where TException : Exception
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Design", "CA1031:不捕获常规异常类型", Justification = "<挂起>")]
+        public static IMessage? SendToOrLogAsWarning(
+            this Exception? exception,
+            ISendee? sendee,
+            ILogger? logger = null,
+            [CallerMemberName] string callerMemberName = "?",
+            [CallerFilePath] string callerFilePath = "?",
+            [CallerLineNumber] int callerLineNumber = 0)
         {
-            if (exception is null)
+            if (exception is null || sendee is null)
             {
                 return null;
             }
 
-            if (context is null)
+            var message = string.Format(
+                    System.Globalization.CultureInfo.CurrentCulture,
+                    AbstractionResources.ExceptionRaised,
+                    exception.GetType().FullName,
+                    exception.Message,
+                    callerMemberName,
+                    callerFilePath,
+                    callerLineNumber);
+
+            try
             {
-                return exception;
+                return sendee.Send(message);
+            }
+            catch
+            {
+                logger ??= PluginContext.Current.Bot.Logger;
+                logger.LogWarning(AbstractionResources.FailedToSendException, message);
             }
 
-            return LogAsError(exception, context.Bot.Logger);
+            return null;
         }
-
-        public static TException? LogAsError<TException>(this TException? exception)
-            where TException : Exception =>
-            LogAsError(exception, PluginContext.Current);
     }
 }

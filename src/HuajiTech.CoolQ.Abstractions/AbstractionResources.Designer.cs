@@ -97,6 +97,24 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 在 {2} 中 (文件 {3} 行号 {4}) 引发了类型为 {0} 的异常：{1}。 的本地化字符串。
+        /// </summary>
+        internal static string ExceptionRaised {
+            get {
+                return ResourceManager.GetString("ExceptionRaised", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 未能发送异常信息 的本地化字符串。
+        /// </summary>
+        internal static string FailedToSendException {
+            get {
+                return ResourceManager.GetString("FailedToSendException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 该字段不能为空。 的本地化字符串。
         /// </summary>
         internal static string FieldCannotBeEmpty {

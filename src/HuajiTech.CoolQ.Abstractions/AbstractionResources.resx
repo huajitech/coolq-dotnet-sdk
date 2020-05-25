@@ -129,6 +129,12 @@
   <data name="Exception" xml:space="preserve">
     <value>异常</value>
   </data>
+  <data name="ExceptionRaised" xml:space="preserve">
+    <value>在 {2} 中 (文件 {3} 行号 {4}) 引发了类型为 {0} 的异常：{1}。</value>
+  </data>
+  <data name="FailedToSendException" xml:space="preserve">
+    <value>未能发送异常信息</value>
+  </data>
   <data name="FieldCannotBeEmpty" xml:space="preserve">
     <value>该字段不能为空。</value>
   </data>
