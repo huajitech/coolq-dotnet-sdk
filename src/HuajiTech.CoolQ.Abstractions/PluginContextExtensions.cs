@@ -82,8 +82,8 @@ namespace HuajiTech.CoolQ
         public static IMessage? SendToOrLogAsWarning(
             this Exception? exception,
             ISendee? sendee,
-            ILogger? logger = null,
             int frameCount = 3,
+            ILogger? logger = null,
             [CallerFilePath] string filePath = "?",
             [CallerLineNumber] int lineNumber = 0)
         {
