@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Globalization;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace HuajiTech.CoolQ
@@ -79,23 +83,34 @@ namespace HuajiTech.CoolQ
             this Exception? exception,
             ISendee? sendee,
             ILogger? logger = null,
-            [CallerMemberName] string callerMemberName = "?",
-            [CallerFilePath] string callerFilePath = "?",
-            [CallerLineNumber] int callerLineNumber = 0)
+            int frameCount = 3,
+            [CallerFilePath] string filePath = "?",
+            [CallerLineNumber] int lineNumber = 0)
         {
             if (exception is null || sendee is null)
             {
                 return null;
             }
 
+            var callingAssembly = Assembly.GetCallingAssembly();
+
+            var frames = from frame in new StackTrace(exception).GetFrames() ?? Enumerable.Empty<StackFrame>()
+                         where frame.GetMethod().Module.Assembly == callingAssembly
+                         let method = frame.GetMethod()
+                         select string.Format(
+                             CultureInfo.CurrentCulture,
+                             AbstractionResources.StaceFrameInfo,
+                             method,
+                             method.DeclaringType);
+
             var message = string.Format(
-                    System.Globalization.CultureInfo.CurrentCulture,
+                    CultureInfo.CurrentCulture,
                     AbstractionResources.ExceptionRaised,
                     exception.GetType().FullName,
                     exception.Message,
-                    callerMemberName,
-                    callerFilePath,
-                    callerLineNumber);
+                    string.Join(Environment.NewLine, frames.Take(frameCount)),
+                    filePath,
+                    lineNumber);
 
             try
             {
