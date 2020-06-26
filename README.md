@@ -36,7 +36,7 @@ class RepeaterPlugin : Plugin
 
 ## 讨论
 
-Github Issues[https://github.com/huajitech/coolq-dotnet-sdk/issues] 或 [QQ群](https://jq.qq.com/?_wv=1027&k=5HPLCyU)（1094829331）。
+[GitHub Issues](https://github.com/huajitech/coolq-dotnet-sdk/issues) 或 [QQ群](https://jq.qq.com/?_wv=1027&k=5HPLCyU)（1094829331）。
 
 ## 许可
 
