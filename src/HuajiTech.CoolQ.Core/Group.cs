@@ -10,7 +10,8 @@ namespace HuajiTech.CoolQ
         public static readonly Group Empty = new Group(0);
 
         private readonly string? _name;
-        private GroupInfo? _info;
+        private GroupInfo? _info = null;
+        private bool _isRequested;
 
         public Group(long number)
             : base(number)
@@ -29,7 +30,7 @@ namespace HuajiTech.CoolQ
 
         public bool IsRequestedSuccessfully => !(_info is null);
 
-        public bool IsRequested { get; protected set; }
+        public bool IsRequested => _isRequested;
 
         public int MemberCapacity => GetInfo().MemberCapacity;
 
@@ -80,12 +81,12 @@ namespace HuajiTech.CoolQ
 
         private GroupInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (IsRequested && !IsRequestedSuccessfully && !requesting)
+            if (_isRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return GroupInfo.Empty;
             }
 
-            IsRequested = true;
+            _isRequested = true;
 
             try
             {

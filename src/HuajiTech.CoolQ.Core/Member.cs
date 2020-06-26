@@ -8,7 +8,8 @@ namespace HuajiTech.CoolQ
     {
         public static readonly TimeSpan MaxMuteDuration = TimeSpan.FromDays(30);
 
-        private MemberInfo? _info;
+        private MemberInfo? _info = null;
+        private bool _isRequested = false;
 
         public Member(long number, IGroup group)
             : base(number)
@@ -49,6 +50,8 @@ namespace HuajiTech.CoolQ
         public IGroup Group { get; }
 
         public virtual bool HasBadRecord => GetInfo().HasBadRecord;
+
+        public override bool IsRequested => _isRequested;
 
         public override bool IsRequestedSuccessfully => !(_info is null);
 
@@ -147,12 +150,12 @@ namespace HuajiTech.CoolQ
 
         private MemberInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (IsRequested && !IsRequestedSuccessfully && !requesting)
+            if (_isRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return MemberInfo.Empty;
             }
 
-            IsRequested = true;
+            _isRequested = true;
 
             try
             {

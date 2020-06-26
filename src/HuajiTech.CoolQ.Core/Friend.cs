@@ -6,7 +6,8 @@ namespace HuajiTech.CoolQ
 {
     internal class Friend : User, IFriend
     {
-        private FriendInfo? _info;
+        private FriendInfo? _info = null;
+        private bool _isRequested = false;
 
         public Friend(long number)
             : base(number)
@@ -18,6 +19,8 @@ namespace HuajiTech.CoolQ
         {
             _info = info;
         }
+
+        public override bool IsRequested => _isRequested;
 
         public override bool IsRequestedSuccessfully => !(_info is null);
 
@@ -37,12 +40,12 @@ namespace HuajiTech.CoolQ
 
         private FriendInfo GetInfo(bool requesting = false)
         {
-            if (IsRequested && !IsRequestedSuccessfully && !requesting)
+            if (_isRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return FriendInfo.Empty;
             }
 
-            IsRequested = true;
+            _isRequested = true;
 
             try
             {

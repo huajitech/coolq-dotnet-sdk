@@ -644,24 +644,24 @@
             获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.Share"/> 实例的 URL。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Messaging.SignIn">
+        <member name="T:HuajiTech.CoolQ.Messaging.SigningIn">
             <summary>
             表示签到的 <see cref="T:HuajiTech.CoolQ.Messaging.CQCode"/>。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.SignIn.ImageUrl">
+        <member name="P:HuajiTech.CoolQ.Messaging.SigningIn.ImageUrl">
             <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.SignIn"/> 实例的图片 URL。
+            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.SigningIn"/> 实例的图片 URL。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.SignIn.Location">
+        <member name="P:HuajiTech.CoolQ.Messaging.SigningIn.Location">
             <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.SignIn"/> 实例的发布位置。
+            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.SigningIn"/> 实例的发布位置。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Messaging.SignIn.Title">
+        <member name="P:HuajiTech.CoolQ.Messaging.SigningIn.Title">
             <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.SignIn"/> 实例的标题。
+            获取或设置当前 <see cref="T:HuajiTech.CoolQ.Messaging.SigningIn"/> 实例的标题。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Messaging.SmallEmoticon">

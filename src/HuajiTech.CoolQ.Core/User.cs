@@ -5,7 +5,8 @@ namespace HuajiTech.CoolQ
 {
     internal class User : Chat, IUser
     {
-        private UserInfo? _info;
+        private UserInfo? _info = null;
+        private bool _isRequested;
 
         public User(long number)
             : base(number)
@@ -22,7 +23,7 @@ namespace HuajiTech.CoolQ
         {
         }
 
-        public virtual bool IsRequested { get; private protected set; }
+        public virtual bool IsRequested => _isRequested;
 
         public virtual bool IsRequestedSuccessfully => !(_info is null);
 
@@ -64,12 +65,12 @@ namespace HuajiTech.CoolQ
 
         private UserInfo GetInfo(bool requesting = false, bool refresh = false)
         {
-            if (IsRequested && !IsRequestedSuccessfully && !requesting)
+            if (_isRequested && !IsRequestedSuccessfully && !requesting)
             {
                 return UserInfo.Empty;
             }
 
-            IsRequested = true;
+            _isRequested = true;
 
             try
             {
