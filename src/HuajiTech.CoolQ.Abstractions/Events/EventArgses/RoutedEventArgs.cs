@@ -10,6 +10,6 @@ namespace HuajiTech.CoolQ.Events
         /// <summary>
         /// 获取或设置一个值，指示事件是否已处理完毕。
         /// </summary>
-        public bool Handled { get; set; }
+        public virtual bool Handled { get; set; }
     }
 }

@@ -133,21 +133,24 @@
     <value>该字段不能为空或空白字符。</value>
   </data>
   <data name="NullReturnValue" xml:space="preserve">
-    <value>酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing）。查看酷Q中的日志以获取详细信息。</value>
+    <value>酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing），查看酷Q中的日志以获取详细信息。</value>
   </data>
   <data name="UnexpectedReturnValue" xml:space="preserve">
-    <value>酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。</value>
+    <value>酷Q返回了意料之外的值 {0}，查看酷Q中的日志以获取详细信息。</value>
   </data>
-  <data name="BotNotInitialized" xml:space="preserve">
-    <value>机器人尚未初始化。</value>
+  <data name="NotInitialized" xml:space="preserve">
+    <value>尚未初始化。</value>
   </data>
-  <data name="PluginLoadMessage" xml:space="preserve">
-    <value>已加载类型 '{0}'。</value>
+  <data name="InitializationFailed" xml:space="preserve">
+    <value>初始化失败。</value>
   </data>
-  <data name="PluginLoadTitle" xml:space="preserve">
-    <value>插件加载</value>
+  <data name="InitializerNotFound" xml:space="preserve">
+    <value>未在当前程序集找到 InitializerAttribute 特性。</value>
   </data>
-  <data name="TypeIsNotPlugin" xml:space="preserve">
-    <value>指定的类型不是插件类型。</value>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>未经处理的异常</value>
+  </data>
+  <data name="AlreadyInitialized" xml:space="preserve">
+    <value>已初始化。</value>
   </data>
 </root>

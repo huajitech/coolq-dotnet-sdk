@@ -1,0 +1,80 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+		  "src": "../src",
+          "files": [
+            "**.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "guides/**.md",
+          "guides/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**"
+        ]
+      }
+    ],
+    "dest": "../docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+	  "default(zh-cn)",
+	  "templates/material"
+    ],
+    "postProcessors": [
+	  "ExtractSearchIndex"
+	],
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false,
+	"globalMetadata": {
+      "_appTitle": "HuajiTech.CoolQ 文档",
+      "_gitContribute": {
+        "repo": "https://github.com/huajitech/coolq-dotnet-sdk",
+        "branch": "master",
+        "apiSpecFolder": "apidoc"
+	  },
+	  "_gitUrlPattern": "github",
+	  "_appLogoPath": "images/favicon.ico",
+	  "_appFaviconPath": "images/favicon.ico",
+	  "_enableSearch": true,
+	  "_appFooter": "本文档使用 CC BY-NC-SA 4.0 进行许可。"
+    },
+  }
+}

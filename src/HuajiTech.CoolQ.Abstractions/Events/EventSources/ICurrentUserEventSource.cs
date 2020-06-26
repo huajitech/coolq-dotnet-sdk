@@ -3,7 +3,7 @@
     /// <summary>
     /// 定义当前用户事件。
     /// </summary>
-    public interface ICurrentUserEventSource : IMessageEventSource, IFriendshipEventSource, INotifyMembershipInvited
+    public interface ICurrentUserEventSource : IMessageEventSource, IFriendshipEventSource
     {
     }
 }

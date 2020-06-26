@@ -499,3 +499,6 @@ dotnet_diagnostic.SX1309.severity = warning
 
 # SA1009: Closing parenthesis should be spaced correctly
 dotnet_diagnostic.SA1009.severity = suggestion
+
+# SA1011: Closing square brackets should be spaced correctly
+dotnet_diagnostic.SA1011.severity = suggestion

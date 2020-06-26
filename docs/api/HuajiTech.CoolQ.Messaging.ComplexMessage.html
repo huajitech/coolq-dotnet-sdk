@@ -93,6 +93,7 @@
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
+    <div><a class="xref" href="HuajiTech.CoolQ.Messaging.ISendable.html">ISendable</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a>&gt;</div>
     <div><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</div>
     <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</div>
@@ -115,12 +116,15 @@
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.Messaging.html">HuajiTech.CoolQ.Messaging</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.Messaging.dll</h6>
   <h5 id="HuajiTech_CoolQ_Messaging_ComplexMessage_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ComplexMessage : IEquatable&lt;ComplexMessage&gt;, IList&lt;MessageElement&gt;, ICollection&lt;MessageElement&gt;, IReadOnlyList&lt;MessageElement&gt;, IReadOnlyCollection&lt;MessageElement&gt;, IEnumerable&lt;MessageElement&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ComplexMessage : ISendable, IEquatable&lt;ComplexMessage&gt;, IList&lt;MessageElement&gt;, ICollection&lt;MessageElement&gt;, IReadOnlyList&lt;MessageElement&gt;, IReadOnlyCollection&lt;MessageElement&gt;, IEnumerable&lt;MessageElement&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -179,7 +183,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage__ctor_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.%23ctor(System.Collections.Generic.IEnumerable%7BHuajiTech.CoolQ.Messaging.MessageElement%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L40">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage__ctor_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage__ctor_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.#ctor(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">ComplexMessage(IEnumerable&lt;MessageElement&gt;)</h4>
@@ -219,7 +223,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">elements</code> 为 <code>null</code>。</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">elements</code> 为 <span class="xref">null</span>。</p>
 </td>
       </tr>
     </tbody>
@@ -231,7 +235,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Count.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L393">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L436">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Count_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Count*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Count" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Count">Count</h4>
@@ -261,7 +265,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_IsReadOnly.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L395">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L438">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_IsReadOnly_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.IsReadOnly*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_IsReadOnly" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.IsReadOnly">IsReadOnly</h4>
@@ -291,7 +295,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Item_System_Int32_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L47">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L50">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Item_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Item*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Item_System_Int32_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Item(System.Int32)">Item[Int32]</h4>
@@ -358,7 +362,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Add_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Add(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L281">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L300">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Add_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Add*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Add_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Add(HuajiTech.CoolQ.Messaging.MessageElement)">Add(MessageElement)</h4>
@@ -408,7 +412,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Add_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Add(System.Collections.Generic.IEnumerable%7BHuajiTech.CoolQ.Messaging.MessageElement%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L296">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L320">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Add_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Add*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Add_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_MessageElement__" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Add(System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.MessageElement})">Add(IEnumerable&lt;MessageElement&gt;)</h4>
@@ -433,7 +437,7 @@
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</td>
         <td><span class="parametername">collection</span></td>
         <td><p>应将其元素添加到 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 的末尾的集合。
-集合自身不能为 <code>null</code>。</p>
+集合自身不能为 <span class="xref">null</span>。</p>
 </td>
       </tr>
     </tbody>
@@ -465,7 +469,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">collection</code> 为 <code>null</code>。</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">collection</code> 为 <span class="xref">null</span>。</p>
 </td>
       </tr>
     </tbody>
@@ -475,7 +479,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Clear.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L399">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L450">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Clear_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Clear*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Clear" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Clear">Clear()</h4>
@@ -490,7 +494,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_CombinePlainText.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L214">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L231">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_CombinePlainText_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_CombinePlainText" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.CombinePlainText">CombinePlainText()</h4>
@@ -522,7 +526,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Contains_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Contains(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L401">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L452">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Contains_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Contains*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Contains_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Contains(HuajiTech.CoolQ.Messaging.MessageElement)">Contains(MessageElement)</h4>
@@ -569,7 +573,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_CopyTo_HuajiTech_CoolQ_Messaging_MessageElement___System_Int32_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.CopyTo(HuajiTech.CoolQ.Messaging.MessageElement%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L403">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L462">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_CopyTo_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.CopyTo*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_CopyTo_HuajiTech_CoolQ_Messaging_MessageElement___System_Int32_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.CopyTo(HuajiTech.CoolQ.Messaging.MessageElement[],System.Int32)">CopyTo(MessageElement[], Int32)</h4>
@@ -606,7 +610,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(HuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L381">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L424">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(HuajiTech.CoolQ.Messaging.ComplexMessage)">Equals(ComplexMessage)</h4>
@@ -653,7 +657,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_System_Object_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L383">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L426">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Equals_System_Object_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Equals(System.Object)">Equals(Object)</h4>
@@ -699,10 +703,59 @@
   <div><span class="xref">System.Object.Equals(System.Object)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_FromString_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.FromString(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L82">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_FromString_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.FromString*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_FromString_System_String_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.FromString(System.String)">FromString(String)</h4>
+  <div class="markdown level1 summary"><p>创建一个包含指定的字符串的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 实例。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComplexMessage FromString(string str)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>要包含的内容。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_GetEnumerator.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L405">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L464">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetEnumerator_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetEnumerator*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetEnumerator" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetEnumerator">GetEnumerator()</h4>
@@ -732,7 +785,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_GetHashCode.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L385">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L428">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetHashCode_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetHashCode" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetHashCode">GetHashCode()</h4>
@@ -764,7 +817,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_GetPlainText_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.GetPlainText(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L224">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L242">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetPlainText_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetPlainText*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_GetPlainText_System_String_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.GetPlainText(System.String)">GetPlainText(String)</h4>
@@ -815,7 +868,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_IndexOf_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.IndexOf(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L409">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L468">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_IndexOf_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.IndexOf*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_IndexOf_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.IndexOf(HuajiTech.CoolQ.Messaging.MessageElement)">IndexOf(MessageElement)</h4>
@@ -862,7 +915,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Insert_System_Int32_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Insert(System.Int32%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L312">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L336">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Insert_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Insert*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Insert_System_Int32_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Insert(System.Int32,HuajiTech.CoolQ.Messaging.MessageElement)">Insert(Int32, MessageElement)</h4>
@@ -935,7 +988,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Join_HuajiTech_CoolQ_Messaging_MessageElement_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_ComplexMessage__.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Join(HuajiTech.CoolQ.Messaging.MessageElement%2CSystem.Collections.Generic.IEnumerable%7BHuajiTech.CoolQ.Messaging.ComplexMessage%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L145">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L161">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Join_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Join*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Join_HuajiTech_CoolQ_Messaging_MessageElement_System_Collections_Generic_IEnumerable_HuajiTech_CoolQ_Messaging_ComplexMessage__" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Join(HuajiTech.CoolQ.Messaging.MessageElement,System.Collections.Generic.IEnumerable{HuajiTech.CoolQ.Messaging.ComplexMessage})">Join(MessageElement, IEnumerable&lt;ComplexMessage&gt;)</h4>
@@ -998,7 +1051,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">messages</code> 为 <code>null</code>。</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">messages</code> 为 <span class="xref">null</span>。</p>
 </td>
       </tr>
     </tbody>
@@ -1008,7 +1061,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L74">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L90">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Parse*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Parse_System_String_System_Boolean_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Parse(System.String,System.Boolean)">Parse(String, Boolean)</h4>
@@ -1017,7 +1070,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(string str, bool useEmojiCQCode = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComplexMessage Parse(string str, bool useEmoji = false)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1037,8 +1090,8 @@
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">useEmojiCQCode</span></td>
-        <td><p>如果要在返回的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 实例中包含 <a class="xref" href="HuajiTech.CoolQ.Messaging.Emoji.html">Emoji</a> 实例，则为 <code>true</code>；否则为 <code>false</code>。</p>
+        <td><span class="parametername">useEmoji</span></td>
+        <td><p>如果要在返回的 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 实例中包含 <a class="xref" href="HuajiTech.CoolQ.Messaging.Emoji.html">Emoji</a> 实例，则为 <span class="xref">true</span>；否则为 <span class="xref">false</span>。</p>
 </td>
       </tr>
     </tbody>
@@ -1064,7 +1117,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Remove_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Remove(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L323">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L352">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Remove_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Remove*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Remove_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Remove(HuajiTech.CoolQ.Messaging.MessageElement)">Remove(MessageElement)</h4>
@@ -1114,7 +1167,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveAll_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L344">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L386">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveAll_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAll*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveAll_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAll(HuajiTech.CoolQ.Messaging.MessageElement)">RemoveAll(MessageElement)</h4>
@@ -1164,7 +1217,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveAt_System_Int32_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAt(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L355">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L402">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveAt_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAt*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveAt_System_Int32_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
@@ -1214,7 +1267,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveRange_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveRange(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L367">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L414">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveRange_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveRange*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_RemoveRange_System_Int32_System_Int32_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.RemoveRange(System.Int32,System.Int32)">RemoveRange(Int32, Int32)</h4>
@@ -1270,7 +1323,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_Slice_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.Slice(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L373">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L420">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_Slice_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Slice*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_Slice_System_Int32_System_Int32_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.Slice(System.Int32,System.Int32)">Slice(Int32, Int32)</h4>
@@ -1322,7 +1375,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_System_Func_System_String_System_Collections_Generic_IEnumerable_System_String___.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.Func%7BSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L226">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L245">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_System_Func_System_String_System_Collections_Generic_IEnumerable_System_String___" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.Func{System.String,System.Collections.Generic.IEnumerable{System.String}})">SplitPlainText(Func&lt;String, IEnumerable&lt;String&gt;&gt;)</h4>
@@ -1369,7 +1422,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_System_String___.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L273">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L292">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_System_String___" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String[])">SplitPlainText(String[])</h4>
@@ -1419,7 +1472,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_System_String___System_StringSplitOptions_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String%5B%5D%2CSystem.StringSplitOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L265">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L284">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_SplitPlainText_System_String___System_StringSplitOptions_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.SplitPlainText(System.String[],System.StringSplitOptions)">SplitPlainText(String[], StringSplitOptions)</h4>
@@ -1490,19 +1543,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_ToString.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_ToSendableString.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.ToSendableString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L379">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L422">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
-  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_ToString_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.ToString*"></a>
-  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_ToString" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.ToString">ToString()</h4>
-  <div class="markdown level1 summary"><p>将当前 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 实例的值转换为它的等效字符串表示形式。</p>
-</div>
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_ToSendableString_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.ToSendableString*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_ToSendableString" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.ToSendableString">ToSendableString()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+    <pre><code class="lang-csharp hljs">public string ToSendableString()</code></pre>
   </div>
   <h5 class="returns">&#36820;&#22238;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1515,19 +1567,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>当前 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 实例的值的字符串表示形式。</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">&#37325;&#20889;</h5>
-  <div><span class="xref">System.Object.ToString()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_TryRemove_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.TryRemove(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L337">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L371">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_TryRemove_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.TryRemove*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_TryRemove_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.TryRemove(HuajiTech.CoolQ.Messaging.MessageElement)">TryRemove(MessageElement)</h4>
@@ -1567,8 +1616,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>如果成功移除了 <code data-dev-comment-type="paramref" class="paramref">item</code>，则为 <code>true</code>；否则为 <code>false</code>。
-如果在 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 中没有找到 <code data-dev-comment-type="paramref" class="paramref">item</code>，则此方法也会返回 <code>false</code>。</p>
+        <td><p>如果成功移除了 <code data-dev-comment-type="paramref" class="paramref">item</code>，则为 <span class="xref">true</span>；否则为 <span class="xref">false</span>。
+如果在 <a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a> 中没有找到 <code data-dev-comment-type="paramref" class="paramref">item</code>，则此方法也会返回 <span class="xref">false</span>。</p>
 </td>
       </tr>
     </tbody>
@@ -1580,7 +1629,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition(HuajiTech.CoolQ.Messaging.ComplexMessage%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L65">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L75">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)">Addition(ComplexMessage, ComplexMessage)</h4>
@@ -1632,7 +1681,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition(HuajiTech.CoolQ.Messaging.ComplexMessage%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L61">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L69">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement)">Addition(ComplexMessage, MessageElement)</h4>
@@ -1684,7 +1733,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_HuajiTech_CoolQ_Messaging_MessageElement_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition(HuajiTech.CoolQ.Messaging.MessageElement%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L63">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L72">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Addition_HuajiTech_CoolQ_Messaging_MessageElement_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Addition(HuajiTech.CoolQ.Messaging.MessageElement,HuajiTech.CoolQ.Messaging.ComplexMessage)">Addition(MessageElement, ComplexMessage)</h4>
@@ -1736,7 +1785,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_op_Equality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality(HuajiTech.CoolQ.Messaging.ComplexMessage%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L53">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L58">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Equality_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Equality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Equality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)">Equality(ComplexMessage, ComplexMessage)</h4>
@@ -1785,10 +1834,57 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_op_Implicit_System_String__HuajiTech_CoolQ_Messaging_ComplexMessage.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.op_Implicit(System.String)~HuajiTech.CoolQ.Messaging.ComplexMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L56">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Implicit_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Implicit*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Implicit_System_String__HuajiTech_CoolQ_Messaging_ComplexMessage" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Implicit(System.String)~HuajiTech.CoolQ.Messaging.ComplexMessage">Implicit(String to ComplexMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ComplexMessage(string str)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_op_Inequality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality(HuajiTech.CoolQ.Messaging.ComplexMessage%2CHuajiTech.CoolQ.Messaging.ComplexMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L55">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L61">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Inequality_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Inequality_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_ComplexMessage_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Inequality(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.ComplexMessage)">Inequality(ComplexMessage, ComplexMessage)</h4>
@@ -1840,7 +1936,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_op_Subtraction_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.op_Subtraction(HuajiTech.CoolQ.Messaging.ComplexMessage%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L57">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L64">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Subtraction_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Subtraction*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_op_Subtraction_HuajiTech_CoolQ_Messaging_ComplexMessage_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.op_Subtraction(HuajiTech.CoolQ.Messaging.ComplexMessage,HuajiTech.CoolQ.Messaging.MessageElement)">Subtraction(ComplexMessage, MessageElement)</h4>
@@ -1894,7 +1990,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_Messaging_MessageElement__Add_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.System%23Collections%23Generic%23ICollection%7BHuajiTech%23CoolQ%23Messaging%23MessageElement%7D%23Add(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L397">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L440">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_Messaging_MessageElement__Add_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#ICollection{HuajiTech#CoolQ#Messaging#MessageElement}#Add*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_Messaging_MessageElement__Add_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#ICollection{HuajiTech#CoolQ#Messaging#MessageElement}#Add(HuajiTech.CoolQ.Messaging.MessageElement)">ICollection&lt;MessageElement&gt;.Add(MessageElement)</h4>
@@ -1926,7 +2022,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_Messaging_MessageElement__Remove_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.System%23Collections%23Generic%23ICollection%7BHuajiTech%23CoolQ%23Messaging%23MessageElement%7D%23Remove(HuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L413">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L488">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_Messaging_MessageElement__Remove_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#ICollection{HuajiTech#CoolQ#Messaging#MessageElement}#Remove*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_ICollection_HuajiTech_CoolQ_Messaging_MessageElement__Remove_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#ICollection{HuajiTech#CoolQ#Messaging#MessageElement}#Remove(HuajiTech.CoolQ.Messaging.MessageElement)">ICollection&lt;MessageElement&gt;.Remove(MessageElement)</h4>
@@ -1973,7 +2069,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_IList_HuajiTech_CoolQ_Messaging_MessageElement__Insert_System_Int32_HuajiTech_CoolQ_Messaging_MessageElement_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.System%23Collections%23Generic%23IList%7BHuajiTech%23CoolQ%23Messaging%23MessageElement%7D%23Insert(System.Int32%2CHuajiTech.CoolQ.Messaging.MessageElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L411">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L478">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_IList_HuajiTech_CoolQ_Messaging_MessageElement__Insert_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#IList{HuajiTech#CoolQ#Messaging#MessageElement}#Insert*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_IList_HuajiTech_CoolQ_Messaging_MessageElement__Insert_System_Int32_HuajiTech_CoolQ_Messaging_MessageElement_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#IList{HuajiTech#CoolQ#Messaging#MessageElement}#Insert(System.Int32,HuajiTech.CoolQ.Messaging.MessageElement)">IList&lt;MessageElement&gt;.Insert(Int32, MessageElement)</h4>
@@ -2010,7 +2106,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_IList_HuajiTech_CoolQ_Messaging_MessageElement__RemoveAt_System_Int32_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.System%23Collections%23Generic%23IList%7BHuajiTech%23CoolQ%23Messaging%23MessageElement%7D%23RemoveAt(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L415">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L490">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_IList_HuajiTech_CoolQ_Messaging_MessageElement__RemoveAt_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#IList{HuajiTech#CoolQ#Messaging#MessageElement}#RemoveAt*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_Generic_IList_HuajiTech_CoolQ_Messaging_MessageElement__RemoveAt_System_Int32_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#Generic#IList{HuajiTech#CoolQ#Messaging#MessageElement}#RemoveAt(System.Int32)">IList&lt;MessageElement&gt;.RemoveAt(Int32)</h4>
@@ -2042,7 +2138,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L407">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L466">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_IEnumerable_GetEnumerator_" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_ComplexMessage_System_Collections_IEnumerable_GetEnumerator" data-uid="HuajiTech.CoolQ.Messaging.ComplexMessage.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -2068,6 +2164,9 @@
     </tbody>
   </table>
   <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.ISendable.html">ISendable</a>
+  </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
@@ -2155,7 +2254,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_ComplexMessage.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.ComplexMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L391" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/ComplexMessage.cs/#L434" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

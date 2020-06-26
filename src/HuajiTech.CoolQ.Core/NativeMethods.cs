@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace HuajiTech.CoolQ
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
-        "Globalization", "CA2101:指定对 P/Invoke 字符串参数进行封送处理", Justification = "<挂起>")]
+        "Globalization", "CA2101:指定对 P 字符串参数进行封送处理", Justification = "<挂起>")]
     internal static class NativeMethods
     {
         private const string DllName = "CQP.dll";
@@ -82,7 +82,7 @@ namespace HuajiTech.CoolQ
         #region User
 
         [DllImport(DllName, EntryPoint = "CQ_sendLikeV2")]
-        public static extern int User_GiveThumbsUp(
+        public static extern int User_Like(
             int authCode,
             long userNumber,
             int count);
@@ -228,7 +228,7 @@ namespace HuajiTech.CoolQ
         public static extern int EntranceRequest_Respond(
             int authCode,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string token,
-            Entrance entranceType,
+            OperationKind kind,
             Response response,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string? rejectReason);
 

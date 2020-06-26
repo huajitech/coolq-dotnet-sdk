@@ -1,5 +1,5 @@
 using System;
-using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.CoolQ.Interop;
 
 namespace HuajiTech.CoolQ
 {

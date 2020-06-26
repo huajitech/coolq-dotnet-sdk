@@ -5,7 +5,7 @@
     <TargetFrameworks>netstandard2.0;net461;net45</TargetFrameworks>
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>0.3.1-alpha.1</Version>
+    <Version>0.4.0-beta</Version>
     <Authors>SYC</Authors>
     <Company>HuajiTech</Company>
     <Description>使用 ILRepack 打包 HuajiTech.CoolQ 应用。</Description>
@@ -33,13 +33,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="../stylecop.json" />
+    <AdditionalFiles Include="..\stylecop.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="build\*">
+    <None Include="build\**">
       <Pack>True</Pack>
       <PackagePath>build</PackagePath>
+    </None>
+    <None Include="tools\**">
+      <Pack>True</Pack>
+      <PackagePath>tools</PackagePath>
     </None>
   </ItemGroup>
 

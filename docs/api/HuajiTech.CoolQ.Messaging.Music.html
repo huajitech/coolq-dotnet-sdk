@@ -95,6 +95,7 @@
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
+    <div><a class="xref" href="HuajiTech.CoolQ.Messaging.ISendable.html">ISendable</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -121,7 +122,7 @@
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Create_System_String_">CQCode.Create(String)</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_ToString">CQCode.ToString()</a>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_ToSendableString">CQCode.ToSendableString()</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsBoolean_System_String_">CQCode.GetParameterAsBoolean(String)</a>
@@ -134,6 +135,9 @@
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsSingle_System_String_">CQCode.GetParameterAsSingle(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsDouble_System_String_">CQCode.GetParameterAsDouble(String)</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsUri_System_String_">CQCode.GetParameterAsUri(String)</a>
@@ -151,6 +155,9 @@
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Single_">CQCode.SetParameter(String, Single)</a>
     </div>
     <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Double_">CQCode.SetParameter(String, Double)</a>
+    </div>
+    <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Uri_">CQCode.SetParameter(String, Uri)</a>
     </div>
     <div>
@@ -161,6 +168,9 @@
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_ToComplexMessage">MessageElement.ToComplexMessage()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_ToString">MessageElement.ToString()</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_GetHashCode">MessageElement.GetHashCode()</a>
@@ -188,7 +198,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.Messaging.dll</h6>
   <h5 id="HuajiTech_CoolQ_Messaging_Music_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Music : CQCode, IEquatable&lt;MessageElement&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Music : CQCode, ISendable, IEquatable&lt;MessageElement&gt;</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -197,7 +207,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Music__ctor.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Music.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/Music.cs/#L11">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/Music.cs/#L11">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Music__ctor_" data-uid="HuajiTech.CoolQ.Messaging.Music.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Music__ctor" data-uid="HuajiTech.CoolQ.Messaging.Music.#ctor">Music()</h4>
@@ -212,7 +222,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Music__ctor_System_Collections_Generic_IDictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Music.%23ctor(System.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/Music.cs/#L16">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/Music.cs/#L16">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Music__ctor_" data-uid="HuajiTech.CoolQ.Messaging.Music.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Music__ctor_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="HuajiTech.CoolQ.Messaging.Music.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">Music(IDictionary&lt;String, String&gt;)</h4>
@@ -246,7 +256,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Music_Id.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Music.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/Music.cs/#L24">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/Music.cs/#L24">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Music_Id_" data-uid="HuajiTech.CoolQ.Messaging.Music.Id*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Music_Id" data-uid="HuajiTech.CoolQ.Messaging.Music.Id">Id</h4>
@@ -255,7 +265,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,7 +277,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -277,7 +287,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Music_Platform.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Music.Platform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/Music.cs/#L34">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/Music.cs/#L34">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_Music_Platform_" data-uid="HuajiTech.CoolQ.Messaging.Music.Platform*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_Music_Platform" data-uid="HuajiTech.CoolQ.Messaging.Music.Platform">Platform</h4>
@@ -319,7 +329,41 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Music_Style.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Music.Style%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/Music.cs/#L57">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_CoolQ_Messaging_Music_Style_" data-uid="HuajiTech.CoolQ.Messaging.Music.Style*"></a>
+  <h4 id="HuajiTech_CoolQ_Messaging_Music_Style" data-uid="HuajiTech.CoolQ.Messaging.Music.Style">Style</h4>
+  <div class="markdown level1 summary"><p>获取或设置当前 <a class="xref" href="HuajiTech.CoolQ.Messaging.Music.html">Music</a> 实例的样式。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Style { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">&#23454;&#29616;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.ISendable.html">ISendable</a>
+  </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
@@ -334,7 +378,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_Music.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.Music%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/Music.cs/#L9" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/Music.cs/#L9" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using Autofac;
@@ -10,127 +11,184 @@ namespace HuajiTech.CoolQ.Loaders
 {
     public class AutofacLoader : ILoader
     {
-        private readonly IContainer _container;
+        private readonly ContainerBuilder _builder;
 
-        public AutofacLoader()
+        public AutofacLoader(ContainerBuilder builder)
+            => _builder = builder ?? throw new ArgumentNullException(nameof(builder));
+
+        public IContainer? Container { get; private set; }
+
+        private static void LogPlugins(IEnumerable<object> plugins)
         {
-            var builder = new ContainerBuilder();
+            if (plugins is null)
+            {
+                throw new ArgumentNullException(nameof(plugins));
+            }
 
-            RegisterSdk(builder);
-            RegisterPlugins(builder);
-
-            _container = builder.Build();
+            foreach (var plugin in plugins)
+            {
+                PluginContext.Current.Bot.Logger.LogDebug(
+                    AutofacLoaderResources.PluginLoadTitle,
+                    string.Format(
+                        CultureInfo.InvariantCulture,
+                        AutofacLoaderResources.PluginLoadMessage,
+                        plugin.GetType().FullName));
+            }
         }
 
-        private static void RegisterSdk(ContainerBuilder builder)
+        public AutofacLoader RegisterSdk()
         {
-            builder
+            if (!(Container is null))
+            {
+                return this;
+            }
+
+            _builder
                 .RegisterInstance(CurrentUserEventSource.Instance)
                 .AsImplementedInterfaces();
 
-            builder
+            _builder
                 .RegisterInstance(GroupEventSource.Instance)
                 .AsImplementedInterfaces();
 
-            builder
+            _builder
                 .RegisterInstance(BotEventSource.Instance)
                 .AsImplementedInterfaces();
 
-            builder
+            _builder
                 .Register(context => PluginContext.Current)
                 .As<PluginContext>();
 
-            builder
+            _builder
                 .Register(context => PluginContext.Current.Bot)
                 .AsImplementedInterfaces();
 
-            builder
+            _builder
                 .Register(context => PluginContext.Current.Bot.Logger)
                 .As<ILogger>();
 
-            builder
+            _builder
                 .Register(context => PluginContext.Current.Bot.CurrentUser)
                 .As<ICurrentUser>();
+
+            return this;
         }
 
-        private static void RegisterPlugins(ContainerBuilder builder)
+        public AutofacLoader RegisterPlugins(Assembly assembly)
         {
-            var assembly = Assembly.GetExecutingAssembly();
-
-            var defaultLoadStage = ((AppLifecycle?)assembly
-                    .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? AppLifecycle.Enabled;
-
-            var attributes = assembly.GetCustomAttributes<PluginLoadStageAttribute>();
-
-            var types = from type in assembly.GetLoadableTypes()
-                        where type.IsClass && !type.IsAbstract && typeof(IPlugin).IsAssignableFrom(type)
-                        select type;
-
-            foreach (var type in types)
+            if (!(Container is null))
             {
-                var loadStage = ((AppLifecycle?)type
-                    .GetCustomAttribute<PluginLoadStageAttribute>()?.LoadStage) ?? defaultLoadStage;
+                return this;
+            }
 
-                builder
+            if (assembly is null)
+            {
+                throw new ArgumentNullException(nameof(assembly));
+            }
+
+            var attributes = assembly.GetCustomAttributes<PluginAttribute>();
+
+            foreach (var type in assembly.GetLoadableTypes().Where(type => type.IsClass && !type.IsAbstract))
+            {
+                var attr = type.GetCustomAttribute<PluginAttribute>();
+
+                if (attr is null)
+                {
+                    continue;
+                }
+
+                _builder
                     .RegisterType(type)
                     .SingleInstance()
-                    .Named<IPlugin>(loadStage.ToString())
-                    .As<IPlugin>()
+                    .Named<object>(attr.LoadTiming.ToString())
                     .AsSelf();
             }
+
+            return this;
+        }
+
+        public AutofacLoader Build()
+        {
+            Container = _builder.Build();
+            return this;
+        }
+
+        public AutofacLoader Init()
+        {
+            GetPlugins(AppLifecycle.Initializing);
+
+            var source = BotEventSource.Instance;
+
+            var isFirstLoad = true;
+            source.AppEnabled += (sender, e) =>
+            {
+                var plugins = GetPlugins(AppLifecycle.Enabled);
+
+                if (isFirstLoad)
+                {
+                    LogPlugins(plugins);
+                    isFirstLoad = false;
+                }
+            };
+
+            source.BotStarted += (sender, e) => GetPlugins(AppLifecycle.BotStarted);
+
+            source.AppDisabling += (sender, e) => GetPlugins(AppLifecycle.Disabling);
+
+            source.BotStopping += (sender, e) => GetPlugins(AppLifecycle.BotStopping);
+
+            return this;
         }
 
         public TPlugin GetPlugin<TPlugin>()
-            where TPlugin : notnull, IPlugin
+            where TPlugin : notnull
         {
+            if (Container is null)
+            {
+                throw new InvalidOperationException(AutofacLoaderResources.NotBuilt);
+            }
+
             try
             {
-                return _container.Resolve<TPlugin>();
+                return Container.Resolve<TPlugin>();
             }
             catch (Exception ex)
             {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
+                throw new PluginLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
             }
         }
 
-        public IPlugin GetPlugin(Type pluginType)
+        public object GetPlugin(Type pluginType)
         {
-            if (!typeof(IPlugin).IsAssignableFrom(pluginType))
+            if (Container is null)
             {
-                throw new ArgumentException(AutofacLoaderResources.TypeIsNotPlugin, nameof(pluginType));
+                throw new InvalidOperationException(AutofacLoaderResources.NotBuilt);
             }
 
             try
             {
-                return (IPlugin)_container.Resolve(pluginType);
+                return Container.Resolve(pluginType);
             }
             catch (Exception ex)
             {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
+                throw new PluginLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
             }
         }
 
-        public ICollection<IPlugin> GetPlugins(AppLifecycle loadStage)
+        public IReadOnlyCollection<object> GetPlugins(AppLifecycle loadTiming)
         {
-            try
+            if (Container is null)
             {
-                return _container.ResolveNamed<ICollection<IPlugin>>(loadStage.ToString());
+                throw new InvalidOperationException(AutofacLoaderResources.NotBuilt);
             }
-            catch (Exception ex)
-            {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
-            }
-        }
 
-        public ICollection<IPlugin> GetPlugins()
-        {
             try
             {
-                return _container.Resolve<ICollection<IPlugin>>();
+                return Container.ResolveNamed<IReadOnlyCollection<object>>(loadTiming.ToString());
             }
             catch (Exception ex)
             {
-                throw new TypeLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
+                throw new PluginLoadException(AutofacLoaderResources.FailedToLoadPlugin, ex);
             }
         }
     }

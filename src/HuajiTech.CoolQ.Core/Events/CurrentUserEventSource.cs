@@ -7,9 +7,9 @@ using HuajiTech.UnmanagedExports;
 namespace HuajiTech.CoolQ.Events
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
-        "Usage", "CA1801:检查未使用的参数", Justification = "<挂起>")]
+        "Design", "CA1031:不捕获常规异常类型", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
-        "CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
+        "Usage", "CA1801:检查未使用的参数", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Style", "IDE0060:删除未使用的参数", Justification = "<挂起>")]
     public class CurrentUserEventSource : ICurrentUserEventSource
@@ -20,71 +20,55 @@ namespace HuajiTech.CoolQ.Events
         {
         }
 
-        public event EventHandler<MessageReceivedEventArgs>? MessageReceived;
+        public event EventHandler<UserMessageReceivedEventArgs>? UserMessageReceived;
+
+        public event EventHandler<GroupMessageReceivedEventArgs>? GroupMessageReceived;
 
         public event EventHandler<AnonymousMessageReceivedEventArgs>? AnonymousMessageReceived;
 
-        public event EventHandler<MembershipInvitedEventArgs>? MembershipInvited;
-
         public event EventHandler<FriendAddedEventArgs>? FriendAdded;
 
-        public event EventHandler<FriendAddingEventArgs>? FriendAdding;
-
-        private static bool OnMessageReceived(
-            int messageId, IChattable source, IUser sender, string messageContent)
-        {
-            var e = new MessageReceivedEventArgs(
-                new Message(messageId, messageContent), source, sender);
-
-            Instance.MessageReceived?.Invoke(Instance, e);
-
-            return e.Handled;
-        }
-
-        private static bool OnAnonymousMessageReceived(
-            int messageId, IGroup source, IAnonymousMember sender, string messageContent)
-        {
-            if (Instance.AnonymousMessageReceived is null)
-            {
-                return false;
-            }
-
-            var e = new AnonymousMessageReceivedEventArgs(
-                new Message(messageId, messageContent), source, sender);
-
-            Instance.AnonymousMessageReceived.Invoke(Instance, e);
-
-            return e.Handled;
-        }
+        public event EventHandler<FriendshipRequestedEventArgs>? FriendshipRequested;
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnPrivateMessageReceived(
-            PrivateMessageSender senderType,
+        internal static bool OnUserMessageReceived(
+            MessageSender senderType,
             int messageId,
             long senderNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string messageContent,
             int font)
         {
-            if (Instance.MessageReceived is null)
+            if (Instance.UserMessageReceived is null)
             {
                 return false;
             }
 
             var sender = senderType switch
             {
-                PrivateMessageSender.User => new User(senderNumber),
-                PrivateMessageSender.Member => new Member(senderNumber, new Group(0)),
-                PrivateMessageSender.Friend => new Friend(senderNumber),
-                _ => throw new InvalidEnumArgumentException(nameof(senderType), (int)senderType, typeof(PrivateMessageSender))
+                MessageSender.User => new User(senderNumber),
+                MessageSender.Member => new Member(senderNumber, Group.Empty),
+                MessageSender.Friend => new Friend(senderNumber),
+                _ => throw new InvalidEnumArgumentException(nameof(senderType), (int)senderType, typeof(MessageSender))
             };
 
-            return OnMessageReceived(messageId, sender, sender, messageContent);
+            var e = new UserMessageReceivedEventArgs(new MessageCore(messageId, messageContent), sender, sender);
+
+            try
+            {
+                Instance.UserMessageReceived.Invoke(Instance, e);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogUnhandledException(ex);
+            }
+
+            return e.Handled;
         }
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnGroupMessageReceived(
+        internal static bool OnGroupMessageReceived(
             int type,
             int messageId,
             long sourceNumber,
@@ -93,28 +77,42 @@ namespace HuajiTech.CoolQ.Events
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string messageContent,
             int font)
         {
-            if (Instance.MessageReceived is null)
+            if (Instance.GroupMessageReceived is null && Instance.AnonymousMessageReceived is null)
             {
                 return false;
             }
 
             var group = new Group(sourceNumber);
 
-            if (senderAnonymousInfo.Length is 0)
-            {
-                return OnMessageReceived(
-                    messageId, group, new Member(senderNumber, group), messageContent);
-            }
-            else
+            if (!(senderAnonymousInfo.Length is 0))
             {
                 return OnAnonymousMessageReceived(
-                    messageId, group, new AnonymousMember(senderAnonymousInfo, group), messageContent);
+                    messageId,
+                    new Group(sourceNumber),
+                    new AnonymousMember(senderAnonymousInfo, group),
+                    messageContent);
             }
+
+            var e = new GroupMessageReceivedEventArgs(
+                new MessageCore(messageId, messageContent),
+                group,
+                new Member(senderNumber, group));
+
+            try
+            {
+                Instance.GroupMessageReceived?.Invoke(Instance, e);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogUnhandledException(ex);
+            }
+
+            return e.Handled;
         }
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnFriendAdded(
+        internal static bool OnFriendAdded(
             int type,
             int timestamp,
             long requesterNumber)
@@ -127,62 +125,63 @@ namespace HuajiTech.CoolQ.Events
             var e = new FriendAddedEventArgs(
                 Timestamp.ToDateTime(timestamp), new Friend(requesterNumber));
 
-            Instance.FriendAdded.Invoke(Instance, e);
+            try
+            {
+                Instance.FriendAdded.Invoke(Instance, e);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogUnhandledException(ex);
+            }
 
             return e.Handled;
         }
 
         [DllExport]
         [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnFriendAdding(
+        internal static bool OnFriendshipRequested(
             int type,
             int timestamp,
             long requesterNumber,
             [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
             string requestToken)
         {
-            if (Instance.FriendAdding is null)
+            if (Instance.FriendshipRequested is null)
             {
                 return false;
             }
 
-            var e = new FriendAddingEventArgs(
+            var e = new FriendshipRequestedEventArgs(
                 Timestamp.ToDateTime(timestamp),
                 new User(requesterNumber),
                 new FriendshipRequest(requestToken, message));
 
-            Instance.FriendAdding.Invoke(Instance, e);
+            try
+            {
+                Instance.FriendshipRequested.Invoke(Instance, e);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogUnhandledException(ex);
+            }
 
             return e.Handled;
         }
 
-        [DllExport]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        private static bool OnMembershipInvited(
-            Entrance type,
-            int timestamp,
-            long targetNumber,
-            long inviterNumber,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))] string message,
-            string requestToken)
+        private static bool OnAnonymousMessageReceived(
+            int messageId, IGroup source, IAnonymousMember sender, string messageContent)
         {
-            if (!(type is Entrance.Passive))
+            var e = new AnonymousMessageReceivedEventArgs(
+                new MessageCore(messageId, messageContent), source, sender);
+
+            try
             {
-                return false;
+                Instance.AnonymousMessageReceived?.Invoke(Instance, e);
             }
-
-            if (Instance.MembershipInvited is null)
+            catch (Exception ex)
             {
-                return false;
+                Logger.LogUnhandledException(ex);
             }
-
-            var e = new MembershipInvitedEventArgs(
-                Timestamp.ToDateTime(timestamp),
-                new Group(targetNumber),
-                new User(inviterNumber),
-                new MembershipInvitation(requestToken, message));
-
-            Instance.MembershipInvited.Invoke(Instance, e);
 
             return e.Handled;
         }

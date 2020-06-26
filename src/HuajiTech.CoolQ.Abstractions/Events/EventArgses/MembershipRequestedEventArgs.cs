@@ -11,24 +11,24 @@ namespace HuajiTech.CoolQ.Events
             DateTime time, IGroup source, IUser requester, IMembershipRequest request)
             : base(time)
         {
-            Source = source ?? throw new ArgumentNullException(nameof(source));
-            Requester = requester ?? throw new ArgumentNullException(nameof(requester));
-            Request = request ?? throw new ArgumentNullException(nameof(request));
+            Source = source;
+            Requester = requester;
+            Request = request;
         }
 
         /// <summary>
         /// 获取来源群。
         /// </summary>
-        public IGroup Source { get; }
+        public virtual IGroup Source { get; }
 
         /// <summary>
         /// 获取请求用户。
         /// </summary>
-        public IUser Requester { get; }
+        public virtual IUser Requester { get; }
 
         /// <summary>
         /// 获取请求。
         /// </summary>
-        public IMembershipRequest Request { get; }
+        public virtual IMembershipRequest Request { get; }
     }
 }

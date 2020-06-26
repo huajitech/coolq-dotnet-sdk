@@ -4,7 +4,7 @@
     /// 用作插件的基类，并提供操作 <see cref="PluginContext"/> 的实例方法。
     /// 此类为抽象类。
     /// </summary>
-    public abstract class Plugin : IPlugin
+    public abstract class Plugin
     {
         /// <summary>
         /// 以指定的 <see cref="PluginContext"/> 初始化一个 <see cref="Plugin"/> 类的新实例。
@@ -23,7 +23,7 @@
         /// <summary>
         /// 获取当前 <see cref="Plugin"/> 实例的 <see cref="PluginContext"/>。
         /// </summary>
-        public PluginContext Context { get; }
+        public virtual PluginContext Context { get; }
 
         /// <summary>
         /// 获取当前 <see cref="Plugin"/> 实例的 <see cref="IBot"/>。
@@ -76,6 +76,6 @@
         /// 创建指定 ID 的消息。
         /// </summary>
         /// <param name="id">ID。</param>
-        protected IMessage Message(long id) => Context.GetMessage(id);
+        protected Message Message(int id) => Context.GetMessage(id);
     }
 }

@@ -84,41 +84,34 @@
 if (e.Source is IUser) { }   // 私聊消息（包括临时会话和好友消息）。
 if (e.Source is IMember) { } // 群临时会话消息（注意：由于酷Q限制，所在群为 Group(0)）。
 if (e.Source is IFriend) { } // 好友消息。
-</code></pre>
-<h2 id="使用-">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.AbstractionExtensions.html#HuajiTech_CoolQ_Messaging_AbstractionExtensions_Parse_HuajiTech_CoolQ_IMessage_System_Boolean_">Parse(IMessage, Boolean)</a> 扩展方法解析消息。</p>
+</code></pre><h2 id="使用-huajitechcoolqmessagingcomplexmessage">使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.ComplexMessage.html">ComplexMessage</a></h2>
+<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.AbstractionExtensions.html#HuajiTech_CoolQ_Messaging_AbstractionExtensions_Parse_HuajiTech_CoolQ_Message_System_Boolean_">Parse(Message, Boolean)</a> 扩展方法解析消息。</p>
 <pre><code class="lang-csharp">var message = e.Message.Parse();
-</code></pre>
-<p>获取消息中的所有纯文本拼接成的字符串。</p>
+</code></pre><p>获取消息中的所有纯文本拼接成的字符串。</p>
 <pre><code class="lang-csharp">message.GetPlainText();
-</code></pre>
-<p>判断机器人是否被 @。</p>
-<pre><code class="lang-csharp">if (message.Contains(CurrentUser.At()))
+</code></pre><p>判断机器人是否被提及（@）。</p>
+<pre><code class="lang-csharp">if (message.Contains(CurrentUser.Mention()))
 {
     ...
 }
-</code></pre>
-<p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.AbstractionExtensions.html#HuajiTech_CoolQ_Messaging_AbstractionExtensions_At_HuajiTech_CoolQ_IUser_">At(IUser)</a> @ 消息的发送者。</p>
-<pre><code class="lang-csharp">e.Source.Send(e.Sender.At() + &quot; How are you?&quot;)
-</code></pre>
-<p>解构复合消息。</p>
+</code></pre><p>使用 <a class="xref" href="../api/HuajiTech.CoolQ.Messaging.AbstractionExtensions.html#HuajiTech_CoolQ_Messaging_AbstractionExtensions_Mention_HuajiTech_CoolQ_IUser_">Mention(IUser)</a> 提及消息的发送者。</p>
+<pre><code class="lang-csharp">e.Source.Send(e.Sender.Mention() + &quot; How are you?&quot;);
+// 或直接使用 Reply 扩展方法。
+e.Reply(&quot;How are you?&quot;);
+</code></pre><p>解构复合消息。</p>
 <pre><code class="lang-csharp">var (a, b, c) = message;
-</code></pre>
-<p>解构、模式匹配并获取剩余内容。</p>
-<pre><code class="lang-csharp">if (message is (At at, Image image))
+</code></pre><p>解构、模式匹配并获取剩余内容。</p>
+<pre><code class="lang-csharp">if (message is (Mention mention, Image image))
 {
     var rest = message.Skip(2).ToComplexMessage();
-    [...]
+    ...
 }
-</code></pre>
-<h2 id="使用正则消息">使用正则消息</h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_IMessage_">RegexDecode(IMessage)</a> 扩展方法解码正则消息。</p>
+</code></pre><h2 id="使用正则消息">使用正则消息</h2>
+<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_Message_">RegexDecode(Message)</a> 扩展方法解码正则消息。</p>
 <pre><code class="lang-csharp">var args = e.Message.RegexDecode();
-</code></pre>
-<p>获取 <code>Name</code> 键的值。</p>
+</code></pre><p>获取 <code>Name</code> 键的值。</p>
 <pre><code class="lang-csharp">args[&quot;Name&quot;]
-</code></pre>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -126,7 +119,7 @@ if (e.Source is IFriend) { } // 好友消息。
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/guides/howto_handle_message.md/#L1" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/documentation/guides/howto_handle_message.md/#L1" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                 </ul>
               </div>

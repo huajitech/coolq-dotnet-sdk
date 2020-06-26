@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.CoolQ.Interop;
 
 namespace HuajiTech.CoolQ
 {
@@ -25,9 +25,11 @@ namespace HuajiTech.CoolQ
                 .ToList();
         }
 
-        public string GetCookies(string domain) => NativeMethods.CurrentUser_GetCookies(Bot.Instance.AuthCode, domain).CheckError();
+        public string GetCookies(string domain)
+            => NativeMethods.CurrentUser_GetCookies(Bot.Instance.AuthCode, domain).CheckError();
 
-        public int GetCsrfToken() => NativeMethods.CurrentUser_GetCsrfToken(Bot.Instance.AuthCode).CheckError();
+        public int GetCsrfToken()
+            => NativeMethods.CurrentUser_GetCsrfToken(Bot.Instance.AuthCode).CheckError();
 
         public IReadOnlyCollection<IGroup> GetGroups()
         {

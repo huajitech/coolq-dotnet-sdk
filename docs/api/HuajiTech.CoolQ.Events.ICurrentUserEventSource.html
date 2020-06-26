@@ -92,23 +92,30 @@
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyAnonymousMessageReceived.html#HuajiTech_CoolQ_Events_INotifyAnonymousMessageReceived_AnonymousMessageReceived">INotifyAnonymousMessageReceived.AnonymousMessageReceived</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyMessageReceived.html#HuajiTech_CoolQ_Events_INotifyMessageReceived_MessageReceived">INotifyMessageReceived.MessageReceived</a>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyUserMessageReceived.html#HuajiTech_CoolQ_Events_INotifyUserMessageReceived_UserMessageReceived">INotifyUserMessageReceived.UserMessageReceived</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyGroupMessageReceived.html#HuajiTech_CoolQ_Events_INotifyGroupMessageReceived_GroupMessageReceived">INotifyGroupMessageReceived.GroupMessageReceived</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendAdded.html#HuajiTech_CoolQ_Events_INotifyFriendAdded_FriendAdded">INotifyFriendAdded.FriendAdded</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendAdding.html#HuajiTech_CoolQ_Events_INotifyFriendAdding_FriendAdding">INotifyFriendAdding.FriendAdding</a>
-    </div>
-    <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyEntranceInvited.html#HuajiTech_CoolQ_Events_INotifyEntranceInvited_EntranceInvited">INotifyEntranceInvited.EntranceInvited</a>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendshipRequested.html#HuajiTech_CoolQ_Events_INotifyFriendshipRequested_FriendshipRequested">INotifyFriendshipRequested.FriendshipRequested</a>
     </div>
   </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.Events.html">HuajiTech.CoolQ.Events</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.Abstractions.dll</h6>
   <h5 id="HuajiTech_CoolQ_Events_ICurrentUserEventSource_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ICurrentUserEventSource : IMessageEventSource, INotifyAnonymousMessageReceived, INotifyMessageReceived, IFriendshipEventSource, INotifyFriendAdded, INotifyFriendAdding, INotifyEntranceInvited</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ICurrentUserEventSource : IMessageEventSource, INotifyAnonymousMessageReceived, INotifyUserMessageReceived, INotifyGroupMessageReceived, IFriendshipEventSource, INotifyFriendAdded, INotifyFriendshipRequested</code></pre>
+  </div>
+  <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Events.Extensions.html#HuajiTech_CoolQ_Events_Extensions_AddMessageReceivedEventHandler_HuajiTech_CoolQ_Events_IMessageEventSource_System_EventHandler_HuajiTech_CoolQ_Events_MessageReceivedEventArgs__">Extensions.AddMessageReceivedEventHandler(IMessageEventSource, EventHandler&lt;MessageReceivedEventArgs&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Events.Extensions.html#HuajiTech_CoolQ_Events_Extensions_RemoveMessageReceivedEventHandler_HuajiTech_CoolQ_Events_IMessageEventSource_System_EventHandler_HuajiTech_CoolQ_Events_MessageReceivedEventArgs__">Extensions.RemoveMessageReceivedEventHandler(IMessageEventSource, EventHandler&lt;MessageReceivedEventArgs&gt;)</a>
   </div>
 </article>
           </div>

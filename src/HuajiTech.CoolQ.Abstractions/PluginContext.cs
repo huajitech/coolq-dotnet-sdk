@@ -26,16 +26,6 @@ namespace HuajiTech.CoolQ
         public abstract IBot Bot { get; }
 
         /// <summary>
-        /// 在派生类中重写时，获取当前 <see cref="PluginContext"/> 实例的 <see cref="IPacker"/>。
-        /// </summary>
-        public abstract IPacker Packer { get; }
-
-        /// <summary>
-        /// 在派生类中重写时，获取当前 <see cref="PluginContext"/> 实例的 <see cref="ILoader"/>。
-        /// </summary>
-        public abstract ILoader Loader { get; }
-
-        /// <summary>
         /// 在派生类中重写时，获取指定号码的用户。
         /// </summary>
         /// <param name="number">号码。</param>
@@ -65,18 +55,19 @@ namespace HuajiTech.CoolQ
         /// </summary>
         /// <param name="number">号码。</param>
         /// <param name="groupNumber">群号码。</param>
-        public virtual IMember GetMember(long number, long groupNumber) => GetMember(number, GetGroup(groupNumber));
+        public virtual IMember GetMember(long number, long groupNumber)
+            => GetMember(number, GetGroup(groupNumber));
 
         /// <summary>
         /// 获取号码为指定用户的号码，群为指定群的 <see cref="IMember"/> 实例。
         /// </summary>
         /// <param name="user">用户。</param>
         /// <param name="group">群。</param>
-        public virtual IMember? GetMember(IUser user, IGroup group)
+        public virtual IMember GetMember(IUser user, IGroup group)
         {
             if (user is null)
             {
-                return null;
+                throw new ArgumentNullException(nameof(user));
             }
 
             return GetMember(user.Number, group);
@@ -87,12 +78,12 @@ namespace HuajiTech.CoolQ
         /// </summary>
         /// <param name="user">用户。</param>
         /// <param name="groupNumber">群号码。</param>
-        public virtual IMember? GetMember(IUser user, long groupNumber) => GetMember(user, GetGroup(groupNumber));
+        public virtual IMember GetMember(IUser user, long groupNumber) => GetMember(user, GetGroup(groupNumber));
 
         /// <summary>
-        /// 在派生类中重写时，获取指定 ID 的 <see cref="IMessage"/> 实例。
+        /// 在派生类中重写时，获取指定 ID 的 <see cref="Message"/> 实例。
         /// </summary>
         /// <param name="id">消息 ID。</param>
-        public abstract IMessage GetMessage(long id);
+        public abstract Message GetMessage(int id);
     }
 }

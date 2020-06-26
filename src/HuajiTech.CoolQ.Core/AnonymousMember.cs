@@ -1,5 +1,5 @@
 using System;
-using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.CoolQ.Interop;
 
 namespace HuajiTech.CoolQ
 {
@@ -39,8 +39,8 @@ namespace HuajiTech.CoolQ
 
         public void Mute() => Mute(MaxMuteDuration);
 
-        public void Unmute() =>
-            NativeMethods.AnonymousMember_Mute(
+        public void Unmute()
+            => NativeMethods.AnonymousMember_Mute(
                 Bot.Instance.AuthCode, Group.Number, _rawInfo, 0).CheckError();
 
         private AnonymousMemberInfo GetInfo()

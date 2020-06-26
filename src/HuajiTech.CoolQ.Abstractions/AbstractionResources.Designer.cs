@@ -97,21 +97,11 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 在 文件 &apos;{3}&apos; 行号 {4} 记录了一个类型为 &apos;{0}&apos; 的异常：{1}
-        ///{2} 的本地化字符串。
+        ///   查找类似 [{1}:{2}] {0} 的本地化字符串。
         /// </summary>
         internal static string ExceptionRaised {
             get {
                 return ResourceManager.GetString("ExceptionRaised", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 未能发送异常信息 的本地化字符串。
-        /// </summary>
-        internal static string FailedToSendException {
-            get {
-                return ResourceManager.GetString("FailedToSendException", resourceCulture);
             }
         }
         
@@ -157,15 +147,6 @@ namespace HuajiTech.CoolQ {
         internal static string Sending {
             get {
                 return ResourceManager.GetString("Sending", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似     在 类型 &apos;{1}&apos; 方法 &apos;{0}&apos; 的本地化字符串。
-        /// </summary>
-        internal static string StaceFrameInfo {
-            get {
-                return ResourceManager.GetString("StaceFrameInfo", resourceCulture);
             }
         }
         

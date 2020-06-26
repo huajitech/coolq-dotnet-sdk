@@ -15,6 +15,6 @@ namespace HuajiTech.CoolQ.Events
         /// <summary>
         /// 获取事件发生的时间。
         /// </summary>
-        public DateTime Time { get; }
+        public virtual DateTime Time { get; }
     }
 }

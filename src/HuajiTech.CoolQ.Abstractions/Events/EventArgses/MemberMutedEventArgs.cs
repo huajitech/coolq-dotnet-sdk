@@ -17,6 +17,6 @@ namespace HuajiTech.CoolQ.Events
         /// <summary>
         /// 获取禁言时长。
         /// </summary>
-        public TimeSpan Duration { get; }
+        public virtual TimeSpan Duration { get; }
     }
 }

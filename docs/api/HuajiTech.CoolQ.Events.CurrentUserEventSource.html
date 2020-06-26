@@ -95,11 +95,11 @@
     <div><a class="xref" href="HuajiTech.CoolQ.Events.ICurrentUserEventSource.html">ICurrentUserEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.IMessageEventSource.html">IMessageEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyAnonymousMessageReceived.html">INotifyAnonymousMessageReceived</a></div>
-    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyMessageReceived.html">INotifyMessageReceived</a></div>
+    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyUserMessageReceived.html">INotifyUserMessageReceived</a></div>
+    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyGroupMessageReceived.html">INotifyGroupMessageReceived</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.IFriendshipEventSource.html">IFriendshipEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendAdded.html">INotifyFriendAdded</a></div>
-    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendAdding.html">INotifyFriendAdding</a></div>
-    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyEntranceInvited.html">INotifyEntranceInvited</a></div>
+    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendshipRequested.html">INotifyFriendshipRequested</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -129,7 +129,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.Core.dll</h6>
   <h5 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CurrentUserEventSource : ICurrentUserEventSource, IMessageEventSource, INotifyAnonymousMessageReceived, INotifyMessageReceived, IFriendshipEventSource, INotifyFriendAdded, INotifyFriendAdding, INotifyEntranceInvited</code></pre>
+    <pre><code class="lang-csharp hljs">public class CurrentUserEventSource : ICurrentUserEventSource, IMessageEventSource, INotifyAnonymousMessageReceived, INotifyUserMessageReceived, INotifyGroupMessageReceived, IFriendshipEventSource, INotifyFriendAdded, INotifyFriendshipRequested</code></pre>
   </div>
   <h3 id="fields">&#23383;&#27573;
   </h3>
@@ -169,7 +169,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_CurrentUserEventSource_AnonymousMessageReceived.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.CurrentUserEventSource.AnonymousMessageReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/CurrentUserEventSource.cs/#L25">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/CurrentUserEventSource.cs/#L27">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_AnonymousMessageReceived" data-uid="HuajiTech.CoolQ.Events.CurrentUserEventSource.AnonymousMessageReceived">AnonymousMessageReceived</h4>
   <div class="markdown level1 summary"></div>
@@ -189,35 +189,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.AnonymousMessageReceivedEventArgs.html">AnonymousMessageReceivedEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_CurrentUserEventSource_EntranceInvited.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.CurrentUserEventSource.EntranceInvited%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/CurrentUserEventSource.cs/#L27">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_EntranceInvited" data-uid="HuajiTech.CoolQ.Events.CurrentUserEventSource.EntranceInvited">EntranceInvited</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EntranceInvitedEventArgs&gt; EntranceInvited</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.EntranceInvitedEventArgs.html">EntranceInvitedEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -253,17 +224,17 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_CurrentUserEventSource_FriendAdding.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_CurrentUserEventSource_FriendshipRequested.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendshipRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/CurrentUserEventSource.cs/#L31">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
-  <h4 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_FriendAdding" data-uid="HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendAdding">FriendAdding</h4>
+  <h4 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_FriendshipRequested" data-uid="HuajiTech.CoolQ.Events.CurrentUserEventSource.FriendshipRequested">FriendshipRequested</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;FriendAddingEventArgs&gt; FriendAdding</code></pre>
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;FriendshipRequestedEventArgs&gt; FriendshipRequested</code></pre>
   </div>
   <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,24 +246,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.FriendAddingEventArgs.html">FriendAddingEventArgs</a>&gt;</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.FriendshipRequestedEventArgs.html">FriendshipRequestedEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_CurrentUserEventSource_MessageReceived.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.CurrentUserEventSource.MessageReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_CurrentUserEventSource_GroupMessageReceived.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.CurrentUserEventSource.GroupMessageReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/CurrentUserEventSource.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/CurrentUserEventSource.cs/#L25">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
-  <h4 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_MessageReceived" data-uid="HuajiTech.CoolQ.Events.CurrentUserEventSource.MessageReceived">MessageReceived</h4>
+  <h4 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_GroupMessageReceived" data-uid="HuajiTech.CoolQ.Events.CurrentUserEventSource.GroupMessageReceived">GroupMessageReceived</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;MessageReceivedEventArgs&gt; MessageReceived</code></pre>
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;GroupMessageReceivedEventArgs&gt; GroupMessageReceived</code></pre>
   </div>
   <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -304,7 +275,36 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.MessageReceivedEventArgs.html">MessageReceivedEventArgs</a>&gt;</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.GroupMessageReceivedEventArgs.html">GroupMessageReceivedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_CurrentUserEventSource_UserMessageReceived.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.CurrentUserEventSource.UserMessageReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/CurrentUserEventSource.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <h4 id="HuajiTech_CoolQ_Events_CurrentUserEventSource_UserMessageReceived" data-uid="HuajiTech.CoolQ.Events.CurrentUserEventSource.UserMessageReceived">UserMessageReceived</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;UserMessageReceivedEventArgs&gt; UserMessageReceived</code></pre>
+  </div>
+  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.UserMessageReceivedEventArgs.html">UserMessageReceivedEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -320,7 +320,10 @@
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyAnonymousMessageReceived.html">INotifyAnonymousMessageReceived</a>
   </div>
   <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyMessageReceived.html">INotifyMessageReceived</a>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyUserMessageReceived.html">INotifyUserMessageReceived</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyGroupMessageReceived.html">INotifyGroupMessageReceived</a>
   </div>
   <div>
       <a class="xref" href="HuajiTech.CoolQ.Events.IFriendshipEventSource.html">IFriendshipEventSource</a>
@@ -329,10 +332,7 @@
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendAdded.html">INotifyFriendAdded</a>
   </div>
   <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendAdding.html">INotifyFriendAdding</a>
-  </div>
-  <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyEntranceInvited.html">INotifyEntranceInvited</a>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyFriendshipRequested.html">INotifyFriendshipRequested</a>
   </div>
 </article>
           </div>

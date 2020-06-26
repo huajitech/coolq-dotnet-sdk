@@ -94,19 +94,19 @@
     <h5>&#23454;&#29616;</h5>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.IGroupEventSource.html">IGroupEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.IMuteEventSource.html">IMuteEventSource</a></div>
-    <div><a class="xref" href="HuajiTech.CoolQ.Events.IMemberMuteEventSource.html">IMemberMuteEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyMemberMuted.html">INotifyMemberMuted</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyMemberUnmuted.html">INotifyMemberUnmuted</a></div>
-    <div><a class="xref" href="HuajiTech.CoolQ.Events.IGroupMuteEventSource.html">IGroupMuteEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyGroupMuted.html">INotifyGroupMuted</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyGroupUnmuted.html">INotifyGroupUnmuted</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.IMembershipEventSource.html">IMembershipEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyMemberJoined.html">INotifyMemberJoined</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyMemberLeft.html">INotifyMemberLeft</a></div>
+    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyMembershipRequested.html">INotifyMembershipRequested</a></div>
+    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyMembershipInvited.html">INotifyMembershipInvited</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.IAdministratorshipEventSource.html">IAdministratorshipEventSource</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyAdministratorAdded.html">INotifyAdministratorAdded</a></div>
     <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyAdministratorRemoved.html">INotifyAdministratorRemoved</a></div>
-    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyEntranceRequested.html">INotifyEntranceRequested</a></div>
+    <div><a class="xref" href="HuajiTech.CoolQ.Events.INotifyFileUploaded.html">INotifyFileUploaded</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -136,7 +136,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.Core.dll</h6>
   <h5 id="HuajiTech_CoolQ_Events_GroupEventSource_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GroupEventSource : IGroupEventSource, IMuteEventSource, IMemberMuteEventSource, INotifyMemberMuted, INotifyMemberUnmuted, IGroupMuteEventSource, INotifyGroupMuted, INotifyGroupUnmuted, IMembershipEventSource, INotifyMemberJoined, INotifyMemberLeft, IAdministratorshipEventSource, INotifyAdministratorAdded, INotifyAdministratorRemoved, INotifyEntranceRequested</code></pre>
+    <pre><code class="lang-csharp hljs">public class GroupEventSource : IGroupEventSource, IMuteEventSource, INotifyMemberMuted, INotifyMemberUnmuted, INotifyGroupMuted, INotifyGroupUnmuted, IMembershipEventSource, INotifyMemberJoined, INotifyMemberLeft, INotifyMembershipRequested, INotifyMembershipInvited, IAdministratorshipEventSource, INotifyAdministratorAdded, INotifyAdministratorRemoved, INotifyFileUploaded</code></pre>
   </div>
   <h3 id="fields">&#23383;&#27573;
   </h3>
@@ -145,7 +145,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_Instance.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L19">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L18">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_Instance" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.Instance">Instance</h4>
   <div class="markdown level1 summary"></div>
@@ -176,7 +176,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_AdministratorAdded.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.AdministratorAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L39">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L40">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_AdministratorAdded" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.AdministratorAdded">AdministratorAdded</h4>
   <div class="markdown level1 summary"></div>
@@ -205,7 +205,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_AdministratorRemoved.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.AdministratorRemoved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L42">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_AdministratorRemoved" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.AdministratorRemoved">AdministratorRemoved</h4>
   <div class="markdown level1 summary"></div>
@@ -231,39 +231,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_EntranceRequested.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.EntranceRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L29">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_EntranceRequested" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.EntranceRequested">EntranceRequested</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EntranceRequestedEventArgs&gt; EntranceRequested</code></pre>
-  </div>
-  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.EntranceRequestedEventArgs.html">EntranceRequestedEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_FileUploaded.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.FileUploaded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L43">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L44">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_FileUploaded" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.FileUploaded">FileUploaded</h4>
   <div class="markdown level1 summary"></div>
@@ -292,7 +263,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_GroupMuted.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.GroupMuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L31">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L32">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_GroupMuted" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.GroupMuted">GroupMuted</h4>
   <div class="markdown level1 summary"></div>
@@ -321,7 +292,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_GroupUnmuted.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.GroupUnmuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L33">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L34">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_GroupUnmuted" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.GroupUnmuted">GroupUnmuted</h4>
   <div class="markdown level1 summary"></div>
@@ -350,7 +321,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_MemberJoined.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.MemberJoined%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L25">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L24">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_MemberJoined" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.MemberJoined">MemberJoined</h4>
   <div class="markdown level1 summary"></div>
@@ -379,7 +350,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_MemberLeft.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.MemberLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L27">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L26">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_MemberLeft" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.MemberLeft">MemberLeft</h4>
   <div class="markdown level1 summary"></div>
@@ -408,7 +379,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_MemberMuted.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.MemberMuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L35">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_MemberMuted" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.MemberMuted">MemberMuted</h4>
   <div class="markdown level1 summary"></div>
@@ -434,10 +405,68 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_MembershipInvited.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.MembershipInvited%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L30">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_MembershipInvited" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.MembershipInvited">MembershipInvited</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;MembershipInvitedEventArgs&gt; MembershipInvited</code></pre>
+  </div>
+  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.MembershipInvitedEventArgs.html">MembershipInvitedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_MembershipRequested.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.MembershipRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L28">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_MembershipRequested" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.MembershipRequested">MembershipRequested</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;MembershipRequestedEventArgs&gt; MembershipRequested</code></pre>
+  </div>
+  <h5 class="eventType">&#20107;&#20214;&#31867;&#22411;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Events.MembershipRequestedEventArgs.html">MembershipRequestedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource_MemberUnmuted.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource.MemberUnmuted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L37">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L38">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <h4 id="HuajiTech_CoolQ_Events_GroupEventSource_MemberUnmuted" data-uid="HuajiTech.CoolQ.Events.GroupEventSource.MemberUnmuted">MemberUnmuted</h4>
   <div class="markdown level1 summary"></div>
@@ -469,16 +498,10 @@
       <a class="xref" href="HuajiTech.CoolQ.Events.IMuteEventSource.html">IMuteEventSource</a>
   </div>
   <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.IMemberMuteEventSource.html">IMemberMuteEventSource</a>
-  </div>
-  <div>
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyMemberMuted.html">INotifyMemberMuted</a>
   </div>
   <div>
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyMemberUnmuted.html">INotifyMemberUnmuted</a>
-  </div>
-  <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.IGroupMuteEventSource.html">IGroupMuteEventSource</a>
   </div>
   <div>
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyGroupMuted.html">INotifyGroupMuted</a>
@@ -496,6 +519,12 @@
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyMemberLeft.html">INotifyMemberLeft</a>
   </div>
   <div>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyMembershipRequested.html">INotifyMembershipRequested</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyMembershipInvited.html">INotifyMembershipInvited</a>
+  </div>
+  <div>
       <a class="xref" href="HuajiTech.CoolQ.Events.IAdministratorshipEventSource.html">IAdministratorshipEventSource</a>
   </div>
   <div>
@@ -505,7 +534,7 @@
       <a class="xref" href="HuajiTech.CoolQ.Events.INotifyAdministratorRemoved.html">INotifyAdministratorRemoved</a>
   </div>
   <div>
-      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyEntranceRequested.html">INotifyEntranceRequested</a>
+      <a class="xref" href="HuajiTech.CoolQ.Events.INotifyFileUploaded.html">INotifyFileUploaded</a>
   </div>
 </article>
           </div>
@@ -518,7 +547,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Events_GroupEventSource.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Events.GroupEventSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L11" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Core/Events/GroupEventSource.cs/#L10" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

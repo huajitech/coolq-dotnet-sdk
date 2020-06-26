@@ -1,5 +1,5 @@
 using System;
-using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.CoolQ.Interop;
 
 namespace HuajiTech.CoolQ
 {
@@ -22,7 +22,7 @@ namespace HuajiTech.CoolQ
         {
         }
 
-        public virtual bool IsRequested { get; protected set; }
+        public virtual bool IsRequested { get; private protected set; }
 
         public virtual bool IsRequestedSuccessfully => !(_info is null);
 
@@ -30,12 +30,25 @@ namespace HuajiTech.CoolQ
 
         public virtual string? Nickname => GetInfo().Nickname;
 
-        public void GiveThumbsUp(int count) =>
-            NativeMethods.User_GiveThumbsUp(Bot.Instance.AuthCode, Number, count).CheckError();
+        public virtual int Age => GetInfo().Age;
 
-        public virtual void Request(bool refresh = false) => GetInfo(true, refresh);
+        public virtual Gender Gender => GetInfo().Gender;
 
-        public override IMessage Send(string message)
+        public void Like(int count = 1)
+        {
+            if (count <= 0 || count > 10)
+            {
+                throw new ArgumentOutOfRangeException(nameof(count));
+            }
+
+            NativeMethods.User_Like(Bot.Instance.AuthCode, Number, count).CheckError();
+        }
+
+        public virtual void Request() => GetInfo(true, false);
+
+        public virtual void Refresh() => GetInfo(true, true);
+
+        public override Message Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -44,7 +57,7 @@ namespace HuajiTech.CoolQ
 
             var id = NativeMethods.User_Send(Bot.Instance.AuthCode, Number, message).CheckError();
 
-            return new Message(id, message);
+            return new MessageCore(id, message);
         }
 
         public override bool Equals(IChattable? other) => base.Equals(other) && other is User;

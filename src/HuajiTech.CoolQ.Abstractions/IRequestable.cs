@@ -18,9 +18,11 @@
         /// <summary>
         /// 请求当前 <see cref="IRequestable"/> 实例。
         /// </summary>
-        /// <param name="refresh">
-        /// 如果要求刷新当前 <see cref="IRequestable"/> 实例而不允许使用缓存，则为 <see langword="true"/>；否则为 <see langword="false"/>。
-        /// </param>
-        void Request(bool refresh = false);
+        void Request();
+
+        /// <summary>
+        /// 刷新当前 <see cref="IRequestable"/> 实例。
+        /// </summary>
+        void Refresh();
     }
 }

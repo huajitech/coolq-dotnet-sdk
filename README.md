@@ -18,11 +18,12 @@ using HuajiTech.CoolQ.Events;
 
 [assembly: AppId("com.example.repeater")]
 
-public class RepeaterPlugin : Plugin
+[Plugin]
+class RepeaterPlugin : Plugin
 {
-    public RepeaterPlugin(INotifyMessageReceived eventSource)
+    public RepeaterPlugin(IMessageEventSource eventSource)
     {
-        eventSource.MessageReceived += (sender, e) => e.Source.Send(e.Message.Content);
+        eventSource.AddMessageReceivedEventHandler((sender, e) => e.Source.Send(e.Message));
     }
 }
 ```
@@ -35,8 +36,7 @@ public class RepeaterPlugin : Plugin
 
 ## 讨论
 
-建议使用 Github Issues，
-但也可以选择加入[QQ群](https://jq.qq.com/?_wv=1027&k=5HPLCyU)（1094829331）。
+Github Issues[https://github.com/huajitech/coolq-dotnet-sdk/issues] 或 [QQ群](https://jq.qq.com/?_wv=1027&k=5HPLCyU)（1094829331）。
 
 ## 许可
 

@@ -130,11 +130,7 @@
     <value>异常</value>
   </data>
   <data name="ExceptionRaised" xml:space="preserve">
-    <value>在 文件 '{3}' 行号 {4} 记录了一个类型为 '{0}' 的异常：{1}
-{2}</value>
-  </data>
-  <data name="FailedToSendException" xml:space="preserve">
-    <value>未能发送异常信息</value>
+    <value>[{1}:{2}] {0}</value>
   </data>
   <data name="FieldCannotBeEmpty" xml:space="preserve">
     <value>该字段不能为空。</value>
@@ -150,9 +146,6 @@
   </data>
   <data name="Sending" xml:space="preserve">
     <value>发送</value>
-  </data>
-  <data name="StaceFrameInfo" xml:space="preserve">
-    <value>    在 类型 '{1}' 方法 '{0}'</value>
   </data>
   <data name="Success" xml:space="preserve">
     <value>成功</value>

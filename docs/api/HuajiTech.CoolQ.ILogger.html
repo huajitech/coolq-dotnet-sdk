@@ -83,7 +83,7 @@
   
   <h1 id="HuajiTech_CoolQ_ILogger" data-uid="HuajiTech.CoolQ.ILogger" class="text-break">ILogger 接口
   </h1>
-  <div class="markdown level0 summary"><p>定义记录日志的方法。</p>
+  <div class="markdown level0 summary"><p>提供记录日志的方法。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="HuajiTech.CoolQ.html">HuajiTech.CoolQ</a></h6>
@@ -96,19 +96,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_Log_HuajiTech_CoolQ_LogLevel_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.Log(HuajiTech.CoolQ.LogLevel%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_Log_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.Log(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L16">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L41">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_Log_" data-uid="HuajiTech.CoolQ.ILogger.Log*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_Log_HuajiTech_CoolQ_LogLevel_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.Log(HuajiTech.CoolQ.LogLevel,System.String,System.String)">Log(LogLevel, String, String)</h4>
+  <h4 id="HuajiTech_CoolQ_ILogger_Log_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.Log(System.String,System.String)">Log(String, String)</h4>
   <div class="markdown level1 summary"><p>记录一条日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Log(LogLevel level, string type, string message)</code></pre>
+    <pre><code class="lang-csharp hljs">void Log(string type, string message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,12 +120,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="HuajiTech.CoolQ.LogLevel.html">LogLevel</a></td>
-        <td><span class="parametername">level</span></td>
-        <td><p>日志的等级。</p>
-</td>
-      </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
@@ -142,48 +136,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogDebug_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogDebug(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L29">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogDebug_" data-uid="HuajiTech.CoolQ.ILogger.LogDebug*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogDebug_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogDebug(System.String)">LogDebug(String)</h4>
-  <div class="markdown level1 summary"><p>记录一条调试信息。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogDebug(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogDebug_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogDebug(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L23">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L15">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_LogDebug_" data-uid="HuajiTech.CoolQ.ILogger.LogDebug*"></a>
   <h4 id="HuajiTech_CoolQ_ILogger_LogDebug_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogDebug(System.String,System.String)">LogDebug(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一条调试信息。</p>
+  <div class="markdown level1 summary"><p>记录一条等级为调试的日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -216,82 +176,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogError_System_Exception_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogError(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L48">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogError_" data-uid="HuajiTech.CoolQ.ILogger.LogError*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogError_System_Exception_" data-uid="HuajiTech.CoolQ.ILogger.LogError(System.Exception)">LogError(Exception)</h4>
-  <div class="markdown level1 summary"><p>将异常记录为一个错误。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogError(Exception exception)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Exception</span></td>
-        <td><span class="parametername">exception</span></td>
-        <td><p>要记录的异常。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogError_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogError(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L42">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogError_" data-uid="HuajiTech.CoolQ.ILogger.LogError*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogError_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogError(System.String)">LogError(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个错误。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogError(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogError_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogError(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L36">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L22">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_LogError_" data-uid="HuajiTech.CoolQ.ILogger.LogError*"></a>
   <h4 id="HuajiTech_CoolQ_ILogger_LogError_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogError(System.String,System.String)">LogError(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个错误。</p>
+  <div class="markdown level1 summary"><p>记录一条等级为错误的日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -324,87 +216,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogFatal_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogFatal(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogFatal_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogFatal(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L54">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L33">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_LogFatal_" data-uid="HuajiTech.CoolQ.ILogger.LogFatal*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogFatal_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogFatal(System.String)">LogFatal(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个致命错误。</p>
+  <h4 id="HuajiTech_CoolQ_ILogger_LogFatal_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogFatal(System.String,System.String)">LogFatal(String, String)</h4>
+  <div class="markdown level1 summary"><p>记录一条等级为致命的日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogFatal(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>致命错误的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogInfo_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogInfo(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L67">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogInfo_" data-uid="HuajiTech.CoolQ.ILogger.LogInfo*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogInfo_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogInfo(System.String)">LogInfo(String)</h4>
-  <div class="markdown level1 summary"><p>记录一条信息。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogInfo(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogInfo_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogInfo(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L61">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogInfo_" data-uid="HuajiTech.CoolQ.ILogger.LogInfo*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogInfo_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogInfo(System.String,System.String)">LogInfo(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一条信息。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogInfo(string type, string message)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;&#22312;&#36866;&#29992;&#22788;&#20351;&#29992; RaiseFatal&#12290;&#26377;&#20851;&#35814;&#32454;&#20449;&#24687;&#65292;&#35831;&#21442;&#38405;&#22791;&#27880;&#37096;&#20998;&#12290;&quot;)]
+void LogFatal(string type, string message)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -430,50 +255,20 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogReceiving_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogReceiving(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L80">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogReceiving_" data-uid="HuajiTech.CoolQ.ILogger.LogReceiving*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogReceiving_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogReceiving(System.String)">LogReceiving(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个接收。</p>
+  <h5 id="HuajiTech_CoolQ_ILogger_LogFatal_System_String_System_String__remarks">&#22791;&#27880;</h5>
+  <div class="markdown level1 remarks"><p>该方法弹出一个错误提示窗口，该窗口不包括调用堆栈和重载应用选项。
+如非必要，请改为使用 <a class="xref" href="HuajiTech.CoolQ.ILogger.html#HuajiTech_CoolQ_ILogger_RaiseFatal_System_String_">RaiseFatal(String)</a>。</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogReceiving(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogReceiving_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogReceiving(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L74">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L48">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_LogReceiving_" data-uid="HuajiTech.CoolQ.ILogger.LogReceiving*"></a>
   <h4 id="HuajiTech_CoolQ_ILogger_LogReceiving_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogReceiving(System.String,System.String)">LogReceiving(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个接收。</p>
+  <div class="markdown level1 summary"><p>记录一条等级为接收的日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -506,48 +301,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogSending_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogSending(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L93">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogSending_" data-uid="HuajiTech.CoolQ.ILogger.LogSending*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogSending_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogSending(System.String)">LogSending(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个发送。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogSending(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogSending_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogSending(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L87">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L55">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_LogSending_" data-uid="HuajiTech.CoolQ.ILogger.LogSending*"></a>
   <h4 id="HuajiTech_CoolQ_ILogger_LogSending_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogSending(System.String,System.String)">LogSending(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个发送。</p>
+  <div class="markdown level1 summary"><p>记录一条等级为发送的日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -580,48 +341,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogSuccess_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogSuccess(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L106">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogSuccess_" data-uid="HuajiTech.CoolQ.ILogger.LogSuccess*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogSuccess_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogSuccess(System.String)">LogSuccess(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个成功。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogSuccess(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogSuccess_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogSuccess(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L100">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L62">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_LogSuccess_" data-uid="HuajiTech.CoolQ.ILogger.LogSuccess*"></a>
   <h4 id="HuajiTech_CoolQ_ILogger_LogSuccess_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogSuccess(System.String,System.String)">LogSuccess(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个成功。</p>
+  <div class="markdown level1 summary"><p>记录一条等级为成功的日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -654,82 +381,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogWarning_System_Exception_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogWarning(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L125">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogWarning_" data-uid="HuajiTech.CoolQ.ILogger.LogWarning*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogWarning_System_Exception_" data-uid="HuajiTech.CoolQ.ILogger.LogWarning(System.Exception)">LogWarning(Exception)</h4>
-  <div class="markdown level1 summary"><p>将异常记录为一个警告。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogWarning(Exception exception)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Exception</span></td>
-        <td><span class="parametername">exception</span></td>
-        <td><p>要记录的异常。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogWarning_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogWarning(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L119">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
-  </span>
-  <a id="HuajiTech_CoolQ_ILogger_LogWarning_" data-uid="HuajiTech.CoolQ.ILogger.LogWarning*"></a>
-  <h4 id="HuajiTech_CoolQ_ILogger_LogWarning_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogWarning(System.String)">LogWarning(String)</h4>
-  <div class="markdown level1 summary"><p>记录一个警告。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LogWarning(string message)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>日志的消息。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_LogWarning_System_String_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.LogWarning(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L113">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L69">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_ILogger_LogWarning_" data-uid="HuajiTech.CoolQ.ILogger.LogWarning*"></a>
   <h4 id="HuajiTech_CoolQ_ILogger_LogWarning_System_String_System_String_" data-uid="HuajiTech.CoolQ.ILogger.LogWarning(System.String,System.String)">LogWarning(String, String)</h4>
-  <div class="markdown level1 summary"><p>记录一个警告。</p>
+  <div class="markdown level1 summary"><p>记录一条等级为警告的日志。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -760,6 +419,62 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_ILogger_RaiseFatal_System_String_.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.ILogger.RaiseFatal(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Abstractions/ILogger.cs/#L75">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="HuajiTech_CoolQ_ILogger_RaiseFatal_" data-uid="HuajiTech.CoolQ.ILogger.RaiseFatal*"></a>
+  <h4 id="HuajiTech_CoolQ_ILogger_RaiseFatal_System_String_" data-uid="HuajiTech.CoolQ.ILogger.RaiseFatal(System.String)">RaiseFatal(String)</h4>
+  <div class="markdown level1 summary"><p>引发一个致命错误。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RaiseFatal(string message)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>致命错误的消息。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.LoggingExtensions.html#HuajiTech_CoolQ_LoggingExtensions_LogDebug_HuajiTech_CoolQ_ILogger_System_String_">LoggingExtensions.LogDebug(ILogger, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.LoggingExtensions.html#HuajiTech_CoolQ_LoggingExtensions_Log_HuajiTech_CoolQ_ILogger_System_String_">LoggingExtensions.Log(ILogger, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.LoggingExtensions.html#HuajiTech_CoolQ_LoggingExtensions_LogSending_HuajiTech_CoolQ_ILogger_System_String_">LoggingExtensions.LogSending(ILogger, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.LoggingExtensions.html#HuajiTech_CoolQ_LoggingExtensions_LogReceiving_HuajiTech_CoolQ_ILogger_System_String_">LoggingExtensions.LogReceiving(ILogger, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.LoggingExtensions.html#HuajiTech_CoolQ_LoggingExtensions_LogSuccess_HuajiTech_CoolQ_ILogger_System_String_">LoggingExtensions.LogSuccess(ILogger, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.LoggingExtensions.html#HuajiTech_CoolQ_LoggingExtensions_LogWarning_HuajiTech_CoolQ_ILogger_System_String_">LoggingExtensions.LogWarning(ILogger, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="HuajiTech.CoolQ.LoggingExtensions.html#HuajiTech_CoolQ_LoggingExtensions_LogError_HuajiTech_CoolQ_ILogger_System_String_">LoggingExtensions.LogError(ILogger, String)</a>
+  </div>
 </article>
           </div>
           

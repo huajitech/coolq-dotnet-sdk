@@ -41,14 +41,8 @@
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.AbstractionResources.ExceptionRaised">
-             <summary>
-               查找类似 在文件 &apos;{3}&apos; 行号 {4} 记录了一个类型为 &apos;{0}&apos; 的异常：{1}
-            {2} 的本地化字符串。
-             </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.AbstractionResources.FailedToSendException">
             <summary>
-              查找类似 未能发送异常信息 的本地化字符串。
+              查找类似 [{1}:{2}] {0} 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.AbstractionResources.FieldCannotBeEmpty">
@@ -76,11 +70,6 @@
               查找类似 发送 的本地化字符串。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.AbstractionResources.StaceFrameInfo">
-            <summary>
-              查找类似     在 类型 &apos;{1}&apos; 方法 &apos;{0}&apos; 的本地化字符串。
-            </summary>
-        </member>
         <member name="P:HuajiTech.CoolQ.AbstractionResources.Success">
             <summary>
               查找类似 成功 的本地化字符串。
@@ -89,11 +78,6 @@
         <member name="P:HuajiTech.CoolQ.AbstractionResources.Warning">
             <summary>
               查找类似 警告 的本地化字符串。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.ApiException">
-            <summary>
-            在调用 API 发生错误时引发的异常。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.AppIdAttribute">
@@ -205,7 +189,7 @@
             </summary>
             <param name="number">号码。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.CurrentPluginContext.Message(System.Int64)">
+        <member name="M:HuajiTech.CoolQ.CurrentPluginContext.Message(System.Int32)">
             <summary>
             创建指定 ID 的消息。
             </summary>
@@ -285,17 +269,17 @@
             获取添加的好友。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Events.FriendAddingEventArgs">
+        <member name="T:HuajiTech.CoolQ.Events.FriendshipRequestedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFriendAdding.FriendAdding"/> 事件提供数据。
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyFriendshipRequested.FriendshipRequested"/> 事件提供数据。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Events.FriendAddingEventArgs.Requester">
+        <member name="P:HuajiTech.CoolQ.Events.FriendshipRequestedEventArgs.Requester">
             <summary>
             获取请求用户。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Events.FriendAddingEventArgs.Request">
+        <member name="P:HuajiTech.CoolQ.Events.FriendshipRequestedEventArgs.Request">
             <summary>
             获取请求。
             </summary>
@@ -318,6 +302,21 @@
         <member name="P:HuajiTech.CoolQ.Events.GroupEventArgs.Operatee">
             <summary>
             获取被操作人。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.GroupMessageReceivedEventArgs">
+            <summary>
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyGroupMessageReceived.GroupMessageReceived"/> 事件提供数据。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.GroupMessageReceivedEventArgs.Source">
+            <summary>
+            获取来源群。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.GroupMessageReceivedEventArgs.Sender">
+            <summary>
+            获取发送成员。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.GroupMuteEventArgs">
@@ -387,7 +386,7 @@
         </member>
         <member name="T:HuajiTech.CoolQ.Events.MessageReceivedEventArgs">
             <summary>
-            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyMessageReceived.MessageReceived"/> 事件提供数据。
+            为消息接收事件数据提供基类。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.Events.MessageReceivedEventArgs.Message">
@@ -395,14 +394,14 @@
             获取消息。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.Events.MessageReceivedEventArgs.Sender">
-            <summary>
-            获取发送者。
-            </summary>
-        </member>
         <member name="P:HuajiTech.CoolQ.Events.MessageReceivedEventArgs.Source">
             <summary>
             获取来源聊天。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.MessageReceivedEventArgs.Sender">
+            <summary>
+            获取发送者。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.RoutedEventArgs">
@@ -423,6 +422,16 @@
         <member name="P:HuajiTech.CoolQ.Events.TimedEventArgs.Time">
             <summary>
             获取事件发生的时间。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.UserMessageReceivedEventArgs">
+            <summary>
+            为 <see cref="E:HuajiTech.CoolQ.Events.INotifyUserMessageReceived.UserMessageReceived"/> 事件提供数据。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Events.UserMessageReceivedEventArgs.Source">
+            <summary>
+            获取来源用户。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.IAdministratorshipEventSource">
@@ -450,16 +459,6 @@
             定义群事件。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Events.IGroupMuteEventSource">
-            <summary>
-            定义群禁言事件。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.Events.IMemberMuteEventSource">
-            <summary>
-            定义成员禁言事件。
-            </summary>
-        </member>
         <member name="T:HuajiTech.CoolQ.Events.IMembershipEventSource">
             <summary>
             定义群成员事件。
@@ -474,6 +473,27 @@
             <summary>
             定义禁言事件。
             </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.Extensions">
+            <summary>
+            定义扩展方法。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Events.Extensions.AddMessageReceivedEventHandler(HuajiTech.CoolQ.Events.IMessageEventSource,System.EventHandler{HuajiTech.CoolQ.Events.MessageReceivedEventArgs})">
+            <summary>
+            添加消息接收事件处理程序。
+            即同时添加私聊消息接收事件和群消息接收事件的事件处理程序。
+            </summary>
+            <param name="messageEventSource">事件源。</param>
+            <param name="handler">事件处理程序。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Events.Extensions.RemoveMessageReceivedEventHandler(HuajiTech.CoolQ.Events.IMessageEventSource,System.EventHandler{HuajiTech.CoolQ.Events.MessageReceivedEventArgs})">
+            <summary>
+            移除消息接收事件处理程序。
+            即同时移除私聊消息接收事件和群消息接收事件的事件处理程序。
+            </summary>
+            <param name="messageEventSource">事件源。</param>
+            <param name="handler">事件处理程序。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.INotifyAdministratorAdded">
             <summary>
@@ -565,14 +585,24 @@
             在好友已添加时引发。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Events.INotifyFriendAdding">
+        <member name="T:HuajiTech.CoolQ.Events.INotifyFriendshipRequested">
             <summary>
             定义好友正在添加事件。
             </summary>
         </member>
-        <member name="E:HuajiTech.CoolQ.Events.INotifyFriendAdding.FriendAdding">
+        <member name="E:HuajiTech.CoolQ.Events.INotifyFriendshipRequested.FriendshipRequested">
             <summary>
             在收到好友请求时引发。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Events.INotifyGroupMessageReceived">
+            <summary>
+            定义群消息接收事件。
+            </summary>
+        </member>
+        <member name="E:HuajiTech.CoolQ.Events.INotifyGroupMessageReceived.GroupMessageReceived">
+            <summary>
+            在收到群消息时引发。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Events.INotifyGroupMuted">
@@ -655,14 +685,25 @@
             在解除禁言时引发。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Events.INotifyMessageReceived">
+        <member name="T:HuajiTech.CoolQ.Events.INotifyUserMessageReceived">
             <summary>
-            定义消息接收事件。
+            定义私聊消息接收事件。
             </summary>
         </member>
-        <member name="E:HuajiTech.CoolQ.Events.INotifyMessageReceived.MessageReceived">
+        <member name="E:HuajiTech.CoolQ.Events.INotifyUserMessageReceived.UserMessageReceived">
             <summary>
-            在收到消息时引发。
+            在收到私聊消息时引发。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.ApiException">
+            <summary>
+            在 API 调用发生错误时引发的异常。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.ApiException.ErrorCode">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.ApiException"/> 实例的错误代码。
+            如果没有错误代码，则为 <see langword="null"/>。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.File">
@@ -898,147 +939,107 @@
             离开当前 <see cref="T:HuajiTech.CoolQ.IGroup"/> 实例。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.ILoader">
+        <member name="T:HuajiTech.CoolQ.Loaders.ILoader">
             <summary>
             定义加载器。
             </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Loaders.ILoader.GetPlugin``1">
+            <summary>
+            获取指定类型的插件。
+            </summary>
+            <typeparam name="T">插件的类型。</typeparam>
+            <returns>指定的插件类型的实例。</returns>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Loaders.ILoader.GetPlugin(System.Type)">
+            <summary>
+            获取指定类型的插件。
+            </summary>
+            <param name="pluginType">插件的类型。</param>
+            <returns>指定的插件类型的实例。</returns>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Loaders.ILoader.GetPlugins(HuajiTech.CoolQ.AppLifecycle)">
+            <summary>
+            获取在指定加载时机加载的插件。
+            </summary>
+            <param name="loadTiming">加载时机。</param>
+            <returns>取在指定加载时机加载的插件集合。
+            如果没有在指定的加载时机加载的插件，则该方法返回空序列。</returns>
         </member>
         <member name="T:HuajiTech.CoolQ.ILogger">
             <summary>
             提供记录日志的方法。
             </summary>
         </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.Log(HuajiTech.CoolQ.LogLevel,System.String,System.String)">
-            <summary>
-            记录一条日志。
-            </summary>
-            <param name="level">日志的等级。</param>
-            <param name="type">日志的类型。</param>
-            <param name="message">日志的消息。</param>
-        </member>
         <member name="M:HuajiTech.CoolQ.ILogger.LogDebug(System.String,System.String)">
             <summary>
-            记录一条调试信息。
+            记录一条等级为调试的日志。
             </summary>
             <param name="type">日志的类型。</param>
-            <param name="message">日志的消息。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogDebug(System.String)">
-            <summary>
-            记录一条调试信息。
-            </summary>
             <param name="message">日志的消息。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.ILogger.LogError(System.String,System.String)">
             <summary>
-            记录一个错误。
+            记录一条等级为错误的日志。
             </summary>
             <param name="type">日志的类型。</param>
             <param name="message">日志的消息。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogError(System.String)">
+        <member name="M:HuajiTech.CoolQ.ILogger.LogFatal(System.String,System.String)">
             <summary>
-            记录一个错误。
+            记录一条等级为致命的日志。
             </summary>
-            <param name="message">日志的消息。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogError(System.Exception)">
-            <summary>
-            将异常记录为一个错误。
-            </summary>
-            <param name="exception">要记录的异常。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogFatal(System.String)">
-            <summary>
-            记录一个致命错误。
-            </summary>
-            <param name="message">致命错误的消息。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogInfo(System.String,System.String)">
-            <summary>
-            记录一条信息。
-            </summary>
+            <remarks>
+            该方法弹出一个错误提示窗口，该窗口不包括调用堆栈和重载应用选项。
+            如非必要，请改为使用 <see cref="M:HuajiTech.CoolQ.ILogger.RaiseFatal(System.String)"/>。
+            </remarks>
             <param name="type">日志的类型。</param>
             <param name="message">日志的消息。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogInfo(System.String)">
+        <member name="M:HuajiTech.CoolQ.ILogger.Log(System.String,System.String)">
             <summary>
-            记录一条信息。
+            记录一条日志。
             </summary>
+            <param name="type">日志的类型。</param>
             <param name="message">日志的消息。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.ILogger.LogReceiving(System.String,System.String)">
             <summary>
-            记录一个接收。
+            记录一条等级为接收的日志。
             </summary>
             <param name="type">日志的类型。</param>
-            <param name="message">日志的消息。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogReceiving(System.String)">
-            <summary>
-            记录一个接收。
-            </summary>
             <param name="message">日志的消息。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.ILogger.LogSending(System.String,System.String)">
             <summary>
-            记录一个发送。
+            记录一条等级为发送的日志。
             </summary>
             <param name="type">日志的类型。</param>
-            <param name="message">日志的消息。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogSending(System.String)">
-            <summary>
-            记录一个发送。
-            </summary>
             <param name="message">日志的消息。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.ILogger.LogSuccess(System.String,System.String)">
             <summary>
-            记录一个成功。
+            记录一条等级为成功的日志。
             </summary>
             <param name="type">日志的类型。</param>
-            <param name="message">日志的消息。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogSuccess(System.String)">
-            <summary>
-            记录一个成功。
-            </summary>
             <param name="message">日志的消息。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.ILogger.LogWarning(System.String,System.String)">
             <summary>
-            记录一个警告。
+            记录一条等级为警告的日志。
             </summary>
             <param name="type">日志的类型。</param>
             <param name="message">日志的消息。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogWarning(System.String)">
+        <member name="M:HuajiTech.CoolQ.ILogger.RaiseFatal(System.String)">
             <summary>
-            记录一个警告。
+            引发一个致命错误。
             </summary>
-            <param name="message">日志的消息。</param>
-        </member>
-        <member name="M:HuajiTech.CoolQ.ILogger.LogWarning(System.Exception)">
-            <summary>
-            将异常记录为一个警告。
-            </summary>
-            <param name="exception">要记录的异常。</param>
+            <param name="message">致命错误的消息。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.IMember">
             <summary>
             定义成员。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IMember.Age">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的年龄。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IMember.Alias">
-            <summary>
-            获取或设置当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的别名。
-            若当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例没有别名，则为 <see langword="null"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMember.CanEditAlias">
@@ -1057,11 +1058,6 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例加入 <see cref="T:HuajiTech.CoolQ.IGroup"/> 的时间。
             </summary>
         </member>
-        <member name="P:HuajiTech.CoolQ.IMember.Gender">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的性别。
-            </summary>
-        </member>
         <member name="P:HuajiTech.CoolQ.IMember.HasBadRecord">
             <summary>
             获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例是否有不良记录。
@@ -1070,7 +1066,7 @@
         <member name="P:HuajiTech.CoolQ.IMember.IsAdministrator">
             <summary>
             获取或设置一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例是否为管理员。
-            若当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 对象是群主，则该属性也返回 <see langword="true"/>。
+            若当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例是群主，则该属性也返回 <see langword="true"/>。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.IMember.LastSpeakTime">
@@ -1098,6 +1094,13 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的所属 <see cref="T:HuajiTech.CoolQ.IGroup"/> 实例。
             </summary>
         </member>
+        <member name="M:HuajiTech.CoolQ.IMember.SetAlias(System.String)">
+            <summary>
+            设置当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的别名，即 <see cref="P:HuajiTech.CoolQ.IAliased.Alias"/> 属性的值。
+            如果 <paramref name="alias"/> 为 <see langword="null"/>，则移除当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的别名。
+            </summary>
+            <param name="alias">要设置的别名。</param>
+        </member>
         <member name="M:HuajiTech.CoolQ.IMember.Kick(System.Boolean)">
             <summary>
             将当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例踢出所在群。
@@ -1105,6 +1108,23 @@
             <param name="ignoreFurtherRequests">
             如果不再接收当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的 <see cref="T:HuajiTech.CoolQ.IMembershipRequest"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。
             </param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.IMember.MakeAdministrator">
+            <summary>
+            使当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例成为管理员。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.IMember.UnmakeAdministrator">
+            <summary>
+            使当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例不再是管理员。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.IMember.SetCustomTitle(HuajiTech.CoolQ.CustomTitle)">
+            <summary>
+            设置当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的自定义头衔，即 <see cref="P:HuajiTech.CoolQ.IMember.CustomTitle"/> 属性的值。
+            如果 <paramref name="title"/> 为 <see langword="null"/>，则移除当前 <see cref="T:HuajiTech.CoolQ.IMember"/> 实例的自定义头衔。
+            </summary>
+            <param name="title">要设置的头衔。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.IMembershipRequest">
             <summary>
@@ -1116,26 +1136,6 @@
             拒绝当前请求，并指定拒绝的原因。
             </summary>
             <param name="reason">原因。</param>
-        </member>
-        <member name="T:HuajiTech.CoolQ.IMessage">
-            <summary>
-            定义消息。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IMessage.Id">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例的 ID。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.IMessage.Content">
-            <summary>
-            获取当前 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例的内容。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.IMessage.Recall">
-            <summary>
-            撤回当前 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例。
-            </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IMuteable">
             <summary>
@@ -1152,14 +1152,14 @@
             将当前 <see cref="T:HuajiTech.CoolQ.IMuteable"/> 实例解除禁言。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.IPacker">
+        <member name="T:HuajiTech.CoolQ.Packing.IPacker">
             <summary>
             定义打包器。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.IPlugin">
+        <member name="M:HuajiTech.CoolQ.Packing.IPacker.GetPackedAssemblies">
             <summary>
-            用于标记插件类。
+            获取由打包器打包的程序集。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.IRequest">
@@ -1197,17 +1197,19 @@
             获取一个值，指示当前 <see cref="T:HuajiTech.CoolQ.IRequestable"/> 实例是否已成功请求。
             </summary>
         </member>
-        <member name="M:HuajiTech.CoolQ.IRequestable.Request(System.Boolean)">
+        <member name="M:HuajiTech.CoolQ.IRequestable.Request">
             <summary>
             请求当前 <see cref="T:HuajiTech.CoolQ.IRequestable"/> 实例。
             </summary>
-            <param name="refresh">
-            如果要求刷新当前 <see cref="T:HuajiTech.CoolQ.IRequestable"/> 实例而不允许使用缓存，则为 <see langword="true"/>；否则为 <see langword="false"/>。
-            </param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.IRequestable.Refresh">
+            <summary>
+            刷新当前 <see cref="T:HuajiTech.CoolQ.IRequestable"/> 实例。
+            </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.ISendee">
             <summary>
-            表示消息的接收者。
+            定义消息的接收者。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.ISendee.Send(System.String)">
@@ -1215,7 +1217,7 @@
             向当前 <see cref="T:HuajiTech.CoolQ.ISendee"/> 实例发送指定的字符串。
             </summary>
             <param name="message">要发送的字符串。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例，表示已发送的消息。</returns>
+            <returns>一个 <see cref="T:HuajiTech.CoolQ.Message"/> 实例，表示已发送的消息。</returns>
         </member>
         <member name="T:HuajiTech.CoolQ.ITimedMuteable">
             <summary>
@@ -1238,61 +1240,31 @@
             获取当前 <see cref="T:HuajiTech.CoolQ.IUser"/> 实例的昵称。
             </summary>
         </member>
-        <member name="M:HuajiTech.CoolQ.IUser.GiveThumbsUp(System.Int32)">
+        <member name="P:HuajiTech.CoolQ.IUser.Age">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IUser"/> 实例的年龄。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.IUser.Gender">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.IUser"/> 实例的性别。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.IUser.Like(System.Int32)">
             <summary>
             给予当前 <see cref="T:HuajiTech.CoolQ.IUser"/> 实例指定数量的赞。
             </summary>
             <param name="count">赞的数量。</param>
         </member>
-        <member name="T:HuajiTech.CoolQ.Logger">
+        <member name="M:HuajiTech.CoolQ.LoggingExtensions.SendTo(System.Exception,HuajiTech.CoolQ.ISendee,System.String,System.Int32)">
             <summary>
-            提供记录日志的方法。
+            将指定异常及其内部异常的信息发送至指定的 <see cref="T:HuajiTech.CoolQ.ISendee"/> 实例。
             </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.LogLevel">
-            <summary>
-            指定日志级别。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Debug">
-            <summary>
-            调试。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Info">
-            <summary>
-            信息。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Success">
-            <summary>
-            成功。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Receiving">
-            <summary>
-            接收。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Sending">
-            <summary>
-            发送。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Warning">
-            <summary>
-            警告。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Error">
-            <summary>
-            错误。
-            </summary>
-        </member>
-        <member name="F:HuajiTech.CoolQ.LogLevel.Fatal">
-            <summary>
-            致命错误。
-            </summary>
+            <param name="exception">要发送的异常。</param>
+            <param name="sendee">异常发送的目标。</param>
+            <param name="filePath">包含对该方法的调用的源文件路径。</param>
+            <param name="lineNumber">包含对该方法的调用的源文件行号。</param>
+            <returns>一个 <see cref="T:HuajiTech.CoolQ.Message"/> 实例，表示已发送的消息。如果发送失败，则为 <see langword="null"/>。</returns>
         </member>
         <member name="T:HuajiTech.CoolQ.MemberRole">
             <summary>
@@ -1312,6 +1284,27 @@
         <member name="F:HuajiTech.CoolQ.MemberRole.Owner">
             <summary>
             群主。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.Message">
+            <summary>
+            表示消息。
+            此类为抽象类。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Message.Id">
+            <summary>
+            在派生类中重写时，获取当前 <see cref="T:HuajiTech.CoolQ.Message"/> 实例的 ID。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.Message.Content">
+            <summary>
+            在派生类中重写时，获取当前 <see cref="T:HuajiTech.CoolQ.Message"/> 实例的内容。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Message.Recall">
+            <summary>
+            在派生类中重写时，撤回当前 <see cref="T:HuajiTech.CoolQ.Message"/> 实例。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Plugin">
@@ -1383,11 +1376,45 @@
             </summary>
             <param name="number">号码。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.Plugin.Message(System.Int64)">
+        <member name="M:HuajiTech.CoolQ.Plugin.Message(System.Int32)">
             <summary>
             创建指定 ID 的消息。
             </summary>
             <param name="id">ID。</param>
+        </member>
+        <member name="T:HuajiTech.CoolQ.PluginAttribute">
+            <summary>
+            指定插件类。
+            此类不能被继承。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.PluginAttribute.#ctor(HuajiTech.CoolQ.AppLifecycle)">
+            <summary>
+            以指定的加载时机初始化一个 <see cref="T:HuajiTech.CoolQ.PluginAttribute"/> 类的新实例。
+            </summary>
+            <param name="loadTiming">加载时机。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.PluginAttribute.#ctor">
+            <summary>
+            以 <see cref="F:HuajiTech.CoolQ.AppLifecycle.Initializing"/> 初始化一个 <see cref="T:HuajiTech.CoolQ.PluginAttribute"/> 的新实例。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.PluginAttribute.#ctor(System.Int32)">
+            <summary>
+            以指定的加载时机初始化一个 <see cref="T:HuajiTech.CoolQ.PluginAttribute"/> 类的新实例。
+            </summary>
+            <param name="loadTiming">加载时机的 <see cref="T:System.Int32"/> 值，如 <c>(int)LoadTiming.Enabled</c>。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.PluginAttribute.#ctor(System.String)">
+            <summary>
+            以指定的加载时机初始化一个 <see cref="T:HuajiTech.CoolQ.PluginAttribute"/> 类的新实例。
+            </summary>
+            <param name="loadTiming">加载时机的 <see cref="T:System.String"/> 表示形式，如 <c>nameof(AppLifecycle.Enabled)</c>。</param>
+        </member>
+        <member name="P:HuajiTech.CoolQ.PluginAttribute.LoadTiming">
+            <summary>
+            获取插件的加载时机。
+            </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.PluginContext">
             <summary>
@@ -1404,16 +1431,6 @@
         <member name="P:HuajiTech.CoolQ.PluginContext.Bot">
             <summary>
             在派生类中重写时，获取当前 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 实例的 <see cref="T:HuajiTech.CoolQ.IBot"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.PluginContext.Packer">
-            <summary>
-            在派生类中重写时，获取当前 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 实例的 <see cref="T:HuajiTech.CoolQ.IPacker"/>。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.PluginContext.Loader">
-            <summary>
-            在派生类中重写时，获取当前 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 实例的 <see cref="T:HuajiTech.CoolQ.ILoader"/>。
             </summary>
         </member>
         <member name="M:HuajiTech.CoolQ.PluginContext.GetUser(System.Int64)">
@@ -1462,21 +1479,15 @@
             <param name="user">用户。</param>
             <param name="groupNumber">群号码。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.PluginContext.GetMessage(System.Int64)">
+        <member name="M:HuajiTech.CoolQ.PluginContext.GetMessage(System.Int32)">
             <summary>
-            在派生类中重写时，获取指定 ID 的 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例。
+            在派生类中重写时，获取指定 ID 的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例。
             </summary>
             <param name="id">消息 ID。</param>
         </member>
         <member name="T:HuajiTech.CoolQ.PluginContextExtensions">
             <summary>
             定义用于操作 <see cref="T:HuajiTech.CoolQ.PluginContext"/> 的扩展方法。
-            </summary>
-        </member>
-        <member name="T:HuajiTech.CoolQ.PluginLoadStageAttribute">
-            <summary>
-            指定插件加载阶段。
-            此类不能被继承。
             </summary>
         </member>
     </members>

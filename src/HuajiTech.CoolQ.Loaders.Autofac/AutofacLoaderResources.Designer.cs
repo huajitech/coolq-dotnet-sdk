@@ -70,6 +70,33 @@ namespace HuajiTech.CoolQ.Loaders {
         }
         
         /// <summary>
+        ///   查找类似 尚未构建容器。 的本地化字符串。
+        /// </summary>
+        internal static string NotBuilt {
+            get {
+                return ResourceManager.GetString("NotBuilt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 已加载类型 &apos;{0}&apos;。 的本地化字符串。
+        /// </summary>
+        internal static string PluginLoadMessage {
+            get {
+                return ResourceManager.GetString("PluginLoadMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 插件加载 的本地化字符串。
+        /// </summary>
+        internal static string PluginLoadTitle {
+            get {
+                return ResourceManager.GetString("PluginLoadTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 指定的类型不是插件类型。 的本地化字符串。
         /// </summary>
         internal static string TypeIsNotPlugin {

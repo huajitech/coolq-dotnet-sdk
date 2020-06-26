@@ -1,6 +1,5 @@
 // 用于 HuajiTech.CoolQ 应用的配置文件。
-// 最后更新于 2020-5-18 14:16。
-// *这是一个测试版本，不建议用于生产环境。
+// 最后更新于 2020-6-26 13:23。
 //
 // 酷Q的 Json 文件支持以 // 开头的注释。
 // 开发模式下，应用的 app.dll 及 app.json 文件须放在 dev/[appid]/ 目录下，且必须向 AppIdAttribute 传入正确的 AppId。
@@ -21,7 +20,7 @@
       "id": 1, // 事件ID
       "type": 21, // 事件类型
       "name": "私聊消息处理", // 事件名称
-      "function": "OnPrivateMessageReceived", // 事件对应函数，大部分情况下【不要修改】。
+      "function": "OnUserMessageReceived", // 事件对应函数，大部分情况下【不要修改】。
       "priority": 30000 // 事件优先级(参见 https://cqp.im/deveventpriority )
     },
     {
@@ -42,7 +41,7 @@
       "id": 4,
       "type": 101,
       "name": "群管理变动事件处理",
-      "function": "OnAdministratorsAdjusted",
+      "function": "OnAdministratorsChanged",
       "priority": 30000
     },
     {
@@ -62,42 +61,28 @@
     {
       "id": 7,
       "type": 104,
-      "name": "群禁言事件处理(非全员)",
-      "function": "OnMemberMuteStateChanged",
+      "name": "群禁言事件处理",
+      "function": "OnMuteStateChanged",
       "priority": 30000
     },
     {
       "id": 8,
-      "type": 104,
-      "name": "群禁言事件处理(全员)",
-      "function": "OnGroupMuteStateChanged",
-      "priority": 30000
-    },
-    {
-      "id": 9,
       "type": 201,
       "name": "好友已添加事件处理",
       "function": "OnFriendAdded",
       "priority": 30000
     },
     {
-      "id": 10,
+      "id": 9,
       "type": 301,
       "name": "好友添加请求处理",
-      "function": "OnFriendAdding",
+      "function": "OnFriendshipRequested",
       "priority": 30000
     },
     {
-      "id": 11,
+      "id": 10,
       "type": 302,
-      "name": "群添加请求处理(邀请)",
-      "function": "OnEntranceInvited",
-      "priority": 30000
-    },
-    {
-      "id": 12,
-      "type": 302,
-      "name": "群添加请求处理(请求)",
+      "name": "群添加请求处理",
       "function": "OnEntranceRequested",
       "priority": 30000
     },
@@ -106,14 +91,14 @@
       "type": 1001,
       "name": "酷Q启动事件",
       "priority": 30000,
-      "function": "OnStarted" // 【注意：如果插件在非 AppLifecycle.Initializing 阶段加载，删除对应事件将导致插件将不被加载。】
+      "function": "OnBotStarted" // 【注意：如果插件在非 AppLifecycle.Initializing 阶段加载，删除对应事件将导致插件将不被加载。】
     },
     {
       "id": 1002,
       "type": 1002,
       "name": "酷Q关闭事件",
       "priority": 30000,
-      "function": "OnStopping" // 【注意：如果插件在非 AppLifecycle.Initializing 阶段加载，删除对应事件将导致插件将不被加载。】
+      "function": "OnBotStopping" // 【注意：如果插件在非 AppLifecycle.Initializing 阶段加载，删除对应事件将导致插件将不被加载。】
     },
     {
       "id": 1003,
@@ -147,31 +132,30 @@
   ],
   "auth": [ // 应用权限【发布前请删除无用权限】
 
-    //20,  //[敏感]取Cookies    getCookies / getCsrfToken
-    //30,  //接收语音           getRecord
-    101, //发送群消息         sendGroupMsg
-    106, //发送私聊消息       sendPrivateMsg
+    //20,  // [敏感]取Cookies    ICurrentUser.GetCookies / ICurrentUser.GetCsrfToken
+    //30,  // 接收语音           IBot.GetRecord (Record.GetFile)
+    101, // 发送群消息           IGroup.Send
+    106, // 发送私聊消息         IUser.Send
 
-    //110, //[敏感]发送赞       sendLike
-    120, //置群员移除         setGroupKick
-    121, //置群员禁言         setGroupBan
-    122, //置群管理员         setGroupAdmin
-    123, //置全群禁言         setGroupWholeBan
-    124, //置匿名群员禁言     setGroupAnonymousBan
-    125, //置群匿名设置       setGroupAnonymous
-    126, //置群成员名片       setGroupCard
+    //110, // [敏感]发送赞       IUser.Like
+    120, // 置群员移除           IMember.Kick
+    121, // 置群员禁言           IMember.Mute / IMember.Unmute
+    122, // 置群管理员           IMember.MakeAdministrator / IMember.UnmakeAdministrator
+    123, // 置全群禁言           IGroup.Mute / IGroup.Unmute
+    124, // 置匿名群员禁言       IAnonymousMember.Mute / IAnonymousMember.Unmute
+    125, // 置群匿名设置         IGroup.EnableAnonymous / IGroup.DisableAnonymous
+    126, // 置群成员名片         IMember.SetAlias
 
-    //127, //[敏感]置群退出     setGroupLeave
-    128, //置群成员专属头衔   setGroupSpecialTitle
-    130, //取群成员信息       getGroupMemberInfo
-    131, //取陌生人信息       getStrangerInfo
-    132, //取群信息           getGroupInfo
-    140, //置讨论组退出       setDiscussLeave
-    150, //置好友添加请求     setFriendAddRequest
-    151, //置群添加请求       setGroupAddRequest
-    160, //取群成员列表       getGroupMemberList
-    161, //取群列表           getGroupList
-    162, //取好友列表         getFriendList
-    180 //撤回消息           deleteMsg
+    //127, // [敏感]置群退出     IGroup.Leave
+    128, // 置群成员专属头衔     IMember.SetCustomTitle
+    130, // 取群成员信息         IMember.Request / IMember.Refresh / IMember.*.get
+    131, // 取陌生人信息         IUser.Request / IUser.Refresh / IUser.*.get
+    132, // 取群信息             IGroup.Request / IGroup.Refresh / IGroup.*.get
+    150, // 置好友添加请求       IFriendshipRequest.Accept / IFriendshipRequest.Reject
+    151, // 置群添加请求         IMembershipRequest.Accept / IMembershipRequest.Reject / IRequest.Accept / IRequest.Reject
+    160, // 取群成员列表         IGroup.GetMembers
+    161, // 取群列表             ICurrentUser.GetGroups
+    162, // 取好友列表           ICurrentUser.GetFriends
+    180 // 撤回消息              IMessage.Recall
   ]
 }

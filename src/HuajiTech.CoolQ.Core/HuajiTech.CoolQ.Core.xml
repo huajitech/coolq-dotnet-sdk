@@ -20,14 +20,14 @@
               重写当前线程的 CurrentUICulture 属性。
             </summary>
         </member>
+        <member name="P:HuajiTech.CoolQ.CoreResources.AlreadyInitialized">
+            <summary>
+              查找类似 已初始化。 的本地化字符串。
+            </summary>
+        </member>
         <member name="P:HuajiTech.CoolQ.CoreResources.AppIdNotFound">
             <summary>
               查找类似 未在当前程序集找到 AppIdAttribute 特性。 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.CoreResources.BotNotInitialized">
-            <summary>
-              查找类似 机器人尚未初始化。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.CoreResources.FailedToDecodeRegexMessage">
@@ -50,29 +50,34 @@
               查找类似 该好友不存在。 的本地化字符串。
             </summary>
         </member>
+        <member name="P:HuajiTech.CoolQ.CoreResources.InitializationFailed">
+            <summary>
+              查找类似 初始化失败。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.CoreResources.InitializerNotFound">
+            <summary>
+              查找类似 未在当前程序集找到 InitializerAttribute 特性。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.CoreResources.NotInitialized">
+            <summary>
+              查找类似 尚未初始化。 的本地化字符串。
+            </summary>
+        </member>
         <member name="P:HuajiTech.CoolQ.CoreResources.NullReturnValue">
             <summary>
-              查找类似 酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing）。查看酷Q中的日志以获取详细信息。 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.CoreResources.PluginLoadMessage">
-            <summary>
-              查找类似 已加载类型 &apos;{0}&apos;。 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.CoreResources.PluginLoadTitle">
-            <summary>
-              查找类似 插件加载 的本地化字符串。
-            </summary>
-        </member>
-        <member name="P:HuajiTech.CoolQ.CoreResources.TypeIsNotPlugin">
-            <summary>
-              查找类似 指定的类型不是插件类型。 的本地化字符串。
+              查找类似 酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing），查看酷Q中的日志以获取详细信息。 的本地化字符串。
             </summary>
         </member>
         <member name="P:HuajiTech.CoolQ.CoreResources.UnexpectedReturnValue">
             <summary>
-              查找类似 酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。 的本地化字符串。
+              查找类似 酷Q返回了意料之外的值 {0}，查看酷Q中的日志以获取详细信息。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HuajiTech.CoolQ.CoreResources.UnhandledException">
+            <summary>
+              查找类似 未经处理的异常 的本地化字符串。
             </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.StatusColor">
@@ -115,13 +120,80 @@
             定义扩展方法。
             </summary>
         </member>
-        <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.IMessage)">
+        <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)">
             <summary>
-            将 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例解码为只读字典。
+            将 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例解码为只读字典。
             </summary>
             <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例。</param>
-            <returns>与 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 等效的只读字典。</returns>
+            <returns>与 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 等效的只读字典。</returns>
             <exception cref="T:System.IO.InvalidDataException"><paramref name="message"/> 不合法。</exception>
+        </member>
+        <member name="T:HuajiTech.CoolQ.InitializerAttribute">
+            <summary>
+            指定程序集的初始化器。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.InitializerAttribute.#ctor(System.Type)">
+            <summary>
+            使用指定的初始化器初始化一个 <see cref="T:HuajiTech.CoolQ.InitializerAttribute"/> 的新实例。
+            </summary>
+            <param name="initializer">要使用的初始化器。</param>
+        </member>
+        <member name="M:HuajiTech.CoolQ.InitializerAttribute.#ctor(System.String)">
+            <summary>
+            使用指定的初始化器初始化一个 <see cref="T:HuajiTech.CoolQ.InitializerAttribute"/> 的新实例。
+            </summary>
+            <param name="initializer">要使用的初始化器。</param>
+        </member>
+        <member name="P:HuajiTech.CoolQ.InitializerAttribute.Initializer">
+            <summary>
+            获取当前 <see cref="T:HuajiTech.CoolQ.InitializerAttribute"/> 的初始化器。
+            </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.LogLevel">
+            <summary>
+            指定日志级别。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Debug">
+            <summary>
+            调试。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Info">
+            <summary>
+            信息。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Success">
+            <summary>
+            成功。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Receiving">
+            <summary>
+            接收。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Sending">
+            <summary>
+            发送。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Warning">
+            <summary>
+            警告。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Error">
+            <summary>
+            错误。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.LogLevel.Fatal">
+            <summary>
+            致命错误。
+            </summary>
         </member>
         <member name="T:HuajiTech.CoolQ.Status">
             <summary>

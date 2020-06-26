@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.CoolQ.Interop;
 
 namespace HuajiTech.CoolQ
 {
@@ -27,14 +27,12 @@ namespace HuajiTech.CoolQ
 
         public override string DisplayName => Alias ?? base.DisplayName;
 
-        public override void Request(bool refresh = false)
-        {
-            if (refresh)
-            {
-                base.Request(true);
-            }
+        public override void Request() => GetInfo(true);
 
-            GetInfo(true);
+        public override void Refresh()
+        {
+            Request();
+            base.Refresh();
         }
 
         private FriendInfo GetInfo(bool requesting = false)

@@ -78,6 +78,7 @@ namespace HuajiTech.CoolQ.Messaging
             {
                 if (value is null)
                 {
+                    Parameters.Remove(key);
                     return;
                 }
 
@@ -90,14 +91,14 @@ namespace HuajiTech.CoolQ.Messaging
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string? Escape(string? str) => PlainText.Escape(str)?.Replace(",", "&#44");
+        public static string Escape(string str) => PlainText.Escape(str).Replace(",", "&#44");
 
         /// <summary>
         /// 将字符串中的转义字符转换为具有特殊意义的酷Q字符。
         /// </summary>
         /// <param name="str">要转换的字符串。</param>
         /// <returns>指定字符串的已转换值。</returns>
-        public static string? Unescape(string? str) => PlainText.Unescape(str)?.Replace("&#44", ",");
+        public static string Unescape(string str) => PlainText.Unescape(str).Replace("&#44", ",");
 
         /// <summary>
         /// 以指定的类型和参数创建一个 <see cref="CQCode"/> 类的新实例。
@@ -121,25 +122,26 @@ namespace HuajiTech.CoolQ.Messaging
 
             return type switch
             {
+                "at" when parameters["qq"] is "all" => new MentionAll(parameters),
+                "at" => new Mention(parameters),
                 "face" => new Emoticon(parameters),
                 "emoji" => new Emoji(parameters),
                 "bface" => new CustomEmoticon(parameters),
                 "sface" => new SmallEmoticon(parameters),
                 "image" => new Image(parameters),
                 "record" => new Record(parameters),
-                "at" when parameters["qq"] is "all" => new AtAll(parameters),
-                "at" => new At(parameters),
-                "rps" => new RockPaperScissors(parameters),
-                "dice" => new Dice(parameters),
-                "shake" => new Shake(parameters),
-                "anonymous" => new Anonymous(parameters),
-                "location" => new Location(parameters),
-                "sign" => new ClockingIn(parameters),
                 "music" when parameters["type"] is "custom" => new CustomMusic(parameters),
                 "music" => new Music(parameters),
                 "share" => new Share(parameters),
                 "rich" => new RichText(parameters),
+                "location" => new Location(parameters),
+                "sign" => new SigningIn(parameters),
+                "hb" => new RedEnvelope(parameters),
                 "contact" => new ContactShare(parameters),
+                "rps" => new RockPaperScissors(parameters),
+                "dice" => new Dice(parameters),
+                "shake" => new Shake(parameters),
+                "anonymous" => new Anonymous(parameters),
                 _ => new CQCode(type, parameters)
             };
         }
@@ -152,13 +154,9 @@ namespace HuajiTech.CoolQ.Messaging
         /// <exception cref="ArgumentException"><paramref name="type"/> 为 <see langword="null"/>、<see cref="string.Empty"/> 或仅由空白字符组成。</exception>
         public static CQCode Create(string type) => Create(type, new Dictionary<string, string>());
 
-        /// <summary>
-        /// 将当前 <see cref="CQCode"/> 实例的值转换为它的等效字符串表示形式。
-        /// </summary>
-        /// <returns>当前 <see cref="CQCode"/> 实例的值的字符串表示形式。</returns>
-        public override string ToString() =>
-            Parameters.Any() ?
-                $"[CQ:{Type},{string.Join(",", Parameters.Select(para => $"{para.Key}={Escape(para.Value)}"))}]" :
+        public sealed override string ToSendableString()
+            => Parameters.Any() ?
+                $"[CQ:{Type},{string.Join(",", Parameters.Select(param => $"{param.Key}={Escape(param.Value)}"))}]" :
                 $"[CQ:{Type}]";
 
         public bool GetParameterAsBoolean(string key) => this[key] is "true";
@@ -193,6 +191,16 @@ namespace HuajiTech.CoolQ.Messaging
             return default;
         }
 
+        public double GetParameterAsDouble(string key)
+        {
+            if (double.TryParse(this[key], NumberStyles.Float, CultureInfo.InvariantCulture, out var value))
+            {
+                return value;
+            }
+
+            return default;
+        }
+
         public Uri? GetParameterAsUri(string key)
         {
             try
@@ -205,14 +213,40 @@ namespace HuajiTech.CoolQ.Messaging
             }
         }
 
-        public void SetParameter(string key, bool value) => this[key] = value ? "true" : "false";
+        public CQCode SetParameter(string key, bool value)
+        {
+            this[key] = value ? "true" : "false";
+            return this;
+        }
 
-        public void SetParameter(string key, int value) => this[key] = value.ToString(CultureInfo.InvariantCulture);
+        public CQCode SetParameter(string key, int value)
+        {
+            this[key] = value.ToString(CultureInfo.InvariantCulture);
+            return this;
+        }
 
-        public void SetParameter(string key, long value) => this[key] = value.ToString(CultureInfo.InvariantCulture);
+        public CQCode SetParameter(string key, long value)
+        {
+            this[key] = value.ToString(CultureInfo.InvariantCulture);
+            return this;
+        }
 
-        public void SetParameter(string key, float value) => this[key] = value.ToString(CultureInfo.InvariantCulture);
+        public CQCode SetParameter(string key, float value)
+        {
+            this[key] = value.ToString(CultureInfo.InvariantCulture);
+            return this;
+        }
 
-        public void SetParameter(string key, Uri? value) => this[key] = value?.ToString();
+        public CQCode SetParameter(string key, double value)
+        {
+            this[key] = value.ToString(CultureInfo.InvariantCulture);
+            return this;
+        }
+
+        public CQCode SetParameter(string key, Uri? value)
+        {
+            this[key] = value?.ToString();
+            return this;
+        }
     }
 }

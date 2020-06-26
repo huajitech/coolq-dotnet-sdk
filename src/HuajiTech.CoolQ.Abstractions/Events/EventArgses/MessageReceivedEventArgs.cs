@@ -1,30 +1,30 @@
 namespace HuajiTech.CoolQ.Events
 {
     /// <summary>
-    /// 为 <see cref="INotifyMessageReceived.MessageReceived"/> 事件提供数据。
+    /// 为消息接收事件数据提供基类。
     /// </summary>
     public class MessageReceivedEventArgs : RoutedEventArgs
     {
-        public MessageReceivedEventArgs(IMessage message, IChattable source, IUser sender)
+        public MessageReceivedEventArgs(Message message, IChattable source, IUser sender)
         {
-            Message = message ?? throw new System.ArgumentNullException(nameof(message));
-            Source = source ?? throw new System.ArgumentNullException(nameof(source));
-            Sender = sender ?? throw new System.ArgumentNullException(nameof(sender));
+            Message = message;
+            Source = source;
+            Sender = sender;
         }
 
         /// <summary>
         /// 获取消息。
         /// </summary>
-        public IMessage Message { get; }
-
-        /// <summary>
-        /// 获取发送者。
-        /// </summary>
-        public IUser Sender { get; }
+        public virtual Message Message { get; }
 
         /// <summary>
         /// 获取来源聊天。
         /// </summary>
-        public IChattable Source { get; }
+        public virtual IChattable Source { get; }
+
+        /// <summary>
+        /// 获取发送者。
+        /// </summary>
+        public virtual IUser Sender { get; }
     }
 }

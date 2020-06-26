@@ -2,5 +2,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ILRepackTargetsFile>$(MSBuildThisFileDirectory)HuajiTech.CoolQ.Packing.ILRepack.Placeholder.targets</ILRepackTargetsFile>
+    <InjectModuleInitializerTool>$([MSBuild]::NormalizePath('$(MSBuildThisFileDirectory)..\tools\net35\InjectModuleInitializer.exe'))</InjectModuleInitializerTool>
   </PropertyGroup>
 </Project>

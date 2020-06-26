@@ -7,7 +7,7 @@
         IMuteEventSource,
         IMembershipEventSource,
         IAdministratorshipEventSource,
-        INotifyMembershipRequested
+        INotifyFileUploaded
     {
     }
 }

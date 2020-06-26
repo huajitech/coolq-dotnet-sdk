@@ -95,6 +95,7 @@
   </div>
   <div classs="implements">
     <h5>&#23454;&#29616;</h5>
+    <div><a class="xref" href="HuajiTech.CoolQ.Messaging.ISendable.html">ISendable</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html">MessageElement</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -121,7 +122,7 @@
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_Create_System_String_">CQCode.Create(String)</a>
     </div>
     <div>
-      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_ToString">CQCode.ToString()</a>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_ToSendableString">CQCode.ToSendableString()</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsBoolean_System_String_">CQCode.GetParameterAsBoolean(String)</a>
@@ -134,6 +135,9 @@
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsSingle_System_String_">CQCode.GetParameterAsSingle(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsDouble_System_String_">CQCode.GetParameterAsDouble(String)</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_GetParameterAsUri_System_String_">CQCode.GetParameterAsUri(String)</a>
@@ -151,6 +155,9 @@
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Single_">CQCode.SetParameter(String, Single)</a>
     </div>
     <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Double_">CQCode.SetParameter(String, Double)</a>
+    </div>
+    <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.CQCode.html#HuajiTech_CoolQ_Messaging_CQCode_SetParameter_System_String_System_Uri_">CQCode.SetParameter(String, Uri)</a>
     </div>
     <div>
@@ -161,6 +168,9 @@
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_ToComplexMessage">MessageElement.ToComplexMessage()</a>
+    </div>
+    <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_ToString">MessageElement.ToString()</a>
     </div>
     <div>
       <a class="xref" href="HuajiTech.CoolQ.Messaging.MessageElement.html#HuajiTech_CoolQ_Messaging_MessageElement_GetHashCode">MessageElement.GetHashCode()</a>
@@ -188,7 +198,7 @@
   <h6><strong>&#31243;&#24207;&#38598;</strong>: HuajiTech.CoolQ.Messaging.dll</h6>
   <h5 id="HuajiTech_CoolQ_Messaging_RichText_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RichText : CQCode, IEquatable&lt;MessageElement&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class RichText : CQCode, ISendable, IEquatable&lt;MessageElement&gt;</code></pre>
   </div>
   <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
   </h3>
@@ -197,7 +207,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_RichText__ctor.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.RichText.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/RichText.cs/#L10">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/RichText.cs/#L10">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_RichText__ctor_" data-uid="HuajiTech.CoolQ.Messaging.RichText.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_RichText__ctor" data-uid="HuajiTech.CoolQ.Messaging.RichText.#ctor">RichText()</h4>
@@ -212,7 +222,7 @@
     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_RichText__ctor_System_Collections_Generic_IDictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.RichText.%23ctor(System.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/RichText.cs/#L15">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/RichText.cs/#L15">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
   </span>
   <a id="HuajiTech_CoolQ_Messaging_RichText__ctor_" data-uid="HuajiTech.CoolQ.Messaging.RichText.#ctor*"></a>
   <h4 id="HuajiTech_CoolQ_Messaging_RichText__ctor_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="HuajiTech.CoolQ.Messaging.RichText.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">RichText(IDictionary&lt;String, String&gt;)</h4>
@@ -241,6 +251,9 @@
   </table>
   <h3 id="implements">&#23454;&#29616;</h3>
   <div>
+      <a class="xref" href="HuajiTech.CoolQ.Messaging.ISendable.html">ISendable</a>
+  </div>
+  <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
@@ -254,7 +267,7 @@
                     <a href="https://github.com/huajitech/coolq-dotnet-sdk/new/master/apidoc/new?filename=HuajiTech_CoolQ_Messaging_RichText.md&amp;value=---%0Auid%3A%20HuajiTech.CoolQ.Messaging.RichText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                   <li>
-                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/RichText.cs/#L8" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                    <a href="http://gitlab-server.huajitech.net:8080/huajitech/coolq-dotnet-sdk/blob/master/src/HuajiTech.CoolQ.Messaging/CQCodes/RichText.cs/#L8" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
                   </li>
                 </ul>
               </div>

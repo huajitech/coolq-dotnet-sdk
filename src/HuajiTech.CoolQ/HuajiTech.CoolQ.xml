@@ -4,10 +4,27 @@
         <name>HuajiTech.CoolQ</name>
     </assembly>
     <members>
+        <member name="T:HuajiTech.CoolQ.DefaultInitializer">
+            <summary>
+            提供默认的初始化实现。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.DefaultInitializer.Init">
+            <summary>
+            初始化 <see cref="T:HuajiTech.CoolQ.Loaders.AutofacLoader"/>。
+            </summary>
+        </member>
         <member name="T:HuajiTech.CoolQ.Messaging.AbstractionExtensions">
             <summary>
-            定义用于 HuajiTech.CoolQ.Abstraction 中的类型的扩展方法。
+            定义用于 HuajiTech.CoolQ.Abstractions 中的类型的扩展方法。
             </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Mention(HuajiTech.CoolQ.IUser)">
+            <summary>
+            创建目标为指定用户的 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 类的新实例。
+            </summary>
+            <param name="target">提及 (@) 的目标。</param>
+            <returns>目标为指定用户的 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 类的新实例。</returns>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.At(HuajiTech.CoolQ.IUser)">
             <summary>
@@ -16,53 +33,53 @@
             <param name="target">At (@) 的目标。</param>
             <returns>目标为指定用户的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 类的新实例。</returns>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Parse(HuajiTech.CoolQ.IMessage,System.Boolean)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Parse(HuajiTech.CoolQ.Message,System.Boolean)">
             <summary>
-            将 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。
+            将 <see cref="T:HuajiTech.CoolQ.Message"/> 实例解析为 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。
             </summary>
-            <param name="message">一个 <see cref="T:HuajiTech.CoolQ.IMessage"/>实例，该 <see cref="T:HuajiTech.CoolQ.IMessage"/> 实例的 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例的字符串表示形式。</param>
+            <param name="message">一个 <see cref="T:HuajiTech.CoolQ.Message"/>实例，该 <see cref="T:HuajiTech.CoolQ.Message"/> 实例的 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 属性为要解析的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例的字符串表示形式。</param>
             <param name="useEmoji">如果要在返回的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例中包含 <see cref="T:HuajiTech.CoolQ.Messaging.Emoji"/> 实例，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
-            <returns>与 <see cref="P:HuajiTech.CoolQ.IMessage.Content"/> 等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。</returns>
+            <returns>与 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 等效的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。</returns>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetTarget(HuajiTech.CoolQ.Messaging.At,HuajiTech.CoolQ.PluginContext)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetTarget(HuajiTech.CoolQ.Messaging.Mention,HuajiTech.CoolQ.PluginContext)">
             <summary>
-            获取 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 实例的目标。
+            获取 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 实例的目标。
             </summary>
-            <param name="at">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 实例</param>
+            <param name="mention">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 实例。</param>
             <param name="context">要使用的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetTarget(HuajiTech.CoolQ.Messaging.At)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetTarget(HuajiTech.CoolQ.Messaging.Mention)">
             <summary>
-            使用 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 获取 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 实例的目标。
+            使用 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 获取 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 实例的目标。
             </summary>
-            <param name="at">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 实例</param>
+            <param name="mention">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 实例。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.SetTarget(HuajiTech.CoolQ.Messaging.At,HuajiTech.CoolQ.IUser)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.SetTarget(HuajiTech.CoolQ.Messaging.Mention,HuajiTech.CoolQ.IUser)">
             <summary>
-            设置 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 实例的目标。
+            设置 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 实例的目标。
             </summary>
-            <param name="at">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.At"/> 实例</param>
-            <param name="target"><see cref="T:HuajiTech.CoolQ.Messaging.At"/> 实例的目标。</param>
+            <param name="mention">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 实例。</param>
+            <param name="target"><see cref="T:HuajiTech.CoolQ.Messaging.Mention"/> 实例的目标。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetContent(HuajiTech.CoolQ.Messaging.ContactShare,HuajiTech.CoolQ.PluginContext)">
             <summary>
             获取 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例的内容。
             </summary>
-            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例</param>
+            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例。</param>
             <param name="context">要使用的 <see cref="T:HuajiTech.CoolQ.PluginContext"/>。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetContent(HuajiTech.CoolQ.Messaging.ContactShare)">
             <summary>
             使用 <see cref="P:HuajiTech.CoolQ.PluginContext.Current"/> 获取 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例的内容。
             </summary>
-            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例</param>
+            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.SetContent(HuajiTech.CoolQ.Messaging.ContactShare,HuajiTech.CoolQ.IChattable)">
             <summary>
             设置 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例的内容。
             </summary>
-            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例</param>
-            <param name="content"><see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例的内容</param>
+            <param name="share">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例。</param>
+            <param name="content"><see cref="T:HuajiTech.CoolQ.Messaging.ContactShare"/> 实例的内容。</param>
         </member>
         <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.GetFile(HuajiTech.CoolQ.Messaging.Image,HuajiTech.CoolQ.PluginContext)">
             <summary>
@@ -94,9 +111,9 @@
             <param name="record">要操作的 <see cref="T:HuajiTech.CoolQ.Messaging.Record"/> 实例。</param>
             <param name="format">返回的文件的格式。</param>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Send(HuajiTech.CoolQ.ISendee,HuajiTech.CoolQ.Messaging.ComplexMessage)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Send(HuajiTech.CoolQ.ISendee,HuajiTech.CoolQ.Messaging.ISendable)">
             <summary>
-            向指定聊天发送 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/>。
+            向指定聊天发送一个 <see cref="T:HuajiTech.CoolQ.Messaging.ISendable"/> 实例。
             </summary>
             <param name="sendee">目标可被发送实例。</param>
             <param name="message">要发送的 <see cref="T:HuajiTech.CoolQ.Messaging.ComplexMessage"/> 实例。</param>
@@ -106,17 +123,32 @@
             <exception cref="T:System.ArgumentException"><paramref name="message"/> 不包含任何元素，或其等效字符串表示形式为 <see cref="F:System.String.Empty"/>。</exception>
             <exception cref="T:HuajiTech.CoolQ.ApiException">酷Q返回了指示操作失败的值。</exception>
         </member>
-        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Send(HuajiTech.CoolQ.ISendee,HuajiTech.CoolQ.Messaging.MessageElement)">
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Reply(HuajiTech.CoolQ.Events.MessageReceivedEventArgs,System.String)">
             <summary>
-            向指定聊天发送 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/>。
+            回复指定的消息接收事件。
             </summary>
-            <param name="sendee">目标可发送实例。</param>
-            <param name="element">要发送的 <see cref="T:HuajiTech.CoolQ.Messaging.MessageElement"/> 实例。</param>
-            <returns>一个 <see cref="T:HuajiTech.CoolQ.Message"/> 实例，表示已发送的消息。</returns>
-            <exception cref="T:System.ArgumentNullException"><paramref name="sendee"/> 为 <see langword="null"/>。</exception>
-            <exception cref="T:System.ArgumentNullException"><paramref name="element"/> 为 <see langword="null"/>。</exception>
-            <exception cref="T:System.ArgumentException"><paramref name="element"/> 的等效字符串表示形式为 <see cref="F:System.String.Empty"/>。</exception>
-            <exception cref="T:HuajiTech.CoolQ.ApiException">酷Q返回了指示发送失败的值。</exception>
+            <param name="e">事件数据。</param>
+            <param name="message">要回复的字符串。</param>
+            <returns>发送的消息。</returns>
+        </member>
+        <member name="M:HuajiTech.CoolQ.Messaging.AbstractionExtensions.Reply(HuajiTech.CoolQ.Events.MessageReceivedEventArgs,HuajiTech.CoolQ.Messaging.ISendable)">
+            <summary>
+            回复指定的消息接收事件。
+            </summary>
+            <param name="e">事件数据。</param>
+            <param name="message">要回复的 <see cref="T:HuajiTech.CoolQ.Messaging.ISendable"/> 实例。</param>
+            <returns>发送的消息。</returns>
+        </member>
+        <member name="T:HuajiTech.CoolQ.SdkInfo">
+            <summary>
+            包含有关 HuajiTech.CoolQ 的信息。
+            </summary>
+        </member>
+        <member name="F:HuajiTech.CoolQ.SdkInfo.Version">
+            <summary>
+            SDK 的版本。
+            该字段为常量。
+            </summary>
         </member>
     </members>
 </doc>

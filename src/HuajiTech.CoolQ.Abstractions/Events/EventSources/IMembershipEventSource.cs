@@ -3,7 +3,11 @@
     /// <summary>
     /// 定义群成员事件。
     /// </summary>
-    public interface IMembershipEventSource : INotifyMemberJoined, INotifyMemberLeft
+    public interface IMembershipEventSource :
+        INotifyMemberJoined,
+        INotifyMemberLeft,
+        INotifyMembershipRequested,
+        INotifyMembershipInvited
     {
     }
 }

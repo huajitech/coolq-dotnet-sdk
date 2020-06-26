@@ -1,5 +1,6 @@
 using System;
-using HuajiTech.CoolQ.DataExchange;
+using System.IO;
+using HuajiTech.CoolQ.Interop;
 
 namespace HuajiTech.CoolQ
 {
@@ -16,104 +17,87 @@ namespace HuajiTech.CoolQ
         }
 
         internal Member(MemberInfo info)
-            : this(info.Number, info.Group!)
+            : this(info.Number, new Group(info.GroupNumber))
         {
             _info = info;
         }
 
-        public int Age => GetInfo().Age;
-
-        public string? Alias
+        public override int Age
         {
-            get => GetInfo().Alias;
-
-            set
+            get
             {
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException(CoreResources.FieldCannotBeEmptyOrWhiteSpace);
-                }
-
-                NativeMethods.Member_SetAlias(
-                    Bot.Instance.AuthCode, Group.Number, Number, value).CheckError();
-
-                Request();
+                GetInfo();
+                return _info?.Age ?? base.Age;
             }
         }
 
-        public bool CanEditAlias => GetInfo().CanEditAlias;
+        public virtual string? Alias => GetInfo().Alias;
 
-        public CustomTitle? CustomTitle
+        public virtual bool CanEditAlias => GetInfo().CanEditAlias;
+
+        public virtual CustomTitle? CustomTitle => GetInfo().CustomTitle;
+
+        public override Gender Gender
         {
-            get => GetInfo().CustomTitle;
-
-            set
+            get
             {
-                if (value is null)
-                {
-                    NativeMethods.Member_SetCustomTitle(
-                        Bot.Instance.AuthCode, Group.Number, Number, null, 0).CheckError();
-                }
-                else
-                {
-                    NativeMethods.Member_SetCustomTitle(
-                        Bot.Instance.AuthCode,
-                        Group.Number,
-                        Number,
-                        value.Text,
-                        (long)((value.ExpirationTime - DateTime.Now)?.TotalSeconds ?? -1))
-                        .CheckError();
-                }
-
-                Request();
+                GetInfo();
+                return _info?.Gender ?? base.Gender;
             }
         }
-
-        public Gender Gender => GetInfo().Gender;
 
         public IGroup Group { get; }
 
-        public bool HasBadRecord => GetInfo().HasBadRecord;
+        public virtual bool HasBadRecord => GetInfo().HasBadRecord;
 
         public override bool IsRequestedSuccessfully => !(_info is null);
 
-        public DateTime LastSpeakTime => GetInfo().LastSpeakTime;
+        public virtual DateTime LastSpeakTime => GetInfo().LastSpeakTime;
 
-        public string? Level => GetInfo().Level;
+        public virtual string? Level => GetInfo().Level;
 
-        public string? Location => GetInfo().Location;
+        public virtual string? Location => GetInfo().Location;
 
         public override string DisplayName => Alias ?? base.DisplayName;
 
-        public override string? Nickname => GetInfo().Nickname;
-
-        public MemberRole Role => GetInfo().Role;
-
-        public DateTime TimeJoined => GetInfo().TimeEntered;
-
-        public bool IsAdministrator
+        public override string? Nickname
         {
-            get => Role is MemberRole.Administrator || Role is MemberRole.Owner;
-
-            set
+            get
             {
-                NativeMethods.Member_SetIsAdministrator(
-                    Bot.Instance.AuthCode, Group.Number, Number, value).CheckError();
-
-                Request();
+                GetInfo();
+                return _info?.Nickname ?? base.Nickname;
             }
         }
 
-        public bool Equals(IMember? other) => base.Equals(other) && other is Member && Group.Equals(other.Group);
+        public virtual MemberRole Role => GetInfo().Role;
 
-        public override bool Equals(IChattable? other) =>
-            other is IMember member ? Equals(member) : base.Equals(other);
+        public virtual DateTime TimeJoined => GetInfo().TimeEntered;
+
+        public virtual bool IsAdministrator
+            => Role is MemberRole.Administrator || Role is MemberRole.Owner;
+
+        public bool Equals(IMember? other)
+            => base.Equals(other) && other is Member && Group.Equals(other.Group);
+
+        public override bool Equals(object? obj)
+            => obj == this || (obj is Member member && Equals(member));
 
         public override int GetHashCode() => base.GetHashCode() ^ Group.GetHashCode();
 
-        public void Kick(bool ignoreFurtherRequests = false) =>
-            NativeMethods.Member_Kick(
-                Bot.Instance.AuthCode, Group.Number, Number, ignoreFurtherRequests).CheckError();
+        public void SetAlias(string? alias)
+        {
+            if (string.IsNullOrWhiteSpace(alias))
+            {
+                throw new ArgumentException(CoreResources.FieldCannotBeEmptyOrWhiteSpace);
+            }
+
+            NativeMethods.Member_SetAlias(
+                Bot.Instance.AuthCode, Group.Number, Number, alias).CheckError();
+        }
+
+        public void Kick(bool ignoreFurtherRequests = false)
+            => NativeMethods.Member_Kick(
+                   Bot.Instance.AuthCode, Group.Number, Number, ignoreFurtherRequests).CheckError();
 
         public void Mute(TimeSpan duration)
         {
@@ -128,13 +112,38 @@ namespace HuajiTech.CoolQ
 
         public void Mute() => Mute(MaxMuteDuration);
 
-        public override void Request(bool refresh = false) => GetInfo(true, refresh);
+        public void Unmute()
+            => NativeMethods.Member_Mute(
+                   Bot.Instance.AuthCode, Group.Number, Number, 0).CheckError();
+
+        public void SetCustomTitle(CustomTitle? title)
+        {
+            if (title is null)
+            {
+                NativeMethods.Member_SetCustomTitle(
+                    Bot.Instance.AuthCode, Group.Number, Number, null, 0).CheckError();
+            }
+            else
+            {
+                NativeMethods.Member_SetCustomTitle(
+                    Bot.Instance.AuthCode,
+                    Group.Number,
+                    Number,
+                    title.Text,
+                    (long)((title.ExpirationTime - DateTime.Now)?.TotalSeconds ?? -1))
+                    .CheckError();
+            }
+        }
+
+        public void MakeAdministrator() => SetIsAdministrator(true);
+
+        public void UnmakeAdministrator() => SetIsAdministrator(false);
+
+        public override void Request() => GetInfo(true, false);
+
+        public override void Refresh() => GetInfo(true, true);
 
         public override string ToString() => GetType().Name + $"({Number},{Group})";
-
-        public void Unmute() =>
-            NativeMethods.Member_Mute(
-                Bot.Instance.AuthCode, Group.Number, Number, 0).CheckError();
 
         private MemberInfo GetInfo(bool requesting = false, bool refresh = false)
         {
@@ -157,5 +166,9 @@ namespace HuajiTech.CoolQ
                 return MemberInfo.Empty;
             }
         }
+
+        private void SetIsAdministrator(bool value)
+            => NativeMethods.Member_SetIsAdministrator(
+                Bot.Instance.AuthCode, Group.Number, Number, value).CheckError();
     }
 }

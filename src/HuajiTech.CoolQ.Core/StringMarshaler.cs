@@ -17,7 +17,9 @@ namespace HuajiTech.CoolQ
         {
         }
 
-        public void CleanUpNativeData(IntPtr pNativeData) => Marshal.FreeHGlobal(pNativeData);
+        public void CleanUpNativeData(IntPtr pNativeData)
+        {
+        }
 
         public int GetNativeDataSize() => -1;
 

@@ -7,6 +7,6 @@ namespace HuajiTech.CoolQ.Utilities
         public static readonly DateTime Zero =
             TimeZoneInfo.ConvertTimeFromUtc(new DateTime(1970, 1, 1), TimeZoneInfo.Local);
 
-        public static DateTime ToDateTime(int timestamp) => Zero + new TimeSpan(timestamp * TimeSpan.TicksPerSecond);
+        public static DateTime ToDateTime(int timestamp) => Zero.AddSeconds(timestamp);
     }
 }

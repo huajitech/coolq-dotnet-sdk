@@ -3,7 +3,11 @@
     /// <summary>
     /// 定义禁言事件。
     /// </summary>
-    public interface IMuteEventSource : IMemberMuteEventSource, IGroupMuteEventSource
+    public interface IMuteEventSource :
+        INotifyMemberMuted,
+        INotifyMemberUnmuted,
+        INotifyGroupMuted,
+        INotifyGroupUnmuted
     {
     }
 }

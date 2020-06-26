@@ -12,7 +12,7 @@ namespace HuajiTech.CoolQ.Messaging
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Naming", "CA1710:标识符应具有正确的后缀", Justification = "<挂起>")]
-    public partial class ComplexMessage : IEquatable<ComplexMessage?>
+    public partial class ComplexMessage : ISendable, IEquatable<ComplexMessage?>
     {
         private static readonly Regex CQCodeRegex = new Regex(
             @"\[CQ:(?<Type>[a-zA-Z\-_\.]+)(,(?<Key>[a-zA-Z\-_\.]+)=(?<Value>[^,\]]+))*\]",
@@ -29,15 +29,18 @@ namespace HuajiTech.CoolQ.Messaging
         /// 以指定的 <see cref="MessageElement"/> 实例初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         /// <param name="element">消息元素。</param>
-        public ComplexMessage(MessageElement? element)
-            : this() => Add(element);
+        public ComplexMessage(MessageElement element)
+            : this()
+            => Add(element);
 
         /// <summary>
         /// 以指定的 <see cref="MessageElement"/> 集合初始化一个 <see cref="ComplexMessage"/> 类的新实例。
         /// </summary>
         /// <param name="elements"><see cref="MessageElement"/> 集合。</param>
         /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
-        public ComplexMessage(IEnumerable<MessageElement> elements) => _elements = new List<MessageElement>(elements);
+        public ComplexMessage(IEnumerable<MessageElement?> elements)
+            : this()
+            => Add(elements);
 
         /// <summary>
         /// 获取或设置指定索引处的 <see cref="MessageElement"/> 实例。
@@ -47,23 +50,36 @@ namespace HuajiTech.CoolQ.Messaging
         public MessageElement this[int index]
         {
             get => _elements[index];
-            set => _elements[index] = value;
+            set => _elements[index] = value ?? throw new ArgumentNullException(nameof(value));
         }
 
-        public static bool operator ==(ComplexMessage? left, ComplexMessage? right) => left?.Equals(right) ?? right is null;
+        public static implicit operator ComplexMessage(string str) => FromString(str);
 
-        public static bool operator !=(ComplexMessage? left, ComplexMessage? right) => !(left == right);
+        public static bool operator ==(ComplexMessage? left, ComplexMessage? right)
+            => left?.Equals(right) ?? right is null;
+
+        public static bool operator !=(ComplexMessage? left, ComplexMessage? right)
+            => !(left == right);
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Usage", "CA2225:运算符重载具有命名的备用项", Justification = "<挂起>")]
-        public static ComplexMessage? operator -(ComplexMessage? left, MessageElement? right) => left?.Remove(right);
+        public static ComplexMessage operator -(ComplexMessage? left, MessageElement? right)
+            => left?.Remove(right) ?? right ?? new ComplexMessage();
 
-        public static ComplexMessage? operator +(ComplexMessage? left, MessageElement? right) => left?.Add(right);
+        public static ComplexMessage operator +(ComplexMessage? left, MessageElement? right)
+            => right is null ? left ?? new ComplexMessage() : left?.Add(right) ?? right;
 
-        public static ComplexMessage? operator +(MessageElement? left, ComplexMessage? right) => right?.Insert(0, left);
+        public static ComplexMessage operator +(MessageElement? left, ComplexMessage? right)
+            => left is null ? right ?? new ComplexMessage() : right?.Insert(0, left) ?? left;
 
-        public static ComplexMessage? operator +(ComplexMessage? left, ComplexMessage? right) =>
-            right is null ? left : left?.Add(right);
+        public static ComplexMessage operator +(ComplexMessage? left, ComplexMessage? right)
+            => right is null ? left ?? new ComplexMessage() : left?.Add(right) ?? right;
+
+        /// <summary>
+        /// 创建一个包含指定的字符串的 <see cref="ComplexMessage"/> 实例。
+        /// </summary>
+        /// <param name="str">要包含的内容。</param>
+        public static ComplexMessage FromString(string str) => MessageElement.FromString(str);
 
         /// <summary>
         /// 将字符串解析为 <see cref="ComplexMessage"/> 实例。
@@ -71,12 +87,21 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="str">要解析的 <see cref="ComplexMessage"/> 实例的字符串表示形式。</param>
         /// <param name="useEmoji">如果要在返回的 <see cref="ComplexMessage"/> 实例中包含 <see cref="Emoji"/> 实例，则为 <see langword="true"/>；否则为 <see langword="false"/>。</param>
         /// <returns>与字符串等效的 <see cref="ComplexMessage"/> 实例。</returns>
-        public static ComplexMessage Parse(string? str, bool useEmoji = false)
+        public static ComplexMessage Parse(string str, bool useEmoji = false)
         {
             if (str is null)
             {
-                return new ComplexMessage();
+                throw new ArgumentNullException(nameof(str));
             }
+
+            if (useEmoji)
+            {
+                return new ComplexMessage(GetMessageElements());
+            }
+
+            var convertedElements = GetMessageElements()
+                .Select(element => element is Emoji emoji ? emoji.ConvertToString() : element);
+            return new ComplexMessage(GetPlainTextCombinedMessageElements(convertedElements));
 
             IEnumerable<MessageElement> GetMessageElements()
             {
@@ -89,7 +114,7 @@ namespace HuajiTech.CoolQ.Messaging
                     if (length != 0)
                     {
                         var text = str.Substring(lastMatchEndIndex, length);
-                        yield return new PlainText(PlainText.Unescape(text)!);
+                        yield return new PlainText(PlainText.Unescape(text));
                     }
 
                     lastMatchEndIndex = match.Index + match.Length;
@@ -113,23 +138,14 @@ namespace HuajiTech.CoolQ.Messaging
                     yield return CQCode.Create(
                         type, GetParameters().Distinct().ToDictionary(
                             item => item.Key,
-                            item => CQCode.Unescape(item.Value)!));
+                            item => CQCode.Unescape(item.Value)));
                 }
 
                 if (lastMatchEndIndex != str.Length)
                 {
-                    yield return new PlainText(PlainText.Unescape(str.Substring(lastMatchEndIndex))!);
+                    yield return new PlainText(PlainText.Unescape(str.Substring(lastMatchEndIndex)));
                 }
             }
-
-            if (!useEmoji)
-            {
-                var convertedElements = GetMessageElements()
-                    .Select(element => element is Emoji emoji ? emoji.ConvertToString() : element);
-                return new ComplexMessage(GetPlainTextCombinedMessageElements(convertedElements!));
-            }
-
-            return new ComplexMessage(GetMessageElements());
         }
 
         /// <summary>
@@ -180,7 +196,8 @@ namespace HuajiTech.CoolQ.Messaging
             return new ComplexMessage(GetMessageElements());
         }
 
-        private static IEnumerable<MessageElement> GetPlainTextCombinedMessageElements(IEnumerable<MessageElement> elements)
+        private static IEnumerable<MessageElement> GetPlainTextCombinedMessageElements(
+            IEnumerable<MessageElement> elements)
         {
             var buffer = new StringBuilder();
 
@@ -194,7 +211,7 @@ namespace HuajiTech.CoolQ.Messaging
 
                 if (buffer.Length > 0)
                 {
-                    yield return buffer.ToString()!;
+                    yield return buffer.ToString();
                     buffer.Clear();
                 }
 
@@ -203,7 +220,7 @@ namespace HuajiTech.CoolQ.Messaging
 
             if (buffer.Length > 0)
             {
-                yield return buffer.ToString()!;
+                yield return buffer.ToString();
             }
         }
 
@@ -211,7 +228,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// 将当前 <see cref="ComplexMessage"/> 实例中的所有连续的 <see cref="PlainText"/> 实例拼接为单个 <see cref="PlainText"/> 实例。
         /// </summary>
         /// <returns>一个新的 <see cref="ComplexMessage"/> 实例，包含已被拼接的 <see cref="PlainText"/> 实例。</returns>
-        public ComplexMessage CombinePlainText() => new ComplexMessage(GetPlainTextCombinedMessageElements(this));
+        public ComplexMessage CombinePlainText()
+            => new ComplexMessage(GetPlainTextCombinedMessageElements(this));
 
         /// <summary>
         /// 使用指定的分隔符将当前 <see cref="ComplexMessage"/> 实例中的所有 <see cref="PlainText"/> 实例拼接为字符串。
@@ -221,7 +239,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// 一个由当前 <see cref="ComplexMessage"/> 实例中所有 <see cref="PlainText"/> 实例组成的字符串，这些字符串以 <paramref name="separator"/> 分隔。
         /// 如果当前  <see cref="ComplexMessage"/> 实例不包含任何 <see cref="PlainText"/> 实例，则该方法返回 <see cref="string.Empty"/>。
         /// </returns>
-        public string GetPlainText(string separator = "") => string.Join(separator, this.OfType<PlainText>());
+        public string GetPlainText(string separator = "")
+            => string.Join(separator, this.OfType<PlainText>().Select(text => text.Content));
 
         public ComplexMessage SplitPlainText(Func<string, IEnumerable<string>> split)
         {
@@ -229,6 +248,8 @@ namespace HuajiTech.CoolQ.Messaging
             {
                 throw new ArgumentNullException(nameof(split));
             }
+
+            return new ComplexMessage(GetMessageElements());
 
             IEnumerable<MessageElement> GetMessageElements()
             {
@@ -238,7 +259,7 @@ namespace HuajiTech.CoolQ.Messaging
                     {
                         foreach (var str in split(text))
                         {
-                            yield return str!;
+                            yield return str;
                         }
                     }
                     else
@@ -247,8 +268,6 @@ namespace HuajiTech.CoolQ.Messaging
                     }
                 }
             }
-
-            return new ComplexMessage(GetMessageElements());
         }
 
         /// <summary>
@@ -262,25 +281,30 @@ namespace HuajiTech.CoolQ.Messaging
         /// </param>
         /// <returns>一个 <see cref="ComplexMessage"/> 实例，其元素包含此 <see cref="ComplexMessage"/> 实例中的子 <see cref="PlainText"/> 实例，这些子 <see cref="PlainText"/> 实例由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
         /// <exception cref="ArgumentException"><paramref name="options"/> 不是 <see cref="StringSplitOptions"/> 值之一。</exception>
-        public ComplexMessage SplitPlainText(string[] separator, StringSplitOptions options) =>
-            SplitPlainText(str => str.Split(separator, options));
+        public ComplexMessage SplitPlainText(string[] separator, StringSplitOptions options)
+            => SplitPlainText(str => str.Split(separator, options));
 
         /// <summary>
         /// 基于数组中的字符串将当前 <see cref="ComplexMessage"/> 实例中的所有 <see cref="PlainText"/> 实例拆分为多个 <see cref="PlainText"/> 实例。
         /// </summary>
         /// <param name="separator">分隔此 <see cref="ComplexMessage"/> 实例中 <see cref="PlainText"/> 实例的字符串数组、不包含分隔符的空数组或 null。</param>
         /// <returns>一个 <see cref="ComplexMessage"/> 实例，其元素包含此 <see cref="ComplexMessage"/> 实例中的子 <see cref="PlainText"/> 实例，这些子子 <see cref="PlainText"/> 实例由 <paramref name="separator"/> 中的一个或多个字符串分隔。</returns>
-        public ComplexMessage SplitPlainText(params string[] separator) =>
-            SplitPlainText(separator, StringSplitOptions.RemoveEmptyEntries);
+        public ComplexMessage SplitPlainText(params string[] separator)
+            => SplitPlainText(separator, StringSplitOptions.RemoveEmptyEntries);
 
         /// <summary>
         /// 将 <see cref="MessageElement"/> 实例添加到 <see cref="ComplexMessage"/> 的结尾处。
         /// </summary>
         /// <param name="item">要添加到 <see cref="ComplexMessage"/> 末尾的实例。</param>
         /// <returns>当前 <see cref="ComplexMessage"/> 实例。</returns>
-        public ComplexMessage Add(MessageElement? item)
+        public ComplexMessage Add(MessageElement item)
         {
-            _elements.Add(item!);
+            if (item is null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            _elements.Add(item);
             return this;
         }
 
@@ -293,9 +317,9 @@ namespace HuajiTech.CoolQ.Messaging
         /// </param>
         /// <returns>当前 <see cref="ComplexMessage"/> 实例。</returns>
         /// <exception cref="ArgumentNullException"><paramref name="collection"/> 为 <see langword="null"/>。</exception>
-        public ComplexMessage Add(IEnumerable<MessageElement> collection)
+        public ComplexMessage Add(IEnumerable<MessageElement?> collection)
         {
-            _elements.AddRange(collection);
+            _elements.AddRange(collection.OfType<MessageElement>());
             return this;
         }
 
@@ -309,9 +333,14 @@ namespace HuajiTech.CoolQ.Messaging
         /// <paramref name="index"/> 小于 0。
         /// 或 <paramref name="index"/> 大于 <see cref="Count"/>。
         /// </exception>
-        public ComplexMessage Insert(int index, MessageElement? item)
+        public ComplexMessage Insert(int index, MessageElement item)
         {
-            _elements.Insert(index, item!);
+            if (item is null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            _elements.Insert(index, item);
             return this;
         }
 
@@ -322,7 +351,12 @@ namespace HuajiTech.CoolQ.Messaging
         /// <returns>当前 <see cref="ComplexMessage"/> 实例。</returns>
         public ComplexMessage Remove(MessageElement? item)
         {
-            _elements.Remove(item!);
+            if (item is null)
+            {
+                return this;
+            }
+
+            _elements.Remove(item);
             return this;
         }
 
@@ -334,15 +368,28 @@ namespace HuajiTech.CoolQ.Messaging
         /// 如果成功移除了 <paramref name="item"/>，则为 <see langword="true"/>；否则为 <see langword="false"/>。
         /// 如果在 <see cref="ComplexMessage"/> 中没有找到 <paramref name="item"/>，则此方法也会返回 <see langword="false"/>。
         /// </returns>
-        public bool TryRemove(MessageElement item) => _elements.Remove(item);
+        public bool TryRemove(MessageElement? item)
+        {
+            if (item is null)
+            {
+                return false;
+            }
+
+            return _elements.Remove(item);
+        }
 
         /// <summary>
         /// 从 <see cref="ComplexMessage"/> 中移除特定 <see cref="MessageElement"/> 的所有匹配项。
         /// </summary>
         /// <param name="item">要从 <see cref="ComplexMessage"/> 中删除的实例。</param>
         /// <returns>当前 <see cref="ComplexMessage"/> 实例。</returns>
-        public ComplexMessage RemoveAll(MessageElement item)
+        public ComplexMessage RemoveAll(MessageElement? item)
         {
+            if (item is null)
+            {
+                return this;
+            }
+
             _elements.RemoveAll(element => element == item);
             return this;
         }
@@ -372,17 +419,13 @@ namespace HuajiTech.CoolQ.Messaging
 
         public ComplexMessage Slice(int start, int count) => new ComplexMessage(this.Skip(start).Take(count));
 
-        /// <summary>
-        /// 将当前 <see cref="ComplexMessage"/> 实例的值转换为它的等效字符串表示形式。
-        /// </summary>
-        /// <returns>当前 <see cref="ComplexMessage"/> 实例的值的字符串表示形式。</returns>
-        public override string ToString() => string.Join(string.Empty, _elements);
+        public string ToSendableString() => string.Join(string.Empty, _elements);
 
         public bool Equals(ComplexMessage? other) => base.Equals(other) || other?.ToString() == ToString();
 
         public override bool Equals(object? obj) => Equals(obj as ComplexMessage);
 
-        public override int GetHashCode() => ToString().GetHashCode();
+        public override int GetHashCode() => ToSendableString().GetHashCode();
     }
 
     /// <summary>
@@ -394,11 +437,27 @@ namespace HuajiTech.CoolQ.Messaging
 
         public bool IsReadOnly => ((IList<MessageElement>)_elements).IsReadOnly;
 
-        void ICollection<MessageElement>.Add(MessageElement item) => _elements.Add(item);
+        void ICollection<MessageElement>.Add(MessageElement item)
+        {
+            if (item is null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            _elements.Add(item);
+        }
 
         public void Clear() => _elements.Clear();
 
-        public bool Contains(MessageElement item) => _elements.Contains(item);
+        public bool Contains(MessageElement item)
+        {
+            if (item is null)
+            {
+                return false;
+            }
+
+            return _elements.Contains(item);
+        }
 
         public void CopyTo(MessageElement[] array, int arrayIndex) => _elements.CopyTo(array, arrayIndex);
 
@@ -406,9 +465,25 @@ namespace HuajiTech.CoolQ.Messaging
 
         IEnumerator IEnumerable.GetEnumerator() => ((IList<MessageElement>)_elements).GetEnumerator();
 
-        public int IndexOf(MessageElement item) => _elements.IndexOf(item);
+        public int IndexOf(MessageElement item)
+        {
+            if (item is null)
+            {
+                return -1;
+            }
 
-        void IList<MessageElement>.Insert(int index, MessageElement item) => _elements.Insert(index, item);
+            return _elements.IndexOf(item);
+        }
+
+        void IList<MessageElement>.Insert(int index, MessageElement item)
+        {
+            if (item is null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            _elements.Insert(index, item);
+        }
 
         bool ICollection<MessageElement>.Remove(MessageElement item) => _elements.Remove(item);
 

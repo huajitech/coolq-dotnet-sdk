@@ -10,12 +10,12 @@ namespace HuajiTech.CoolQ.Events
         public FriendAddedEventArgs(DateTime time, IFriend operatee)
             : base(time)
         {
-            Operatee = operatee ?? throw new ArgumentNullException(nameof(operatee));
+            Operatee = operatee;
         }
 
         /// <summary>
         /// 获取添加的好友。
         /// </summary>
-        public IFriend Operatee { get; }
+        public virtual IFriend Operatee { get; }
     }
 }

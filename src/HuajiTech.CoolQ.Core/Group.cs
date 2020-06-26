@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using HuajiTech.CoolQ.DataExchange;
+using HuajiTech.CoolQ.Interop;
 
 namespace HuajiTech.CoolQ
 {
-    internal partial class Group : Chat, IGroup
+    internal class Group : Chat, IGroup
     {
+        public static readonly Group Empty = new Group(0);
+
         private readonly string? _name;
         private GroupInfo? _info;
 
@@ -33,13 +35,13 @@ namespace HuajiTech.CoolQ
 
         public int MemberCount => GetInfo().MemberCount;
 
-        public void DisableAnonymous() =>
-            NativeMethods.Group_SetIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
+        public void DisableAnonymous()
+            => NativeMethods.Group_SetIsAnonymousEnabled(Bot.Instance.AuthCode, Number, false).CheckError();
 
         public void Disband() => Leave(true);
 
-        public void EnableAnonymous() =>
-            NativeMethods.Group_SetIsAnonymousEnabled(Bot.Instance.AuthCode, Number, true).CheckError();
+        public void EnableAnonymous()
+            => NativeMethods.Group_SetIsAnonymousEnabled(Bot.Instance.AuthCode, Number, true).CheckError();
 
         public IReadOnlyCollection<IMember> GetMembers()
         {
@@ -52,12 +54,14 @@ namespace HuajiTech.CoolQ
 
         public void Leave() => Leave(false);
 
-        public void Mute() =>
-            NativeMethods.Group_SetIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
+        public void Mute()
+            => NativeMethods.Group_SetIsMuted(Bot.Instance.AuthCode, Number, true).CheckError();
 
-        public void Request(bool refresh = false) => GetInfo(true, refresh);
+        public void Request() => GetInfo(true, false);
 
-        public override IMessage Send(string message)
+        public void Refresh() => GetInfo(true, true);
+
+        public override Message Send(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -66,11 +70,11 @@ namespace HuajiTech.CoolQ
 
             var id = NativeMethods.Group_Send(Bot.Instance.AuthCode, Number, message).CheckError();
 
-            return new Message(id, message);
+            return new MessageCore(id, message);
         }
 
-        public void Unmute() =>
-            NativeMethods.Group_SetIsMuted(Bot.Instance.AuthCode, Number, false).CheckError();
+        public void Unmute()
+            => NativeMethods.Group_SetIsMuted(Bot.Instance.AuthCode, Number, false).CheckError();
 
         public override bool Equals(IChattable? other) => base.Equals(other) && other is Group;
 
@@ -97,7 +101,7 @@ namespace HuajiTech.CoolQ
             return _info;
         }
 
-        private void Leave(bool disband) =>
-            NativeMethods.Group_Leave(Bot.Instance.AuthCode, Number, disband).CheckError();
+        private void Leave(bool disband)
+            => NativeMethods.Group_Leave(Bot.Instance.AuthCode, Number, disband).CheckError();
     }
 }

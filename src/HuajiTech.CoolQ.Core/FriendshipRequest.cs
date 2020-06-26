@@ -18,8 +18,8 @@ namespace HuajiTech.CoolQ
 
         public void Reject() => Respond(Response.Reject, null);
 
-        private void Respond(Response response, string? alias) =>
-            NativeMethods.FriendshipRequest_Respond(
-                Bot.Instance.AuthCode, _token, response, alias).CheckError();
+        private void Respond(Response response, string? alias)
+            => NativeMethods.FriendshipRequest_Respond(
+                  Bot.Instance.AuthCode, _token, response, alias).CheckError();
     }
 }

@@ -15,8 +15,8 @@ namespace HuajiTech.CoolQ.Messaging
         /// <param name="elements">要用于创建 <see cref="ComplexMessage"/> 的消息元素集合。</param>
         /// <returns>一个 <see cref="ComplexMessage"/>，其中包含输入序列中的元素。</returns>
         /// <exception cref="ArgumentNullException"><paramref name="elements"/> 为 <see langword="null"/>。</exception>
-        public static ComplexMessage ToComplexMessage(this IEnumerable<MessageElement> elements) =>
-            new ComplexMessage(elements);
+        public static ComplexMessage ToComplexMessage(this IEnumerable<MessageElement> elements)
+            => new ComplexMessage(elements);
 
         /// <summary>
         /// 使用指定的分隔符从 <see cref="IEnumerable{T}"/> 创建 <see cref="ComplexMessage"/>。
@@ -45,6 +45,8 @@ namespace HuajiTech.CoolQ.Messaging
                 return new ComplexMessage(elements.First());
             }
 
+            return new ComplexMessage(GetMessageElements());
+
             IEnumerable<MessageElement> GetMessageElements()
             {
                 yield return elements.First();
@@ -55,8 +57,6 @@ namespace HuajiTech.CoolQ.Messaging
                     yield return element;
                 }
             }
-
-            return new ComplexMessage(GetMessageElements());
         }
     }
 }

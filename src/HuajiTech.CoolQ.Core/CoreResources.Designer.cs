@@ -61,20 +61,20 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
+        ///   查找类似 已初始化。 的本地化字符串。
+        /// </summary>
+        internal static string AlreadyInitialized {
+            get {
+                return ResourceManager.GetString("AlreadyInitialized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 未在当前程序集找到 AppIdAttribute 特性。 的本地化字符串。
         /// </summary>
         internal static string AppIdNotFound {
             get {
                 return ResourceManager.GetString("AppIdNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 机器人尚未初始化。 的本地化字符串。
-        /// </summary>
-        internal static string BotNotInitialized {
-            get {
-                return ResourceManager.GetString("BotNotInitialized", resourceCulture);
             }
         }
         
@@ -115,7 +115,34 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing）。查看酷Q中的日志以获取详细信息。 的本地化字符串。
+        ///   查找类似 初始化失败。 的本地化字符串。
+        /// </summary>
+        internal static string InitializationFailed {
+            get {
+                return ResourceManager.GetString("InitializationFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 未在当前程序集找到 InitializerAttribute 特性。 的本地化字符串。
+        /// </summary>
+        internal static string InitializerNotFound {
+            get {
+                return ResourceManager.GetString("InitializerNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 尚未初始化。 的本地化字符串。
+        /// </summary>
+        internal static string NotInitialized {
+            get {
+                return ResourceManager.GetString("NotInitialized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 酷Q返回了意料之外的值 null（在 Visual Basic 中为 Nothing），查看酷Q中的日志以获取详细信息。 的本地化字符串。
         /// </summary>
         internal static string NullReturnValue {
             get {
@@ -124,38 +151,20 @@ namespace HuajiTech.CoolQ {
         }
         
         /// <summary>
-        ///   查找类似 已加载类型 &apos;{0}&apos;。 的本地化字符串。
-        /// </summary>
-        internal static string PluginLoadMessage {
-            get {
-                return ResourceManager.GetString("PluginLoadMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 插件加载 的本地化字符串。
-        /// </summary>
-        internal static string PluginLoadTitle {
-            get {
-                return ResourceManager.GetString("PluginLoadTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 指定的类型不是插件类型。 的本地化字符串。
-        /// </summary>
-        internal static string TypeIsNotPlugin {
-            get {
-                return ResourceManager.GetString("TypeIsNotPlugin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 酷Q返回了意料之外的值 {0}。查看酷Q中的日志以获取详细信息。 的本地化字符串。
+        ///   查找类似 酷Q返回了意料之外的值 {0}，查看酷Q中的日志以获取详细信息。 的本地化字符串。
         /// </summary>
         internal static string UnexpectedReturnValue {
             get {
                 return ResourceManager.GetString("UnexpectedReturnValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 未经处理的异常 的本地化字符串。
+        /// </summary>
+        internal static string UnhandledException {
+            get {
+                return ResourceManager.GetString("UnhandledException", resourceCulture);
             }
         }
     }

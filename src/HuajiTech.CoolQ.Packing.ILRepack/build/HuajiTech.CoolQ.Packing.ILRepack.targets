@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Target Name="CoolQPack" AfterTargets="Build" BeforeTargets="PostBuildEvent">
-    <MakeDir Directories="$(PublishDir)" Condition="!Exists('$(PublishDir)')" />
+  <Target Name="Pack" AfterTargets="Build" BeforeTargets="AfterBuild; PostBuildEvent">
+    <MakeDir Condition="!Exists('$(PublishDir)')" Directories="$(PublishDir)" />
 
     <ItemGroup>
-      <InputAssemblies Include="$(OutputPath)$(TargetFileName)" />
-      <InputAssemblies Include="$(OutputPath)*.dll" Exclude="$(OutputPath)$(TargetFileName)" />
+      <InputAssemblies Include="$(TargetPath)" />
+      <InputAssemblies Include="$(OutputPath)*.dll" Exclude="$(TargetPath)" />
     </ItemGroup>
 
     <ILRepack
@@ -18,9 +18,14 @@
       KeyFile="$(KeyFile)"
       OutputFile="$(PublishDir)$(TargetFileName)" />
 
+    <Exec Command='"$(InjectModuleInitializerTool)" /m:HuajiTech.CoolQ.Packing.ILRepacker::Init "$(PublishDir)$(TargetFileName)"' />
+
     <UnmanagedExport File="$(PublishDir)$(TargetFileName)" />
 
     <Move SourceFiles="$(PublishDir)$(TargetFileName)" DestinationFiles="$(PublishDir)app.dll" />
-    <Copy SourceFiles="$(ProjectDir)app.json" DestinationFolder="$(PublishDir)" />
+
+    <Copy Condition="Exists('$(ProjectDir)app.json')"
+          SourceFiles="$(ProjectDir)app.json"
+          DestinationFolder="$(PublishDir)" />
   </Target>
 </Project>

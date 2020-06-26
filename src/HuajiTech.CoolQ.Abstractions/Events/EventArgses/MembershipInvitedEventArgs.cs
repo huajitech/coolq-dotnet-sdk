@@ -11,24 +11,24 @@ namespace HuajiTech.CoolQ.Events
             DateTime time, IGroup target, IUser inviter, IRequest invitation)
             : base(time)
         {
-            Target = target ?? throw new ArgumentNullException(nameof(target));
-            Inviter = inviter ?? throw new ArgumentNullException(nameof(inviter));
-            Invitation = invitation ?? throw new ArgumentNullException(nameof(invitation));
+            Target = target;
+            Inviter = inviter;
+            Invitation = invitation;
         }
 
         /// <summary>
         /// 获取目标群。
         /// </summary>
-        public IGroup Target { get; }
+        public virtual IGroup Target { get; }
 
         /// <summary>
         /// 获取邀请用户。
         /// </summary>
-        public IUser Inviter { get; }
+        public virtual IUser Inviter { get; }
 
         /// <summary>
         /// 获取邀请。
         /// </summary>
-        public IRequest Invitation { get; }
+        public virtual IRequest Invitation { get; }
     }
 }

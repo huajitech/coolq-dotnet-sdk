@@ -1,11 +1,8 @@
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using HuajiTech.CoolQ.Events;
 using HuajiTech.UnmanagedExports;
 
 namespace HuajiTech.CoolQ
@@ -33,7 +30,7 @@ namespace HuajiTech.CoolQ
 
         public static Bot Instance
         {
-            get => _instance ?? throw new InvalidOperationException(CoreResources.BotNotInitialized);
+            get => _instance ?? throw new InvalidOperationException(CoreResources.NotInitialized);
             private set => _instance = value;
         }
 
@@ -45,46 +42,39 @@ namespace HuajiTech.CoolQ
 
         public ICurrentUser CurrentUser => _currentUser.Value;
 
-        public ILogger Logger { get; } = new DefaultLogger();
+        public ILogger Logger { get; } = new Logger();
 
         internal int AuthCode { get; }
 
         [DllExport(EntryPoint = "AppInfo")]
-        private static string GetAppInfo() => ApiVersion + "," + AppId;
+        internal static string GetAppInfo() => ApiVersion + "," + AppId;
 
-        [DllExport]
-        private static int Initialize(int authCode)
+        [DllExport(EntryPoint = "Initialize")]
+        internal static int Init(int authCode)
         {
+            if (!(_instance is null))
+            {
+                throw new InvalidOperationException(CoreResources.AlreadyInitialized);
+            }
+
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
             Instance = new Bot(authCode);
+            PluginContext.Current = new PluginContextCore(Instance);
 
-            var packer = GetInstance<IPacker>();
-            var loader = GetInstance<ILoader>();
+            var type = Assembly.GetExecutingAssembly()
+                .GetCustomAttribute<InitializerAttribute>()?.Initializer ??
+                throw new AppInitializationException(CoreResources.InitializerNotFound);
 
-            PluginContext.Current = new DefaultPluginContext(Instance, packer, loader);
-
-            loader.GetPlugins(AppLifecycle.Initializing);
-
-            var source = BotEventSource.Instance;
-
-            var isFirstLoad = true;
-            source.AppEnabled += (sender, e) =>
+            try
             {
-                var plugins = loader.GetPlugins(AppLifecycle.Enabled);
-
-                if (isFirstLoad)
-                {
-                    LogPlugins(plugins);
-                    isFirstLoad = false;
-                }
-            };
-
-            source.BotStarted += (sender, e) => loader.GetPlugins(AppLifecycle.BotStarted);
-
-            source.AppDisabling += (sender, e) => loader.GetPlugins(AppLifecycle.Disabling);
-
-            source.BotStopping += (sender, e) => loader.GetPlugins(AppLifecycle.BotStopping);
+                type.GetMethod("Init", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)
+                    ?.Invoke(null, null);
+            }
+            catch (Exception ex)
+            {
+                throw new AppInitializationException(CoreResources.InitializationFailed, ex);
+            }
 
             return 0;
         }
@@ -101,11 +91,6 @@ namespace HuajiTech.CoolQ
             return attr.Id;
         }
 
-        private static T GetInstance<T>() =>
-            (from type in Assembly.GetExecutingAssembly().GetTypes()
-             where type.IsClass && !type.IsAbstract && typeof(T).IsAssignableFrom(type)
-             select (T)Activator.CreateInstance(type)).Single();
-
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             if (e.ExceptionObject is Exception ex)
@@ -114,26 +99,8 @@ namespace HuajiTech.CoolQ
                     .GetFrames()
                     .Any(frame => frame.GetMethod().Module.Assembly == Assembly.GetExecutingAssembly()))
                 {
-                    Instance.Logger.LogFatal(ex.ToString());
+                    Instance.Logger.RaiseFatal(ex.ToString());
                 }
-            }
-        }
-
-        private static void LogPlugins(IEnumerable<IPlugin> plugins)
-        {
-            if (plugins is null)
-            {
-                throw new ArgumentNullException(nameof(plugins));
-            }
-
-            foreach (var plugin in plugins)
-            {
-                Instance.Logger.LogDebug(
-                    CoreResources.PluginLoadTitle,
-                    string.Format(
-                        CultureInfo.InvariantCulture,
-                        CoreResources.PluginLoadMessage,
-                        plugin.GetType().FullName));
             }
         }
 

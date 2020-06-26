@@ -6,8 +6,6 @@ namespace HuajiTech.CoolQ.Events
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Usage", "CA1801:检查未使用的参数", Justification = "<挂起>")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage(
-        "CodeQuality", "IDE0051:删除未使用的私有成员", Justification = "<挂起>")]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage(
         "Style", "IDE0060:删除未使用的参数", Justification = "<挂起>")]
     public sealed class BotEventSource : IBotEventSource
     {
@@ -26,28 +24,39 @@ namespace HuajiTech.CoolQ.Events
         public event EventHandler? BotStopping;
 
         [DllExport]
-        private static int OnAppDisabling()
+        internal static int OnAppDisabling()
         {
             Instance.AppDisabling?.Invoke(Instance, EventArgs.Empty);
             return 0;
         }
 
         [DllExport]
-        private static int OnAppEnabled()
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Design", "CA1031:不捕获常规异常类型", Justification = "<挂起>")]
+        internal static int OnAppEnabled()
         {
-            Instance.AppEnabled?.Invoke(Instance, EventArgs.Empty);
+            try
+            {
+                Instance.AppEnabled?.Invoke(Instance, EventArgs.Empty);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogUnhandledException(ex);
+                return 1;
+            }
+
             return 0;
         }
 
         [DllExport]
-        private static int OnStarted()
+        internal static int OnBotStarted()
         {
             Instance.BotStarted?.Invoke(Instance, EventArgs.Empty);
             return 0;
         }
 
         [DllExport]
-        private static int OnStopping()
+        internal static int OnBotStopping()
         {
             Instance.BotStopping?.Invoke(Instance, EventArgs.Empty);
             return 0;

@@ -56,6 +56,6 @@
         /// 创建指定 ID 的消息。
         /// </summary>
         /// <param name="id">ID。</param>
-        public static IMessage Message(long id) => PluginContext.Current.GetMessage(id);
+        public static Message Message(int id) => PluginContext.Current.GetMessage(id);
     }
 }

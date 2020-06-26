@@ -10,18 +10,20 @@ namespace HuajiTech.CoolQ.Events
         public GroupMuteEventArgs(DateTime time, IGroup source, IMember @operator)
             : base(time)
         {
-            Source = source ?? throw new ArgumentNullException(nameof(source));
-            Operator = @operator ?? throw new ArgumentNullException(nameof(@operator));
+            Source = source;
+            Operator = @operator;
         }
 
         /// <summary>
         /// 获取来源群。
         /// </summary>
-        public IGroup Source { get; }
+        public virtual IGroup Source { get; }
 
         /// <summary>
         /// 获取操作者。
         /// </summary>
-        public IMember Operator { get; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Naming", "CA1716:标识符不应与关键字匹配", Justification = "<挂起>")]
+        public virtual IMember Operator { get; }
     }
 }

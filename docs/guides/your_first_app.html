@@ -80,33 +80,29 @@
 <h1 id="你的第一个应用">你的第一个应用</h1>
 
 <ol>
-<li><p>创建一个新的 C# 类库项目，并选择 <strong>.NET Framework 4.6.1</strong> 及以上版本作为目标框架。</p>
-</li>
-<li><p>安装 HuajiTech.CoolQ NuGet 包。</p>
-</li>
+<li>创建一个新的 C# 类库项目，并选择 <strong>.NET Framework 4.6.1</strong> 及以上版本作为目标框架。</li>
+<li>安装 HuajiTech.CoolQ NuGet 包。</li>
 <li><p>将以下代码粘贴到 <code>MyPlugin.cs</code>。</p>
 <pre><code class="lang-csharp">using HuajiTech.CoolQ;
 using HuajiTech.CoolQ.Events;
 
+[Plugin]
 public class MyPlugin : Plugin
 {
-   public MyPlugin(INotifyMessageReceived eventSource)
+   public MyPlugin(IMessageEventSource eventSource)
    {
-       eventSource.MessageReceived += (sender, e) =&gt;
+       eventSource.AddMessageReceivedEventHandler((sender, e) =&gt;
        {
-           // 向消息来源聊天发送消息的内容，即复读。
-           e.Source.Send(e.Message.Content);
-       }
+           // 向消息来源聊天发送收到的消息，即复读。
+           e.Source.Send(e.Message);
+       });
    }
 }
-</code></pre>
-</li>
+</code></pre></li>
 <li><p>编译。</p>
 </li>
-<li><p>将 <code>{输出目录}\app.publish\</code> 中的文件复制到酷Q的 <code>dev\com.example.app\</code> 目录。</p>
-</li>
-<li><p>重载应用并启用。</p>
-</li>
+<li>将 <code>{输出目录}\app.publish\</code> 中的文件复制到酷Q的 <code>dev\com.example.app\</code> 目录。</li>
+<li>重载应用并启用。</li>
 </ol>
 <h2 id="接下来">接下来</h2>
 <p><a href="getting_started.html">入门</a></p>
@@ -118,7 +114,7 @@ public class MyPlugin : Plugin
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/guides/your_first_app.md/#L1" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+                    <a href="https://github.com/huajitech/coolq-dotnet-sdk/blob/master/documentation/guides/your_first_app.md/#L1" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
                   </li>
                 </ul>
               </div>
