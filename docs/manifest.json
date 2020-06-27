@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.ApiException.html",
-          "hash": "Xqwp5UD7hFm1Rx4ONO52Bg=="
+          "hash": "5bD9fbuVHnjI6t8SQDzVaQ=="
         }
       },
       "is_incremental": false,
@@ -662,18 +662,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HuajiTech.CoolQ.Extensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/HuajiTech.CoolQ.Extensions.html",
-          "hash": "M+jci8VWkjbHZyqJKg3ojg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/HuajiTech.CoolQ.File.yml",
       "output": {
         ".html": {
@@ -966,7 +954,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.LoggingExtensions.html",
-          "hash": "HImCu4gQPJODOk5g8uGxcg=="
+          "hash": "hFELDV/kWtwGyElczIZGkA=="
         }
       },
       "is_incremental": false,
@@ -990,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Message.html",
-          "hash": "zCAl0b5UA5DdL8IF5CLinw=="
+          "hash": "dawehWPIG5g5agcHQjm13g=="
         }
       },
       "is_incremental": false,
@@ -1038,7 +1026,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.CQCode.html",
-          "hash": "Y0tP81pDC/cKaqrgBiRCEw=="
+          "hash": "KniO+B8bQ3bH1VtqtzTquw=="
         }
       },
       "is_incremental": false,
@@ -1358,11 +1346,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HuajiTech.CoolQ.Messaging.SignIn.yml",
+      "source_relative_path": "api/HuajiTech.CoolQ.Messaging.SigningIn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/HuajiTech.CoolQ.Messaging.SignIn.html",
-          "hash": "8tZdfm9x/dX3oICGL1FafA=="
+          "relative_path": "api/HuajiTech.CoolQ.Messaging.SigningIn.html",
+          "hash": "sPFHt+A9ZcrSF/lUkWBqQA=="
         }
       },
       "is_incremental": false,
@@ -1386,7 +1374,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.Messaging.html",
-          "hash": "FOLqSgpavqgjXl5fJvGCmw=="
+          "hash": "6D5njSvUXkZxcFaEJUw1pw=="
         }
       },
       "is_incremental": false,
@@ -1490,6 +1478,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/HuajiTech.CoolQ.RegexMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HuajiTech.CoolQ.RegexMessage.html",
+          "hash": "Rdr7+/zbrgpyu/8OjfySWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/HuajiTech.CoolQ.SdkInfo.yml",
       "output": {
         ".html": {
@@ -1530,7 +1530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/HuajiTech.CoolQ.html",
-          "hash": "nG0sSSyzhykxSpyORaVR6w=="
+          "hash": "yHpsiTcPDKq4ACEeMeWMyQ=="
         }
       },
       "is_incremental": false,
@@ -1554,7 +1554,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "cvRcp8GwRticoJsh6upcSQ=="
+          "hash": "9BYyNXwTOu011HmjvZAA+Q=="
         }
       },
       "is_incremental": false,
@@ -1590,7 +1590,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/howto_handle_message.html",
-          "hash": "X6ATIC+ya0viIIZ8y+ht+w=="
+          "hash": "HVNGMECTHvYJlyknHrJblw=="
         }
       },
       "is_incremental": false,
@@ -1693,13 +1693,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 8,
-          "skipped_file_count": 8
+          "skipped_file_count": 7
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 127,
-          "skipped_file_count": 56
+          "skipped_file_count": 127
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -107,8 +107,8 @@ e.Reply(&quot;How are you?&quot;);
     ...
 }
 </code></pre><h2 id="使用正则消息">使用正则消息</h2>
-<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_Message_">RegexDecode(Message)</a> 扩展方法解码正则消息。</p>
-<pre><code class="lang-csharp">var args = e.Message.RegexDecode();
+<p>通过 <a class="xref" href="../api/HuajiTech.CoolQ.RegexMessage.html#HuajiTech_CoolQ_RegexMessage_Decode_HuajiTech_CoolQ_Message_">Decode(Message)</a> 扩展方法解码正则消息。</p>
+<pre><code class="lang-csharp">var args = e.Message.Decode();
 </code></pre><p>获取 <code>Name</code> 键的值。</p>
 <pre><code class="lang-csharp">args[&quot;Name&quot;]
 </code></pre></article>

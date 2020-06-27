@@ -30,12 +30,16 @@ namespace HuajiTech.CoolQ
 
         public override string DisplayName => Alias ?? base.DisplayName;
 
-        public override void Request() => GetInfo(true);
+        public override void Request()
+        {
+            base.Request();
+            GetInfo(true);
+        }
 
         public override void Refresh()
         {
-            Request();
             base.Refresh();
+            Request();
         }
 
         private FriendInfo GetInfo(bool requesting = false)

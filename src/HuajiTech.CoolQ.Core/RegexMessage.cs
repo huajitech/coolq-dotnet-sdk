@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,9 +7,9 @@ using HuajiTech.CoolQ.Interop;
 namespace HuajiTech.CoolQ
 {
     /// <summary>
-    /// 定义扩展方法。
+    /// 提供用于操作正则消息的扩展方法。
     /// </summary>
-    public static class Extensions
+    public static class RegexMessage
     {
         /// <summary>
         /// 将 <see cref="Message.Content"/> 为编码后的正则消息匹配结果的 <see cref="Message"/> 实例解码为只读字典。
@@ -17,7 +17,7 @@ namespace HuajiTech.CoolQ
         /// <param name="message">要解析为只读字典的 <see cref="Message"/> 实例。</param>
         /// <returns>与 <see cref="Message.Content"/> 等效的只读字典。</returns>
         /// <exception cref="InvalidDataException"><paramref name="message"/> 不合法。</exception>
-        public static IReadOnlyDictionary<string, string>? RegexDecode(this Message message)
+        public static IReadOnlyDictionary<string, string>? Decode(this Message message)
         {
             if (message is null)
             {
@@ -34,30 +34,6 @@ namespace HuajiTech.CoolQ
             {
                 throw new InvalidDataException(CoreResources.FailedToDecodeRegexMessage, ex);
             }
-        }
-
-        internal static int CheckError(this int returnValue)
-        {
-            if (returnValue < 0)
-            {
-                throw new ApiException(string.Format(
-                    System.Globalization.CultureInfo.CurrentCulture,
-                    CoreResources.UnexpectedReturnValue,
-                    returnValue));
-            }
-
-            return returnValue;
-        }
-
-        internal static T CheckError<T>(this T? returnValue)
-            where T : class
-        {
-            if (returnValue is null)
-            {
-                throw new ApiException(CoreResources.NullReturnValue);
-            }
-
-            return returnValue;
         }
     }
 }

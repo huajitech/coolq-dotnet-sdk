@@ -58,10 +58,10 @@ if (message is (Mention mention, Image image))
 
 ## 使用正则消息
 
-通过 @"HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)" 扩展方法解码正则消息。
+通过 @"HuajiTech.CoolQ.RegexMessage.Decode(HuajiTech.CoolQ.Message)" 扩展方法解码正则消息。
 
 ```csharp
-var args = e.Message.RegexDecode();
+var args = e.Message.Decode();
 ```
 
 获取 `Name` 键的值。

@@ -142,9 +142,17 @@ namespace HuajiTech.CoolQ
 
         public void UnmakeAdministrator() => SetIsAdministrator(false);
 
-        public override void Request() => GetInfo(true, false);
+        public override void Request()
+        {
+            base.Request();
+            GetInfo(true, false);
+        }
 
-        public override void Refresh() => GetInfo(true, true);
+        public override void Refresh()
+        {
+            base.Refresh();
+            GetInfo(true, true);
+        }
 
         public override string ToString() => GetType().Name + $"({Number},{Group})";
 

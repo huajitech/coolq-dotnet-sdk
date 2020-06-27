@@ -115,19 +115,6 @@
             灰。
             </summary>
         </member>
-        <member name="T:HuajiTech.CoolQ.Extensions">
-            <summary>
-            定义扩展方法。
-            </summary>
-        </member>
-        <member name="M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)">
-            <summary>
-            将 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例解码为只读字典。
-            </summary>
-            <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例。</param>
-            <returns>与 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 等效的只读字典。</returns>
-            <exception cref="T:System.IO.InvalidDataException"><paramref name="message"/> 不合法。</exception>
-        </member>
         <member name="T:HuajiTech.CoolQ.InitializerAttribute">
             <summary>
             指定程序集的初始化器。
@@ -194,6 +181,19 @@
             <summary>
             致命错误。
             </summary>
+        </member>
+        <member name="T:HuajiTech.CoolQ.RegexMessage">
+            <summary>
+            提供用于操作正则消息的扩展方法。
+            </summary>
+        </member>
+        <member name="M:HuajiTech.CoolQ.RegexMessage.Decode(HuajiTech.CoolQ.Message)">
+            <summary>
+            将 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 为编码后的正则消息匹配结果的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例解码为只读字典。
+            </summary>
+            <param name="message">要解析为只读字典的 <see cref="T:HuajiTech.CoolQ.Message"/> 实例。</param>
+            <returns>与 <see cref="P:HuajiTech.CoolQ.Message.Content"/> 等效的只读字典。</returns>
+            <exception cref="T:System.IO.InvalidDataException"><paramref name="message"/> 不合法。</exception>
         </member>
         <member name="T:HuajiTech.CoolQ.Status">
             <summary>

@@ -1481,25 +1481,6 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Events.UserMessageReceivedEventArgs.Source
   nameWithType: UserMessageReceivedEventArgs.Source
-- uid: HuajiTech.CoolQ.Extensions
-  name: Extensions
-  href: api/HuajiTech.CoolQ.Extensions.html
-  commentId: T:HuajiTech.CoolQ.Extensions
-  fullName: HuajiTech.CoolQ.Extensions
-  nameWithType: Extensions
-- uid: HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)
-  name: RegexDecode(Message)
-  href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_HuajiTech_CoolQ_Message_
-  commentId: M:HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)
-  fullName: HuajiTech.CoolQ.Extensions.RegexDecode(HuajiTech.CoolQ.Message)
-  nameWithType: Extensions.RegexDecode(Message)
-- uid: HuajiTech.CoolQ.Extensions.RegexDecode*
-  name: RegexDecode
-  href: api/HuajiTech.CoolQ.Extensions.html#HuajiTech_CoolQ_Extensions_RegexDecode_
-  commentId: Overload:HuajiTech.CoolQ.Extensions.RegexDecode
-  isSpec: "True"
-  fullName: HuajiTech.CoolQ.Extensions.RegexDecode
-  nameWithType: Extensions.RegexDecode
 - uid: HuajiTech.CoolQ.File
   name: File
   href: api/HuajiTech.CoolQ.File.html
@@ -5573,73 +5554,73 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.Messaging.Share.Url
   nameWithType: Share.Url
-- uid: HuajiTech.CoolQ.Messaging.SignIn
-  name: SignIn
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html
-  commentId: T:HuajiTech.CoolQ.Messaging.SignIn
-  fullName: HuajiTech.CoolQ.Messaging.SignIn
-  nameWithType: SignIn
-- uid: HuajiTech.CoolQ.Messaging.SignIn.#ctor
-  name: SignIn()
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn__ctor
-  commentId: M:HuajiTech.CoolQ.Messaging.SignIn.#ctor
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.SignIn()
-  nameWithType: SignIn.SignIn()
-- uid: HuajiTech.CoolQ.Messaging.SignIn.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
-  name: SignIn(IDictionary<String, String>)
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn__ctor_System_Collections_Generic_IDictionary_System_String_System_String__
-  commentId: M:HuajiTech.CoolQ.Messaging.SignIn.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
-  name.vb: SignIn(IDictionary(Of String, String))
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.SignIn(System.Collections.Generic.IDictionary<System.String, System.String>)
-  fullName.vb: HuajiTech.CoolQ.Messaging.SignIn.SignIn(System.Collections.Generic.IDictionary(Of System.String, System.String))
-  nameWithType: SignIn.SignIn(IDictionary<String, String>)
-  nameWithType.vb: SignIn.SignIn(IDictionary(Of String, String))
-- uid: HuajiTech.CoolQ.Messaging.SignIn.#ctor*
-  name: SignIn
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn__ctor_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.SignIn.#ctor
+- uid: HuajiTech.CoolQ.Messaging.SigningIn
+  name: SigningIn
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html
+  commentId: T:HuajiTech.CoolQ.Messaging.SigningIn
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn
+  nameWithType: SigningIn
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.#ctor
+  name: SigningIn()
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn__ctor
+  commentId: M:HuajiTech.CoolQ.Messaging.SigningIn.#ctor
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.SigningIn()
+  nameWithType: SigningIn.SigningIn()
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
+  name: SigningIn(IDictionary<String, String>)
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn__ctor_System_Collections_Generic_IDictionary_System_String_System_String__
+  commentId: M:HuajiTech.CoolQ.Messaging.SigningIn.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})
+  name.vb: SigningIn(IDictionary(Of String, String))
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.SigningIn(System.Collections.Generic.IDictionary<System.String, System.String>)
+  fullName.vb: HuajiTech.CoolQ.Messaging.SigningIn.SigningIn(System.Collections.Generic.IDictionary(Of System.String, System.String))
+  nameWithType: SigningIn.SigningIn(IDictionary<String, String>)
+  nameWithType.vb: SigningIn.SigningIn(IDictionary(Of String, String))
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.#ctor*
+  name: SigningIn
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn__ctor_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.SigningIn.#ctor
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.SignIn
-  nameWithType: SignIn.SignIn
-- uid: HuajiTech.CoolQ.Messaging.SignIn.ImageUrl
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.SigningIn
+  nameWithType: SigningIn.SigningIn
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.ImageUrl
   name: ImageUrl
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn_ImageUrl
-  commentId: P:HuajiTech.CoolQ.Messaging.SignIn.ImageUrl
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.ImageUrl
-  nameWithType: SignIn.ImageUrl
-- uid: HuajiTech.CoolQ.Messaging.SignIn.ImageUrl*
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn_ImageUrl
+  commentId: P:HuajiTech.CoolQ.Messaging.SigningIn.ImageUrl
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.ImageUrl
+  nameWithType: SigningIn.ImageUrl
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.ImageUrl*
   name: ImageUrl
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn_ImageUrl_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.SignIn.ImageUrl
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn_ImageUrl_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.SigningIn.ImageUrl
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.ImageUrl
-  nameWithType: SignIn.ImageUrl
-- uid: HuajiTech.CoolQ.Messaging.SignIn.Location
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.ImageUrl
+  nameWithType: SigningIn.ImageUrl
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.Location
   name: Location
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn_Location
-  commentId: P:HuajiTech.CoolQ.Messaging.SignIn.Location
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.Location
-  nameWithType: SignIn.Location
-- uid: HuajiTech.CoolQ.Messaging.SignIn.Location*
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn_Location
+  commentId: P:HuajiTech.CoolQ.Messaging.SigningIn.Location
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.Location
+  nameWithType: SigningIn.Location
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.Location*
   name: Location
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn_Location_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.SignIn.Location
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn_Location_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.SigningIn.Location
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.Location
-  nameWithType: SignIn.Location
-- uid: HuajiTech.CoolQ.Messaging.SignIn.Title
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.Location
+  nameWithType: SigningIn.Location
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.Title
   name: Title
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn_Title
-  commentId: P:HuajiTech.CoolQ.Messaging.SignIn.Title
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.Title
-  nameWithType: SignIn.Title
-- uid: HuajiTech.CoolQ.Messaging.SignIn.Title*
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn_Title
+  commentId: P:HuajiTech.CoolQ.Messaging.SigningIn.Title
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.Title
+  nameWithType: SigningIn.Title
+- uid: HuajiTech.CoolQ.Messaging.SigningIn.Title*
   name: Title
-  href: api/HuajiTech.CoolQ.Messaging.SignIn.html#HuajiTech_CoolQ_Messaging_SignIn_Title_
-  commentId: Overload:HuajiTech.CoolQ.Messaging.SignIn.Title
+  href: api/HuajiTech.CoolQ.Messaging.SigningIn.html#HuajiTech_CoolQ_Messaging_SigningIn_Title_
+  commentId: Overload:HuajiTech.CoolQ.Messaging.SigningIn.Title
   isSpec: "True"
-  fullName: HuajiTech.CoolQ.Messaging.SignIn.Title
-  nameWithType: SignIn.Title
+  fullName: HuajiTech.CoolQ.Messaging.SigningIn.Title
+  nameWithType: SigningIn.Title
 - uid: HuajiTech.CoolQ.Messaging.SmallEmoticon
   name: SmallEmoticon
   href: api/HuajiTech.CoolQ.Messaging.SmallEmoticon.html
@@ -6137,6 +6118,25 @@ references:
   isSpec: "True"
   fullName: HuajiTech.CoolQ.PluginLoadException.PluginLoadException
   nameWithType: PluginLoadException.PluginLoadException
+- uid: HuajiTech.CoolQ.RegexMessage
+  name: RegexMessage
+  href: api/HuajiTech.CoolQ.RegexMessage.html
+  commentId: T:HuajiTech.CoolQ.RegexMessage
+  fullName: HuajiTech.CoolQ.RegexMessage
+  nameWithType: RegexMessage
+- uid: HuajiTech.CoolQ.RegexMessage.Decode(HuajiTech.CoolQ.Message)
+  name: Decode(Message)
+  href: api/HuajiTech.CoolQ.RegexMessage.html#HuajiTech_CoolQ_RegexMessage_Decode_HuajiTech_CoolQ_Message_
+  commentId: M:HuajiTech.CoolQ.RegexMessage.Decode(HuajiTech.CoolQ.Message)
+  fullName: HuajiTech.CoolQ.RegexMessage.Decode(HuajiTech.CoolQ.Message)
+  nameWithType: RegexMessage.Decode(Message)
+- uid: HuajiTech.CoolQ.RegexMessage.Decode*
+  name: Decode
+  href: api/HuajiTech.CoolQ.RegexMessage.html#HuajiTech_CoolQ_RegexMessage_Decode_
+  commentId: Overload:HuajiTech.CoolQ.RegexMessage.Decode
+  isSpec: "True"
+  fullName: HuajiTech.CoolQ.RegexMessage.Decode
+  nameWithType: RegexMessage.Decode
 - uid: HuajiTech.CoolQ.SdkInfo
   name: SdkInfo
   href: api/HuajiTech.CoolQ.SdkInfo.html

@@ -18,10 +18,10 @@ namespace HuajiTech.CoolQ
         {
         }
 
-        public ApiException(string message, int errorValue)
+        public ApiException(string message, int errorCode)
             : this(message)
         {
-            ErrorCode = errorValue;
+            ErrorCode = errorCode;
         }
 
         public ApiException(string message, Exception innerException)
