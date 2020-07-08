@@ -88,7 +88,7 @@ namespace HuajiTech.CoolQ.Loaders
 
             var attributes = assembly.GetCustomAttributes<PluginAttribute>();
 
-            foreach (var type in assembly.GetLoadableTypes().Where(type => type.IsClass && !type.IsAbstract))
+            foreach (var type in assembly.GetLoadableTypes().Where(type => !type.IsAbstract))
             {
                 var attr = type.GetCustomAttribute<PluginAttribute>();
 
